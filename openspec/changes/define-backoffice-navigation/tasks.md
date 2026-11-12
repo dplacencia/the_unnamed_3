@@ -92,5 +92,6 @@ navigation model or permission to implement it.
 - [x] 7.2 Verify the full 472-case comparison and final quality/documentation
       checks; stage navigation code/specifications as the first batch and give
       the user its commit command. Leave approved references for the second batch.
-- [ ] 7.3 After the user commits the first batch, stage the 84 approved PNGs and
-      registry as the second batch and give its commit command. Never commit.
+- [x] 7.3 Verify the user's first commit (`183a65b`), then stage the 84 approved
+      PNGs, registry and this completed checklist as the second batch and give
+      its commit command. Never commit.
