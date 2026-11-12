@@ -140,3 +140,26 @@ The post-approval comparison `2026-11-12T21-47-49.746Z` passes all **472** accep
 cases with zero failed, skipped or flaky cases. Final root quality checks and
 strict OpenSpec validation pass. The first staging batch contains 26 navigation
 code/specification files; the 84 PNGs and registry remain for the second batch.
+
+Both batches were committed by the user (`183a65b`, `4a5b979`). The subsequent
+review identifies the multi-location phone header's split rows as a defect. The
+user selected “One compact mobile row (Recommended)”; NAV-019 and plan section 7
+bound this preview-only refinement. Preserve all 472 accepted references until
+specific approval of replacement images. No automatic staging or commit follows.
+
+The phone correction is implemented and verified: 54 code tests, 48 browser
+checks, 84 fresh navigation captures and 451 unaffected visual comparisons pass.
+Only 12 phone images changed; 72 navigation captures remain byte-identical.
+The design links the exact before/after review. Existing 472 references remain
+unchanged while the 12 replacement images await specific user approval.
+
+Subsequent user feedback requests a thinner button and hover over each entire
+dropdown line. NAV-020–021 and plan section 8 refine only the preview: a 36px
+visible phone selector with 44px pointer area, and contiguous full-width 44px
+option rows. Add named open/hovered-option capture states; preserve accepted
+references until the current replacements and new states are specifically approved.
+
+This refinement passes 54 code tests, 53 browser checks and 92 fresh navigation
+captures. Run `2026-11-12T22-46-21.298Z` contains 12 phone replacements and eight
+new dropdown states requiring approval, with 72 byte-identical navigation images.
+The design links the current review; all accepted references remain unchanged.

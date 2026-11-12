@@ -10,3 +10,20 @@
     justify-content: center;
   }
 }
+
+@media (width < 40rem) {
+  [data-navigation-shell] [data-navigation-location] {
+    position: relative;
+    height: 2.25rem;
+  }
+
+  /* Keep the pointer target 44px high around the visible 36px control. */
+  [data-navigation-shell] [data-navigation-location]::after {
+    position: absolute;
+    inset-inline: 0;
+    top: 50%;
+    height: 2.75rem;
+    transform: translateY(-50%);
+    content: "";
+  }
+}

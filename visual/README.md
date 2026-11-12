@@ -49,7 +49,7 @@ controls** restores the translated default. Typed values and open dialogs are
 preserved when the language changes.
 
 The current inventory covers 216 retained component source modules through 59
-stories and 21 view entries. Its 118 named scenarios produce 472 captures across
+stories and 21 view entries. Its 120 named scenarios produce 480 captures across
 desktop 1440×900, tablet 768×1024, mobile 390×844 and desktop dark mode. The actual
 assembled views cover Spanish, English, Catalan, Galician and Basque. Compound
 primitives and icons are inspected in compositions; this is representative source
@@ -65,7 +65,7 @@ simulated; destination content is neutral. Use Storybook's theme, language and
 viewport controls, and try selecting different locations on Existencias and
 Movimientos. Production app routes remain unchanged.
 
-The 21 navigation scenarios add 84 candidate cases, including all five
+The 23 navigation scenarios provide 92 candidate cases, including all five
 languages. The user approved all 84 final images from
 `2026-11-12T21-36-33.733Z` with **“I approve all revisions.”**. They are promoted
 in `visual/references/` and `visual/references.json`, preserving the existing 388
@@ -117,6 +117,45 @@ states add eight captures; review the current 84-case run linked from the design
 The subsequent thinner Ubicación refinement uses the existing 36px desktop
 variant, retaining 44px tablet/mobile targets and 14px text in that same final run.
 Production sidebar/header/theme components remain unchanged.
+
+The subsequent post-commit mobile review selects NAV-019: below 640px, menu,
+page title, compact location selector and theme share one 53px row. The phone
+selector uses the short translated location label as its empty prompt. Long
+titles/selected names may show an ellipsis; full location names remain in the
+dropdown. All touch targets remain 44px high. Desktop/tablet presentation and
+page-owned scope are preserved.
+
+The revised capture `2026-11-12T22-04-18.822Z` contains 84 navigation cases:
+12 changed mobile images and 72 byte-identical images. Review
+http://localhost:9324/mobile-header-comparison.html for the 12 before/after pairs.
+The 472 accepted references remain intact pending specific replacement approval.
+During this revision, compare unaffected cases with:
+
+```sh
+pnpm visual:compare --grep-invert '^mobile .*navigation-'
+```
+
+That explicitly excludes the 21 mobile navigation cases; the candidate hash
+audit identifies nine of those as unchanged and 12 as revised. A full comparison
+against the previous baseline includes intentional differences until replacement
+images are approved. Do not update references automatically.
+
+The latest NAV-020–021 revision further slims the visible phone selector to 36px
+while retaining a transparent 44px pointer target and unchanged text. Its location
+options use contiguous full-width 44px rows, with full-row hover/keyboard highlight.
+Two new open/hovered-option scenarios add eight captures. The revised/new images
+require fresh approval; previous mobile correction captures are superseded for
+this review. To compare existing unaffected cases while those images are pending:
+
+```sh
+pnpm visual:compare --grep-invert '(^mobile .*navigation-)|(navigation-workspace-location-options)|(navigation-workspace-location-option-hovered)'
+```
+
+Current capture `2026-11-12T22-46-21.298Z` passes all 92 navigation cases:
+72 byte-identical images, 12 phone replacements and eight new dropdown images.
+Review the 20 new/replacement images at
+http://localhost:9324/location-refinement-review.html. This supersedes the earlier
+mobile-only review; the accepted 472 references remain unchanged until approval.
 
 `pnpm visual:test-languages` also runs the navigation interaction suite, covering
 five-language labels, independent choices, access-state distinctions, tab

@@ -1,6 +1,6 @@
 # Navigation prototype implementation plan
 
-**Goal:** Make NAV-001–018 reviewable in the existing Storybook catalogue.
+**Goal:** Make NAV-001–021 reviewable in the existing Storybook catalogue.
 
 **Architecture:** Compose retained TailAdmin sidebar, header controls, accordion, select,
 button and card primitives in a development-only preview. A small typed model
@@ -130,3 +130,42 @@ The user's additional steering asks for a thinner Ubicación selector. Use its
 existing small variant on desktop (36px), retaining the 44px tablet/mobile
 target and text. Extend the responsive assertions under NAV-018 and refresh the
 same combined-revision checks/captures; no new component or dependency is needed.
+
+## 7. Correct the split phone header
+
+The user reported the mobile multi-location header, confirmed the split row was
+the defect, and selected “One compact mobile row (Recommended)”. Follow NAV-019:
+below 640px keep menu/title/compact selector/theme together, use the existing
+translated location label as the empty prompt, allow visual ellipsis and keep
+full location names available in the dropdown. Retain 44px touch targets.
+
+1. Add real-browser row alignment, bounds, target sizing, translated prompt and
+   location-choice checks across five languages and 320/390/640px widths; observe
+   the split-header failure against the committed build before changing the UI.
+2. Adjust only the preview's scoped phone flex sizing, visible label/prompt and
+   title overflow. Preserve production primitives, desktop styling and state.
+3. Run root quality checks, builds and all browser checks; capture revised
+   navigation candidates and compare unaffected accepted cases. Inspect the
+   rendered phone views. Record exact results and changed case identities.
+4. Preserve all 472 approved references until the user approves replacement
+   images. Do not stage, commit, archive or deploy this new revision automatically.
+
+## 8. Slim the visible selector and use full-width dropdown rows
+
+The latest user corrections request a thinner button and hover over the whole
+dropdown row. Under NAV-020–021, use a 36px visible phone selector with 44px
+pointer area, preserve text and tablet/desktop sizing, and remove the location
+popup's inset padding/list gaps and rounded option treatment. Retain 44px option
+rows and native pointer/keyboard selection. Production select primitives stay unchanged.
+
+1. Extend the phone regression to require 36px visible height; add a test for
+   clicking its extra top/bottom target area. Add full-width row geometry and
+   edge-hover/selection/keyboard checks in light/dark at phone/desktop widths.
+   Observe failures against the current preview before changing its source.
+2. Apply phone-only preview CSS for visible height and transparent target
+   extension. Use SelectContent/SelectItem props for full-row treatment.
+3. Add open-options and hovered-option capture states using the existing runner
+   and inventory. Verify quality/build/browser checks and fresh captures; compare
+   accepted unaffected cases and inspect the new popup states.
+4. Record exact current identities and leave replacement/new images unapproved.
+   Do not stage or commit automatically.

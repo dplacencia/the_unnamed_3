@@ -152,6 +152,33 @@ context: |
   The post-approval full comparison 2026-11-12T21-47-49.746Z passes all 472
   accepted cases with zero failed, skipped or flaky cases. Final pnpm check and
   strict OpenSpec validation also pass. Preserve the recorded approval identities.
+  Post-commit correction: the user confirmed the split mobile multi-location
+  header is the defect and chose "One compact mobile row (Recommended)". NAV-019
+  and plan section 7 govern the preview-only fix: below 640px keep menu/title/
+  compact location/theme together, use the short translated location prompt,
+  allow visual ellipsis with full dropdown names, and retain 44px touch targets.
+  Preserve desktop presentation, state and the 472 accepted references pending
+  new image approval. No automatic staging, commit, archive or deployment.
+  NAV-019 is implemented and verified: 54 code tests, 48 browser checks,
+  84 captures and 451 unaffected comparisons pass. Capture 2026-11-12T22-04-18.822Z
+  has 12 changed phone images and 72 byte-identical navigation images. Comparison
+  2026-11-12T22-05-14.828Z excludes the 21 phone navigation cases; nine of those
+  match accepted PNG hashes. The 12 changed images await specific replacement
+  approval. Existing 472 references and the Git index remain unchanged.
+  Latest user feedback requests a thinner button and hover over the whole
+  dropdown row. NAV-020–021 and plan section 8 refine the preview: 36px visible
+  phone selector with transparent 44px pointer area; contiguous full-width 44px
+  option rows with native keyboard/pointer behavior. Preserve tablet/desktop
+  selector sizing, text and production primitives. Add open/hovered-option
+  capture cases; accepted references and staging remain unchanged pending review.
+  The refinement is implemented: 54 code tests, 53 browser checks and 92 captures
+  pass. Current run 2026-11-12T22-46-21.298Z contains 12 phone replacements,
+  eight new dropdown states and 72 byte-identical navigation images. The design
+  links the current 20-image approval review. Prior unapproved mobile captures
+  are superseded; preserve all 472 accepted references pending this new approval.
+  Unaffected comparison 2026-11-12T22-47-40.874Z passes all 451 selected cases,
+  excluding phone navigation and the two new dropdown scenarios. Nine further
+  phone captures match accepted hashes. No full-old-baseline success is claimed.
   Record user choices before UI implementation. Preserve the approved brand and
   screenshot baseline; product-creation flows and landing work remain later.
   Read-only sibling module sources constrain proposals without selecting a launch

@@ -95,3 +95,26 @@ navigation model or permission to implement it.
 - [x] 7.3 Verify the user's first commit (`183a65b`), then stage the 84 approved
       PNGs, registry and this completed checklist as the second batch and give
       its commit command. Never commit.
+
+## Post-commit mobile-header correction
+
+- [x] 8.1 Verify both user commits, reproduce the 105px split mobile header,
+      confirm the user's reported defect and record the selected single-row
+      direction under NAV-019 before implementation.
+- [x] 8.2 Add failing responsive/language browser checks, apply the preview-only
+      correction and verify quality/build/browser checks and revised captures.
+- [x] 8.3 Present the new candidates for specific replacement-image approval;
+      preserve all 472 accepted references, with no automatic staging or commits.
+- [ ] 8.4 Obtain specific approval for the 12 revised phone images before
+      promoting replacements from the exact current run. Do not accept automatically.
+
+## Slim selector and full-row dropdown corrections
+
+- [x] 9.1 Record the user's thickness and hover findings, inspect the rendered
+      control/popup structure and define the bounded NAV-020–021 correction.
+- [x] 9.2 Observe failing visual-height/full-row regressions, implement the
+      preview-only fixes and verify pointer/keyboard behavior plus fresh captures.
+- [x] 9.3 Present the current replacements/new states for specific approval;
+      preserve all accepted references and keep the index empty.
+- [ ] 9.4 Obtain specific approval for the 12 phone replacements and eight new
+      dropdown states from the current combined run before promoting references.

@@ -63,6 +63,22 @@ specifications, then approved references. Give the user each commit command;
 never execute a commit, archive or deployment.
 The full post-approval comparison passes all 472 accepted cases; preserve the
 exact source/image/approval identities recorded in the navigation design.
+The latest post-commit assignment corrects the split scoped phone header under
+NAV-019 and plan section 7. The user chose “One compact mobile row (Recommended)”:
+short location prompt, permitted visual ellipsis, full location names in the
+dropdown and retained 44px touch targets. Preserve desktop presentation and state.
+The committed 472 references remain intact until new images are specifically
+approved; no automatic staging or commits follow from this correction.
+The fix passes 54 code tests, 48 browser checks, 84 fresh captures and 451
+unaffected comparisons. Only 12 phone images changed; read the design's exact
+capture and pending replacement-approval identities before accepting references.
+The latest NAV-020–021 refinement responds to the user's thinner-button and
+full-row-hover feedback: 36px visible phone selector/44px pointer area and
+contiguous full-width 44px dropdown rows. Apply plan section 8 only in the
+preview; add open/hovered-option captures and retain specific image approval.
+The implemented refinement passes 54 code tests, 53 browser checks, 92 current
+captures and 451 unaffected comparisons. The design identifies 12 phone replacements and eight new dropdown
+states requiring approval; 72 other navigation images are byte-identical.
 User instructions and approved decisions govern over vendor
 defaults. Never commit; sibling repositories remain read-only.
 

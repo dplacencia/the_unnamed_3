@@ -148,6 +148,7 @@ function Workspace({
   const locationPage = locationPages.includes(state.page as LocationPage)
     ? (state.page as LocationPage)
     : undefined;
+  const hasLocation = canView && !!locationPage;
   const available =
     locationCount === "one" ? ["sales-floor"] : ["sales-floor", "stockroom"];
   const selected = locationPage
@@ -373,8 +374,18 @@ function Workspace({
         </SidebarFooter>
       </Sidebar>
       <SidebarInset data-navigation-preview data-navigation-page={state.page}>
-        <header className="sticky top-0 z-50 flex w-full shrink-0 flex-wrap items-center gap-x-3 gap-y-2 border-b border-gray-200 bg-white px-3 py-1 md:px-4 dark:border-gray-800 dark:bg-gray-900">
-          <div className="flex min-w-0 flex-1 items-center gap-3">
+        <header
+          className={cn(
+            "sticky top-0 z-50 flex w-full shrink-0 flex-wrap items-center gap-x-3 gap-y-2 border-b border-gray-200 bg-white px-3 py-1 md:px-4 dark:border-gray-800 dark:bg-gray-900",
+            hasLocation && "max-sm:flex-nowrap max-sm:gap-x-2",
+          )}
+        >
+          <div
+            className={cn(
+              "flex min-w-0 flex-1 items-center gap-3",
+              hasLocation && "max-sm:gap-2",
+            )}
+          >
             <Button
               variant="ghost"
               size={isMobile ? "icon-lg" : "icon-sm"}
@@ -389,7 +400,10 @@ function Workspace({
               )}
             </Button>
             <h1
-              className="text-title-sm font-semibold text-gray-800 dark:text-white/90"
+              className={cn(
+                "text-title-sm font-semibold text-gray-800 dark:text-white/90",
+                hasLocation && "min-w-0 max-sm:truncate",
+              )}
               data-navigation-title
             >
               {t(labels[state.page])}
@@ -397,18 +411,18 @@ function Workspace({
           </div>
           <div
             className={cn(
-              "flex min-w-0 items-center gap-3",
-              canView && locationPage ? "w-full sm:w-auto" : "shrink-0",
+              "flex min-w-0 shrink-0 items-center gap-3",
+              hasLocation && "max-sm:gap-2",
             )}
           >
             {canView && locationPage && (
               <div
-                className="flex min-w-0 flex-1 items-center gap-3 sm:flex-none"
+                className="flex min-w-0 flex-none items-center gap-3"
                 data-navigation-scope={selected ?? "unselected"}
               >
                 <label
                   id="navigation-location-label"
-                  className="shrink-0 text-sm font-medium text-gray-700 dark:text-gray-300"
+                  className="sr-only shrink-0 text-sm font-medium text-gray-700 sm:not-sr-only dark:text-gray-300"
                 >
                   {t("navLocation")}
                 </label>
@@ -422,15 +436,28 @@ function Workspace({
                 >
                   <SelectTrigger
                     size={isMobile ? "default" : "sm"}
-                    className="min-w-0 flex-1 sm:w-56"
+                    className="w-32 min-w-0 shrink-0 sm:w-56"
                     aria-labelledby="navigation-location-label"
                     data-navigation-location
                   >
-                    <SelectValue placeholder={t("navChooseLocation")} />
+                    <SelectValue
+                      placeholder={
+                        <>
+                          <span className="sm:hidden">{t("navLocation")}</span>
+                          <span className="hidden sm:inline">
+                            {t("navChooseLocation")}
+                          </span>
+                        </>
+                      }
+                    />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="gap-0 p-0 [&_[role=listbox]]:gap-0">
                     {available.map((id) => (
-                      <SelectItem key={id} value={id}>
+                      <SelectItem
+                        key={id}
+                        value={id}
+                        className="min-h-11 rounded-none"
+                      >
                         {locationName(id)}
                       </SelectItem>
                     ))}
@@ -441,6 +468,7 @@ function Workspace({
             <Button
               variant="ghost"
               size={isMobile ? "icon-lg" : "icon-sm"}
+              className="shrink-0"
               onClick={toggleTheme}
               aria-label={headerT("toggleTheme")}
             >

@@ -308,7 +308,7 @@ preserved; table columns, row density and editing remain separate decisions.
 The preview SHALL combine the menu button, page title, location selector where
 applicable and theme button into one compact toolbar. Controls SHALL remain
 visible at the sizes selected under NAV-016 without requiring hover activation. Location
-controls MAY wrap on small viewports. The separate two-button header row SHALL
+controls SHALL follow the single-row phone refinement under NAV-019. The separate two-button header row SHALL
 be removed from the preview; the reusable production header remains unchanged.
 
 #### Scenario: A desktop Inventory page is reviewed
@@ -321,7 +321,7 @@ be removed from the preview; the reusable production header remains unchanged.
 
 - **WHEN** the toolbar is not hovered or the user interacts with a touch device
 - **THEN** its controls remain visible and usable
-- **AND** its location controls can wrap to fit the available width.
+- **AND** its location controls adapt to fit the available width under NAV-019.
 
 ### Requirement: NAV-015 — Narrow centred collapsed rail
 
@@ -379,3 +379,57 @@ form primitives.
 - **WHEN** the location selector is displayed in the desktop toolbar
 - **THEN** its height is 36px with the existing readable text
 - **AND** the tablet/mobile version retains its 44px target and selection behavior.
+
+### Requirement: NAV-019 — One compact phone toolbar with location scope
+
+Below 640px, the preview SHALL keep menu, title, location and theme on one row
+without overlap or horizontal overflow. Use the translated location label as the
+empty prompt and retain its accessible label. Text MAY use ellipsis; full names
+SHALL remain available in the dropdown. Menu/theme SHALL remain 44px square;
+selector sizing follows NAV-020. Preserve desktop appearance and location behavior.
+
+#### Scenario: A merchant chooses among several locations on a phone
+
+- **WHEN** the scoped page is shown at a narrow phone width
+- **THEN** all header controls and the title remain on the same row
+- **AND** the short location prompt appears before a choice is made
+- **AND** all available location names can be read and selected in the dropdown
+- **AND** the chosen location remains accessible without changing page-owned scope.
+- **AND** existing choices and per-tab retention semantics remain unchanged.
+
+#### Scenario: A long title or location name is shown
+
+- **WHEN** phone text needs more width than the compact toolbar allows
+- **THEN** it may use visual ellipsis while its full text remains accessible
+- **AND** full location names are readable in the dropdown.
+
+### Requirement: NAV-020 — Slim phone selector with retained touch area
+
+Below 640px, the location selector SHALL appear 36px high with unchanged text
+size and a 44px-high pointer target. Keep the single-row toolbar and accessible
+label. Tablet and desktop selector appearance SHALL remain unchanged.
+
+#### Scenario: A merchant touches the slim selector
+
+- **WHEN** the merchant taps within the extra 4px above or below the visible control
+- **THEN** its location dropdown opens normally
+- **AND** the visible control remains 36px high without shrinking its text.
+
+### Requirement: NAV-021 — Full-width location option rows
+
+The location dropdown SHALL use contiguous full-width option rows, at least
+44px high. Hover, keyboard highlight and selection SHALL cover each entire row
+inside the popup border, with no inset rounded-button treatment or gaps.
+Preserve full names, selected indicators and native select interactions.
+
+#### Scenario: A merchant hovers or selects a row near the popup edge
+
+- **WHEN** the pointer enters the left or right edge of an option row
+- **THEN** that row receives the full-width highlight
+- **AND** clicking there selects its location.
+
+#### Scenario: A merchant uses keyboard navigation
+
+- **WHEN** the merchant moves through location options with the keyboard
+- **THEN** the active row uses the same full-width treatment
+- **AND** native selection and dismissal remain available.

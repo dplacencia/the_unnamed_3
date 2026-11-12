@@ -928,3 +928,147 @@ and meaningful code/browser/capture coverage. The second batch contains **85
 files**: 84 approved navigation PNGs plus `visual/references.json`. The original
 388 registry entries and reference PNGs remain unchanged, as do production app
 sources, dependencies and the landing. No commit is executed by the agent.
+
+## Post-commit mobile-header correction
+
+The user's two commits are `183a65b` (navigation code/specifications) and
+`4a5b979` (approved references/checklist). The worktree was clean. The user then
+reported **“the mobile view is broken when there are multiple locations. See the
+headbar”** and confirmed **“Yes, the split header layout”**. The reproduced toolbar
+at 320/360/390px is **105px** high: menu/title occupy the first row, while the
+location selector and theme action occupy a second row. The preview's explicit
+`w-full sm:w-auto` scope/action wrapper causes that break. The approved browser
+checks measured control heights but did not require mobile row alignment. A
+separate sweep of location titles and languages found no horizontal overlap;
+the reported defect is the row arrangement rather than overflow.
+
+The user selected **“One compact mobile row (Recommended)”** for the concrete
+proposal: menu, page title, compact location selector and theme action on one row;
+the translated location label (Ubicación in Spanish) becomes the phone's empty
+prompt; long titles or selected location names may use ellipsis, with full names
+available in the dropdown; retain 44px touch targets. NAV-019 supersedes the
+earlier permission to wrap location controls on phones. Desktop presentation and
+all selection/retention behavior remain unchanged.
+
+The bounded plan is section 7 of implementation-plan.md. Add the failing browser
+regression before adjusting preview layout, then verify actual phone rendering,
+all language/interaction checks, quality/builds and revised candidates. Existing
+472 references stay intact; earlier approval does not accept this new revision.
+
+### Implementation and rendered checks
+
+Five new language-specific browser regressions failed against the committed
+build with **105px** header height (expected at most 56px). The fix removes the
+scope/action wrapper's forced phone width, uses a 128px phone select, reduces
+only scoped phone gaps, makes the visible phone location label screen-reader
+only, and uses its existing translated text as the empty prompt. The title can
+visually truncate on phones; full title/selected name text remains in the DOM.
+Dropdown options and handlers are unchanged. No production primitive is edited.
+
+Rendered measurements at 320/390/640/768px show a **53px** header, with menu,
+selector and theme controls all **44px** high at the same y-position. Desktop
+remains **45px** high with **36px** controls. There is no horizontal page overflow.
+Evidence is `.cache/visual/mobile-header-before-metrics.json` and
+`.cache/visual/mobile-header-after-metrics.json`.
+
+`pnpm check` passes formatting, lint, types and **54 code tests**. Builds and the
+coverage audit pass with the unchanged 216/59/21/118 inventory counts. The complete
+language/navigation suite passes **48 browser checks**, including all five new
+checks at 320/390/640px with both location choices and the Counts heading.
+An independent read-only review found no material static findings in responsive
+sizing, accessible names, selection/retention or regression coverage.
+
+Capture **`2026-11-12T22-04-18.822Z`** passes **84/84**, with zero failed, skipped
+or flaky cases. Source hash is
+`5df22cf7137c2f7a00dbfffdc8c0b979cf5900a378308ee2c5537a373f00e6ee`;
+renderer/font/profile settings are unchanged. All candidate PNG hashes match
+their manifest. Comparing their hashes with the approved registry identifies
+**12 changed phone images** and **72 byte-identical navigation images**, including
+all 63 desktop/tablet/dark cases. The 12 replacement identities are:
+
+- `navigation-ca-menu--mobile`
+- `navigation-en-menu--mobile`
+- `navigation-eu-menu--mobile`
+- `navigation-gl-menu--mobile`
+- `navigation-permission-error-retried--mobile`
+- `navigation-sole-location-default--mobile`
+- `navigation-workspace-compact-footer-folded--mobile`
+- `navigation-workspace-default--mobile`
+- `navigation-workspace-footer-folded--mobile`
+- `navigation-workspace-location-selected--mobile`
+- `navigation-workspace-page-memory--mobile`
+- `navigation-workspace-sidebar-toggled--mobile`
+
+Review the [live prototype](http://localhost:6006/?path=/story/navigation-merchant-workspace--workspace),
+[12 before/after pairs](http://localhost:9324/mobile-header-comparison.html),
+or [exact current 84-candidate run](http://localhost:9324/runs/2026-11-12T22-04-18.822Z/review.html).
+The original 472 PNGs and registry are unchanged. No replacement is approved or
+promoted, and nothing is staged or committed by the agent.
+
+Comparison **`2026-11-12T22-05-14.828Z`** passes **451/451** unaffected accepted
+cases with zero failed, skipped or flaky cases. Its explicit filter is
+`--grep-invert '^mobile .*navigation-'`, validated with Playwright's test list.
+It covers the 388 non-navigation cases and all 63 desktop/tablet/dark navigation
+cases. The nine unchanged phone captures additionally match accepted PNG hashes;
+the 12 changed phone cases require fresh replacement approval. This is not a
+claim that a full comparison against the old 472-image baseline passes.
+
+## Slim selector and full-row dropdown refinement
+
+The user subsequently said **“The button is still too thick”** and **“in the
+dropdown, an hover hovers only the button not the whole line”**. The previous
+row-layout correction retained the selector's 44px visible height. The requested
+refinement uses the existing 36px visual size on phones, preserving a transparent
+44px pointer area with 4px above/below; menu/theme targets stay unchanged.
+This implements the user's thickness correction without reducing text size.
+
+Rendered DOM inspection found the dropdown's 12px outer padding, 4px list gaps
+and rounded option buttons. These create the inset hover treatment the user
+reported. Use the existing SelectContent/SelectItem instance props to remove
+that outer/list spacing and option rounding, with contiguous minimum-44px rows.
+Keep native hover/highlight/selection handlers and selected indicators. Scope
+both refinements to this navigation preview; production primitives remain intact.
+NAV-020–021 and plan section 8 record the bounded work. Existing references and
+the earlier unapproved 12-image revision do not approve new replacement images.
+
+### Final selector and dropdown verification
+
+Five new regressions first failed for the reported behavior: 44px instead of
+36px visible height, and about 12px of option inset. The final phone CSS gives
+the selector a **36px visible height** and explicitly centred **44px pointer
+target**, keeping **14px text**. Review and edge checks caught a first 42px
+pseudo-element calculation caused by the retained borders; the corrected test
+asserts 44px and successfully clicks **3.5px above and below** the visible box.
+Tablet remains 44px; desktop remains 36px. Full-row geometry, edge hover/click,
+and Home/Enter selection pass in light/dark at phone/desktop widths. Keyboard
+checks move the pointer away and await popup animation before sending keys.
+Independent follow-up review found no remaining material static issues.
+
+Root quality checks pass formatting, lint, types and **54 code tests**. Static
+apps/catalogues build successfully and all **53 browser checks** pass. Coverage
+remains 216 source modules, 59 stories and 21 view entries, with **120 scenarios /
+480 profile cases** after adding the eight new popup images.
+
+Capture **`2026-11-12T22-46-21.298Z`** passes **92/92** navigation cases with zero
+failed, skipped or flaky cases. All PNG hashes match the manifest. Source hash:
+`2c94c3155971b9efa39ffc9b265c65b9067ca71df04c05eca1b2f8d728feb040`.
+Renderer, font and profile settings are unchanged. Against accepted references,
+**72 images are byte-identical** and **12 phone replacements** retain the IDs
+listed in the previous revision. The **eight new cases** are
+`navigation-workspace-location-options` and
+`navigation-workspace-location-option-hovered`, each with `--desktop`, `--tablet`,
+`--mobile` and `--desktop-dark` suffixes.
+
+This supersedes the earlier unapproved mobile-only capture for review. Inspect
+[12 replacement pairs and eight new states](http://localhost:9324/location-refinement-review.html)
+or the [exact 92-candidate run](http://localhost:9324/runs/2026-11-12T22-46-21.298Z/review.html).
+All 472 accepted references remain intact. These **20 new/replacement images**
+require specific approval; nothing is staged or committed by the agent.
+
+Comparison **`2026-11-12T22-47-40.874Z`** passes **451/451** unaffected accepted
+cases, with zero failed, skipped or flaky cases and the same source hash. Its
+filter excludes phone navigation and the two new popup scenarios; nine further
+phone captures match accepted PNG hashes. This leaves only the 12 replacements
+and eight new states for review. A full comparison against the old baseline is
+not claimed. All 472 accepted PNGs/registry entries and production source remain
+unchanged; no staging or commit occurred.

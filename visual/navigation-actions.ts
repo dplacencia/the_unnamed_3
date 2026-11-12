@@ -45,6 +45,18 @@ export async function navigationAction(
   locale: Locale,
 ) {
   switch (action) {
+    case "navigation-location-options":
+    case "navigation-location-option-hovered":
+      await page.locator("[data-navigation-location]").click();
+      await expect(page.getByRole("option")).toHaveCount(2);
+      if (action === "navigation-location-option-hovered") {
+        await page.getByRole("option").last().hover();
+        await expect(page.getByRole("option").last()).toHaveAttribute(
+          "data-highlighted",
+          "",
+        );
+      }
+      break;
     case "navigation-footer-fold":
       await openNavigation(page);
       await page.locator("[data-navigation-footer-toggle]").click();

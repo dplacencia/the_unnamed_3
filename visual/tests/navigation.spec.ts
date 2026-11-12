@@ -330,6 +330,163 @@ test("Storybook language changes and manager reload retain the page choice", asy
   );
 });
 
+for (const locale of ["es", "en", "ca", "gl", "eu"] as const) {
+  test(`phone scoped toolbar ${locale} keeps controls on one row with multiple locations`, async ({
+    page,
+  }) => {
+    const copy = catalogueMessages[locale];
+    async function expectOneRow(width: number) {
+      const header = page.locator("header");
+      const menu = header.locator("button").first();
+      const title = header.locator("[data-navigation-title]");
+      const location = header.locator("[data-navigation-location]");
+      const theme = header.locator("button").last();
+      const boxes = await Promise.all(
+        [menu, title, location, theme].map((control) => control.boundingBox()),
+      );
+      const headerBox = (await header.boundingBox())!;
+      expect(
+        headerBox.height,
+        "phone toolbar must not split rows",
+      ).toBeLessThanOrEqual(56);
+      const centers = boxes.map((box) => box!.y + box!.height / 2);
+      expect(Math.max(...centers) - Math.min(...centers)).toBeLessThanOrEqual(
+        1,
+      );
+      for (let i = 0; i < boxes.length; i++) {
+        const box = boxes[i]!;
+        expect(box.x).toBeGreaterThanOrEqual(0);
+        expect(box.x + box.width).toBeLessThanOrEqual(width);
+        if (i > 0) {
+          const previous = boxes[i - 1]!;
+          expect(previous.x + previous.width).toBeLessThanOrEqual(box.x + 1);
+        }
+      }
+      for (const control of [menu, theme]) {
+        await expect(control).toHaveCSS("height", "44px");
+      }
+      await expect(location).toHaveCSS("height", width < 640 ? "36px" : "44px");
+      await expect(menu).toHaveCSS("width", "44px");
+      await expect(theme).toHaveCSS("width", "44px");
+      expect(
+        await page.evaluate(() => document.documentElement.scrollWidth),
+      ).toBe(width);
+    }
+    for (const width of [320, 390, 640]) {
+      await page.setViewportSize({ width, height: 844 });
+      await ready(page, "workspace", locale);
+      await expectOneRow(width);
+      if (width < 640) {
+        await expect(
+          page
+            .locator("[data-navigation-location]")
+            .getByText(copy.navLocation, { exact: true }),
+        ).toBeVisible();
+      }
+      await choosePreviewLocation(page, "sales-floor", locale);
+      await expect(page.getByLabel(copy.navLocation)).toHaveText(
+        copy.navSalesFloor,
+      );
+      await expectOneRow(width);
+      await choosePreviewLocation(page, "stockroom", locale);
+      await expect(page.getByLabel(copy.navLocation)).toHaveText(
+        copy.navStockroom,
+      );
+      await navigatePreview(page, "counts");
+      await expect(page.locator("[data-navigation-title]")).toHaveText(
+        copy.navCounts,
+      );
+      await expectOneRow(width);
+    }
+  });
+}
+
+test("slim phone location selector keeps its extended touch target", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await ready(page);
+  const location = page.locator("[data-navigation-location]");
+  await expect(location).toHaveCSS("height", "36px");
+  await expect(location).toHaveCSS("font-size", "14px");
+  const box = (await location.boundingBox())!;
+  expect(
+    await location.evaluate(
+      (element) => getComputedStyle(element, "::after").height,
+    ),
+  ).toBe("44px");
+  for (const y of [box.y - 3.5, box.y + box.height + 3.5]) {
+    await page.mouse.click(box.x + box.width / 2, y);
+    await expect(page.getByRole("listbox")).toBeVisible();
+    await page.keyboard.press("Escape");
+    await expect(page.getByRole("listbox")).toBeHidden();
+    await expect(location).toBeFocused();
+  }
+});
+
+for (const width of [390, 1440]) {
+  for (const theme of ["light", "dark"] as const) {
+    test(`location dropdown uses full-row hover and selection at ${width}px in ${theme}`, async ({
+      page,
+    }) => {
+      await page.setViewportSize({ width, height: 844 });
+      await page.goto(`${url()}${theme === "dark" ? ";theme:dark" : ""}`);
+      const trigger = page.locator("[data-navigation-location]");
+      await trigger.click();
+      const popup = page.locator('[data-slot="select-content"]');
+      const options = page.getByRole("option");
+      await expect(options).toHaveCount(2);
+      await page.evaluate(() => document.fonts.ready);
+      await popup.evaluate(async (element) => {
+        await Promise.all(
+          element
+            .getAnimations({ subtree: true })
+            .map((animation) => animation.finished),
+        );
+      });
+      const popupBox = (await popup.boundingBox())!;
+      const rows = await options.all();
+      const boxes = await Promise.all(rows.map((row) => row.boundingBox()));
+      for (const box of boxes) {
+        expect(box!.x).toBeCloseTo(popupBox.x + 1, 0);
+        expect(box!.width).toBeCloseTo(popupBox.width - 2, 0);
+        expect(box!.height).toBeGreaterThanOrEqual(44);
+      }
+      expect(boxes[0]!.y + boxes[0]!.height).toBeCloseTo(boxes[1]!.y, 0);
+      for (const edge of [popupBox.x + 3, popupBox.x + popupBox.width - 3]) {
+        await page.mouse.move(edge, boxes[1]!.y + boxes[1]!.height / 2);
+        await expect(rows[1]).toHaveAttribute("data-highlighted", "");
+      }
+      await page.mouse.click(
+        popupBox.x + popupBox.width - 3,
+        boxes[1]!.y + boxes[1]!.height / 2,
+      );
+      await expect(page.locator("[data-navigation-scope]")).toHaveAttribute(
+        "data-navigation-scope",
+        "stockroom",
+      );
+      await page.mouse.move(10, 300);
+      await trigger.focus();
+      await trigger.press("ArrowDown");
+      await expect(page.getByRole("listbox")).toBeVisible();
+      await popup.evaluate(async (element) => {
+        await Promise.all(
+          element
+            .getAnimations({ subtree: true })
+            .map((animation) => animation.finished),
+        );
+      });
+      await page.keyboard.press("Home");
+      await expect(rows[0]).toHaveAttribute("data-highlighted", "");
+      await page.keyboard.press("Enter");
+      await expect(page.locator("[data-navigation-scope]")).toHaveAttribute(
+        "data-navigation-scope",
+        "sales-floor",
+      );
+    });
+  }
+}
+
 for (const width of [1440, 768, 390]) {
   test(`shared footer folds with keyboard at ${width}px and preserves access to its links`, async ({
     page,
@@ -338,7 +495,7 @@ for (const width of [1440, 768, 390]) {
     await ready(page);
     await expect(page.locator("[data-navigation-location]")).toHaveCSS(
       "height",
-      width < 1280 ? "44px" : "36px",
+      width >= 640 && width < 1280 ? "44px" : "36px",
     );
     await openNavigation(page);
     const toggle = page.getByRole("button", {

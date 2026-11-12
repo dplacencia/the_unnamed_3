@@ -1239,6 +1239,14 @@
           "action": "navigation-location"
         },
         {
+          "id": "location-options",
+          "action": "navigation-location-options"
+        },
+        {
+          "id": "location-option-hovered",
+          "action": "navigation-location-option-hovered"
+        },
+        {
           "id": "page-memory",
           "action": "navigation-memory"
         },

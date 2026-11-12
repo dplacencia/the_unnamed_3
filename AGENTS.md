@@ -67,6 +67,26 @@ then approved visual references. Stage one batch at a time and give the user its
 commit command; never execute a commit. Do not archive or deploy automatically.
 The full post-approval comparison passes all 472 accepted cases; the navigation
 design records the exact run and approval evidence.
+Post-commit correction: the user reported the split multi-location phone header,
+confirmed that defect and selected “One compact mobile row (Recommended)”.
+NAV-019 and plan section 7 govern this preview-only fix: keep menu/title/compact
+location/theme on one phone row, use the short translated location prompt,
+allow visual ellipsis and preserve 44px touch targets and full dropdown names.
+Retain the committed 472-image baseline pending new replacement-image approval.
+This new correction does not authorize staging or commits automatically.
+NAV-019 is implemented and verified: 54 code tests, 48 browser checks, 84 fresh
+captures and 451 unaffected visual comparisons pass. Only 12 phone images changed;
+the design links their before/after review and records the pending approval.
+Latest feedback further requests a thinner selector and full-row dropdown hover.
+NAV-020–021 and plan section 8 govern a 36px visible phone selector with 44px
+pointer area, and contiguous full-width 44px option rows using preview-only
+props/CSS. Preserve text, native interactions and production select primitives.
+Add open/hovered-option capture states; keep all accepted references unchanged
+until the new replacements and states receive specific approval.
+The refinement is implemented: 54 code tests, 53 browser checks, 92 fresh
+captures and 451 unaffected comparisons pass. Only 12 phone replacements and eight new dropdown states need
+approval; the other 72 navigation images match accepted hashes. Read the design's
+exact current run and review URL before reference acceptance.
 Ask before adopting other unresolved choices; preserve production UI and approved
 references. The design records sources, choices and limits. Product-creation flows and the
 landing remain later work.
