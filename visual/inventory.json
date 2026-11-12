@@ -1,0 +1,1169 @@
+{
+  "version": 1,
+  "coverageScope": "Representative compositions and registered interaction states for every retained component source module; compound primitives are reviewed in context.",
+  "entries": [
+    {
+      "id": "button",
+      "title": "Button",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/button.tsx"],
+      "storyId": "tailadmin-primitives--button",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "focused",
+          "action": "focus-button"
+        }
+      ]
+    },
+    {
+      "id": "input",
+      "title": "Input",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/input.tsx"],
+      "storyId": "tailadmin-primitives--input",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "filled",
+          "action": "fill-input"
+        }
+      ]
+    },
+    {
+      "id": "textarea",
+      "title": "Textarea",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/textarea.tsx"],
+      "storyId": "tailadmin-primitives--textarea",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "select",
+      "title": "Select",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/select.tsx"],
+      "storyId": "tailadmin-primitives--select",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "open",
+          "action": "open-select"
+        }
+      ]
+    },
+    {
+      "id": "accordion",
+      "title": "Accordion",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/accordion.tsx"],
+      "storyId": "tailadmin-primitives--accordion",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "second-open",
+          "action": "open-accordion"
+        }
+      ]
+    },
+    {
+      "id": "alert",
+      "title": "Alert",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/alert.tsx"],
+      "storyId": "tailadmin-primitives--alert",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "avatar",
+      "title": "Avatar",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/avatar.tsx"],
+      "storyId": "tailadmin-primitives--avatar",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "badge",
+      "title": "Badge",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/badge.tsx"],
+      "storyId": "tailadmin-primitives--badge",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "breadcrumb",
+      "title": "Breadcrumb",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/breadcrumb.tsx"],
+      "storyId": "tailadmin-primitives--breadcrumb",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "button-group",
+      "title": "ButtonGroup",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/button-group.tsx"],
+      "storyId": "tailadmin-primitives--button-group",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "card",
+      "title": "Card",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/card.tsx"],
+      "storyId": "tailadmin-primitives--card",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "checkbox",
+      "title": "Checkbox",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/checkbox.tsx"],
+      "storyId": "tailadmin-primitives--checkbox",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "toggled",
+          "action": "toggle-checkbox"
+        }
+      ]
+    },
+    {
+      "id": "collapsible",
+      "title": "Collapsible",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/collapsible.tsx"],
+      "storyId": "tailadmin-primitives--collapsible",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "open",
+          "action": "open-collapsible"
+        }
+      ]
+    },
+    {
+      "id": "combobox",
+      "title": "Combobox",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/combobox.tsx"],
+      "storyId": "tailadmin-primitives--combobox",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "open",
+          "action": "open-combobox"
+        },
+        {
+          "id": "empty",
+          "action": "empty-combobox"
+        }
+      ]
+    },
+    {
+      "id": "dialog",
+      "title": "Dialog",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/dialog.tsx"],
+      "storyId": "tailadmin-primitives--dialog",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "open",
+          "action": "open-dialog"
+        }
+      ]
+    },
+    {
+      "id": "dropdown",
+      "title": "Dropdown",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/dropdown.tsx"],
+      "storyId": "tailadmin-primitives--dropdown",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "open",
+          "action": "open-menu"
+        }
+      ]
+    },
+    {
+      "id": "field",
+      "title": "Field",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/field.tsx"],
+      "storyId": "tailadmin-primitives--field",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "file-input",
+      "title": "FileInput",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/file-input.tsx"],
+      "storyId": "tailadmin-primitives--file-input",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "input-group",
+      "title": "InputGroup",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/input-group.tsx"],
+      "storyId": "tailadmin-primitives--input-group",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "input-otp",
+      "title": "InputOtp",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/input-otp.tsx"],
+      "storyId": "tailadmin-primitives--input-otp",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "label",
+      "title": "Label",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/label.tsx"],
+      "storyId": "tailadmin-primitives--label",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "pagination",
+      "title": "Pagination",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/pagination.tsx"],
+      "storyId": "tailadmin-primitives--pagination",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "popover",
+      "title": "Popover",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/popover.tsx"],
+      "storyId": "tailadmin-primitives--popover",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "open",
+          "action": "open-popover"
+        }
+      ]
+    },
+    {
+      "id": "progress-bar",
+      "title": "Progress",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/progress-bar.tsx"],
+      "storyId": "tailadmin-primitives--progress",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "radio-group",
+      "title": "RadioGroup",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/radio-group.tsx"],
+      "storyId": "tailadmin-primitives--radio-group",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "resizable",
+      "title": "Resizable",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/resizable.tsx"],
+      "storyId": "tailadmin-primitives--resizable",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "scroll-area",
+      "title": "ScrollArea",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/scroll-area.tsx"],
+      "storyId": "tailadmin-primitives--scroll-area",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "separator",
+      "title": "Separator",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/separator.tsx"],
+      "storyId": "tailadmin-primitives--separator",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "sheet",
+      "title": "Sheet",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/sheet.tsx"],
+      "storyId": "tailadmin-primitives--sheet",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "open",
+          "action": "open-sheet"
+        }
+      ]
+    },
+    {
+      "id": "skeleton",
+      "title": "Skeleton",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/skeleton.tsx"],
+      "storyId": "tailadmin-primitives--skeleton",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "slider",
+      "title": "Slider",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/slider.tsx"],
+      "storyId": "tailadmin-primitives--slider",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "spinner",
+      "title": "Spinner",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/spinner.tsx"],
+      "storyId": "tailadmin-primitives--spinner",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "switch",
+      "title": "Switch",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/switch.tsx"],
+      "storyId": "tailadmin-primitives--switch",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "toggled",
+          "action": "toggle-switch"
+        }
+      ]
+    },
+    {
+      "id": "table",
+      "title": "Table",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/table.tsx"],
+      "storyId": "tailadmin-primitives--table",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "tabs",
+      "title": "Tabs",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/tabs.tsx"],
+      "storyId": "tailadmin-primitives--tabs",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "second",
+          "action": "second-tab"
+        }
+      ]
+    },
+    {
+      "id": "toggle",
+      "title": "Toggle",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/toggle.tsx"],
+      "storyId": "tailadmin-primitives--toggle",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "toggle-group",
+      "title": "ToggleGroup",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/toggle-group.tsx"],
+      "storyId": "tailadmin-primitives--toggle-group",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "tooltip",
+      "title": "Tooltip",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/tooltip.tsx"],
+      "storyId": "tailadmin-primitives--tooltip",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "open",
+          "action": "open-tooltip"
+        }
+      ]
+    },
+    {
+      "id": "video",
+      "title": "Video",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/video.tsx"],
+      "storyId": "tailadmin-primitives--video",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "External player document is replaced during automated capture; iframe layout/aspect ratio is covered, playback is not."
+    },
+    {
+      "id": "component-card",
+      "title": "ComponentCardExample",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/common/component-card.tsx"],
+      "storyId": "tailadmin-compositions--component-card-example",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "page-breadcrumb",
+      "title": "PageBreadcrumbExample",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/common/page-breadcrumb.tsx"],
+      "storyId": "tailadmin-compositions--page-breadcrumb-example",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "grid-shape",
+      "title": "GridShapeExample",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/common/grid-shape.tsx"],
+      "storyId": "tailadmin-compositions--grid-shape-example",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "header",
+      "title": "Header",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/layout/app-layout/header/index.tsx"],
+      "storyId": "tailadmin-compositions--header",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "theme-control",
+      "title": "ThemeControl",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/layout/header/theme-toggler/index.tsx"],
+      "storyId": "tailadmin-compositions--theme-control",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "theme-toggled",
+          "action": "toggle-theme"
+        }
+      ]
+    },
+    {
+      "id": "app-sidebar",
+      "title": "AppSidebarExample",
+      "kind": "story",
+      "sources": [
+        "apps/backoffice/src/layout/app-layout/sidebar/index.tsx",
+        "apps/backoffice/src/layout/app-layout/sidebar/sidebar-header.tsx"
+      ],
+      "storyId": "tailadmin-compositions--app-sidebar-example",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "sidebar-toggled",
+          "action": "toggle-sidebar"
+        }
+      ]
+    },
+    {
+      "id": "shell",
+      "title": "Shell",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/app/(admin-layout)/layout.tsx"],
+      "storyId": "tailadmin-compositions--shell",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "sidebar-toggled",
+          "action": "toggle-sidebar"
+        }
+      ]
+    },
+    {
+      "id": "not-found",
+      "title": "NotFoundExample",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/app/not-found.tsx"],
+      "storyId": "tailadmin-compositions--not-found-example",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "sidebar",
+      "title": "SidebarPrimitives",
+      "kind": "story",
+      "sources": ["apps/backoffice/src/components/ui/sidebar.tsx"],
+      "storyId": "tailadmin-compositions--sidebar-primitives",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "sidebar-toggled",
+          "action": "toggle-sidebar"
+        }
+      ]
+    },
+    {
+      "id": "icons",
+      "title": "IconAtlas",
+      "kind": "story",
+      "sources": [
+        "apps/backoffice/src/icons/ai.tsx",
+        "apps/backoffice/src/icons/air-bnb.tsx",
+        "apps/backoffice/src/icons/alert.tsx",
+        "apps/backoffice/src/icons/amazon.tsx",
+        "apps/backoffice/src/icons/angle-down.tsx",
+        "apps/backoffice/src/icons/angle-up.tsx",
+        "apps/backoffice/src/icons/apple.tsx",
+        "apps/backoffice/src/icons/archive.tsx",
+        "apps/backoffice/src/icons/arrow-down.tsx",
+        "apps/backoffice/src/icons/arrow-left-right.tsx",
+        "apps/backoffice/src/icons/arrow-left.tsx",
+        "apps/backoffice/src/icons/arrow-right.tsx",
+        "apps/backoffice/src/icons/arrow-up.tsx",
+        "apps/backoffice/src/icons/aspect-fullscreen.tsx",
+        "apps/backoffice/src/icons/aspect-portrait.tsx",
+        "apps/backoffice/src/icons/aspect-square.tsx",
+        "apps/backoffice/src/icons/aspect-vertical-widescreen.tsx",
+        "apps/backoffice/src/icons/aspect-widescreen.tsx",
+        "apps/backoffice/src/icons/banknote-undo.tsx",
+        "apps/backoffice/src/icons/bar-chart.tsx",
+        "apps/backoffice/src/icons/bell.tsx",
+        "apps/backoffice/src/icons/bolt-two.tsx",
+        "apps/backoffice/src/icons/bolt.tsx",
+        "apps/backoffice/src/icons/box-tapped.tsx",
+        "apps/backoffice/src/icons/box.tsx",
+        "apps/backoffice/src/icons/brain.tsx",
+        "apps/backoffice/src/icons/brush.tsx",
+        "apps/backoffice/src/icons/calendar.tsx",
+        "apps/backoffice/src/icons/call.tsx",
+        "apps/backoffice/src/icons/camera.tsx",
+        "apps/backoffice/src/icons/cart.tsx",
+        "apps/backoffice/src/icons/chat.tsx",
+        "apps/backoffice/src/icons/check-circle.tsx",
+        "apps/backoffice/src/icons/check.tsx",
+        "apps/backoffice/src/icons/chevron-down.tsx",
+        "apps/backoffice/src/icons/chevron-left.tsx",
+        "apps/backoffice/src/icons/chevron-right.tsx",
+        "apps/backoffice/src/icons/chevron-up-down.tsx",
+        "apps/backoffice/src/icons/chevron-up.tsx",
+        "apps/backoffice/src/icons/chip.tsx",
+        "apps/backoffice/src/icons/claude.tsx",
+        "apps/backoffice/src/icons/clock.tsx",
+        "apps/backoffice/src/icons/code.tsx",
+        "apps/backoffice/src/icons/copy.tsx",
+        "apps/backoffice/src/icons/database.tsx",
+        "apps/backoffice/src/icons/diamond.tsx",
+        "apps/backoffice/src/icons/dislike.tsx",
+        "apps/backoffice/src/icons/doc.tsx",
+        "apps/backoffice/src/icons/dollar.tsx",
+        "apps/backoffice/src/icons/dot.tsx",
+        "apps/backoffice/src/icons/download.tsx",
+        "apps/backoffice/src/icons/envato.tsx",
+        "apps/backoffice/src/icons/envelope.tsx",
+        "apps/backoffice/src/icons/eye-close.tsx",
+        "apps/backoffice/src/icons/eye.tsx",
+        "apps/backoffice/src/icons/facebook.tsx",
+        "apps/backoffice/src/icons/figma.tsx",
+        "apps/backoffice/src/icons/file-img.tsx",
+        "apps/backoffice/src/icons/file-pdf.tsx",
+        "apps/backoffice/src/icons/file-video.tsx",
+        "apps/backoffice/src/icons/file.tsx",
+        "apps/backoffice/src/icons/filter.tsx",
+        "apps/backoffice/src/icons/flag-de.svg",
+        "apps/backoffice/src/icons/flag-es.svg",
+        "apps/backoffice/src/icons/flag-sa.svg",
+        "apps/backoffice/src/icons/flag-us.svg",
+        "apps/backoffice/src/icons/flag.tsx",
+        "apps/backoffice/src/icons/floppy-disk.tsx",
+        "apps/backoffice/src/icons/flux.tsx",
+        "apps/backoffice/src/icons/folder-open.tsx",
+        "apps/backoffice/src/icons/folder.tsx",
+        "apps/backoffice/src/icons/gear-two.tsx",
+        "apps/backoffice/src/icons/gear.tsx",
+        "apps/backoffice/src/icons/gemini.tsx",
+        "apps/backoffice/src/icons/globe.tsx",
+        "apps/backoffice/src/icons/google.tsx",
+        "apps/backoffice/src/icons/gpt.tsx",
+        "apps/backoffice/src/icons/grok.tsx",
+        "apps/backoffice/src/icons/horizontal-dots.tsx",
+        "apps/backoffice/src/icons/horizontal-slide.tsx",
+        "apps/backoffice/src/icons/hourglass.tsx",
+        "apps/backoffice/src/icons/ideogram.tsx",
+        "apps/backoffice/src/icons/inbox.tsx",
+        "apps/backoffice/src/icons/index.tsx",
+        "apps/backoffice/src/icons/info-circle.tsx",
+        "apps/backoffice/src/icons/info-hexa.tsx",
+        "apps/backoffice/src/icons/info.tsx",
+        "apps/backoffice/src/icons/instagram.tsx",
+        "apps/backoffice/src/icons/key.tsx",
+        "apps/backoffice/src/icons/kling.tsx",
+        "apps/backoffice/src/icons/layer.tsx",
+        "apps/backoffice/src/icons/layout-grid.tsx",
+        "apps/backoffice/src/icons/layout.tsx",
+        "apps/backoffice/src/icons/like.tsx",
+        "apps/backoffice/src/icons/link.tsx",
+        "apps/backoffice/src/icons/linkedin.tsx",
+        "apps/backoffice/src/icons/list.tsx",
+        "apps/backoffice/src/icons/loader-circle.tsx",
+        "apps/backoffice/src/icons/lock.tsx",
+        "apps/backoffice/src/icons/log-out.tsx",
+        "apps/backoffice/src/icons/mail.tsx",
+        "apps/backoffice/src/icons/map.tsx",
+        "apps/backoffice/src/icons/mastercard.tsx",
+        "apps/backoffice/src/icons/menu-two.tsx",
+        "apps/backoffice/src/icons/menu.tsx",
+        "apps/backoffice/src/icons/microphone.tsx",
+        "apps/backoffice/src/icons/minus.tsx",
+        "apps/backoffice/src/icons/moon.tsx",
+        "apps/backoffice/src/icons/moving-box.tsx",
+        "apps/backoffice/src/icons/music.tsx",
+        "apps/backoffice/src/icons/mute.tsx",
+        "apps/backoffice/src/icons/nano-banana.tsx",
+        "apps/backoffice/src/icons/netflix.tsx",
+        "apps/backoffice/src/icons/octagon-alert.tsx",
+        "apps/backoffice/src/icons/page.tsx",
+        "apps/backoffice/src/icons/paper-clip.tsx",
+        "apps/backoffice/src/icons/paypal.tsx",
+        "apps/backoffice/src/icons/pencil.tsx",
+        "apps/backoffice/src/icons/pie-chart.tsx",
+        "apps/backoffice/src/icons/play.tsx",
+        "apps/backoffice/src/icons/plugin.tsx",
+        "apps/backoffice/src/icons/plus.tsx",
+        "apps/backoffice/src/icons/printer.tsx",
+        "apps/backoffice/src/icons/qwen.tsx",
+        "apps/backoffice/src/icons/regenerate.tsx",
+        "apps/backoffice/src/icons/runway.tsx",
+        "apps/backoffice/src/icons/search.tsx",
+        "apps/backoffice/src/icons/seedream.tsx",
+        "apps/backoffice/src/icons/send.tsx",
+        "apps/backoffice/src/icons/share.tsx",
+        "apps/backoffice/src/icons/shooting-star.tsx",
+        "apps/backoffice/src/icons/sound.tsx",
+        "apps/backoffice/src/icons/spark.tsx",
+        "apps/backoffice/src/icons/spotify.tsx",
+        "apps/backoffice/src/icons/star-filled.tsx",
+        "apps/backoffice/src/icons/star.tsx",
+        "apps/backoffice/src/icons/sun.tsx",
+        "apps/backoffice/src/icons/system.tsx",
+        "apps/backoffice/src/icons/table.tsx",
+        "apps/backoffice/src/icons/tag.tsx",
+        "apps/backoffice/src/icons/target.tsx",
+        "apps/backoffice/src/icons/task.tsx",
+        "apps/backoffice/src/icons/telescope.tsx",
+        "apps/backoffice/src/icons/tesla.tsx",
+        "apps/backoffice/src/icons/text.tsx",
+        "apps/backoffice/src/icons/ticket.tsx",
+        "apps/backoffice/src/icons/time.tsx",
+        "apps/backoffice/src/icons/trash-bin.tsx",
+        "apps/backoffice/src/icons/truck-delivery.tsx",
+        "apps/backoffice/src/icons/twitter-x.tsx",
+        "apps/backoffice/src/icons/upload.tsx",
+        "apps/backoffice/src/icons/user-circle.tsx",
+        "apps/backoffice/src/icons/user-dollar.tsx",
+        "apps/backoffice/src/icons/user.tsx",
+        "apps/backoffice/src/icons/users.tsx",
+        "apps/backoffice/src/icons/vertical-dots.tsx",
+        "apps/backoffice/src/icons/visa.tsx",
+        "apps/backoffice/src/icons/whatsapp.tsx",
+        "apps/backoffice/src/icons/x-ai.tsx",
+        "apps/backoffice/src/icons/x.tsx"
+      ],
+      "storyId": "tailadmin-compositions--icon-atlas",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "form-fixture",
+      "title": "Form",
+      "kind": "story",
+      "sources": [],
+      "storyId": "tailadmin-compositions--form",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "error",
+          "action": "invalid-form"
+        },
+        {
+          "id": "submitted",
+          "action": "valid-form"
+        }
+      ]
+    },
+    {
+      "id": "backoffice-es",
+      "title": "Backoffice es",
+      "kind": "view",
+      "app": "backoffice",
+      "path": "/",
+      "locale": "es",
+      "sources": [
+        "apps/backoffice/src/app/layout.tsx",
+        "apps/backoffice/src/app/(admin-layout)/page.tsx",
+        "apps/backoffice/src/context/theme-context.tsx",
+        "apps/backoffice/src/i18n/locale-provider.tsx"
+      ],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "landing-es",
+      "title": "Landing es",
+      "kind": "view",
+      "app": "landing",
+      "path": "/",
+      "locale": "es",
+      "sources": ["apps/landing/src/pages/index.astro"],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Empty technical document, not a designed landing."
+    },
+    {
+      "id": "foundation-es",
+      "title": "Astro Foundation es",
+      "kind": "view",
+      "app": "astroGallery",
+      "path": "/__visual/foundation/es/",
+      "locale": "es",
+      "sources": ["apps/landing/src/layouts/foundation.astro"],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Empty native document: document/locale and actual source rendering covered."
+    },
+    {
+      "id": "backoffice-en",
+      "title": "Backoffice en",
+      "kind": "view",
+      "app": "backoffice",
+      "path": "/",
+      "locale": "en",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "landing-en",
+      "title": "Landing en",
+      "kind": "view",
+      "app": "landing",
+      "path": "/en/",
+      "locale": "en",
+      "sources": ["apps/landing/src/pages/[locale]/index.astro"],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Empty technical document, not a designed landing."
+    },
+    {
+      "id": "foundation-en",
+      "title": "Astro Foundation en",
+      "kind": "view",
+      "app": "astroGallery",
+      "path": "/__visual/foundation/en/",
+      "locale": "en",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Empty native document: document/locale and actual source rendering covered."
+    },
+    {
+      "id": "backoffice-ca",
+      "title": "Backoffice ca",
+      "kind": "view",
+      "app": "backoffice",
+      "path": "/",
+      "locale": "ca",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "landing-ca",
+      "title": "Landing ca",
+      "kind": "view",
+      "app": "landing",
+      "path": "/ca/",
+      "locale": "ca",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Empty technical document, not a designed landing."
+    },
+    {
+      "id": "foundation-ca",
+      "title": "Astro Foundation ca",
+      "kind": "view",
+      "app": "astroGallery",
+      "path": "/__visual/foundation/ca/",
+      "locale": "ca",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Empty native document: document/locale and actual source rendering covered."
+    },
+    {
+      "id": "backoffice-gl",
+      "title": "Backoffice gl",
+      "kind": "view",
+      "app": "backoffice",
+      "path": "/",
+      "locale": "gl",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "landing-gl",
+      "title": "Landing gl",
+      "kind": "view",
+      "app": "landing",
+      "path": "/gl/",
+      "locale": "gl",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Empty technical document, not a designed landing."
+    },
+    {
+      "id": "foundation-gl",
+      "title": "Astro Foundation gl",
+      "kind": "view",
+      "app": "astroGallery",
+      "path": "/__visual/foundation/gl/",
+      "locale": "gl",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Empty native document: document/locale and actual source rendering covered."
+    },
+    {
+      "id": "backoffice-eu",
+      "title": "Backoffice eu",
+      "kind": "view",
+      "app": "backoffice",
+      "path": "/",
+      "locale": "eu",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "landing-eu",
+      "title": "Landing eu",
+      "kind": "view",
+      "app": "landing",
+      "path": "/eu/",
+      "locale": "eu",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Empty technical document, not a designed landing."
+    },
+    {
+      "id": "foundation-eu",
+      "title": "Astro Foundation eu",
+      "kind": "view",
+      "app": "astroGallery",
+      "path": "/__visual/foundation/eu/",
+      "locale": "eu",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Empty native document: document/locale and actual source rendering covered."
+    },
+    {
+      "id": "astro-gallery",
+      "title": "Astro preview catalogue",
+      "kind": "view",
+      "app": "astroGallery",
+      "path": "/__visual/",
+      "locale": "es",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "backoffice-not-found-es",
+      "title": "Backoffice 404 es",
+      "kind": "view",
+      "app": "backoffice",
+      "path": "/visual-missing-route",
+      "expectedStatus": 404,
+      "locale": "es",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "backoffice-not-found-en",
+      "title": "Backoffice 404 en",
+      "kind": "view",
+      "app": "backoffice",
+      "path": "/visual-missing-route",
+      "expectedStatus": 404,
+      "locale": "en",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "backoffice-not-found-ca",
+      "title": "Backoffice 404 ca",
+      "kind": "view",
+      "app": "backoffice",
+      "path": "/visual-missing-route",
+      "expectedStatus": 404,
+      "locale": "ca",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "backoffice-not-found-gl",
+      "title": "Backoffice 404 gl",
+      "kind": "view",
+      "app": "backoffice",
+      "path": "/visual-missing-route",
+      "expectedStatus": 404,
+      "locale": "gl",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    },
+    {
+      "id": "backoffice-not-found-eu",
+      "title": "Backoffice 404 eu",
+      "kind": "view",
+      "app": "backoffice",
+      "path": "/visual-missing-route",
+      "expectedStatus": 404,
+      "locale": "eu",
+      "sources": [],
+      "cases": [
+        {
+          "id": "default"
+        }
+      ]
+    }
+  ]
+}

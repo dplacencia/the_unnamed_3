@@ -1,0 +1,16 @@
+node_modules/
+.tools/
+.cache/
+.pnpm-store/
+**/.next/
+**/.astro/
+**/out/
+**/dist/
+**/build/
+**/coverage/
+**/next-env.d.ts
+**/*.tsbuildinfo
+pnpm-lock.yaml
+apps/*/public/
+apps/backoffice/src/icons/
+*.zip

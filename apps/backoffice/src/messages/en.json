@@ -1,0 +1,16 @@
+{
+  "common": {
+    "home": "Home"
+  },
+  "header": {
+    "toggleSidebar": "Toggle Sidebar",
+    "toggleTheme": "Toggle theme",
+    "sidebarTitle": "Sidebar",
+    "sidebarDescription": "Displays the mobile sidebar."
+  },
+  "notFound": {
+    "error": "ERROR",
+    "message": "We can’t seem to find the page you are looking for!",
+    "backHome": "Back to Home Page"
+  }
+}

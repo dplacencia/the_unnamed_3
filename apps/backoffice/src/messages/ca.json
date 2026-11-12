@@ -1,0 +1,16 @@
+{
+  "common": {
+    "home": "Inici"
+  },
+  "header": {
+    "toggleSidebar": "Mostra o amaga la barra lateral",
+    "toggleTheme": "Canvia el tema",
+    "sidebarTitle": "Barra lateral",
+    "sidebarDescription": "Mostra la barra lateral als dispositius mòbils."
+  },
+  "notFound": {
+    "error": "ERROR",
+    "message": "No trobem la pàgina que busques.",
+    "backHome": "Torna a la pàgina d’inici"
+  }
+}

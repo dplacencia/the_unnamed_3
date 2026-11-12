@@ -1,0 +1,16 @@
+{
+  "extends": "../apps/backoffice/tsconfig.json",
+  "compilerOptions": {
+    "incremental": false,
+    "allowImportingTsExtensions": true,
+    "types": ["node"],
+    "paths": { "@/*": ["../apps/backoffice/src/*"] }
+  },
+  "include": [
+    "./**/*.ts",
+    "../apps/backoffice/.storybook/**/*.ts",
+    "../apps/backoffice/.storybook/**/*.tsx",
+    "../apps/backoffice/next-env.d.ts"
+  ],
+  "exclude": ["../node_modules"]
+}

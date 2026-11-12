@@ -1,0 +1,9 @@
+packages:
+  - apps/*
+minimumReleaseAge: 1440
+minimumReleaseAgeStrict: true
+allowBuilds:
+  "@parcel/watcher@2.6.0": false
+  "@swc/core@1.16.1": false
+  "unrs-resolver@1.12.2": false
+  "esbuild@0.28.2": false

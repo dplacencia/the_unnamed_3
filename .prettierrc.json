@@ -1,0 +1,23 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": false,
+  "semi": true,
+  "endOfLine": "lf",
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": "apps/backoffice/**",
+      "options": {
+        "tailwindStylesheet": "./apps/backoffice/src/app/globals.css",
+        "tailwindFunctions": ["cn", "cva"]
+      }
+    },
+    {
+      "files": "apps/landing/**",
+      "options": {
+        "tailwindStylesheet": "./apps/landing/src/styles/global.css"
+      }
+    }
+  ]
+}

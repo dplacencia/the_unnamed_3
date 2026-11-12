@@ -1,0 +1,13 @@
+---
+import Foundation from "../src/layouts/foundation.astro";
+import { locales, type Locale } from "../src/i18n/locales";
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale }, props: { locale } }));
+}
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+---
+
+<Foundation locale={locale} />

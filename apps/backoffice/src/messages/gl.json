@@ -1,0 +1,16 @@
+{
+  "common": {
+    "home": "Inicio"
+  },
+  "header": {
+    "toggleSidebar": "Amosar ou agochar a barra lateral",
+    "toggleTheme": "Cambiar o tema",
+    "sidebarTitle": "Barra lateral",
+    "sidebarDescription": "Amosa a barra lateral nos dispositivos móbiles."
+  },
+  "notFound": {
+    "error": "ERRO",
+    "message": "Non atopamos a páxina que buscas.",
+    "backHome": "Volver á páxina de inicio"
+  }
+}

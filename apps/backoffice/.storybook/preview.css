@@ -1,0 +1,55 @@
+@import "../src/app/globals.css";
+@source "./stories";
+
+body {
+  font-family: Outfit, sans-serif;
+  background: #fff;
+}
+html.dark body {
+  background: #101828;
+}
+[data-visual-stage] {
+  min-height: 240px;
+  padding: 24px;
+  color: var(--color-gray-800);
+}
+html.dark [data-visual-stage] {
+  color: var(--color-gray-200);
+}
+[data-visual-stage][data-fullscreen="true"] {
+  padding: 0;
+}
+.visual-stack {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  max-width: 720px;
+}
+.visual-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.visual-sample {
+  display: grid;
+  gap: 8px;
+}
+.visual-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 16px;
+}
+.visual-icon-cell {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  padding: 12px;
+  font-size: 10px;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+.visual-icon-cell svg {
+  width: 24px;
+  height: 24px;
+}

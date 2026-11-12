@@ -1,0 +1,16 @@
+{
+  "common": {
+    "home": "Hasiera"
+  },
+  "header": {
+    "toggleSidebar": "Alboko barra erakutsi edo ezkutatu",
+    "toggleTheme": "Gaia aldatu",
+    "sidebarTitle": "Alboko barra",
+    "sidebarDescription": "Alboko barra gailu mugikorretan erakusten du."
+  },
+  "notFound": {
+    "error": "ERROREA",
+    "message": "Ezin dugu bilatzen ari zaren orria aurkitu.",
+    "backHome": "Itzuli hasierako orrira"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "common": {
+    "home": "Inicio"
+  },
+  "header": {
+    "toggleSidebar": "Alternar barra lateral",
+    "toggleTheme": "Cambiar tema",
+    "sidebarTitle": "Barra lateral",
+    "sidebarDescription": "Muestra la barra lateral en dispositivos móviles."
+  },
+  "notFound": {
+    "error": "ERROR",
+    "message": "¡Parece que no podemos encontrar la página que buscas!",
+    "backHome": "Volver a la página de inicio"
+  }
+}
