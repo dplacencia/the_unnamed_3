@@ -67,8 +67,97 @@ context: |
   UI language from browser headers. The landing uses Spanish at / and localized
   /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
   one year (365 days), with no account-level or cross-device preference implied.
-  Current assignment: openspec/changes/define-brand-basics/.
-  Latest steering: the user said "go ahead" to defining brand basics before
+  Current assignment: openspec/changes/define-backoffice-navigation/.
+  Latest steering: after committing the branding batch, the user selected
+  "Backoffice navigation and module structure" as the next design topic. Discuss
+  the overall navigation model, then the initial module/shared-area map, honest
+  availability, context, access visibility, shared settings/help, labels and depth.
+  The user selected "One shared sidebar, grouped by module (Recommended)";
+  NAV-001 records this primary navigation model. The user then selected
+  "Enabled modules + separate discovery (Recommended)" under NAV-002: the main
+  sidebar's module entries show business-enabled modules, with other available
+  modules discoverable separately. The user selected "Inventory + shared areas
+  first (Recommended)" under NAV-003, defining first-map design coverage without
+  a launch commitment or availability claim. The user then selected "Use this
+  map as the starting point (Recommended)" under NAV-004: Inventario contains
+  Productos, Existencias, Movimientos, Recuentos and Configuración del inventario,
+  with pending movement work inside Movimientos. Shared entries are Inicio,
+  Explorar módulos, Configuración del negocio and Ayuda. The user selected
+  "One module group open at a time (Recommended)" under NAV-005: groups are
+  collapsible, entering a module opens its group, opening another closes the
+  previous one, and shared entries stay directly accessible outside groups.
+  The user selected "Hide sections the person cannot access (Recommended)" under
+  NAV-006: show permitted sections when permissions are known, hide groups with
+  no accessible sections, and show clear access denial for restricted direct
+  links. Roles and grants remain separate. The user selected "Loading/error only
+  where access must be checked (Recommended)" under NAV-007: neutral loading in
+  affected navigation/content, clear error with Retry on check failure, unrelated
+  controls usable, and no unknown/failure represented as confirmed denial.
+  The user selected "Independent location selection per page (Recommended)"
+  under NAV-008: each relevant Inventory page owns its location selection and
+  shows the scope near its heading; changing one does not implicitly switch
+  another page's selection. The user selected "Sole location automatic; otherwise
+  ask and remember per tab (Recommended)" under NAV-009: select a sole known
+  accessible location, ask if several and no choice exists, remember each page's
+  explicit choice while the tab stays open, and always show scope. Closing the
+  tab ends this retention; mutation targets remain separate. Review the first
+  prototype's selected layout under NAV-010: the user chose "Use this layout for
+  the prototype (Recommended)". Place Inicio at the top, Inventario in the middle,
+  and Explorar módulos, Configuración del negocio and Ayuda at the bottom. Keep
+  TailAdmin desktop sidebar/tablet-mobile drawer and close the drawer on selection.
+  The development-only Storybook prototype is implemented and verified under
+  its bounded plan, with simulated access/location states and neutral content.
+  All 388 existing reference comparisons pass; the user approved all 84 final
+  navigation images from run 2026-11-12T21-36-33.733Z with "I approve all revisions.".
+  Those exact references are promoted, preserving the existing 388. The design
+  records exact source/environment/run identities and preview retention limits.
+  Preserve production routes, dependencies, landing and approved image references;
+  do not promote new candidates automatically.
+  Latest user review selected "Single content error + compact page frame
+  (Recommended)". NAV-011–013 correct the compact Inventory caret, show an access
+  failure once in main content with Retry, and reclaim page space through a slim
+  title/location toolbar, no large empty card and preview notices in Storybook
+  documentation. Preserve readable text/control sizes. The user's Excel reference
+  establishes efficient space as a priority; it does not select table columns,
+  row density, spreadsheet editing or a new global density mode. The
+  bounded revision is implemented and verified with 54 code tests, 40 browser
+  checks and 76 revised candidate captures passing. All 388 approved comparisons
+  still pass. The prior 72 and revised 76 images are not approved.
+  Second review: fix the whole compact Inventory trigger footprint and icon
+  sizing/alignment, not only caret visibility, under refined NAV-011. The user
+  selected "One compact toolbar with page controls (Recommended)" under NAV-014:
+  combine menu, page title, location where applicable and theme controls in the
+  preview; preserve control sizes and visibility with responsive wrapping.
+  Follow section 5 of the prototype plan. Do not modify the production header
+  or introduce hover-activated controls from the unselected alternative.
+  Section 5 is implemented and verified: compact control footprint/icons match
+  neighbors, compact keyboard activation opens rail+group with honest announced
+  state, and the combined desktop toolbar measures 53px with retained controls.
+  All 76 candidates from that revision and 388 approved reference comparisons pass; images
+  remain unapproved and no production routes, staging or commits follow.
+  Third review: the user chose "Use this compact direction and folding footer
+  (Recommended)" under NAV-015–017: 64px collapsed rail, centred 44px targets and
+  16px icons; borderless 16px-icon header actions sized 36px desktop or 44px
+  tablet/mobile; shared footer folding under "Más opciones", initially open.
+  Additional steering under NAV-018 asks for a thinner Ubicación selector: use
+  the retained 36px desktop variant, preserving 44px tablet/mobile targets,
+  14px text and selection behavior. Section 6 is implemented and verified with
+  54 code tests, 43 browser checks, 84 current captures and 388 approved comparisons.
+  The exact current capture is 2026-11-12T21-36-33.733Z; its 84 images are now
+  specifically approved and promoted. The user's commit-preparation request and
+  image approval authorize two staging batches: navigation code/specifications,
+  then approved references. Stage each separately and give the user the commit
+  command; never execute a commit. No production primitive changes, new
+  persistence policy, archive or deployment are authorized.
+  The post-approval full comparison 2026-11-12T21-47-49.746Z passes all 472
+  accepted cases with zero failed, skipped or flaky cases. Final pnpm check and
+  strict OpenSpec validation also pass. Preserve the recorded approval identities.
+  Record user choices before UI implementation. Preserve the approved brand and
+  screenshot baseline; product-creation flows and landing work remain later.
+  Read-only sibling module sources constrain proposals without selecting a launch
+  module list or claiming every defined capability is implemented. No hosting,
+  identity/API architecture, integration, staging or commit follows from this step.
+  Brand record: the user said "go ahead" to defining brand basics before
   customizing TailAdmin. This starts discussion of visual emphasis followed by
   concrete colour/typography options and minimum identity treatment. The user
   selected "Restrained and approachable (Recommended)": warm neutral backgrounds,

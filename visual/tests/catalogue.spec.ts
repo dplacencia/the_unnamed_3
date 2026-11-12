@@ -18,6 +18,8 @@ import {
   type Scenario,
 } from "../runtime.ts";
 import { profiles, origins } from "../profiles.ts";
+import { navigationAction } from "../navigation-actions.ts";
+import type { Locale } from "../../apps/backoffice/src/i18n/configuration";
 
 const build = readBuild();
 const mode = process.env.VISUAL_MODE === "compare" ? "compare" : "capture";
@@ -65,6 +67,8 @@ async function action(
   entry: Entry,
   theme: string,
 ) {
+  if (name?.startsWith("navigation-"))
+    return navigationAction(page, name, (entry.locale ?? "es") as Locale);
   switch (name) {
     case "brand-font-inter":
       await page.getByRole("radio", { name: "Inter", exact: true }).check();

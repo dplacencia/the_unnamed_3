@@ -1213,6 +1213,239 @@
           "action": "second-tab"
         }
       ]
+    },
+    {
+      "id": "navigation-workspace",
+      "title": "Navigation · Workspace",
+      "kind": "story",
+      "sources": [
+        "apps/backoffice/src/components/ui/sidebar.tsx",
+        "apps/backoffice/src/components/ui/accordion.tsx",
+        "apps/backoffice/src/components/ui/select.tsx",
+        "apps/backoffice/src/components/ui/button.tsx",
+        "apps/backoffice/src/context/theme-context.tsx"
+      ],
+      "storyId": "navigation-merchant-workspace--workspace",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "sidebar-toggled",
+          "action": "toggle-sidebar"
+        },
+        {
+          "id": "location-selected",
+          "action": "navigation-location"
+        },
+        {
+          "id": "page-memory",
+          "action": "navigation-memory"
+        },
+        {
+          "id": "footer-folded",
+          "action": "navigation-footer-fold"
+        },
+        {
+          "id": "compact-footer-folded",
+          "action": "navigation-compact-footer-fold"
+        }
+      ],
+      "limitation": "Development-only navigation preview; simulated access and locations, neutral content, no production routes or stock-changing actions."
+    },
+    {
+      "id": "navigation-products",
+      "title": "Navigation · Products compact frame",
+      "kind": "story",
+      "sources": [
+        "apps/backoffice/src/components/ui/sidebar.tsx",
+        "apps/backoffice/src/components/ui/accordion.tsx",
+        "apps/backoffice/src/components/ui/button.tsx",
+        "apps/backoffice/src/context/theme-context.tsx"
+      ],
+      "storyId": "navigation-merchant-workspace--products",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Development-only navigation preview; simulated access and locations, neutral content, no production routes or stock-changing actions."
+    },
+    {
+      "id": "navigation-restricted",
+      "title": "Navigation · Restricted direct link",
+      "kind": "story",
+      "sources": [
+        "apps/backoffice/src/components/ui/sidebar.tsx",
+        "apps/backoffice/src/components/ui/accordion.tsx",
+        "apps/backoffice/src/components/ui/select.tsx",
+        "apps/backoffice/src/components/ui/button.tsx",
+        "apps/backoffice/src/context/theme-context.tsx"
+      ],
+      "storyId": "navigation-merchant-workspace--restricted",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "menu",
+          "action": "navigation-open"
+        }
+      ],
+      "limitation": "Development-only navigation preview; simulated access and locations, neutral content, no production routes or stock-changing actions."
+    },
+    {
+      "id": "navigation-no-module",
+      "title": "Navigation · No accessible module sections",
+      "kind": "story",
+      "sources": [
+        "apps/backoffice/src/components/ui/sidebar.tsx",
+        "apps/backoffice/src/components/ui/accordion.tsx",
+        "apps/backoffice/src/components/ui/select.tsx",
+        "apps/backoffice/src/components/ui/button.tsx",
+        "apps/backoffice/src/context/theme-context.tsx"
+      ],
+      "storyId": "navigation-merchant-workspace--no-module-access",
+      "cases": [
+        {
+          "id": "menu",
+          "action": "navigation-open"
+        }
+      ],
+      "limitation": "Development-only navigation preview; simulated access and locations, neutral content, no production routes or stock-changing actions."
+    },
+    {
+      "id": "navigation-permission-loading",
+      "title": "Navigation · Permission loading",
+      "kind": "story",
+      "sources": [
+        "apps/backoffice/src/components/ui/sidebar.tsx",
+        "apps/backoffice/src/components/ui/accordion.tsx",
+        "apps/backoffice/src/components/ui/select.tsx",
+        "apps/backoffice/src/components/ui/button.tsx",
+        "apps/backoffice/src/context/theme-context.tsx"
+      ],
+      "storyId": "navigation-merchant-workspace--permission-loading",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "menu",
+          "action": "navigation-open"
+        }
+      ],
+      "limitation": "Development-only navigation preview; simulated access and locations, neutral content, no production routes or stock-changing actions."
+    },
+    {
+      "id": "navigation-permission-error",
+      "title": "Navigation · Permission error",
+      "kind": "story",
+      "sources": [
+        "apps/backoffice/src/components/ui/sidebar.tsx",
+        "apps/backoffice/src/components/ui/accordion.tsx",
+        "apps/backoffice/src/components/ui/select.tsx",
+        "apps/backoffice/src/components/ui/button.tsx",
+        "apps/backoffice/src/context/theme-context.tsx"
+      ],
+      "storyId": "navigation-merchant-workspace--permission-error",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "menu",
+          "action": "navigation-open"
+        },
+        {
+          "id": "retried",
+          "action": "navigation-retry"
+        },
+        {
+          "id": "sidebar-toggled",
+          "action": "toggle-sidebar"
+        }
+      ],
+      "limitation": "Development-only navigation preview; simulated access and locations, neutral content, no production routes or stock-changing actions."
+    },
+    {
+      "id": "navigation-sole-location",
+      "title": "Navigation · Sole location",
+      "kind": "story",
+      "sources": [
+        "apps/backoffice/src/components/ui/sidebar.tsx",
+        "apps/backoffice/src/components/ui/accordion.tsx",
+        "apps/backoffice/src/components/ui/select.tsx",
+        "apps/backoffice/src/components/ui/button.tsx",
+        "apps/backoffice/src/context/theme-context.tsx"
+      ],
+      "storyId": "navigation-merchant-workspace--sole-location",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Development-only navigation preview; simulated access and locations, neutral content, no production routes or stock-changing actions."
+    },
+    {
+      "id": "navigation-en",
+      "title": "Navigation · en",
+      "kind": "story",
+      "sources": [],
+      "storyId": "navigation-merchant-workspace--workspace",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "menu",
+          "action": "navigation-open"
+        }
+      ],
+      "limitation": "Translated navigation preview; fixture copy is not final product copy."
+    },
+    {
+      "id": "navigation-ca",
+      "title": "Navigation · ca",
+      "kind": "story",
+      "sources": [],
+      "storyId": "navigation-merchant-workspace--workspace",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "menu",
+          "action": "navigation-open"
+        }
+      ],
+      "limitation": "Translated navigation preview; fixture copy is not final product copy."
+    },
+    {
+      "id": "navigation-gl",
+      "title": "Navigation · gl",
+      "kind": "story",
+      "sources": [],
+      "storyId": "navigation-merchant-workspace--workspace",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "menu",
+          "action": "navigation-open"
+        }
+      ],
+      "limitation": "Translated navigation preview; fixture copy is not final product copy."
+    },
+    {
+      "id": "navigation-eu",
+      "title": "Navigation · eu",
+      "kind": "story",
+      "sources": [],
+      "storyId": "navigation-merchant-workspace--workspace",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "menu",
+          "action": "navigation-open"
+        }
+      ],
+      "limitation": "Translated navigation preview; fixture copy is not final product copy."
     }
   ]
 }

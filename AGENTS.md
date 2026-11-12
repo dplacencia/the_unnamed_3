@@ -16,6 +16,61 @@ the linked records distinguish approved source decisions from newly recorded
 wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
+Current assignment: [backoffice navigation discovery](openspec/changes/define-backoffice-navigation/proposal.md).
+The user chose “Backoffice navigation and module structure” as the next design
+topic. NAV-001 records one shared sidebar grouped by module. NAV-002 records
+enabled modules in that sidebar with separate discovery for other available
+modules. NAV-003 records Inventory plus shared areas as the first map's design
+coverage. NAV-004 records the agreed starting map, including pending movements
+within Movimientos. NAV-005 records collapsible module groups with at most one
+open, opening the current module on entry and keeping shared entries outside
+groups. NAV-006 hides known-inaccessible sections and groups with no accessible
+sections, with clear denial for restricted direct links. NAV-007 limits permission
+loading/error states to affected navigation/content, with Retry on failure and
+unrelated controls usable. NAV-008 records independent location selection on
+relevant Inventory pages, with scope visible near the heading. NAV-009 selects a
+sole accessible location automatically, otherwise asks for an initial choice, and
+remembers explicit page choices while the tab stays open. NAV-010 records the
+selected top/middle/bottom layout and drawer closing after destination selection.
+The user chose this layout for the first Storybook prototype. Its bounded
+[implementation plan](openspec/changes/define-backoffice-navigation/implementation-plan.md)
+is implemented and verified for the development-only preview, simulated states
+and translations. The design records checks and the exact current 84-candidate
+review run. The user approved its 84 images with “I approve all revisions.”;
+those exact references are promoted alongside the preserved 388 existing cases.
+Preserve the documented preview retention limits and require new approval for
+future replacements.
+Latest user review requests corrections under NAV-011–013: hide the compact
+Inventory caret, show access-check errors once in content with Retry, and use a
+compact page frame that leaves space for information-rich tables without shrinking
+readable text/controls. The user chose that revision direction. Follow section 4
+of the plan. Those corrections are implemented and verified, with 76 revised
+candidates initially awaiting review; only the final 84-image run is now promoted.
+Table contents, row density and spreadsheet-style editing remain undefined.
+The second review refines NAV-011 to match the entire compact Inventory trigger
+and icon to neighboring menu controls. Under NAV-014 the user chose one compact
+toolbar combining menu, title, location and theme controls, keeping controls
+visible at existing sizes. Section 5's preview-only correction is implemented
+and verified, including matching compact keyboard state to visible content.
+That revision's 76-candidate run and 40 browser checks passed. Production
+header behavior remains unchanged; that run is superseded by the final revision.
+The third review selects NAV-015–017: a 64px collapsed rail with centred 44px
+targets/16px icons, ghost header actions at 36px desktop or 44px tablet/mobile,
+and an initially open footer folding under “Más opciones”. Additional steering
+under NAV-018 makes Ubicación 36px on desktop while retaining 44px tablet/mobile
+targets and 14px text. Section 6 is implemented and verified: 54 code tests,
+43 browser checks, 84 current captures and 388 approved comparisons pass. Read
+the design's exact current run identities and subsequent 84-image approval.
+Do not change production primitives. The user's commit-preparation request and
+image approval authorize two staging batches: navigation code/specifications,
+then approved visual references. Stage one batch at a time and give the user its
+commit command; never execute a commit. Do not archive or deploy automatically.
+The full post-approval comparison passes all 472 accepted cases; the navigation
+design records the exact run and approval evidence.
+Ask before adopting other unresolved choices; preserve production UI and approved
+references. The design records sources, choices and limits. Product-creation flows and the
+landing remain later work.
+
 Completed brand configuration: [brand basics](openspec/changes/define-brand-basics/proposal.md).
 The user said “go ahead” to defining brand basics before customizing TailAdmin.
 Discuss the visual emphasis, then concrete colour/typography options and the

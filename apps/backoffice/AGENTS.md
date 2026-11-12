@@ -20,6 +20,49 @@ the exact approval and identities. Require new image approval for replacements.
 The
 [visual review workflow](../../openspec/changes/define-visual-review-workflow/proposal.md)
 is implemented; preserve its review rules and the technical sources as constraints.
+The active [navigation discovery](../../openspec/changes/define-backoffice-navigation/proposal.md)
+records the shared sidebar under NAV-001 and enabled modules with separate
+discovery under NAV-002. NAV-003 selects Inventory plus shared areas for the first
+design map. NAV-004 records the accepted initial entries, with pending work inside
+Movimientos. NAV-005 records one collapsible module group open at a time, opening
+the current module on entry and leaving shared entries outside groups. NAV-006
+hides known-inaccessible sections and groups with no accessible sections, with
+explicit denial for restricted links. NAV-007 scopes permission loading/error
+states to affected areas, with Retry on failure and unrelated controls usable.
+NAV-008 records independent location selection per relevant Inventory page with
+scope visible near its heading. NAV-009 selects a sole accessible location
+automatically, otherwise asks for an initial choice, and remembers explicit page
+choices while the tab stays open. NAV-010 records the selected prototype layout
+and responsive drawer behavior. The development-only Storybook preview is
+implemented and verified under the navigation change's plan, with simulated
+states and neutral content. The user approved its 84 final images with “I approve
+all revisions.”; those references are promoted, preserving the existing 388.
+Read the design's run identities and preview
+retention limits. Roles, real screen contents and other menu details remain open;
+preserve production UI and accepted references.
+The user's first review selects NAV-011–013 corrections: compact caret fit, one
+content-area access error/Retry and a compact available-width page frame, keeping
+text/control sizes. The revision is implemented and verified; its fresh candidates
+initially awaited review. Positive wording on the old preview did not approve its images. No table columns,
+row density or editing behavior is selected by the Excel space-use reference.
+The second review requires the compact Inventory trigger/icon to match its
+neighbors and selects NAV-014's one compact toolbar with visible page controls.
+Section 5 is implemented and verified, including compact keyboard activation and
+announced expansion. That revision's 76 candidates remain unapproved; 40 browser checks and
+all 388 approved comparisons pass. Keep the production header unchanged and do
+not introduce the unselected hover-activated alternative.
+The third review selects a narrow centred rail, responsive ghost header actions
+and initially open folding footer under NAV-015–017. NAV-018 records the user's
+thinner Ubicación request, using 36px desktop/44px tablet-mobile targets with
+14px text. Section 6 is implemented and verified: 54 code tests, 43 browser checks,
+84 current captures and 388 approved comparisons pass. The design records the
+exact final run and subsequent 84-image approval. Preserve production
+components and accepted references.
+The user authorized commit preparation in two staging batches: navigation code/
+specifications, then approved references. Give the user each commit command;
+never execute a commit, archive or deployment.
+The full post-approval comparison passes all 472 accepted cases; preserve the
+exact source/image/approval identities recorded in the navigation design.
 User instructions and approved decisions govern over vendor
 defaults. Never commit; sibling repositories remain read-only.
 

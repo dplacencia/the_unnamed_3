@@ -5,7 +5,7 @@ import { cache } from "./runtime.ts";
 
 export default defineConfig({
   ...base,
-  testMatch: "catalogue-languages.spec.ts",
+  testMatch: ["catalogue-languages.spec.ts", "navigation.spec.ts"],
   projects: [
     { name: "languages", use: { viewport: { width: 1440, height: 1000 } } },
   ],

@@ -1,0 +1,12 @@
+/* Layered important declarations outrank the vendor utility-layer compact size. */
+@layer components {
+  [data-navigation-shell]
+    [data-collapsible="icon"]
+    [data-sidebar="menu-button"] {
+    width: 2.75rem !important;
+    height: 2.75rem !important;
+    min-height: 2.75rem;
+    padding: 0.5rem !important;
+    justify-content: center;
+  }
+}

@@ -48,12 +48,79 @@ an explicit custom label that remains exact across language changes. **Reset
 controls** restores the translated default. Typed values and open dialogs are
 preserved when the language changes.
 
-The current inventory covers 216 retained component source modules through 52
-stories and 21 view entries. Its 97 named scenarios produce 388 captures across
+The current inventory covers 216 retained component source modules through 59
+stories and 21 view entries. Its 118 named scenarios produce 472 captures across
 desktop 1440×900, tablet 768×1024, mobile 390×844 and desktop dark mode. The actual
 assembled views cover Spanish, English, Catalan, Galician and Basque. Compound
 primitives and icons are inspected in compositions; this is representative source
 coverage, not every possible prop combination or complete accessibility testing.
+
+## Navigation prototype
+
+Open http://localhost:6006/?path=/story/navigation-merchant-workspace--workspace.
+The seven examples under Navigation/Merchant workspace cover the selected
+navigation map, restricted direct links, no accessible module sections, permission
+loading/error, a sole location and the compact Products frame. Permissions, locations and retry outcomes are
+simulated; destination content is neutral. Use Storybook's theme, language and
+viewport controls, and try selecting different locations on Existencias and
+Movimientos. Production app routes remain unchanged.
+
+The 21 navigation scenarios add 84 candidate cases, including all five
+languages. The user approved all 84 final images from
+`2026-11-12T21-36-33.733Z` with **“I approve all revisions.”**. They are promoted
+in `visual/references/` and `visual/references.json`, preserving the existing 388
+cases. The full accepted baseline now has **472 images**. Future replacements
+still require specific approval. To capture new navigation candidates and compare
+the full accepted matrix:
+
+```sh
+pnpm visual:capture --grep 'navigation-'
+pnpm visual:compare
+```
+
+Follow the same capture/run/case approval procedure below for future changes;
+successful captures accept nothing.
+
+The post-approval comparison `2026-11-12T21-47-49.746Z` passes all 472 accepted
+cases with zero failed, skipped or flaky cases. The navigation design records
+the exact approval, source and renderer identities.
+
+Page choices persist during in-preview navigation and supported reloads, using
+a fixture-only tab namespace. Fresh preview entry/re-entry and fixture-control
+resets can clear the simulation. Fresh entries discard browser-copied session
+storage, so opener-created tabs do not inherit another preview's choices. Direct
+preview reload and whole Storybook-manager reload are browser-tested. Reloading
+only an embedded iframe under a freshly entered manager is treated as fresh
+entry. Browser-chrome reopening/session restoration is not verified. These are
+development-preview limits, not production persistence guarantees.
+
+The first user review selected a compact frame for information-rich work.
+Prototype notices live in Storybook documentation, the page has one slim
+title/location toolbar, and the large empty card is removed. Text/control sizes
+are preserved. Access-check errors appear once in main content with Retry; the
+compact module control hides its caret. Future table columns, row density and
+editing behavior remain undefined. The earlier 72-candidate run was not approved;
+use the fresh revision run linked from the navigation change's design.
+
+The second review matches the compact Inventory button and icon to neighboring
+controls, including footprint and alignment, and combines menu/title/location/
+theme into one visible compact toolbar. The separate two-button header row is
+removed only in this preview. Location controls wrap on small screens; hover is
+not required to reveal controls. The same 76 cases are recaptured after this
+revision, with the exact current run linked from the navigation design.
+
+The third review narrows the collapsed rail to 64px with centred 44px targets,
+uses 16px ghost header actions (36px desktop targets, 44px tablet/mobile), and
+adds the initially open “Más opciones” footer toggle. It folds/unfolds the three
+shared destinations using local preview state. The new expanded/compact folded
+states add eight captures; review the current 84-case run linked from the design.
+The subsequent thinner Ubicación refinement uses the existing 36px desktop
+variant, retaining 44px tablet/mobile targets and 14px text in that same final run.
+Production sidebar/header/theme components remain unchanged.
+
+`pnpm visual:test-languages` also runs the navigation interaction suite, covering
+five-language labels, independent choices, access-state distinctions, tab
+isolation, drawer closing and keyboard focus restoration.
 
 The added Brand/Explorations example is a development-only comparison of six
 accent proposals and Source Sans 3, Inter and the original Outfit. New options
@@ -78,7 +145,8 @@ The user approved all 388 images from run `2026-11-12T17-47-13.318Z` with
 “I approve them all”. Their source/environment/profile/image identities and that
 verbatim approval are recorded in `visual/references.json`. These supersede the
 original Outfit baseline, which remains in Git history. Full comparison passes
-against the newly approved images:
+for those approved images. The subsequently approved 84 navigation cases extend
+this baseline without replacing its original 388 entries. Compare all cases:
 
 ```sh
 pnpm visual:compare
