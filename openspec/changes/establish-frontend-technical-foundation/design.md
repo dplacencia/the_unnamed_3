@@ -857,3 +857,8 @@ Evidence is in ignored `.cache/repository-foundation-*` logs/JSON, including
 27 Markdown files and 62 local links have no missing targets. The Git index is
 empty and history has zero commits. No files in the sibling repositories were written and no
 commit, deployment or screenshot promotion was performed.
+
+The user subsequently approved all 368 images from the named review run. The
+[visual change](../define-visual-review-workflow/proposal.md) records their
+separate promotion and verification; the empty-registry statements above describe
+this technical implementation's earlier verification state.

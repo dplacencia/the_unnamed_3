@@ -40,3 +40,13 @@
 - [x] 3.3 Verify language changes, errors, popups and dictionary/source freshness.
 - [x] 3.4 Rebuild and validate the complete workflow, record evidence and refresh
       the live walkthrough without accepting references or committing.
+
+## Initial approved references
+
+- [x] 4.1 Record the user's approval of all 368 images from run
+      `2026-11-12T13-05-47.261Z`; promote those exact cases with verbatim approval
+      through the existing source/environment/image validation.
+- [x] 4.2 Run the complete approved-reference comparison and inspect actual results.
+- [x] 4.3 Verify registry/image hashes, local checks, native OpenSpec and exact
+      staging boundaries. Record evidence and provide the next user-run commit
+      command, keeping the approval/reference batch separate. Never commit.

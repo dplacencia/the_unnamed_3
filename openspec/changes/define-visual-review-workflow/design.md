@@ -387,3 +387,58 @@ the lockfile SHA-256 remains
 The review/capture reports are refreshed, the product reference registry is empty,
 and no staging, commit or deployment occurred. Owned previews are running for the
 ongoing user walkthrough; refresh the browser to load the rebuilt examples.
+
+## Initial visual-reference approval — 2026-11-12
+
+The preceding empty-registry results describe the state before user acceptance.
+The user has now said “commited, I approve all visual revisions”, after the agent
+named current review run `2026-11-12T13-05-47.261Z` and explained case/run approval.
+The approved set is all 368 images in that run, covering the four selected
+viewport/theme profiles and registered language/interaction cases. Its source
+fingerprint is
+`d44a5aa085cd8370129102f81ae2ea264acc549cbfcf67cf1dbd728073d1f5f5`.
+
+The existing promotion command selected every case from that exact run, verified
+source/rendering environment and image hashes, copied the approved PNGs into
+`visual/references/<profile>/` and stored the verbatim user instruction in each
+`visual/references.json` entry. This is acceptance of the current technical image
+baselines, not final product branding, product copy or future image changes.
+
+Verification and commit-preparation plan:
+
+1. Run the complete normal `pnpm visual:compare` matrix against the accepted
+   references. Inspect the actual report and investigate any unexpected pixel or
+   browser failure; never update the approved images to make the check pass.
+2. Check that all 368 registry entries and PNG hashes match the approved run,
+   with the same source/environment/profile identity and approval evidence.
+   Run local formatting/code checks and strict native OpenSpec validation.
+3. Preserve the user's commit batches: the runnable workspace/tooling batch has
+   its initial empty registry staged; approval metadata, reference images and
+   this acceptance record remain a subsequent unstaged batch. Verify exact index
+   scope and whitespace, provide the user's next commit command and never commit.
+4. Record actual comparison/check outcomes and keep this acceptance scoped to
+   the named run. Later intentional visual changes need their own review.
+
+### Accepted-reference verification
+
+The normal full comparison run `2026-11-12T13-31-15.275Z` passes all 368 cases,
+with zero failures, skips or retries, using the approved 0.01 colour threshold
+and maxDiffPixels 0. This is reference comparison, not a new candidate approval.
+All 368 registry entries retain the approved run/source/environment/profile
+identities and verbatim user instruction. Every PNG hash matches its reviewed
+candidate; comparison did not change the references. The accepted PNGs total
+5,763,784 bytes.
+
+`pnpm check` passes formatting, lint, type checks and all 42 code tests. Strict
+native OpenSpec validation passes all four changes. The user's first documentation
+commit is `317a8d7d113233d94578a71f2f31b77bef72d64c`; its 35 files match the
+prepared first batch. The next 306 workspace/app/tooling files are staged and
+pass the index whitespace check, including an initial empty reference registry.
+The approved working registry, 368 PNGs and six acceptance/status documents remain
+unstaged for the next batch. Only the user creates commits.
+
+Ignored evidence: `.cache/initial-approved-reference-compare.log`,
+`.cache/initial-approved-reference-check.log`,
+`.cache/initial-approved-reference-integrity.json` and the comparison run's native
+Playwright report. The ignored `.cache/commit-preparation.json` tracks the staged
+batch and the subsequent reference batch for the user's commit handoffs.

@@ -124,4 +124,5 @@ The selected repository foundation is now implemented and verified, including
 the typed Astro client-script lint correction found during independent review.
 See the final design/results and checked tasks for evidence. This completes the
 agreed local stack scope; it does not publish/archive the change or begin the
-next branding/product phase. The visual-reference registry remains unapproved.
+next branding/product phase. The user has subsequently approved all 368 images
+in the reviewed run; the visual change records that separate reference acceptance.

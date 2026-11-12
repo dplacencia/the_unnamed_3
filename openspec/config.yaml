@@ -86,6 +86,10 @@ context: |
   Candidate captures are not accepted references; require specific user review
   before promoting named cases. Preserve the
   existing technical foundation and its approved landing/quality choices.
+  On 2026-11-12 the user explicitly approved all 368 images from review run
+  2026-11-12T13-05-47.261Z. The visual change and references registry record that
+  acceptance with source/environment/image identities and verbatim approval.
+  This approval does not extend to future changed captures or final branding.
   Catalogue examples now use development-only dictionaries for all five locales.
   Language changes update fixture labels/descriptions/errors while retaining typed
   values, explicit custom labels and open state. These strings are technical
