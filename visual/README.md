@@ -3,7 +3,8 @@
 Storybook renders the real retained TailAdmin components. The Astro gallery uses
 native Astro documents. Playwright checks registered interactions and captures
 both catalogues and the actual static app views. Fixtures are technical examples;
-TailAdmin branding remains provisional and no product flow is designed here.
+The backoffice uses the approved first Irin configuration; the name remains
+provisional and no product flow is designed here.
 
 Use the pinned Node/pnpm tools described in the [root README](../README.md).
 
@@ -14,7 +15,7 @@ pnpm visual:capture
 ```
 
 Browser installation uses the repo-local `.cache/ms-playwright`. Preparation
-builds both normal apps, extracts their actual Outfit fonts for Storybook, builds
+builds both normal apps, extracts the actual backoffice font for Storybook, builds
 both catalogues and audits the inventory. Re-run preparation after source changes.
 Captures automatically start and stop their own previews when no matching preview
 server is running. An occupied port serving another build fails the identity check.
@@ -47,12 +48,54 @@ an explicit custom label that remains exact across language changes. **Reset
 controls** restores the translated default. Typed values and open dialogs are
 preserved when the language changes.
 
-The current inventory covers 216 retained component source modules through 50
-stories and 21 view entries. Its 92 named scenarios produce 368 captures across
+The current inventory covers 216 retained component source modules through 52
+stories and 21 view entries. Its 97 named scenarios produce 388 captures across
 desktop 1440×900, tablet 768×1024, mobile 390×844 and desktop dark mode. The actual
 assembled views cover Spanish, English, Catalan, Galician and Basque. Compound
 primitives and icons are inspected in compositions; this is representative source
 coverage, not every possible prop combination or complete accessibility testing.
+
+The added Brand/Explorations example is a development-only comparison of six
+accent proposals and Source Sans 3, Inter and the original Outfit. New options
+D/ink indigo, E/plum and F/graphite appear first; the earlier A–C remain for reference.
+Open
+http://localhost:6006/?path=/story/brand-explorations--basics and use the font,
+theme and language controls. Fonts are bundled locally with their license and
+source identities in `apps/backoffice/.storybook/assets/fonts/`. The user selected
+D/ink indigo, its warm-neutral base and Source Sans 3 for the first backoffice;
+the other options remain comparison references. Font controls affect only this
+preview and preserve entered text. Its 12 font/profile images are included in
+the approved 388-case baseline as technical comparisons; the other palette/font
+options retain their reference-only design status.
+
+After the production font changes, capture the full matrix for fresh review:
+
+```sh
+pnpm visual:capture
+```
+
+The user approved all 388 images from run `2026-11-12T17-47-13.318Z` with
+“I approve them all”. Their source/environment/profile/image identities and that
+verbatim approval are recorded in `visual/references.json`. These supersede the
+original Outfit baseline, which remains in Git history. Full comparison passes
+against the newly approved images:
+
+```sh
+pnpm visual:compare
+```
+
+Future app-font changes require fresh review because they change the recorded
+environment. Keep that guard; do not weaken validation or automatically update
+references. Capture success alone does not accept future images. Comparison runs
+produce comparison results rather than new candidate images; the registry records
+acceptance, and the per-run capture viewer preserves the reviewed images.
+
+`TailAdmin/Compositions/Brand Text Roles` exercises the affected real links,
+badges, line tabs and menu/document text, including hover and selection states.
+Its two scenarios add eight profile cases. Browser checks compose alpha
+backgrounds for 14 ordinary text samples and retain the icon, border and disabled
+colours. The selected dark text role is `brand-300` (`#B4ACD7`); palette values
+and the primary accent remain unchanged.
 
 The landing currently contains empty technical documents. Its gallery honestly
 shows that state. The video frame replaces external YouTube content during capture

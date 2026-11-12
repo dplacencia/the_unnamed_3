@@ -30,7 +30,8 @@ context: |
   Brand positioning, slogans and product definitions are secular and must not
   imply religious endorsement. The name's origin may be explained accurately
   when relevant; a discoverable cultural or religious connection is acceptable.
-  No final name or visual identity is chosen.
+  The name remains provisional; the approved initial visual basics are recorded
+  in the brand change below.
   The user prefers AWS Console over Azure and Google Cloud consoles as a
   reference for the expert end of the user spectrum, not a beginner baseline.
   Naturgy and Lowi names/brand concepts are negative trust
@@ -66,15 +67,40 @@ context: |
   UI language from browser headers. The landing uses Spanish at / and localized
   /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
   one year (365 days), with no account-level or cross-device preference implied.
-  Current assignment: openspec/changes/establish-frontend-technical-foundation/.
-  Latest steering: the user said "ok, lets work on these three" about the remaining
-  module/shared-code organization, landing styling/interaction, and code-convention/
-  local-quality decisions. Discuss and implement the selected choices, preserving
-  unanswered recommendations as pending. These three choices are now selected,
-  implemented and verified as recorded in the technical change's design/tasks.
-  This completes the agreed local stack scope. Wait for the user's next assignment;
-  no brand/product design or reference approval follows automatically. The visual
-  workflow is implemented.
+  Current assignment: openspec/changes/define-brand-basics/.
+  Latest steering: the user said "go ahead" to defining brand basics before
+  customizing TailAdmin. This starts discussion of visual emphasis followed by
+  concrete colour/typography options and minimum identity treatment. The user
+  selected "Restrained and approachable (Recommended)": warm neutral backgrounds,
+  clear typography, strong contrast and limited accent colour. Prepare the scoped
+  TailAdmin comparison in the brand change's plan. The user subsequently selected
+  D/ink indigo (#57528C) as the colour basis and Source Sans 3 as the typeface
+  basis, explicitly choosing it after the licence clarification. The user selected
+  a simple Irin text wordmark in Source Sans 3 for now, with a bespoke symbol
+  deferred and the name still provisional. The user selected retaining TailAdmin's
+  existing spacing, rounded corners and icons for the first backoffice appearance.
+  The user approved the brand change's concrete first-configuration proposal:
+  full option-D indigo/warm-neutral mapping, existing text sizes/weights, and exact
+  wordmark styling (semibold, 32px expanded / 20px compact). Implement that
+  backoffice scope under the recorded plan, preserving the landing and current
+  reference images. Approval of this configuration is not new image approval.
+  The first pass is applied. A measured ordinary dark-brand-text contrast
+  shortfall was identified. The user
+  approved existing brand-300 (#B4ACD7) for the affected text roles, keeping the
+  palette and primary accent. BRAND-007 is now applied and verified, with
+  46 code tests, 27 browser checks and all 388 final candidate captures passing.
+  The user then said "I approve them all" for all 388 images from final run
+  2026-11-12T17-47-13.318Z. All are promoted with verbatim approval and exact
+  source/environment/profile/image identities; full comparison passes all 388.
+  The design records the evidence. The initial backoffice brand configuration
+  and image approval are complete; future reference changes need new specific
+  approval. Product-flow design remains a later phase and does not start automatically.
+  Keep Irin provisional and record the user's
+  choices before applying them. Preserve current apps and accepted references
+  while choices remain pending. The repository's module/shared-code organization,
+  landing styling/interactions and code-convention/local-quality choices are
+  implemented and verified in the technical change. The visual workflow is also
+  implemented; do not reopen those completed technology decisions.
   The user selected
   Storybook for backoffice components, native Astro previews and Playwright,
   with pinned Chromium on this Mac. Cover desktop 1440x900, tablet 768x1024,

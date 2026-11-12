@@ -58,7 +58,7 @@ function TabsTrigger({ className, ...props }: TabsPrimitive.Tab.Props) {
     <TabsPrimitive.Tab
       data-slot="tabs-trigger"
       className={cn(
-        "relative inline-flex cursor-pointer items-center justify-center gap-1.5 font-outfit text-sm font-medium whitespace-nowrap outline-hidden transition-colors duration-200 select-none",
+        "relative inline-flex cursor-pointer items-center justify-center gap-1.5 font-ui text-sm font-medium whitespace-nowrap outline-hidden transition-colors duration-200 select-none",
         "focus-visible:ring-3 focus-visible:ring-brand-500/20 focus-visible:outline-hidden",
         "disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50",
         "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
@@ -71,7 +71,7 @@ function TabsTrigger({ className, ...props }: TabsPrimitive.Tab.Props) {
         // Variant: Line
         "group-data-[variant=line]/tabs-list:-mb-px group-data-[variant=line]/tabs-list:h-12 group-data-[variant=line]/tabs-list:rounded-none group-data-[variant=line]/tabs-list:border-b-2 group-data-[variant=line]/tabs-list:border-transparent group-data-[variant=line]/tabs-list:px-3",
         "group-data-[variant=line]/tabs-list:text-gray-500 group-data-[variant=line]/tabs-list:hover:text-gray-700 dark:group-data-[variant=line]/tabs-list:text-gray-400 dark:group-data-[variant=line]/tabs-list:hover:text-gray-200",
-        "group-data-[variant=line]/tabs-list:data-active:border-brand-500 group-data-[variant=line]/tabs-list:data-active:bg-transparent group-data-[variant=line]/tabs-list:data-active:text-brand-500 group-data-[variant=line]/tabs-list:data-active:shadow-none dark:group-data-[variant=line]/tabs-list:data-active:border-brand-400 dark:group-data-[variant=line]/tabs-list:data-active:text-brand-400",
+        "group-data-[variant=line]/tabs-list:data-active:border-brand-500 group-data-[variant=line]/tabs-list:data-active:bg-transparent group-data-[variant=line]/tabs-list:data-active:text-brand-500 group-data-[variant=line]/tabs-list:data-active:shadow-none dark:group-data-[variant=line]/tabs-list:data-active:border-brand-400 dark:group-data-[variant=line]/tabs-list:data-active:text-brand-300",
         "group-data-[orientation=vertical]/tabs:group-data-[variant=line]/tabs-list:-me-px group-data-[orientation=vertical]/tabs:group-data-[variant=line]/tabs-list:h-auto group-data-[orientation=vertical]/tabs:group-data-[variant=line]/tabs-list:w-full group-data-[orientation=vertical]/tabs:group-data-[variant=line]/tabs-list:justify-start group-data-[orientation=vertical]/tabs:group-data-[variant=line]/tabs-list:border-e-2 group-data-[orientation=vertical]/tabs:group-data-[variant=line]/tabs-list:border-b-0 group-data-[orientation=vertical]/tabs:group-data-[variant=line]/tabs-list:py-2.5",
         className,
       )}

@@ -1164,6 +1164,55 @@
           "id": "default"
         }
       ]
+    },
+    {
+      "id": "brand-basics",
+      "title": "Brand colour and typography proposals",
+      "kind": "story",
+      "storyId": "brand-explorations--basics",
+      "sources": [
+        "apps/backoffice/src/components/ui/button.tsx",
+        "apps/backoffice/src/components/ui/card.tsx",
+        "apps/backoffice/src/components/ui/field.tsx",
+        "apps/backoffice/src/components/ui/input.tsx",
+        "apps/backoffice/src/components/ui/badge.tsx"
+      ],
+      "cases": [
+        {
+          "id": "source-sans"
+        },
+        {
+          "id": "inter",
+          "action": "brand-font-inter"
+        },
+        {
+          "id": "outfit",
+          "action": "brand-font-outfit"
+        }
+      ],
+      "limitation": "Development-only colour/typeface proposals; no production branding choice or accepted reference is implied."
+    },
+    {
+      "id": "brand-text-roles",
+      "title": "Brand text roles",
+      "kind": "story",
+      "sources": [
+        "apps/backoffice/src/components/ui/button.tsx",
+        "apps/backoffice/src/components/ui/badge.tsx",
+        "apps/backoffice/src/components/ui/tabs.tsx",
+        "apps/backoffice/src/components/ui/field.tsx",
+        "apps/backoffice/src/components/ui/accordion.tsx"
+      ],
+      "storyId": "tailadmin-compositions--brand-text-roles",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "second-tab",
+          "action": "second-tab"
+        }
+      ]
     }
   ]
 }

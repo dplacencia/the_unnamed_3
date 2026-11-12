@@ -16,7 +16,27 @@ the linked records distinguish approved source decisions from newly recorded
 wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
-Current status: the three remaining repository decisions in the
+Completed brand configuration: [brand basics](openspec/changes/define-brand-basics/proposal.md).
+The user said “go ahead” to defining brand basics before customizing TailAdmin.
+Discuss the visual emphasis, then concrete colour/typography options and the
+minimum identity treatment needed for configuration. The user selected restrained
+and approachable: warm neutral backgrounds, clear typography, strong contrast
+and limited accent colour. Develop the concrete comparisons in the brand change's
+plan using actual TailAdmin components. The user selected D/ink indigo (`#57528C`)
+as the colour basis and Source Sans 3 as the typeface basis. The initial identity
+uses a simple “Irin” text wordmark in that font, with a bespoke symbol deferred
+and the name still provisional. The user also selected retaining TailAdmin's
+existing spacing, rounded corners and icons for the first backoffice configuration.
+The user approved the concrete first configuration in the brand change's design:
+full option-D indigo/warm-neutral mapping, current UI text metrics and a semibold
+Irin wordmark at 32px expanded / 20px compact. That backoffice configuration and
+the approved `brand-300` (`#B4ACD7`) ordinary dark-text refinement under BRAND-007
+are applied and verified. The user approved all 388 images from the final run;
+their references are promoted and the full comparison passes. The design records
+the exact approval and run identities. Keep the landing unchanged and require
+specific image approval for future replacements. Product-flow design remains later.
+
+Completed foundation: the three repository decisions in the
 [technical foundation](openspec/changes/establish-frontend-technical-foundation/proposal.md):
 module/shared-code organization, landing styling/interaction technology, and
 formatting/lint conventions with local quality commands. The user has selected
@@ -24,7 +44,8 @@ feature folders with workspace packages following actual reuse by both apps,
 Tailwind 4 with native Astro/TypeScript for the landing, and repository-wide
 ESLint/Prettier with `pnpm check`. Their implementation and verification are
 complete within the agreed repository scope; see the change's design/tasks for
-evidence. Further product or brand design requires the user's next instruction.
+evidence. The brand configuration and its image approval are complete within the
+scope recorded above; further work follows the user's next assignment.
 The [visual review workflow](openspec/changes/define-visual-review-workflow/proposal.md)
 is implemented. Storybook, Astro-native previews and Playwright are selected,
 with pinned Chromium on this Mac and the recorded responsive/theme/language
@@ -44,11 +65,11 @@ and browser/visual checks separately; successful code checks do not accept image
 Preserve formatter/linter exclusions for generated files, tools, dependencies,
 third-party assets and reference archives. Both apps use the root formatter;
 the backoffice retains its Next.js lint rules and Astro has its own lint config.
-The current technical phase focuses on this repository's own stack. Hosting/CDN
+The completed technical phase focused on this repository's own stack. Hosting/CDN
 choices are settled for now; do not initiate further questions about them.
-Keycloak/API integration and infrastructure/deployment work are deferred and do
-not gate completion of the repository stack. Follow the latest scope correction
-and proposed local decision queue in the technical change's design and tasks.
+Keycloak/API integration and infrastructure/deployment work remain deferred and
+do not gate brand discovery. Preserve the scope correction and selected stack
+in the technical change's design and tasks.
 
 Retained UI reference: [product-creation comparison](openspec/changes/explore-product-creation-ui/proposal.md).
 Its revised simple/advanced concept is accepted as a design reference; broader

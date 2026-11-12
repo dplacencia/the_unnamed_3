@@ -66,6 +66,20 @@ async function action(
   theme: string,
 ) {
   switch (name) {
+    case "brand-font-inter":
+      await page.getByRole("radio", { name: "Inter", exact: true }).check();
+      await expect(page.locator("[data-brand-proposals]")).toHaveAttribute(
+        "data-preview-font",
+        "inter",
+      );
+      break;
+    case "brand-font-outfit":
+      await page.getByRole("radio", { name: "Outfit", exact: true }).check();
+      await expect(page.locator("[data-brand-proposals]")).toHaveAttribute(
+        "data-preview-font",
+        "outfit",
+      );
+      break;
     case undefined:
       break;
     case "focus-button":

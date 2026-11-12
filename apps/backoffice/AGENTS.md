@@ -4,7 +4,19 @@ Read the [repository entry point](../../AGENTS.md), its OpenSpec sources and the
 [current technical assignment](../../openspec/changes/establish-frontend-technical-foundation/proposal.md)
 before actions. Module/shared-code organization, landing styling/interactions and
 code conventions/local quality commands are now selected, implemented and verified
-in that change. Preserve these choices and wait for the user's next assignment.
+in that change. Preserve these choices. The completed
+[brand-basics assignment](../../openspec/changes/define-brand-basics/proposal.md)
+develops a restrained/approachable comparison in Storybook. D/ink indigo
+(`#57528C`) and Source Sans 3 are the selected colour and typeface bases. The
+initial identity is a simple “Irin” text wordmark in Source Sans 3; a bespoke
+symbol is deferred and the name remains provisional. The user selected retaining
+TailAdmin's current spacing, rounded corners and icons. The user approved the
+concrete configuration in the brand change's design, including the full palette,
+retained UI text metrics and 32px/20px semibold wordmark. That configuration and
+the approved `brand-300` ordinary dark-text refinement under BRAND-007 are applied
+and verified, retaining palette values and other visual roles. All 388 final-run
+images are user-approved and promoted; full comparison passes. The design records
+the exact approval and identities. Require new image approval for replacements.
 The
 [visual review workflow](../../openspec/changes/define-visual-review-workflow/proposal.md)
 is implemented; preserve its review rules and the technical sources as constraints.

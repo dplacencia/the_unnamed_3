@@ -1,0 +1,3 @@
+# Preserve upstream font notices byte-for-byte, including original whitespace.
+apps/backoffice/.storybook/assets/fonts/*-OFL.txt -text -whitespace
+apps/backoffice/public/licenses/source-sans-3-OFL.txt -text -whitespace

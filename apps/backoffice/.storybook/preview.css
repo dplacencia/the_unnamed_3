@@ -2,11 +2,12 @@
 @source "./stories";
 
 body {
-  font-family: Outfit, sans-serif;
-  background: #fff;
+  --font-source-sans-3: "Source Sans 3";
+  font-family: var(--font-source-sans-3), sans-serif;
+  background: var(--color-white);
 }
 html.dark body {
-  background: #101828;
+  background: var(--color-gray-900);
 }
 [data-visual-stage] {
   min-height: 240px;

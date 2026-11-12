@@ -22,9 +22,15 @@ for (const filename of files.filter((name) => name.endsWith(".css"))) {
   const cssPath = path.join(output, "_next/static", filename);
   const css = await readFile(cssPath, "utf8");
   for (const match of css.matchAll(/@font-face\s*\{[^{}]*\}/g)) {
-    if (!/font-family:[^;]*Outfit/i.test(match[0]) || !/url\(/.test(match[0]))
+    if (
+      !/font-family\s*:[^;]*sourceSans3/i.test(match[0]) ||
+      !/url\(/.test(match[0])
+    )
       continue;
-    let rule = match[0].replace(/font-family:[^;]+;/i, 'font-family:"Outfit";');
+    let rule = match[0].replace(
+      /font-family\s*:[^;]+;/i,
+      'font-family:"Source Sans 3";',
+    );
     for (const urlMatch of [...rule.matchAll(/url\(([^)]+)\)/g)]) {
       const original = urlMatch[1].replace(/["']/g, "");
       const source = original.startsWith("/")
@@ -47,7 +53,7 @@ for (const filename of files.filter((name) => name.endsWith(".css"))) {
 }
 if (!rules.length)
   throw new Error(
-    "No built Outfit font found. Run pnpm build:backoffice first.",
+    "No built Source Sans 3 font found. Run pnpm build:backoffice first.",
   );
 await writeFile(
   path.join(destination, "fonts.css"),

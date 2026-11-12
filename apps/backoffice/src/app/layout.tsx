@@ -4,10 +4,16 @@ import { defaultLocale } from "@/i18n/configuration";
 import { LocaleProvider } from "@/i18n/locale-provider";
 import { cn } from "@/utils";
 import { DirectionProvider } from "@base-ui/react/direction-provider";
-import { Outfit } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const outfit = Outfit({ subsets: ["latin"] });
+const sourceSans3 = localFont({
+  src: "../assets/fonts/source-sans-3.ttf",
+  style: "normal",
+  weight: "200 900",
+  display: "swap",
+  variable: "--font-source-sans-3",
+});
 
 export default function RootLayout({
   children,
@@ -15,7 +21,10 @@ export default function RootLayout({
   return (
     <html lang={defaultLocale} dir="ltr">
       <body
-        className={cn("relative isolate dark:bg-gray-900", outfit.className)}
+        className={cn(
+          "relative isolate dark:bg-gray-900",
+          sourceSans3.variable,
+        )}
       >
         <LocaleProvider>
           <ThemeProvider>

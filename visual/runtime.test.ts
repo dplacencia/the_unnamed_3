@@ -5,12 +5,14 @@ import { describe, expect, it } from "vitest";
 import { sourceFingerprint } from "./runtime.ts";
 
 describe("build input freshness", () => {
-  it("invalidates candidates when alias configuration or native landing styles/scripts change", () => {
+  it("invalidates candidates when configuration, catalogue fonts or landing styles/scripts change", () => {
     const directory = mkdtempSync(path.join(tmpdir(), "irin-visual-inputs-"));
     try {
       const inputs = [
         "apps/backoffice/tsconfig.json",
         "apps/backoffice/.storybook/messages/en.json",
+        "apps/backoffice/.storybook/assets/fonts/proposal.ttf",
+        "apps/backoffice/src/assets/fonts/source-sans-3.ttf",
         "apps/landing/tsconfig.json",
         "apps/landing/src/styles.css",
         "apps/landing/src/interaction.js",

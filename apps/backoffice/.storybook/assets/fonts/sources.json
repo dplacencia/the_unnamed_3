@@ -1,0 +1,47 @@
+{
+  "purpose": "Local development font comparisons; Source Sans 3 also supplies the approved backoffice font.",
+  "repository": "https://github.com/google/fonts",
+  "revision": "c30b221beb0c1da59d563feb91ec8656a1fa972a",
+  "fonts": [
+    {
+      "family": "Source Sans 3",
+      "file": "source-sans-3.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/c30b221beb0c1da59d563feb91ec8656a1fa972a/ofl/sourcesans3/SourceSans3%5Bwght%5D.ttf",
+      "sha256": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+      "license": "SIL Open Font License 1.1",
+      "licenseFile": "source-sans-3-OFL.txt",
+      "licenseSha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "family": "Inter",
+      "file": "inter.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/c30b221beb0c1da59d563feb91ec8656a1fa972a/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf",
+      "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+      "license": "SIL Open Font License 1.1",
+      "licenseFile": "inter-OFL.txt",
+      "licenseSha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    {
+      "family": "Outfit",
+      "file": "outfit-latin.woff2",
+      "source": "Original Next.js backoffice build, preserved before approved brand configuration",
+      "originalBuildFile": "1b99372b3eaef0c8-s.p.1gsd1jahc5dg_.woff2",
+      "sha256": "92684e4acde79ef07758cd09380b7e01e9824d8b061eddeda046f78c166d7b12",
+      "license": "SIL Open Font License 1.1",
+      "licenseFile": "outfit-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/c30b221beb0c1da59d563feb91ec8656a1fa972a/ofl/outfit/OFL.txt",
+      "licenseSha256": "c676351bf8576b9aba743cd5eaa8c0e7ee0d51f805d720447b4df4ddb6a2e416"
+    },
+    {
+      "family": "Outfit",
+      "file": "outfit-latin-ext.woff2",
+      "source": "Original Next.js backoffice build, preserved before approved brand configuration",
+      "originalBuildFile": "b2ea385cb5ae8625-s.1spbknb88wd48.woff2",
+      "sha256": "9e38b3f1575daba3435ef09d33a202585ed5bd204bd0a8c744955c750c2b9091",
+      "license": "SIL Open Font License 1.1",
+      "licenseFile": "outfit-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/c30b221beb0c1da59d563feb91ec8656a1fa972a/ofl/outfit/OFL.txt",
+      "licenseSha256": "c676351bf8576b9aba743cd5eaa8c0e7ee0d51f805d720447b4df4ddb6a2e416"
+    }
+  ]
+}
