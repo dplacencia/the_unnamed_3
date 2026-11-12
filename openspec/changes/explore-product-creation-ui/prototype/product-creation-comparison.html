@@ -1,0 +1,899 @@
+<style>
+  #irin-product-comparison {
+    color-scheme: light dark;
+    --ir-page: light-dark(#f9fafb, #101828);
+    --ir-surface: light-dark(#fff, #1a2231);
+    --ir-text: light-dark(#1d2939, #f2f4f7);
+    --ir-secondary: light-dark(#475467, #d0d5dd);
+    --ir-line: light-dark(#e4e7ec, #344054);
+    --ir-input-line: light-dark(#d0d5dd, #475467);
+    --ir-soft: light-dark(#f2f4f7, #243044);
+    --ir-accent: light-dark(#465fff, #9cb9ff);
+    --ir-button: #465fff;
+    --ir-button-text: #fff;
+    --ir-error: light-dark(#b42318, #fda29b);
+    font:
+      400 14px/1.5 system-ui,
+      sans-serif;
+    color: var(--ir-text);
+  }
+  #irin-product-comparison * {
+    box-sizing: border-box;
+  }
+  #irin-product-comparison [hidden] {
+    display: none !important;
+  }
+  #irin-product-comparison h2,
+  #irin-product-comparison h3,
+  #irin-product-comparison p {
+    margin: 0;
+  }
+  #irin-product-comparison .ir-caption {
+    color: var(--ir-secondary);
+    font-size: 12px;
+  }
+  #irin-product-comparison .ir-intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 18px;
+    padding-block-end: 16px;
+    padding-inline-end: 90px;
+  }
+  #irin-product-comparison .ir-intro strong {
+    font-weight: 500;
+  }
+  #irin-product-comparison .ir-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+  }
+  #irin-product-comparison .ir-window {
+    background: var(--ir-page);
+    border: 1px solid var(--ir-line);
+    border-radius: 16px;
+    overflow: hidden;
+    min-width: 0;
+  }
+  #irin-product-comparison .ir-chrome {
+    background: var(--ir-surface);
+    border-block-end: 1px solid var(--ir-line);
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  #irin-product-comparison .ir-wordmark {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+  }
+  #irin-product-comparison .ir-view {
+    padding: 24px;
+  }
+  #irin-product-comparison .ir-breadcrumb {
+    color: var(--ir-secondary);
+    font-size: 12px;
+    margin-block-end: 12px;
+  }
+  #irin-product-comparison h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 500;
+    margin-block-end: 20px;
+  }
+  #irin-product-comparison .ir-card {
+    border: 1px solid var(--ir-line);
+    border-radius: 16px;
+    background: var(--ir-surface);
+    overflow: hidden;
+  }
+  #irin-product-comparison .ir-card-heading {
+    padding: 20px 24px;
+    border-block-end: 1px solid var(--ir-line);
+  }
+  #irin-product-comparison h3 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  #irin-product-comparison .ir-card-heading p {
+    color: var(--ir-secondary);
+    margin-block-start: 4px;
+  }
+  #irin-product-comparison .ir-form {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--ir-field-gap, 24px);
+  }
+  #irin-product-comparison .ir-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+  }
+  #irin-product-comparison label,
+  #irin-product-comparison .ir-section-title {
+    font-weight: 500;
+  }
+  #irin-product-comparison input,
+  #irin-product-comparison select {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    border: 1px solid var(--ir-input-line);
+    border-radius: 10px;
+    background: var(--ir-surface);
+    color: var(--ir-text);
+    padding: 10px 14px;
+    font: inherit;
+    box-shadow: 0 1px 2px light-dark(#1018280d, #00000026);
+  }
+  #irin-product-comparison input::placeholder {
+    color: var(--ir-secondary);
+  }
+  #irin-product-comparison input:focus-visible,
+  #irin-product-comparison select:focus-visible,
+  #irin-product-comparison button:focus-visible {
+    outline: 3px solid var(--ir-accent);
+    outline-offset: 3px;
+  }
+  #irin-product-comparison input[aria-invalid="true"],
+  #irin-product-comparison select[aria-invalid="true"] {
+    border-color: var(--ir-error);
+  }
+  #irin-product-comparison .ir-help {
+    color: var(--ir-secondary);
+    font-size: 12px;
+  }
+  #irin-product-comparison .ir-error {
+    color: var(--ir-error);
+    font-size: 12px;
+  }
+  #irin-product-comparison button {
+    min-height: 44px;
+    font: inherit;
+    font-weight: 500;
+    border: 1px solid var(--ir-input-line);
+    border-radius: 10px;
+    padding: 10px 14px;
+    background: var(--ir-surface);
+    color: var(--ir-text);
+    white-space: normal;
+    text-align: center;
+  }
+  #irin-product-comparison .ir-primary {
+    background: var(--ir-button);
+    border-color: var(--ir-button);
+    color: var(--ir-button-text);
+    width: 100%;
+  }
+  #irin-product-comparison .ir-disclosure {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    color: var(--ir-accent);
+    border: 0;
+    background: transparent;
+    padding-inline: 0;
+    text-align: start;
+    border-radius: 4px;
+  }
+  #irin-product-comparison .ir-chevron {
+    transition: transform 0.15s;
+  }
+  #irin-product-comparison button[aria-expanded="true"] .ir-chevron {
+    transform: rotate(180deg);
+  }
+  #irin-product-comparison .ir-advanced {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ir-field-gap, 24px);
+  }
+  #irin-product-comparison .ir-divider {
+    border: 0;
+    border-block-start: 1px solid var(--ir-line);
+    margin: 0;
+  }
+  #irin-product-comparison .ir-summary {
+    background: var(--ir-soft);
+    padding: 14px 16px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-wrap: anywhere;
+  }
+  #irin-product-comparison .ir-code-summary {
+    white-space: pre-wrap;
+  }
+  #irin-product-comparison .ir-footer {
+    color: var(--ir-secondary);
+    font-size: 12px;
+    text-align: center;
+  }
+  #irin-product-comparison .ir-review {
+    margin-block-start: 20px;
+    background: var(--ir-surface);
+    border: 1px solid var(--ir-line);
+    border-radius: 16px;
+    padding: 24px;
+  }
+  #irin-product-comparison .ir-review dl {
+    display: grid;
+    grid-template-columns: minmax(95px, 1fr) 3fr;
+    gap: 10px 16px;
+    margin: 16px 0;
+  }
+  #irin-product-comparison .ir-review dt {
+    color: var(--ir-secondary);
+  }
+  #irin-product-comparison .ir-review dd {
+    margin: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  #irin-product-comparison .ir-review h3 {
+    margin-block-end: 6px;
+  }
+  @media (max-width: 750px) {
+    #irin-product-comparison .ir-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+  @media (max-width: 400px) {
+    #irin-product-comparison .ir-view,
+    #irin-product-comparison .ir-form,
+    #irin-product-comparison .ir-card-heading,
+    #irin-product-comparison .ir-review {
+      padding: 16px;
+    }
+    #irin-product-comparison .ir-chrome {
+      padding: 16px;
+    }
+    #irin-product-comparison .ir-review dl {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 4px;
+    }
+    #irin-product-comparison .ir-review dd {
+      margin-block-end: 10px;
+    }
+  }
+  @media (pointer: coarse) {
+    #irin-product-comparison input,
+    #irin-product-comparison select {
+      font-size: 16px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #irin-product-comparison .ir-chevron {
+      transition: none;
+    }
+  }
+</style>
+<div
+  id="irin-product-comparison"
+  lang="es"
+  aria-label="Comparación de creación de producto en Irin"
+>
+  <div class="ir-intro">
+    <strong>Un producto, dos niveles de detalle</strong
+    ><span class="ir-caption"
+      >Propuesta · ejemplo ficticio · borrador compartido</span
+    >
+  </div>
+  <div class="ir-grid">
+    <section
+      class="ir-window"
+      data-view="simple"
+      aria-label="Vista simple, punto de partida"
+    >
+      <header class="ir-chrome">
+        <span class="ir-wordmark">Irin</span
+        ><span class="ir-caption">Vista simple · por defecto</span>
+      </header>
+      <div class="ir-view">
+        <p class="ir-breadcrumb">Inventario / Productos</p>
+        <h2>Nuevo producto</h2>
+        <div class="ir-card">
+          <div class="ir-card-heading">
+            <h3>Lo esencial para empezar</h3>
+            <p>Podrás añadir más detalles cuando los necesites.</p>
+          </div>
+          <form class="ir-form" novalidate>
+            <div class="ir-field">
+              <label for="ir-simple-name">Nombre del producto</label
+              ><input
+                id="ir-simple-name"
+                data-field="name"
+                value="Tomate pera"
+                placeholder="Ej. Tomate pera"
+                required
+                aria-describedby="ir-simple-name-help ir-simple-name-error"
+              /><span id="ir-simple-name-help" class="ir-help"
+                >El nombre con el que lo reconoces en tu tienda.</span
+              ><span
+                id="ir-simple-name-error"
+                data-error="name"
+                class="ir-error"
+                hidden
+              ></span>
+            </div>
+            <div class="ir-field">
+              <label for="ir-simple-unit">¿Cómo lo cuentas o mides?</label
+              ><select
+                id="ir-simple-unit"
+                data-field="unit"
+                required
+                aria-describedby="ir-simple-unit-help ir-simple-unit-error"
+              >
+                <option value="kg">Por peso · kilogramos (kg)</option></select
+              ><span id="ir-simple-unit-help" class="ir-help"
+                >Elige la unidad que usas en tu tienda.</span
+              ><span
+                id="ir-simple-unit-error"
+                data-error="unit"
+                class="ir-error"
+                hidden
+              ></span>
+            </div>
+            <button
+              type="button"
+              class="ir-disclosure cursor-interaction"
+              data-depth
+              aria-expanded="false"
+              aria-controls="ir-simple-advanced"
+            >
+              <span data-depth-label>Mostrar opciones avanzadas</span
+              ><i
+                class="ir-chevron"
+                data-lucide="chevron-down"
+                aria-hidden="true"
+              ></i>
+            </button>
+            <div id="ir-simple-advanced" class="ir-advanced" hidden>
+              <div class="ir-summary">
+                <span data-summary
+                  >Las cantidades irán en pasos de 0,001 kg.</span
+                ><span data-custom class="ir-help"
+                  >Paso inicial de la unidad.</span
+                ><span data-codes class="ir-help ir-code-summary"
+                  >Los códigos se pueden añadir más adelante.</span
+                >
+              </div>
+              <hr class="ir-divider" />
+              <p class="ir-section-title">Identificación opcional</p>
+              <div class="ir-field">
+                <label for="ir-simple-sku">Referencia interna (SKU)</label
+                ><input
+                  id="ir-simple-sku"
+                  data-field="sku"
+                  placeholder="Sin asignar"
+                  aria-describedby="ir-simple-sku-help"
+                /><span id="ir-simple-sku-help" class="ir-help"
+                  >Puedes dejarla vacía y añadirla después.</span
+                >
+              </div>
+              <div class="ir-field">
+                <label for="ir-simple-barcode">Código de barras</label
+                ><input
+                  id="ir-simple-barcode"
+                  data-field="barcode"
+                  placeholder="Sin asignar"
+                  aria-describedby="ir-simple-barcode-help"
+                /><span id="ir-simple-barcode-help" class="ir-help"
+                  >Opcional. Conserva los ceros iniciales.</span
+                >
+              </div>
+              <hr class="ir-divider" />
+              <p class="ir-section-title">Control de cantidades</p>
+              <div class="ir-field">
+                <label for="ir-simple-increment"
+                  >Incremento permitido <span data-unit-label>(kg)</span></label
+                ><input
+                  id="ir-simple-increment"
+                  data-field="increment"
+                  inputmode="decimal"
+                  value="0,001"
+                  required
+                  aria-describedby="ir-simple-increment-help ir-simple-increment-error"
+                /><span id="ir-simple-increment-help" class="ir-help"
+                  >Las cantidades deberán ser múltiplos de este valor.</span
+                ><span
+                  id="ir-simple-increment-error"
+                  data-error="increment"
+                  class="ir-error"
+                  hidden
+                ></span>
+              </div>
+              <p data-precision class="ir-help">
+                Precisión: 3 decimales, derivada del incremento.
+              </p>
+            </div>
+            <p data-form-error class="ir-error" role="alert" hidden></p>
+            <button type="submit" class="ir-primary cursor-interaction">
+              Revisar borrador
+            </button>
+            <p class="ir-footer">
+              Ejemplo de diseño. No se guarda ningún producto.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section
+      class="ir-window"
+      data-view="advanced"
+      aria-label="Vista avanzada, al pedir más opciones"
+    >
+      <header class="ir-chrome">
+        <span class="ir-wordmark">Irin</span
+        ><span class="ir-caption">Vista avanzada · a petición</span>
+      </header>
+      <div class="ir-view">
+        <p class="ir-breadcrumb">Inventario / Productos</p>
+        <h2>Nuevo producto</h2>
+        <div class="ir-card">
+          <div class="ir-card-heading">
+            <h3>El mismo producto, más control</h3>
+            <p>Ajusta solo lo que tu negocio necesite.</p>
+          </div>
+          <form class="ir-form" novalidate>
+            <div class="ir-field">
+              <label for="ir-advanced-name">Nombre del producto</label
+              ><input
+                id="ir-advanced-name"
+                data-field="name"
+                value="Tomate pera"
+                placeholder="Ej. Tomate pera"
+                required
+                aria-describedby="ir-advanced-name-help ir-advanced-name-error"
+              /><span id="ir-advanced-name-help" class="ir-help"
+                >El nombre con el que lo reconoces en tu tienda.</span
+              ><span
+                id="ir-advanced-name-error"
+                data-error="name"
+                class="ir-error"
+                hidden
+              ></span>
+            </div>
+            <div class="ir-field">
+              <label for="ir-advanced-unit">¿Cómo lo cuentas o mides?</label
+              ><select
+                id="ir-advanced-unit"
+                data-field="unit"
+                required
+                aria-describedby="ir-advanced-unit-help ir-advanced-unit-error"
+              >
+                <option value="kg">Por peso · kilogramos (kg)</option></select
+              ><span id="ir-advanced-unit-help" class="ir-help"
+                >Al cambiar de unidad se aplica su paso inicial.</span
+              ><span
+                id="ir-advanced-unit-error"
+                data-error="unit"
+                class="ir-error"
+                hidden
+              ></span>
+            </div>
+            <div class="ir-summary">
+              <span data-summary>Las cantidades irán en pasos de 0,001 kg.</span
+              ><span data-custom class="ir-help"
+                >Paso inicial de la unidad.</span
+              ><span data-codes class="ir-help ir-code-summary"
+                >Los códigos se pueden añadir más adelante.</span
+              >
+            </div>
+            <button
+              type="button"
+              class="ir-disclosure cursor-interaction"
+              data-depth
+              aria-expanded="true"
+              aria-controls="ir-advanced-advanced"
+            >
+              <span data-depth-label>Volver a la vista simple</span
+              ><i
+                class="ir-chevron"
+                data-lucide="chevron-down"
+                aria-hidden="true"
+              ></i>
+            </button>
+            <div id="ir-advanced-advanced" class="ir-advanced">
+              <hr class="ir-divider" />
+              <p class="ir-section-title">Identificación opcional</p>
+              <div class="ir-field">
+                <label for="ir-advanced-sku">Referencia interna (SKU)</label
+                ><input
+                  id="ir-advanced-sku"
+                  data-field="sku"
+                  placeholder="Sin asignar"
+                  aria-describedby="ir-advanced-sku-help"
+                /><span id="ir-advanced-sku-help" class="ir-help"
+                  >Puedes dejarla vacía y añadirla después.</span
+                >
+              </div>
+              <div class="ir-field">
+                <label for="ir-advanced-barcode">Código de barras</label
+                ><input
+                  id="ir-advanced-barcode"
+                  data-field="barcode"
+                  placeholder="Sin asignar"
+                  aria-describedby="ir-advanced-barcode-help"
+                /><span id="ir-advanced-barcode-help" class="ir-help"
+                  >Opcional. Conserva los ceros iniciales.</span
+                >
+              </div>
+              <hr class="ir-divider" />
+              <p class="ir-section-title">Control de cantidades</p>
+              <div class="ir-field">
+                <label for="ir-advanced-increment"
+                  >Incremento permitido <span data-unit-label>(kg)</span></label
+                ><input
+                  id="ir-advanced-increment"
+                  data-field="increment"
+                  inputmode="decimal"
+                  value="0,001"
+                  required
+                  aria-describedby="ir-advanced-increment-help ir-advanced-increment-error"
+                /><span id="ir-advanced-increment-help" class="ir-help"
+                  >Las cantidades deberán ser múltiplos de este valor.</span
+                ><span
+                  id="ir-advanced-increment-error"
+                  data-error="increment"
+                  class="ir-error"
+                  hidden
+                ></span>
+              </div>
+              <p data-precision class="ir-help">
+                Precisión: 3 decimales, derivada del incremento.
+              </p>
+            </div>
+            <p data-form-error class="ir-error" role="alert" hidden></p>
+            <button type="submit" class="ir-primary cursor-interaction">
+              Revisar borrador
+            </button>
+            <p class="ir-footer">
+              Ejemplo de diseño. No se guarda ningún producto.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section
+    class="ir-review"
+    data-review
+    aria-label="Resumen del borrador"
+    hidden
+  >
+    <h3>Resumen del borrador</h3>
+    <p class="ir-help">
+      Todavía no se ha creado ningún producto. Este ejemplo no comprueba los
+      códigos en tu catálogo.
+    </p>
+    <dl>
+      <dt>Nombre</dt>
+      <dd data-review-field="name"></dd>
+      <dt>Medición</dt>
+      <dd data-review-field="unit"></dd>
+      <dt data-review-advanced hidden>Incremento</dt>
+      <dd data-review-field="increment" data-review-advanced hidden></dd>
+      <dt>SKU</dt>
+      <dd data-review-field="sku"></dd>
+      <dt>Código de barras</dt>
+      <dd data-review-field="barcode"></dd>
+    </dl>
+    <button type="button" data-close-review class="cursor-interaction">
+      Seguir editando
+    </button>
+  </section>
+  <p data-announcement class="ir-caption" aria-live="polite"></p>
+</div>
+<script>
+  (() => {
+    const root = document.getElementById("irin-product-comparison");
+    const units = [
+      ["piece", "Por unidades · piezas", "ud.", "1", true],
+      ["mg", "Por peso · miligramos (mg)", "mg", "1"],
+      ["g", "Por peso · gramos (g)", "g", "1"],
+      ["kg", "Por peso · kilogramos (kg)", "kg", "0.001"],
+      ["t", "Por peso · toneladas (t)", "t", "0.000001"],
+      ["ml", "Por volumen · mililitros (ml)", "ml", "1"],
+      ["cl", "Por volumen · centilitros (cl)", "cl", "0.1"],
+      ["l", "Por volumen · litros (l)", "l", "0.001"],
+      ["cm3", "Por volumen · centímetros cúbicos (cm³)", "cm³", "1"],
+      ["m3", "Por volumen · metros cúbicos (m³)", "m³", "0.001"],
+      ["mm", "Por longitud · milímetros (mm)", "mm", "1"],
+      ["cm", "Por longitud · centímetros (cm)", "cm", "1"],
+      ["m", "Por longitud · metros (m)", "m", "0.001"],
+      ["cm2", "Por superficie · centímetros cuadrados (cm²)", "cm²", "1"],
+      ["m2", "Por superficie · metros cuadrados (m²)", "m²", "0.01"],
+    ];
+    const unitFor = (key) => units.find((unit) => unit[0] === key);
+    const views = [...root.querySelectorAll("[data-view]")];
+    const fields = [...root.querySelectorAll("[data-field]")];
+    const defaults = {
+      version: 1,
+      name: "Tomate pera",
+      unit: "kg",
+      increment: "0,001",
+      sku: "",
+      barcode: "",
+      simpleOpen: false,
+      advancedOpen: true,
+    };
+    let draft = { ...defaults };
+    let attempted = false;
+    let reviewOpen = false;
+    let reviewAdvanced = false;
+    const design = { density: "Cómoda" };
+
+    function decimal(value) {
+      if (
+        typeof value !== "string" ||
+        value.length > 100 ||
+        !/^\d+(?:[.,]\d+)?$/.test(value)
+      )
+        return null;
+      const [whole, rawFraction = ""] = value.replace(",", ".").split(".");
+      const fraction = rawFraction.replace(/0+$/, "");
+      const integer = BigInt(whole + fraction);
+      if (fraction.length > 6 || integer <= 0n) return null;
+      return {
+        precision: fraction.length,
+        canonical: BigInt(whole).toString() + (fraction ? "." + fraction : ""),
+      };
+    }
+    function validation() {
+      const errors = {};
+      const unit = unitFor(draft.unit);
+      const step = decimal(draft.increment);
+      if (!draft.name.trim())
+        errors.name = "Escribe un nombre para el producto.";
+      if (!unit) errors.unit = "Elige cómo cuentas o mides el producto.";
+      if (!step)
+        errors.increment =
+          "Escribe un valor mayor que cero, con un máximo de 6 decimales. No se redondeará.";
+      else if (unit && unit[4] && step.precision !== 0)
+        errors.increment =
+          "Las piezas se cuentan en números enteros. El incremento debe ser entero.";
+      const encoder = new TextEncoder();
+      if (
+        encoder.encode(draft.sku).length > 256 ||
+        encoder.encode(draft.barcode).length > 256
+      )
+        errors.codes =
+          "Revisa los códigos: cada uno admite como máximo 256 bytes de texto UTF-8.";
+      return errors;
+    }
+    function applySaved(state) {
+      const saved = state && state.privateContent;
+      if (!saved || saved.version !== 1) return;
+      for (const key of ["name", "unit", "increment", "sku", "barcode"]) {
+        if (typeof saved[key] === "string" && saved[key].length <= 2048)
+          draft[key] = saved[key];
+      }
+      for (const key of ["simpleOpen", "advancedOpen"])
+        if (typeof saved[key] === "boolean") draft[key] = saved[key];
+      if (saved.density === "Cómoda" || saved.density === "Compacta")
+        design.density = saved.density;
+      attempted = false;
+      reviewOpen = false;
+    }
+    function persist() {
+      if (!window.openai || typeof window.openai.setWidgetState !== "function")
+        return;
+      const snapshot = {
+        modelContent: {
+          concept: "product-creation-comparison",
+          simpleExpanded: draft.simpleOpen,
+          advancedExpanded: draft.advancedOpen,
+          density: design.density,
+        },
+        privateContent: { ...draft, density: design.density },
+      };
+      if (new TextEncoder().encode(JSON.stringify(snapshot)).length > 15000)
+        return;
+      Promise.resolve(window.openai.setWidgetState(snapshot)).catch(() => {});
+    }
+    function render() {
+      const unit = unitFor(draft.unit);
+      const step = decimal(draft.increment);
+      const errors = validation();
+      root.style.setProperty(
+        "--ir-field-gap",
+        design.density === "Compacta" ? "16px" : "24px",
+      );
+      fields.forEach((field) => {
+        const key = field.dataset.field;
+        if (field.value !== draft[key]) field.value = draft[key];
+        field.setAttribute(
+          "aria-invalid",
+          String(Boolean(errors[key] && (attempted || key === "increment"))),
+        );
+      });
+      views.forEach((view) => {
+        const open =
+          draft[view.dataset.view === "simple" ? "simpleOpen" : "advancedOpen"];
+        view
+          .querySelector("[data-depth]")
+          .setAttribute("aria-expanded", String(open));
+        view.querySelector("[data-depth-label]").textContent = open
+          ? "Volver a la vista simple"
+          : "Mostrar opciones avanzadas";
+        view.querySelector(".ir-advanced").hidden = !open;
+        const summary = view.querySelector("[data-summary]");
+        summary.textContent = errors.increment
+          ? "El incremento necesita revisión: «" +
+            (draft.increment || "vacío") +
+            "»."
+          : unit
+            ? "Las cantidades irán en pasos de " +
+              step.canonical.replace(".", ",") +
+              " " +
+              unit[2] +
+              "."
+            : "Elige una unidad para definir las cantidades.";
+        summary.classList.toggle("ir-error", Boolean(errors.increment));
+        const isDefault = unit && step && step.canonical === unit[3];
+        view.querySelector("[data-custom]").textContent = errors.increment
+          ? "Abre las opciones avanzadas para corregirlo. Tu valor se conserva."
+          : isDefault
+            ? "Paso inicial de la unidad."
+            : "Incremento personalizado. Se conserva también en la vista simple.";
+        view.querySelector("[data-codes]").textContent =
+          [
+            draft.sku ? "SKU: " + draft.sku : "",
+            draft.barcode ? "Código de barras: " + draft.barcode : "",
+          ]
+            .filter(Boolean)
+            .join("\n") || "Los códigos se pueden añadir más adelante.";
+        view.querySelector("[data-unit-label]").textContent = unit
+          ? "(" + unit[2] + ")"
+          : "(elige unidad)";
+        view.querySelector("[data-precision]").textContent =
+          step && !errors.increment
+            ? "Precisión: " +
+              step.precision +
+              (step.precision === 1 ? " decimal" : " decimales") +
+              ", derivada del incremento."
+            : "La precisión se mostrará cuando el incremento sea válido.";
+        view.querySelectorAll("[data-error]").forEach((node) => {
+          const key = node.dataset.error;
+          const message = errors[key];
+          node.textContent = message || "";
+          node.hidden = !message || (!attempted && key !== "increment");
+        });
+        const formError = view.querySelector("[data-form-error]");
+        formError.textContent =
+          errors.codes || "Revisa los campos indicados antes de continuar.";
+        formError.hidden = !attempted || Object.keys(errors).length === 0;
+      });
+      root.querySelector("[data-review]").hidden = !reviewOpen;
+      root.querySelectorAll("[data-review-advanced]").forEach((node) => {
+        node.hidden = !reviewAdvanced;
+      });
+      const values = {
+        name: draft.name,
+        unit: unit ? unit[1] : "Sin elegir",
+        increment:
+          step && unit
+            ? step.canonical.replace(".", ",") + " " + unit[2]
+            : draft.increment,
+        sku: draft.sku || "Sin asignar",
+        barcode: draft.barcode || "Sin asignar",
+      };
+      root.querySelectorAll("[data-review-field]").forEach((node) => {
+        node.textContent = values[node.dataset.reviewField];
+      });
+    }
+
+    root.querySelectorAll('select[data-field="unit"]').forEach((select) => {
+      select.replaceChildren();
+      const placeholder = document.createElement("option");
+      placeholder.value = "";
+      placeholder.textContent = "Elige una unidad";
+      select.append(placeholder);
+      units.forEach((unit) => {
+        const option = document.createElement("option");
+        option.value = unit[0];
+        option.textContent = unit[1];
+        select.append(option);
+      });
+    });
+    fields.forEach((field) =>
+      field.addEventListener(
+        field.tagName === "SELECT" ? "change" : "input",
+        () => {
+          const key = field.dataset.field;
+          draft[key] = field.value;
+          if (key === "unit") {
+            const unit = unitFor(draft.unit);
+            draft.increment = unit ? unit[3].replace(".", ",") : "";
+            const view = field.closest("[data-view]");
+            const expanded =
+              draft[
+                view.dataset.view === "simple" ? "simpleOpen" : "advancedOpen"
+              ];
+            root.querySelector("[data-announcement]").textContent = unit
+              ? expanded
+                ? "Unidad cambiada. Revisa el paso inicial: " +
+                  draft.increment +
+                  " " +
+                  unit[2] +
+                  "."
+                : "Unidad cambiada: " + unit[1] + "."
+              : "Selecciona una unidad.";
+          }
+          reviewOpen = false;
+          render();
+          persist();
+        },
+      ),
+    );
+    views.forEach((view) => {
+      view.querySelector("[data-depth]").addEventListener("click", () => {
+        const key =
+          view.dataset.view === "simple" ? "simpleOpen" : "advancedOpen";
+        draft[key] = !draft[key];
+        render();
+        persist();
+      });
+      view.querySelector("form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        attempted = true;
+        reviewAdvanced =
+          draft[view.dataset.view === "simple" ? "simpleOpen" : "advancedOpen"];
+        const errors = validation();
+        reviewOpen = Object.keys(errors).length === 0;
+        if (errors.increment || errors.codes)
+          draft[
+            view.dataset.view === "simple" ? "simpleOpen" : "advancedOpen"
+          ] = true;
+        render();
+        const invalid = view.querySelector('[aria-invalid="true"]');
+        if (invalid) invalid.focus();
+        root.querySelector("[data-announcement]").textContent = reviewOpen
+          ? "Resumen del borrador disponible. No se ha creado ningún producto."
+          : "El borrador necesita correcciones.";
+        persist();
+      });
+    });
+    root.querySelector("[data-close-review]").addEventListener("click", () => {
+      reviewOpen = false;
+      render();
+      root.querySelector("[data-announcement]").textContent =
+        "Puedes seguir editando el mismo borrador.";
+      persist();
+    });
+    applySaved(window.openai && window.openai.widgetState);
+    render();
+    window.addEventListener("openai:set_globals", (event) => {
+      if (
+        event.detail &&
+        event.detail.globals &&
+        event.detail.globals.widgetState
+      ) {
+        applySaved(event.detail.globals.widgetState);
+        render();
+      }
+    });
+    if (globalThis.Tweak) {
+      const tweak = new Tweak({
+        container: root,
+        onChange: () => {
+          render();
+          persist();
+        },
+      });
+      tweak.addSelect(design, "density", {
+        label: "Espaciado del formulario",
+        options: ["Cómoda", "Compacta"],
+      });
+    }
+  })();
+</script>

@@ -1,0 +1,146 @@
+schema: spec-driven
+
+context: |
+  Read AGENTS.md and its linked OpenSpec sources before work. The initial
+  decision record is openspec/changes/establish-frontend-foundation/.
+  Product, branding, technical and process definitions belong in OpenSpec.
+  Preserve the distinction between user-approved source decisions, proposed
+  wording, unresolved questions and verified implementation. Ask the user
+  before adopting an undefined choice; do not treat silence as approval.
+  This repository covers the backoffice and landing page as separate products
+  deployed separately under different subdomains. The backoffice serves only
+  merchant teams; an internal platform operator backoffice is outside its scope.
+  TailAdmin is the required backoffice foundation; the landing page may use
+  custom design and code.
+  Initial design and messaging target greengrocers and small neighbourhood shops
+  for now. Backoffice users range from people who can barely open an app to
+  highly skilled technical users. Preserve extreme everyday simplicity and
+  advanced configuration depth. The interface is simple by default and users
+  choose when to expose complexity; depth does not change automatically based
+  on usage. Tier count, UI controls, preference scope and persistence remain
+  undefined.
+  The initial market is Spain only. Initial frontend languages are Spanish
+  (main and default), English, Catalan, Galician and Basque. Further suggestions require
+  the user's approval before inclusion.
+  The six agreed core values are in the product-values capability of the
+  initial change. The approved personality is warm, approachable and quietly
+  confident, with precise, straightforward language. Irin (intended Spanish
+  pronunciation: first-syllable stress) is the leading naming candidate for now.
+  Ilé Irin remains in the naming record; no final name has been selected.
+  Brand positioning, slogans and product definitions are secular and must not
+  imply religious endorsement. The name's origin may be explained accurately
+  when relevant; a discoverable cultural or religious connection is acceptable.
+  No final name or visual identity is chosen.
+  The user prefers AWS Console over Azure and Google Cloud consoles as a
+  reference for the expert end of the user spectrum, not a beginner baseline.
+  Naturgy and Lowi names/brand concepts are negative trust
+  references for the user. These are personal preferences; specific liked or
+  disliked traits require clarification. TailAdmin remains the backoffice base.
+  Positioning centers on an approachable modernization and digitalization
+  experience for merchants. Modularity supports that experience and is not the
+  sole differentiator. Support combines in-product guidance and human assistance
+  for onboarding/migration on merchant request; detailed service commitments
+  remain open. A frontend
+  AI assistant for finding/explaining settings and possibly helping business
+  setup is a future feature idea, not an approved implementation or launch promise.
+  Competitor-complexity comparisons are not verified market findings.
+  The backoffice uses the supplied TailAdmin Next.js edition (React, strict
+  TypeScript and Tailwind), as selected by the user. This repository uses pnpm
+  workspaces with apps/backoffice and apps/landing. Each app has independent
+  development/build/deployment boundaries. Node.js 26 LTS and pinned stable pnpm
+  are selected, initially Node 26.13.1 and pnpm 12.18.0. Retain the template's
+  locked app dependencies for the initial setup rather than silently upgrading.
+  The landing page uses Astro, selected separately from the backoffice. Shared
+  packages follow actual reuse by both apps; identity/session integration remains
+  deferred. The user selected both
+  apps as static files in S3 behind AWS CloudFront. The backoffice uses Next.js
+  static export and resolves language preferences in the browser after a neutral
+  loading state, avoiding a flash of Spanish before a remembered language.
+  Each app has a separate private S3 bucket and CloudFront distribution, with
+  origin reads through OAC and a distribution-scoped bucket policy. Use regular
+  S3 origins, not website endpoints. Resource names, environments, domains,
+  routing, cache policy and infrastructure tooling remain open. No Docker
+  packaging was approved and no AWS resources have been created.
+  Backoffice URLs are shared across languages; a host-only cookie stores explicit
+  preference. Spanish is first when no valid preference exists; do not infer the
+  UI language from browser headers. The landing uses Spanish at / and localized
+  /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
+  one year (365 days), with no account-level or cross-device preference implied.
+  Current assignment: openspec/changes/establish-frontend-technical-foundation/.
+  Latest steering: the user said "ok, lets work on these three" about the remaining
+  module/shared-code organization, landing styling/interaction, and code-convention/
+  local-quality decisions. Discuss and implement the selected choices, preserving
+  unanswered recommendations as pending. These three choices are now selected,
+  implemented and verified as recorded in the technical change's design/tasks.
+  This completes the agreed local stack scope. Wait for the user's next assignment;
+  no brand/product design or reference approval follows automatically. The visual
+  workflow is implemented.
+  The user selected
+  Storybook for backoffice components, native Astro previews and Playwright,
+  with pinned Chromium on this Mac. Cover desktop 1440x900, tablet 768x1024,
+  mobile 390x844, desktop dark mode and five-language assembled views, including
+  registered interaction states. The user approved per-pixel colour threshold
+  0.01 with maxDiffPixels 0. The user also keeps esbuild@0.28.2's install script
+  explicitly blocked alongside the
+  existing exact-version script denials. Preserve the release waiting period.
+  Candidate captures are not accepted references; require specific user review
+  before promoting named cases. Preserve the
+  existing technical foundation and its approved landing/quality choices.
+  Catalogue examples now use development-only dictionaries for all five locales.
+  Language changes update fixture labels/descriptions/errors while retaining typed
+  values, explicit custom labels and open state. These strings are technical
+  examples, not approved product copy; tool/native-browser text is separate.
+  Latest scope correction: finish this repository's own technology stack first.
+  Hosting/CDN choices are sufficiently defined; do not initiate further questions
+  about them. Keycloak/API integration and infrastructure/deployment work are
+  deferred, not prerequisites for this phase. The repository organization,
+  landing styling/interactions and local quality choices are now selected below.
+  Other undefined choices still need the user's decision.
+  The user has now approved React Hook Form + Zod for backoffice forms and
+  client-side validation, with the standard Zod resolver and retained TailAdmin
+  controls. Initial exact pins are react-hook-form 7.91.0, zod 4.6.7 and
+  @hookform/resolvers 7.0.5. Install only the selected foundation; do not invent product forms,
+  business rules, value coercion, visual patterns or landing dependencies.
+  The user approved React state/reducers with scoped Context as the backoffice
+  UI-state default. Retain compliant theme/locale/sidebar state and built-in
+  browser subscription helpers; no state library, common wrapper or new
+  persistence behavior is implied. Form state stays with React Hook Form.
+  The user selected feature folders with shared code added when reused. Future
+  backoffice features keep components/hooks/schemas/tests under src/features/<feature>
+  where applicable; src/app composes routes. Generic TailAdmin and shared app
+  infrastructure retain their existing locations. Keep the apps independent and
+  introduce shared workspace packages only for code actually consumed by both.
+  No speculative feature/package scaffold or runtime migration follows now.
+  The user selected Tailwind 4 with native Astro components and TypeScript scripts
+  for small landing interactions. Tailwind and its Vite plugin are pinned at
+  4.3.3, matching the backoffice. No React integration, shared brand tokens,
+  marketing content or interaction component is selected by this foundation.
+  The user selected repository-wide ESLint and Prettier with two-space indentation,
+  double quotes and semicolons, plus pnpm check for formatting/lint/types/code
+  tests. Retain framework-aware lint/format support and exclusions for generated,
+  tooling/dependency/cache and third-party/reference files. Builds and browser/
+  visual checks remain separate, and image acceptance still needs specific review.
+  The earlier work order was: define and implement technical decisions;
+  then define brand basics and configure TailAdmin; then define and establish
+  the design/visual change comparison and evaluation workflow; only afterwards
+  consider product flows and visuals. The subsequent visual-workflow implementation
+  is complete; latest steering returns to the three local stack decisions above.
+  Follow visual/README.md and preserve the visual change's review rules.
+  Implementation of approved technical choices is authorized within that
+  assignment, but unresolved choices still require the user's decision.
+  Writes and command execution are authorized only within this repository's
+  assigned scope. The sibling the_unnamed_1 and the_unnamed_2 repositories are
+  read-only. Never create commits. No app implementation or deployment follows
+  automatically from this documentation setup or from successful validation.
+
+rules:
+  proposal:
+    - State the user instruction, exact scope and exclusions; keep recommendations distinct from approved decisions.
+  specs:
+    - Preserve approved meaning and unresolved choices; do not add product behavior merely to fill a template.
+    - Give each requirement a stable identifier and scenarios describing expected behavior, not claimed test results.
+  design:
+    - Link decisions to actual user instructions and flag any choice still needing the user's answer.
+  tasks:
+    - Keep the detailed checklist here and state the permitted files and verification for each task.
+    - A checked task records work and checks performed; it does not mean user acceptance or authorization for another stage.
