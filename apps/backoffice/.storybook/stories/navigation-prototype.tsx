@@ -94,6 +94,7 @@ export interface NavigationPrototypeProps {
   locationCount: "one" | "several";
   productsContent?: ReactNode;
   productsToolbar?: ReactNode;
+  beforeNavigate?: (proceed: () => void) => void;
 }
 
 export function NavigationPrototype(props: NavigationPrototypeProps) {
@@ -113,6 +114,7 @@ function Workspace({
   locationCount,
   productsContent,
   productsToolbar,
+  beforeNavigate,
 }: NavigationPrototypeProps) {
   const t = useTranslations("catalogue");
   const headerT = useTranslations("header");
@@ -166,8 +168,12 @@ function Workspace({
   const locationName = (id: string) =>
     t(id === "sales-floor" ? "navSalesFloor" : "navStockroom");
   function go(page: Destination) {
-    dispatch({ type: "page", page });
-    setOpenMobile(false);
+    const proceed = () => {
+      dispatch({ type: "page", page });
+      setOpenMobile(false);
+    };
+    if (page !== state.page && beforeNavigate) beforeNavigate(proceed);
+    else proceed();
   }
   function choose(location: string | null) {
     if (!locationPage || !location || !available.includes(location)) return;

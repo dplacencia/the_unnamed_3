@@ -10,6 +10,7 @@ const meta = {
     hiddenColumns: false,
     locationCount: "several",
     archivedFixture: false,
+    saveFixture: "confirmed",
   },
   parameters: {
     layout: "fullscreen",
@@ -17,13 +18,13 @@ const meta = {
     docs: {
       description: {
         component:
-          "First browsing/inspection design with the selected TanStack Table foundation and TailAdmin controls. All products, locations, codes and quantities are synthetic; this is not an API integration. Compact/comfortable sizes, column widgets and missing-value copy are proposals for review. Filtering/editing flows, production pagination and persistence are later design work. The archived example simulates an explicitly included archived read. No candidate image is accepted automatically.",
+          "Browsing and first editing design with TanStack Table and TailAdmin. Records and save outcomes are synthetic; no API or business writes. Editar opens the panel editor; Editar tabla enables repeated drafts. Existing SKUs, units, barcodes and stock stay read-only. All drafts must pass local checks before a simulated save. Mixed confirms the first requested field and rejects the rest, exposing field-level partial outcomes. Unconfirmed retains drafts and pauses further submission until this fixture is reset; recovery/status checks and production persistence remain undefined. In-app departure uses the selected save/discard/keep-editing guard; browser closing/reload is not covered. Exact widget treatment remains a review proposal. No image is accepted automatically.",
       },
     },
   },
   render: (args) => (
     <ProductsTablePreview
-      key={`${args.initialStock}:${args.initialDensity}:${args.hiddenColumns}:${args.locationCount}:${args.archivedFixture}`}
+      key={`${args.initialStock}:${args.initialDensity}:${args.hiddenColumns}:${args.locationCount}:${args.archivedFixture}:${args.saveFixture}`}
       {...args}
     />
   ),
@@ -38,3 +39,7 @@ export const SoleLocation: Story = {
   args: { initialStock: true, locationCount: "one" },
 };
 export const ArchivedProduct: Story = { args: { archivedFixture: true } };
+export const EditingMixed: Story = { args: { saveFixture: "mixed" } };
+export const EditingUnconfirmed: Story = {
+  args: { saveFixture: "unconfirmed" },
+};

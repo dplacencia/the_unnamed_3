@@ -27,6 +27,9 @@ building another general-purpose spreadsheet.
 - After the user's acceptance, register TanStack Table 9.3.1 as the exact selected
   runtime dependency and develop the [first browsing design](prototype-plan.md)
   with the selected summary/panel/content/independent-expansion behavior.
+- Following PT-022–026, develop the [first editing prototype](editing-plan.md)
+  in Storybook with synthetic drafts/results and the selected validation and
+  departure rules. Keep recovery, production integration and image acceptance separate.
 
 ## Capabilities
 
@@ -63,8 +66,19 @@ building another general-purpose spreadsheet.
   header and Producto pinned left, preserving saved desktop choices. Detailed
   controls/content, matching/order, quantity formatting and storage remain open.
   Editing has two deliberate draft paths: Editar in the product panel and optional
-  Editar tabla, with Guardar/Cancelar and read-only stock. Fields, save outcomes
-  and implementation remain open.
+  Editar tabla, with Guardar/Cancelar and read-only stock. The first editor allows
+  name changes and explicit SKU assignment only when unassigned. Existing SKU
+  replacement, barcode maintenance and unit changes are outside that first scope.
+  Table drafts use one Guardar cambios action with individual product results;
+  only confirmed changes count as saved and failed/unconfirmed changes retain
+  drafts. No batch atomicity is promised. All requested drafts are checked for
+  detectable field errors before any changes are sent; errors appear beside
+  fields and block submission until corrected. In-app departure with unsaved
+  edits offers Guardar y salir, Descartar cambios and Seguir editando, leaving
+  after save only when all requested changes are confirmed. Local checks reuse
+  Inventory's existing name/SKU profiles and preserve exact text and received-byte
+  limits. Detailed outcome recovery, remaining draft lifecycle and implementation
+  remain open.
 
 ### Modified Capabilities
 
@@ -280,3 +294,77 @@ prepare the commit before moving to the next steps”**. This authorizes the
 stage the research, qualification and browsing-prototype batch and return a
 commit command for the user. It does not authorize creating a commit, promoting
 candidate images or beginning the next design pass.
+
+The user then said **“Done, continue with next steps”**. Commit `b955575` is
+present and the working tree was clean at the start of this continuation.
+Continue the remaining Products-table definition, starting with the
+[editing-field proposal](design.md#editing-field-scope--proposal-2026-11-14)
+left open under PT-017. This continuation does not select its proposed fields,
+identifier operations, save outcomes or new image references. The prior staging
+authorization is complete; further staging and commits are not implied.
+
+The user subsequently chose **“Name + missing SKU (Recommended)”**. PT-022
+selects product-name changes plus explicit SKU assignment only for products
+without one, through both selected editing paths. Existing SKU replacement,
+barcode maintenance and unit changes remain outside this first editor; stock
+stays read-only. This selects the initial field/action scope, not validation,
+save outcomes, production write availability or implementation.
+
+The user then selected **“Save together, show individual results (Recommended)”**.
+PT-023 records one Guardar cambios action for edited products and per-product
+results, counting only confirmed changes as saved and retaining failed or
+unconfirmed drafts. It does not promise all-or-nothing multi-product saving.
+Validation before submission, detailed mixed/uncertain outcomes, retry,
+concurrency and draft lifecycle remain separate decisions. Read the
+[selected save interaction](design.md#table-save-interaction--proposal-2026-11-14).
+
+The user subsequently chose **“Correct all field errors before saving
+(Recommended)”**. PT-024 records the local validation gate for all requested
+drafts, with errors beside fields and no submission until detectable errors are
+corrected. This does not guarantee acceptance or define new field-validity rules.
+
+The user then selected **“Ask before leaving unsaved edits (Recommended)”**.
+PT-025 records the in-app navigation guard with Guardar y salir, Descartar cambios
+and Seguir editando. Saving leaves only after every requested change is confirmed
+saved. Browser closing/reload, persistence and remaining draft coordination are
+not selected by this choice. Read the
+[validation and navigation decisions](design.md#selected-validation-gate--2026-11-14).
+
+The user subsequently chose **“Reuse existing profiles (Recommended)”**.
+PT-026 selects Inventory's existing supplied-name and supplied-SKU profiles for
+the first editing prototype's local checks, including exact preservation,
+nonblank/prohibited-text rules and limits of 1024/256 received UTF-8 bytes.
+This frontend design selection does not establish a name-update interface or
+modify the owning contract. Detailed outcome recovery and production integration
+remain separate from the bounded Storybook editing design.
+
+The [first editing prototype](editing-plan.md#execution-and-verification--2026-11-14)
+is now implemented and verified within that Storybook scope: 64 code tests,
+93 browser checks, 140 candidate captures and 451 unaffected reference
+comparisons pass. The plan records exact source/renderer/run evidence and
+resolved review findings. Production writes/storage, detailed recovery and
+specific image acceptance remain separate. Nothing is staged or committed.
+
+Subsequent review requests a dismissible Resultado del guardado message. PT-027
+and the [editing refinement](editing-plan.md#review-refinement--dismissible-results-2026-11-14)
+govern that presentation-only revision; drafts/outcomes and prior recovery limits
+remain intact. Positive review wording does not promote screenshots.
+
+The dismissible presentation is implemented and verified: 64 code tests,
+97 browser checks, 156 current Products captures and 451 unaffected accepted
+comparisons pass. The refinement section records current source and exact runs.
+The 156-image set supersedes the previous Products candidates and remains
+unapproved; accepted references and the empty index are preserved.
+
+The user subsequently said **“That looks ok, I approve all current revision. What
+is the next recommended steps”** after receiving the current 156-image gallery.
+The [visual approval record](editing-plan.md#visual-approval--2026-11-14) records
+promotion of those exact Products images (628 accepted references in total),
+preserving the earlier 472 entries. The separately pending 20 navigation images
+are outside that gallery. Staging/commits and new product decisions remain separate.
+
+The user then said **“go ahead”** to the recommended two-batch commit checkpoint.
+The [current preparation](editing-plan.md#commit-preparation--2026-11-14)
+authorizes staging code/specifications first and approved images after the user
+commits the first batch. Only the user executes commits. This does not begin the
+proposed save-recovery or filter design.

@@ -1484,9 +1484,41 @@
         {
           "id": "scrolled",
           "action": "products-scrolled"
+        },
+        {
+          "id": "editing",
+          "action": "products-editing"
+        },
+        {
+          "id": "editing-invalid",
+          "action": "products-editing-invalid"
+        },
+        {
+          "id": "editing-panel",
+          "action": "products-editing-panel"
+        },
+        {
+          "id": "editing-guard",
+          "action": "products-editing-guard"
+        },
+        {
+          "id": "editing-saved",
+          "action": "products-editing-saved"
+        },
+        {
+          "id": "editing-stock",
+          "action": "products-editing-stock"
+        },
+        {
+          "id": "editing-hidden-error",
+          "action": "products-editing-hidden-error"
+        },
+        {
+          "id": "results-dismissed",
+          "action": "products-results-dismissed"
         }
       ],
-      "limitation": "Development-only browsing design; synthetic data, no production API or edit/filter flows; exact visual metrics and controls await review."
+      "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."
     },
     {
       "id": "products-stock",
@@ -1511,7 +1543,7 @@
           "action": "products-location-options"
         }
       ],
-      "limitation": "Development-only browsing design; synthetic data, no production API or edit/filter flows; exact visual metrics and controls await review."
+      "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."
     },
     {
       "id": "products-comfortable",
@@ -1528,7 +1560,7 @@
           "action": "products-expanded"
         }
       ],
-      "limitation": "Development-only browsing design; synthetic data, no production API or edit/filter flows; exact visual metrics and controls await review."
+      "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."
     },
     {
       "id": "products-hidden",
@@ -1545,7 +1577,7 @@
           "action": "products-expanded"
         }
       ],
-      "limitation": "Development-only browsing design; synthetic data, no production API or edit/filter flows; exact visual metrics and controls await review."
+      "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."
     },
     {
       "id": "products-sole-location",
@@ -1558,7 +1590,7 @@
           "id": "default"
         }
       ],
-      "limitation": "Development-only browsing design; synthetic data, no production API or edit/filter flows; exact visual metrics and controls await review."
+      "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."
     },
     {
       "id": "products-archived",
@@ -1575,7 +1607,7 @@
           "action": "products-expanded"
         }
       ],
-      "limitation": "Development-only browsing design; synthetic data, no production API or edit/filter flows; exact visual metrics and controls await review."
+      "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."
     },
     {
       "id": "products-en",
@@ -1587,9 +1619,13 @@
       "cases": [
         {
           "id": "default"
+        },
+        {
+          "id": "editing",
+          "action": "products-editing"
         }
       ],
-      "limitation": "Translated design fixture, not production functionality."
+      "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."
     },
     {
       "id": "products-ca",
@@ -1601,9 +1637,13 @@
       "cases": [
         {
           "id": "default"
+        },
+        {
+          "id": "editing",
+          "action": "products-editing"
         }
       ],
-      "limitation": "Translated design fixture, not production functionality."
+      "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."
     },
     {
       "id": "products-gl",
@@ -1615,9 +1655,13 @@
       "cases": [
         {
           "id": "default"
+        },
+        {
+          "id": "editing",
+          "action": "products-editing"
         }
       ],
-      "limitation": "Translated design fixture, not production functionality."
+      "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."
     },
     {
       "id": "products-eu",
@@ -1629,9 +1673,57 @@
       "cases": [
         {
           "id": "default"
+        },
+        {
+          "id": "editing",
+          "action": "products-editing"
         }
       ],
-      "limitation": "Translated design fixture, not production functionality."
+      "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."
+    },
+    {
+      "id": "products-editing-mixed",
+      "title": "Products mixed save outcomes",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products--editing-mixed",
+      "cases": [
+        {
+          "id": "table-results",
+          "action": "products-editing-results"
+        },
+        {
+          "id": "panel-results",
+          "action": "products-editing-panel-results"
+        },
+        {
+          "id": "table-dismissed",
+          "action": "products-mixed-results-dismissed"
+        },
+        {
+          "id": "panel-dismissed",
+          "action": "products-panel-results-dismissed"
+        }
+      ],
+      "limitation": "First requested field is confirmed and the rest rejected by the fixture; no row/batch atomicity or backend write availability is implied."
+    },
+    {
+      "id": "products-editing-unconfirmed",
+      "title": "Products unconfirmed save outcome",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products--editing-unconfirmed",
+      "cases": [
+        {
+          "id": "result",
+          "action": "products-editing-unconfirmed"
+        },
+        {
+          "id": "dismissed",
+          "action": "products-unconfirmed-results-dismissed"
+        }
+      ],
+      "limitation": "Unconfirmed fixture retains drafts and pauses further submission until reset. No production recovery/status-check/storage policy is selected."
     }
   ]
 }

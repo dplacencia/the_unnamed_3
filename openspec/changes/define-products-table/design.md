@@ -31,8 +31,17 @@ units, main/reservation dimension first, exact values and visible unknown or
 verification-needed states. PT-016 selects the full phone table with horizontal
 scrolling, sticky column header and Producto pinned left, preserving saved desktop
 choices. PT-017 selects individual panel editing and optional table editing,
-both explicit draft flows with Guardar/Cancelar and read-only stock. Other layouts,
-interactions and field choices below remain proposals.
+both explicit draft flows with Guardar/Cancelar and read-only stock. PT-018–021
+subsequently select TanStack, compact read-only summaries plus the full panel,
+identifiers/status/hidden fields and independent multiple expansions. PT-022
+selects name changes plus explicit assignment of a missing SKU in both editors.
+PT-023 selects one Guardar cambios action for table drafts with individual results
+and retained failed/unconfirmed drafts, without a batch-atomicity promise.
+PT-024 selects checking all requested drafts for detectable field errors before
+any submission. PT-025 selects an in-app unsaved-change guard and confirmed save
+before departure. PT-026 selects existing Inventory name/SKU profiles for the
+editor's local validation. Other layouts, detailed outcome recovery and remaining
+draft-lifecycle choices below remain proposals.
 Existing scope, values, user-chosen depth and TailAdmin branding apply.
 
 The [product thesis](../../../../the_unnamed_1/project_idea.md) reports Excel
@@ -805,6 +814,173 @@ fields/save flows and production retrieval/pagination remain subsequent work.
 The qualification report's pre-adoption statements remain historical evidence;
 the latest user decisions govern current design authority.
 
+## Editing-field scope — proposal 2026-11-14
+
+After committing the first browsing design as `b955575`, the user said **“Done,
+continue with next steps”**. Resume the field/action boundary left open by
+PT-017 before designing save outcomes or changing the prototype. The original
+proposal and subsequent field selection are recorded below; that selection does
+not grant UI implementation authority or decide later save/draft questions.
+
+Recommend an initial design for **product-name changes plus explicit assignment
+of an SKU when none is assigned**, available through the selected panel and
+table-editing paths. Existing SKU replacement, barcode maintenance and changes
+to units would be designed separately. Stock stays read-only. The alternative
+is name changes alone, with identifier assignment deferred. The combined scope
+helps merchants improve incomplete catalogues during repeated work; the narrower
+alternative reduces the first editor's scope.
+
+The current owning [product identity and lifecycle specification](../../../../the_unnamed_1/openspec/specs/inventory-product-identity-lifecycle/spec.md)
+distinguishes nonunique presentation names from permanent identity and supports
+optional initial codes with explicit later assignment where the applicable
+contract/profile supports them. That assignment does not authorize general SKU
+replacement, retirement or remapping. The proposed editor must preserve that
+boundary and exact identifiers; a filled SKU cell must not silently become a
+general code-replacement control. Barcode assignment/associations remain their
+own operation scope.
+
+PT-022 below selects name editing for the frontend design. The owning
+creation-name profile does not prove an available update operation, and published
+requirements do not establish implementation. Production availability/authority
+must be checked separately before real integration. No new backend capability,
+normalization rule, identifier uniqueness policy, save atomicity or business
+write is inferred from this proposal.
+
+### Selected editing fields — 2026-11-14
+
+The user answered **“Name + missing SKU (Recommended)”** to:
+
+> For the first editing design, I recommend changing the product name and
+> explicitly assigning an SKU to products that don’t have one. Existing SKU
+> replacement, barcode maintenance and unit changes would be designed separately;
+> stock stays read-only. Shall we use this scope in the product panel and table
+> editor, or begin with name changes alone?
+
+PT-022 records that field/action scope in both selected editors. The preceding
+alternatives are historical framing; the combined option is now selected. This
+does not define name-validation rules for updates, identifier-operation details,
+save outcomes, write availability or UI implementation. Existing SKU replacement
+must not be inferred from a filled text field. Next define concrete draft
+validation/save/failure behavior, then prepare the bounded Storybook editing plan.
+Keep the earlier 84 Products candidates and 20 navigation updates pending their
+own specific image approval.
+
+## Table-save interaction — proposal 2026-11-14
+
+Recommend one **Guardar cambios** action for the table's edited products, with
+clear results per product. Only confirmed changes may count as saved; failed or
+unconfirmed changes retain their drafts. This reduces repeated save actions while
+preserving the product's honest-status value. The alternative is a separate
+Guardar action per row, giving more granular submission control at the cost of
+extra repeated interaction. Both keep the selected explicit draft/save boundary.
+
+The user selected this interaction below. It does not promise an atomic
+multi-product operation, invent an update/batch endpoint, select automatic retry
+or equate uncertain outcomes with rejection. A product may involve distinct name
+and SKU operations; one overall row label must not conceal mixed field outcomes.
+Exact per-field outcome handling, safe retry, validation before submission,
+concurrency, navigation with drafts and panel/table coordination remain separate.
+
+### Selected table-save interaction — 2026-11-14
+
+The user answered **“Save together, show individual results (Recommended)”** to:
+
+> For Editar tabla, I recommend one “Guardar cambios” action for all edited
+> products, with a clear result per product. Only confirmed changes count as
+> saved; failed or unconfirmed changes keep their drafts. Would you prefer this,
+> or a separate Guardar action on each row? This would not promise that all
+> products save together or all fail together.
+
+PT-023 records the shared explicit save action, individual results and retained
+failed/unconfirmed drafts. It does not equate an unknown result with rejection,
+promise a multi-product transaction or select automatic retry. Validation before
+submission, exact mixed/uncertain outcome handling and draft lifecycle remain open.
+
+## Validation before table save — proposal 2026-11-14
+
+Recommend checking all table drafts for detectable field errors before sending
+any changes. Show errors beside the relevant fields and keep all drafts until
+they are corrected or removed from the draft set. This avoids preventable partial
+saves while retaining PT-023's truthful per-product results for problems only
+known after submission. The alternative is to submit valid rows while keeping
+invalid rows as drafts, which advances valid work sooner but creates a partial
+submission even when errors are already visible.
+
+The user selected this gate below. It does not define new name/SKU
+validity, client-side uniqueness authority or production endpoints. A local check
+cannot guarantee acceptance or continued authority; server-confirmed and
+unconfirmed outcomes remain distinct after any submission.
+
+### Selected validation gate — 2026-11-14
+
+The user answered **“Correct all field errors before saving (Recommended)”** to:
+
+> Before “Guardar cambios”, I recommend checking all drafts and sending nothing
+> until any detectable field errors are corrected, showing errors beside each
+> field. Problems discovered after submission would still get individual results.
+> Would you prefer this, or save valid rows immediately and leave invalid rows
+> as drafts?
+
+PT-024 selects the all-draft local gate, not new validity limits or a guarantee
+of subsequent success. Validate requested changes, not an invented requirement
+for every product to acquire an optional SKU.
+
+## Selected in-app unsaved-change guard — 2026-11-14
+
+The user answered **“Ask before leaving unsaved edits (Recommended)”** to:
+
+> For in-app navigation away from an editor with unsaved changes, I recommend
+> asking: “Guardar y salir”, “Descartar cambios” or “Seguir editando”. Saving
+> would leave only after all requested changes are confirmed saved. Alternatively,
+> we could keep drafts in the current tab and let people leave and return without
+> a prompt. Which approach should we design?
+
+PT-025 records those three choices. Guardar y salir retains the requested
+destination but leaves only after every requested change is confirmed saved.
+Validation errors, failures and unconfirmed outcomes therefore do not silently
+discard remaining drafts or complete departure. Seguir editando retains the
+editor and drafts. Descartar cambios explicitly abandons unsaved drafts; it does
+not claim to reverse already confirmed changes. This is an in-app guard, not a
+promise of a custom browser-close/reload dialogue or a selected storage policy.
+
+## Local field-validation profiles — proposal 2026-11-14
+
+Recommend reusing Inventory's existing supplied-name and supplied-SKU profiles
+for the first editor's local checks, preserving accepted text rather than fixing
+or truncating it. The owning [identity contract](../../../../the_unnamed_1/openspec/specs/inventory-product-identity-lifecycle-contract/spec.md)
+defines a nonblank name limit of 1024 received UTF-8 bytes and a supplied-SKU
+limit of 256 received UTF-8 bytes, with its fixed whitespace/control rules.
+SKU matching keeps its separate fixed trim/simple-fold profile; local validation
+must not claim authoritative code availability or rewrite the submitted value.
+
+The name profile currently applies to creation. Reusing it for this new frontend
+editing design is a proposal, not proof of a name-update interface or a change
+to the owning backend contract. The alternative is reviewing the exact profiles
+with the user before selecting them. The subsequent selection is recorded below.
+
+### Selected local field profiles — 2026-11-14
+
+The user answered **“Reuse existing profiles (Recommended)”** to:
+
+> For local validation, I recommend reusing Inventory’s existing name and SKU
+> profiles: reject blank/prohibited input, preserve accepted text exactly, and
+> apply limits of 1,024 UTF-8 bytes for names and 256 for a supplied SKU. These
+> are byte limits, not character counts. Shall we reuse these profiles for the
+> editing prototype, or review their exact rules first?
+
+PT-026 selects that reuse for local checks. Supplied-SKU validation concerns an
+explicit assignment draft; an omitted optional SKU remains omitted. Fixed
+Unicode whitespace/control and received-byte rules retain their owning meaning.
+Matching transformations must not become submitted-content rewriting, and a
+locally valid SKU is not a claim of current availability. Name-profile reuse is
+a frontend design choice, not publication of a new backend operation.
+
+Read-only source check on 2026-11-14: the identity contract above was read at
+`the_unnamed_1` HEAD `7240bfa0136cbe889146cdc243149a5160b94afa`, SHA-256
+`02a70ddddd7d0db84705834cb2887ea313819261967b59556c10b34d7a29156d`.
+Its creation/name profile and supplied-code/matching sections establish these
+input constraints within their stated coverage, not runtime write availability.
+
 ## Decision sequence after the research framing
 
 1. Select the interaction direction and an explicit first scenario, preserving
@@ -861,3 +1037,17 @@ the new Products-table delta. Formatting, 42 local links and the diff check pass
 Nine documentation files are changed/new, with the index empty and application,
 visual, dependency and accepted-reference sources unchanged. The next information
 boundary is presented as a proposal; no UI is implemented.
+
+## Save-result dismissal — review 2026-11-14
+
+The user said the Resultado del guardado message should be discardable. PT-027
+selects dismissal of that presentation while preserving all drafts and outcome
+facts. The [editing-plan refinement](editing-plan.md#review-refinement--dismissible-results-2026-11-14)
+records the proposed close/reopen control treatment and verification scope.
+Unknown results cannot silently become saved or rejected when the message closes.
+This adds no undo, automatic retry, production persistence or image acceptance.
+
+The subsequent explicit approval accepts the current 156-image Products visuals;
+see the [approval record](editing-plan.md#visual-approval--2026-11-14). This replaces
+the pending-image status for that exact run without choosing recovery/storage
+behavior or accepting any future changed images.

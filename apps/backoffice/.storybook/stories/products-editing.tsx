@@ -1,0 +1,607 @@
+import { useRef, useState } from "react";
+import { useForm, useWatch } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { XIcon } from "@/icons";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import type { PreviewProduct } from "./products-table-model";
+import {
+  applyEditingResults,
+  changedProducts,
+  editingDefaults,
+  editorSchema,
+  type EditorForm,
+  type EditingResults,
+  type EditingRows,
+  type ProductChange,
+} from "./products-editing-model";
+
+export type SaveFixture = "confirmed" | "mixed" | "unconfirmed";
+type EditorMode = { type: "table" } | { type: "panel"; id: string } | null;
+
+export function useProductEditing(
+  initial: PreviewProduct[],
+  fixture: SaveFixture,
+) {
+  const [records, setRecords] = useState(initial);
+  const confirmedRecords = useRef(initial);
+  const unresolved = useRef(false);
+  const [mode, setMode] = useState<EditorMode>(null);
+  const [panelId, inspect] = useState<string | null>(null);
+  const [results, setResults] = useState<EditingResults>({});
+  const [submitted, setSubmitted] = useState<ProductChange[]>([]);
+  const [sending, setSending] = useState(false);
+  const [pendingExit, setPendingExit] = useState<(() => void) | null>(null);
+  const form = useForm<EditorForm>({
+    defaultValues: { rows: editingDefaults(initial) },
+    resolver: zodResolver(editorSchema),
+    reValidateMode: "onChange",
+  });
+  const watched = useWatch({ control: form.control });
+  const rows = (watched.rows ?? form.getValues("rows")) as EditingRows;
+  const changes = changedProducts(records, rows);
+  const hasUnconfirmed = Object.values(results).some((fields) =>
+    Object.values(fields).includes("unconfirmed"),
+  );
+  function resetDrafts() {
+    form.reset({ rows: editingDefaults(confirmedRecords.current) });
+    if (!unresolved.current) {
+      setResults({});
+      setSubmitted([]);
+    }
+  }
+  function requestLeave(action: () => void) {
+    if (changes.length || sending) setPendingExit(() => action);
+    else action();
+  }
+  function begin(next: Exclude<EditorMode, null>) {
+    requestLeave(() => {
+      resetDrafts();
+      setMode(next);
+      inspect(next.type === "panel" ? next.id : null);
+    });
+  }
+  function exit(after = () => {}) {
+    requestLeave(() => {
+      resetDrafts();
+      setMode(null);
+      after();
+    });
+  }
+  async function save(after?: () => void) {
+    if (sending || hasUnconfirmed) return;
+    await form.handleSubmit(
+      async (values) => {
+        const requested = changedProducts(records, values.rows);
+        if (!requested.length) {
+          setPendingExit(null);
+          after?.();
+          return;
+        }
+        setSending(true);
+        // Deliberately simulated latency/outcomes; no request is sent anywhere.
+        await new Promise((resolve) => setTimeout(resolve, 250));
+        const outcomes: EditingResults = {};
+        let operation = 0;
+        for (const change of requested) {
+          outcomes[change.id] = {};
+          for (const field of ["name", "sku"] as const) {
+            if (change[field] === undefined) continue;
+            outcomes[change.id][field] =
+              fixture === "unconfirmed"
+                ? "unconfirmed"
+                : fixture === "mixed" && operation > 0
+                  ? "failed"
+                  : "confirmed";
+            operation++;
+          }
+        }
+        const next = applyEditingResults(
+          records,
+          values.rows,
+          requested,
+          outcomes,
+        );
+        confirmedRecords.current = next.records;
+        unresolved.current = Object.values(outcomes).some((fields) =>
+          Object.values(fields).includes("unconfirmed"),
+        );
+        setRecords(next.records);
+        form.reset({ rows: next.rows });
+        setResults(outcomes);
+        setSubmitted(requested);
+        setSending(false);
+        if (!changedProducts(next.records, next.rows).length) {
+          setPendingExit(null);
+          after?.();
+        }
+      },
+      (errors) => {
+        setPendingExit(null);
+        inspect(mode?.type === "panel" ? mode.id : null);
+        const id = Object.keys(errors.rows ?? {})[0];
+        const field = errors.rows?.[id]?.name ? "name" : "sku";
+        if (id)
+          requestAnimationFrame(() => form.setFocus(`rows.${id}.${field}`));
+      },
+    )();
+  }
+  function assignSku(id: string, requested: boolean) {
+    form.setValue(`rows.${id}.assignSku`, requested);
+    if (!requested) {
+      form.setValue(`rows.${id}.sku`, "");
+      form.clearErrors(`rows.${id}.sku`);
+    }
+  }
+  return {
+    records,
+    panelId,
+    inspect,
+    rows,
+    form,
+    mode,
+    results,
+    submitted,
+    changes,
+    sending,
+    hasUnconfirmed,
+    pendingExit,
+    begin,
+    exit,
+    save,
+    assignSku,
+    keepEditing: () => setPendingExit(null),
+    discard: () => {
+      const action = pendingExit;
+      setPendingExit(null);
+      resetDrafts();
+      action?.();
+    },
+  };
+}
+export type ProductEditing = ReturnType<typeof useProductEditing>;
+
+const errors = {
+  name: {
+    blank: "peNameBlank",
+    tooLong: "peNameTooLong",
+    invalid: "peNameInvalid",
+  },
+  sku: {
+    blank: "peSkuBlank",
+    tooLong: "peSkuTooLong",
+    invalid: "peSkuInvalid",
+  },
+} as const;
+
+export function EditingField({
+  editor,
+  product,
+  field,
+}: {
+  editor: ProductEditing;
+  product: PreviewProduct;
+  field: "name" | "sku";
+}) {
+  const t = useTranslations("catalogue");
+  const error =
+    editor.form.formState.errors.rows?.[product.id]?.[field]?.message;
+  const reason =
+    error === "blank" || error === "tooLong" || error === "invalid"
+      ? error
+      : null;
+  const errorId = `edit-error-${product.id}-${field}`;
+  return (
+    <div className="products-edit-field">
+      <Textarea
+        {...editor.form.register(`rows.${product.id}.${field}`)}
+        rows={1}
+        wrap="off"
+        spellCheck={false}
+        autoCapitalize="none"
+        autoCorrect="off"
+        className="products-edit-input"
+        aria-label={t(field === "name" ? "peNameFor" : "peSkuFor", {
+          product: product.name,
+          code: product.sku ?? product.id,
+        })}
+        aria-invalid={!!reason}
+        aria-describedby={reason ? errorId : undefined}
+        disabled={editor.sending}
+        readOnly={editor.hasUnconfirmed}
+        data-edit-name={field === "name" ? product.id : undefined}
+        data-edit-sku={field === "sku" ? product.id : undefined}
+      />
+      {reason && (
+        <p
+          id={errorId}
+          data-edit-error={`${product.id}-${field}`}
+          className="products-edit-error"
+        >
+          {t(errors[field][reason])}
+        </p>
+      )}
+    </div>
+  );
+}
+
+export function EditingSku({
+  editor,
+  product,
+}: {
+  editor: ProductEditing;
+  product: PreviewProduct;
+}) {
+  const t = useTranslations("catalogue");
+  if (product.sku !== null)
+    return <span className="products-exact-code">{product.sku}</span>;
+  return editor.rows[product.id]?.assignSku ? (
+    <div className="products-sku-assignment">
+      <EditingField editor={editor} product={product} field="sku" />
+      <Button
+        size="sm"
+        variant="ghost"
+        disabled={editor.sending || editor.hasUnconfirmed}
+        onClick={() => editor.assignSku(product.id, false)}
+      >
+        {t("peCancelAssignment")}
+      </Button>
+    </div>
+  ) : (
+    <Button
+      size="sm"
+      variant="outline"
+      disabled={editor.sending || editor.hasUnconfirmed}
+      onClick={() => editor.assignSku(product.id, true)}
+    >
+      {t("peAssignSku")}
+    </Button>
+  );
+}
+
+export function EditingResultsView({
+  editor,
+  productId,
+}: {
+  editor: ProductEditing;
+  productId?: string;
+}) {
+  const t = useTranslations("catalogue");
+  const container = useRef<HTMLDivElement>(null);
+  const [dismissed, setDismissed] = useState<{
+    snapshot: ProductChange[];
+    scope: string | undefined;
+  } | null>(null);
+  const submitted = editor.submitted.filter(
+    (change) => !productId || change.id === productId,
+  );
+  if (!Object.keys(editor.results).length || !submitted.length) return null;
+  const outcomes = submitted.flatMap((change) =>
+    Object.values(editor.results[change.id] ?? {}),
+  );
+  if (!outcomes.length) return null;
+  const summaryKey = outcomes.includes("unconfirmed")
+    ? "peResultsUnconfirmed"
+    : outcomes.includes("failed")
+      ? outcomes.includes("confirmed")
+        ? "peResultsPartial"
+        : "peFailed"
+      : "peSaved";
+  const collapsed =
+    dismissed !== null &&
+    dismissed.snapshot === editor.submitted &&
+    dismissed.scope === productId;
+  function focusReplacement(selector: string) {
+    const previous = document.activeElement;
+    requestAnimationFrame(() => {
+      const active = document.activeElement;
+      if (
+        active === document.body ||
+        active === previous ||
+        !active?.isConnected
+      )
+        container.current?.querySelector<HTMLButtonElement>(selector)?.focus();
+    });
+  }
+  if (collapsed)
+    return (
+      <div
+        ref={container}
+        className="products-edit-results-collapsed"
+        data-edit-results-collapsed
+        role="status"
+        aria-label={t("peLastResults")}
+      >
+        <span>{t("peResultsSummary", { status: t(summaryKey) })}</span>
+        <Button
+          variant="link"
+          size="sm"
+          data-edit-show-results
+          disabled={editor.sending}
+          onClick={() => {
+            setDismissed(null);
+            focusReplacement("[data-edit-dismiss-results]");
+          }}
+        >
+          {t("peShowResults")}
+        </Button>
+      </div>
+    );
+  return (
+    <div
+      ref={container}
+      className="products-edit-results"
+      data-edit-results
+      role="status"
+    >
+      <div className="products-edit-results-header">
+        <p className="font-semibold">{t("peLastResults")}</p>
+        <Button
+          variant="ghost"
+          size="icon-xs"
+          className="products-result-dismiss"
+          data-edit-dismiss-results
+          aria-label={t("peDismissResults")}
+          title={t("peDismissResults")}
+          disabled={editor.sending}
+          onClick={() => {
+            setDismissed({ snapshot: editor.submitted, scope: productId });
+            focusReplacement("[data-edit-show-results]");
+          }}
+        >
+          <XIcon className="size-4" aria-hidden="true" />
+        </Button>
+      </div>
+      <ul>
+        {submitted.map((change) => (
+          <li key={change.id} data-edit-result={change.id}>
+            <Button
+              variant="link"
+              size="sm"
+              className="products-result-name"
+              data-edit-details={change.id}
+              disabled={editor.sending}
+              aria-label={`${t("ptOpenDetails")}: ${editor.records.find((record) => record.id === change.id)?.name} (${editor.records.find((record) => record.id === change.id)?.sku ?? change.id})`}
+              onClick={() => {
+                editor.keepEditing();
+                editor.inspect(change.id);
+              }}
+            >
+              {editor.records.find((record) => record.id === change.id)?.name}
+            </Button>
+            <span className="products-result-code">
+              {t("gridSku")}:{" "}
+              {editor.records.find((record) => record.id === change.id)?.sku ??
+                t("ptUnassigned")}
+            </span>
+            {(["name", "sku"] as const).map((field) => {
+              const outcome = editor.results[change.id]?.[field];
+              return outcome ? (
+                <span
+                  key={field}
+                  className="products-edit-outcome"
+                  data-outcome={outcome}
+                >
+                  {t(field === "name" ? "peName" : "gridSku")}:{" "}
+                  <span className="products-result-value" title={change[field]}>
+                    {change[field]}
+                  </span>
+                  <strong>
+                    {t(
+                      outcome === "confirmed"
+                        ? "peSaved"
+                        : outcome === "failed"
+                          ? "peFailed"
+                          : "peUnconfirmed",
+                    )}
+                  </strong>
+                </span>
+              ) : null;
+            })}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export function EditingValidationSummary({
+  editor,
+  fieldVisible,
+}: {
+  editor: ProductEditing;
+  fieldVisible: (id: string, field: "name" | "sku") => boolean;
+}) {
+  const t = useTranslations("catalogue");
+  const [review, setReview] = useState<{
+    id: string;
+    field: "name" | "sku";
+  } | null>(null);
+  const issues = editor.records.flatMap((product) =>
+    (["name", "sku"] as const).flatMap((field) => {
+      const reason =
+        editor.form.formState.errors.rows?.[product.id]?.[field]?.message;
+      return reason === "blank" || reason === "tooLong" || reason === "invalid"
+        ? [{ product, field, reason } as const]
+        : [];
+    }),
+  );
+  const reviewedProduct = editor.records.find(
+    (product) => product.id === review?.id,
+  );
+  if (!issues.length && !review) return null;
+  return (
+    <div className="products-edit-validation" data-edit-validation-summary>
+      <p className="font-semibold" role={issues.length ? "alert" : undefined}>
+        {t(issues.length ? "peValidationTitle" : "peReviewField")}
+      </p>
+      <ul>
+        {issues.map(({ product, field, reason }) => (
+          <li key={`${product.id}-${field}`}>
+            <span>
+              {product.name} ({product.sku ?? t("ptUnassigned")}):{" "}
+              {t(errors[field][reason])}
+            </span>
+            <Button
+              size="sm"
+              variant="outline"
+              data-edit-review={`${product.id}-${field}`}
+              onClick={() => {
+                setReview(
+                  fieldVisible(product.id, field)
+                    ? null
+                    : { id: product.id, field },
+                );
+                requestAnimationFrame(() =>
+                  editor.form.setFocus(`rows.${product.id}.${field}`),
+                );
+              }}
+            >
+              {t("peReview")}
+            </Button>
+          </li>
+        ))}
+      </ul>
+      {review && reviewedProduct && (
+        <div className="products-hidden-field-review">
+          <p>
+            {reviewedProduct.name} ·{" "}
+            {t(review.field === "name" ? "peName" : "gridSku")}
+          </p>
+          {!fieldVisible(review.id, review.field) &&
+          (review.field === "name" ||
+            (reviewedProduct.sku === null &&
+              editor.rows[review.id]?.assignSku)) ? (
+            <EditingField
+              editor={editor}
+              product={reviewedProduct}
+              field={review.field}
+            />
+          ) : (
+            <span className="products-exact-code">
+              {review.field === "sku"
+                ? (reviewedProduct.sku ?? t("ptUnassigned"))
+                : null}
+            </span>
+          )}
+          <Button
+            size="sm"
+            variant="ghost"
+            disabled={editor.sending}
+            onClick={() => {
+              setReview(null);
+              requestAnimationFrame(() => {
+                const target =
+                  document.querySelector<HTMLButtonElement>(
+                    "[data-edit-save]:not(:disabled)",
+                  ) ??
+                  document.querySelector<HTMLButtonElement>(
+                    "[data-edit-exit]:not(:disabled)",
+                  );
+                target?.focus();
+              });
+            }}
+          >
+            {t("peCloseReview")}
+          </Button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export function EditingActions({ editor }: { editor: ProductEditing }) {
+  const t = useTranslations("catalogue");
+  return (
+    <div className="products-edit-actions">
+      <span data-edit-count>
+        {t("peChangeCount", { count: editor.changes.length })}
+      </span>
+      <Button
+        size="sm"
+        variant="outline"
+        data-edit-exit
+        disabled={editor.sending}
+        onClick={() => editor.exit()}
+      >
+        {t(editor.changes.length ? "gridCancel" : "peFinish")}
+      </Button>
+      <Button
+        size="sm"
+        data-edit-save
+        disabled={
+          !editor.changes.length || editor.sending || editor.hasUnconfirmed
+        }
+        onClick={() => void editor.save()}
+      >
+        {t(editor.sending ? "peSaving" : "peSaveChanges")}
+      </Button>
+    </div>
+  );
+}
+
+export function EditingGuard({ editor }: { editor: ProductEditing }) {
+  const t = useTranslations("catalogue");
+  return (
+    <Dialog
+      open={!!editor.pendingExit}
+      onOpenChange={(open) => {
+        if (!open && !editor.sending) editor.keepEditing();
+      }}
+    >
+      <DialogContent
+        data-edit-guard
+        showCloseButton={false}
+        className="products-edit-guard"
+      >
+        <DialogHeader>
+          <DialogTitle>{t("peUnsavedTitle")}</DialogTitle>
+          <DialogDescription>
+            {t(
+              editor.hasUnconfirmed
+                ? "peUnconfirmedGuard"
+                : editor.changes.length
+                  ? "peUnsavedBody"
+                  : "peAllSaved",
+            )}
+          </DialogDescription>
+        </DialogHeader>
+        <EditingResultsView editor={editor} />
+        <DialogFooter>
+          <Button
+            variant="outline"
+            data-edit-continue
+            disabled={editor.sending}
+            onClick={editor.keepEditing}
+          >
+            {t("peKeepEditing")}
+          </Button>
+          <Button
+            variant="outline"
+            data-edit-discard
+            disabled={editor.sending}
+            onClick={editor.discard}
+          >
+            {t("peDiscard")}
+          </Button>
+          <Button
+            data-edit-save-exit
+            disabled={editor.sending || editor.hasUnconfirmed}
+            onClick={() => void editor.save(editor.pendingExit ?? undefined)}
+          >
+            {t(editor.sending ? "peSaving" : "peSaveLeave")}
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  );
+}

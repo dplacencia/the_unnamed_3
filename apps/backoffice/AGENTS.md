@@ -22,10 +22,50 @@ The
 is implemented; preserve its review rules and the technical sources as constraints.
 The current [Products table design](../../openspec/changes/define-products-table/proposal.md)
 now follows the user's TanStack acceptance and continued-design instruction.
-The user's 2026-11-14 request now authorizes preparing/staging its commit batch;
-follow the plan's [commit-preparation scope](../../openspec/changes/define-products-table/prototype-plan.md#commit-preparation--2026-11-14).
-Give the user the commit command, never execute it, and keep image approval and
-the next design pass separate.
+Latest staging authority: “go ahead” after the two-batch checkpoint recommendation.
+Follow [commit preparation](../../openspec/changes/define-products-table/editing-plan.md#commit-preparation--2026-11-14):
+25 code/specification/test files first, then 156 approved PNGs plus manifest only
+after the user commits batch 1. Return commit commands; never commit.
+Do not begin the next design pass before this checkpoint completes.
+Latest authority: the user explicitly approved all current revisions after the
+156-image Products gallery. Those exact references are promoted (628 baseline
+entries); see the [approval record](../../openspec/changes/define-products-table/editing-plan.md#visual-approval--2026-11-14).
+The separately pending 20 navigation images are outside that gallery.
+A capture-only panel focus race is fixed; all 24 repeated profile comparisons
+match the approved overview. Read the approval record for exact evidence. The subsequent batch-preparation scope above
+adds no commit authority. Never commit.
+The preceding review selected PT-027's dismissible result message; follow the
+[bounded refinement](../../openspec/changes/define-products-table/editing-plan.md#review-refinement--dismissible-results-2026-11-14).
+Closing/reopening changes presentation only and must preserve drafts/outcomes,
+including an explicit unconfirmed status. The fresh 156-image revision supersedes
+the earlier 140-image set and is now approved; future changes need fresh review.
+The prepared batch was committed by the user as `b955575`. Their subsequent
+“Done, continue with next steps” authorizes continuing the remaining design;
+the [editing-field decision](../../openspec/changes/define-products-table/design.md#editing-field-scope--proposal-2026-11-14)
+records “Name + missing SKU (Recommended)” under PT-022. Both editors allow name
+changes and explicit assignment of an SKU only when unassigned; existing SKU
+replacement, barcode maintenance and unit changes are outside the first editor.
+PT-023 selects one Guardar cambios action with individual results, counting only
+confirmed changes as saved and retaining failed/unconfirmed drafts without batch
+atomicity. PT-024 checks all requested drafts before submission and blocks sending
+until detectable field errors are corrected, showing errors beside fields.
+PT-025 guards in-app departure with Guardar y salir / Descartar cambios / Seguir
+editando, leaving after save only when all requested changes are confirmed.
+PT-026 reuses Inventory's existing name/SKU profiles for local checks, preserving
+exact text and the 1024/256 received UTF-8 byte limits. Do not repeat these choices.
+Detailed outcome recovery and remaining draft lifecycle remain open. Preserve
+explicit editing, drafts and read-only stock.
+Follow the [editing prototype plan](../../openspec/changes/define-products-table/editing-plan.md)
+for the selected PT-022–026 Storybook design. Its remaining recovery and storage
+limits are explicit; the first browsing pass's editing exclusion is historical
+for this later bounded design. Preserve production source and accepted images.
+The editing design now passes 64 code tests, 97 browser checks, 156 candidate
+captures and 451 unaffected approved comparisons. Read the editing plan's final
+source/runs and limits. Unconfirmed drafts are read-only/selectable while the
+fixture pauses submission; this is not a production recovery policy. All 156
+Products images are accepted; the prior 20 navigation updates remain pending.
+New staging, future image acceptance and commits do not
+follow from this continuation; never execute a commit.
 Read [PT-018–021's source decisions](../../openspec/changes/define-products-table/foundation-decision.md)
 and the [browsing prototype plan](../../openspec/changes/define-products-table/prototype-plan.md).
 TanStack Table 9.3.1 is selected and exactly pinned as a runtime dependency after

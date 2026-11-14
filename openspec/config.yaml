@@ -68,11 +68,54 @@ context: |
   /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
   one year (365 days), with no account-level or cross-device preference implied.
   Current assignment: openspec/changes/define-products-table/.
-  Latest assignment, 2026-11-14: the user said "That is looking good, prepare the
-  commit before moving to the next steps". Follow prototype-plan.md's commit-
-  preparation scope: stage the bounded research/qualification/browsing batch,
-  provide the user's commit command and never commit. Candidate-image approval
-  and the next design pass remain separate; do not promote references automatically.
+  Latest staging authority: the user said "go ahead" to the two-batch checkpoint.
+  Follow editing-plan.md's commit preparation: first stage 25 code/spec/test files
+  and give the user a commit command; after they commit, stage 156 approved PNGs
+  plus visual/references.json as batch 2. Never commit or stage both together.
+  Complete this checkpoint before the next proposed design pass.
+  Latest user authority: "That looks ok, I approve all current revision. What is
+  the next recommended steps". The exact 156 Products images in the linked
+  2026-11-14T12-42-43.360Z gallery are approved and promoted (628 baseline entries).
+  Read editing-plan.md's visual approval record and focus-repeatability evidence.
+  The panel overview capture now ends with an explicit title click, preserving
+  approved images; all 24 repeated profile comparisons pass. The separate prior 20 navigation
+  revisions remain pending. Staging is limited to the subsequent batches above;
+  commits remain forbidden.
+  The preceding review requested a dismissible Resultado del guardado message under
+  PT-027. Follow editing-plan.md's presentation-only refinement. Preserve drafts,
+  confirmed/failed/unconfirmed facts and visible uncertainty; new results remain
+  inspectable. Fresh 156-image proof supersedes the earlier 140-image set. Positive
+  review wording alone is not future image approval, staging or commit authority.
+  Latest assignment, 2026-11-14: the user committed the prepared Products batch
+  as b955575 and said "Done, continue with next steps". Continue the remaining
+  design. The user selected "Name + missing SKU (Recommended)" under PT-022:
+  name changes plus explicit assignment of an SKU only when unassigned, in both
+  selected editors. Existing SKU replacement, barcode maintenance and unit changes
+  remain outside the first editor; stock stays read-only. Read design.md's field
+  decision. PT-023 selects one Guardar cambios action for edited products with
+  individual results: only confirmed changes count as saved; failed/unconfirmed
+  changes retain drafts. No batch atomicity is promised. Do not repeat either
+  question. PT-024 checks all requested drafts for detectable field errors before
+  sending any changes, shows errors beside fields and blocks submission until
+  corrected. PT-025 guards in-app departure with Guardar y salir, Descartar cambios
+  or Seguir editando; saving leaves only after all requested changes are confirmed.
+  PT-026 reuses Inventory's existing name/SKU profiles for local checks, preserving
+  exact text and 1024/256 received UTF-8 byte limits. Do not repeat these choices.
+  Detailed outcome recovery and remaining draft lifecycle remain open.
+  Follow editing-plan.md for the selected PT-022–026 Storybook prototype with
+  synthetic data and simulated results. Preserve its recovery/storage limits;
+  the first browsing pass's editing exclusion does not prohibit this later
+  bounded design. No real writes or production routes; future images need approval.
+  The editing preview is implemented and verified: 64 code tests, 97 browser
+  checks, 156 Products captures and 451 unaffected comparisons pass. The editing
+  plan records final source/runs, review findings and limits. Retained unconfirmed
+  values are read-only/selectable while the fixture pauses submission; recovery
+  and real storage remain unselected. All 156 Products images are now accepted;
+  the prior 20 navigation updates remain pending. Preserve the 628 references.
+  Keep explicit-editing and draft/save/cancel boundaries.
+  The preceding staging scope
+  is complete and grants no staging authority for new work. Do not infer image
+  future acceptance, undefined editing/save behavior or commit authority; never commit.
   The user committed navigation corrections as f365765, authorized the proposed
   Products-table definition step and requested reading the sibling product thesis
   plus forum research into why people prefer Excel for inventory. Read the new

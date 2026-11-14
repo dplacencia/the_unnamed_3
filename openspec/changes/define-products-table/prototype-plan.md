@@ -147,3 +147,9 @@ remain evidence for that unchanged executable source; they were not rerun for
 this documentation/staging step. Generated build/test/cache artifacts remain
 ignored. Staging must exclude production source, the landing app, script-review
 policy and screenshot references. The base commit is `f365765`.
+
+The user committed that batch as `b955575` and continued with editing definition.
+The subsequent [editing prototype](editing-plan.md) now records the current
+Products source, 156-image review set and execution evidence. The earlier
+84-image browsing run above remains historical evidence, not the current set
+to promote. No Products reference has been accepted.

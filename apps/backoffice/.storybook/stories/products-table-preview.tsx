@@ -64,6 +64,17 @@ import {
   type ProductsView,
 } from "./products-table-model";
 import "./products-table-preview.css";
+import {
+  EditingActions,
+  EditingField,
+  EditingGuard,
+  EditingResultsView,
+  EditingSku,
+  EditingValidationSummary,
+  useProductEditing,
+  type ProductEditing,
+  type SaveFixture,
+} from "./products-editing";
 
 const features = tableFeatures({
   columnFilteringFeature,
@@ -95,6 +106,7 @@ export interface ProductsTablePreviewProps {
   hiddenColumns: boolean;
   locationCount: "one" | "several";
   archivedFixture: boolean;
+  saveFixture?: SaveFixture;
 }
 
 function StockValue({
@@ -182,10 +194,12 @@ function ProductsTable({
   view,
   update,
   records,
+  editor,
 }: {
   view: ProductsView;
   update: (next: Partial<ProductsView>) => void;
   records: PreviewProduct[];
+  editor: ProductEditing;
 }) {
   const t = useTranslations("catalogue");
   const phone = useSyncExternalStore(
@@ -195,7 +209,7 @@ function ProductsTable({
   );
   const [queryDraft, setQueryDraft] = useState(view.query);
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
-  const [panelId, setPanelId] = useState<string | null>(null);
+  const { panelId, inspect: setPanelId } = editor;
   const [viewOpen, setViewOpen] = useState(false);
   const frame = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -286,6 +300,9 @@ function ProductsTable({
     (field) => !view.visible[field],
   );
   const panelProduct = records.find((product) => product.id === panelId);
+  const tableEditing = editor.mode?.type === "table";
+  const panelEditing =
+    editor.mode?.type === "panel" && editor.mode.id === panelId;
   const moveOrder = view.order.filter(
     (field) => field !== "stock" || view.stock,
   );
@@ -485,6 +502,18 @@ function ProductsTable({
             </Button>
           </PopoverContent>
         </Popover>
+        {tableEditing ? (
+          <EditingActions editor={editor} />
+        ) : (
+          <Button
+            size={phone ? "lg" : "sm"}
+            variant="outline"
+            disabled={editor.sending || editor.hasUnconfirmed}
+            onClick={() => editor.begin({ type: "table" })}
+          >
+            {t("peEditTable")}
+          </Button>
+        )}
       </div>
       {view.query && (
         <div className="products-applied-query">
@@ -500,6 +529,18 @@ function ProductsTable({
             {t("ptClearSearch")}
           </Button>
         </div>
+      )}
+      {tableEditing && (
+        <EditingValidationSummary
+          editor={editor}
+          fieldVisible={(id, field) =>
+            rows.some((row) => row.id === id) &&
+            (field === "name" || view.visible.sku)
+          }
+        />
+      )}
+      {(tableEditing || editor.hasUnconfirmed) && (
+        <EditingResultsView editor={editor} />
       )}
       <div className="products-table-frame" ref={frame} data-products-scroll>
         <Table className="products-data-table">
@@ -590,24 +631,36 @@ function ProductsTable({
                             }
                           />
                         </Button>
-                        <Button
-                          variant="link"
-                          className="products-name"
-                          data-product-name
-                          title={row.original.name}
-                          onClick={() => setPanelId(row.id)}
-                        >
-                          {row.original.name}
-                        </Button>
+                        {tableEditing ? (
+                          <EditingField
+                            editor={editor}
+                            product={row.original}
+                            field="name"
+                          />
+                        ) : (
+                          <Button
+                            variant="link"
+                            className="products-name"
+                            data-product-name
+                            title={row.original.name}
+                            onClick={() => setPanelId(row.id)}
+                          >
+                            {row.original.name}
+                          </Button>
+                        )}
                       </div>
                     ) : cell.column.id === "stock" ? (
                       <StockValue product={row.original} view={view} t={t} />
                     ) : cell.column.id === "sku" ? (
-                      (row.original.sku ?? (
-                        <span className="products-muted">
-                          {t("ptUnassigned")}
-                        </span>
-                      ))
+                      tableEditing ? (
+                        <EditingSku editor={editor} product={row.original} />
+                      ) : (
+                        (row.original.sku ?? (
+                          <span className="products-muted">
+                            {t("ptUnassigned")}
+                          </span>
+                        ))
+                      )
                     ) : (
                       row.original.unit
                     )}
@@ -666,7 +719,10 @@ function ProductsTable({
       <Sheet
         open={panelId !== null}
         onOpenChange={(open) => {
-          if (!open) setPanelId(null);
+          if (!open) {
+            if (panelEditing) editor.exit(() => setPanelId(null));
+            else setPanelId(null);
+          }
         }}
       >
         <SheetContent
@@ -679,9 +735,40 @@ function ProductsTable({
           </SheetHeader>
           {panelProduct && (
             <>
+              {panelEditing ? (
+                <div className="products-panel-editor">
+                  <label>{t("peName")}</label>
+                  <EditingField
+                    editor={editor}
+                    product={panelProduct}
+                    field="name"
+                  />
+                  <label>{t("gridSku")}</label>
+                  <EditingSku editor={editor} product={panelProduct} />
+                  <EditingResultsView editor={editor} />
+                  <EditingActions editor={editor} />
+                </div>
+              ) : (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  disabled={editor.sending || editor.hasUnconfirmed}
+                  onClick={() =>
+                    editor.begin({ type: "panel", id: panelProduct.id })
+                  }
+                >
+                  {t("peEdit")}
+                </Button>
+              )}
+              {!panelEditing && (
+                <EditingResultsView
+                  editor={editor}
+                  productId={panelProduct.id}
+                />
+              )}
               <CatalogueFacts
                 product={panelProduct}
-                hidden={["sku", "unit"]}
+                hidden={panelEditing ? ["unit"] : ["sku", "unit"]}
                 t={t}
               />
               {view.stock && (
@@ -709,7 +796,7 @@ function ProductsTable({
 
 export function ProductsTablePreview(props: ProductsTablePreviewProps) {
   const t = useTranslations("catalogue");
-  const key = `irin-products-design:${props.initialStock}:${props.initialDensity}:${props.hiddenColumns}:${props.locationCount}:${props.archivedFixture}`;
+  const key = `irin-products-design:${props.initialStock}:${props.initialDensity}:${props.hiddenColumns}:${props.locationCount}:${props.archivedFixture}:${props.saveFixture ?? "confirmed"}`;
   const [view, setView] = useState(() =>
     readProductsView(key, {
       stock: props.initialStock,
@@ -739,9 +826,13 @@ export function ProductsTablePreview(props: ProductsTablePreviewProps) {
       })),
     [props.locationCount],
   );
-  const records = useMemo(
+  const initialRecords = useMemo(
     () => previewProducts(props.archivedFixture),
     [props.archivedFixture],
+  );
+  const editor = useProductEditing(
+    initialRecords,
+    props.saveFixture ?? "confirmed",
   );
   const locations =
     props.locationCount === "one"
@@ -787,14 +878,28 @@ export function ProductsTablePreview(props: ProductsTablePreviewProps) {
     </div>
   ) : undefined;
   return (
-    <NavigationPrototype
-      initialPage="products"
-      permissionMode="ready"
-      locationCount={props.locationCount}
-      productsToolbar={toolbar}
-      productsContent={
-        <ProductsTable view={view} update={update} records={records} />
-      }
-    />
+    <>
+      <NavigationPrototype
+        initialPage="products"
+        permissionMode="ready"
+        locationCount={props.locationCount}
+        productsToolbar={toolbar}
+        beforeNavigate={(proceed) =>
+          editor.exit(() => {
+            editor.inspect(null);
+            proceed();
+          })
+        }
+        productsContent={
+          <ProductsTable
+            view={view}
+            update={update}
+            records={editor.records}
+            editor={editor}
+          />
+        }
+      />
+      <EditingGuard editor={editor} />
+    </>
   );
 }

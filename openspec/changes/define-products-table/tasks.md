@@ -82,8 +82,18 @@ Checked steps record work performed, not acceptance of proposed table choices.
       Production grid adoption and final expansion behavior remain unselected.
 - [x] 2.3i Record PT-018–021: selected TanStack latest-stable exact pin, compact
       expansion/full panel, selected summary content and independent multiple rows.
-- [ ] 2.2g Define initial editable fields and identifier-operation boundaries
-      after the grid/expansion discussion; do not infer replacement/remapping support.
+- [x] 2.2g Record PT-022: name changes plus explicit SKU assignment only when
+      unassigned, in both editors; keep SKU replacement, barcode maintenance,
+      unit changes and stock writes outside the first editor. Detailed identifier
+      operation/validation and save behavior remain open.
+- [x] 2.2h Record PT-023: one table-save action, individual truthful results and
+      retained failed/unconfirmed drafts without a batch-atomicity promise.
+- [x] 2.2i Record PT-024's all-draft local validation gate and PT-025's in-app
+      save/discard/keep-editing guard, without adding validity or storage rules.
+- [x] 2.2j Record PT-026's reuse of existing name/SKU profiles for local checks,
+      preserving exact text and received-byte limits without inventing write APIs.
+- [ ] 2.2k Define detailed outcome recovery, retry and remaining draft coordination
+      without inferring production interfaces or persistence.
 - [ ] 2.2 Agree information, field/editing/action scope and useful default depth.
 - [ ] 2.3 Agree density, search/filter/sort, explicit customization and repeated work.
 - [ ] 2.4 Agree phone, keyboard/accessibility and honest outcome/recovery behavior.
@@ -94,7 +104,8 @@ Checked steps record work performed, not acceptance of proposed table choices.
 - [x] 3.2 Implement the authorized first browsing/inspection prototype and meaningful checks.
 - [x] 3.3 Verify and inspect responsive/theme/language/interaction states for this pass;
       visual acceptance, filtering/editing and production flows remain separate.
-- [ ] 3.4 Obtain specific image approval before promoting references; never commit.
+- [x] 3.4 Record specific approval of the current 156-image Products set and
+      promote those exact references; never commit.
 
 ## Authorized development-only library qualification
 
@@ -105,3 +116,31 @@ Checked steps record work performed, not acceptance of proposed table choices.
       repeated performance/payload comparisons; inspect candidate screenshots.
 - [x] 4.5 Run applicable repository checks, document evidence/limits and return
       the final recommendation without adopting a production grid.
+
+## Selected editing prototype
+
+- [x] 5.1 Record PT-022–026 and the bounded editing prototype plan before UI code.
+- [x] 5.2 Implement input/draft/outcome behavior with meaningful red/green tests.
+- [x] 5.3 Build panel/table editing, results and in-app guard using TailAdmin;
+      keep all five languages and responsive/theme/accessibility behavior.
+- [x] 5.4 Verify code/build/browser/visual regressions, inspect candidates and
+      obtain independent review within the plan's stated limitations.
+- [x] 5.5 Provide the exact 140-case review run and record the remaining limits;
+      subsequent 156-image acceptance is recorded under 3.4.
+
+## Save-result review refinement
+
+- [x] 6.1 Record PT-027 and the bounded presentation-only refinement.
+- [x] 6.2 Add dismiss/reopen controls without changing drafts or outcome facts.
+- [x] 6.3 Verify preserved state, new-result visibility, focus and all five languages.
+- [x] 6.4 Capture/inspect the revision and verify unaffected references; retain
+      specific image approval as a separate pending step.
+
+## Editing checkpoint preparation
+
+- [x] 7.1 Record the user's two-batch staging authorization and preserve the
+      tested source, original references and deferred design boundaries.
+- [x] 7.2 Verify and stage only the 25-file code/specification/test batch;
+      return its commit command without executing it.
+- [ ] 7.3 After the user commits batch 1, stage the 157 approved-reference files
+      and return their separate commit command; never commit.

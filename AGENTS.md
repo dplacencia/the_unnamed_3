@@ -17,12 +17,57 @@ wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
 Current assignment: [Products table design](openspec/changes/define-products-table/proposal.md).
-Latest assignment — 2026-11-14: the user said “That is looking good, prepare the
-commit before moving to the next steps”. Follow the browsing plan's
-[commit-preparation scope](openspec/changes/define-products-table/prototype-plan.md#commit-preparation--2026-11-14):
-stage the research, qualification and browsing-prototype batch and provide the
-user's commit command; never commit. This does not approve candidate images or
-start the next design pass.
+Latest staging authority: the user said “go ahead” after the two-batch commit
+checkpoint recommendation. Follow [commit preparation](openspec/changes/define-products-table/editing-plan.md#commit-preparation--2026-11-14):
+stage the 25 code/specification/test files first; return the user's commit command.
+Leave the 156 approved PNGs and reference manifest for batch 2 after the user
+commits batch 1. Never commit. Complete this checkpoint before further design.
+Latest authority: the user said “That looks ok, I approve all current revision.
+What is the next recommended steps”. The exact 156 Products images from
+`2026-11-14T12-42-43.360Z` are approved and promoted; see the
+[approval record](openspec/changes/define-products-table/editing-plan.md#visual-approval--2026-11-14).
+The post-approval panel-overview focus race is fixed in capture setup only;
+24 repeated profile comparisons pass without changing any approved image.
+Read the approval record before interpreting the initial failed comparison.
+The baseline now has 628 entries; the separately pending 20 navigation revisions
+are outside this latest gallery. The subsequent staging scope above adds no
+commit authority. Never commit.
+The preceding review requested a dismissible Resultado del guardado message. Follow
+[PT-027's refinement](openspec/changes/define-products-table/editing-plan.md#review-refinement--dismissible-results-2026-11-14):
+close/reopen presentation only; preserve drafts, outcomes and visible uncertainty.
+The revised 156-image proof supersedes the earlier 140-image set. Its subsequent
+explicit approval above supersedes the earlier pending-image status.
+Latest assignment — 2026-11-14: after committing the prepared batch as `b955575`,
+the user said “Done, continue with next steps”. Continue the remaining Products
+design. The user selected “Name + missing SKU (Recommended)” under PT-022:
+name changes plus explicit assignment of an SKU only when none is assigned,
+in both selected editors. Existing SKU replacement, barcode maintenance and unit
+changes remain outside this first editor; stock stays read-only. Read the
+[editing-field decision and next save proposal](openspec/changes/define-products-table/design.md#editing-field-scope--proposal-2026-11-14).
+PT-023 selects one Guardar cambios action for edited products with individual
+results: only confirmed changes count as saved, and failed/unconfirmed changes
+retain their drafts. This does not promise batch atomicity. Do not repeat these
+questions. PT-024 requires checking all requested drafts for detectable field
+errors before sending any changes, showing errors beside their fields and
+blocking submission until corrected. PT-025 guards in-app departure from unsaved
+editing with Guardar y salir / Descartar cambios / Seguir editando; saving leaves
+only after all requested changes are confirmed. PT-026 selects the existing
+Inventory name/SKU profiles for local checks, with exact text preservation and
+1024/256 received UTF-8 byte limits. Detailed outcomes/recovery and remaining
+draft lifecycle still need definition.
+The [editing prototype plan](openspec/changes/define-products-table/editing-plan.md)
+makes PT-022–026 concrete in Storybook using synthetic records and simulated
+results. Retain its recovery/persistence limits and the distinction between a
+review proposal and a production policy. No real writes; future image changes
+require fresh approval.
+The selected editing preview is implemented and verified: 64 code tests,
+97 browser checks, 156 Products captures and 451 unaffected comparisons pass.
+The editing plan records source `05c8b186…`, exact runs and review findings/limits.
+Its 156 images supersede the earlier Products review set and are now accepted.
+The prior 20 navigation revisions remain pending separately.
+The preceding [commit preparation](openspec/changes/define-products-table/prototype-plan.md#commit-preparation--2026-11-14)
+is complete; it grants no staging authority for new work. This continuation does
+not approve future candidate images or undefined editing/save behavior. Never commit.
 Latest authority: the user accepted TanStack and instructed continued design with
 the latest available exact version. [PT-018–021 and source decisions](openspec/changes/define-products-table/foundation-decision.md)
 select `@tanstack/react-table@9.3.1`, compact read-only row summaries plus the full

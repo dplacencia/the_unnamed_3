@@ -703,3 +703,158 @@ retention across filtering/navigation, draft lifecycle or multi-product actions.
 - **WHEN** the merchant expands another product while a summary is open
 - **THEN** both requested summaries can remain open
 - **AND** each may be closed independently without changing business data.
+
+### Requirement: PT-022 — Initial catalogue editing field and action scope
+
+The first catalogue editor SHALL allow product-name changes and explicit SKU
+assignment only for products with no SKU assigned, through both PT-017 editing
+paths. Existing SKU replacement, barcode maintenance and unit changes SHALL
+remain outside this first editor. Stock SHALL remain read-only. This field/action
+choice SHALL NOT establish validation, save semantics, a production write
+interface or UI implementation.
+
+#### Scenario: A merchant deliberately edits a product name
+
+- **WHEN** the merchant uses either selected editing path for a product
+- **THEN** the first editor allows a product-name change as a draft
+- **AND** the presentation name does not replace the permanent product identity.
+
+#### Scenario: A product has no assigned SKU
+
+- **WHEN** the merchant explicitly requests SKU assignment for a product without one
+- **THEN** the first editor supports preparing that assignment through either selected path
+- **AND** omission does not create an automatic SKU or an assignment deadline.
+
+#### Scenario: A product already has an assigned SKU
+
+- **WHEN** the merchant edits that product in the first editor
+- **THEN** its existing SKU is not offered as a general replacement field
+- **AND** the editor does not infer code retirement or remapping operations.
+
+#### Scenario: Other catalogue and stock values are inspected during editing
+
+- **WHEN** the first editor displays barcodes, units or stock context
+- **THEN** it does not allow barcode maintenance, unit changes or stock writes
+- **AND** any later extension requires its own design decision and supported operation.
+
+### Requirement: PT-023 — Shared table save with individual truthful outcomes
+
+Table editing SHALL offer one Guardar cambios action for edited products and
+show clear results per product. Only confirmed changes SHALL count as saved.
+Failed or unconfirmed changes SHALL retain their drafts. This interaction SHALL
+NOT promise that all products save or fail together. Validation before submission,
+detailed mixed/uncertain outcomes, retry and draft lifecycle remain separate.
+
+#### Scenario: Several products have requested draft changes
+
+- **WHEN** the merchant requests saving from Editar tabla
+- **THEN** one Guardar cambios action covers the edited products
+- **AND** results remain individually attributable rather than one assumed batch success.
+
+#### Scenario: Some changes are confirmed and others fail
+
+- **WHEN** a save produces confirmed changes and failed changes
+- **THEN** only confirmed changes count as saved
+- **AND** failed changes keep their drafts and are distinguishable in the results.
+
+#### Scenario: A change's result is unconfirmed
+
+- **WHEN** the interface cannot confirm whether a requested change succeeded
+- **THEN** it does not mark that change saved or treat uncertainty as confirmed rejection
+- **AND** it retains the draft without claiming that other confirmed changes were rolled back.
+
+### Requirement: PT-024 — Detectable field errors block table submission
+
+Before Guardar cambios sends any changes, the editor SHALL check all requested
+drafts for detectable field errors. It SHALL show errors beside the relevant
+fields and send nothing until those errors are corrected. This gate SHALL NOT
+define new field-validity rules or guarantee acceptance after submission.
+
+#### Scenario: A requested draft has a detectable field error
+
+- **WHEN** the merchant requests saving with a detectable field error in any draft
+- **THEN** the editor shows the error beside its field and preserves the drafts
+- **AND** it sends none of the requested changes until the errors are corrected.
+
+#### Scenario: Drafts pass the local field checks
+
+- **WHEN** no detectable field error remains and the merchant requests saving
+- **THEN** the local gate allows submission without claiming success in advance
+- **AND** subsequent results retain PT-023's individual confirmed/failed/unconfirmed distinctions.
+
+### Requirement: PT-025 — Guard in-app departure from unsaved editing
+
+In-app departure from an editor with unsaved changes SHALL offer Guardar y salir,
+Descartar cambios and Seguir editando. Guardar y salir SHALL leave only after all
+requested changes are confirmed saved. This choice SHALL NOT define browser
+closing/reload behavior, storage or the remaining draft-coordination policy.
+
+#### Scenario: The merchant chooses to keep editing
+
+- **WHEN** the merchant chooses Seguir editando in the in-app departure guard
+- **THEN** the editor and its unsaved drafts remain available
+- **AND** the requested departure does not discard or save them automatically.
+
+#### Scenario: The merchant requests saving before leaving
+
+- **WHEN** the merchant chooses Guardar y salir
+- **THEN** departure occurs only after every requested change is confirmed saved
+- **AND** validation errors, failures or unconfirmed outcomes keep the editor and remaining drafts available.
+
+#### Scenario: The merchant explicitly discards unsaved changes
+
+- **WHEN** the merchant chooses Descartar cambios in the departure guard
+- **THEN** unsaved drafts are discarded and the requested in-app departure proceeds
+- **AND** this does not claim to reverse already confirmed changes.
+
+### Requirement: PT-026 — Reuse existing local name and SKU profiles
+
+The first editor's local checks SHALL reuse Inventory's existing supplied-name
+and supplied-SKU profiles: reject blank or prohibited input, preserve accepted
+text exactly and apply limits of 1024 received UTF-8 bytes for names and 256 for
+a supplied SKU. Existing fixed whitespace/control predicates SHALL retain their
+meaning. This frontend choice SHALL NOT establish an update interface, change
+the owning contract or claim authoritative SKU availability.
+
+#### Scenario: A multibyte name or SKU is checked
+
+- **WHEN** the editor validates a requested name or SKU assignment
+- **THEN** its existing limit counts received UTF-8 bytes rather than characters
+- **AND** it rejects overlength input without truncating or repairing it.
+
+#### Scenario: Accepted text includes permitted surrounding spaces or leading zeros
+
+- **WHEN** text passes the applicable existing profile
+- **THEN** the editor preserves the accepted name or supplied SKU exactly
+- **AND** matching transformations do not rewrite submitted content.
+
+#### Scenario: An optional SKU is not being assigned
+
+- **WHEN** a product has no SKU and the merchant has not requested assignment
+- **THEN** local checks do not invent a required SKU or assignment deadline
+- **AND** an explicitly requested invalid assignment remains subject to PT-024's gate.
+
+### Requirement: PT-027 — Dismissible save-result presentation
+
+The detailed Resultado del guardado presentation SHALL be dismissible. Dismissing
+it SHALL change presentation only, preserving drafts and confirmed, failed or
+unconfirmed outcomes. Dismissal SHALL NOT imply rollback, success or resolution
+of an unconfirmed change. Current results SHALL remain available for inspection.
+
+#### Scenario: The merchant dismisses a save result
+
+- **WHEN** the merchant closes the detailed save-result message
+- **THEN** its detailed presentation is hidden without changing business or draft state
+- **AND** the last outcome remains distinguishable from a newly edited unsaved draft.
+
+#### Scenario: A dismissed result includes an unconfirmed change
+
+- **WHEN** an unconfirmed result's detailed presentation is dismissed
+- **THEN** its uncertainty remains visible and its draft is preserved
+- **AND** dismissal does not enable a submission that was paused awaiting resolution.
+
+#### Scenario: A later save produces new results
+
+- **WHEN** a later requested save completes with new results
+- **THEN** the previous dismissal does not conceal that new result set
+- **AND** the merchant may inspect the new results and dismiss their presentation separately.

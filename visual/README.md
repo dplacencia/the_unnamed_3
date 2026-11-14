@@ -48,30 +48,52 @@ an explicit custom label that remains exact across language changes. **Reset
 controls** restores the translated default. Typed values and open dialogs are
 preserved when the language changes.
 
-The current inventory covers 216 retained component source modules through 59
-stories and 21 view entries. Its 120 named scenarios produce 480 captures across
+The current inventory covers 216 retained component source modules through 67
+stories and 21 view entries. Its 159 named scenarios produce 636 captures across
 desktop 1440×900, tablet 768×1024, mobile 390×844 and desktop dark mode. The actual
 assembled views cover Spanish, English, Catalan, Galician and Basque. Compound
 primitives and icons are inspected in compositions; this is representative source
 coverage, not every possible prop combination or complete accessibility testing.
 
-## Products browsing design
+## Products browsing and editing design
 
 Open http://localhost:6006/?path=/story/inventory-products--catalogue for the
-first TailAdmin/TanStack Products design. TanStack Table is now selected and
-exactly pinned at 9.3.1, freshly verified as latest stable. The
+first TailAdmin/TanStack Products design. TanStack Table is selected and
+exactly pinned at 9.3.1, verified on 2026-11-13 as latest stable. The
 [foundation record](../openspec/changes/define-products-table/foundation-decision.md)
 contains the user's library and expansion choices.
 
 The examples cover compact/comfortable rows, submitted search, requested scoped
 stock, Vista column controls, independent read-only summaries and the details
-panel. Try the Comfortable, Hidden columns, Stock context, Sole location and
-Archived product stories, alongside the theme/language/viewport controls. Data
-is synthetic; the archived story simulates explicit archived inclusion. Exact
-sizes, widget treatment and missing-value copy are design proposals. Applied
-filters, editing/save flows and production data retrieval are subsequent work.
+panel. Editar in details and Editar tabla expose the selected name/missing-SKU
+draft flows, with local validation and explicit saving. The save-result header
+has a dismiss control; a compact last-outcome line keeps uncertainty explicit
+and lets merchants reopen details. New save results reveal their own details.
+Closing results does not change drafts or outcome facts. Existing SKUs, units,
+barcodes and stock remain read-only. The in-app departure guard offers save,
+discard or continued editing. Errors hidden by search/columns have an explicit
+correction control that preserves the view. All data and save results are
+synthetic; no business write occurs.
 
-To capture only these 84 candidate cases (excluding the older navigation
+Try Comfortable, Hidden columns, Stock context, Sole location and Archived
+product alongside Editing mixed and Editing unconfirmed. The latter examples
+simulate individual outcomes: mixed confirms the first requested field and
+rejects the rest; unconfirmed retains drafts/results and pauses submission until
+the fixture resets. This pause is not a production recovery policy. Browser
+closing/reload and production draft persistence remain undefined. The current
+prototype visuals are accepted; applied filters, real retrieval and recovery
+are subsequent work. Read the
+[editing plan](../openspec/changes/define-products-table/editing-plan.md) for scope
+and the current run evidence.
+
+The user approved all 156 images from `2026-11-14T12-42-43.360Z` with
+“That looks ok, I approve all current revision.” Those exact references are
+promoted, preserving the earlier 472 entries for **628 accepted references**.
+The [approval record](../openspec/changes/define-products-table/editing-plan.md#visual-approval--2026-11-14)
+contains the full user quote, source and promotion scope. The separately pending
+20 navigation images were outside that gallery and remain pending.
+
+To capture future changes to these 156 cases (excluding the older navigation
 Products-frame story), run:
 
 ```sh
@@ -81,19 +103,24 @@ pnpm visual:capture --grep '(^| )products-'
 
 `pnpm visual:test-languages` also runs the Products interaction, language,
 accessibility and responsive checks. `visual/products-table.config.ts` provides
-the focused suite with its own port/report. Candidates require the same explicit
-run/case approval as other designs. Do not promote them or the prior pending
-navigation revisions automatically. The current run is recorded in the
-[prototype plan](../openspec/changes/define-products-table/prototype-plan.md).
+the focused suite with its own port/report. Future candidates require the same
+explicit run/case approval as other designs. Do not promote future changes or the
+prior pending navigation revisions automatically. The current editing run is recorded in the
+[editing plan](../openspec/changes/define-products-table/editing-plan.md#review-refinement--dismissible-results-2026-11-14).
 
-Until those candidates are approved, compare the 451 unaffected accepted cases:
+Compare the 607 current accepted cases outside the pending navigation revisions:
 
 ```sh
-pnpm visual:compare --grep-invert '(^mobile .*navigation-)|(^| )products-|navigation-workspace-location-options|navigation-workspace-location-option-hovered'
+pnpm visual:compare --grep-invert '(^mobile .*navigation-)|navigation-workspace-location-options|navigation-workspace-location-option-hovered'
 ```
 
-This deliberately excludes new cases without references and the pending mobile
-navigation replacements. It does not approve, suppress or replace their review.
+This includes all 156 accepted Products cases and 451 unaffected accepted cases.
+It excludes eight navigation cases without references and the 21 mobile navigation
+cases, of which 12 are pending replacements and nine are unchanged. It does not
+approve or replace their separate review.
+Post-approval comparison `2026-11-14T13-03-52.919Z` passes all 607 selected
+accepted cases. The approval record also documents the capture-only focus-race
+correction and 24 repeated overview comparisons; approved images remain exact.
 
 ## Navigation prototype
 
