@@ -8024,6 +8024,2658 @@
       "run": "2026-11-12T21-36-33.733Z",
       "sourceHash": "9661e641d4cd83010f26d4aaff364800f242ee3733d5e7e8a8aaa51091b027f2",
       "profileHash": "f35ece043c5eb23c97fb4c21130672fe9cec6348e3e6e6abff363e1b4e231ed3"
+    },
+    "products-archived-default--desktop": {
+      "sha256": "ad7ebd00579703a3ce00c0ceb27b54a7796810e790da22a36dbd53658397eef3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "89520264ae868f56c7727198810fd74adb9ab61f4c732297a7b19d8324cff336"
+    },
+    "products-archived-default--desktop-dark": {
+      "sha256": "f8c1e18480ceb588e786a45717fa3723adcf54a1f835040471cb54f72aacb716",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b140c76d5a7f1aa3501194b095cb41fe6b7793239146ca983843aafb918f04f4"
+    },
+    "products-archived-default--mobile": {
+      "sha256": "7d2839074689db91a1f8428af9e46569140eb456ee4cd90d1f7f6399c65e8d03",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "ed55c6d8e186ae7d96ee32e716dcf63bbaa136e99854531f564a53cf52d5171c"
+    },
+    "products-archived-default--tablet": {
+      "sha256": "c6ae1d3cdd002fcd95905889e00541b7caf0d2dad69cfb710d64fb9aa5a2b234",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "d96e0682ec554f0e036446f2dfe8d56456ac1e25546c1bd0e06357d54bf89efb"
+    },
+    "products-archived-expanded--desktop": {
+      "sha256": "e4f73ac99d96d2d8c8b7f2082f453313c62006c009a13ab49b4fc275a447e061",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "e483f027ea47b5f295a90231fa4e93ed1b70d9c37b151af2474b57417cf25817"
+    },
+    "products-archived-expanded--desktop-dark": {
+      "sha256": "827ef2591f5311585ce2b923086e10eb312a553695e65a0ad74ba081e737ede7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "27902ca6387dff9d5ca90ac895e165a8334cee09889c8c11c6235600bf03eb6e"
+    },
+    "products-archived-expanded--mobile": {
+      "sha256": "a6e77eeaff1d173d16573ef6b7f246953d0631d2e7b2e9d50833d454ae269987",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "2d6375a3c9c21db79bc89e84f408e2d67b2d92f51e09f0d46a6bd37242dcfe87"
+    },
+    "products-archived-expanded--tablet": {
+      "sha256": "4753a598149fee892da7c217f14f5a9ad62e510d485c508a61a7ab454cb46ce0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b48b80cc923f0187b4c7cde7a38ee4f662e48513c0138d07641c5debb755cc93"
+    },
+    "products-ca-default--desktop": {
+      "sha256": "ef94b1d0873456fbe5618f302aa0d000b23360a5c1c15af8a12ff9365831c448",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "9124ab8e7f26e57ca58b0a2ba78b98041cf53d6c643e45bccb0483d16fa72ab8"
+    },
+    "products-ca-default--desktop-dark": {
+      "sha256": "9cb83369963ade4b592fe5261b249e336dbf08e694618f1b37ee18990fe98067",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "8a94f0caab3570027771e83fcc088e366028f1ac17413bc77055b5e33a8c5fea"
+    },
+    "products-ca-default--mobile": {
+      "sha256": "500c6e6b2448abd51947b88a181462a3a43a1ba0596be759c4c6271beb0ea459",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "8405b55f5004a571ec889b679ca794aa36da16b0940956704d79cdaa2f7b47ca"
+    },
+    "products-ca-default--tablet": {
+      "sha256": "6e1e4065545f47a20234aff852588fc2d218dcbf95c31c194c24f87ddef323e1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "949c0e4ec41a7a8584dac81f462554526e8713fea2451a7734a5489b70812021"
+    },
+    "products-ca-editing--desktop": {
+      "sha256": "5c36b2b8426c8b5c0ebc8d85a895a764ee561bfa29dff7cb80132dc2d58ed7b8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "13b84390d5bb22291cfdd88c7411aa1d63eee24659ee13ca513dac4bba16f89e"
+    },
+    "products-ca-editing--desktop-dark": {
+      "sha256": "8e5c3f84a8839e1b944e337f6f06c6e40579b19a7ffde94815804b437504d1b5",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "a21034b93e7b6a6225c57d2feda2daf029ac710cd0474b91162cac5a81df0f98"
+    },
+    "products-ca-editing--mobile": {
+      "sha256": "1b34251d0b621f0107413264a45db0d275327f32dc58ed571ee4efebe0b0055f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "ed367e8e2b296d42cb55dd890bfc65c376f2de0ebd7b5ebfdaf555cf1cdb60d4"
+    },
+    "products-ca-editing--tablet": {
+      "sha256": "c9febb18da4f1056bdb52fad88a6bf1f63d66c410ae28e1a89090f472dd08b69",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "260c40f45bb9a0f98e272180a602c4dfdd1967e1ad4e7ae8d98779976e4f37b0"
+    },
+    "products-catalogue-default--desktop": {
+      "sha256": "ad7ebd00579703a3ce00c0ceb27b54a7796810e790da22a36dbd53658397eef3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "89520264ae868f56c7727198810fd74adb9ab61f4c732297a7b19d8324cff336"
+    },
+    "products-catalogue-default--desktop-dark": {
+      "sha256": "f8c1e18480ceb588e786a45717fa3723adcf54a1f835040471cb54f72aacb716",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b140c76d5a7f1aa3501194b095cb41fe6b7793239146ca983843aafb918f04f4"
+    },
+    "products-catalogue-default--mobile": {
+      "sha256": "7d2839074689db91a1f8428af9e46569140eb456ee4cd90d1f7f6399c65e8d03",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "ed55c6d8e186ae7d96ee32e716dcf63bbaa136e99854531f564a53cf52d5171c"
+    },
+    "products-catalogue-default--tablet": {
+      "sha256": "c6ae1d3cdd002fcd95905889e00541b7caf0d2dad69cfb710d64fb9aa5a2b234",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "d96e0682ec554f0e036446f2dfe8d56456ac1e25546c1bd0e06357d54bf89efb"
+    },
+    "products-catalogue-details--desktop": {
+      "sha256": "6a45f37072e2d072008f4699f170af833d91851b44c1c284d716778aca9fc4b3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "fe381cc00d6ac4efcbdbc697cbee515b508e60733cd6b65e1a4517ee4556948f"
+    },
+    "products-catalogue-details--desktop-dark": {
+      "sha256": "5bbf5deac2d148b02275aadb2e5e0bbb695898c36e20f040e32b291401c8adf3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "90573b1f64822001e478f34bbf1db77f4dbbb63dcbe581258932138150dcfde7"
+    },
+    "products-catalogue-details--mobile": {
+      "sha256": "f895e99ee2998d5177507027be37f83c7789628805dcfd2ee404ba9e3b65ea95",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b06f6c3125b4162aebf1e32724f701839c3e5203668e184cb55cf1b22af6b15c"
+    },
+    "products-catalogue-details--tablet": {
+      "sha256": "6ff91cd8819e66a0f856ca48157d3af62776f4bf6d5d7629416854293f9a8dbd",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "2c34354c5cb3e99ca97d844c254f0356cff8df694d0eb9150a53ed388364ffca"
+    },
+    "products-catalogue-editing--desktop": {
+      "sha256": "99072a46b28dbb2fe4343a532f49dbcc3120a704133b6a7a8b3d6ba39b08a394",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "634c689474d43e4246e6f5a0c202450e4bc38f3acd9d47506dab383bda7f8979"
+    },
+    "products-catalogue-editing--desktop-dark": {
+      "sha256": "aa887c542e4fadb7ef1ce9c1c77ade643d45434c6da44b51e224a44caeced890",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "fbfa0882beac39d89eeb1ebb432233dacb3989cba65abdc7f2a5b0db13ca308d"
+    },
+    "products-catalogue-editing--mobile": {
+      "sha256": "261e0d1890a9554511bfe62ceaec83c611aca0abb8ee3f91bbd542e5671b257a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "a06f4cd347f999bbf62c4b85faca1ac4cce328f4ecf13e965beb053e8ed2e9fa"
+    },
+    "products-catalogue-editing--tablet": {
+      "sha256": "0429feb825645543619c13acd1d3a99e97732c9dbfcd1d3f43230e84e03cf606",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "e81361db3202f2770485d78bd82b6a186c77556015dbf86c2034ac23763578a9"
+    },
+    "products-catalogue-editing-guard--desktop": {
+      "sha256": "78f4bbe0b33fb6e1e5cb2f622006e55b949ab1ce83e95eb9755b65e37604b31b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "f6276ab6f59e460786c4f7d18896d2a3bf017966f921a8d8a47c0a79952050db"
+    },
+    "products-catalogue-editing-guard--desktop-dark": {
+      "sha256": "0b1170bdbab89c3e0a5792dea05a49b74f3c2880a92bff08255770015d2960ed",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "ba6fda6b91ecae822bc235944f962aa6f21c53023fb898967bd35f6da039e9d3"
+    },
+    "products-catalogue-editing-guard--mobile": {
+      "sha256": "acd830e5d3b660b3dceb97d93d3ae6fb2c7b620b905c113b24c27f3e5487959d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "f366f9208fcc1f5d855b3d972be80686443c27785c83b0b358909152a2183aec"
+    },
+    "products-catalogue-editing-guard--tablet": {
+      "sha256": "ee6ceeb9997eba4ab15257dbebd13b911aad754b8e22dd54e0c3c1037b8fca20",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "5b23517866cf4e8b66d01d4f7ff4bdd142787ce2046a40670e37d56d8ce3f0f5"
+    },
+    "products-catalogue-editing-hidden-error--desktop": {
+      "sha256": "a144ce5a70ec19e4320a3cb163f34dd8fb2199bb401dfd13b0a7dd82edec4e2c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "815522ad9cf1abadadb5ad9642637b2b482c7318bcd0d481c519db47e945244e"
+    },
+    "products-catalogue-editing-hidden-error--desktop-dark": {
+      "sha256": "a3b7aea57a8dc6326f3cf7407884d9b1daa0a0dd6dc7f7739729ea0da303bab1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "3c46fa2f912c5cc764570c4cf35c08228e06c21eb84936c6686d388b88e090eb"
+    },
+    "products-catalogue-editing-hidden-error--mobile": {
+      "sha256": "f1d1dbdff2d75dbc2abf2d3a64a4746d0ef65f0c91e421cd2501725388f67eb7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "08d4c5eb516cfcec8ecd7bd8792890c2dc525a6be06328999ac3e3457a6c0102"
+    },
+    "products-catalogue-editing-hidden-error--tablet": {
+      "sha256": "2591b72410733971a8a21894eb2479b0f7df99e46d46995b11725ac8c7dcfd4f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "6db53eab652c287c674d65ab32300bcbe82421e793e4c05cc1aa0b0bedeec663"
+    },
+    "products-catalogue-editing-invalid--desktop": {
+      "sha256": "88aca1c57c8f2b0ad392d8feba047e87c1fd8dbf60fe07205ecfa47b540dcbce",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "8e1c5573065acdbdcc2201c418b8e709db1f02dc4fd7088ca4a29fa3c79657b0"
+    },
+    "products-catalogue-editing-invalid--desktop-dark": {
+      "sha256": "910c45be96fe76dc8bd640b34d5ef90c70a1235482bf62edcaa8853dd762e02f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "61cc0601d8b75d83227efd049347fcc8afbb3fffa94b70631dd123cb6c72cc02"
+    },
+    "products-catalogue-editing-invalid--mobile": {
+      "sha256": "94d22f81d12d41e003f1588cb094a8aaf37a3dbc479d5e925c478491d2a554c0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "bb75f566785392d27e00ca37f2b39e3c3154e87b2bdc462d0aeb2f14b9610521"
+    },
+    "products-catalogue-editing-invalid--tablet": {
+      "sha256": "085f401c3e7831a838524b0154100fa1843e089f99d3451d425c29db93bd80f4",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "555f1132dd53ae7a11eaa65d95ead42fa6a6d311f2a1d4bf9ca4acbcbc2baa07"
+    },
+    "products-catalogue-editing-panel--desktop": {
+      "sha256": "2574c884c2b275d7de7ec045ec087b06af47cbad49c1234f3d5ab8f3933e0e27",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "a161a07acd7bf153de72437508aafefed6fd6186d34264a7150f27bd1e685b17"
+    },
+    "products-catalogue-editing-panel--desktop-dark": {
+      "sha256": "728eac45c657f8e10c7a2a7e3f0dc3ded89dd664b932329566342b2dc0881f34",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "9cbd8743d49b38a4d3a43780f612f9ea66e162c5e939985d8a860f68a862ec0a"
+    },
+    "products-catalogue-editing-panel--mobile": {
+      "sha256": "ca26e7dd7175116df5ab568fc019431baf1be9f9d3cb0cb8f969fed0059569a9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "16264d4c3db2aeaa328aaeb2656b773efc6f9aaeaf77e2e20681adf184e545bf"
+    },
+    "products-catalogue-editing-panel--tablet": {
+      "sha256": "b8a320e865ee290a20bed6f846b772e5c4aa79efb8faf2485a54e356a75801d3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "be090194f5db54eb989a5b55155227fdaa242640c6ec72bc6627a9aea32ea616"
+    },
+    "products-catalogue-editing-saved--desktop": {
+      "sha256": "08afae348f646237d945880a62d57c388219000ba106518aa2fd536babb7c0f9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "f4833dd6d8912ac0c4191b2a5e46d1b2d850ca983c566662d78721aa97f372dc"
+    },
+    "products-catalogue-editing-saved--desktop-dark": {
+      "sha256": "e9496379f841b2b3f7977a23ff22f0b959a817229c8939a1c6a6195eec9b2c1c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "94d75d5b75053ecaa9fb17509807879077ad905c8937f413765dfe74a1df367d"
+    },
+    "products-catalogue-editing-saved--mobile": {
+      "sha256": "d60a9fc0dae42f2bb2c470b2aa850187c6921f1ddf01d84767a432f706c3f1df",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "54e372e8e2414fa1e07d89cdfc7d721e872fda9f2b8ea778def0626397d74676"
+    },
+    "products-catalogue-editing-saved--tablet": {
+      "sha256": "e6fe4f0d797ddb22b7c94c2545ae03a94825ed1be5023a4d651e0436fc2e0252",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "cfb5d8c188e42326874ec9bdce104ff66b7ec9828a57a6150c7d02d1052408ad"
+    },
+    "products-catalogue-editing-stock--desktop": {
+      "sha256": "0e8067a696e8d2524f2514aaaed4ef6fcb4cae77b96bbb6ef55544885c3a9c7a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "50845e72c6302dfc0ce3e8da143be5ed95aeb48653fca96d22e6e73163d8ca36"
+    },
+    "products-catalogue-editing-stock--desktop-dark": {
+      "sha256": "75d93aef00e9820d0c97cfa0b96a39c26010af807da8f6236535814cad5c9773",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "1053c7080b99649eb735071ee7aa73809c0c9881a75f5f99385239bc4d608724"
+    },
+    "products-catalogue-editing-stock--mobile": {
+      "sha256": "08cdd057d84f158683f77ecfce11553822d63bf313bea946e333dd3c8a47d569",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "52600b534b552a25cadc2b4ada5841505581bb26fd7cd49f58317fbfacdf06b5"
+    },
+    "products-catalogue-editing-stock--tablet": {
+      "sha256": "4f3e8fbfad59781ed300c668621bc30cd1aec24dc1ff93cbd6ca55504a9db6f9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "9b38b695bb4cbec0a60d347f201bac2d7d8f1f6ee56d18d7e1dfa6c72ea5d5c1"
+    },
+    "products-catalogue-empty--desktop": {
+      "sha256": "f8fa4ba67acd3ab9e08bfd34f539a5008c9ea61387cbfe513cda38dce8c5c1ed",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "734c45eb20ed84686b4269dca2877b36064153d4b631eb9545a80b7d106d2a5d"
+    },
+    "products-catalogue-empty--desktop-dark": {
+      "sha256": "1137d2dd0491a566bf29f406e1f66bac79ddf2014d02627b35367f8b33a49edf",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "daf955bf726c36b22c55c413371e9aae062d6a8b33300a4355c89d99dea1a66a"
+    },
+    "products-catalogue-empty--mobile": {
+      "sha256": "693b1ce07c4197f248fce51c02034dd8d9afff1087ae4983842532f925b4e3c1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "9ac8441abb410dab4434a3296f27906cec18348c1e2a5c11cbb3cdb1a3e1d68d"
+    },
+    "products-catalogue-empty--tablet": {
+      "sha256": "df747e3c8735da739a9855b73182f895d06dd765c3989f90cbc50a44eb58c7e9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "d619f8984fffbddf63ef75ab471bc5e35808303c78cc01a115389e4813303001"
+    },
+    "products-catalogue-expanded--desktop": {
+      "sha256": "1724782bded4b843de7d13ffab215cbe5e63d620e9f5b08a6f6cf8d0886cf63b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "e483f027ea47b5f295a90231fa4e93ed1b70d9c37b151af2474b57417cf25817"
+    },
+    "products-catalogue-expanded--desktop-dark": {
+      "sha256": "08e68ffaf332671157fc71966b930c1fb1cd05f6069e4cbdb34ed2e21fa907b2",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "27902ca6387dff9d5ca90ac895e165a8334cee09889c8c11c6235600bf03eb6e"
+    },
+    "products-catalogue-expanded--mobile": {
+      "sha256": "a603961ea69f909a212e6adf01fa22b4f122aa5a6a2f8840fa5b08736816b55a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "2d6375a3c9c21db79bc89e84f408e2d67b2d92f51e09f0d46a6bd37242dcfe87"
+    },
+    "products-catalogue-expanded--tablet": {
+      "sha256": "f8dc53cff4ead3e78ee5fa2a93f2c7c2189eb6ab999416a252f754fce55d83c4",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b48b80cc923f0187b4c7cde7a38ee4f662e48513c0138d07641c5debb755cc93"
+    },
+    "products-catalogue-results-dismissed--desktop": {
+      "sha256": "a54076d78871db40165a9594ca95a260fb0e6f1508b3c81998eb936371cedcad",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "604bd3eab4b50fbe930c34c0725d9fc63277fc486f9976772271112ca9e1ffe2"
+    },
+    "products-catalogue-results-dismissed--desktop-dark": {
+      "sha256": "6f3769036c63be01752a042eb83c8a4cdcd27c562b47c9a3a6b664d434e51f02",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "0ec4bf6ca15a26e7ee96830afd1d6bfb94fea2b0fb929c1992e6ed6be2db0948"
+    },
+    "products-catalogue-results-dismissed--mobile": {
+      "sha256": "72d17528a05c4db45b34f06f7fb93003c846b6c7a166eb902d96597bcc89cc33",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "8ed3d8698d49951afd0416a265f043a473a5f5d173e150188474d567c499da58"
+    },
+    "products-catalogue-results-dismissed--tablet": {
+      "sha256": "d0bafbdcda5fda193d757536bc59c671fad662c01faf05daf10574dc6a7fee14",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "9fd6ab1c46617661d2f93b5e37b5be9f292a6e0a0b0e4e341d03ffc070b08e33"
+    },
+    "products-catalogue-scrolled--desktop": {
+      "sha256": "424c31967d37336dd42be34d9d548c6ba43754f6694e24a11a0c25c2e359a9d8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b90bdb38867596b659181e463f5c5dcf3729dca2cfe92a6075d8635c2592a010"
+    },
+    "products-catalogue-scrolled--desktop-dark": {
+      "sha256": "1c39092893764ea6aefa24cbcec1b3ebbc66ffb8b37d02aa0d0c65d1362e92f4",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "9baebcabf2f66f8e9a3f6f958b746eec5bb59b1be5d2d2be08cc7add2aeefb98"
+    },
+    "products-catalogue-scrolled--mobile": {
+      "sha256": "152dfd0ac023a4e2998653a22a35f90453e0dc3da673a0751a0cc1d697b28ac7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "e57f0d95dbed8a65062a4c3bcc3f100af097b93638e5e722c61a0e2eda1270ed"
+    },
+    "products-catalogue-scrolled--tablet": {
+      "sha256": "885bef6bd98df8e18b093e7ecc1c89529e54bb5f1340a2926dd2e4035e884de7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "d748be2b9ad787d261da01d747697c3e147521b2f837eb8a08d78db16a915ad8"
+    },
+    "products-catalogue-view--desktop": {
+      "sha256": "d61c7d91970170af553e4949091bdd9eeeb63f175fe8421e6d53b5e53a30e996",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "7a8f8ba1d2dd26657b5f0906bf37c880f4c2bad3ee50b4d8b5d8c389ab524bd8"
+    },
+    "products-catalogue-view--desktop-dark": {
+      "sha256": "2ceeeae550d75f8143c504c7db25474a03246cfd218a4c8b9886632c975025cd",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "f14a080b87dd10b2ad5bdb906d06b2b32f48ff3d4ef57a5e108a9faee0b19850"
+    },
+    "products-catalogue-view--mobile": {
+      "sha256": "570f7ef1eb47e33ea873dd26dfb7d2b74c68fc4d2defbe52d450f18ff4fd31b1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b3faf2013e7f8cf30f897e1702a0cb945a15c2c580ef4fa36c1a07153388373e"
+    },
+    "products-catalogue-view--tablet": {
+      "sha256": "cf25d21fb8f5e14a13221234c54acf0ea4de7ec0e2a84d0c9ef57a7cbdf8fcd2",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "8b36cfb6e3005d54b667ebbffe0439c40ac761f1bda8ec057caa777327e0a006"
+    },
+    "products-comfortable-default--desktop": {
+      "sha256": "24b1a12fc21fad7055132b9efae89a6cc8c8c350dc646ec6aca40fd8f96af77a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "89520264ae868f56c7727198810fd74adb9ab61f4c732297a7b19d8324cff336"
+    },
+    "products-comfortable-default--desktop-dark": {
+      "sha256": "f564ee0b4d5c6d4bc5bafff5c4c1ffff794f08fa52e9a801f88daf2bb946e709",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b140c76d5a7f1aa3501194b095cb41fe6b7793239146ca983843aafb918f04f4"
+    },
+    "products-comfortable-default--mobile": {
+      "sha256": "7a7eb2f87d947b067211a73f07535be0e1e7e5c15bf0428bbdd5114b3bce4b1b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "ed55c6d8e186ae7d96ee32e716dcf63bbaa136e99854531f564a53cf52d5171c"
+    },
+    "products-comfortable-default--tablet": {
+      "sha256": "75e8813771ffe61572a727330816988b4f2c79dc71036b02e3b5d573cc2e7d3b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "d96e0682ec554f0e036446f2dfe8d56456ac1e25546c1bd0e06357d54bf89efb"
+    },
+    "products-comfortable-expanded--desktop": {
+      "sha256": "059acdc2139daa2b882acbc482f41fbab0a40fde753ac93e6d412408713b73b8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "e483f027ea47b5f295a90231fa4e93ed1b70d9c37b151af2474b57417cf25817"
+    },
+    "products-comfortable-expanded--desktop-dark": {
+      "sha256": "d33662a01e95ec4d8bc94ad43ad8bbaca6ea1c6d5f7ce634bc0d7fa3695523d8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "27902ca6387dff9d5ca90ac895e165a8334cee09889c8c11c6235600bf03eb6e"
+    },
+    "products-comfortable-expanded--mobile": {
+      "sha256": "dd0c3396826178c4e10f59d24963336f830d709eef5aa17e3d2442e2b61ac9f2",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "2d6375a3c9c21db79bc89e84f408e2d67b2d92f51e09f0d46a6bd37242dcfe87"
+    },
+    "products-comfortable-expanded--tablet": {
+      "sha256": "70fef5d5e640ef33596dab42204d893206f6e602e6dae8b7ac74c6ccaf3ceb29",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b48b80cc923f0187b4c7cde7a38ee4f662e48513c0138d07641c5debb755cc93"
+    },
+    "products-editing-mixed-panel-dismissed--desktop": {
+      "sha256": "aeadd2fada06f873f8cad376fe86cfe4aaa411c0d1152605e6f62a0e68fe2371",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "a1b5a7f159f4998eebbe86c8ee7bb555a0f82144c8e1f7dc48876beb4a0f17ac"
+    },
+    "products-editing-mixed-panel-dismissed--desktop-dark": {
+      "sha256": "97c5480cb6935f6ff8eb8a39d2a06bb5a73912a645f63435764cd6cc63fde17b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "c079bd49e6e88393997e5884dcd78867edb92885e30f3fe05b9755357fd88a81"
+    },
+    "products-editing-mixed-panel-dismissed--mobile": {
+      "sha256": "7a37ba28409c5d9bb7f1ee3e77e3244df917a7974edd4fcc6824c3928effb7e4",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "e44dcab3041166babfee025dfaf8456cf44d7eaadabf002f6c3c295b730d19bd"
+    },
+    "products-editing-mixed-panel-dismissed--tablet": {
+      "sha256": "82905bf58713df8b80c6b6cd0d76f6ed5c671a9265ddd5e7f42acd3c371963cd",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "bd103002f3d411d286f9cd24611c57385de875f496225ca8aea55c9be44459ba"
+    },
+    "products-editing-mixed-panel-results--desktop": {
+      "sha256": "fb0b9d7e41639e6296fe3ff4699c7c4489d04150bfc869d757bd3859033696b1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "e16ec89e42c80b1a51f2a13a9d9884be77814531a8dfd8373d153e67548ce85b"
+    },
+    "products-editing-mixed-panel-results--desktop-dark": {
+      "sha256": "54a10850c9e44280c050519d9b1a0daa5f0674729f49672af094edd29e3b9c98",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "2c4884eb58c829b5761429e467325f7493585a324dfb42fce480ea75f9a31dfb"
+    },
+    "products-editing-mixed-panel-results--mobile": {
+      "sha256": "c8f788e28639c6a518d05f668ac5941b85f5a6d73f5ef8fbf580080ddb5c84d0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "4f83f281c000e9815e678a8848e9845f42c9c15bf2d4b20e416c1dc6863c2e38"
+    },
+    "products-editing-mixed-panel-results--tablet": {
+      "sha256": "b99714b9235c43f1e90025f8e8d5a8abee4fdee77eda8db0a743cf201d279a6f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "61b2b74b6fa0974e3b70ca7c01bfa4d74e3f4525d410b8d3514bb24c6ef225e7"
+    },
+    "products-editing-mixed-table-dismissed--desktop": {
+      "sha256": "f959166a00e1ef2a4f7fe5abdae2fd6c0a06273f9ef19d6782dfb45c1b79318d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "7703363da38aaea069453b66181d1ade769f279f8111093b5fad19875ee11589"
+    },
+    "products-editing-mixed-table-dismissed--desktop-dark": {
+      "sha256": "4decf9cccf0f5d63fd8b4d67b74500e499e9c2235c2242208eb56ad587839b04",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "07cc381f4fd1f2dd440a99a7f8fb83d56206373e58fd1ec03f1136c7fb63f2b4"
+    },
+    "products-editing-mixed-table-dismissed--mobile": {
+      "sha256": "65d6b1408e6a1cf86eea8428f047d09bbeb827ec2ec69a28d2a7e9ee7fef3cc7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "cd4b0448b93acd199241689c8c267dbbbd99efebf426654737d27a64a85a7515"
+    },
+    "products-editing-mixed-table-dismissed--tablet": {
+      "sha256": "94dcb4dedd2e4ab42f769933e96613680a8e6211b79d6a078463457b4e35abb0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "ffe19f881747269b905d080b96b667e07f506aa6e40047e2367853ec1bf484c8"
+    },
+    "products-editing-mixed-table-results--desktop": {
+      "sha256": "12fd2be8fb523f77534f93d2cfb41c182209b18471baa46c8b7f376a78dd5685",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "e231e03ccabe97181e4ce2e2a2d87d6307c675341b76bcb60b167065aa79cad8"
+    },
+    "products-editing-mixed-table-results--desktop-dark": {
+      "sha256": "8ef0f99737cc154b735a98c218785c1d9e30cfa8e966c2d603cf9e95178a7af0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "4f5c4fdf0ab78679c0da65b5681f2ae2db622344b8e69b67a1f42925f362b2e4"
+    },
+    "products-editing-mixed-table-results--mobile": {
+      "sha256": "faed0c974e2413a1256e314b7a0b1fa5aa60df3c8d7ae390f54df90b32ba0372",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "7d50c691229866c5718a68cf446c9f5ba9376446a8211e73c205364d750f58ea"
+    },
+    "products-editing-mixed-table-results--tablet": {
+      "sha256": "6ab2e7c40e83f94656a2aa717d44296a5fc59dea869ef5c7efdbaa8a9a5134b3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "644593a29d5caaf3a158a5f124a974192a07e6a9871c55a9e76f879d2f5e0d78"
+    },
+    "products-editing-unconfirmed-dismissed--desktop": {
+      "sha256": "3cb4f42d655dad62a638347d070b03c77afb8bcfb5d02df35996e74972636e6d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b5b7f8d9af7133f17e8b0da5869dbce30231657bf4c8e39b7ad8c217a810c399"
+    },
+    "products-editing-unconfirmed-dismissed--desktop-dark": {
+      "sha256": "2d297169cb3db8f0016635179e9538be4a15fabaf9129afc38ac5228b8cf3e76",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "620837f54419dc92521370c6996ab8e57c012c3920b432aa9c61a368fc26abbb"
+    },
+    "products-editing-unconfirmed-dismissed--mobile": {
+      "sha256": "a3c0374b8a1a94bb29341acc48711f5be0f6a14771a8f2dd185541ec2ef8f789",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "336586a91efac848426d8abbebdc759cb27130f7b2bd7c0239578409ec54aa3e"
+    },
+    "products-editing-unconfirmed-dismissed--tablet": {
+      "sha256": "a15481c65d4d804b70c0a5334eb62a1ddd9b66e7630474e80c22910716946631",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b8593180d463ec920699d98622184aa2598dd4c7e4414d33b2a1efa1639e9cdc"
+    },
+    "products-editing-unconfirmed-result--desktop": {
+      "sha256": "449b5d162b6901d857ee763fe8b87bc5ba115fdb96a537a847723c0733d084df",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "ca4b1bb088b8bd6337cf99d1b39a88563b16def2cdd26f5b36616e6d8bc7f4d3"
+    },
+    "products-editing-unconfirmed-result--desktop-dark": {
+      "sha256": "f00e59549793dd04b998cec9cc39d3091b6caa3395811f61482516a688330326",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "6cc054bde6fc35625694a034f964a4ae764b4e2da3b60ebf23083de13670b462"
+    },
+    "products-editing-unconfirmed-result--mobile": {
+      "sha256": "9dacda9368c9c79a13cec316394fd55f7fe1f27df73fd1dbd364dc4e9e52754e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "184d12f4d77311570a19fbc360185bab9c144dc4513b3223ba41ec7be7702613"
+    },
+    "products-editing-unconfirmed-result--tablet": {
+      "sha256": "9d9e8059ad5b36f3b5825bbb4e2c7bc436358459d6609bf85dd5686ae1a57b0b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "7295f401360cdc3513621787e99d93c43c62eec7f3d5721e4de2a080d06545f7"
+    },
+    "products-en-default--desktop": {
+      "sha256": "b3d262d2cdcfc0d94bf1e5889ed4ac2f285860f6c799f2b60388e6a5092bbc99",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "9eb4036d0190ec4dc61085bd2a8d265b35db3cbdc2268bb6309f295b80c9d979"
+    },
+    "products-en-default--desktop-dark": {
+      "sha256": "eebe909f26d56c5036c625a5a5564bb401d0367ac6dae9dbddb7d87efc84a681",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "573f222b1aedb8881134c421f3de6d67d37d07aa8b1169e57e64aab9f0d6ce82"
+    },
+    "products-en-default--mobile": {
+      "sha256": "774d3659b4484d3af5e82e870eee9c896875e0e214fbad11b042c123321b64f4",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "017ce72b8d83901bd90bf74089531c564e4592a367131d3ec0438490f462f829"
+    },
+    "products-en-default--tablet": {
+      "sha256": "383f5c04791e0bf8def92bc163d1e69e83936d71ddab2a58a1730821cfc8b8e9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "8b8d667226b7aea439acb7f5699139fb1082c9479068ecff8fae253a34f15eea"
+    },
+    "products-en-editing--desktop": {
+      "sha256": "56a175e9fed95b4c360f02042052a79a08a9cb651eb6a74cfbae85f53575d0a2",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "8dbb71b64519783777f30df15121d7ab6d274ebd76377f98fb0f862e7fc20d70"
+    },
+    "products-en-editing--desktop-dark": {
+      "sha256": "745e024ca8b4340325b5b3e0090d246a2f5365a50bb0d5f5c01177840f446ebd",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "f4c908885bbb108ae7487502a64dec8227bdd4b5bfdd7f370421d7776ac9baca"
+    },
+    "products-en-editing--mobile": {
+      "sha256": "c8c2db4884920fe0ac499dbf0b126a3478e03d3ac53259d247576860beea799e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "9d8f143e74d8f3c34583dd8e06605cabc715f9429b3f46fa4498e232a6a7a1f9"
+    },
+    "products-en-editing--tablet": {
+      "sha256": "f0923c6ac53a50f5932640efbf38982b4cc1ad656a02661fee88f82d6c2ada3b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "de223d8e6cbffdad9c5364ae4d89712f2c339fede7f8b39a53cd0066d18fc7cb"
+    },
+    "products-eu-default--desktop": {
+      "sha256": "1e7f38e1b315b5f906648ae48b391e325afce3ecb1d2cd8632fe2555aa416f62",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "8ce5bffc7d0e4d05198d28609248925944b003198070ea4283577cc5a36b15fe"
+    },
+    "products-eu-default--desktop-dark": {
+      "sha256": "1b19544d0b90704e1b5f991d7f535fd3135e4e6e59bd7774ed0f46558eb47495",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "02973bb23f35646ac807bc98a007e932fb6f669c7966941611ac2421e7c0c14c"
+    },
+    "products-eu-default--mobile": {
+      "sha256": "cd4185e8de9dc03b5444d257853bfaf6253c181f80255d86c20afea56f868ccd",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "d943508f70a1b990deb9c01772d45796340f0194017e88fcf3e8c7939532b194"
+    },
+    "products-eu-default--tablet": {
+      "sha256": "011b147a553014e2eb7b91048318d718ec9a03de7000fc3b2a6cf5b353970249",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "4686f084a1396c86db36d36f847d82662dd7fcb0cc384436789c5559f011a8a8"
+    },
+    "products-eu-editing--desktop": {
+      "sha256": "d6ec1812906f138711168c3e176cb829caa4957662d61446716bd75d0ec18ff1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "a4a247ae2baf1c99d85510f45e6446f216cdbb38b59f7f6e9539fc72063d3baa"
+    },
+    "products-eu-editing--desktop-dark": {
+      "sha256": "23cb2d1c986d07764ef199077a3ead6bd91e92fba79a7fd725c7f06e54f7c27a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "c21e8542f16f5e3632ed6a1e3dea7bbf0108adeea82fc79496d2747ef12867e1"
+    },
+    "products-eu-editing--mobile": {
+      "sha256": "fbbf9bfffbe9f9fd704a9e2cca307652c31880a562dab4b37e8ed782aab9a033",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "4b82892ee17ded62f2518eab860a4066f76c22232ee96a327c817d6e4d3800eb"
+    },
+    "products-eu-editing--tablet": {
+      "sha256": "18f30895193d430acf015f4797068fb6d7e21458b84719200a8262cf64fc6571",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "531906507c53b0aad940b76f880549f6701ca52fd44ef8e5decc1050cdf61833"
+    },
+    "products-gl-default--desktop": {
+      "sha256": "d6c5f9eb128fdc52c7e1fc226b941fdb5b33eb5083c295f4b0201c270f911615",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "042b700a5a1875a8034902e8fb080768c34257cea8f34615a385043e6ade72ec"
+    },
+    "products-gl-default--desktop-dark": {
+      "sha256": "80068c833de6ecddfeb8b491fc6d45d9230ea54d2015fc164248176b280259a8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "a4ce1024a29bd5803f4d094e9f7cceae7af9a6a3665c42a86edd2a290dde553c"
+    },
+    "products-gl-default--mobile": {
+      "sha256": "28772f59127fff0e19d12f6d8683f11ebd03156493d5243a0178d6abffcdeddb",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "1e901b00d3b5c20eacdad3535b9e63358792b96b960e28922043a170c4eefb7b"
+    },
+    "products-gl-default--tablet": {
+      "sha256": "f61a5080b7e1a08c002f3048f4a17af868effb60aa92929d17077d6a2719f024",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "17d4217466a1c52b0901b25094b030ba0596c426830d09857a29d5269bd1b1ad"
+    },
+    "products-gl-editing--desktop": {
+      "sha256": "b305f45e5bc04cde909dae1e9d7bc2586e8dc83472f4e65c16dd94dd30b90b77",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "af89fa36d6de1fc392e01afe08f81e7d4548a21024964e207ebccaab4d698e5d"
+    },
+    "products-gl-editing--desktop-dark": {
+      "sha256": "2da6123a7c6e34b367302430894a82c002bfa05d789dcf494836493d025ab20e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "1e6bed62bcd81ab700533f5b4b8de4dfce872ee08ce848bb89a8d5b0e5a17274"
+    },
+    "products-gl-editing--mobile": {
+      "sha256": "1fff460ee5800fcdb8b011f250cae65e197066f641ccfec3ba984e5a0d773151",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "79631ce016c9b678f0b59cedc4a350fea292552ca2e72ae2bd3a2e6232e8d867"
+    },
+    "products-gl-editing--tablet": {
+      "sha256": "6597bdb8750e059e6d7daad35211260fb6967acbf58d6ffd829cb6b84b04295e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "73fbc8228a6ef89503771b0c004a05f99f9c507e524592021b27d3d775d43f5b"
+    },
+    "products-hidden-default--desktop": {
+      "sha256": "7ba0ba8e256c6976965155dd3dfa680509275a2283c3e2440919de23cba7ac8b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "89520264ae868f56c7727198810fd74adb9ab61f4c732297a7b19d8324cff336"
+    },
+    "products-hidden-default--desktop-dark": {
+      "sha256": "9b85c101e917d86e06ea3b0b9dad26be73466e1399a933d146c94dde446be7e2",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b140c76d5a7f1aa3501194b095cb41fe6b7793239146ca983843aafb918f04f4"
+    },
+    "products-hidden-default--mobile": {
+      "sha256": "e0f7953246c5e7c7fabf9535bf7335de259681769754faf0bfe2bdb567ed1ef3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "ed55c6d8e186ae7d96ee32e716dcf63bbaa136e99854531f564a53cf52d5171c"
+    },
+    "products-hidden-default--tablet": {
+      "sha256": "132a76f66347cc3dad739bf8d6b48d5abed7d9af43ef17be8d225ad392f974ca",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "d96e0682ec554f0e036446f2dfe8d56456ac1e25546c1bd0e06357d54bf89efb"
+    },
+    "products-hidden-expanded--desktop": {
+      "sha256": "f5ee242c615c47eb2436d7b316a1d992d753fb5e74692165699c6bce0c2bd798",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "e483f027ea47b5f295a90231fa4e93ed1b70d9c37b151af2474b57417cf25817"
+    },
+    "products-hidden-expanded--desktop-dark": {
+      "sha256": "52e9120e7da44a6398b9d4c9307c1154620b7e4ee10fd3c7c812bbe9d3ec472a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "27902ca6387dff9d5ca90ac895e165a8334cee09889c8c11c6235600bf03eb6e"
+    },
+    "products-hidden-expanded--mobile": {
+      "sha256": "78c713740159103aff1583256e04d768b4126551fb827a69abc0c0fc5f84d48e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "2d6375a3c9c21db79bc89e84f408e2d67b2d92f51e09f0d46a6bd37242dcfe87"
+    },
+    "products-hidden-expanded--tablet": {
+      "sha256": "710f435dbc4bf5a4da2d97dd67f1323b6701490dbcb26eef6c050ddd19dc1438",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b48b80cc923f0187b4c7cde7a38ee4f662e48513c0138d07641c5debb755cc93"
+    },
+    "products-sole-location-default--desktop": {
+      "sha256": "f818c228f33df2a6a0bd65e80e4f640935f045eb86a53da22a0b8a32eab7080d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "89520264ae868f56c7727198810fd74adb9ab61f4c732297a7b19d8324cff336"
+    },
+    "products-sole-location-default--desktop-dark": {
+      "sha256": "05e7c34817de7115756248365166cdfa0efa6de94a68f994fb4a0ca460797df7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b140c76d5a7f1aa3501194b095cb41fe6b7793239146ca983843aafb918f04f4"
+    },
+    "products-sole-location-default--mobile": {
+      "sha256": "e264084e0ccb640455e3a6337b9c30818d519726042eee9038f012c5fc9d5ea5",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "ed55c6d8e186ae7d96ee32e716dcf63bbaa136e99854531f564a53cf52d5171c"
+    },
+    "products-sole-location-default--tablet": {
+      "sha256": "25e5402df7d813dd1c8f4b6a4fab6b6fd60726ef6a16e59c58bf9a703b4f5edf",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "d96e0682ec554f0e036446f2dfe8d56456ac1e25546c1bd0e06357d54bf89efb"
+    },
+    "products-stock-expanded--desktop": {
+      "sha256": "58d97c7ae2a089f03e7d9ee0b0d34c983037d906d4b66be1d861ce2f9b86d633",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "1af30c9323d8f68211da45cd0a2bbb93ab8e483bd5102ea96fd42e80d3999301"
+    },
+    "products-stock-expanded--desktop-dark": {
+      "sha256": "15cca8eee00ccb21bae8c02300e0f56823066c9aa1b2711c19edf61268f5c62e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "c1249c5456bb18f48c654408d7cc5df3f690af08afd29541a5f236f994a35013"
+    },
+    "products-stock-expanded--mobile": {
+      "sha256": "000359908bfc3d6804800652165dfea566467bdb9853c1bc61976e528d826eec",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "e676dc25b847b2360102776f5b61609be47385cf47b24b90cff7cf12ba880b2c"
+    },
+    "products-stock-expanded--tablet": {
+      "sha256": "c2b47f55fe51e8b8457276aeffaae7e44174ad6da9ca0cac785b5118dbfb2e53",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "34d25db3c0ebe997b54b899eff13e4e62f55c6aad505f75f3c059b3c308dd085"
+    },
+    "products-stock-options--desktop": {
+      "sha256": "ad120f34dd5730ba99cd53c64cc9d268188aa1be5452505f3aafa297b382d2fc",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "f43ddea11dcf3350dacb33a0d88309afbb2c4d021b2120730a8868ec0483dbf4"
+    },
+    "products-stock-options--desktop-dark": {
+      "sha256": "c3d9142f12afc0f77be16c16669a21e03729c0fe803cac7421af23c29059b813",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "1eb8906e748f6a109df121bdf8d3e0df5e1112fe3e4f5c8d327f867f4a6efaaf"
+    },
+    "products-stock-options--mobile": {
+      "sha256": "3be673ef955714423496af599960dc382deb2f355889d6972f9af1b7580a9eee",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "4ba666bac294471440d78bfe2a65c3f76cf8d70854f114a193e448399a33dcf1"
+    },
+    "products-stock-options--tablet": {
+      "sha256": "b9acf2f53c035b34ac398392666307bb420fb385305e5a9fb750fb2929f5ce3b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "15112605b3564ed753ff3f02a7eeac49f6d7788c6d682f7901a76fc6f672b37c"
+    },
+    "products-stock-selected--desktop": {
+      "sha256": "424c31967d37336dd42be34d9d548c6ba43754f6694e24a11a0c25c2e359a9d8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "ab8b70ed9e9ffb887fb17fdd4161b1e0ea7a81afdd5362d05e7dd04c4426d9f0"
+    },
+    "products-stock-selected--desktop-dark": {
+      "sha256": "1c39092893764ea6aefa24cbcec1b3ebbc66ffb8b37d02aa0d0c65d1362e92f4",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "f83eefc12748a0b783b8bdca951f6b07e78b53c0767a436d5252d6e3e68eccc3"
+    },
+    "products-stock-selected--mobile": {
+      "sha256": "eca07e793d00f606e9c34fac9ec322febe73343102805189d8acb62d81e80731",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "872a21c39afcc9330f9ec09051d00cc643fc358f32c1371eae8ccd705894314e"
+    },
+    "products-stock-selected--tablet": {
+      "sha256": "82c3e3640bfcb6778793dc8d0250d16a51953b207252fe803ddf0aac1170a608",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "d92ed439b52d0e9cf1494d27bfca6e21199bdb55926e3f8e0aef443ed6f9639d"
+    },
+    "products-stock-unscoped--desktop": {
+      "sha256": "d54f99395f9e5d11b5c46802408fac4f39f731eff4a3c5a9d65e855959aca88f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "89520264ae868f56c7727198810fd74adb9ab61f4c732297a7b19d8324cff336"
+    },
+    "products-stock-unscoped--desktop-dark": {
+      "sha256": "47b8526a491a890a64a4de605984b50b7779d1cf90720a3a15998002cb551daf",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "b140c76d5a7f1aa3501194b095cb41fe6b7793239146ca983843aafb918f04f4"
+    },
+    "products-stock-unscoped--mobile": {
+      "sha256": "103811d1bc835e5dd17df54468db4c41a01ac897a78ac97b9d29ba2e56119191",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "ed55c6d8e186ae7d96ee32e716dcf63bbaa136e99854531f564a53cf52d5171c"
+    },
+    "products-stock-unscoped--tablet": {
+      "sha256": "b608aeb486878a7d28d7bc26417d0551473cec0253e6d5784ed1a3fdbc2fab73",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User: \"That looks ok, I approve all current revision. What is the next recommended steps\"; approval of the current 156-image Products review gallery linked in the preceding reply.",
+      "run": "2026-11-14T12-42-43.360Z",
+      "sourceHash": "05c8b18610bbe4fe87dd174a6aabbd50c34b79533efe6e0b9fe4e17e2890d715",
+      "profileHash": "d96e0682ec554f0e036446f2dfe8d56456ac1e25546c1bd0e06357d54bf89efb"
     }
   }
 }
