@@ -1,0 +1,282 @@
+# Define the merchant Products table
+
+## Why
+
+The user committed the navigation corrections as `f365765` and authorized the
+next proposed step: define the Productos table's information, density,
+search/filtering, customization and mobile behavior before prototyping it.
+They specifically requested reading the sibling product thesis and researching
+forums to understand why people prefer Excel for inventory. The target is a
+simple, powerful product table that preserves useful familiar work, without
+building another general-purpose spreadsheet.
+
+## What Changes
+
+- Read the reported workflows and current frontend values, separating customer
+  observations, hypotheses, approved constraints and available functionality.
+- Record public forum evidence, primary usability research and limitations in
+  [research.md](research.md).
+- Develop table alternatives and a recommended direction in [design.md](design.md).
+- Agree the primary merchant task before choosing columns, editing semantics,
+  row density, customization, selection and mobile presentation.
+- Keep production implementation and accepted visual references unchanged;
+  the initial discovery phase itself was documentation-only.
+- After the user's delegated evaluation authorization, execute only the
+  development-only [grid qualification plan](qualification-plan.md), retaining
+  production source and accepted references while comparing both candidates.
+- After the user's acceptance, register TanStack Table 9.3.1 as the exact selected
+  runtime dependency and develop the [first browsing design](prototype-plan.md)
+  with the selected summary/panel/content/independent-expansion behavior.
+
+## Capabilities
+
+### New Capabilities
+
+- `products-table`: the selected table-first interaction direction, with editing
+  deliberately activated, faster tools available on request and optional
+  read-only stock context for one clearly selected location. The selected initial
+  columns are Producto, Referencia (SKU), Unidad and, when stock context is shown,
+  Existencias registradas. Catalogue columns appear by default; Mostrar existencias
+  reveals stock context and its location selector. Products remembers visibility
+  and location per tab, using the agreed sole-location/multiple-location rules;
+  a new tab starts catalogue-only. Density is compact by default, with an optional
+  comfortable setting and exact row sizes to compare in Storybook. One Buscar
+  productos field supports partial-name discovery and exact SKU/barcode lookup,
+  preserving codes and leaving the choice among matches to the merchant. Searches
+  run through Enter or Buscar; clearing removes only the search constraint and
+  preserves stock/location context. Initial sorting is Producto A–Z, with one
+  active ascending/descending sort through Producto or SKU headings, applied to
+  the full matching result set and keeping SKU as text. Filtros offers optional
+  archived inclusion and positive recorded-stock filtering with selected-location
+  stock context, using existing Inventory meanings. Filters use Aplicar/Cancelar,
+  removable applied labels and scoped clearing; hiding stock clears its stock-only
+  filter until explicitly selected again. Submitted search, sort, applied filters
+  and density are retained per tab within the same business; new tabs use defaults
+  and leaving discards unsubmitted view drafts. Vista groups density and optional
+  column visibility/order/width controls, with per-tab choices and a scoped
+  Restablecer columnas action. Producto stays included and stock visibility keeps
+  its existing toggle. Product-name activation opens read-only details in a
+  desktop side panel or a panel filling the phone screen, preserving table
+  settings on close. Stock cells show all active tracked measurements with units,
+  main/reservation first, preserving exact values, verification needs and unknowns.
+  Phones retain the selected table with horizontal scrolling, a sticky column
+  header and Producto pinned left, preserving saved desktop choices. Detailed
+  controls/content, matching/order, quantity formatting and storage remain open.
+  Editing has two deliberate draft paths: Editar in the product panel and optional
+  Editar tabla, with Guardar/Cancelar and read-only stock. Fields, save outcomes
+  and implementation remain open.
+
+### Modified Capabilities
+
+None. Existing navigation and Inventory rules remain unchanged. The new delta
+records the selected table interaction, columns, stock presentation and per-tab
+scope, density, search field, submission/clearing, initial sorting and optional
+filter set/application/clearing, applied-view retention, column customization and
+read-only product inspection, active stock-measurement presentation and phone
+table model and editing entry points/draft boundaries.
+
+## Impact
+
+The initial discovery affected documentation and agent/context pointers only. Existing
+TailAdmin branding, source, dependencies, landing and screenshot references stay
+unchanged. No grid library, backend/API integration, persistence, production
+screen, spreadsheet engine, stock-changing action, staging, commit or archive
+is introduced. The preceding navigation revision still has 20 image changes/new
+states awaiting separate specific approval; this research does not accept them.
+
+The later comparison authorization permits evaluation-only backoffice dev
+dependencies, Storybook fixtures and browser/build tests under the linked plan.
+This supersedes the research-only limit for that scope, without selecting a
+production grid, expansion behavior, fields, business writes or image references.
+
+## Authority and status
+
+On 2026-11-13, after the assistant proposed defining the Products table in
+OpenSpec and then prototyping it in Storybook, the user said:
+
+> Commited. Go ahead with the next proposed step. Note that has this document
+> mentions (/Users/daniel/Projects/personal/the_unnamed_1/project_idea.md) some
+> inteviewed customers use Excel to keep track of their inventory. Think about
+> it, research in internet foros, etc. We got to build a product table as simple
+> and powerful as excel but without building another Excel, try to discover why
+> a human been would prefer excel and base the design on that.
+
+This initiates research and definition under the standing instruction to ask
+before adopting undefined choices. It does not approve a column set, editable
+fields, bulk mutation semantics, a third-party library or implementation.
+The report is a qualitative desk study, not new customer interviews or validated
+market demand. Table details remain proposals except for the selected decisions
+recorded below.
+
+The approved [scope](../establish-frontend-foundation/specs/frontend-scope/spec.md),
+[values](../establish-frontend-foundation/specs/product-values/spec.md) and
+[navigation reference](../define-backoffice-navigation/proposal.md) constrain the
+discussion. Asked about the interviewees' most frequent spreadsheet task, the
+user answered **“I dont know, try to find some info in internet”**. Continue with
+public workflow evidence; do not require knowledge they do not have. Their actual
+routine remains unknown and proposed first scenarios must be labeled hypotheses.
+
+The user then selected **“Table-first; editing on request (Recommended)”** for
+the concrete interaction-model question. PT-001 records a table for browsing
+and comparison, editing deliberately activated, and faster tools available on
+request. This selects direction A; it does not choose columns, save or bulk
+semantics, editing controls, permissions, persistence or implementation.
+
+The user subsequently chose **“Catalogue + optional stock context (Recommended)”**.
+PT-002 records optional read-only recorded stock for one clearly selected
+location alongside the catalogue. The presented question expressly left exact
+columns and default visibility for the next decision. This does not define
+location defaults/retention, editing stock, aggregation or implementation.
+
+The user then answered **“Use this initial column set (Recommended)”** to the
+proposal of Producto, Referencia (SKU), Unidad and Existencias registradas when
+stock context is shown. PT-003 records that set. The question explicitly left
+initial stock visibility, additional optional columns and editing behavior for
+separate decisions; no UI implementation follows from this approval.
+
+The user subsequently chose **“Show stock on request (Recommended)”** for
+catalogue columns initially, with a labelled Mostrar existencias toggle revealing
+the stock column and location selector. PT-004 records that presentation. The
+question explicitly left remembering the choice for a separate decision. Precise
+location behavior and UI implementation also remain open.
+
+The user then chose **“Remember per tab (Recommended)”** for remembering Products
+stock visibility and location while the tab stays open, selecting the sole
+accessible location automatically, asking with several before quantities, keeping
+the location when stock is hidden and starting a new tab catalogue-only. PT-005
+records that choice under the existing page-owned scope principles. Storage
+mechanism, further table behavior and UI implementation are not selected.
+
+The user subsequently chose **“Compact default + comfortable option
+(Recommended)”** for compact rows by default with an optional comfortable setting,
+preserving readable text and touch targets and comparing both in Storybook before
+fixing exact row heights. PT-006 records that direction. Density-control placement,
+retention, mobile layout, exact measurements and implementation remain open.
+
+The user then chose **“One search field (Recommended)”** for a single Buscar
+productos field supporting partial names and exact SKU/barcodes, preserving
+leading zeros and presenting matching products without automatically choosing one.
+PT-007 records that surface and lookup intent. The presented question expressly
+left detailed matching and sorting for separate decisions. Search triggers,
+filters, retention and implementation are also unselected.
+
+The user subsequently chose **“Enter or Buscar (Recommended)”** to explicitly
+submit searches while rows stay steady during typing. The question also proposed
+that clearing search removes only its constraint and preserves stock/location
+settings. PT-008 records that trigger and clearing scope. It does not select
+detailed matching, ordering, result/error presentation or integration.
+
+The user then chose **“Single-column sorting (Recommended)”** for Producto A–Z
+initially, one active sort toggled through Producto or Referencia (SKU), keeping
+SKU as text and sorting the full matching result set. PT-009 records that choice.
+The question left unit/stock sorting separate. Multi-column ordering, detailed
+collation, tie-breaking, retention and implementation are also unselected.
+
+The user subsequently chose **“Use these initial filters (Recommended)”** for
+Filtros offering Incluir archivados and, when stock is shown for a selected
+location, Solo con existencias registradas. The question defined stock-only as
+positive recorded stock under existing Inventory quantity rules and default
+active results including zero/no-record products. PT-010 records this set and
+meaning. Application/reset mechanics, retention, detailed quantity presentation
+and implementation remain separate decisions.
+
+The user then chose **“Aplicar/Cancelar (Recommended)”** for the filter panel,
+discarding drafts on close without applying, showing removable applied-filter
+labels, preserving search/sort/stock-location settings when clearing filters and
+clearing the stock-only filter when stock is hidden until explicitly selected
+again. PT-011 records this interaction. Placement, styling, retention and
+implementation remain open.
+
+The user subsequently chose **“Remember applied view per tab (Recommended)”**
+for retaining submitted search, sort, applied filters and density in the same
+tab/business, restoring them on return, using defaults in new tabs and discarding
+unsubmitted search/filter drafts when leaving Products. PT-012 records this
+extension without reopening PT-005 stock/location retention. Business-edit draft
+policy, refresh, scroll/pagination position, storage and implementation remain open.
+
+The user then chose **“Vista with visibility/order/width (Recommended)”** for
+grouping density and column visibility/order/width in Vista, remembering column
+choices per tab, keeping Producto included, preserving stock visibility under
+Mostrar existencias and the agreed initial columns, and offering Restablecer
+columnas. PT-013 records this scope and column-only reset. Exact interactions,
+measurements, hidden-sort behavior, mobile adaptation and implementation remain open.
+
+The user subsequently chose **“Details panel (Recommended)”** for activating a
+product's name to open read-only details in a desktop side panel and a panel
+filling the phone screen, preserving table settings. The question explicitly
+kept editing as a separate action, with fields and save behavior to follow.
+PT-014 records that inspection flow. Detail contents, panel dimensions/modality,
+tablet behavior, dismissal/focus/history, scroll, refresh and implementation remain open.
+
+The user then chose **“All tracked measurements (Recommended)”** for showing all
+active stock measurements in the same cell with units, configured main measurement
+first, exact values, visible verification needs and unknowns kept unknown. PT-015
+records that choice under existing quantity/tracking meanings. Exact numeric
+formatting, status/missing/error rendering, widths/wrapping and implementation
+remain open.
+
+The user subsequently chose **“Full table + pinned Producto (Recommended)”** for
+the phone table: horizontal scrolling, sticky header and Producto pinned left,
+other columns retaining visibility/order and Producto's saved desktop position
+kept intact. PT-016 records that responsive model. Exact widths/caps, breakpoints,
+touch/keyboard controls, desktop/tablet scrolling and implementation remain open.
+
+The user then chose **“Panel + optional table editing (Recommended)”** for Editar
+in the product panel and optional Editar tabla for repeated catalogue changes,
+both beginning as drafts with Guardar/Cancelar while stock remains read-only.
+PT-017 records those paths. Fields, permissions, multi-row save/failure semantics,
+validation, concurrent/unsaved drafts and implementation remain unselected.
+
+The user subsequently requested examining AG Grid's expandable-row concepts,
+then Tabulator's 6.x examples and TanStack as potential commercially usable
+open-source foundations, followed by **“continue”**. This authorizes reference
+and licence research within this discovery. It does not select a library/version,
+replace the selected details panel, choose an expansion model or initiate UI
+implementation. Preserve PT-014 and PT-017 while evaluating the alternatives.
+
+The completed [grid reference/licence review](research.md#grid-libraries-and-row-expansion--2026-11-13)
+verified MIT commercial-use permissions for TanStack Table and Tabulator and
+distinguished AG Grid Community licensing from its Enterprise Master/Detail
+feature. The initial TanStack-first recommendation remained unselected. In
+response to the candidate question, the user asked which is more powerful for
+Irin considering all features and platform fit beyond styling.
+
+The [broader assessment](research.md#full-feature-and-platform-fit-assessment--2026-11-13)
+finds Tabulator supplies more ready-made grid operations, while TanStack offers
+more direct React composition but leaves more interaction/integration work to
+the application. Current TanStack v9 includes cell/range selection; its keyboard
+binding, clipboard serialization and any needed virtualizer are separate work.
+The updated recommendation is a bounded comparison of both against identical
+Irin cases before adoption. Neither the recommendation, either candidate,
+installation scope nor expansion behavior has been selected. The review records
+source versions, peer-range evidence and unavailable live-demo checks rather
+than claiming runtime compatibility, performance or measured integration cost.
+
+The user then said: **“Go ahead and do any test or comparison you want to do,
+and come back to me with the final assessment and recommendation”.** This
+delegates the evaluation details in the [qualification plan](qualification-plan.md).
+It authorizes concrete comparison work and a final recommendation, without
+adopting either library into production or resolving product-flow decisions.
+
+The executed [qualification](qualification-results.md) compares matched
+development fixtures, 34 browser checks, repeated rendering/heap measurements
+and vendor payloads. The final recommendation is TanStack Table for Irin's
+React/business-workflow composition, while recording Tabulator's broader supplied
+features and better measured large-fixture scroll/heap results with similar mount cost. Both are
+evaluation-only dev dependencies. Accessibility findings and remaining limits
+are explicit in the results; no production adoption or new product design follows.
+
+The user subsequently accepted TanStack and instructed continued design with the
+latest available pinned version. [The foundation decision](foundation-decision.md)
+records the exact instruction, live registry check and move of 9.3.1 to runtime
+dependencies under PT-018. PT-019–021 record the user's compact-summary/full-panel,
+summary-content and independent-multiple-expansion selections. The bounded
+browsing design is authorized in Storybook; editable fields, filter-interface
+design, production fetching, save semantics and visual acceptance remain separate.
+
+On 2026-11-14, the user reviewed the preview and said **“That is looking good,
+prepare the commit before moving to the next steps”**. This authorizes the
+[bounded commit preparation](prototype-plan.md#commit-preparation--2026-11-14):
+stage the research, qualification and browsing-prototype batch and return a
+commit command for the user. It does not authorize creating a commit, promoting
+candidate images or beginning the next design pass.

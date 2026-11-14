@@ -5,7 +5,12 @@ import svgr from "vite-plugin-svgr";
 
 const config: StorybookConfig = {
   framework: "@storybook/nextjs-vite",
-  stories: ["./stories/**/*.stories.tsx"],
+  stories: [
+    "./stories/**/*.stories.tsx",
+    ...(process.env.IRIN_GRID_COMPARISON === "1"
+      ? ["./evaluation/**/*.stories.tsx"]
+      : []),
+  ],
   addons: ["@storybook/addon-docs"],
   staticDirs: [
     "../public",

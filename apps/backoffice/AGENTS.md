@@ -20,7 +20,96 @@ the exact approval and identities. Require new image approval for replacements.
 The
 [visual review workflow](../../openspec/changes/define-visual-review-workflow/proposal.md)
 is implemented; preserve its review rules and the technical sources as constraints.
-The active [navigation discovery](../../openspec/changes/define-backoffice-navigation/proposal.md)
+The current [Products table design](../../openspec/changes/define-products-table/proposal.md)
+now follows the user's TanStack acceptance and continued-design instruction.
+The user's 2026-11-14 request now authorizes preparing/staging its commit batch;
+follow the plan's [commit-preparation scope](../../openspec/changes/define-products-table/prototype-plan.md#commit-preparation--2026-11-14).
+Give the user the commit command, never execute it, and keep image approval and
+the next design pass separate.
+Read [PT-018–021's source decisions](../../openspec/changes/define-products-table/foundation-decision.md)
+and the [browsing prototype plan](../../openspec/changes/define-products-table/prototype-plan.md).
+TanStack Table 9.3.1 is selected and exactly pinned as a runtime dependency after
+live latest-stable verification. Compact read-only expansions retain the full
+panel, show identifiers/status/hidden catalogue fields and allow several rows
+open independently, all initially collapsed. Do not ask these questions again.
+The first Storybook design uses retained TailAdmin controls and optional Products
+slots in the navigation preview. Editing/filter flows and production API/routes,
+exact visual-metric acceptance and image promotion remain outside this pass.
+The browsing preview passes 54 code tests, 69 browser checks, 84 candidate
+captures and 451 unaffected reference comparisons. The plan records the exact
+run/source, proposed metrics and fixture retention limits. No images are accepted.
+The prior comparison authorization is recorded under the
+[qualification plan](../../openspec/changes/define-products-table/qualification-plan.md).
+Evaluation-only dependencies, Storybook fixtures and browser tests are authorized;
+At that historical comparison checkpoint, production grid adoption, new product
+behavior and image promotion remained open; PT-018–021 above now govern the foundation.
+Earlier research-only boundaries below are historical for this evaluation scope.
+The [results](../../openspec/changes/define-products-table/qualification-results.md)
+record 34 browser checks and the final TanStack recommendation. Tabulator has
+more supplied features and better measured large-fixture scroll/heap results;
+its native ARIA finding and required keyboard integration are explicit. Both
+libraries were dev-only at that checkpoint; the later TanStack selection above
+supersedes its pre-adoption status. Tabulator remains evaluation-only.
+The user requested understanding Excel's appeal for
+inventory before designing a simple, powerful table. Read its research, design
+alternatives and tasks. Use the selected browsing/comparison scenario; do not infer
+unselected columns, editable stock, a spreadsheet engine, a grid dependency or an API from
+the research. Existing values, exactness and user-controlled complexity apply.
+Only the linked comparison and browsing previews are authorized; production
+routes and staging remain outside this step.
+The user does not know interviewees' main task and requested internet evidence.
+The follow-up job map remains a hypothesis. The user selected table-first with
+editing on request under PT-001 and catalogue plus optional read-only stock for
+one selected location under PT-002. PT-003 records the selected initial columns:
+Producto, Referencia (SKU), Unidad and Existencias registradas when shown.
+PT-004 records stock on request: catalogue columns initially, with Mostrar
+existencias revealing the stock column and location selector. PT-005 records
+per-tab visibility/location retention, preserving location while stock is hidden,
+existing page-owned location defaults and new tabs catalogue-only. Remembering
+does not prove access or validity. PT-006 records compact default plus a
+merchant-selected comfortable density, with exact sizes compared in Storybook.
+PT-007 records one Buscar productos field for partial names and exact SKU/barcodes,
+preserving codes and leaving product choice to the merchant. PT-008 records
+Enter/Buscar submission, steady rows during typing and scoped clearing that
+preserves stock/location. PT-009 records Producto A–Z initially, one active
+Producto/SKU ascending/descending sort, text SKU and full-matching-set ordering.
+PT-010 records optional Incluir archivados and Solo con existencias registradas
+behind Filtros; stock-only uses the configured reservation dimension at the
+selected location under the owning Inventory rules. PT-011 records Aplicar/Cancelar,
+discarding unapplied panel drafts on close, removable applied labels, scoped
+clearing and removal of the stock-only constraint when stock is hidden. PT-012
+retains submitted search/sort/applied filters/density per tab in the same business,
+with defaults in new tabs and unapplied view drafts discarded on leaving. Retain
+PT-005; business-edit drafts stay undefined. PT-013 records Vista grouping
+density/column visibility/order/width, per-tab choices, Producto included, stock
+under Mostrar existencias and a column-only Restablecer columnas reset. PT-014
+records product-name activation opening read-only desktop/phone panels while
+preserving table settings. PT-015 records all active stock measurements with
+units/main-first order, exact values and truthful verification/unknown states.
+PT-016 records the full phone table with horizontal scrolling, sticky column
+header and Producto pinned left, preserving chosen columns and saved desktop
+layout. PT-017 records Editar in the panel plus optional Editar tabla, both
+deliberate drafts with Guardar/Cancelar and read-only stock. Current steering
+requests AG Grid expandable rows, Tabulator 6.x and TanStack Table research,
+including actual commercial-use licences and TailAdmin fit. The user said continue.
+The research addendum verifies MIT commercial-use licensing for TanStack Table
+and Tabulator; AG Grid's relevant Master/Detail feature is Enterprise. The user
+did not select the proposed TanStack-first candidate, asking for overall feature
+power and platform fit beyond styling. Tabulator supplies more complete grid
+operations; TanStack v9 has table/range engines and direct React composition,
+with more interaction/integration work. The user subsequently delegated comparison
+execution, now completed under the linked plan/results.
+The initial 9.3.1/6.7.1 source observations preceded evaluation pins, and runtime
+compatibility was initially unverified; use the subsequent bounded browser/build
+evidence, not the earlier desk-only limit. Preserve PT-014/PT-017; production
+library adoption and expansion behavior are now selected in PT-018–021. Retain application state
+and form stack; the TanStack homepage does not select other ecosystem packages.
+Fields, identifier operations, save outcomes, draft lifecycle, exact controls,
+hidden-sort handling, matching/order, refresh, storage and implementation remain
+undefined. Evaluation installation/UI is separately authorized and completed;
+no production adoption or product-flow implementation follows from the results.
+Do not repeat resolved or unavailable questions.
+The preceding [navigation discovery](../../openspec/changes/define-backoffice-navigation/proposal.md)
 records the shared sidebar under NAV-001 and enabled modules with separate
 discovery under NAV-002. NAV-003 selects Inventory plus shared areas for the first
 design map. NAV-004 records the accepted initial entries, with pending work inside

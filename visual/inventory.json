@@ -1454,6 +1454,184 @@
         }
       ],
       "limitation": "Translated navigation preview; fixture copy is not final product copy."
+    },
+    {
+      "id": "products-catalogue",
+      "title": "Products browsing design",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products--catalogue",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "expanded",
+          "action": "products-expanded"
+        },
+        {
+          "id": "details",
+          "action": "products-panel"
+        },
+        {
+          "id": "view",
+          "action": "products-view"
+        },
+        {
+          "id": "empty",
+          "action": "products-empty"
+        },
+        {
+          "id": "scrolled",
+          "action": "products-scrolled"
+        }
+      ],
+      "limitation": "Development-only browsing design; synthetic data, no production API or edit/filter flows; exact visual metrics and controls await review."
+    },
+    {
+      "id": "products-stock",
+      "title": "Products requested stock",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products--stock-context",
+      "cases": [
+        {
+          "id": "unscoped"
+        },
+        {
+          "id": "selected",
+          "action": "products-location"
+        },
+        {
+          "id": "expanded",
+          "action": "products-expanded-stock"
+        },
+        {
+          "id": "options",
+          "action": "products-location-options"
+        }
+      ],
+      "limitation": "Development-only browsing design; synthetic data, no production API or edit/filter flows; exact visual metrics and controls await review."
+    },
+    {
+      "id": "products-comfortable",
+      "title": "Products comfortable density proposal",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products--comfortable",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "expanded",
+          "action": "products-expanded"
+        }
+      ],
+      "limitation": "Development-only browsing design; synthetic data, no production API or edit/filter flows; exact visual metrics and controls await review."
+    },
+    {
+      "id": "products-hidden",
+      "title": "Products hidden catalogue fields",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products--hidden-columns",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "expanded",
+          "action": "products-expanded"
+        }
+      ],
+      "limitation": "Development-only browsing design; synthetic data, no production API or edit/filter flows; exact visual metrics and controls await review."
+    },
+    {
+      "id": "products-sole-location",
+      "title": "Products sole accessible location",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products--sole-location",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Development-only browsing design; synthetic data, no production API or edit/filter flows; exact visual metrics and controls await review."
+    },
+    {
+      "id": "products-archived",
+      "title": "Products explicitly included archived fixture",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products--archived-product",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "expanded",
+          "action": "products-expanded"
+        }
+      ],
+      "limitation": "Development-only browsing design; synthetic data, no production API or edit/filter flows; exact visual metrics and controls await review."
+    },
+    {
+      "id": "products-en",
+      "title": "Products design en",
+      "kind": "story",
+      "sources": [],
+      "locale": "en",
+      "storyId": "inventory-products--catalogue",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Translated design fixture, not production functionality."
+    },
+    {
+      "id": "products-ca",
+      "title": "Products design ca",
+      "kind": "story",
+      "sources": [],
+      "locale": "ca",
+      "storyId": "inventory-products--catalogue",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Translated design fixture, not production functionality."
+    },
+    {
+      "id": "products-gl",
+      "title": "Products design gl",
+      "kind": "story",
+      "sources": [],
+      "locale": "gl",
+      "storyId": "inventory-products--catalogue",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Translated design fixture, not production functionality."
+    },
+    {
+      "id": "products-eu",
+      "title": "Products design eu",
+      "kind": "story",
+      "sources": [],
+      "locale": "eu",
+      "storyId": "inventory-products--catalogue",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Translated design fixture, not production functionality."
     }
   ]
 }

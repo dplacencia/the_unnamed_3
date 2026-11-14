@@ -67,8 +67,132 @@ context: |
   UI language from browser headers. The landing uses Spanish at / and localized
   /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
   one year (365 days), with no account-level or cross-device preference implied.
-  Current assignment: openspec/changes/define-backoffice-navigation/.
-  Latest steering: after committing the branding batch, the user selected
+  Current assignment: openspec/changes/define-products-table/.
+  Latest assignment, 2026-11-14: the user said "That is looking good, prepare the
+  commit before moving to the next steps". Follow prototype-plan.md's commit-
+  preparation scope: stage the bounded research/qualification/browsing batch,
+  provide the user's commit command and never commit. Candidate-image approval
+  and the next design pass remain separate; do not promote references automatically.
+  The user committed navigation corrections as f365765, authorized the proposed
+  Products-table definition step and requested reading the sibling product thesis
+  plus forum research into why people prefer Excel for inventory. Read the new
+  proposal/research/design/tasks. Preserve observations, self-reports, qualitative
+  research, design hypotheses and user approvals as distinct. A table-first
+  direction is now selected: the user chose "Table-first; editing on request
+  (Recommended)" under PT-001. Browsing/comparison comes first, editing is deliberate
+  and faster tools are available on request. Exact fields, controls, save/bulk
+  behavior, permissions, persistence and implementation remain undefined.
+  The selected first scenario is catalogue browsing/comparison with optional stock.
+  Further density, editing/bulk scope, customization and phone behavior remain open.
+  No general spreadsheet engine, UI code,
+  grid dependency, backend integration, staging, commit or archive is selected.
+  The previous 20 navigation images still require separate specific approval.
+  The user answered the main customer-task question "I dont know, try to find
+  some info in internet". Follow-up forum accounts identify stock review, counting
+  and ordering as candidate jobs, not measured prevalence or interviewee facts.
+  Do not repeat that unavailable factual question or the selected interaction
+  choice. The user selected "Catalogue + optional stock context (Recommended)"
+  under PT-002: optional read-only recorded stock for one clearly selected
+  location alongside the catalogue. This does not enable stock editing, define
+  default visibility/controls/location preferences, or implement UI.
+  The user selected "Use this initial column set (Recommended)" under PT-003:
+  Producto, Referencia (SKU), Unidad and Existencias registradas when stock context
+  is shown. Do not repeat the column-set question. The user selected
+  "Show stock on request (Recommended)" under PT-004: catalogue columns initially,
+  with Mostrar existencias revealing the stock column and location selector.
+  Do not repeat that presentation question. The user selected
+  "Remember per tab (Recommended)" under PT-005: retain Products stock visibility
+  and location while the tab stays open, keep location while stock is hidden,
+  select a sole accessible location automatically, ask with several, and start new
+  tabs catalogue-only. Scope stays page-owned; remembering proves neither access
+  nor validity. Do not repeat that retention question. The user selected
+  "Compact default + comfortable option (Recommended)" under PT-006: compact rows
+  by default with a merchant-selected comfortable setting and exact row sizes
+  compared in Storybook. PT-012 defines retention and PT-013 Vista grouping;
+  exact density controls/mobile layout remain open.
+  The user selected "One search field (Recommended)" under PT-007: one Buscar
+  productos input for partial names and exact SKU/barcodes, preserving codes and
+  leaving product choice to the merchant. Do not repeat that surface question.
+  The user selected "Enter or Buscar (Recommended)" under PT-008: explicit
+  submission, steady rows while typing and clearing only search while preserving
+  stock/location context. Do not repeat that trigger question. The user selected
+  "Single-column sorting (Recommended)" under PT-009: Producto A–Z initially,
+  one active Producto/SKU ascending/descending sort, text SKU and full matching
+  result-set ordering. Do not repeat that sorting question. The user selected
+  "Use these initial filters (Recommended)" under PT-010: optional Incluir archivados
+  and Solo con existencias registradas behind Filtros, the latter with selected-
+  location stock context using positive recorded stock in the configured reservation
+  dimension. Defaults retain eligible zero/no-record products. Do not repeat that
+  filter-set question. The user selected "Aplicar/Cancelar (Recommended)" under
+  PT-011: unapplied drafts discarded on close, removable applied labels, scoped
+  clearing and removal of the stock-only constraint when stock context is hidden
+  until explicitly selected again. Do not repeat that interaction question. The
+  user selected "Remember applied view per tab (Recommended)" under PT-012:
+  restore submitted search/sort/applied filters/density per tab within the same
+  business, new-tab defaults and unapplied search/filter drafts discarded on leaving.
+  Retain PT-005; business-edit policy stays undefined. Do not repeat that retention
+  question. The user selected "Vista with visibility/order/width (Recommended)"
+  under PT-013: Vista groups density/column tools, Producto included, stock under
+  Mostrar existencias, per-tab column choices and a column-only Restablecer columnas
+  reset. Do not repeat that customization question. The user selected
+  "Details panel (Recommended)" under PT-014: name activation opens read-only
+  desktop side panels or panels filling phone screens, retaining table settings.
+  Do not repeat that inspection question. The user selected
+  "All tracked measurements (Recommended)" under PT-015: all active stock measures
+  in one cell with units, configured main first, exact values and truthful
+  verification/unknown states under the owning quantities/tracking rules. Do not
+  repeat that measurement question. The user selected
+  "Full table + pinned Producto (Recommended)" under PT-016: horizontal scrolling,
+  sticky column header, Producto pinned left and saved desktop choices preserved.
+  Do not repeat that phone-model question. The user selected
+  "Panel + optional table editing (Recommended)" under PT-017: individual panel
+  and optional table editing, both deliberate drafts with Guardar/Cancelar and
+  read-only stock. Do not repeat that path question. Current steering requests
+  AG Grid expandable-row research and comparison with Tabulator 6.x and TanStack
+  Table, including commercial-use licences and TailAdmin fit. The user said continue.
+  The research addendum verifies both MIT commercial-use licences.
+  The user did not select the proposed TanStack-first candidate, asking for overall
+  feature power and platform fit beyond styling. Tabulator supplies more complete
+  grid operations; TanStack v9 supplies table/range engines and direct React
+  composition, with more interaction/integration work. The updated recommendation
+  is a small comparison of both on identical Irin cases before adoption, not an
+  approved implementation plan. AG Grid's relevant Master/Detail is Enterprise.
+  Initial source manifests were React Table 9.3.1 and Tabulator 6.7.1; the original
+  live vendor-demo checks were unavailable. Subsequent evaluation pins and actual
+  browser/build evidence supersede the desk-only limit in qualification-results.md.
+  Keep PT-014/PT-017; no production library/version/expansion choice is approved.
+  TanStack's homepage does not select Query, Router, Form or an app-wide store.
+  Latest authority: the user delegated any tests/comparisons needed and requested
+  the final recommendation. Follow define-products-table/qualification-plan.md;
+  evaluation-only dependencies/Storybook/Playwright work are authorized, superseding
+  the earlier research-only scope for this comparison. Production adoption,
+  new product decisions, staging/commits and reference promotion remain open.
+  The qualification is executed; read qualification-results.md for 34 browser
+  checks, rendering/heap/payload evidence, native accessibility findings and limits.
+  The final recommendation is TanStack Table for Irin's React/domain-workflow
+  composition and smaller vendor payload. Tabulator supplies more grid features
+  and has better measured large-fixture scroll/heap results with similar mount cost. Both are dev-only
+  evaluation dependencies; no production grid/expansion/field choice is approved.
+  Subsequent latest authority: "I agree, lets set TanStack. Continue with the design
+  based on that. Make sure you use the latest available pinned version".
+  PT-018 selects TanStack Table 9.3.1, verified latest stable on 2026-11-13 and
+  moved to an exact runtime dependency. PT-019 selects compact requested read-only
+  expansion plus the retained full panel. PT-020 selects barcode(s), lifecycle
+  status, hidden selected catalogue fields and Abrir detalles. PT-021 starts rows
+  collapsed and permits multiple independently opened summaries. These supersede
+  the comparison's pre-adoption status. Read foundation-decision.md and the first
+  browsing prototype-plan.md; only the bounded Storybook design is authorized.
+  Do not reopen the library, expansion/content or open-count choices.
+  The first browsing prototype is implemented and verified under prototype-plan.md:
+  54 code tests, 69 browser checks, 84 Products candidates and 451 unaffected
+  approved comparisons pass. Its exact source/capture identities and limits are
+  recorded there. All new candidates remain unapproved; existing 472 references
+  are unchanged. Filter/editing flows and production integration remain later work.
+  Fields, identifier operations, permissions, multi-row/save outcomes, draft lifecycle,
+  exact controls, hidden-sort behavior, matching/order, refresh, API support and
+  storage remain undefined.
+  Navigation reference: openspec/changes/define-backoffice-navigation/.
+  Earlier steering: after committing the branding batch, the user selected
   "Backoffice navigation and module structure" as the next design topic. Discuss
   the overall navigation model, then the initial module/shared-area map, honest
   availability, context, access visibility, shared settings/help, labels and depth.

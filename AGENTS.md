@@ -16,7 +16,128 @@ the linked records distinguish approved source decisions from newly recorded
 wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
-Current assignment: [backoffice navigation discovery](openspec/changes/define-backoffice-navigation/proposal.md).
+Current assignment: [Products table design](openspec/changes/define-products-table/proposal.md).
+Latest assignment — 2026-11-14: the user said “That is looking good, prepare the
+commit before moving to the next steps”. Follow the browsing plan's
+[commit-preparation scope](openspec/changes/define-products-table/prototype-plan.md#commit-preparation--2026-11-14):
+stage the research, qualification and browsing-prototype batch and provide the
+user's commit command; never commit. This does not approve candidate images or
+start the next design pass.
+Latest authority: the user accepted TanStack and instructed continued design with
+the latest available exact version. [PT-018–021 and source decisions](openspec/changes/define-products-table/foundation-decision.md)
+select `@tanstack/react-table@9.3.1`, compact read-only row summaries plus the full
+panel, identifiers/status/hidden catalogue fields and independently requested
+multiple expansions, initially collapsed. Registry verification confirms 9.3.1
+is current stable and eligible; it is now a runtime dependency. Other grids and
+React Virtual remain evaluation-only. Do not reopen these choices.
+The [first browsing prototype plan](openspec/changes/define-products-table/prototype-plan.md)
+authorizes a TailAdmin/TanStack Storybook design with synthetic data, optional
+Products slots in the existing navigation preview and browser/candidate coverage.
+Editing/filter flows, production fetching, exact visual-metric approval, image
+promotion, staging, commits and deployment do not follow from this design scope.
+The first browsing preview is implemented and verified: 54 code tests, 69 browser
+checks, 84 new candidate captures and 451 unaffected approved comparisons pass.
+Read the prototype plan's exact run/source and limitations before review or
+promotion. Candidates are unapproved; the existing 472 references are unchanged.
+Earlier comparison authority: the user authorized any tests/comparison needed and requested
+the final assessment/recommendation. Follow the bounded
+[qualification plan](openspec/changes/define-products-table/qualification-plan.md):
+evaluation-only dev dependencies, Storybook adapters and Playwright evidence are
+now authorized. Earlier research-only restrictions below are historical for this
+evaluation scope. At that checkpoint production grid adoption, product decisions, staging, commits
+and reference-image promotion remain unapproved.
+The [qualification results](openspec/changes/define-products-table/qualification-results.md)
+record 34 executed browser checks, repeated rendering/heap/payload evidence and
+the final TanStack recommendation. Tabulator has more supplied features and won
+the measured large-fixture scroll/heap comparison; its native ARIA finding
+and keyboard integration workaround remain documented. Both grids are dev-only
+evaluation dependencies at that checkpoint. The subsequent PT-018 adoption above
+supersedes its pre-adoption status. Do not rerun discovery questions already answered.
+After committing the navigation fixes as `f365765`, the user authorized the next
+table-definition step and requested research into why customers use Excel for
+inventory, using the sibling `project_idea.md` and public forums. Read this change's
+[research](openspec/changes/define-products-table/research.md),
+[design alternatives](openspec/changes/define-products-table/design.md) and
+[tasks](openspec/changes/define-products-table/tasks.md). Findings are qualitative
+evidence and proposed implications, not approval of unspecified choices or new
+customer interviews. The selected starting scenario is browsing/comparing the
+catalogue with optional read-only stock, not entering counts. The user selected “Table-first; editing on request
+(Recommended)”; PT-001 records that interaction direction, leaving detailed
+fields, save/bulk behavior and implementation undefined.
+The user does not know the interviewees' main spreadsheet task and asked for
+further internet research. Follow-up sources describe stock review, counts and
+ordering; these support candidate scenarios, not prevalence or invented customer
+facts. Do not repeat that factual question or the selected interaction-model
+question. The user selected catalogue plus optional read-only stock context for
+one clearly selected location under PT-002. Do not repeat that boundary question.
+PT-003 records the user's selected initial columns: Producto, Referencia (SKU),
+Unidad and Existencias registradas when stock context is shown. Do not repeat
+that column-set question. PT-004 records “Show stock on request (Recommended)”:
+catalogue columns initially, with Mostrar existencias revealing the stock column
+and location selector. Do not repeat that presentation question. PT-005 records
+per-tab visibility/location retention, keeping location while stock is hidden,
+sole accessible location automatic, several requiring a choice, and new tabs
+catalogue-only. Location stays page-owned; remembering is not current authority.
+Do not repeat that retention question. PT-006 records compact rows by default
+with a merchant-selected comfortable option and a Storybook comparison before
+fixing exact sizes. PT-012 defines retention and PT-013 Vista grouping; exact controls/mobile layout remain open.
+PT-007 records one Buscar productos field for partial names and exact SKU/barcodes,
+preserving codes and leaving the merchant to choose among matches. Do not repeat
+that search-surface question. PT-008 records Enter/Buscar submission, steady rows
+while typing and clearing only search while preserving stock/location context.
+Do not repeat that trigger question. PT-009 records Producto A–Z initially and
+one active ascending/descending sort through Producto/SKU headings, with text SKU
+and full-result-set ordering. Do not repeat that sorting question. PT-010 records
+Incluir archivados and, with selected-location stock context, Solo con existencias
+registradas behind Filtros. Use current domain archived/positive-stock meanings,
+including the configured reservation dimension and interface availability limits.
+Do not repeat that filter-set question. PT-011 records Aplicar/Cancelar with draft
+discard on close, removable applied-filter labels, scoped clearing and clearing
+the stock-only filter when stock context is hidden until explicitly selected again.
+Do not repeat that interaction question. PT-012 records submitted search, sort,
+applied filters and density retained per tab within the same business, new-tab
+defaults and discarding unapplied search/filter drafts on leaving. Retain PT-005;
+business-edit drafts remain undefined. Do not repeat that retention question.
+PT-013 records Vista grouping density/column visibility/order/width, per-tab column
+choices, Producto included, stock under Mostrar existencias and a column-only
+Restablecer columnas reset. Do not repeat that customization question. PT-014
+records product-name activation opening read-only details in a desktop side panel
+or a panel filling the phone screen, preserving table settings. Do not repeat that
+inspection question. PT-015 records all active stock measurements in one cell,
+with exact values, units, main/reservation first and truthful verification/unknown
+states under the owning quantity/tracking meaning. Do not repeat that measurement
+question. PT-016 records the full phone table with horizontal scrolling, sticky
+column header and Producto pinned left, preserving other visibility/order choices
+and saved desktop layout. Do not repeat that phone-model question. PT-017 records
+Editar in the product panel plus optional Editar tabla, both explicit drafts with
+Guardar/Cancelar and read-only stock. Do not repeat that path question.
+Current steering: research AG Grid expandable rows, Tabulator 6.x and TanStack
+Table, including commercial-use licensing and fit with TailAdmin. The user said
+continue. The research addendum verifies both MIT licences and official
+expansion/source models. The user did not choose the proposed TanStack-first
+candidate; they asked for overall power/platform fit beyond styling. The broader
+assessment finds Tabulator supplies more grid operations; TanStack v9 supplies
+table/range engines and direct React composition, with more interaction work.
+The proposed comparison was subsequently authorized and executed under the
+qualification plan; the results above supersede the desk-only recommendation.
+Initial source manifests were TanStack React Table 9.3.1 and Tabulator 6.7.1;
+the later exact evaluation pins and actual browser/build evidence are recorded
+in the results. PT-018 subsequently selects Table as a runtime dependency. The original live
+vendor demo was unavailable; the qualification tests our own matched fixtures.
+PT-018–021 subsequently select the library and expansion behavior. Evaluation
+versions/workloads/probes are recorded in the completed plan/results. Retain PT-014 and PT-017 while exploring
+in-row detail and actual family/variant hierarchies as separate concepts.
+Editable fields, identifier-operation scope, save outcomes, draft lifecycle,
+exact controls, hidden-sort handling, matching, refresh, storage and implementation
+remain unselected. Only TanStack Table is promoted to a selected dependency;
+continue the bounded browsing design without inventing editing or API semantics.
+Stock stays read-only in edit mode.
+Preserve existing values, TailAdmin, exact business meanings and user-chosen
+depth. No UI implementation, grid library, integration, staging or commit follows
+automatically from this research. The prior 20 navigation image updates remain
+pending specific approval and do not block this independent discovery step.
+
+Navigation reference: [backoffice navigation discovery](openspec/changes/define-backoffice-navigation/proposal.md).
 The user chose “Backoffice navigation and module structure” as the next design
 topic. NAV-001 records one shared sidebar grouped by module. NAV-002 records
 enabled modules in that sidebar with separate discovery for other available

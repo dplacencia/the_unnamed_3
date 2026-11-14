@@ -5,7 +5,12 @@ import { cache } from "./runtime.ts";
 
 export default defineConfig({
   ...base,
-  testMatch: ["catalogue-languages.spec.ts", "navigation.spec.ts"],
+  testMatch: [
+    "catalogue-languages.spec.ts",
+    "navigation.spec.ts",
+    "products-table.spec.ts",
+  ],
+  use: { ...base.use, baseURL: "http://localhost:6006" },
   projects: [
     { name: "languages", use: { viewport: { width: 1440, height: 1000 } } },
   ],

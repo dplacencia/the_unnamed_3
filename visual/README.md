@@ -55,6 +55,46 @@ assembled views cover Spanish, English, Catalan, Galician and Basque. Compound
 primitives and icons are inspected in compositions; this is representative source
 coverage, not every possible prop combination or complete accessibility testing.
 
+## Products browsing design
+
+Open http://localhost:6006/?path=/story/inventory-products--catalogue for the
+first TailAdmin/TanStack Products design. TanStack Table is now selected and
+exactly pinned at 9.3.1, freshly verified as latest stable. The
+[foundation record](../openspec/changes/define-products-table/foundation-decision.md)
+contains the user's library and expansion choices.
+
+The examples cover compact/comfortable rows, submitted search, requested scoped
+stock, Vista column controls, independent read-only summaries and the details
+panel. Try the Comfortable, Hidden columns, Stock context, Sole location and
+Archived product stories, alongside the theme/language/viewport controls. Data
+is synthetic; the archived story simulates explicit archived inclusion. Exact
+sizes, widget treatment and missing-value copy are design proposals. Applied
+filters, editing/save flows and production data retrieval are subsequent work.
+
+To capture only these 84 candidate cases (excluding the older navigation
+Products-frame story), run:
+
+```sh
+pnpm visual:prepare
+pnpm visual:capture --grep '(^| )products-'
+```
+
+`pnpm visual:test-languages` also runs the Products interaction, language,
+accessibility and responsive checks. `visual/products-table.config.ts` provides
+the focused suite with its own port/report. Candidates require the same explicit
+run/case approval as other designs. Do not promote them or the prior pending
+navigation revisions automatically. The current run is recorded in the
+[prototype plan](../openspec/changes/define-products-table/prototype-plan.md).
+
+Until those candidates are approved, compare the 451 unaffected accepted cases:
+
+```sh
+pnpm visual:compare --grep-invert '(^mobile .*navigation-)|(^| )products-|navigation-workspace-location-options|navigation-workspace-location-option-hovered'
+```
+
+This deliberately excludes new cases without references and the pending mobile
+navigation replacements. It does not approve, suppress or replace their review.
+
 ## Navigation prototype
 
 Open http://localhost:6006/?path=/story/navigation-merchant-workspace--workspace.

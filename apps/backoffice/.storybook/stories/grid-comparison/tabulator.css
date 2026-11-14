@@ -1,0 +1,72 @@
+.comparison-tabulator.tabulator {
+  border: 1px solid var(--color-gray-200);
+  background: var(--color-white);
+  font-family: inherit;
+  font-size: 14px;
+  color: inherit;
+}
+.comparison-tabulator .tabulator-header,
+.comparison-tabulator .tabulator-col {
+  background: var(--color-gray-50) !important;
+  color: inherit;
+  border-color: var(--color-gray-200) !important;
+}
+.comparison-tabulator .tabulator-col {
+  min-height: 40px;
+}
+.comparison-tabulator .tabulator-col-content {
+  padding: 0 8px !important;
+}
+.comparison-tabulator .tabulator-row {
+  min-height: 36px;
+  background: var(--color-white) !important;
+  border-color: var(--color-gray-200);
+  color: inherit;
+}
+.comparison-tabulator .tabulator-row .tabulator-cell {
+  height: 36px;
+  padding: 0 8px;
+  border-color: var(--color-gray-200);
+  line-height: 36px;
+}
+.comparison-tabulator[data-comfortable="true"] .tabulator-row .tabulator-cell {
+  height: 48px;
+  line-height: 48px;
+}
+.comparison-tabulator .tabulator-cell[data-column="stock"] {
+  font-variant-numeric: tabular-nums;
+}
+.comparison-tabulator .tabulator-cell input {
+  height: 34px !important;
+  min-height: 34px !important;
+}
+.comparison-tabulator [data-inline-target] {
+  white-space: normal;
+  width: 100%;
+}
+.comparison-tabulator .tabulator-range-overlay {
+  pointer-events: none;
+}
+html.dark .comparison-tabulator.tabulator,
+html.dark .comparison-tabulator .tabulator-row {
+  background: var(--color-gray-900) !important;
+  color: var(--color-gray-200);
+}
+html.dark .comparison-tabulator .tabulator-header,
+html.dark .comparison-tabulator .tabulator-col {
+  background: var(--color-gray-800) !important;
+  color: var(--color-gray-200);
+}
+@media (max-width: 639px) {
+  .comparison-tabulator .tabulator-row .tabulator-cell {
+    height: 44px;
+    line-height: 44px;
+  }
+}
+
+html.dark
+  .comparison-tabulator.tabulator
+  .tabulator-header
+  .tabulator-col.tabulator-range-highlight {
+  color: var(--color-gray-200);
+}

@@ -1,6 +1,11 @@
 "use client";
 
-import { useReducer, useState, type CSSProperties } from "react";
+import {
+  useReducer,
+  useState,
+  type CSSProperties,
+  type ReactNode,
+} from "react";
 import { useTranslations } from "next-intl";
 import {
   Sidebar,
@@ -87,6 +92,8 @@ export interface NavigationPrototypeProps {
   initialPage: Destination;
   permissionMode: PermissionMode;
   locationCount: "one" | "several";
+  productsContent?: ReactNode;
+  productsToolbar?: ReactNode;
 }
 
 export function NavigationPrototype(props: NavigationPrototypeProps) {
@@ -104,6 +111,8 @@ function Workspace({
   initialPage,
   permissionMode,
   locationCount,
+  productsContent,
+  productsToolbar,
 }: NavigationPrototypeProps) {
   const t = useTranslations("catalogue");
   const headerT = useTranslations("header");
@@ -377,13 +386,15 @@ function Workspace({
         <header
           className={cn(
             "sticky top-0 z-50 flex w-full shrink-0 flex-wrap items-center gap-x-3 gap-y-2 border-b border-gray-200 bg-white px-3 py-1 md:px-4 dark:border-gray-800 dark:bg-gray-900",
-            hasLocation && "max-sm:flex-nowrap max-sm:gap-x-2",
+            (hasLocation || (state.page === "products" && productsToolbar)) &&
+              "max-sm:flex-nowrap max-sm:gap-x-2",
           )}
         >
           <div
             className={cn(
               "flex min-w-0 flex-1 items-center gap-3",
-              hasLocation && "max-sm:gap-2",
+              (hasLocation || (state.page === "products" && productsToolbar)) &&
+                "max-sm:gap-2",
             )}
           >
             <Button
@@ -402,7 +413,9 @@ function Workspace({
             <h1
               className={cn(
                 "text-title-sm font-semibold text-gray-800 dark:text-white/90",
-                hasLocation && "min-w-0 max-sm:truncate",
+                (hasLocation ||
+                  (state.page === "products" && productsToolbar)) &&
+                  "min-w-0 max-sm:truncate",
               )}
               data-navigation-title
             >
@@ -412,7 +425,8 @@ function Workspace({
           <div
             className={cn(
               "flex min-w-0 shrink-0 items-center gap-3",
-              hasLocation && "max-sm:gap-2",
+              (hasLocation || (state.page === "products" && productsToolbar)) &&
+                "max-sm:gap-2",
             )}
           >
             {canView && locationPage && (
@@ -465,6 +479,7 @@ function Workspace({
                 </Select>
               </div>
             )}
+            {canView && state.page === "products" && productsToolbar}
             <Button
               variant="ghost"
               size={isMobile ? "icon-lg" : "icon-sm"}
@@ -502,9 +517,11 @@ function Workspace({
               className="text-sm text-gray-500 dark:text-gray-400"
               data-navigation-content
             >
-              {locationPage && !selected
-                ? t("navChooseLocationHint")
-                : t("navContentHint")}
+              {state.page === "products" && productsContent
+                ? productsContent
+                : locationPage && !selected
+                  ? t("navChooseLocationHint")
+                  : t("navContentHint")}
             </div>
           )}
         </div>

@@ -1,0 +1,213 @@
+.grid-comparison {
+  padding: 12px;
+  font-size: 14px;
+  color: var(--color-gray-800);
+  background: var(--color-white);
+  min-height: 100vh;
+}
+.grid-comparison header,
+.grid-comparison footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-block: 8px;
+}
+.grid-comparison h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.grid-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-block-end: 10px;
+}
+.grid-controls form {
+  display: flex;
+  gap: 4px;
+}
+.grid-comparison label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.grid-comparison input:not([type="checkbox"], [type="range"]),
+.grid-comparison select {
+  border: 1px solid var(--color-gray-300);
+  border-radius: 6px;
+  background: var(--color-white);
+  color: inherit;
+  padding: 5px 8px;
+  min-height: 36px;
+  max-width: 100%;
+}
+.grid-comparison input[type="checkbox"] {
+  accent-color: var(--color-brand-500);
+}
+.grid-comparison summary {
+  cursor: pointer;
+  padding: 8px;
+}
+.grid-menu {
+  position: absolute;
+  z-index: 30;
+  display: grid;
+  gap: 12px;
+  padding: 12px;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: 6px;
+}
+.comparison-viewport {
+  height: 480px;
+  overflow: auto;
+  position: relative;
+  border: 1px solid var(--color-gray-200);
+}
+.comparison-table {
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 0 8px;
+  text-align: start;
+  border-block-end: 1px solid var(--color-gray-200);
+  background: var(--color-white);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.comparison-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.comparison-table th {
+  background: var(--color-gray-50);
+  height: 40px;
+  font-weight: 600;
+}
+.comparison-table [data-pinned="true"] {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  box-shadow: 1px 0 var(--color-gray-200);
+}
+.comparison-table th[data-pinned="true"] {
+  z-index: 6;
+}
+.grid-cell-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.grid-cell-actions button,
+.grid-sort {
+  cursor: pointer;
+  min-height: 36px;
+  color: var(--color-brand-500);
+}
+.grid-sort {
+  color: inherit;
+}
+.grid-expand {
+  width: 36px;
+  flex-shrink: 0;
+}
+.grid-product {
+  text-align: start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.grid-comparison button:focus-visible,
+.grid-comparison summary:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: -2px;
+}
+.grid-inline {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px;
+  min-height: 72px;
+  background: var(--color-brand-25);
+  white-space: normal;
+}
+.grid-note {
+  width: 100%;
+}
+.grid-detail-panel {
+  width: min(480px, 100vw) !important;
+  max-width: none !important;
+}
+.grid-detail-panel form {
+  display: grid;
+  gap: 12px;
+}
+.grid-detail-panel label {
+  display: grid;
+  gap: 6px;
+}
+.grid-detail-panel input {
+  padding: 8px;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 6px;
+}
+.grid-probes {
+  margin-block-start: 16px;
+  font-size: 12px;
+}
+html.dark .grid-comparison {
+  background: var(--color-gray-900);
+  color: var(--color-gray-200);
+}
+html.dark .grid-comparison input,
+html.dark .grid-comparison select,
+html.dark .grid-menu,
+html.dark .comparison-table td {
+  background: var(--color-gray-900);
+  color: var(--color-gray-200);
+}
+html.dark .comparison-table th {
+  background: var(--color-gray-800);
+}
+html.dark .grid-product,
+html.dark .grid-expand {
+  color: var(--color-brand-300);
+}
+html.dark .grid-inline {
+  background: var(--color-gray-800);
+}
+@media (max-width: 639px) {
+  .grid-comparison {
+    padding: 8px;
+  }
+  .grid-controls form {
+    width: 100%;
+  }
+  .grid-controls input[type="search"] {
+    min-width: 0;
+    flex: 1;
+  }
+  .grid-controls button,
+  .grid-controls label,
+  .grid-controls summary,
+  .grid-cell-actions button {
+    min-height: 44px;
+  }
+  .grid-controls button {
+    padding-inline: 10px;
+  }
+  .grid-expand {
+    width: 44px;
+  }
+  .grid-detail-panel {
+    width: 100vw !important;
+  }
+}

@@ -19,6 +19,7 @@ import {
 } from "../runtime.ts";
 import { profiles, origins } from "../profiles.ts";
 import { navigationAction } from "../navigation-actions.ts";
+import { productsAction } from "../products-actions.ts";
 import type { Locale } from "../../apps/backoffice/src/i18n/configuration";
 
 const build = readBuild();
@@ -69,6 +70,8 @@ async function action(
 ) {
   if (name?.startsWith("navigation-"))
     return navigationAction(page, name, (entry.locale ?? "es") as Locale);
+  if (name?.startsWith("products-"))
+    return productsAction(page, name, (entry.locale ?? "es") as Locale);
   switch (name) {
     case "brand-font-inter":
       await page.getByRole("radio", { name: "Inter", exact: true }).check();
