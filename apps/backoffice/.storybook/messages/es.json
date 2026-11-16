@@ -332,5 +332,16 @@
   "prDiscardedCurrentUnavailable": "El borrador se ha descartado. No podemos cargar los datos actuales para iniciar otra edición.",
   "prUnconfirmedLabel": "Cambios sin confirmar",
   "prRecoveringLabel": "Comprobando…",
-  "prOtherWorkAvailable": "Puedes trabajar con otros productos."
+  "prOtherWorkAvailable": "Puedes trabajar con otros productos.",
+  "pfIncludeArchived": "Incluir archivados",
+  "pfPositiveStockOnly": "Solo con existencias registradas",
+  "pfPositiveStockHint": "Cantidad registrada mayor que cero en la medida configurada para las reservas.",
+  "pfClearFilters": "Limpiar filtros",
+  "pfRemoveFilter": "Quitar filtro: {filter}",
+  "pfChooseLocation": "Elige una ubicación para filtrar por existencias.",
+  "pfIncomplete": "{count, plural, one {No hemos podido evaluar # producto con este filtro de existencias.} other {No hemos podido evaluar # productos con este filtro de existencias.}} Los resultados están incompletos.",
+  "pfConfirmedCount": "{count, plural, one {# coincidencia confirmada} other {# coincidencias confirmadas}}",
+  "pfNoConfirmedMatches": "No hay coincidencias confirmadas",
+  "pfNoFilterMatches": "No hay productos que cumplan los filtros",
+  "pfNoFilterMatchesHint": "Revisa los filtros o prueba otra búsqueda."
 }

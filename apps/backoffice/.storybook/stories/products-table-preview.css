@@ -14,6 +14,49 @@
   display: flex;
   gap: 6px;
 }
+.products-search-controls {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 0;
+}
+.products-applied-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin-bottom: 10px;
+}
+.products-filter-chip {
+  max-width: 100%;
+  height: auto;
+  min-height: 32px;
+  white-space: normal;
+  text-align: start;
+}
+.products-filter-incomplete {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+}
+.products-filter-option {
+  white-space: normal;
+  align-items: flex-start;
+  padding-block: 6px;
+}
+.products-filter-option > [data-slot="checkbox"] {
+  margin-top: 2px;
+}
+.products-filter-hint {
+  margin-top: 3px;
+  font-size: 12px;
+  line-height: 18px;
+}
+.products-filter-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
 .products-search-field {
   position: relative;
   width: 260px;
@@ -339,6 +382,18 @@ html.dark .products-verification {
   color: var(--color-gray-400);
 }
 @media (width < 40rem) {
+  .products-search-controls {
+    width: 100%;
+  }
+  .products-search-controls .products-search {
+    flex: 1;
+    width: 0;
+    min-width: 0;
+  }
+  .products-filter-option,
+  .products-filter-chip {
+    min-height: 44px;
+  }
   .products-search {
     width: 100%;
   }

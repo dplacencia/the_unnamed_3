@@ -1476,3 +1476,26 @@ without treating every participial/status use as invalid. Task 9.11 is selected;
 copy implementation/contextual compact-label review is task 9.13, while the visual
 message box redesign remains deferred under 9.12. The current UI/source and
 specific image-approval task are unchanged by this documentation clarification.
+
+### Products filters and applied view — selected 2026-11-16
+
+After the user completed the prior recovery/reference checkpoint as `b6756f7`
+and `9849d58`, they selected **“Products filters and applied view (Recommended)”**.
+The [bounded filters preview plan](filters-preview-plan.md) authorizes completing
+selected PT-010–012 in the existing simulated frontend, preserving editing and
+recovery state. The checkpoint was verified clean before this pass; its staging
+authority is spent. The 832 accepted references and separate pending navigation
+review remain intact. New placement/visual metrics and candidate images require
+their own review; no new production mechanism or dependency is adopted.
+
+### Unassessed stock-filter candidates — selected 2026-11-16
+
+The user selected **“Confirmed matches + incomplete-results notice (Recommended)”**
+for stock-filter results when some otherwise query/archive-eligible products
+cannot be assessed. PT-042 shows only confirmed positive matches under PT-010
+and a clear incomplete-results notice with the number of unassessed products.
+Unknown stock does not become zero or a confirmed nonmatch. An empty confirmed
+subset with unassessed candidates is not a complete empty result. The alternative
+of waiting for all stock was not selected. Exact notice wording, placement and
+metrics remain preview proposals; the existing reservation-dimension/verification
+classifier must follow its owning source meaning rather than a new UI inference.

@@ -16,20 +16,49 @@ the linked records distinguish approved source decisions from newly recorded
 wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
-Latest assignment — 2026-11-16: the user said **“go ahead”** to the recommended
-two commit-preparation batches. Follow the [current preparation](openspec/changes/define-products-table/recovery-preview-plan.md#commit-preparation--2026-11-16)
-and tasks 9.19–9.21. Stage only the 30 implementation/specification/test files
-first and give the user the commit command. After verifying the user's first
-commit, stage the approved 232 PNGs and reference registry as the second batch.
-This supersedes earlier no-staging restrictions for these exact batches only.
-Never execute a commit. Keep unrelated navigation revisions and the deferred
-message box redesign outside this checkpoint.
+Latest assignment — 2026-11-16: the user said **“go ahead”** to preparing two
+sequential commit batches. Read the [filters commit-preparation record](openspec/changes/define-products-table/filters-preview-plan.md#commit-preparation--2026-11-16).
+Stage only the 24 implementation/specification/test/documentation files first and
+provide the user commit command. After the user commits that exact batch, verify
+it and stage the 433 approved-reference files as the second batch. Keep all other
+work outside the index. This new staging authority supersedes the earlier
+no-staging status for these exact batches only. Never create a commit.
 
-Latest visual approval — 2026-11-15: the user said **“That looks better, I accept
+Current assignment — 2026-11-16: the user selected **“Products filters and
+applied view (Recommended)”**. Execute the [bounded filters preview plan](openspec/changes/define-products-table/filters-preview-plan.md)
+and tasks 10.1–10.6 to complete selected PT-010–012 in the simulated table:
+archived inclusion, scoped positive recorded stock, Aplicar/Cancelar, removable
+applied labels, scoped clearing, per-tab retention and editing/recovery interaction.
+PT-042 additionally selects confirmed stock matches plus a clear notice/count of
+otherwise-eligible products that could not be assessed; an empty confirmed subset
+with unknowns is not a complete empty result. Follow the owning stock semantics
+and reuse the existing hidden-validation correction path before extending code.
+The exact approved presentation is recorded below. No new dependency/API,
+production storage/journal, pagination, search matching or message box redesign.
+The [final execution proof](openspec/changes/define-products-table/filters-preview-plan.md#execution-and-verification--2026-11-16)
+records 113 code tests, 139 combined browser checks, 440 Products candidates and
+451 unchanged-reference comparisons passing at source `3bf12996…`. The user then
+said **“I approve them. They looks ok”** for that exact 440-image set. All 440 are
+promoted: 80 new, 360 replacements and 472 unrelated references preserved, for
+**912 accepted references**. Read the [approval record](openspec/changes/define-products-table/filters-preview-plan.md#visual-approval-and-reference-promotion--2026-11-16).
+Post-approval verification now covers all 891 eligible cases at source `9be24237…`:
+888 unchanged passing cases plus three normalized phone replacements approved
+with **“Approve the three capture-only replacements”**, promoted and verified by
+nine repeated comparisons. The capture-only scroll fix, failed initial runs and
+partitioned proof are recorded in the plan. The separate 20 navigation revisions
+remain unapproved; the message box redesign remains deferred.
+
+The previous two user commits, `b6756f7` and `9849d58`, complete the recovery and
+approved-reference batches. Root verified that checkpoint clean before this new
+pass; task 9.21 is complete and the staging authority is spent. No staging,
+deployment or commit follows for filter work. The later exact image approval
+authorizes only the promotion above and verification. Never commit.
+
+Previous visual approval — 2026-11-15: the user said **“That looks better, I accept
 the review”** for all 232 images from `2026-11-14T23-55-57.165Z`, source
 `88dfe48b…`. Read the [approval and promotion record](openspec/changes/define-products-table/recovery-preview-plan.md#visual-approval-and-reference-promotion--2026-11-15).
 All 232 are promoted: 204 new recovery cases and 28 Products replacements; 600
-unrelated references are preserved and the current accepted baseline is 832.
+unrelated references were preserved and the then-accepted baseline was 832.
 The post-approval comparison passes all 811 expected cases in
 `2026-11-15T00-12-39.768Z`, with zero skipped/unexpected/flaky cases (task 9.18).
 Earlier 172/200-image pending
@@ -74,8 +103,9 @@ dependency follows. New candidate images require separate approval.
 Historical initial recovery checkpoint: read its [execution proof](openspec/changes/define-products-table/recovery-preview-plan.md#execution-and-verification--2026-11-14).
 That source `2058ed78…` passed 84 code tests, 124 browser checks, 172 captures
 and 607 comparisons. Its earlier pending run `2026-11-14T22-37-09.425Z` and
-628-entry baseline are superseded by the 232-image approval/current 832-entry
-baseline above. No production persistence/locking/API, staging or commit follows.
+628-entry baseline were superseded by the 232-image approval/then-832-entry
+baseline. The current baseline is 912 under the filters approval above.
+No production persistence/locking/API, staging or commit follows.
 Latest review: the user requested a more natural Spanish uncertainty message and
 explicitly deferred the message box redesign. Read the [review follow-up](openspec/changes/define-products-table/recovery-preview-plan.md#user-review--spanish-wording-and-later-message-box-revision)
 and tasks 9.11–9.13. The user rejected nominal “el/este guardado” and selected

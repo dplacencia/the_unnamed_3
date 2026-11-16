@@ -58,6 +58,7 @@ import {
   ArrowUpIcon,
   ChevronRightIcon,
   ClockIcon,
+  FilterIcon,
   InfoCircleIcon,
   LayoutGridIcon,
   LockIcon,
@@ -66,8 +67,12 @@ import {
 import { NavigationPrototype } from "./navigation-prototype";
 import {
   defaultProductsView,
+  applyProductsViewUpdate,
+  matchesProductQuery,
   previewProducts,
   readProductsView,
+  selectProducts,
+  type ProductsViewUpdate,
   type CatalogueColumn,
   type PreviewProduct,
   type ProductColumn,
@@ -291,7 +296,7 @@ function ProductsTable({
   productStatus,
 }: {
   view: ProductsView;
-  update: (next: Partial<ProductsView>) => void;
+  update: (next: ProductsViewUpdate) => void;
   records: PreviewProduct[];
   editor: ProductEditing;
   summary?: ReactNode;
@@ -307,6 +312,22 @@ function ProductsTable({
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const { panelId, inspect: setPanelId } = editor;
   const [viewOpen, setViewOpen] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [filterDraft, setFilterDraft] = useState({ ...view.filters });
+  const filterHintId = useId();
+  const selection = useMemo(
+    () => selectProducts(records, view),
+    [records, view],
+  );
+  const hasFilters =
+    view.filters.includeArchived || view.filters.positiveStockOnly;
+  const setFilterPanel = (open: boolean) => {
+    setFiltersOpen(open);
+    setFilterDraft(
+      open ? { ...view.filters } : { ...defaultProductsView.filters },
+    );
+    if (open) setViewOpen(false);
+  };
   const frame = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!frame.current) return;
@@ -327,12 +348,7 @@ function ProductsTable({
         header: t("ptProduct"),
         sortFn: (a, b) => a.original.name.localeCompare(b.original.name, "es"),
         filterFn: (row, _id, query: string) =>
-          !query ||
-          row.original.name
-            .toLocaleLowerCase("es")
-            .includes(query.toLocaleLowerCase("es")) ||
-          row.original.sku === query ||
-          row.original.barcodes.includes(query),
+          matchesProductQuery(row.original, query),
       },
       {
         id: "sku",
@@ -360,7 +376,7 @@ function ProductsTable({
   const table = useTable({
     features,
     columns,
-    data: records,
+    data: selection.products,
     getRowId: (record) => record.id,
     getRowCanExpand: () => true,
     autoResetAll: false,
@@ -424,51 +440,149 @@ function ProductsTable({
       }
     >
       <div className="products-toolbar">
-        <form
-          role="search"
-          className="products-search"
-          onSubmit={(event) => {
-            event.preventDefault();
-            update({ query: queryDraft });
-          }}
-        >
-          <div className="products-search-field">
-            <Input
-              type="search"
-              className="products-input"
-              aria-label={t("gridSearch")}
-              placeholder={t("gridSearch")}
-              value={queryDraft}
-              onChange={(event) => setQueryDraft(event.target.value)}
+        <div className="products-search-controls">
+          <form
+            role="search"
+            className="products-search"
+            onSubmit={(event) => {
+              event.preventDefault();
+              update({ query: queryDraft });
+            }}
+          >
+            <div className="products-search-field">
+              <Input
+                type="search"
+                className="products-input"
+                aria-label={t("gridSearch")}
+                placeholder={t("gridSearch")}
+                value={queryDraft}
+                onChange={(event) => setQueryDraft(event.target.value)}
+              />
+              {(queryDraft || view.query) && (
+                <Button
+                  type="button"
+                  size="icon-sm"
+                  variant="ghost"
+                  className="products-clear"
+                  aria-label={t("ptClearSearch")}
+                  onClick={() => {
+                    setQueryDraft("");
+                    update({ query: "" });
+                  }}
+                >
+                  <XIcon className="size-4" />
+                </Button>
+              )}
+            </div>
+            <Button type="submit" size={phone ? "lg" : "sm"}>
+              {t("gridFind")}
+            </Button>
+          </form>
+          <Popover open={filtersOpen} onOpenChange={setFilterPanel}>
+            <PopoverTrigger
+              render={
+                <Button
+                  type="button"
+                  variant="outline"
+                  size={phone ? "lg" : "sm"}
+                  aria-label={t("gridFilters")}
+                  data-products-filter-trigger
+                >
+                  <FilterIcon className="size-4" aria-hidden="true" />
+                  {t("gridFilters")}
+                </Button>
+              }
             />
-            {(queryDraft || view.query) && (
-              <Button
-                type="button"
-                size="icon-sm"
-                variant="ghost"
-                className="products-clear"
-                aria-label={t("ptClearSearch")}
-                onClick={() => {
-                  setQueryDraft("");
-                  update({ query: "" });
-                }}
-              >
-                <XIcon className="size-4" />
-              </Button>
-            )}
-          </div>
-          <Button type="submit" size={phone ? "lg" : "sm"}>
-            {t("gridFind")}
-          </Button>
-        </form>
+            <PopoverContent
+              align="end"
+              role="dialog"
+              aria-label={t("gridFilters")}
+              className="products-view-menu products-filters-menu"
+              data-products-filters
+            >
+              <PopoverTitle className="text-sm font-semibold">
+                {t("gridFilters")}
+              </PopoverTitle>
+              <label className="products-checkbox-label products-filter-option">
+                <Checkbox
+                  checked={filterDraft.includeArchived}
+                  onCheckedChange={(checked) =>
+                    setFilterDraft((current) => ({
+                      ...current,
+                      includeArchived: checked,
+                    }))
+                  }
+                />
+                {t("pfIncludeArchived")}
+              </label>
+              {view.stock && view.location ? (
+                <div>
+                  <label className="products-checkbox-label products-filter-option">
+                    <Checkbox
+                      checked={filterDraft.positiveStockOnly}
+                      aria-describedby={filterHintId}
+                      onCheckedChange={(checked) =>
+                        setFilterDraft((current) => ({
+                          ...current,
+                          positiveStockOnly: checked,
+                        }))
+                      }
+                    />
+                    {t("pfPositiveStockOnly")}
+                  </label>
+                  <p
+                    id={filterHintId}
+                    className="products-filter-hint products-muted"
+                  >
+                    {t("pfPositiveStockHint")}
+                  </p>
+                </div>
+              ) : view.stock ? (
+                <p className="products-filter-hint products-muted">
+                  {t("pfChooseLocation")}
+                </p>
+              ) : null}
+              <div className="products-filter-actions">
+                <Button
+                  type="button"
+                  variant="outline"
+                  size={phone ? "lg" : "sm"}
+                  onClick={() => setFilterPanel(false)}
+                >
+                  {t("gridCancel")}
+                </Button>
+                <Button
+                  type="button"
+                  size={phone ? "lg" : "sm"}
+                  data-products-filter-apply
+                  onClick={() => {
+                    update({ filters: filterDraft });
+                    setFilterPanel(false);
+                  }}
+                >
+                  {t("gridApply")}
+                </Button>
+              </div>
+            </PopoverContent>
+          </Popover>
+        </div>
         <label className="products-checkbox-label">
           <Checkbox
             checked={view.stock}
-            onCheckedChange={(checked) => update({ stock: checked })}
+            onCheckedChange={(checked) => {
+              if (!checked) setFilterPanel(false);
+              update({ stock: checked });
+            }}
           />
           {t("gridShowStock")}
         </label>
-        <Popover open={viewOpen} onOpenChange={setViewOpen}>
+        <Popover
+          open={viewOpen}
+          onOpenChange={(open) => {
+            setViewOpen(open);
+            if (open) setFilterPanel(false);
+          }}
+        >
           <PopoverTrigger
             render={
               <Button variant="outline" size={phone ? "lg" : "sm"}>
@@ -611,6 +725,51 @@ function ProductsTable({
           </Button>
         )}
       </div>
+      {hasFilters && (
+        <div className="products-applied-filters" data-products-applied-filters>
+          {(
+            [
+              ["includeArchived", "pfIncludeArchived"],
+              ["positiveStockOnly", "pfPositiveStockOnly"],
+            ] as const
+          ).map(([filter, label]) =>
+            view.filters[filter] ? (
+              <Button
+                key={filter}
+                type="button"
+                variant="outline"
+                size={phone ? "lg" : "xs"}
+                className="products-filter-chip"
+                aria-label={t("pfRemoveFilter", { filter: t(label) })}
+                data-products-filter-remove={filter}
+                onClick={() => update({ filters: { [filter]: false } })}
+              >
+                {t(label)}
+                <XIcon className="size-3.5" aria-hidden="true" />
+              </Button>
+            ) : null,
+          )}
+          <Button
+            type="button"
+            variant="link"
+            size={phone ? "lg" : "sm"}
+            data-products-clear-filters
+            onClick={() => update({ filters: defaultProductsView.filters })}
+          >
+            {t("pfClearFilters")}
+          </Button>
+        </div>
+      )}
+      {selection.unknownCount > 0 && (
+        <p
+          className="products-filter-incomplete products-muted"
+          data-products-filter-incomplete
+          role="status"
+          aria-atomic="true"
+        >
+          {t("pfIncomplete", { count: selection.unknownCount })}
+        </p>
+      )}
       {view.query && (
         <div className="products-applied-query">
           <span>{t("ptSearchFor", { query: view.query })}</span>
@@ -788,14 +947,27 @@ function ProductsTable({
         </Table>
         {!rows.length && (
           <div className="products-empty">
-            <p>{t("ptNoResults")}</p>
-            <p className="products-muted">{t("ptNoResultsHint")}</p>
+            <p>
+              {t(
+                selection.unknownCount > 0
+                  ? "pfNoConfirmedMatches"
+                  : hasFilters
+                    ? "pfNoFilterMatches"
+                    : "ptNoResults",
+              )}
+            </p>
+            <p className="products-muted">
+              {t(hasFilters ? "pfNoFilterMatchesHint" : "ptNoResultsHint")}
+            </p>
           </div>
         )}
       </div>
       <div className="products-results">
         <span data-products-count>
-          {t("ptResultCount", { count: rows.length })}
+          {t(
+            selection.unknownCount > 0 ? "pfConfirmedCount" : "ptResultCount",
+            { count: rows.length },
+          )}
         </span>
         {view.sort.id === "sku" && !view.visible.sku && (
           <span>
@@ -912,14 +1084,14 @@ export function ProductsTableWorkspace(
     }
   }, [key, view]);
   const update = useCallback(
-    (next: Partial<ProductsView>) =>
-      setView((current) => ({
-        ...current,
-        ...next,
-        ...(next.stock && props.locationCount === "one" && !current.location
-          ? { location: "sales-floor" }
-          : {}),
-      })),
+    (next: ProductsViewUpdate) =>
+      setView((current) =>
+        applyProductsViewUpdate(
+          current,
+          next,
+          props.locationCount === "one" ? "sales-floor" : undefined,
+        ),
+      ),
     [props.locationCount],
   );
   const locations =

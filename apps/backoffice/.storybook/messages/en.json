@@ -332,5 +332,16 @@
   "prDiscardedCurrentUnavailable": "The draft has been discarded. We cannot load the current data to start another edit.",
   "prUnconfirmedLabel": "Save unconfirmed",
   "prRecoveringLabel": "Checking save status…",
-  "prOtherWorkAvailable": "You can work with other products."
+  "prOtherWorkAvailable": "You can work with other products.",
+  "pfIncludeArchived": "Include archived products",
+  "pfPositiveStockOnly": "Only with recorded stock",
+  "pfPositiveStockHint": "Recorded quantity greater than zero in the measurement configured for reservations.",
+  "pfClearFilters": "Clear filters",
+  "pfRemoveFilter": "Remove filter: {filter}",
+  "pfChooseLocation": "Choose a location to filter by stock.",
+  "pfIncomplete": "{count, plural, one {We could not assess # product against this stock filter.} other {We could not assess # products against this stock filter.}} These results are incomplete.",
+  "pfConfirmedCount": "{count, plural, one {# confirmed match} other {# confirmed matches}}",
+  "pfNoConfirmedMatches": "No confirmed matches",
+  "pfNoFilterMatches": "No products match the filters",
+  "pfNoFilterMatchesHint": "Review the filters or try another search."
 }

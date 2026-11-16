@@ -1334,3 +1334,42 @@ submitted-command recovery SHALL remain applicable.
 - **WHEN** ownership enforcement, incompatible coordination or a production browser matrix is designed
 - **THEN** those mechanisms and qualification remain separate from this selected flow
 - **AND** no universal locking guarantee, retry-budget reset, dependency or new backend interface follows from this selection.
+
+### Requirement: PT-042 — Confirmed stock matches with incomplete-results notice
+
+With stock-only filtering, only confirmed PT-010 matches SHALL be shown. If
+otherwise query/archive-eligible products cannot be assessed, the view SHALL
+show a clear incomplete-results notice and their product count. Unknowns SHALL
+NOT become zero or confirmed nonmatches. An empty confirmed subset with
+unassessed candidates SHALL NOT be presented as a complete empty result.
+Wording and visual treatment remain review proposals.
+
+#### Scenario: Confirmed positive matches and unassessed candidates coexist
+
+- **WHEN** the selected-location stock filter has confirmed positive matches and other otherwise-query/archive-eligible products whose stock condition cannot be assessed
+- **THEN** the matching rows contain only confirmed positive matches under PT-010
+- **AND** the view clearly states that results are incomplete and counts the unassessed products rather than treating them as zero or confirmed nonmatches.
+
+#### Scenario: Query or archived inclusion narrows the candidate set
+
+- **WHEN** the submitted query or applied archived-inclusion choice excludes a product independently of stock
+- **THEN** that product is not counted among the otherwise-eligible candidates that could not be assessed
+- **AND** the incomplete-results count describes products, not their number of measurements or unrelated catalogue records.
+
+#### Scenario: No positive match can be confirmed while candidates remain unassessed
+
+- **WHEN** the confirmed-positive subset is empty but otherwise-eligible products remain unassessed
+- **THEN** the view retains the incomplete-results notice and unassessed-product count
+- **AND** it does not present that subset as a complete empty result or claim that all eligible products lack positive recorded stock.
+
+#### Scenario: A stock state is known or unresolved
+
+- **WHEN** a candidate has known zero/negative/no-record stock or an unresolved stock condition under the owning meaning
+- **THEN** PT-010's known nonmatches retain their meaning and unresolved data remains unassessed
+- **AND** this presentation choice does not redefine reservation dimensions, recorded quantities, verification flags or available-to-sell.
+
+#### Scenario: Implementation or exact presentation is proposed
+
+- **WHEN** classifier details, notice wording, placement, metrics or data-loading behavior are implemented or reviewed
+- **THEN** concrete classification follows the owning stock meaning and exact visual treatment remains a preview review proposal
+- **AND** this decision does not adopt a new API, refresh cadence, production storage, pagination, search matching or waiting-for-all-stock policy.

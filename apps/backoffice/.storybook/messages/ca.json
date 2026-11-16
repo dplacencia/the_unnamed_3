@@ -332,5 +332,16 @@
   "prDiscardedCurrentUnavailable": "L’esborrany s’ha descartat. No podem carregar les dades actuals per iniciar una altra edició.",
   "prUnconfirmedLabel": "Desament sense confirmar",
   "prRecoveringLabel": "S’està comprovant el desament…",
-  "prOtherWorkAvailable": "Pots treballar amb altres productes."
+  "prOtherWorkAvailable": "Pots treballar amb altres productes.",
+  "pfIncludeArchived": "Incloure arxivats",
+  "pfPositiveStockOnly": "Només amb existències registrades",
+  "pfPositiveStockHint": "Quantitat registrada superior a zero en la mesura configurada per a les reserves.",
+  "pfClearFilters": "Netejar filtres",
+  "pfRemoveFilter": "Treure filtre: {filter}",
+  "pfChooseLocation": "Tria una ubicació per filtrar per existències.",
+  "pfIncomplete": "{count, plural, one {No hem pogut avaluar # producte amb aquest filtre d’existències.} other {No hem pogut avaluar # productes amb aquest filtre d’existències.}} Els resultats són incomplets.",
+  "pfConfirmedCount": "{count, plural, one {# coincidència confirmada} other {# coincidències confirmades}}",
+  "pfNoConfirmedMatches": "No hi ha coincidències confirmades",
+  "pfNoFilterMatches": "No hi ha productes que compleixin els filtres",
+  "pfNoFilterMatchesHint": "Revisa els filtres o prova una altra cerca."
 }

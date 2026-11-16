@@ -455,3 +455,32 @@ exact run identities, resolved review findings, local build/font preparation
 corrections and simulation limits are recorded there. The exact 172-image gallery
 is pending user approval. The 628 accepted references, separate navigation review,
 production-policy gaps and never-commit boundary retain their status.
+
+### Products filters continuation — selected 2026-11-16
+
+The user selected **“Products filters and applied view (Recommended)”** to complete
+the approved PT-010–012 behavior through the [bounded simulated preview](filters-preview-plan.md).
+They then selected **“Confirmed matches + incomplete-results notice (Recommended)”**
+under PT-042: list confirmed stock matches and visibly count otherwise-eligible
+products that could not be assessed. Unknowns remain unassessed; an empty confirmed
+subset is not a complete empty result while unresolved candidates remain. Waiting
+for all stock is not the selected presentation. Exact notice treatment and other
+visual placement/metrics remain review proposals. The prior user commits
+`b6756f7`/`9849d58` complete the recovery checkpoint and spend its staging authority;
+832 accepted references remain intact. No new API, dependency, production journal,
+pagination/search policy, message-box redesign, reference promotion or commit
+was authorized by that initial preview selection.
+
+The user subsequently said **“I approve them. They looks ok”** for the exact
+440-image gallery from `2026-11-16T17-45-52.365Z`, source `3bf12996…`.
+The [approval and promotion record](filters-preview-plan.md#visual-approval-and-reference-promotion--2026-11-16)
+supersedes the pending-visual status for that exact set. All 440 cases are promoted:
+80 new entries, 360 replacements and 472 unrelated references preserved, for 912
+accepted references. The 891-case post-approval comparison includes Products and
+retains the separate navigation exclusions. Post-approval capture verification
+identified inconsistent scroll positions in three phone references. The user
+specifically approved their normalized replacements with **“Approve the three
+capture-only replacements”**; those three are promoted with the baseline still 912. Source-matched proof covers all 891 eligible cases: 888 unchanged passing
+cases and three freshly verified replacements. No product UI/tolerance change,
+new staging, commits, deployment,
+production integration or deferred message-box work follows from the approval.

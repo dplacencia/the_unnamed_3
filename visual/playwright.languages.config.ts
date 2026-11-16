@@ -10,6 +10,7 @@ export default defineConfig({
     "navigation.spec.ts",
     "products-table.spec.ts",
     "products-recovery.spec.ts",
+    "products-filters.spec.ts",
   ],
   use: { ...base.use, baseURL: "http://localhost:6006" },
   projects: [

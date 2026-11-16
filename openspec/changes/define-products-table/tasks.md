@@ -252,6 +252,56 @@ Checked steps record work performed, not acceptance of proposed table choices.
 - [x] 9.20 Verify and stage only the 30 implementation/specification/test files;
       keep the 233 approved reference files outside the first index and provide
       the user commit command. Never execute a commit.
-- [ ] 9.21 After verifying the user's first commit, stage the approved 232 PNGs
-      and registry as the second batch and provide its user commit command;
-      never execute either commit or include unrelated navigation revisions.
+- [x] 9.21 The user completed both prepared batches as `b6756f7` and `9849d58`;
+      root verified the checkpoint clean with no pending staged changes before
+      the next pass. Both staging authorizations are spent. No agent committed;
+      unrelated navigation revisions remain outside the checkpoint.
+
+## Products filters and applied-view preview
+
+- [x] 10.1 Record the user's **“Products filters and applied view (Recommended)”**
+      selection and prepare the [bounded implementation plan](filters-preview-plan.md)
+      before UI changes, preserving approved PT-010–012 and unresolved visual metrics.
+- [x] 10.1a Record PT-042: the user selected confirmed positive matches plus an
+      incomplete-results notice/count for otherwise-eligible unassessed products;
+      an empty confirmed subset with unknowns is not a complete empty result.
+- [x] 10.2 Complete the pre-code positive-recorded-stock/source assessment and
+      hidden-validation correction/retention integration review; record evidence
+      without inventing missing product or quantity policies.
+- [x] 10.3 Implement the selected filter/applied-view model with meaningful
+      red/green tests, retaining exact values and independent business drafts,
+      including PT-042's incomplete-results and empty-subset behavior.
+- [x] 10.4 Add requested controls, removable applied labels, scoped clearing and
+      per-tab retention to the existing simulated table; preserve editing/recovery
+      protections and all five catalogue languages.
+- [x] 10.5 Run focused/required quality and browser checks; audit actual affected
+      cases, capture responsive/theme/language candidates and compare genuinely
+      unchanged references. Final 113-code/139-browser/440-candidate/451-comparison proof is
+      recorded in the [execution record](filters-preview-plan.md#execution-and-verification--2026-11-16);
+      final documentation checks are recorded there alongside this closeout.
+- [x] 10.6 Present the exact filter preview/gallery for specific user approval;
+      preserve the 832 accepted references, separate pending navigation review,
+      deferred message box redesign and no new staging/commit authority.
+      The user approved all 440 images with “I approve them. They looks ok” on
+      2026-11-16; see the [approval record](filters-preview-plan.md#visual-approval-and-reference-promotion--2026-11-16).
+- [x] 10.7 Promote the exact approved 440-case selection, preserving all 472
+      unrelated references and recording the resulting 912-entry baseline.
+- [x] 10.8 Verify the 891-case post-approval scope including Products, excluding
+      the retained 29 navigation cases (20 pending revisions and nine unchanged
+      mobile cases). The initial full run's scroll differences led to a scoped
+      capture-only correction and three specifically approved phone replacements.
+      Final source-matched proof covers 888 unchanged passing cases plus those
+      three replacements verified by nine repeated comparisons; see the
+      [post-approval record](filters-preview-plan.md#three-normalized-phone-references--approved-2026-11-16).
+
+## Filters checkpoint commit preparation
+
+- [x] 10.9 Record the user's “go ahead” to two exact sequential staging batches,
+      their 24/433-file scope and verification boundary in the
+      [preparation record](filters-preview-plan.md#commit-preparation--2026-11-16).
+- [x] 10.10 Verify and stage only the 24 implementation/specification/test/docs
+      files; leave approved references unstaged and provide the user commit command.
+- [ ] 10.11 After the user's first commit, verify it against the prepared manifest,
+      then stage only the 433 approved-reference files and provide its commit command.
+- [ ] 10.12 Verify both user commits and the remaining checkpoint status. Never
+      create a commit; keep the separate pending navigation review outside this work.

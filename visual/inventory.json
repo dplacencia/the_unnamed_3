@@ -1604,10 +1604,153 @@
         },
         {
           "id": "expanded",
-          "action": "products-expanded"
+          "action": "products-archived-expanded"
         }
       ],
       "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."
+    },
+    {
+      "id": "products-filters",
+      "title": "Products filters and applied view",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products--filters",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "panel",
+          "action": "products-filters-panel"
+        },
+        {
+          "id": "draft",
+          "action": "products-filters-draft"
+        },
+        {
+          "id": "archived",
+          "action": "products-filters-archived"
+        },
+        {
+          "id": "stock-panel",
+          "action": "products-filters-stock-panel"
+        },
+        {
+          "id": "positive",
+          "action": "products-filters-positive"
+        },
+        {
+          "id": "incomplete-empty",
+          "action": "products-filters-incomplete-empty"
+        },
+        {
+          "id": "no-match",
+          "action": "products-filters-no-match"
+        },
+        {
+          "id": "cleared",
+          "action": "products-filters-cleared"
+        },
+        {
+          "id": "hidden-draft",
+          "action": "products-filters-hidden-draft"
+        },
+        {
+          "id": "restored",
+          "action": "products-filters-restored"
+        }
+      ],
+      "limitation": "Synthetic filter/applied-view design only. Stock membership uses explicit fixture configuration and recorded quantities; unassessed stock stays distinct from confirmed nonmatches. No API or production persistence; candidates require explicit visual approval."
+    },
+    {
+      "id": "products-filters-recovery",
+      "title": "Products filters preserve recovery uncertainty",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--exhausted",
+      "cases": [
+        {
+          "id": "pending",
+          "action": "products-filters-recovery-pending"
+        }
+      ],
+      "limitation": "Synthetic filters and recovery only. Hiding a product does not resolve its submitted command. No API, journal or real cross-tab ownership; candidates require explicit visual approval."
+    },
+    {
+      "id": "products-filters-en",
+      "title": "Products filters en",
+      "kind": "story",
+      "sources": [],
+      "locale": "en",
+      "storyId": "inventory-products--filters",
+      "cases": [
+        {
+          "id": "panel",
+          "action": "products-filters-panel"
+        },
+        {
+          "id": "positive",
+          "action": "products-filters-positive"
+        }
+      ],
+      "limitation": "Synthetic translated filter/applied-view design only. No API or production persistence; candidates require explicit visual approval."
+    },
+    {
+      "id": "products-filters-ca",
+      "title": "Products filters ca",
+      "kind": "story",
+      "sources": [],
+      "locale": "ca",
+      "storyId": "inventory-products--filters",
+      "cases": [
+        {
+          "id": "panel",
+          "action": "products-filters-panel"
+        },
+        {
+          "id": "positive",
+          "action": "products-filters-positive"
+        }
+      ],
+      "limitation": "Synthetic translated filter/applied-view design only. No API or production persistence; candidates require explicit visual approval."
+    },
+    {
+      "id": "products-filters-gl",
+      "title": "Products filters gl",
+      "kind": "story",
+      "sources": [],
+      "locale": "gl",
+      "storyId": "inventory-products--filters",
+      "cases": [
+        {
+          "id": "panel",
+          "action": "products-filters-panel"
+        },
+        {
+          "id": "positive",
+          "action": "products-filters-positive"
+        }
+      ],
+      "limitation": "Synthetic translated filter/applied-view design only. No API or production persistence; candidates require explicit visual approval."
+    },
+    {
+      "id": "products-filters-eu",
+      "title": "Products filters eu",
+      "kind": "story",
+      "sources": [],
+      "locale": "eu",
+      "storyId": "inventory-products--filters",
+      "cases": [
+        {
+          "id": "panel",
+          "action": "products-filters-panel"
+        },
+        {
+          "id": "positive",
+          "action": "products-filters-positive"
+        }
+      ],
+      "limitation": "Synthetic translated filter/applied-view design only. No API or production persistence; candidates require explicit visual approval."
     },
     {
       "id": "products-en",

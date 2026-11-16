@@ -67,18 +67,45 @@ context: |
   UI language from browser headers. The landing uses Spanish at / and localized
   /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
   one year (365 days), with no account-level or cross-device preference implied.
-  Latest assignment 2026-11-16: user said "go ahead" to two commit-preparation
-  batches. Follow recovery-preview-plan.md's commit-preparation record and tasks
-  9.19–9.21. Stage only 30 implementation/specification/test files first and provide
-  the user's commit command. After verifying the user committed that batch, stage
-  the approved 232 PNGs and reference registry as batch two. This supersedes prior
-  no-staging restrictions only for these batches. Never execute commits; unrelated
-  navigation review and deferred message box redesign remain outside scope.
-  Latest visual approval 2026-11-15: user said "That looks better, I accept the
+  Latest assignment 2026-11-16: user said "go ahead" to preparing two sequential
+  commit batches. Read filters-preview-plan.md's commit-preparation record.
+  Stage the exact 24 implementation/specification/test/documentation files first;
+  give the user the commit command. After the user commits that batch, verify it
+  and stage the 433 approved-reference files as batch two. This supersedes earlier
+  no-staging status for these exact batches only. Never create commits.
+  Current assignment 2026-11-16: user selected "Products filters and applied view
+  (Recommended)". Execute filters-preview-plan.md and tasks 10.1–10.6 to complete
+  approved PT-010–012 in the simulated table: archived inclusion, scoped positive
+  recorded stock, Aplicar/Cancelar, removable applied labels, scoped clearing,
+  per-tab retention and editing/recovery interaction. PT-042 adds confirmed stock
+  matches plus an incomplete-results notice/count of otherwise-eligible unassessed
+  products; an empty confirmed subset with unknowns is not a complete empty result.
+  Follow owning stock semantics and reuse the existing hidden-validation review
+  path. The final execution
+  proof in filters-preview-plan.md records 113 code tests, 139 combined browser
+  checks, 440 Products candidates and 451 unchanged-reference comparisons passing
+  at source 3bf12996. The user then said "I approve them. They looks ok" for that
+  exact 440-image set in run 2026-11-16T17-45-52.365Z. All 440 are promoted:
+  80 new, 360 replacements and 472 unrelated entries preserved, for 912 accepted
+  references. Read filters-preview-plan.md's approval/promotion record. The
+  891-case post-approval verification is complete at source 9be24237: 888 unchanged
+  passing cases plus three normalized phone replacements approved with
+  "Approve the three capture-only replacements", promoted and verified by nine
+  repeated comparisons. Read the plan's capture-only scroll correction and
+  partitioned proof; the failed initial runs remain recorded.
+  No new dependency/API, production storage/journal, pagination, search
+  matching or message box redesign. Preserve 912 accepted references and the
+  separate 20 unapproved navigation revisions.
+  Prior user commits b6756f7/9849d58 complete the recovery/reference batches; root
+  verified a clean checkpoint before this pass. Task 9.21 is complete and both
+  staging authorizations are spent. No new staging, deployment or commit follows
+  for filter work. The later exact image approval authorizes only promotion and
+  verification. Never commit.
+  Previous visual approval 2026-11-15: user said "That looks better, I accept the
   review" for all 232 images from 2026-11-14T23-55-57.165Z, source 88dfe48b.
   Read recovery-preview-plan.md's visual-approval-and-reference-promotion record.
   Promotion is complete: 204 new recovery cases, 28 Products replacements and 600
-  unrelated references preserved; current accepted baseline is 832. Post-approval
+  unrelated references preserved; the then-accepted baseline was 832. Post-approval
   run 2026-11-15T00-12-39.768Z passes all 811 expected cases, with zero skipped/
   unexpected/flaky cases and exit 0 (task 9.18).
   Earlier 172/200-image pending proof is historical/superseded for this review.
@@ -116,8 +143,9 @@ context: |
   follows. Never commit.
   Historical initial preview proof: source 2058ed78 passed 84 code tests, 124
   browser checks, 172 captures and 607 comparisons. That pending run and 628-entry
-  baseline are superseded by the latest 232-image approval/current 832-entry
-  baseline above; retain the original proof's source-specific meaning.
+  baseline were superseded by the 232-image approval/then-832-entry baseline.
+  The current baseline is 912 under the filters approval above; retain the
+  original proof's source-specific meaning.
   Latest review requests natural Spanish uncertainty wording and defers message
   box redesign. Read recovery-preview-plan.md's clarification/tasks 9.11–9.13.
   The user rejects nominal "el/este guardado" and selects "No hemos podido confirmar
@@ -189,7 +217,7 @@ context: |
   values are read-only/selectable while the fixture pauses submission; recovery
   and real storage remain unselected. All 156 Products images are now accepted;
   the prior 20 navigation updates remain pending. Preserve that historical
-  628-entry checkpoint and the current 832-entry approved baseline above.
+  628-entry checkpoint; the current approved baseline is 912 above.
   Keep explicit-editing and draft/save/cancel boundaries.
   The preceding staging scope
   is complete and grants no staging authority for new work. Do not infer image

@@ -332,5 +332,16 @@
   "prDiscardedCurrentUnavailable": "Zirriborroa baztertu da. Ezin ditugu uneko datuak kargatu beste edizio bat hasteko.",
   "prUnconfirmedLabel": "Gordetzea berretsi gabe",
   "prRecoveringLabel": "Gordetzea egiaztatzen…",
-  "prOtherWorkAvailable": "Beste produktu batzuekin lan egin dezakezu."
+  "prOtherWorkAvailable": "Beste produktu batzuekin lan egin dezakezu.",
+  "pfIncludeArchived": "Sartu artxibatutakoak",
+  "pfPositiveStockOnly": "Erregistratutako izakinak dituztenak soilik",
+  "pfPositiveStockHint": "Erreserbetarako konfiguratutako neurrian zero baino handiagoa den kantitate erregistratua.",
+  "pfClearFilters": "Garbitu iragazkiak",
+  "pfRemoveFilter": "Kendu iragazkia: {filter}",
+  "pfChooseLocation": "Aukeratu kokapen bat izakinen arabera iragazteko.",
+  "pfIncomplete": "{count, plural, one {Izakinen iragazki honekin ezin izan dugu # produktu ebaluatu.} other {Izakinen iragazki honekin ezin izan ditugu # produktu ebaluatu.}} Emaitzak osatu gabe daude.",
+  "pfConfirmedCount": "{count, plural, one {# bat-etortze berretsita} other {# bat-etortze berretsita}}",
+  "pfNoConfirmedMatches": "Ez dago berretsitako bat-etortzerik",
+  "pfNoFilterMatches": "Ez dago iragazkiak betetzen dituen produkturik",
+  "pfNoFilterMatchesHint": "Berrikusi iragazkiak edo egin beste bilaketa bat."
 }

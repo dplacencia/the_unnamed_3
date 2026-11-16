@@ -39,6 +39,7 @@ export const SoleLocation: Story = {
   args: { initialStock: true, locationCount: "one" },
 };
 export const ArchivedProduct: Story = { args: { archivedFixture: true } };
+export const Filters: Story = { args: { archivedFixture: true } };
 export const EditingMixed: Story = { args: { saveFixture: "mixed" } };
 export const EditingUnconfirmed: Story = {
   args: { saveFixture: "unconfirmed" },
