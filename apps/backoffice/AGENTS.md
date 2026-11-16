@@ -20,13 +20,95 @@ the exact approval and identities. Require new image approval for replacements.
 The
 [visual review workflow](../../openspec/changes/define-visual-review-workflow/proposal.md)
 is implemented; preserve its review rules and the technical sources as constraints.
+Latest assignment — 2026-11-16: the user said **“go ahead”** to the recommended
+two commit-preparation batches. Follow the [current preparation](../../openspec/changes/define-products-table/recovery-preview-plan.md#commit-preparation--2026-11-16)
+and tasks 9.19–9.21. Stage only the 30 implementation/specification/test files
+first and give the user the commit command. After verifying the user's first
+commit, stage the approved 232 PNGs and reference registry as the second batch.
+This supersedes earlier no-staging restrictions for these exact batches only.
+Never execute a commit. Keep unrelated navigation revisions and the deferred
+message box redesign outside this checkpoint.
+
+Latest visual approval — 2026-11-15: the user said **“That looks better, I accept
+the review”** for all 232 images from `2026-11-14T23-55-57.165Z`, source
+`88dfe48b…`. Read the [approval and promotion record](../../openspec/changes/define-products-table/recovery-preview-plan.md#visual-approval-and-reference-promotion--2026-11-15).
+All 232 are promoted: 204 new recovery cases and 28 Products replacements; 600
+unrelated references are preserved and the current accepted baseline is 832.
+The post-approval comparison passes all 811 expected cases in
+`2026-11-15T00-12-39.768Z`, with zero skipped/unexpected/flaky cases (task 9.18).
+Earlier 172/200-image pending
+proof is historical and superseded for this review. Message box redesign and
+the separate 20 navigation revisions remain deferred/unapproved. No staging,
+commit or deployment follows. Never commit.
+
+Previous copy review follow-up — 2026-11-15: the user authorized applying the Spanish
+copy correction to the simulated previews. Read the [copy revision](../../openspec/changes/define-products-table/recovery-preview-plan.md#spanish-copy-revision--authorized-2026-11-15).
+The contextual copy/compact labels were verified in that historical 200-image
+candidate set, with 579 unaffected comparisons passing. The latest 232-image
+approval above includes its affected cases. Keep the message box redesign
+deferred; that prior proof does not describe the current accepted count.
+
 The current [Products table design](../../openspec/changes/define-products-table/proposal.md)
 now follows the user's TanStack acceptance and continued-design instruction.
-Latest staging authority: “go ahead” after the two-batch checkpoint recommendation.
-Follow [commit preparation](../../openspec/changes/define-products-table/editing-plan.md#commit-preparation--2026-11-14):
-25 code/specification/test files first, then 156 approved PNGs plus manifest only
-after the user commits batch 1. Return commit commands; never commit.
-Do not begin the next design pass before this checkpoint completes.
+Latest continuation: the user said “go ahead” to defining retry-budget and
+browser-persistence details. Read the [technical decision record](../../openspec/changes/define-products-table/recovery-technical-design.md).
+PT-034 selects three attempts total, 15 seconds per attempt and 1/3-second waits
+with ±50% jitter; no deliberate overlapping attempts under PT-039's actual
+cross-tab capability. The user rejected an IndexedDB-only gate: PT-035 is
+preferred storage, and PT-036 requires compatible behavior when it is absent/fails.
+PT-037 selects IndexedDB→localStorage→open-app memory fallbacks and a nonblocking retention notice; memory does not promise
+reopening recovery. PT-038 selects a new bounded run of up to three requests per
+explicit manual retry/continuation after the previous run stops, using the same
+original command and PT-034 timing. PT-039 selects coordination when possible:
+show another known active run and avoid a second deliberate run; if coordination
+is unavailable, recovery stays usable here with an honest limitation notice.
+Missing status is not proof no other run exists. No automatic restart or active
+run reset. PT-040 rejects a second edit of the same product with a clear error;
+the user rejected the independent-drafts proposal and asked to define an explicit
+discard/takeover flow that accounts for the original tab being closed. PT-041
+allows explicit takeover or confirmed discard/start for an accessible unsent draft
+when its owner is unreachable/unknown; the previous editor is read-only on return.
+A known active editor still blocks a second edit. No automatic transfer/discard.
+Production ownership enforcement and unavailable-coordination editing behavior
+remain unselected. The user selected building the bounded simulated preview;
+UI changes within that plan are authorized. Dependencies and staging are outside
+that scope. Never commit.
+The [bounded recovery preview plan](../../openspec/changes/define-products-table/recovery-preview-plan.md) is now authorized by “Build the simulated preview (Recommended)”. Use synthetic
+commands, capability states and virtual ownership; no production mechanism or new
+dependency follows. New candidate images require separate approval.
+Historical initial recovery checkpoint: read its [execution proof](../../openspec/changes/define-products-table/recovery-preview-plan.md#execution-and-verification--2026-11-14).
+That source `2058ed78…` passed 84 code tests, 124 browser checks, 172 captures
+and 607 comparisons. Its earlier pending run `2026-11-14T22-37-09.425Z` and
+628-entry baseline are superseded by the 232-image approval/current 832-entry
+baseline above. No production persistence/locking/API, staging or commit follows.
+Latest review: the user requested a more natural Spanish uncertainty message and
+explicitly deferred the message box redesign. Read the [review follow-up](../../openspec/changes/define-products-table/recovery-preview-plan.md#user-review--spanish-wording-and-later-message-box-revision)
+and tasks 9.11–9.13. The user rejected nominal “el/este guardado” and selected
+“No hemos podido confirmar que los cambios se han guardado.” plus the matching
+help sentence. Refer to changes/edits and use guardar verbally in this context;
+review compact labels individually. Copy implementation is tracked separately;
+retain the deferred message box design. That historical 172-image pending status
+is superseded by the latest exact approval above.
+Latest assignment continues save-recovery/draft discovery. After an Inventory
+source check, the user selected PT-028's bounded automatic unchanged retries plus
+manual fallback. Read the [source findings and selection](../../openspec/changes/define-products-table/design.md#inventory-retry-findings-and-selected-recovery-direction--2026-11-14).
+The old read-only-only/no-resend suggestion was not selected. Original command
+identity/content and supported availability govern; name/SKU editors remain
+synthetic. PT-029 selects pausing only affected products. PT-030 permits saving
+other editable products during recovery. Where persistent retention is usable and
+copies are accessible, PT-031/032 restore submitted records/unsent drafts in the
+same browser/business/user scope, only on request, with Products initially read-only.
+Memory-only mode does not promise reopening recovery. PT-033 reviews only changed
+current data against an unsent draft's baseline; no automatic merge/overwrite.
+PT-034/038 define initial/manual run budgets; remaining storage policies,
+command grouping, comparison and
+concurrency remain open.
+Those discovery choices alone did not authorize UI; the bounded simulated preview
+is now authorized above. Production integration, reference acceptance, staging
+and commits remain outside scope.
+The [checkpoint is complete](../../openspec/changes/define-products-table/editing-plan.md#completed-checkpoint-and-email-privacy-repair--2026-11-14)
+as user commits `6636828` and `eb49dea`, after their content-preserving email
+repair. That staging scope is spent. Never commit.
 Latest authority: the user explicitly approved all current revisions after the
 156-image Products gallery. Those exact references are promoted (628 baseline
 entries); see the [approval record](../../openspec/changes/define-products-table/editing-plan.md#visual-approval--2026-11-14).

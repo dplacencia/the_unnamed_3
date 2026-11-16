@@ -7,7 +7,7 @@ const output = path.join(root, ".cache/products-table");
 export default defineConfig({
   ...base,
   use: { ...base.use, baseURL: "http://localhost:6012" },
-  testMatch: "products-table.spec.ts",
+  testMatch: ["products-table.spec.ts", "products-recovery.spec.ts"],
   outputDir: path.join(output, "test-results"),
   reporter: [
     ["list"],

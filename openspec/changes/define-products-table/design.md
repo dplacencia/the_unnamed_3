@@ -1051,3 +1051,428 @@ The subsequent explicit approval accepts the current 156-image Products visuals;
 see the [approval record](editing-plan.md#visual-approval--2026-11-14). This replaces
 the pending-image status for that exact run without choosing recovery/storage
 behavior or accepting any future changed images.
+
+## Unconfirmed-save verification — proposal 2026-11-14
+
+**Historical proposal, not selected.** The user requested an Inventory operation-identity
+check before deciding. The source-checked retry selection below supersedes this
+earlier read-only-only recovery framing and its no-automatic-resubmission suggestion.
+
+### Source and current state
+
+After completing both commit batches and verifying the user's email-privacy
+repair/push, the user said **“go ahead”** to defining save recovery and draft
+handling. This authorizes the next discovery step, not implementation of
+unspecified recovery behavior. PT-023–027 remain selected: individual truthful
+outcomes, retained failed/unconfirmed drafts, the local validation gate, the
+in-app departure guard and dismissible results. Do not reopen those choices.
+
+The current controller returns without submitting when `hasUnconfirmed` is true,
+keeps the unconfirmed draft read-only and preserves unresolved results through
+explicit draft discard. Resetting the fixture is the sample's current recovery
+limit. That is not an adopted product policy or evidence of a production write
+or operation-status interface.
+
+### Recommended first decision
+
+Recommend automatic read-only verification of the original requested change's
+outcome where authoritative verification is supported. Preserve its submitted
+snapshot, drafts and visible uncertainty while checking. If checking cannot
+resolve the outcome, keep it unconfirmed and offer an explicit Comprobar de
+nuevo action. This reduces recovery work for beginners while keeping business
+writes deliberate and preserving the honest current status.
+
+The alternative is verification only when the merchant requests it. This makes
+check initiation explicit but asks merchants to take another step to resolve an
+uncertain save. Neither option selects automatic resubmission, overwrite,
+rollback or navigation. Exact timing, check limits, cancellation, offline and
+navigation behavior, safe retry and draft storage remain separate decisions.
+
+The question presented to the user is:
+
+> When a save's outcome is unknown—for example, the connection drops after
+> Guardar—I recommend automatically checking for an authoritative result while
+> keeping the draft and uncertainty visible. If it remains unresolved, offer
+> “Comprobar de nuevo”; never resend the change automatically. Would you prefer
+> this, or checking only when the merchant asks? Timing, navigation and safe retry
+> rules would follow separately.
+
+Options: **Automatic verification + manual recheck (Recommended)** or
+**Verify only on request**. Neither initial option was selected; the user requested
+the Inventory source check instead. The supported retry selection is recorded
+below. Silence did not select the earlier recommendation.
+
+### Honesty and scope constraints
+
+These preserve VAL-002 and PT-023 rather than inventing a result from a read:
+
+- Evidence must concern the original requested change at the granularity the
+  authority actually supports. Current-value equality does not prove that
+  operation succeeded; another change may have produced the same value. A
+  different current value likewise does not prove the original operation failed.
+- A failed verification request, elapsed wait or unavailable authoritative
+  result leaves the save unconfirmed. Transport failure is not by itself
+  confirmation that a business change was rejected or never applied.
+- One confirmed change cannot mark other requested fields/products saved.
+  Preserve confirmed changes and the remaining submitted/draft distinctions.
+- Checking an outcome is distinct from sending the business change again.
+  Automatic verification would not itself authorize a repeated write.
+
+This is a proposed frontend experience where authoritative verification exists,
+not a claim that a status API, idempotency guarantee, retry operation or update
+interface is available. Do not invent an endpoint or widen this decision into
+backend/IAM/infrastructure implementation. If no authoritative verification is
+supported, the outcome must stay unknown rather than being inferred.
+
+After this selection, define the merchant's correction/retry path for confirmed
+failures, safe choices while an outcome remains unknown and remaining draft
+coordination on navigation/reload. Prepare a bounded Storybook plan only after
+those concrete decisions; preserve the accepted visuals in the meantime.
+
+## Inventory retry findings and selected recovery direction — 2026-11-14
+
+### Source check requested by the user
+
+The user answered the earlier question with:
+
+> First of all, check how the inventory module behaves, the unique operation id
+> may allow us to automatically retry.
+
+This requested a read-only source check, not selection of the earlier options.
+The accepted published sources were selected through the sibling repository's
+shared source-navigation rule. The inspection used `the_unnamed_1` at HEAD
+`7240bfa0136cbe889146cdc243149a5160b94afa`. The cited published specifications and
+proto were clean against that revision. Application/persistence source below
+includes modified/untracked working-tree files and is source evidence, not a
+fresh execution, deployment or passing-test claim. No sibling files were changed
+and no database, server or test runner was started.
+
+| Finding                                                                                                                                                                                                                                                                                                  | Owning source                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Retrying the same logical operation after uncertainty can recover its established result without repeating committed effects. Full identity is merchant + origin namespace + caller operation ID; equivalent original content and valid current context are required.                                    | [Identity/context](../../../../the_unnamed_1/openspec/specs/inventory-operation-identity-retries-contract/spec.md#requirement-bind-the-full-operation-identity-from-context-and-mutation-metadata), [attempt authority](../../../../the_unnamed_1/openspec/specs/inventory-operation-identity-retries-contract/spec.md#requirement-separate-bound-content-from-per-attempt-authority) and [caller obligations](../../../../the_unnamed_1/openspec/specs/inventory-operation-identity-retries-contract/spec.md#requirement-preserve-caller-attempt-obligations) |
+| Changed retained content is a conflict; no new effect or replacement of the original. Timeout, cancellation or a missing reply does not prove no effect or allow a replacement identity. Retained bindings do not expire.                                                                                | [Content conflict](../../../../the_unnamed_1/openspec/specs/inventory-operation-identity-retries-contract/spec.md#requirement-reject-changed-content-without-replacing-the-original) and [authoritative non-retention](../../../../the_unnamed_1/openspec/specs/inventory-operation-identity-retries-contract/spec.md#requirement-permit-fresh-evaluation-only-after-authoritative-non-retention)                                                                                                                                                              |
+| Equivalent retries return established results, rather than infer success from today's entity values. A retry can also perform the originally requested change if the first attempt never arrived. Automatic retry/count/interval choices belong to the caller and are not preselected by this guarantee. | [Established results](../../../../the_unnamed_1/openspec/specs/inventory-operation-identity-retries-contract/spec.md#requirement-preserve-established-results-and-permanent-references) and [technical uncertainty](../../../../the_unnamed_1/openspec/specs/inventory-operation-identity-retries/spec.md#requirement-technical-uncertainty-and-caller-retries)                                                                                                                                                                                                |
+| Equivalent identifier-assignment retries explicitly preserve original IDs/assignments without assigning again or renewing confirmation; original submitted confirmations remain bound.                                                                                                                   | [Assignment replay](../../../../the_unnamed_1/openspec/specs/inventory-product-identity-lifecycle-contract/spec.md#requirement-reuse-retries-preserve-submitted-confirmations-and-established-effects)                                                                                                                                                                                                                                                                                                                                                         |
+| The current local handler returns unsupported for identifier assignment and operation lookup. The published 25-method service contains no product-name-update RPC; UpdateProductIncrement is a different quantity operation.                                                                             | [Current API source](../../../../the_unnamed_1/inventory/application/src/api.rs), [published service](../../../../the_unnamed_1/inventory/contract/proto/inventory/v1/inventory.proto), [local lookup applicability](../../../../the_unnamed_1/openspec/specs/inventory-operation-lookup-history-contract/spec.md#applicability)                                                                                                                                                                                                                               |
+
+The inspected [retry helper](../../../../the_unnamed_1/inventory/application/src/operations/retry.rs)
+uses a finite attempt budget and obtains a fresh connection after OutcomeUnknown.
+[Product creation](../../../../the_unnamed_1/inventory/application/src/operations/product.rs)
+reuses its validated submitted command and returns Unconfirmed if internal attempts
+cannot establish the result. The source-only fault tests in
+[PostgreSQL tests](../../../../the_unnamed_1/inventory/persistence/tests/postgres.rs)
+cover lost commit acknowledgement, changed-content conflict, unchanged result
+recovery and an undelivered commit creating once. Those tests were not executed
+for this frontend discovery. Internal server retries and frontend request retries
+are separate layers; their budgets must not be conflated.
+
+### Selected bounded automatic retries
+
+After the source findings were presented, the user selected
+**“Bounded automatic retries + manual fallback (Recommended)”** to:
+
+> Inventory guarantees that an unchanged command retried with the same full
+> operation identity will not repeat committed effects. Shall we design bounded
+> automatic retries for supported commands, then preserve an unresolved result
+> and offer manual retry with that same command if confirmation still cannot be
+> obtained? Exact limits and draft retention would follow separately.
+
+PT-028 records this frontend recovery direction for commands with the supported
+idempotency guarantee. Keep the exact original logical command for recovery;
+never rebuild it from subsequently edited values, mint a replacement identity
+to escape uncertainty or map one visual table save to a single operation without
+its actual command boundaries. A retry may finish originally authorized work,
+so it is not described as a read-only check. Business Pending and technical
+uncertainty keep their existing separate meanings. The following open items are
+the PT-028 checkpoint; later selections below settle portions of their scope.
+
+Only authoritative confirmation can clear an unknown outcome. Retry exhaustion,
+connection loss or a later permission/preflight refusal does not establish the
+original outcome. Keep the submitted snapshot and retained draft/result state;
+manual fallback continues the same command. Confirmed rejection follows its
+separate correction/retry rules; no retry scheduler, numeric deadline/count,
+backoff, offline storage, cross-tab scope or concurrent-edit policy is selected.
+The current name/SKU editors remain synthetic; this choice does not make either
+an integrated available write or authorize a backend change.
+
+The next product decision concerned what work stays available while commands
+remain unresolved. Its selection is recorded below; command grouping, new-save
+coordination, exact timing and draft retention remain separate decisions. No new
+UI or visual reference is implemented here.
+
+### Selected availability during unresolved saves
+
+The user chose **“Pause only affected products (Recommended)”** to:
+
+> While some saves remain unconfirmed, I recommend keeping browsing and editing
+> other products available, while products covered by unresolved commands stay
+> read-only. Their original requests remain unchanged for retry. Prefer this,
+> or pause all product editing until every save is confirmed? Command grouping
+> and save coordination would follow separately.
+
+PT-029 keeps browsing and editing unrelated products available under their normal
+authority; products covered by unresolved commands remain read-only. This does
+not alter the frozen submitted command used by PT-028, infer operation success,
+change permissions or promise a production write. Whether a new Guardar cambios
+can submit other products while earlier outcomes remain unresolved is the next
+question, not an implicit choice from editing availability.
+
+Recommend submitting eligible unsaved drafts for other editable products while
+keeping original recovery commands separate and never resending already
+confirmed changes. The alternative waits for every unconfirmed save before
+accepting another save. Existing all-draft validation remains in force for the
+newly requested submission; no table-wide transaction or command mapping is
+selected. The user's subsequent new-save selection is recorded below.
+
+### Selected independent saves during recovery
+
+The user chose **“Save other products independently (Recommended)”** to:
+
+> If some products still have unconfirmed saves, I recommend letting “Guardar
+> cambios” submit unsaved edits from other editable products, while the original
+> recovery commands continue separately. Previously confirmed changes would not
+> be resent. Prefer this, or wait for every unconfirmed save to resolve before
+> accepting another save? Existing validation rules still apply; command grouping
+> remains separate.
+
+PT-030 permits that new submission without resending already confirmed changes
+or replacing unresolved commands. PT-024 still gates the complete newly requested
+submission on its detectable field errors; unresolved read-only commands are not
+silently rebuilt from the new drafts. Older results/drafts remain attributable
+to their own logical operations. This does not promise table-wide atomicity or
+select a single command per row/table.
+
+### Selected recovery records on return
+
+Recommend retaining original unconfirmed operation records across refresh and
+closing/reopening in the same browser, scoped to the same business and user.
+On return, show their uncertainty and ask before recovery attempts resume. A
+same-command retry may carry out the original authorized change if it was never
+admitted, so explicit continuation avoids silently initiating that work on a
+later visit. The alternative resumes recovery automatically on return.
+
+The question explicitly separates submitted operation records from unsent drafts;
+at the PT-031 checkpoint unsent-draft retention was still unselected; PT-032 below
+supplies that later choice. Record persistence, resumption and
+clearing after confirmation must preserve the original identity/content and
+current authority. No storage technology, retention duration, cross-device sync,
+logout behavior or credential storage is selected by this proposal. The question
+was answered with **“Restore records; resume on request (Recommended)”**.
+The exact question was:
+
+> For unconfirmed saves, I recommend retaining the original operation records
+> across refresh or reopening in the same browser, scoped to the same business
+> and user, then asking before recovery resumes. A retry may still carry out the
+> original change if it never reached Inventory. Prefer explicit “Continuar
+> recuperación” on return, or automatic resumption? Unsent draft retention would
+> be defined separately.
+
+PT-031 selects that retention and explicit resumption. A restored unresolved
+record preserves its original command and uncertainty; reopening alone sends no
+recovery mutation. The record remains scoped to the same business and user in
+that browser. Storage technology, duration/clearing, shared-browser coordination
+and logout remain open. No cross-device restoration or storage-success guarantee
+is implied. Unsent drafts are separate.
+
+### Selected unsent drafts on return
+
+Recommend retaining never-submitted drafts in the same browser, business and user
+across refresh/reopening, offering Continuar borrador or Descartar on return.
+Products starts read-only and nothing is submitted without Guardar. The alternative
+keeps those drafts in the current tab only, including refresh. Submitted unresolved
+operation records retain their separately selected PT-031 behavior. This unsent-draft
+question was answered **“Keep drafts across reopening; restore on request
+(Recommended)”**:
+
+> For edits never submitted, I recommend keeping a draft in the same browser,
+> business and user across refresh and reopening, then offering “Continuar
+> borrador” or “Descartar” on return. The table opens read-only and nothing is sent
+> without Guardar. Prefer this, or keep unsent drafts only while the tab remains
+> open, including refresh? Submitted recovery records follow the separate rule
+> already agreed.
+
+PT-032 selects that draft retention and on-request restoration. The statement
+about Guardar applies to these never-submitted drafts; PT-031's explicit recovery
+resumption separately permits retries of previously submitted commands. Products
+opens read-only until editing/restoration is explicitly requested. Discarding a
+never-submitted draft does not erase or resolve a separate submitted operation.
+Storage technology, expiry, logout and cross-tab coordination remain open.
+
+### Selected review of changed products during draft restoration
+
+The user chose **“Review only changed products (Recommended)”** to:
+
+> When restoring an unsent draft, I recommend loading the product's current data
+> and requiring review only if it differs from the draft's original baseline.
+> Show current values beside the draft; don't overwrite or merge automatically.
+> Prefer this, or require review for every restored draft even when unchanged?
+> This concerns unsent drafts; submitted recovery commands remain frozen.
+
+PT-033 requires current-data loading for unsent-draft restoration and review for
+changed products, displaying current values beside the draft. An unchanged
+product has no extra changed-data review step. No automatic merge/overwrite is
+selected. Unavailable current data cannot be treated as proof the product is
+unchanged. This is restoration-time review, not a guarantee against changes after
+the read, a selected field-comparison/versioning mechanism or a new conditional
+write contract. Submitted recovery commands remain frozen under PT-028.
+
+### Current discovery checkpoint
+
+PT-028–033 define the selected functional recovery direction. Remaining decisions
+before production behavior include exact retry deadlines/counts/spacing, actual
+command mapping, storage technology and failures, retention/clearing and logout,
+shared-browser/tab coordination, review comparison scope and concurrency/write
+rules. Confirmed-rejection correction and departure/discard coordination also
+retain their existing limits. Do not infer an automatic retry after explicit
+abandonment or an unavailable name/SKU integration from these selections.
+The next bounded prototype plan must identify which states are simulated and
+which technical choices still require selection; no implementation starts from
+this documentary checkpoint alone.
+
+### Discovery verification — 2026-11-14
+
+The source check and six user selections were independently compared with the
+quoted instructions and Inventory contract; no material semantic finding remains.
+A requirement-length warning was corrected by moving PT-028's scope qualifications
+into a scenario without dropping them. Native `openspec validate --all --strict`
+passes all seven changes. Formatting and 125 local links/anchors pass. Exactly
+eight documentation/context files changed; the index is empty and HEAD remains
+`eb49dea`. No application source, dependency, test, image or reference changed.
+The visual source remains `e583af90…`, matching the prepared build and existing
+607-case proof. Browser/code tests were not rerun for documentation-only work;
+no runtime support or new recovery behavior is claimed from these checks.
+
+## Retry-budget and persistence discovery — 2026-11-14
+
+The user said **“go ahead”** to the next retry-budget/browser-storage definition
+step. The [technical decision record](recovery-technical-design.md) separates
+existing server/native-client limits, current browser APIs, new proposals and
+unselected policies. PT-034 selects three attempts total, 15 seconds each and
+1/3-second waits with ±50% jitter. The original PT-035 engine choice is qualified
+by the user's compatibility clarification below: IndexedDB is preferred, not a
+prerequisite. The hard transaction gate is rejected and the compatible fallback
+chain is now selected under PT-037 below. No implementation/library is adopted;
+the selected functional
+rules and unchanged prototype/628 accepted references remain the baseline.
+
+### Storage compatibility clarification — 2026-11-14
+
+The user rejected making IndexedDB a required precondition for a save or retry
+and requested behavior when it is unsupported or fails, emphasizing compatibility
+and flexibility. PT-036 preserves that requirement and qualifies PT-035 as the
+preferred engine. The [concrete fallback proposal](recovery-technical-design.md#selected-capability-based-fallback-design)
+uses IndexedDB, then usable localStorage, then current-app memory, with accurate
+retention notices and unchanged operation identities. The user subsequently
+selected **“Use this fallback design (Recommended)”** under PT-037; this separate
+selection adopts the chain and session-only behavior. The following PT-038
+selection defines the manual recovery budget. No compatibility adapter or UI is
+implemented.
+
+### Manual recovery run budget — selected 2026-11-14
+
+The user selected **“New bounded run per manual action (Recommended)”** in response
+to the question reproduced in the [technical decision record](recovery-technical-design.md#selected-manual-recovery-run-budget).
+PT-038 allows explicit Reintentar or Continuar recuperación after a run has stopped
+to authorize up to three requests with the original full operation identity and
+frozen content, using PT-034's 15-second timeout and 1/3-second waits with ±50%
+jitter. The first request in this run remains a retry of the same business
+operation, not a new operation. Inconclusive exhaustion preserves uncertainty;
+there is no automatic new run. An active run is not reset or deliberately
+overlapped by another action. PT-031's explicit resumption after reopening and
+PT-037's actual retention limits remain applicable. Shared-tab enforcement,
+transport/command mapping and live qualification remain separate decisions.
+
+### Shared-tab recovery behavior — selected 2026-11-14
+
+The user selected **“Coordinate when possible; usable fallback (Recommended)”**
+in response to the question reproduced in the [technical decision record](recovery-technical-design.md#selected-shared-tab-recovery-behavior).
+PT-039 shows another known active recovery run for the same original command and
+avoids starting a second deliberate run while it is known active. If coordination
+is unavailable, recovery stays usable in the current tab with an honest limitation
+notice. Missing status does not prove no other run exists. Other eligible work
+remains available under existing access and affected-product rules. Original
+identity/content, explicit continuation and bounded runs remain applicable;
+notifications, storage changes or owner disappearance do not start a new run.
+This selects actual-capability behavior, without a universal exclusion guarantee,
+a concrete mechanism or a policy for simultaneous unsent drafts of one product.
+No new implementation or visual revision follows.
+
+### Second editing of the same product — user correction 2026-11-14
+
+The user rejected the independent-drafts proposal and stated that a second edit
+of the same product must be rejected with a clear error. PT-040 records that
+requirement and the need to discuss discard/takeover when the original editing
+tab may already be closed. The [source reply and proposed resolution actions](recovery-technical-design.md#second-editor-rejection--user-correction)
+separate known active editing, a retained draft after closure, unknown ownership
+and already submitted work. No automatic ownership release or live-owner takeover
+is selected by that correction alone. The subsequent PT-041 selection below
+adopts explicit unknown-owner resolution; ownership enforcement remains open.
+Editing when coordination is unavailable also needs a concrete decision under
+the existing compatibility requirements. No platform-wide lock across users or
+devices, enforcement guarantee or implementation is inferred.
+
+### Explicit resolution of an unreachable editor — selected 2026-11-14
+
+The user selected **“Explicit resolution when owner is unreachable (Recommended)”**
+for the [question and action definitions in the technical record](recovery-technical-design.md#selected-unknown-owner-resolution).
+PT-041 permits explicit Asumir edición or confirmed Descartar y empezar de nuevo
+for an accessible unsent draft when the earlier tab cannot be reached and its
+status is unknown; the old editor must be read-only if it returns. This does not
+assert that the tab closed. Known active editors still block a second edit.
+Continuing preserves the draft/baseline and PT-033 review; confirmed discard
+abandons only that unsent draft and fresh editing uses current data. Cancel
+preserves the work. Submitted or unresolved commands retain their original
+recovery and PT-029 protection. Nothing automatically transfers, discards or saves.
+A concrete ownership mechanism, editing with unusable coordination and production
+retention policies remain separate; selected behavior is not executed enforcement.
+
+### Next reviewable phase — bounded recovery preview
+
+The [recovery preview plan](recovery-preview-plan.md) is prepared for scope review.
+No additional production-policy choice is needed merely to visualize the selected
+behavior with predefined capabilities and ownership states. The plan includes
+retry/exhaustion/manual continuation, separate unaffected work, explicit return,
+honest retention notices, active-editor rejection and PT-041 ownership resolution.
+It does not silently choose product-ownership acquisition in Editar tabla,
+editing without reliable coordination, storage lifecycle or actual business-write
+mapping. Its candidate images would need their own review. Execution is pending.
+
+### Bounded preview execution selected — 2026-11-14
+
+The user selected **“Build the simulated preview (Recommended)”**. The
+[preview plan](recovery-preview-plan.md#execution-authorization--2026-11-14) is now
+authorized for synthetic commands, simulated storage/ownership and candidate
+visual review. This supersedes earlier pending execution wording only; actual
+production mechanisms, new dependencies, image acceptance, staging and commits
+remain outside scope.
+
+### Simulated preview implemented and ready for review — 2026-11-14
+
+The authorized [bounded preview](recovery-preview-plan.md#execution-and-verification--2026-11-14)
+is implemented and verified with 84 code tests, 124 browser checks, 172 new
+candidate captures and 607 unchanged-reference comparisons. Source `2058ed78…`,
+exact run identities, resolved review findings, local build/font preparation
+corrections and simulation limits are recorded there. The exact 172-image gallery
+is pending user approval. The 628 accepted references, separate navigation review,
+production-policy gaps and never-commit boundary retain their status.
+
+### Review follow-up — Spanish copy and deferred message box design
+
+The user flagged “Guardado sin confirmar” as unnatural and requested a better
+suggestion. The [review note](recovery-preview-plan.md#user-review--spanish-wording-and-later-message-box-revision)
+proposes “No hemos podido confirmar el guardado.” without selecting or applying
+it yet. The user also requested that the message box design be revisited later;
+its present treatment is temporarily retained. Tasks 9.11–9.12 preserve both
+follow-ups, and the exact candidate-image approval task remains open.
+
+### Spanish feedback wording clarified by the user
+
+The user rejected the assistant's remaining **“el guardado”** construction and
+specified **“No hemos podido confirmar que los cambios se han guardado.”** and
+**“Puedes trabajar con otros productos mientras confirmamos que los cambios se
+han guardado.”** The [recorded clarification](recovery-preview-plan.md#user-clarification--changes-and-edits-with-guardar-as-a-verb)
+sets the contextual preference: refer to changes/edits and use guardar verbally,
+without treating every participial/status use as invalid. Task 9.11 is selected;
+copy implementation/contextual compact-label review is task 9.13, while the visual
+message box redesign remains deferred under 9.12. The current UI/source and
+specific image-approval task are unchanged by this documentation clarification.

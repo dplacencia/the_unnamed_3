@@ -113,6 +113,45 @@
 }
 .products-expand {
   flex-shrink: 0;
+  position: relative;
+}
+.products-expand[data-product-row-state] .products-expand-chevron {
+  margin-inline-end: 14px;
+}
+.products-row-status-marker {
+  position: absolute;
+  inset-inline-end: 1px;
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+  color: var(--color-brand-500);
+  pointer-events: none;
+}
+.products-row-status-tooltip {
+  max-width: min(300px, calc(100vw - 32px));
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.products-data-table tr[data-product-row-state] > td {
+  background: var(--color-brand-50);
+}
+.dark .products-data-table tr[data-product-row-state] > td {
+  background: var(--color-brand-950);
+}
+.dark .products-row-status-marker {
+  color: var(--color-brand-300);
+}
+.products-expanded-status {
+  flex: 1 0 100%;
+  margin: 0;
+  color: var(--color-gray-700);
+  font-size: 13px;
+}
+.dark .products-expanded-status {
+  color: var(--color-gray-100);
 }
 .products-name {
   min-width: 0;
@@ -546,5 +585,87 @@ body:has([data-edit-guard]) [data-slot="dialog-overlay"] {
   }
   .products-edit-actions > span {
     width: 100%;
+  }
+}
+
+.products-recovery-summary {
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  background: var(--color-gray-50);
+  font-size: 14px;
+}
+.products-recovery-summary-heading,
+.products-recovery-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+.products-recovery-line {
+  padding-block: 4px;
+}
+.products-recovery-line > div {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+.products-recovery-details {
+  display: grid;
+  gap: 4px;
+}
+.products-recovery-state {
+  font-size: 12px;
+  color: var(--color-gray-600);
+}
+.products-recovery-summary p {
+  margin: 0;
+}
+.products-recovery-summary > p {
+  margin-top: 6px;
+}
+.products-recovery-dialog {
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+}
+.products-recovery-product-name {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.products-recovery-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  overflow-wrap: anywhere;
+}
+.products-recovery-comparison dt {
+  color: var(--color-gray-600);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.products-recovery-comparison dd {
+  margin: 0;
+}
+.dark .products-recovery-summary {
+  background: var(--color-gray-900);
+  border-color: var(--color-gray-700);
+}
+.dark .products-recovery-state,
+.dark .products-recovery-comparison dt {
+  color: var(--color-gray-400);
+}
+@media (max-width: 639px) {
+  .products-recovery-line {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .products-recovery-summary button,
+  .products-recovery-dialog button {
+    min-height: 44px;
+  }
+  .products-recovery-comparison {
+    grid-template-columns: 1fr;
   }
 }

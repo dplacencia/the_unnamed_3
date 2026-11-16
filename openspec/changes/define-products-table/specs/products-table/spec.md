@@ -858,3 +858,479 @@ of an unconfirmed change. Current results SHALL remain available for inspection.
 - **WHEN** a later requested save completes with new results
 - **THEN** the previous dismissal does not conceal that new result set
 - **AND** the merchant may inspect the new results and dismiss their presentation separately.
+
+### Requirement: PT-028 — Bounded unchanged retries with manual fallback
+
+For supported idempotent mutations, the frontend SHALL make bounded automatic
+recovery attempts using the original full identity and equivalent submitted
+content under current authority and finite attempt deadlines. If confirmation
+remains unavailable, it SHALL keep the unresolved result/draft and offer manual
+retry of that same command. PT-025's explicit discard behavior remains applicable.
+
+#### Scenario: A successful response is lost
+
+- **WHEN** confirmation is lost for an operation covered by the supported retry guarantee
+- **THEN** automatic recovery retries its unchanged original identity/content
+- **AND** established committed effects are not repeated, and only authoritative results count as confirmed.
+
+#### Scenario: The first attempt never arrived
+
+- **WHEN** an unchanged recovery attempt is the first admitted attempt of that logical operation
+- **THEN** it may perform the originally requested work under current authority and owning checks
+- **AND** recovery is not represented as a guaranteed read-only check or eventual-success guarantee.
+
+#### Scenario: Bounded recovery remains inconclusive
+
+- **WHEN** automatic recovery ends without authoritative confirmation
+- **THEN** the result remains visibly unconfirmed and its original submitted command and draft are preserved
+- **AND** manual retry continues that same command rather than inventing a new operation identity or claiming rollback.
+
+#### Scenario: Current input differs from the submitted command
+
+- **WHEN** the interface holds newer edits alongside an unresolved original submission
+- **THEN** recovery retains the original operation's identity and content rather than rebuilding it from newer input
+- **AND** this rule does not select whether such editing is available or its remaining coordination policy.
+
+#### Scenario: A later attempt is refused
+
+- **WHEN** a recovery attempt is refused by its current authority or preflight checks
+- **THEN** that refusal alone does not turn the earlier unknown outcome into confirmed failure
+- **AND** existing drafts, established effects and protected result visibility retain their owning rules.
+
+#### Scenario: A designed editor has no supported production operation
+
+- **WHEN** the prototype includes a name or missing-SKU editor without an available corresponding production write
+- **THEN** the retry direction does not claim that editor is integrated or that a new endpoint exists
+- **AND** implementation and command mapping remain separately scoped work.
+
+#### Scenario: Recovery scope remains bounded
+
+- **WHEN** this recovery direction is developed further
+- **THEN** numeric limits, backoff, storage, departure/discard coordination, concurrent editing, command grouping and production availability remain separately defined
+- **AND** explicit draft discard does not undo confirmed effects or resolve the original unknown outcome.
+
+### Requirement: PT-029 — Pause editing only for products with unresolved saves
+
+While save outcomes remain unconfirmed, Products SHALL keep browsing and editing
+other products available under their existing access rules. Products covered by
+unresolved commands SHALL remain read-only, preserving their original submitted
+commands for PT-028 recovery. This choice SHALL NOT select submission of new
+drafts during recovery, command grouping, storage or production write availability.
+
+#### Scenario: One product has an unresolved save
+
+- **WHEN** a product is covered by a command with an unconfirmed outcome
+- **THEN** that product remains read-only while its original command is preserved for recovery
+- **AND** the merchant may still browse the table and edit other permitted products.
+
+#### Scenario: A save result is dismissed
+
+- **WHEN** the merchant dismisses the detailed presentation of an unresolved save
+- **THEN** that product's read-only protection and visible uncertainty remain
+- **AND** other products do not become paused because the presentation was closed.
+
+#### Scenario: The merchant edits another product
+
+- **WHEN** a permitted product is not covered by an unresolved command
+- **THEN** unrelated uncertainty does not itself prevent editing that product
+- **AND** sending its new draft follows the separately defined save-coordination behavior.
+
+### Requirement: PT-030 — Submit other editable products during recovery
+
+Guardar cambios SHALL permit submitting unsaved edits from other editable
+products while earlier operations remain unconfirmed. Original recovery commands
+SHALL continue separately, and previously confirmed changes SHALL NOT be resent
+as part of the new submission. PT-024's all-draft validation gate SHALL apply to
+the complete newly requested submission. This choice SHALL NOT define command
+grouping, batch atomicity, persistence or production interface availability.
+
+#### Scenario: Other products have new unsaved edits
+
+- **WHEN** the merchant requests saving eligible edits while other products have unresolved operations
+- **THEN** the new requested submission may proceed under its existing validation and access rules
+- **AND** it neither changes the unresolved original commands nor sends previously confirmed changes again.
+
+#### Scenario: The new requested submission has a detectable field error
+
+- **WHEN** any draft requested for that new save has a detectable field error
+- **THEN** PT-024 prevents that new submission until its errors are corrected
+- **AND** the validation result does not alter the earlier operations or their recovery outcomes.
+
+#### Scenario: Results from different submissions coexist
+
+- **WHEN** an earlier recovery and a later save both have results or unresolved states
+- **THEN** each remains attributable to its own submitted operation and product
+- **AND** the newer result does not conceal or overwrite the earlier uncertainty.
+
+### Requirement: PT-031 — Restore unresolved operation records with explicit resumption
+
+Where persistent retention is usable, original unconfirmed-operation records
+SHALL survive refresh/reopening in the same browser/business/user scope. On
+return, recovery SHALL require explicit request using the original command.
+Restoration SHALL use accessible retained copies under PT-036; reopening SHALL
+NOT send mutations. Unsent drafts, storage details, clearing/logout, cross-tab
+coordination and cross-device restoration remain separate.
+
+#### Scenario: The merchant returns to unresolved submitted work
+
+- **WHEN** the same user returns to that business in the same browser after refresh or reopening with retained operation copies accessible
+- **THEN** retained unresolved operation records and their uncertainty are offered for recovery
+- **AND** reopening alone does not restart mutation attempts.
+
+#### Scenario: The merchant requests continued recovery
+
+- **WHEN** the merchant explicitly chooses to continue a restored recovery
+- **THEN** PT-028 uses the original full operation identity and submitted content under current authority
+- **AND** it does not create a new logical operation or infer completion from current product values.
+
+#### Scenario: Other scope or unsent edits are present
+
+- **WHEN** the current business/user scope differs, or edits have never been submitted
+- **THEN** this selected restoration rule does not import another scope's recovery record or define unsent-draft behavior
+- **AND** browser storage availability is not represented as a cross-device durability guarantee.
+
+### Requirement: PT-032 — Retain unsent drafts and restore them on request
+
+Where persistent retention is usable, unsent drafts SHALL survive refresh and
+reopening in the same browser/business/user scope. Products SHALL return read-only
+with continuing/discarding offered; editing requires explicit request and sending
+those drafts requires Guardar. Restoration SHALL use accessible copies under
+PT-036 and remain separate from submitted recovery. Storage implementation,
+expiry, logout and cross-tab coordination remain separate.
+
+#### Scenario: The merchant returns to an unsent draft
+
+- **WHEN** the same user returns to that business in the same browser after refresh or reopening with a retained unsent draft accessible
+- **THEN** the retained never-submitted draft can be continued or discarded on request
+- **AND** its existence does not automatically activate editing or send its contents.
+
+#### Scenario: The merchant continues the draft
+
+- **WHEN** the merchant explicitly chooses to continue a retained unsent draft
+- **THEN** the selected restoration and editing rules apply
+- **AND** saving still requires Guardar and its existing validation/access rules.
+
+#### Scenario: The merchant discards an unsent draft
+
+- **WHEN** the merchant explicitly discards a never-submitted draft
+- **THEN** that draft is abandoned without a business write
+- **AND** separate submitted-operation records, effects and uncertainty are not erased or resolved by that action.
+
+### Requirement: PT-033 — Review changed products when restoring unsent drafts
+
+Unsent-draft restoration SHALL load the product's current data and require review
+when it differs from the draft's original baseline. It SHALL show current values
+beside the draft and SHALL NOT automatically merge or overwrite them. An unchanged
+product SHALL NOT require that extra review step. This selection SHALL NOT change
+submitted-command immutability or choose comparison fields, a versioning mechanism
+or a guarantee against changes after the restoration read.
+
+#### Scenario: Current data differs from the unsent draft's baseline
+
+- **WHEN** loaded current product data differs from the baseline of a restored unsent draft
+- **THEN** the current values and draft are shown for review before the restored draft is saved
+- **AND** no automatic merge or overwrite resolves the difference.
+
+#### Scenario: Current data is unchanged
+
+- **WHEN** loaded current product data matches the unsent draft's original baseline
+- **THEN** the draft can continue under its ordinary editing rules without an extra changed-data review
+- **AND** this does not bypass validation, authority or later save outcomes.
+
+#### Scenario: Current data cannot be established
+
+- **WHEN** current product data is unavailable during restoration
+- **THEN** the interface does not claim that it matches the original baseline
+- **AND** uncertainty is not used to bypass the changed-data review rule.
+
+#### Scenario: A submitted command is being recovered
+
+- **WHEN** a record represents an already submitted unresolved command rather than an unsent draft
+- **THEN** recovery retains its original identity and content under PT-028 and PT-031
+- **AND** restoration review does not rebuild that command from current product values.
+
+### Requirement: PT-034 — Initial bounded frontend retry profile
+
+The initial frontend recovery profile SHALL allow three attempts total, including
+the original request, with a 15-second client timeout per attempt. Waits before
+retries SHALL be 1 then 3 seconds, randomized by ±50%. Frontend attempts of the
+same command SHALL NOT be deliberately concurrent. Inconclusive exhaustion SHALL retain
+uncertainty under PT-028. PT-038 defines manual-run budgets; real-API qualification
+remains separate. No completion or rollback guarantee is selected.
+
+#### Scenario: The initial request needs recovery
+
+- **WHEN** a supported command requires automatic recovery from uncertainty
+- **THEN** the original request counts as attempt one and at most two automatic retries follow
+- **AND** each retains its original full identity/content with a client timeout of 15 seconds.
+
+#### Scenario: A retry is scheduled
+
+- **WHEN** the first or second automatic retry is scheduled
+- **THEN** its wait is respectively randomized within 500–1500ms or 1500–4500ms
+- **AND** there is no deliberate frontend hedging or duplicate active dispatch for that command.
+
+#### Scenario: A client timeout or budget exhaustion occurs
+
+- **WHEN** an attempt times out or all three frontend attempts remain inconclusive
+- **THEN** the result is not relabeled failed, rolled back or never applied
+- **AND** manual recovery remains available under its separately defined budget and PT-031 restoration rules.
+
+#### Scenario: Timers or remote work outlive the client's expectation
+
+- **WHEN** browser scheduling is delayed or a timed-out remote attempt may still be finishing
+- **THEN** the profile does not promise an exact wall-clock completion time or terminated remote work
+- **AND** unchanged-identity safety remains necessary; production timing requires real-API qualification.
+
+#### Scenario: Another outcome or retry layer exists
+
+- **WHEN** an authoritative rejection, current preflight refusal or lower-layer retry is observed
+- **THEN** technical uncertainty, established business outcomes and backend-internal retries retain their separate meanings
+- **AND** this profile does not authorize repeating a business rejection or hidden extra frontend attempts outside its budget.
+
+### Requirement: PT-035 — IndexedDB for retained drafts and operation records
+
+Retained business drafts and submitted-operation records SHALL prefer IndexedDB
+when usable, with compatibility behavior under PT-036. PT-031–032 scope and
+explicit restoration SHALL remain applicable where retained copies are accessible.
+This engine preference SHALL NOT select a wrapper, fallback chain, shared-tab
+policy, retention period or backup/cross-device guarantee.
+
+#### Scenario: Browser-local recovery data is retained
+
+- **WHEN** selected business draft or operation-record persistence is implemented
+- **THEN** it prefers usable IndexedDB within the selected browser/business/user scope and follows defined compatible fallback behavior when needed
+- **AND** the engine alone does not assert another user/business's authority or guarantee survival of browser deletion/eviction.
+
+#### Scenario: Preference and dependency scope are considered
+
+- **WHEN** IndexedDB is adopted for recovery records and drafts
+- **THEN** existing tab-scoped view/location preferences retain their separately chosen behavior
+- **AND** no new library or broader preference migration follows automatically.
+
+#### Scenario: Persistence failure or shared-tab coordination is designed
+
+- **WHEN** failure handling, competing tabs or record retention rules are proposed
+- **THEN** those follow their own concrete decisions
+- **AND** engine selection is not treated as approval of those policies.
+
+### Requirement: PT-036 — Compatibility without an IndexedDB prerequisite
+
+IndexedDB absence or failure SHALL NOT by itself block Products use or business
+saves. The experience SHALL follow its defined compatible fallback behavior and
+honestly report actual draft/recovery retention capability. Storage failure SHALL
+NOT change an authoritative business outcome. This clarification SHALL NOT select
+the exact fallback chain, session-only policy, migration/coordination algorithm
+or a guarantee for every browser.
+
+#### Scenario: IndexedDB is unsupported or fails
+
+- **WHEN** IndexedDB cannot be used in the current browser or fails during operation
+- **THEN** the app follows defined compatible behavior rather than treating IndexedDB as an app-wide prerequisite
+- **AND** existing access, validation, command-identity and business rules still apply.
+
+#### Scenario: Local retention differs from business completion
+
+- **WHEN** a local storage write fails after an authoritative result was observed
+- **THEN** the known business result retains its meaning
+- **AND** the separate retention problem is not presented as business failure or rollback.
+
+#### Scenario: Earlier records cannot currently be read
+
+- **WHEN** an earlier recovery store is inaccessible or a retained copy is unavailable
+- **THEN** the interface does not claim there were no unresolved operations or that restoration succeeded
+- **AND** it does not invent a replacement identity or rebuild an unknown original command from current edits.
+
+#### Scenario: A fallback offers weaker retention
+
+- **WHEN** compatible fallback behavior cannot provide the earlier persistence capability
+- **THEN** its actual recovery limits are represented honestly and only accessible retained copies can be restored
+- **AND** missing local data is not proof of Inventory rejecting or never receiving an earlier change.
+
+### Requirement: PT-037 — Usable persistence fallbacks with honest retention
+
+Recovery/draft storage SHALL use usable IndexedDB, then usable localStorage, then
+open-app memory when persistent storage is unavailable. Normal saves and retries
+of known original commands SHALL remain available under existing checks, with an
+accurate nonblocking retention notice. Memory-only mode SHALL NOT promise refresh
+or close recovery. Cross-tab locking, reconciliation and all-browser guarantees
+remain separate decisions.
+
+#### Scenario: IndexedDB is absent or fails and localStorage is usable
+
+- **WHEN** IndexedDB cannot retain the applicable record but localStorage is usable
+- **THEN** the compatible localStorage path is used without making IndexedDB a prerequisite
+- **AND** existing original command identities, content and observed results retain their meaning.
+
+#### Scenario: No persistent store is usable
+
+- **WHEN** persistent browser storage is unavailable for the applicable record
+- **THEN** saves and retries of known original commands can continue in open-app memory with a nonblocking retention notice
+- **AND** refresh, closing or another app instance is not promised access to that memory-only record.
+
+#### Scenario: Storage capability changes during recovery
+
+- **WHEN** an active command moves to another available storage mode
+- **THEN** the original command identity/content and observed outcomes are preserved
+- **AND** the change of storage mode neither creates a new logical operation nor silently resets its retry budget.
+
+#### Scenario: Known business completion and unavailable history coexist
+
+- **WHEN** retention fails after authoritative confirmation or an earlier store cannot currently be read
+- **THEN** known business outcomes are preserved and inaccessible history remains unavailable rather than assumed empty
+- **AND** recovery of an old command still requires its original record; current edits cannot be relabeled as that recovery.
+
+#### Scenario: Weaker storage or app-instance capabilities are used
+
+- **WHEN** localStorage or memory is the effective mode for a record
+- **THEN** its actual retention capability is represented without claiming IndexedDB transactional or cross-tab guarantees
+- **AND** this choice does not select locking, migration/reconciliation algorithms, a library or a browser-version support matrix.
+
+### Requirement: PT-038 — Explicit manual action authorizes a bounded recovery run
+
+After a recovery run stops, explicit Reintentar or Continuar recuperación SHALL
+authorize up to three requests using the original full operation identity/content
+and PT-034 timing. A new run SHALL NOT start automatically or deliberately overlap
+an active run. Inconclusive exhaustion SHALL preserve uncertainty and the original
+command. PT-031 resumption and PT-037 retention limits SHALL remain applicable.
+
+#### Scenario: The merchant requests recovery after a stopped run
+
+- **WHEN** the merchant explicitly chooses Reintentar or Continuar recuperación for a supported unresolved command after its run has stopped
+- **THEN** that action authorizes a new run of up to three requests, each with a 15-second client timeout and retry waits of 1 then 3 seconds randomized by ±50%
+- **AND** every request retains the original full operation identity and equivalent frozen content; the first request of this run is still a retry of the same business operation.
+
+#### Scenario: Another bounded run ends without confirmation
+
+- **WHEN** the newly authorized run exhausts its budget inconclusively
+- **THEN** uncertainty and the original command remain available under their actual retention capability
+- **AND** another run requires another explicit request; exhaustion does not automatically reset the budget or create a replacement identity.
+
+#### Scenario: A run is already active or the app is reopened
+
+- **WHEN** another recovery action is requested while a run is active, or retained records are restored after reopening
+- **THEN** an active run is not silently reset or deliberately overlapped, and reopening alone does not dispatch a request
+- **AND** explicit continuation after a stopped run follows this budget without promising access to unavailable or memory-only records.
+
+#### Scenario: A client request times out or a rejection is established
+
+- **WHEN** timeout leaves remote completion unknown or an authoritative business rejection is established
+- **THEN** timeout does not prove remote work ended and business rejection is not relabeled technical uncertainty to authorize automatic repeats
+- **AND** shared-tab enforcement, transport/command mapping and live qualification remain separately defined.
+
+### Requirement: PT-039 — Coordinate recovery where usable without blocking fallback
+
+For the same original command across tabs, the app SHALL show another known active
+recovery run and SHALL NOT deliberately start a second while it is known active.
+If coordination is unavailable, recovery SHALL remain usable in the current tab
+with an honest limitation notice. Missing status SHALL NOT prove no other run
+exists. Other eligible work SHALL remain available. PT-028/031/034/037/038 rules
+SHALL remain applicable.
+
+#### Scenario: Another tab is known to be running recovery
+
+- **WHEN** coordination identifies an active recovery run for the same original command in another tab
+- **THEN** that activity is shown and no second deliberate run is started while it is known active
+- **AND** browsing and other eligible work remain available under existing access and affected-product rules.
+
+#### Scenario: Cross-tab coordination is unavailable
+
+- **WHEN** the current app cannot use cross-tab coordination for the original command
+- **THEN** its recovery remains usable with an honest limitation notice and unchanged original identity/content
+- **AND** the app does not claim global exclusion or that unavailable status proves no other run exists; deliberate same-command overlap within the current app remains prohibited.
+
+#### Scenario: Another tab changes state or stops being observable
+
+- **WHEN** a message or storage event arrives, an apparent owner disappears or another run stops being observable
+- **THEN** that observation alone does not authorize a new recovery run, reset its budget or prove remote work ended
+- **AND** later explicit continuation follows PT-038 with the original command and current authority rather than reconstructing missing commands from current edits.
+
+#### Scenario: Unsent drafts or concrete mechanisms are considered
+
+- **WHEN** same-product unsent editing, ownership enforcement or a coordination adapter is proposed
+- **THEN** this selection is not treated as adopting that policy or mechanism
+- **AND** no automatic draft merge/overwrite, one-editor-per-product rule, dependency or universal browser guarantee follows.
+
+### Requirement: PT-040 — Reject a second same-product edit and account for closure
+
+A request to start a second edit of a product already under editing in another
+tab SHALL be rejected with a clear error. The experience SHALL account for the
+original editing tab having closed through a separately defined discard/takeover
+flow. This correction SHALL NOT adopt independent drafts, automatic ownership
+release or a concrete transfer mechanism. Submitted-command recovery SHALL retain
+its existing rules.
+
+#### Scenario: A second edit is requested for the same product
+
+- **WHEN** another tab already holds the product's editing session and a second edit is requested
+- **THEN** the second edit is rejected with a clear explanation
+- **AND** it does not silently open an independent concurrent editor or replace the existing draft.
+
+#### Scenario: The original editing tab is closed
+
+- **WHEN** a retained unsent edit exists and the tab that performed it has closed
+- **THEN** the experience accounts for that case through the separately defined discard/takeover flow rather than depending only on a live reply from the closed tab
+- **AND** this correction alone does not choose the available actions or approve automatic discard, takeover, expiry or ownership release.
+
+#### Scenario: Owner activity cannot be established
+
+- **WHEN** the app cannot establish whether the original editing tab is still active
+- **THEN** it does not present that uncertainty as proof the tab is open, closed or safe to replace
+- **AND** the compatibility/ownership behavior must be explicitly defined rather than silently allowing a second edit or claiming universal enforcement.
+
+#### Scenario: Submitted work exists for the product
+
+- **WHEN** a draft-resolution flow encounters submitted or unresolved save records
+- **THEN** their original command identity/content and PT-029 protection remain applicable
+- **AND** discarding a never-submitted draft is not presented as cancelling, reversing or resolving submitted work.
+
+#### Scenario: The scope or enforcement mechanism is proposed
+
+- **WHEN** ownership scope, release, takeover, timing or coordination mechanisms are designed
+- **THEN** this reply is treated as the selected second-editor rejection in the current cross-tab discussion, with those details still requiring definition
+- **AND** it is not treated as approval of cross-device/team-wide locks, a dependency or an implemented guarantee.
+
+### Requirement: PT-041 — Explicit resolution for an unreachable unsent-draft editor
+
+For an accessible unsent draft whose prior tab is unreachable and status unknown,
+the app SHALL allow explicit Asumir edición or confirmed Descartar y empezar de
+nuevo, with Cancelar preserving the work. After transfer, the prior editor SHALL
+be read-only if it returns. Known active editors SHALL still block a second edit.
+No automatic transfer/discard SHALL follow from lost contact. PT-029/032/033 and
+submitted-command recovery SHALL remain applicable.
+
+#### Scenario: The merchant assumes the retained unsent edit
+
+- **WHEN** the prior editor is unreachable with unknown status and the merchant explicitly chooses Asumir edición for its accessible unsent draft
+- **THEN** that draft and baseline are continued under PT-033's current-data review and existing access/validation rules
+- **AND** no automatic merge, save or parallel independent edit is introduced.
+
+#### Scenario: The merchant discards that draft and starts again
+
+- **WHEN** the merchant explicitly confirms Descartar y empezar de nuevo in that unresolved-owner case
+- **THEN** only that never-submitted draft is abandoned, and a new edit uses current product data under existing protections
+- **AND** submitted command records, known outcomes and unresolved-result protection are not erased, cancelled or resolved by discard.
+
+#### Scenario: The merchant cancels or loses contact without acting
+
+- **WHEN** the merchant chooses Cancelar or the earlier tab becomes unreachable without a resolution request
+- **THEN** loss of contact does not automatically transfer, discard or start an editor
+- **AND** the retained work remains untouched by that observation alone.
+
+#### Scenario: The earlier editor returns after ownership changed
+
+- **WHEN** the previous editor returns after explicit takeover or confirmed discard/start
+- **THEN** it is read-only and cannot continue editing/saving under its former ownership
+- **AND** this required behavior must be enforced by a defined mechanism before claiming implementation support.
+
+#### Scenario: Another editor is known active or retained work is inaccessible
+
+- **WHEN** another editor is known active, or no accessible retained copy exists
+- **THEN** a known active editor retains PT-040's second-edit rejection and unavailable data is not represented as successfully assumed or discarded
+- **AND** missing owner status is not proof that the tab closed or submitted work stopped.
+
+#### Scenario: Production coordination is considered
+
+- **WHEN** ownership enforcement, incompatible coordination or a production browser matrix is designed
+- **THEN** those mechanisms and qualification remain separate from this selected flow
+- **AND** no universal locking guarantee, retry-budget reset, dependency or new backend interface follows from this selection.

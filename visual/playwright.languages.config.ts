@@ -9,6 +9,7 @@ export default defineConfig({
     "catalogue-languages.spec.ts",
     "navigation.spec.ts",
     "products-table.spec.ts",
+    "products-recovery.spec.ts",
   ],
   use: { ...base.use, baseURL: "http://localhost:6006" },
   projects: [

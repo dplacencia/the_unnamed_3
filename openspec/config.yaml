@@ -67,12 +67,89 @@ context: |
   UI language from browser headers. The landing uses Spanish at / and localized
   /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
   one year (365 days), with no account-level or cross-device preference implied.
+  Latest assignment 2026-11-16: user said "go ahead" to two commit-preparation
+  batches. Follow recovery-preview-plan.md's commit-preparation record and tasks
+  9.19–9.21. Stage only 30 implementation/specification/test files first and provide
+  the user's commit command. After verifying the user committed that batch, stage
+  the approved 232 PNGs and reference registry as batch two. This supersedes prior
+  no-staging restrictions only for these batches. Never execute commits; unrelated
+  navigation review and deferred message box redesign remain outside scope.
+  Latest visual approval 2026-11-15: user said "That looks better, I accept the
+  review" for all 232 images from 2026-11-14T23-55-57.165Z, source 88dfe48b.
+  Read recovery-preview-plan.md's visual-approval-and-reference-promotion record.
+  Promotion is complete: 204 new recovery cases, 28 Products replacements and 600
+  unrelated references preserved; current accepted baseline is 832. Post-approval
+  run 2026-11-15T00-12-39.768Z passes all 811 expected cases, with zero skipped/
+  unexpected/flaky cases and exit 0 (task 9.18).
+  Earlier 172/200-image pending proof is historical/superseded for this review.
+  Message box redesign and the separate 20 navigation revisions remain deferred/
+  unapproved. No staging, commit or deployment follows. Never commit.
+  Previous copy review 2026-11-15: user authorized applying Spanish copy changes to the
+  simulated previews. Read recovery-preview-plan.md copy-revision authority.
+  That historical copy proof passed 200 candidates and 579 unaffected comparisons.
+  Its affected cases are included in the latest 232-image approval above; it does
+  not describe the current accepted count. Keep message box redesign deferred.
   Current assignment: openspec/changes/define-products-table/.
-  Latest staging authority: the user said "go ahead" to the two-batch checkpoint.
-  Follow editing-plan.md's commit preparation: first stage 25 code/spec/test files
-  and give the user a commit command; after they commit, stage 156 approved PNGs
-  plus visual/references.json as batch 2. Never commit or stage both together.
-  Complete this checkpoint before the next proposed design pass.
+  Latest continuation: define retry-budget/browser-storage details under the
+  user's "go ahead". Read recovery-technical-design.md. PT-034 selects three
+  attempts total, 15 seconds each, waits of 1/3 seconds with ±50% jitter and no deliberately
+  concurrent frontend attempt of the same command. The user rejected an
+  IndexedDB-only prerequisite. PT-035 is preferred storage; PT-036 requires
+  compatibility when it is absent/fails. PT-037 selects IndexedDB/localStorage/
+  open-app-memory fallbacks with a nonblocking retention notice and no memory-only
+  reopening promise. PT-038 selects a new bounded run of up to three requests
+  per explicit manual retry/continuation after the previous run stops, using the
+  same original command and PT-034 timing. PT-039 selects coordination when
+  possible: show another known active run and avoid a second deliberate run;
+  if coordination is unavailable, recovery stays usable here with an honest
+  limitation notice. Missing status is not proof no other run exists. No automatic
+  restart or active-run reset. PT-040 rejects a second edit of the same product
+  with a clear error. The user rejected independent drafts and requested defining
+  discard/takeover when the original editing tab may be closed. PT-041 allows
+  explicit takeover or confirmed discard/start of an accessible unsent draft when
+  its owner is unreachable/unknown; the previous editor is read-only on return.
+  Known active editors still block a second edit. No automatic transfer/discard.
+  Production ownership enforcement and editing without usable coordination remain
+  unselected. The user selected "Build the simulated preview (Recommended)": execute
+  recovery-preview-plan.md with synthetic commands/capabilities/virtual ownership.
+  No production mechanism, new dependency, reference acceptance, staging or commit
+  follows. Never commit.
+  Historical initial preview proof: source 2058ed78 passed 84 code tests, 124
+  browser checks, 172 captures and 607 comparisons. That pending run and 628-entry
+  baseline are superseded by the latest 232-image approval/current 832-entry
+  baseline above; retain the original proof's source-specific meaning.
+  Latest review requests natural Spanish uncertainty wording and defers message
+  box redesign. Read recovery-preview-plan.md's clarification/tasks 9.11–9.13.
+  The user rejects nominal "el/este guardado" and selects "No hemos podido confirmar
+  que los cambios se han guardado" plus its matching help sentence. Prefer changes/
+  edits and verbal guardar in context, reviewing compact labels individually.
+  Copy implementation is tracked separately; current layout stays for now. This
+  note was an earlier copy checkpoint; the later exact approval above closes the
+  superseded 172-image pending status.
+  Latest assignment: continue save-recovery/draft discovery. The user requested
+  an Inventory operation-ID check, then selected PT-028 bounded automatic unchanged
+  retries with manual fallback. Read design.md's Inventory findings/selection.
+  The earlier read-only-only/no-resend proposal was not selected. Preserve the
+  full original identity/content, current authority and supported-method limits.
+  PT-029 selects pausing only affected products; browsing/other editing stay usable.
+  PT-030 permits new saves of other editable products during recovery. PT-034/038
+  define initial/manual run budgets; remaining storage details and command grouping
+  stay open. Where persistent
+  retention is usable and copies are accessible, PT-031/032 restore submitted
+  records and unsent drafts in the same browser/business/user, only on request,
+  with Products initially read-only. Memory-only mode does not promise reopening
+  recovery. PT-033 reviews changed current data against the unsent draft baseline;
+  no automatic merge/overwrite. Remaining storage policies, mapping, comparison
+  and concurrency details remain open.
+  Discovery alone did not authorize UI; the bounded simulated preview is now
+  authorized above. Production integration, reference acceptance, staging and
+  commits remain outside scope.
+  The two-batch checkpoint is complete in user commits 6636828/eb49dea after their
+  content-preserving email rewrite. Read editing-plan.md for historical ID mapping;
+  E583 records that completed source checkpoint; 628 was the reference count at that
+  accepted baseline. The recovery preview has separate source proof. Old staging
+  scope is spent.
+  Never commit.
   Latest user authority: "That looks ok, I approve all current revision. What is
   the next recommended steps". The exact 156 Products images in the linked
   2026-11-14T12-42-43.360Z gallery are approved and promoted (628 baseline entries).
@@ -111,7 +188,8 @@ context: |
   plan records final source/runs, review findings and limits. Retained unconfirmed
   values are read-only/selectable while the fixture pauses submission; recovery
   and real storage remain unselected. All 156 Products images are now accepted;
-  the prior 20 navigation updates remain pending. Preserve the 628 references.
+  the prior 20 navigation updates remain pending. Preserve that historical
+  628-entry checkpoint and the current 832-entry approved baseline above.
   Keep explicit-editing and draft/save/cancel boundaries.
   The preceding staging scope
   is complete and grants no staging authority for new work. Do not infer image

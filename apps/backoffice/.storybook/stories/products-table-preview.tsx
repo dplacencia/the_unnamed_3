@@ -1,11 +1,13 @@
 import {
   useCallback,
   useEffect,
+  useId,
   useMemo,
   useRef,
   useState,
   useSyncExternalStore,
   type CSSProperties,
+  type ReactNode,
 } from "react";
 import { useTranslations } from "next-intl";
 import {
@@ -47,10 +49,18 @@ import {
 } from "@/components/ui/sheet";
 import { Table, TableCell, TableHeader, TableRow } from "@/components/ui/table";
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
   ArrowDownIcon,
   ArrowUpIcon,
   ChevronRightIcon,
+  ClockIcon,
+  InfoCircleIcon,
   LayoutGridIcon,
+  LockIcon,
   XIcon,
 } from "@/icons";
 import { NavigationPrototype } from "./navigation-prototype";
@@ -99,6 +109,88 @@ const columnLabels = {
   stock: "gridStock",
 } as const;
 type T = ReturnType<typeof useTranslations>;
+
+export type ProductRowStatus = {
+  kind: "checking" | "unconfirmed" | "locked";
+  description: string;
+};
+
+function ProductExpansion({
+  product,
+  expanded,
+  phone,
+  status,
+  onToggle,
+}: {
+  product: PreviewProduct;
+  expanded: boolean;
+  phone: boolean;
+  status?: ProductRowStatus;
+  onToggle: () => void;
+}) {
+  const t = useTranslations("catalogue");
+  const statusDescriptionId = useId();
+  const StatusIcon =
+    status?.kind === "checking"
+      ? ClockIcon
+      : status?.kind === "locked"
+        ? LockIcon
+        : InfoCircleIcon;
+  const control = (
+    <Button
+      variant="ghost"
+      size={phone ? "icon-lg" : "icon-sm"}
+      className="products-expand"
+      data-product-expand={product.id}
+      data-product-row-state={status?.kind}
+      aria-describedby={status ? statusDescriptionId : undefined}
+      aria-expanded={expanded}
+      aria-controls={expanded ? `summary-${product.id}` : undefined}
+      aria-label={t(expanded ? "ptCollapseProduct" : "ptExpandProduct", {
+        product: product.name,
+        code: product.sku ?? product.id,
+      })}
+      onClick={onToggle}
+    >
+      <ChevronRightIcon
+        className={
+          expanded
+            ? "products-expand-chevron size-4 rotate-90"
+            : "products-expand-chevron size-4"
+        }
+        aria-hidden="true"
+      />
+      {status && (
+        <span
+          className="products-row-status-marker"
+          data-product-status-marker={status.kind}
+          aria-hidden="true"
+        >
+          <StatusIcon className="size-3" />
+        </span>
+      )}
+      {status && (
+        <span className="sr-only" id={statusDescriptionId}>
+          {status.description}
+        </span>
+      )}
+    </Button>
+  );
+  return (
+    <Tooltip disabled={!status}>
+      <TooltipTrigger render={control} />
+      {status && (
+        <TooltipContent
+          role="tooltip"
+          className="products-row-status-tooltip whitespace-normal"
+          align="start"
+        >
+          {status.description}
+        </TooltipContent>
+      )}
+    </Tooltip>
+  );
+}
 
 export interface ProductsTablePreviewProps {
   initialStock: boolean;
@@ -195,11 +287,15 @@ function ProductsTable({
   update,
   records,
   editor,
+  summary,
+  productStatus,
 }: {
   view: ProductsView;
   update: (next: Partial<ProductsView>) => void;
   records: PreviewProduct[];
   editor: ProductEditing;
+  summary?: ReactNode;
+  productStatus?: (product: PreviewProduct) => ProductRowStatus | undefined;
 }) {
   const t = useTranslations("catalogue");
   const phone = useSyncExternalStore(
@@ -508,7 +604,7 @@ function ProductsTable({
           <Button
             size={phone ? "lg" : "sm"}
             variant="outline"
-            disabled={editor.sending || editor.hasUnconfirmed}
+            disabled={editor.sending || editor.entryBlocked}
             onClick={() => editor.begin({ type: "table" })}
           >
             {t("peEditTable")}
@@ -542,6 +638,7 @@ function ProductsTable({
       {(tableEditing || editor.hasUnconfirmed) && (
         <EditingResultsView editor={editor} />
       )}
+      {summary}
       <div className="products-table-frame" ref={frame} data-products-scroll>
         <Table className="products-data-table">
           <caption className="sr-only">{t("gridProducts")}</caption>
@@ -590,113 +687,104 @@ function ProductsTable({
               </TableRow>
             ))}
           </TableHeader>
-          {rows.map((row) => (
-            <tbody key={row.id}>
-              <tr data-product-id={row.id}>
-                {row.getVisibleCells().map((cell) => (
-                  <TableCell
-                    key={cell.id}
-                    data-products-column={cell.column.id}
-                    data-pinned={phone && cell.column.id === "product"}
-                  >
-                    {cell.column.id === "product" ? (
-                      <div className="products-name-cell">
-                        <Button
-                          variant="ghost"
-                          size={phone ? "icon-lg" : "icon-sm"}
-                          className="products-expand"
-                          data-product-expand={row.id}
-                          aria-expanded={row.getIsExpanded()}
-                          aria-controls={
-                            row.getIsExpanded()
-                              ? `summary-${row.id}`
-                              : undefined
-                          }
-                          aria-label={t(
-                            row.getIsExpanded()
-                              ? "ptCollapseProduct"
-                              : "ptExpandProduct",
-                            {
-                              product: row.original.name,
-                              code: row.original.sku ?? row.id,
-                            },
-                          )}
-                          onClick={row.getToggleExpandedHandler()}
-                        >
-                          <ChevronRightIcon
-                            className={
-                              row.getIsExpanded()
-                                ? "size-4 rotate-90"
-                                : "size-4"
-                            }
-                          />
-                        </Button>
-                        {tableEditing ? (
-                          <EditingField
-                            editor={editor}
-                            product={row.original}
-                            field="name"
-                          />
-                        ) : (
-                          <Button
-                            variant="link"
-                            className="products-name"
-                            data-product-name
-                            title={row.original.name}
-                            onClick={() => setPanelId(row.id)}
-                          >
-                            {row.original.name}
-                          </Button>
-                        )}
-                      </div>
-                    ) : cell.column.id === "stock" ? (
-                      <StockValue product={row.original} view={view} t={t} />
-                    ) : cell.column.id === "sku" ? (
-                      tableEditing ? (
-                        <EditingSku editor={editor} product={row.original} />
-                      ) : (
-                        (row.original.sku ?? (
-                          <span className="products-muted">
-                            {t("ptUnassigned")}
-                          </span>
-                        ))
-                      )
-                    ) : (
-                      row.original.unit
-                    )}
-                  </TableCell>
-                ))}
-              </tr>
-              {row.getIsExpanded() && (
-                <tr className="products-summary-row">
-                  <td
-                    colSpan={visible.length}
-                    className="products-summary-cell"
-                  >
-                    <div
-                      id={`summary-${row.id}`}
-                      data-product-summary={row.id}
-                      className="products-summary"
+          {rows.map((row) => {
+            const status = productStatus?.(row.original);
+            return (
+              <tbody key={row.id}>
+                <tr
+                  data-product-id={row.id}
+                  data-product-row-state={status?.kind}
+                >
+                  {row.getVisibleCells().map((cell) => (
+                    <TableCell
+                      key={cell.id}
+                      data-products-column={cell.column.id}
+                      data-pinned={phone && cell.column.id === "product"}
                     >
-                      <CatalogueFacts
-                        product={row.original}
-                        hidden={hidden}
-                        t={t}
-                      />
-                      <Button
-                        variant="link"
-                        className="products-details-action"
-                        onClick={() => setPanelId(row.id)}
-                      >
-                        {t("ptOpenDetails")}
-                        <ChevronRightIcon className="size-3.5" />
-                      </Button>
-                    </div>
-                  </td>
+                      {cell.column.id === "product" ? (
+                        <div className="products-name-cell">
+                          <ProductExpansion
+                            product={row.original}
+                            expanded={row.getIsExpanded()}
+                            phone={phone}
+                            status={status}
+                            onToggle={row.getToggleExpandedHandler()}
+                          />
+                          {tableEditing ? (
+                            <EditingField
+                              editor={editor}
+                              product={row.original}
+                              field="name"
+                            />
+                          ) : (
+                            <Button
+                              variant="link"
+                              className="products-name"
+                              data-product-name
+                              title={row.original.name}
+                              onClick={() => setPanelId(row.id)}
+                            >
+                              {row.original.name}
+                            </Button>
+                          )}
+                        </div>
+                      ) : cell.column.id === "stock" ? (
+                        <StockValue product={row.original} view={view} t={t} />
+                      ) : cell.column.id === "sku" ? (
+                        tableEditing ? (
+                          <EditingSku editor={editor} product={row.original} />
+                        ) : (
+                          (row.original.sku ?? (
+                            <span className="products-muted">
+                              {t("ptUnassigned")}
+                            </span>
+                          ))
+                        )
+                      ) : (
+                        row.original.unit
+                      )}
+                    </TableCell>
+                  ))}
                 </tr>
-              )}
-            </tbody>
-          ))}
+                {row.getIsExpanded() && (
+                  <tr className="products-summary-row">
+                    <td
+                      colSpan={visible.length}
+                      className="products-summary-cell"
+                    >
+                      <div
+                        id={`summary-${row.id}`}
+                        data-product-summary={row.id}
+                        className="products-summary"
+                      >
+                        {status && (
+                          <p
+                            className="products-expanded-status"
+                            data-product-expanded-status={row.id}
+                          >
+                            {status.description}
+                          </p>
+                        )}
+                        <CatalogueFacts
+                          product={row.original}
+                          hidden={hidden}
+                          t={t}
+                        />
+                        <Button
+                          variant="link"
+                          className="products-details-action"
+                          onClick={() => setPanelId(row.id)}
+                        >
+                          {t("ptOpenDetails")}
+                          <ChevronRightIcon className="size-3.5" />
+                        </Button>
+                      </div>
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            );
+          })}
         </Table>
         {!rows.length && (
           <div className="products-empty">
@@ -752,7 +840,7 @@ function ProductsTable({
                 <Button
                   variant="outline"
                   size="sm"
-                  disabled={editor.sending || editor.hasUnconfirmed}
+                  disabled={editor.sending || editor.entryBlocked}
                   onClick={() =>
                     editor.begin({ type: "panel", id: panelProduct.id })
                   }
@@ -794,9 +882,17 @@ function ProductsTable({
   );
 }
 
-export function ProductsTablePreview(props: ProductsTablePreviewProps) {
+export function ProductsTableWorkspace(
+  props: ProductsTablePreviewProps & {
+    editor: ProductEditing;
+    summary?: ReactNode;
+    productStatus?: (product: PreviewProduct) => ProductRowStatus | undefined;
+    viewKey?: string;
+  },
+) {
+  const { editor } = props;
   const t = useTranslations("catalogue");
-  const key = `irin-products-design:${props.initialStock}:${props.initialDensity}:${props.hiddenColumns}:${props.locationCount}:${props.archivedFixture}:${props.saveFixture ?? "confirmed"}`;
+  const key = `${props.viewKey ?? "irin-products-design"}:${props.initialStock}:${props.initialDensity}:${props.hiddenColumns}:${props.locationCount}:${props.archivedFixture}:${props.saveFixture ?? "confirmed"}`;
   const [view, setView] = useState(() =>
     readProductsView(key, {
       stock: props.initialStock,
@@ -825,14 +921,6 @@ export function ProductsTablePreview(props: ProductsTablePreviewProps) {
           : {}),
       })),
     [props.locationCount],
-  );
-  const initialRecords = useMemo(
-    () => previewProducts(props.archivedFixture),
-    [props.archivedFixture],
-  );
-  const editor = useProductEditing(
-    initialRecords,
-    props.saveFixture ?? "confirmed",
   );
   const locations =
     props.locationCount === "one"
@@ -896,10 +984,24 @@ export function ProductsTablePreview(props: ProductsTablePreviewProps) {
             update={update}
             records={editor.records}
             editor={editor}
+            summary={props.summary}
+            productStatus={props.productStatus}
           />
         }
       />
       <EditingGuard editor={editor} />
     </>
   );
+}
+
+export function ProductsTablePreview(props: ProductsTablePreviewProps) {
+  const initialRecords = useMemo(
+    () => previewProducts(props.archivedFixture),
+    [props.archivedFixture],
+  );
+  const editor = useProductEditing(
+    initialRecords,
+    props.saveFixture ?? "confirmed",
+  );
+  return <ProductsTableWorkspace {...props} editor={editor} />;
 }

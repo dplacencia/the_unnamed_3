@@ -4,7 +4,7 @@ Storybook renders the real retained TailAdmin components. The Astro gallery uses
 native Astro documents. Playwright checks registered interactions and captures
 both catalogues and the actual static app views. Fixtures are technical examples;
 The backoffice uses the approved first Irin configuration; the name remains
-provisional and no product flow is designed here.
+provisional. Product examples are bounded simulated designs, not production flows.
 
 Use the pinned Node/pnpm tools described in the [root README](../README.md).
 
@@ -48,12 +48,76 @@ an explicit custom label that remains exact across language changes. **Reset
 controls** restores the translated default. Typed values and open dialogs are
 preserved when the language changes.
 
-The current inventory covers 216 retained component source modules through 67
-stories and 21 view entries. Its 159 named scenarios produce 636 captures across
+The current inventory covers 216 retained component source modules through 83
+stories and 21 view entries. Its 210 named scenarios produce 840 captures across
 desktop 1440×900, tablet 768×1024, mobile 390×844 and desktop dark mode. The actual
 assembled views cover Spanish, English, Catalan, Galician and Basque. Compound
 primitives and icons are inspected in compositions; this is representative source
 coverage, not every possible prop combination or complete accessibility testing.
+
+## Products recovery and ownership preview
+
+The user authorized the bounded [recovery preview plan](../openspec/changes/define-products-table/recovery-preview-plan.md).
+Open the following Storybook examples for interactive review:
+
+- [Unconfirmed save and manual retry](http://localhost:6006/?path=/story/inventory-products-recovery--exhausted).
+- [Automatic recovery](http://localhost:6006/?path=/story/inventory-products-recovery--automatic).
+- [Restored submitted work](http://localhost:6006/?path=/story/inventory-products-recovery--restored).
+- [Unreachable editor and explicit takeover/discard](http://localhost:6006/?path=/story/inventory-products-recovery--unreachable-editor).
+- [Changed-data review](http://localhost:6006/?path=/story/inventory-products-recovery--changed-draft).
+- [Former editor returning read-only](http://localhost:6006/?path=/story/inventory-products-recovery--former-editor).
+
+The 16 recovery stories cover 51 registered states and 204 desktop/tablet/mobile/
+dark matrix cases, including five-language assembled-view examples. Retry deadlines
+retain the selected 15-second profile; browser checks control time rather than
+shortening that profile. Unknown and confirmed outcomes remain distinct while
+other eligible products can be edited/saved. Retained drafts use the explicit
+continue/discard flow and changed-data review. A second edit is rejected for a
+known active editor, while an unreachable editor permits the selected explicit
+resolution. Switching editors respects existing unsaved work.
+
+Commands and responses are synthetic. Retention modes, data comparison and owner
+states are predefined fixtures; an old editor's return is virtual. There is no
+actual IndexedDB journal, browser-tab lock or API integration. The unavailable
+history example supplies no restored command or guessed values; its current
+catalogue is an independent synthetic fixture. Whole-list/focus/first-change
+ownership acquisition and production behavior with unusable ownership coordination
+remain undecided. Storybook Reset only resets the example.
+
+Capture future revisions to these recovery cases with:
+
+```sh
+pnpm visual:capture --grep '(^| )products-recovery-'
+```
+
+The user approved the [exact 232-image latest gallery](http://localhost:9324/runs/2026-11-14T23-55-57.165Z/review.html)
+with **“That looks better, I accept the review”**. Its source is
+`88dfe48b0ba13a65b178592d12ae07f06a98f7d67ffd43e97c21870c0ac7d990`.
+The approved set contains all 204 recovery cases and 28 affected Products copy
+cases. It supersedes the earlier pending 172-image recovery and 200-image copy
+review sets. Root promoted the exact selection: 204 new entries, 28 replacements
+and 600 unrelated references preserved, for **832 accepted references**.
+Read the [approval/promotion record](../openspec/changes/define-products-table/recovery-preview-plan.md#visual-approval-and-reference-promotion--2026-11-15)
+for source, scope and verbatim evidence.
+
+Preserve that accepted baseline. Compare the 811 accepted cases outside only the
+separately pending navigation review with:
+
+```sh
+pnpm visual:compare --grep-invert '(^mobile .*navigation-)|navigation-workspace-location-options|navigation-workspace-location-option-hovered'
+```
+
+Products and recovery must not be excluded now that their exact references are
+accepted. The post-approval comparison passes all 811 expected cases in run
+`2026-11-15T00-12-39.768Z`, with zero skipped/unexpected/flaky cases and exit 0
+(linked record/task 9.18). The final pre-promotion proof passed 84
+code tests, 128 browser checks, 232 captures and 579 unaffected comparisons.
+Those earlier comparison results are not a substitute for the post-approval run.
+The prior initial-preview source `2058ed78…`/172-image proof is historical.
+Simulation limits and compiler/font-alias evidence remain in the linked plan.
+Future changes still need new captures and explicit image approval; this approval
+does not accept the separate 20 navigation revisions or authorize staging,
+commits or deployment. The message box redesign remains deferred.
 
 ## Products browsing and editing design
 
@@ -86,12 +150,13 @@ are subsequent work. Read the
 [editing plan](../openspec/changes/define-products-table/editing-plan.md) for scope
 and the current run evidence.
 
-The user approved all 156 images from `2026-11-14T12-42-43.360Z` with
-“That looks ok, I approve all current revision.” Those exact references are
-promoted, preserving the earlier 472 entries for **628 accepted references**.
-The [approval record](../openspec/changes/define-products-table/editing-plan.md#visual-approval--2026-11-14)
-contains the full user quote, source and promotion scope. The separately pending
-20 navigation images were outside that gallery and remain pending.
+At the historical first-editing checkpoint, the user approved all 156 images
+from `2026-11-14T12-42-43.360Z` with “That looks ok, I approve all current revision.”
+Their promotion preserved 472 earlier entries for a **628-entry baseline at that
+time**. The [original approval record](../openspec/changes/define-products-table/editing-plan.md#visual-approval--2026-11-14)
+retains its source and scope. The latest 232-image approval above replaces 28
+of those Products images and adds 204 recovery references; the current baseline
+is 832. The separately pending 20 navigation images remain unapproved.
 
 To capture future changes to these 156 cases (excluding the older navigation
 Products-frame story), run:
@@ -108,21 +173,30 @@ explicit run/case approval as other designs. Do not promote future changes or th
 prior pending navigation revisions automatically. The current editing run is recorded in the
 [editing plan](../openspec/changes/define-products-table/editing-plan.md#review-refinement--dismissible-results-2026-11-14).
 
-Compare the 607 current accepted cases outside the pending navigation revisions:
+Compare the 811 current accepted cases outside the pending navigation revisions:
 
 ```sh
 pnpm visual:compare --grep-invert '(^mobile .*navigation-)|navigation-workspace-location-options|navigation-workspace-location-option-hovered'
 ```
 
-This includes all 156 accepted Products cases and 451 unaffected accepted cases.
-It excludes eight navigation cases without references and the 21 mobile navigation
-cases, of which 12 are pending replacements and nine are unchanged. It does not
-approve or replace their separate review.
-Post-approval comparison `2026-11-14T13-03-52.919Z` passes all 607 selected
-accepted cases. The approval record also documents the capture-only focus-race
-correction and 24 repeated overview comparisons; approved images remain exact.
+This includes 156 Products cases, 204 accepted recovery cases and 451 other
+accepted cases. It excludes eight navigation cases without references and the
+21 mobile navigation cases, of which 12 are pending replacements and nine are
+unchanged. It does not approve or replace their separate review. The current
+811-case post-approval comparison passes under task 9.18 in run
+`2026-11-15T00-12-39.768Z`.
+
+Historical post-approval comparison `2026-11-14T13-03-52.919Z` passed the then-current
+607-case selection. The original editing approval record also documents the
+capture-only focus-race correction and 24 repeated overview comparisons; those
+source-bound checkpoints are not the new 811-case result.
 
 ## Navigation prototype
+
+The counts and baseline references below record historical navigation checkpoints.
+The current accepted baseline is 832; the separate 12 replacement/eight new
+navigation images still require specific approval and were outside the latest
+232-image Products/recovery gallery.
 
 Open http://localhost:6006/?path=/story/navigation-merchant-workspace--workspace.
 The seven examples under Navigation/Merchant workspace cover the selected
@@ -136,7 +210,7 @@ The 23 navigation scenarios provide 92 candidate cases, including all five
 languages. The user approved all 84 final images from
 `2026-11-12T21-36-33.733Z` with **“I approve all revisions.”**. They are promoted
 in `visual/references/` and `visual/references.json`, preserving the existing 388
-cases. The full accepted baseline now has **472 images**. Future replacements
+cases. The full accepted baseline at that checkpoint had **472 images**. Future replacements
 still require specific approval. To capture new navigation candidates and compare
 the full accepted matrix:
 

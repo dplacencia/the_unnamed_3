@@ -40,7 +40,7 @@ test("editing validates every draft before saving and preserves accepted spaces"
   await page.locator('[data-edit-name="product-1"]').fill("  Café nuevo  ");
   await page.locator("[data-edit-save]").click();
   await expect(page.locator('[data-edit-result="product-1"]')).toContainText(
-    "Guardado",
+    "Cambios guardados",
   );
   await expect(page.locator('[data-edit-name="product-1"]')).toHaveValue(
     "  Café nuevo  ",
@@ -80,10 +80,10 @@ test("editing reports mixed field outcomes and retains only the failed assignmen
   await page.locator('[data-edit-sku="product-8"]').fill("000008");
   await page.locator("[data-edit-save]").click();
   await expect(page.locator('[data-edit-result="product-8"]')).toContainText(
-    "Guardado",
+    "Cambios guardados",
   );
   await expect(page.locator('[data-edit-result="product-8"]')).toContainText(
-    "No guardado",
+    "Cambios no guardados",
   );
   await expect(page.locator('[data-edit-sku="product-8"]')).toHaveValue(
     "000008",
@@ -245,7 +245,7 @@ test("editing a missing SKU preserves its submitted code and stock stays read-on
   await page.locator('[data-edit-sku="product-8"]').fill(" 000008 ");
   await page.locator("[data-edit-save]").click();
   await expect(page.locator('[data-edit-result="product-8"]')).toContainText(
-    "Guardado",
+    "Cambios guardados",
   );
   expect(
     await page
@@ -267,7 +267,7 @@ test("editing saves drafts outside the current visible search", async ({
   await expect(page.locator("[data-edit-count]")).toContainText("1 producto");
   await page.locator("[data-edit-save]").click();
   await expect(page.locator('[data-edit-result="product-1"]')).toContainText(
-    "Guardado",
+    "Cambios guardados",
   );
 });
 
@@ -311,7 +311,9 @@ test("editing does not leave after validation or partial save failure", async ({
   await page.locator('[data-edit-name="product-1"]').fill("Café editado");
   await page.locator('[data-navigation-to="home"]').click();
   await page.locator("[data-edit-save-exit]").click();
-  await expect(page.locator("[data-edit-guard]")).toContainText("No guardado");
+  await expect(page.locator("[data-edit-guard]")).toContainText(
+    "Cambios no guardados",
+  );
   await expect(page.locator("[data-navigation-preview]")).toHaveAttribute(
     "data-navigation-page",
     "products",
@@ -420,7 +422,7 @@ test("editing reveals a hidden SKU error on explicit review", async ({
   await page.locator('[data-edit-sku="product-8"]').fill("000008");
   await page.locator("[data-edit-save]").click();
   await expect(page.locator('[data-edit-result="product-8"]')).toContainText(
-    "Guardado",
+    "Cambios guardados",
   );
   await expect(page.locator('[data-edit-sku="product-8"]')).toHaveCount(0);
 });
@@ -497,7 +499,7 @@ test("editing phone panel keeps a maximum-length name and its actions within rea
   await page.locator('[data-edit-name="product-8"]').fill("a".repeat(1024));
   await page.locator("[data-edit-save]").click();
   await expect(page.locator('[data-edit-result="product-8"]')).toContainText(
-    "Guardado",
+    "Cambios guardados",
   );
   const panel = page.locator('[data-slot="sheet-content"]');
   expect(
@@ -587,7 +589,7 @@ test("hidden catalogue fields are available in summaries and details", async ({
   await summary
     .getByRole("button", { name: "Abrir detalles", exact: true })
     .click();
-  const panel = page.getByRole("dialog");
+  const panel = page.locator('[data-slot="sheet-content"]');
   await expect(panel).toContainText("0840000000001");
   await expect(panel.getByRole("textbox")).toHaveCount(0);
   await page.keyboard.press("Escape");
@@ -654,7 +656,9 @@ test("phone keeps product pinned and the panel fills the viewport", async ({
   ).toBeLessThanOrEqual(1);
   await product.locator("[data-product-name]").click();
   await expect(page.getByRole("dialog")).toBeVisible();
-  expect((await page.getByRole("dialog").boundingBox())!.width).toBe(390);
+  await expect
+    .poll(async () => (await page.getByRole("dialog").boundingBox())!.width)
+    .toBeCloseTo(page.viewportSize()!.width, 2);
 });
 
 test("applied view survives leaving Products while search drafts do not", async ({
@@ -864,13 +868,13 @@ test("save results dismiss and reopen without losing confirmed changes and refre
   await page.locator('[data-edit-name="product-1"]').fill("Café guardado");
   await page.locator("[data-edit-save]").click();
   await expect(page.locator('[data-edit-result="product-1"]')).toContainText(
-    "Guardado",
+    "Cambios guardados",
   );
   await expect(page.locator("[data-edit-dismiss-results]")).toBeVisible();
   await page.locator("[data-edit-dismiss-results]").click();
   await expect(page.locator("[data-edit-results]")).toHaveCount(0);
   await expect(page.locator("[data-edit-results-collapsed]")).toContainText(
-    "Guardado",
+    "Cambios guardados",
   );
   await expect(page.locator("[data-edit-show-results]")).toBeFocused();
   await expect(page.locator("[data-edit-save]")).toBeDisabled();
@@ -894,7 +898,7 @@ test("save results dismiss and reopen without losing confirmed changes and refre
   await page.locator('[data-edit-name="product-2"]').fill("Azúcar guardado");
   await page.locator("[data-edit-save]").click();
   await expect(page.locator('[data-edit-result="product-2"]')).toContainText(
-    "Guardado",
+    "Cambios guardados",
   );
   await expect(page.locator("[data-edit-results-collapsed]")).toHaveCount(0);
   await page.locator("[data-edit-exit]").click();
@@ -911,11 +915,11 @@ test("dismissing mixed results preserves failed drafts and scopes presentation t
   await page.locator('[data-edit-name="product-2"]').fill("Azúcar pendiente");
   await page.locator("[data-edit-save]").click();
   await expect(page.locator('[data-edit-result="product-2"]')).toContainText(
-    "No guardado",
+    "Cambios no guardados",
   );
   await page.locator("[data-edit-dismiss-results]").click();
   await expect(page.locator("[data-edit-results-collapsed]")).toContainText(
-    "Guardado parcial",
+    "Algunos cambios se han guardado",
   );
   await expect(page.locator('[data-edit-name="product-2"]')).toHaveValue(
     "Azúcar pendiente",
@@ -929,12 +933,12 @@ test("dismissing mixed results preserves failed drafts and scopes presentation t
     .click();
   const panel = page.locator('[data-slot="sheet-content"]');
   await expect(panel.locator('[data-edit-result="product-2"]')).toContainText(
-    "No guardado",
+    "Cambios no guardados",
   );
   await panel.locator("[data-edit-dismiss-results]").click();
   await expect(panel.locator("[data-edit-results]")).toHaveCount(0);
   await expect(panel.locator("[data-edit-results-collapsed]")).toContainText(
-    "No guardado",
+    "Cambios no guardados",
   );
 });
 

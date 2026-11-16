@@ -8,6 +8,10 @@ export async function productsAction(
   locale: Locale,
 ): Promise<void> {
   const text = catalogueMessages[locale];
+  if (action.startsWith("products-recovery-")) {
+    await recoveryAction(page, action, locale);
+    return;
+  }
   const selectLocation = async () => {
     await page
       .getByRole("checkbox", { name: text.gridShowStock, exact: true })
@@ -175,5 +179,190 @@ export async function productsAction(
     }
     default:
       throw new Error(`Unknown Products action: ${action}`);
+  }
+}
+
+async function recoveryAction(page: Page, action: string, locale: Locale) {
+  const text = catalogueMessages[locale];
+  const owner = async () => {
+    await page.locator('[data-recovery-owner-action="product-1"]').click();
+    await expect(page.locator("[data-recovery-owner-dialog]")).toBeVisible();
+  };
+  const hideTooltip = async () => {
+    await page.mouse.move(1, 1);
+    await page.keyboard.press("Escape");
+    await expect(page.getByRole("tooltip")).toBeHidden();
+  };
+  switch (action) {
+    case "products-recovery-row-tooltip":
+      await page.locator('[data-product-expand="product-1"]').focus();
+      await page.keyboard.press("Tab");
+      await page.keyboard.press("Shift+Tab");
+      await expect(
+        page.locator('[data-product-expand="product-1"]'),
+      ).toBeFocused();
+      await expect(page.getByRole("tooltip")).toContainText(text.prUnconfirmed);
+      break;
+    case "products-recovery-row-expanded":
+      await page.locator('[data-product-expand="product-1"]').click();
+      await hideTooltip();
+      await expect(
+        page.locator('[data-product-expanded-status="product-1"]'),
+      ).toBeVisible();
+      break;
+    case "products-recovery-table-editing": {
+      await page
+        .getByRole("button", { name: text.peEditTable, exact: true })
+        .click();
+      await hideTooltip();
+      const protectedField = page.locator('[data-edit-name="product-1"]');
+      const otherField = page.locator('[data-edit-name="product-2"]');
+      await expect(protectedField).toHaveAttribute("readonly", "");
+      await expect(otherField).toBeEditable();
+      const [protectedBox, otherBox] = await Promise.all([
+        protectedField.boundingBox(),
+        otherField.boundingBox(),
+      ]);
+      expect(protectedBox).not.toBeNull();
+      expect(otherBox).not.toBeNull();
+      expect(Math.abs(protectedBox!.width - otherBox!.width)).toBeLessThan(1);
+      break;
+    }
+    case "products-recovery-takeover-guard":
+      await page
+        .getByRole("button", { name: text.peEditTable, exact: true })
+        .click();
+      await page
+        .locator('[data-edit-name="product-2"]')
+        .fill("Otro borrador sin guardar");
+      await owner();
+      await page
+        .getByRole("button", { name: text.prAssume, exact: true })
+        .click();
+      await expect(page.locator("[data-edit-guard]")).toBeVisible();
+      break;
+    case "products-recovery-assumed-saved":
+      await owner();
+      await page
+        .getByRole("button", { name: text.prAssume, exact: true })
+        .click();
+      await page.locator("[data-edit-save]").click();
+      await expect(page.locator("[data-recovery-summary]")).toContainText(
+        text.prConfirmed,
+      );
+      await page.locator('[data-slot="sheet-title"]').click();
+      break;
+    case "products-recovery-discarded-unavailable":
+      await owner();
+      await page
+        .getByRole("button", { name: text.prDiscardStart, exact: true })
+        .click();
+      await page
+        .getByRole("button", { name: text.prConfirmDiscard, exact: true })
+        .click();
+      await expect(page.locator("[data-recovery-review-dialog]")).toContainText(
+        text.prDiscardedCurrentUnavailable,
+      );
+      break;
+    case "products-recovery-other-saved":
+      await page
+        .getByRole("button", { name: text.peEditTable, exact: true })
+        .click();
+      await page
+        .locator('[data-edit-name="product-2"]')
+        .fill("Azúcar sin interrumpir");
+      await page.locator("[data-edit-save]").click();
+      await expect(
+        page.locator('[data-edit-result="product-2"]'),
+      ).toBeVisible();
+      break;
+    case "products-recovery-retried":
+    case "products-recovery-resumed":
+      await page
+        .getByRole("button", {
+          name:
+            action === "products-recovery-retried"
+              ? text.prRetry
+              : text.prResumeRecovery,
+          exact: true,
+        })
+        .first()
+        .click();
+      // The common screenshot harness freezes Date. Advance its observation of
+      // time so the deterministic 250ms synthetic response can settle; the
+      // selected attempt deadlines/backoff in the product model are unchanged.
+      await page.clock.setFixedTime(
+        new Date((await page.evaluate(() => Date.now())) + 1000),
+      );
+      await expect(page.locator("[data-recovery-summary]")).toContainText(
+        text.prConfirmed,
+      );
+      break;
+    case "products-recovery-dismissed":
+      await page
+        .getByRole("button", { name: text.peDismissResults, exact: true })
+        .click();
+      await expect(
+        page
+          .getByRole("button", { name: text.peShowResults, exact: true })
+          .first(),
+      ).toBeVisible();
+      break;
+    case "products-recovery-owner":
+      await owner();
+      break;
+    case "products-recovery-discard":
+      await owner();
+      await page
+        .getByRole("button", { name: text.prDiscardStart, exact: true })
+        .click();
+      await expect(
+        page.locator("[data-recovery-discard-dialog]"),
+      ).toBeVisible();
+      break;
+    case "products-recovery-assumed":
+    case "products-recovery-continued":
+    case "products-recovery-review":
+    case "products-recovery-reviewed":
+    case "products-recovery-unavailable":
+      await owner();
+      await page
+        .getByRole("button", {
+          name:
+            action === "products-recovery-continued"
+              ? text.prContinueDraft
+              : text.prAssume,
+          exact: true,
+        })
+        .click();
+      if (
+        ["products-recovery-review", "products-recovery-unavailable"].includes(
+          action,
+        )
+      ) {
+        await expect(
+          page.locator("[data-recovery-review-dialog]"),
+        ).toBeVisible();
+      } else {
+        if (action === "products-recovery-reviewed")
+          await page
+            .getByRole("button", { name: text.prAcceptReview, exact: true })
+            .click();
+        await expect(
+          page.locator('[data-edit-name="product-1"]'),
+        ).toBeVisible();
+        await page.locator('[data-slot="sheet-title"]').click();
+      }
+      break;
+    case "products-recovery-former-table":
+      await page
+        .getByRole("button", { name: text.peEditTable, exact: true })
+        .click();
+      await expect(
+        page.locator('[data-edit-name="product-1"]'),
+      ).toHaveAttribute("readonly", "");
+      break;
+    default:
+      throw new Error(`Unknown recovery action: ${action}`);
   }
 }

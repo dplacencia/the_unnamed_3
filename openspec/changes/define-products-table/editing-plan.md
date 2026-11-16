@@ -402,3 +402,55 @@ local links/anchors pass. The executable source still matches the recorded
 for this documentation/staging step. Final staged/remaining-path audits enforce
 the batch split. HEAD remains `b955575`; no commit was created. Await the user's
 first commit before staging batch 2.
+
+## Completed checkpoint and email-privacy repair — 2026-11-14
+
+The user committed batch 1 as `a8a4374` and batch 2 as `df1f321`, then reported
+GitHub rejecting the initial push because of the commit email privacy protection.
+Only the repository-local future commit email was configured and a local backup
+branch was created by the agent; no agent commit or history rewrite occurred.
+The user ran the supplied root-rebase repair and pushed `main` themselves.
+
+Live verification confirms both batches are complete after the user-run rewrite:
+`6636828` contains exactly the 25 source/specification/test/documentation paths,
+and `eb49dea` contains exactly 156 approved Products PNGs plus their manifest.
+The remote `main` was read and matched local
+`eb49dea2718a4d6d03933ac4d745bfb916b840e7`. The working tree and index were clean
+before the following discovery documentation began. No rebase is in progress.
+
+All ten old/new commit pairs preserve exact trees, messages, author names and
+author dates. All author/committer emails now use the GitHub noreply identity;
+private email values are not copied into these project records. The original
+history remains on the local `backup/before-email-privacy-fix` branch; it was
+not pushed. Historical commit references elsewhere in these records can be
+resolved through this mapping:
+
+| Original local ID | Current ID |
+| ----------------- | ---------- |
+| `317a8d7`         | `4264038`  |
+| `dc395c2`         | `fd7566d`  |
+| `0580e97`         | `f2b3c15`  |
+| `07db0bb`         | `8ff7955`  |
+| `183a65b`         | `676643f`  |
+| `4a5b979`         | `b07a040`  |
+| `f365765`         | `b5949bf`  |
+| `b955575`         | `c117e2b`  |
+| `a8a4374`         | `6636828`  |
+| `df1f321`         | `eb49dea`  |
+
+The visual source remains
+`e583af90ef3ea733a3961760d1364f9906ef66f588bcd6b36419031ef3aa8d60`,
+matching the prepared build and recorded 607-case proof. The 628 accepted
+references retain their exact images and original approval metadata; the older
+20 navigation image revisions remain pending separately. Rewriting Git metadata
+changed neither the UI nor image approval. This checkpoint is closed; its
+staging authorization does not carry forward to new discovery changes.
+
+The user then said **“go ahead”** after the recommendation to define save
+recovery and draft handling. This continues product discovery under task 2.2k.
+Read the [unconfirmed-save proposal](design.md#unconfirmed-save-verification--proposal-2026-11-14).
+The initial read-only-verification question was not selected: the user first
+requested an Inventory retry-contract check. The subsequent PT-028 selection is
+recorded in the [source findings](design.md#inventory-retry-findings-and-selected-recovery-direction--2026-11-14).
+No new prototype, production interface, image promotion, staging or commit is
+authorized by this discovery continuation.

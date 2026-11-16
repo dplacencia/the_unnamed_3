@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
@@ -22,15 +22,27 @@ import {
   type EditorForm,
   type EditingResults,
   type EditingRows,
+  type EditingDraft,
   type ProductChange,
 } from "./products-editing-model";
 
 export type SaveFixture = "confirmed" | "mixed" | "unconfirmed";
-type EditorMode = { type: "table" } | { type: "panel"; id: string } | null;
+export type EditorMode =
+  { type: "table" } | { type: "panel"; id: string } | null;
+export type EditingPreviewExtension = {
+  isReadOnly: (id: string) => boolean;
+  hasUnconfirmed: boolean;
+  beforeBegin: (mode: Exclude<EditorMode, null>) => boolean;
+  submit: (
+    changes: ProductChange[],
+    rows: EditingRows,
+  ) => EditingResults | Promise<EditingResults>;
+};
 
 export function useProductEditing(
   initial: PreviewProduct[],
   fixture: SaveFixture,
+  extension?: EditingPreviewExtension,
 ) {
   const [records, setRecords] = useState(initial);
   const confirmedRecords = useRef(initial);
@@ -48,22 +60,36 @@ export function useProductEditing(
   });
   const watched = useWatch({ control: form.control });
   const rows = (watched.rows ?? form.getValues("rows")) as EditingRows;
-  const changes = changedProducts(records, rows);
-  const hasUnconfirmed = Object.values(results).some((fields) =>
-    Object.values(fields).includes("unconfirmed"),
-  );
+  const hasUnconfirmed =
+    !!extension?.hasUnconfirmed ||
+    Object.values(results).some((fields) =>
+      Object.values(fields).includes("unconfirmed"),
+    );
+  const isReadOnly = (id: string) =>
+    extension ? extension.isReadOnly(id) : hasUnconfirmed;
+  const eligible = (changes: ProductChange[]) =>
+    extension ? changes.filter((change) => !isReadOnly(change.id)) : changes;
+  const changes = eligible(changedProducts(records, rows));
   function resetDrafts() {
-    form.reset({ rows: editingDefaults(confirmedRecords.current) });
-    if (!unresolved.current) {
+    const next = editingDefaults(confirmedRecords.current);
+    if (extension)
+      for (const product of records) {
+        if (isReadOnly(product.id))
+          next[product.id] = form.getValues(`rows.${product.id}`);
+      }
+    form.reset({ rows: next });
+    if (!unresolved.current && !extension?.hasUnconfirmed) {
       setResults({});
       setSubmitted([]);
     }
   }
   function requestLeave(action: () => void) {
-    if (changes.length || sending) setPendingExit(() => action);
+    if (changes.length || sending || (extension && hasUnconfirmed && mode))
+      setPendingExit(() => action);
     else action();
   }
   function begin(next: Exclude<EditorMode, null>) {
+    if (extension && !extension.beforeBegin(next)) return;
     requestLeave(() => {
       resetDrafts();
       setMode(next);
@@ -77,50 +103,116 @@ export function useProductEditing(
       after();
     });
   }
+  const applyExternalResults = useCallback(
+    (requested: ProductChange[], outcomes: EditingResults) => {
+      const next = applyEditingResults(
+        confirmedRecords.current,
+        form.getValues("rows"),
+        requested,
+        outcomes,
+      );
+      confirmedRecords.current = next.records;
+      setRecords(next.records);
+      form.reset({ rows: next.rows }, { keepErrors: true });
+      setResults((previous) => {
+        const combined = { ...previous };
+        for (const [id, fields] of Object.entries(outcomes))
+          combined[id] = { ...combined[id], ...fields };
+        unresolved.current = Object.values(combined).some((fields) =>
+          Object.values(fields).includes("unconfirmed"),
+        );
+        return combined;
+      });
+      setSubmitted((previous) => [
+        ...previous.filter(
+          (change) =>
+            !requested.some((nextChange) => nextChange.id === change.id),
+        ),
+        ...requested,
+      ]);
+    },
+    [form],
+  );
+  // Used only after explicit resolution of a synthetic retained draft.
+  function continueDraft(
+    id: string,
+    draft: EditingDraft,
+    currentName?: string,
+  ) {
+    if (currentName !== undefined) {
+      const next = confirmedRecords.current.map((product) =>
+        product.id === id ? { ...product, name: currentName } : product,
+      );
+      confirmedRecords.current = next;
+      setRecords(next);
+    }
+    form.setValue(`rows.${id}`, { ...draft });
+    setMode({ type: "panel", id });
+    inspect(id);
+  }
   async function save(after?: () => void) {
-    if (sending || hasUnconfirmed) return;
+    if (sending || (!extension && hasUnconfirmed)) return;
     await form.handleSubmit(
       async (values) => {
-        const requested = changedProducts(records, values.rows);
+        const requested = eligible(
+          changedProducts(confirmedRecords.current, values.rows),
+        );
         if (!requested.length) {
-          setPendingExit(null);
-          after?.();
+          if (!hasUnconfirmed) {
+            setPendingExit(null);
+            after?.();
+          }
           return;
         }
         setSending(true);
-        // Deliberately simulated latency/outcomes; no request is sent anywhere.
-        await new Promise((resolve) => setTimeout(resolve, 250));
-        const outcomes: EditingResults = {};
-        let operation = 0;
-        for (const change of requested) {
-          outcomes[change.id] = {};
-          for (const field of ["name", "sku"] as const) {
-            if (change[field] === undefined) continue;
-            outcomes[change.id][field] =
-              fixture === "unconfirmed"
-                ? "unconfirmed"
-                : fixture === "mixed" && operation > 0
-                  ? "failed"
-                  : "confirmed";
-            operation++;
+        let outcomes: EditingResults;
+        if (extension)
+          outcomes = await extension.submit(requested, values.rows);
+        else {
+          // Deliberately simulated latency/outcomes; no request is sent anywhere.
+          await new Promise((resolve) => setTimeout(resolve, 250));
+          outcomes = {};
+          let operation = 0;
+          for (const change of requested) {
+            outcomes[change.id] = {};
+            for (const field of ["name", "sku"] as const) {
+              if (change[field] === undefined) continue;
+              outcomes[change.id][field] =
+                fixture === "unconfirmed"
+                  ? "unconfirmed"
+                  : fixture === "mixed" && operation > 0
+                    ? "failed"
+                    : "confirmed";
+              operation++;
+            }
           }
         }
         const next = applyEditingResults(
-          records,
+          confirmedRecords.current,
           values.rows,
           requested,
           outcomes,
         );
-        confirmedRecords.current = next.records;
-        unresolved.current = Object.values(outcomes).some((fields) =>
-          Object.values(fields).includes("unconfirmed"),
-        );
-        setRecords(next.records);
-        form.reset({ rows: next.rows });
-        setResults(outcomes);
-        setSubmitted(requested);
+        if (extension) applyExternalResults(requested, outcomes);
+        else {
+          confirmedRecords.current = next.records;
+          unresolved.current = Object.values(outcomes).some((fields) =>
+            Object.values(fields).includes("unconfirmed"),
+          );
+          setRecords(next.records);
+          form.reset({ rows: next.rows });
+          setResults(outcomes);
+          setSubmitted(requested);
+        }
         setSending(false);
-        if (!changedProducts(next.records, next.rows).length) {
+        const allConfirmed = Object.values(outcomes).every((fields) =>
+          Object.values(fields).every((outcome) => outcome === "confirmed"),
+        );
+        if (
+          !eligible(changedProducts(next.records, next.rows)).length &&
+          allConfirmed &&
+          (!extension || !hasUnconfirmed)
+        ) {
           setPendingExit(null);
           after?.();
         }
@@ -136,6 +228,7 @@ export function useProductEditing(
     )();
   }
   function assignSku(id: string, requested: boolean) {
+    if (isReadOnly(id)) return;
     form.setValue(`rows.${id}.assignSku`, requested);
     if (!requested) {
       form.setValue(`rows.${id}.sku`, "");
@@ -159,6 +252,12 @@ export function useProductEditing(
     exit,
     save,
     assignSku,
+    isReadOnly,
+    saveBlocked: !extension && hasUnconfirmed,
+    entryBlocked: !extension && hasUnconfirmed,
+    applyExternalResults,
+    continueDraft,
+    requestTransition: requestLeave,
     keepEditing: () => setPendingExit(null),
     discard: () => {
       const action = pendingExit;
@@ -217,7 +316,7 @@ export function EditingField({
         aria-invalid={!!reason}
         aria-describedby={reason ? errorId : undefined}
         disabled={editor.sending}
-        readOnly={editor.hasUnconfirmed}
+        readOnly={editor.isReadOnly(product.id)}
         data-edit-name={field === "name" ? product.id : undefined}
         data-edit-sku={field === "sku" ? product.id : undefined}
       />
@@ -250,7 +349,7 @@ export function EditingSku({
       <Button
         size="sm"
         variant="ghost"
-        disabled={editor.sending || editor.hasUnconfirmed}
+        disabled={editor.sending || editor.isReadOnly(product.id)}
         onClick={() => editor.assignSku(product.id, false)}
       >
         {t("peCancelAssignment")}
@@ -260,7 +359,7 @@ export function EditingSku({
     <Button
       size="sm"
       variant="outline"
-      disabled={editor.sending || editor.hasUnconfirmed}
+      disabled={editor.sending || editor.isReadOnly(product.id)}
       onClick={() => editor.assignSku(product.id, true)}
     >
       {t("peAssignSku")}
@@ -539,7 +638,7 @@ export function EditingActions({ editor }: { editor: ProductEditing }) {
         size="sm"
         data-edit-save
         disabled={
-          !editor.changes.length || editor.sending || editor.hasUnconfirmed
+          !editor.changes.length || editor.sending || editor.saveBlocked
         }
         onClick={() => void editor.save()}
       >

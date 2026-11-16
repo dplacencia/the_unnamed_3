@@ -142,5 +142,116 @@ Checked steps record work performed, not acceptance of proposed table choices.
       tested source, original references and deferred design boundaries.
 - [x] 7.2 Verify and stage only the 25-file code/specification/test batch;
       return its commit command without executing it.
-- [ ] 7.3 After the user commits batch 1, stage the 157 approved-reference files
+- [x] 7.3 After the user commits batch 1, stage the 157 approved-reference files
       and return their separate commit command; never commit.
+
+## Save-recovery discovery
+
+- [x] 8.1 Verify/record the completed checkpoint and unchanged source after the
+      user-run history repair; identify PT-023–027 and the prototype's limits.
+- [x] 8.2 Read the owning Inventory retry/identity sources and inspect relevant
+      implementation/test source without changing siblings or claiming execution.
+- [x] 8.2a Record the user's PT-028 bounded automatic unchanged-retry/manual-fallback
+      selection; preserve numeric, storage and integration decisions as open.
+- [x] 8.2b Record PT-029: pause only affected products; keep browsing and other
+      permitted product editing available.
+- [x] 8.2c Record PT-030: save other editable products independently while
+      original commands recover, preserving validation and prior uncertainty.
+- [x] 8.2d Record PT-031: retain submitted unresolved records across refresh/reopen
+      in the same browser/business/user; resume recovery only on request.
+- [x] 8.2e Record PT-032: retain never-submitted drafts across reopening in the
+      same browser/business/user; continue/discard on request, read-only initial view.
+- [x] 8.2f Record PT-033: load current data and review only changed products
+      during unsent-draft restoration; no automatic merge/overwrite.
+- [ ] 8.3 Define confirmed-failure recovery, unresolved-result choices and safe
+      retry without inferring production interfaces or authority for new logical writes.
+- [ ] 8.4 Define remaining production draft coordination/reload behavior;
+      track the bounded simulated preview separately under 9.5–9.6.
+
+## Recovery technical decisions
+
+- [x] 9.1 Inspect current Inventory/native-client limits and primary browser/retry
+      references, preserving source/runtime and new-choice distinctions.
+- [x] 9.2 Record PT-034's initial three-total-attempt/15-second profile and
+      1/3-second waits with ±50% jitter; keep live qualification separate.
+- [x] 9.2a Record PT-038: each explicit manual retry/continuation after a stopped
+      run authorizes up to three attempts with the original command and PT-034
+      timing; no automatic restart or deliberately concurrent run.
+- [x] 9.3 Record PT-035: IndexedDB for retained business drafts and operation
+      records, with policy/library/retention choices kept separate.
+- [x] 9.3a Record the user's rejection of an IndexedDB-only gate and PT-036's
+      compatibility requirement; qualify PT-035 as a preferred engine.
+- [x] 9.3b Record PT-037: IndexedDB/localStorage/open-app-memory fallbacks,
+      nonblocking retention notice and no memory-only reopening promise.
+- [x] 9.3c Record PT-039: respect known active same-command recovery across tabs;
+      keep recovery usable with an honest limitation notice when coordination is
+      unavailable; do not infer a locking mechanism or unsent-draft policy.
+- [x] 9.3d Record PT-040: reject a second same-product edit with a clear error;
+      the original tab may be closed, so discuss explicit discard/takeover rather
+      than adopting independent drafts or automatic ownership release.
+- [x] 9.3e Record PT-041: explicit takeover or confirmed discard/start when the
+      original unsent-draft editor is unreachable/unknown; returning old editor
+      is read-only, known active editors still block, submitted recovery unchanged.
+- [ ] 9.4 Define remaining editing-ownership/compatibility and retention/clearing
+      behavior needed for production; keep simulated preview limits explicit.
+- [x] 9.5 Prepare the [bounded Storybook recovery/ownership preview plan](recovery-preview-plan.md)
+      for review, separating simulated behavior from production mechanisms.
+- [x] 9.6 User selected “Build the simulated preview (Recommended)”; execute the
+      bounded plan without production mechanisms or automatic image approval.
+- [x] 9.7 Implement and verify the synthetic recovery/ownership model (20 tests).
+- [x] 9.8 Implement and verify Storybook interactions/translations; final quality
+      check passes 84 code tests and 124 browser checks.
+- [x] 9.9 Capture 172 candidates, compare 607 existing references and record
+      [exact execution proof](recovery-preview-plan.md#execution-and-verification--2026-11-14).
+- [x] 9.10 User explicitly approved all 232 latest row-status images with “That
+      looks better, I accept the review”; promote the exact run and verify the
+      204 additions/28 replacements, preserved 600 unrelated references and current
+      832-entry baseline. See the [approval record](recovery-preview-plan.md#visual-approval-and-reference-promotion--2026-11-15).
+      This grants no staging, commit, deployment or navigation-image approval.
+
+- [x] 9.11 Record the user's Spanish correction: “No hemos podido confirmar que
+      los cambios se han guardado.” and the matching “mientras confirmamos que los
+      cambios se han guardado” help sentence; avoid the nominal “el/este guardado”.
+- [ ] 9.12 Revisit the message box design in a later visual revision, as explicitly
+      requested by the user; retain the current layout for now and clarify the
+      affected feedback surface(s) before proposing a new treatment.
+
+- [x] 9.13 Apply and verify the authorized Spanish examples and remaining nominal
+      save-feedback phrases/compact labels in context; preserve state meanings
+      and the deferred message box design rather than doing a blanket replacement.
+      [Latest proof](recovery-preview-plan.md#copy-revision-verification--2026-11-15)
+      records 200 candidates and 579 unaffected comparisons, with approval open.
+
+## Compact row-status review revision
+
+- [x] 9.14 Record the user's **“Existing row-control area + subtle tint
+      (Recommended)”** selection and the [bounded revision plan](recovery-preview-plan.md#compact-row-status-revision--selected-2026-11-15).
+- [x] 9.15 Remove inline name-adjacent status text; add a distinct compact marker
+      within the existing expander area and subtle row tint, retaining recognizable
+      expansion, columns, name/editor widths, keyboard/hover explanation and
+      visible expanded status for touch. Keep field errors and existing feedback;
+      message box redesign remains deferred under 9.12.
+- [x] 9.16 Verify the focused regression, existing Products/language interactions
+      and applicable quality checks; capture/inspect revised candidates and compare
+      genuinely unchanged references with exact current source/run evidence.
+      [Latest proof](recovery-preview-plan.md#row-status-verification--2026-11-15)
+      records 232 candidates and 579 unchanged-reference comparisons.
+- [x] 9.17 Present the exact revised row-status gallery for specific approval;
+      preserve accepted references, staging and commit boundaries until authorized.
+      Delivery and the exact image approval are complete under 9.10.
+
+- [x] 9.18 Post-approval comparison passes all 811 expected accepted cases in
+      `2026-11-15T00-12-39.768Z`, with zero skipped/unexpected/flaky cases and exit 0.
+      Products/recovery are included; only separately pending navigation cases
+      are excluded. See the [post-approval proof](recovery-preview-plan.md#post-approval-comparison--passed-2026-11-15).
+
+## Recovery checkpoint commit preparation
+
+- [x] 9.19 Record the user's 2026-11-16 “go ahead” to two sequential staging
+      batches and their exact scope; see the [preparation record](recovery-preview-plan.md#commit-preparation--2026-11-16).
+- [x] 9.20 Verify and stage only the 30 implementation/specification/test files;
+      keep the 233 approved reference files outside the first index and provide
+      the user commit command. Never execute a commit.
+- [ ] 9.21 After verifying the user's first commit, stage the approved 232 PNGs
+      and registry as the second batch and provide its user commit command;
+      never execute either commit or include unrelated navigation revisions.

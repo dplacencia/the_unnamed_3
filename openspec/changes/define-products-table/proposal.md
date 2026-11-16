@@ -368,3 +368,90 @@ The [current preparation](editing-plan.md#commit-preparation--2026-11-14)
 authorizes staging code/specifications first and approved images after the user
 commits the first batch. Only the user executes commits. This does not begin the
 proposed save-recovery or filter design.
+
+The user completed both batches and the user-run email-privacy history repair.
+The [checkpoint completion](editing-plan.md#completed-checkpoint-and-email-privacy-repair--2026-11-14)
+records the original/current commit mapping, unchanged content and verified push.
+Current `main` is `eb49dea`; 628 accepted image references remain intact.
+
+The latest **“go ahead”** continues save-recovery and draft-handling discovery.
+The [initial verification proposal](design.md#unconfirmed-save-verification--proposal-2026-11-14)
+was not selected: the user first requested checking Inventory's operation identity
+and retry behavior. The [source findings and subsequent choice](design.md#inventory-retry-findings-and-selected-recovery-direction--2026-11-14)
+record the supported unchanged-retry guarantee and the user's selection of
+**“Bounded automatic retries + manual fallback (Recommended)”** under PT-028.
+Exact retry limits, storage/duration/clearing details, remaining coordination and
+production integration are still open. The earlier no-automatic-resend recommendation does not apply.
+
+The user also selected **“Pause only affected products (Recommended)”** under
+PT-029: unresolved-command products remain read-only while browsing and other
+permitted product editing stay available. The user then selected **“Save other products independently (Recommended)”**
+under PT-030. New requested saves retain validation and their own outcomes while
+older recovery commands remain unchanged. PT-031 subsequently records **“Restore records; resume on request (Recommended)”**:
+submitted unresolved records survive refresh/reopening in the same browser,
+business and user; recovery resumes only on request. PT-032 then records **“Keep drafts across reopening; restore on request
+(Recommended)”** for never-submitted drafts in that same scope, keeping initial
+Products read-only. PT-033 records **“Review only changed products (Recommended)”**
+when loaded current product data differs from an unsent draft's original baseline;
+no automatic merge/overwrite or changed submitted-command content follows.
+
+These functional selections do not define exact retry budgets, storage mechanisms,
+comparison/versioning, command mapping or production write availability. The
+current prototype and all accepted images remain unchanged; next prepare the
+bounded recovery design/technical choices without inferring implementation authority.
+
+The next **“go ahead”** continues retry-budget and browser-persistence discovery.
+The [technical decision record](recovery-technical-design.md) prepares the initial
+client profile and storage-engine alternatives. The user chose **“3 total attempts
+(Recommended)”** under PT-034: original plus two retries, 15 seconds per attempt,
+1/3-second waits randomized by ±50%, with no deliberately concurrent frontend
+attempts of that command. The user also selected **“IndexedDB (Recommended)”**
+under PT-035 for retained business drafts and operation records. They then rejected
+making IndexedDB a prerequisite when it is absent or fails. PT-036 records the
+compatibility clarification and makes IndexedDB preferred, not mandatory. The
+technical record presents the IndexedDB/localStorage/open-app-memory fallback,
+which the user explicitly selected with **“Use this fallback design (Recommended)”**
+under PT-037, including the nonblocking retention notice and memory-only limits.
+The user selected **“New bounded run per manual action (Recommended)”** under
+PT-038: after a stopped run, explicit Reintentar/Continuar recuperación authorizes
+up to three attempts with the same original command and PT-034 timing. It does
+not restart automatically or deliberately overlap a known active run. The user
+then selected **“Coordinate when possible; usable fallback (Recommended)”** under
+PT-039: show another known active recovery run and avoid a second deliberate run,
+while keeping recovery usable with an honest limitation notice when coordination
+is unavailable. Missing status is not proof of no other run. Other eligible work
+stays available. PT-040 then records the user's rejection of independent
+same-product edits: a second edit must be rejected with a clear error. The user
+asked to discuss discard/takeover because the original tab may be closed.
+They then selected **“Explicit resolution when owner is unreachable (Recommended)”**
+under PT-041: allow explicit Asumir edición or confirmed discard/start for an
+accessible unsent draft when its earlier tab is unreachable and its status
+unknown; make the earlier editor read-only if it returns. Known active editors
+still block a second edit. Recovery of submitted commands keeps its existing
+rules. Ownership enforcement, editing without usable coordination and live
+qualification remain separate. No new implementation is authorized.
+
+The [bounded recovery/ownership preview plan](recovery-preview-plan.md) is now
+prepared for review. It makes PT-028–041 concrete with synthetic commands,
+simulated persistence/owner states and a virtual returning editor. Implementation
+of this new preview is not yet selected. Production mechanisms, actual retention,
+real APIs, dependencies, image approval, staging and commits remain separate.
+
+### Bounded preview execution selected — 2026-11-14
+
+The user selected **“Build the simulated preview (Recommended)”**. The
+[preview plan](recovery-preview-plan.md#execution-authorization--2026-11-14) is now
+authorized for synthetic commands, simulated storage/ownership and candidate
+visual review. This supersedes earlier pending execution wording only; actual
+production mechanisms, new dependencies, image acceptance, staging and commits
+remain outside scope.
+
+### Simulated preview implemented and ready for review — 2026-11-14
+
+The authorized [bounded preview](recovery-preview-plan.md#execution-and-verification--2026-11-14)
+is implemented and verified with 84 code tests, 124 browser checks, 172 new
+candidate captures and 607 unchanged-reference comparisons. Source `2058ed78…`,
+exact run identities, resolved review findings, local build/font preparation
+corrections and simulation limits are recorded there. The exact 172-image gallery
+is pending user approval. The 628 accepted references, separate navigation review,
+production-policy gaps and never-commit boundary retain their status.

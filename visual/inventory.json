@@ -1724,6 +1724,478 @@
         }
       ],
       "limitation": "Unconfirmed fixture retains drafts and pauses further submission until reset. No production recovery/status-check/storage policy is selected."
+    },
+    {
+      "id": "products-recovery-exhausted",
+      "title": "Products recovery exhausted",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--exhausted",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "other-saved",
+          "action": "products-recovery-other-saved"
+        },
+        {
+          "id": "confirmed",
+          "action": "products-recovery-retried"
+        },
+        {
+          "id": "dismissed",
+          "action": "products-recovery-dismissed"
+        },
+        {
+          "id": "row-tooltip",
+          "action": "products-recovery-row-tooltip"
+        },
+        {
+          "id": "row-expanded",
+          "action": "products-recovery-row-expanded"
+        },
+        {
+          "id": "table-editing",
+          "action": "products-recovery-table-editing"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-automatic",
+      "title": "Products recovery automatic",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--automatic",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "row-expanded",
+          "action": "products-recovery-row-expanded"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-long-product-name",
+      "title": "Products recovery long product name",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--long-product-name",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "table-editing",
+          "action": "products-recovery-table-editing"
+        },
+        {
+          "id": "row-expanded",
+          "action": "products-recovery-row-expanded"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-restored",
+      "title": "Products recovery restored",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--restored",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "resumed",
+          "action": "products-recovery-resumed"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-memory-only",
+      "title": "Products recovery memory-only",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--memory-only",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-local-storage",
+      "title": "Products recovery local-storage",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--local-storage",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-unavailable-history",
+      "title": "Products recovery unavailable-history",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--unavailable-history",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-confirmed-storage-failure",
+      "title": "Products recovery confirmed-storage-failure",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--confirmed-storage-failure",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-recovery-elsewhere",
+      "title": "Products recovery recovery-elsewhere",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--recovery-elsewhere",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-coordination-unavailable",
+      "title": "Products recovery coordination-unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--coordination-unavailable",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-active-editor",
+      "title": "Products recovery active-editor",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--active-editor",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "error",
+          "action": "products-recovery-owner"
+        },
+        {
+          "id": "row-expanded",
+          "action": "products-recovery-row-expanded"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-unreachable-editor",
+      "title": "Products recovery unreachable-editor",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--unreachable-editor",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "options",
+          "action": "products-recovery-owner"
+        },
+        {
+          "id": "discard-confirmation",
+          "action": "products-recovery-discard"
+        },
+        {
+          "id": "assumed",
+          "action": "products-recovery-assumed"
+        },
+        {
+          "id": "unsaved-guard",
+          "action": "products-recovery-takeover-guard"
+        },
+        {
+          "id": "saved",
+          "action": "products-recovery-assumed-saved"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-restored-draft",
+      "title": "Products recovery restored-draft",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--restored-draft",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "continued",
+          "action": "products-recovery-continued"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-changed-draft",
+      "title": "Products recovery changed-draft",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--changed-draft",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "review",
+          "action": "products-recovery-review"
+        },
+        {
+          "id": "accepted",
+          "action": "products-recovery-reviewed"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-unavailable-current-data",
+      "title": "Products recovery unavailable-current-data",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--unavailable-current-data",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "unavailable",
+          "action": "products-recovery-unavailable"
+        },
+        {
+          "id": "discarded",
+          "action": "products-recovery-discarded-unavailable"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-former-editor",
+      "title": "Products recovery former-editor",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-recovery--former-editor",
+      "cases": [
+        {
+          "id": "default"
+        },
+        {
+          "id": "readonly",
+          "action": "products-recovery-former-table"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-en-unreachable-editor",
+      "title": "Products recovery en unreachable-editor",
+      "kind": "story",
+      "sources": [],
+      "locale": "en",
+      "storyId": "inventory-products-recovery--unreachable-editor",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-recovery-owner"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-en-memory-only",
+      "title": "Products recovery en memory-only",
+      "kind": "story",
+      "sources": [],
+      "locale": "en",
+      "storyId": "inventory-products-recovery--memory-only",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-en-restored",
+      "title": "Products recovery en restored",
+      "kind": "story",
+      "sources": [],
+      "locale": "en",
+      "storyId": "inventory-products-recovery--restored",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-ca-unreachable-editor",
+      "title": "Products recovery ca unreachable-editor",
+      "kind": "story",
+      "sources": [],
+      "locale": "ca",
+      "storyId": "inventory-products-recovery--unreachable-editor",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-recovery-owner"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-ca-memory-only",
+      "title": "Products recovery ca memory-only",
+      "kind": "story",
+      "sources": [],
+      "locale": "ca",
+      "storyId": "inventory-products-recovery--memory-only",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-ca-restored",
+      "title": "Products recovery ca restored",
+      "kind": "story",
+      "sources": [],
+      "locale": "ca",
+      "storyId": "inventory-products-recovery--restored",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-gl-unreachable-editor",
+      "title": "Products recovery gl unreachable-editor",
+      "kind": "story",
+      "sources": [],
+      "locale": "gl",
+      "storyId": "inventory-products-recovery--unreachable-editor",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-recovery-owner"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-gl-memory-only",
+      "title": "Products recovery gl memory-only",
+      "kind": "story",
+      "sources": [],
+      "locale": "gl",
+      "storyId": "inventory-products-recovery--memory-only",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-gl-restored",
+      "title": "Products recovery gl restored",
+      "kind": "story",
+      "sources": [],
+      "locale": "gl",
+      "storyId": "inventory-products-recovery--restored",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-eu-unreachable-editor",
+      "title": "Products recovery eu unreachable-editor",
+      "kind": "story",
+      "sources": [],
+      "locale": "eu",
+      "storyId": "inventory-products-recovery--unreachable-editor",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-recovery-owner"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-eu-memory-only",
+      "title": "Products recovery eu memory-only",
+      "kind": "story",
+      "sources": [],
+      "locale": "eu",
+      "storyId": "inventory-products-recovery--memory-only",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-recovery-eu-restored",
+      "title": "Products recovery eu restored",
+      "kind": "story",
+      "sources": [],
+      "locale": "eu",
+      "storyId": "inventory-products-recovery--restored",
+      "cases": [
+        {
+          "id": "default"
+        }
+      ],
+      "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
     }
   ]
 }
