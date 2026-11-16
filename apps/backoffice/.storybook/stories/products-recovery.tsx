@@ -9,7 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { XIcon } from "@/icons";
+import { ProductsFeedback } from "./products-feedback";
 import {
   ProductsTableWorkspace,
   type ProductRowStatus,
@@ -399,155 +399,153 @@ export function ProductsRecoveryPreview({
     (former ||
       draft.status !== "editing" ||
       editor.changes.some((change) => change.id === draft.productId));
-  const summary = (recoveries.length > 0 ||
-    historyUnavailable ||
-    showDraftNotice) && (
-    <section
-      className="products-recovery-summary"
-      data-recovery-summary
-      aria-label={t("prRecoveryTitle")}
-    >
-      {recoveries.length > 0 && (
-        <>
-          <div className="products-recovery-summary-heading">
-            <strong>
-              {t(
-                pending.length
-                  ? hasActiveRecovery
-                    ? "prRecovering"
-                    : "prUnconfirmed"
-                  : recoveries.some((record) => record.outcome === "rejected")
-                    ? "prRejected"
-                    : "prConfirmed",
-              )}
-            </strong>
+  const summaryNotes = [
+    (historyUnavailable ||
+      recoveries.some((record) => !record.historyAccessible)) && (
+      <p key="history" role="status" data-recovery-history>
+        {t("prHistoryUnavailable")}
+      </p>
+    ),
+    recoveries.some((record) => record.retentionProblem) && (
+      <p key="retention" role="status" data-recovery-retention>
+        {t("prStorageProblem")}
+      </p>
+    ),
+    recoveries.some((record) => record.mode === "memory") && (
+      <p key="memory" role="status" data-recovery-retention>
+        {t("prStorageMemory")}
+      </p>
+    ),
+    recoveries.some((record) => record.mode === "localstorage") && (
+      <p key="localstorage" role="status" data-recovery-retention>
+        {t("prStoragePersistent")}
+      </p>
+    ),
+    recoveries.some((record) => record.knownOtherRun) && (
+      <p key="other-run" role="status">
+        {t("prRecoveryElsewhere")}
+      </p>
+    ),
+    recoveries.some((record) => record.coordination === "unavailable") && (
+      <p key="coordination" role="status">
+        {t("prCoordinationUnavailable")}
+      </p>
+    ),
+    draft && showDraftNotice && (
+      <div key="draft" className="products-recovery-line">
+        <p>
+          {t(
+            draft.status === "discarded"
+              ? "prDiscardedCurrentUnavailable"
+              : former
+                ? "prFormerReadOnly"
+                : draft.owner === "active"
+                  ? "prOwnerActive"
+                  : draft.owner === "unreachable"
+                    ? "prOwnerUnknown"
+                    : "prDraftAvailable",
+          )}
+        </p>
+        {!former &&
+          draft.accessible &&
+          draft.status !== "discarded" &&
+          draft.status !== "editing" && (
             <Button
-              size="icon-sm"
-              variant="ghost"
-              aria-label={t(details ? "peDismissResults" : "peShowResults")}
-              onClick={() => setDetails(!details)}
+              size="sm"
+              variant="outline"
+              data-recovery-owner-action={draft.productId}
+              onClick={() => setDialog("owner")}
             >
-              <XIcon className="size-4" />
-            </Button>
-          </div>
-          {details ? (
-            <div className="products-recovery-details">
-              {recoveries.map((record) => (
-                <div
-                  className="products-recovery-line"
-                  key={record.command.identity.operationId}
-                >
-                  <div>
-                    <span className="font-medium">
-                      {
-                        editor.records.find(
-                          (product) => product.id === record.productId,
-                        )?.name
-                      }
-                    </span>
-                    <span
-                      className="products-recovery-state"
-                      data-outcome={record.outcome}
-                      data-recovery-status={record.command.identity.operationId}
-                      role="status"
-                      aria-live="polite"
-                      aria-atomic="true"
-                      tabIndex={-1}
-                    >
-                      <span className="sr-only">
-                        {
-                          editor.records.find(
-                            (product) => product.id === record.productId,
-                          )?.name
-                        }
-                        :{" "}
-                      </span>
-                      {recoveryLabel(record)}
-                    </span>
-                  </div>
-                  {recoveryAction(record)}
-                </div>
-              ))}
-              {pending.length > 0 && (
-                <p className="products-muted">
-                  {t(
-                    hasActiveRecovery
-                      ? "prRecoveryHint"
-                      : "prOtherWorkAvailable",
-                  )}
-                </p>
+              {t(
+                draft.owner === "none" ? "prContinueDraft" : "prOpenResolution",
               )}
-            </div>
-          ) : (
-            <Button size="sm" variant="link" onClick={() => setDetails(true)}>
-              {t("peShowResults")}
             </Button>
           )}
-        </>
-      )}
-      {(historyUnavailable ||
-        recoveries.some((record) => !record.historyAccessible)) && (
-        <p role="status" data-recovery-history>
-          {t("prHistoryUnavailable")}
-        </p>
-      )}
-      {recoveries.some((record) => record.retentionProblem) && (
-        <p role="status" data-recovery-retention>
-          {t("prStorageProblem")}
-        </p>
-      )}
-      {recoveries.some((record) => record.mode === "memory") && (
-        <p role="status" data-recovery-retention>
-          {t("prStorageMemory")}
-        </p>
-      )}
-      {recoveries.some((record) => record.mode === "localstorage") && (
-        <p role="status" data-recovery-retention>
-          {t("prStoragePersistent")}
-        </p>
-      )}
-      {recoveries.some((record) => record.knownOtherRun) && (
-        <p role="status">{t("prRecoveryElsewhere")}</p>
-      )}
-      {recoveries.some((record) => record.coordination === "unavailable") && (
-        <p role="status">{t("prCoordinationUnavailable")}</p>
-      )}
-      {draft && showDraftNotice && (
-        <div className="products-recovery-line">
-          <p>
-            {t(
-              draft.status === "discarded"
-                ? "prDiscardedCurrentUnavailable"
-                : former
-                  ? "prFormerReadOnly"
-                  : draft.owner === "active"
-                    ? "prOwnerActive"
-                    : draft.owner === "unreachable"
-                      ? "prOwnerUnknown"
-                      : "prDraftAvailable",
-            )}
-          </p>
-          {!former &&
-            draft.accessible &&
-            draft.status !== "discarded" &&
-            draft.status !== "editing" && (
-              <Button
-                size="sm"
-                variant="outline"
-                data-recovery-owner-action={draft.productId}
-                onClick={() => setDialog("owner")}
-              >
-                {t(
-                  draft.owner === "none"
-                    ? "prContinueDraft"
-                    : "prOpenResolution",
-                )}
-              </Button>
-            )}
+      </div>
+    ),
+  ].filter(Boolean);
+  const summary =
+    (recoveries.length > 0 || historyUnavailable || showDraftNotice) &&
+    (recoveries.length > 0 ? (
+      <ProductsFeedback
+        data-recovery-summary
+        label={t("prRecoveryTitle")}
+        summary={t(
+          pending.length
+            ? hasActiveRecovery
+              ? "prRecovering"
+              : "prUnconfirmed"
+            : recoveries.some((record) => record.outcome === "rejected")
+              ? "prRejected"
+              : "prConfirmed",
+        )}
+        expanded={details}
+        onExpandedChange={setDetails}
+        detailsLabel={t("gridDetails")}
+        expandLabel={t("peShowResults")}
+        collapseLabel={t("peDismissResults")}
+        tone={
+          pending.length
+            ? "info"
+            : recoveries.some((record) => record.outcome === "rejected")
+              ? "error"
+              : "success"
+        }
+        footer={summaryNotes.length ? summaryNotes : undefined}
+      >
+        <div className="products-recovery-details">
+          {recoveries.map((record) => (
+            <div
+              className="products-recovery-line"
+              key={record.command.identity.operationId}
+            >
+              <div>
+                <span className="font-medium">
+                  {
+                    editor.records.find(
+                      (product) => product.id === record.productId,
+                    )?.name
+                  }
+                </span>
+                <span
+                  className="products-recovery-state"
+                  data-outcome={record.outcome}
+                  data-recovery-status={record.command.identity.operationId}
+                  role="status"
+                  aria-live="polite"
+                  aria-atomic="true"
+                  tabIndex={-1}
+                >
+                  <span className="sr-only">
+                    {
+                      editor.records.find(
+                        (product) => product.id === record.productId,
+                      )?.name
+                    }
+                    :{" "}
+                  </span>
+                  {recoveryLabel(record)}
+                </span>
+              </div>
+              {recoveryAction(record)}
+            </div>
+          ))}
+          {pending.length > 0 && (
+            <p className="products-muted">
+              {t(hasActiveRecovery ? "prRecoveryHint" : "prOtherWorkAvailable")}
+            </p>
+          )}
         </div>
-      )}
-    </section>
-  );
+      </ProductsFeedback>
+    ) : (
+      <section
+        className="products-recovery-summary"
+        data-recovery-summary
+        aria-label={t("prRecoveryTitle")}
+      >
+        {summaryNotes}
+      </section>
+    ));
   const status = (product: PreviewProduct): ProductRowStatus | undefined => {
     const record = recoveries.findLast((item) => item.productId === product.id);
     if (record?.outcome === "unconfirmed") {

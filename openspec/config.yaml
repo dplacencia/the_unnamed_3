@@ -67,7 +67,40 @@ context: |
   UI language from browser headers. The landing uses Spanish at / and localized
   /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
   one year (365 days), with no account-level or cross-device preference implied.
-  Latest assignment 2026-11-16: user said "go ahead" to preparing two sequential
+  Latest assignment 2026-11-16: user said "go ahead" to preparing two feedback
+  checkpoint commit batches. Read feedback-preview-plan.md's commit-preparation
+  record. Stage only the exact 21 implementation/specification/test/documentation
+  files first; leave the 165 approved-reference files outside the index. Give the
+  user the commit command. After the user commits that exact batch, verify it and
+  stage the reference batch. This new authority applies only to these two
+  sequential batches; image approval alone did not authorize staging. Never commit.
+  Previous design assignment 2026-11-16: user said "go ahead" to revisiting the deferred
+  message-box design. Read define-products-table/feedback-design.md and task 9.12.
+  Inventory existing save-result/recovery surfaces and preserve their selected
+  state, dismissal, uncertainty, retry and accessibility rules. The user selected
+  "Save results + recovery status (Recommended)"; field validation, confirmation
+  dialogs and a general notice system remain separate. The user then selected
+  "Compact inline summary + expandable details (Recommended)" for the simulated
+  Storybook preview. Execute feedback-preview-plan.md, retaining distinct state
+  sources and current save/retry/dismissal/new-result behavior. Do not repeat those
+  choices. Exact visual metrics remain review proposals; future images require
+  specific approval. No production changes, new dependency, staging or commit.
+  The feedback execution record now has final source 8ac7d6d2, 113 code tests,
+  149 browser checks, 164 candidates and partitioned verification of 743 unchanged
+  cases. The known intermittent seven-pixel icon comparison/passing repeats are
+  explicit, not a claimed renderer fix. The user accepted all 164 feedback images
+  with "that looks ok" for the exact gallery/source. All are promoted: 148 existing
+  entries, 16 new and 764 unrelated entries preserved, for 928 accepted references.
+  Read the feedback preview plan's approval record. All 164 changed-case
+  comparisons pass in 2026-11-16T20-57-02.794Z; their union with 743 preserved-case
+  evidence covers exactly 907 eligible IDs at the same source. The earlier icon
+  variance remains recorded. No new staging or commit follows.
+  The prior 24/433-file batches are complete as user commits 382cfcd/3853ee6; root
+  verified the checkpoint clean before this documentation pass. Tasks 10.11–10.12
+  are complete and staging authority is spent. That checkpoint had 912 references;
+  preserve the current 928 accepted references and
+  separate pending navigation review. No new staging or commit; never commit.
+  Previous assignment 2026-11-16: user said "go ahead" to preparing two sequential
   commit batches. Read filters-preview-plan.md's commit-preparation record.
   Stage the exact 24 implementation/specification/test/documentation files first;
   give the user the commit command. After the user commits that batch, verify it

@@ -528,4 +528,18 @@ git commit -m "test: accept product filter visual references"
 Ignored `.cache/products-filters-implementation-batch.json` and
 `.cache/products-filters-reference-batch.json` retain the exact file/hash manifests;
 staged verification proof is separate. No agent commit, push, deployment or new
-design follows. Batch 2 waits for the user's first commit.
+design follows. At preparation, batch 2 waited for the user's first commit.
+
+### Completed checkpoint
+
+The user committed batch 1 as `382cfcdbb61ab83aeddb833bb61446cb7d43d236` and
+batch 2 as `3853ee6860cd75eccd95217c001c6d0bd5dd9d80`. Root verified the exact
+24/433 changed paths, every prepared Git blob identity, parent relationship,
+unchanged source `9be24237…`, all 912 references/approved aggregate and a clean
+index/working tree. Independent read-only review corroborated the commit scope
+and clean status. The ignored completion proof is
+`.cache/products-filters-checkpoint-complete.json`.
+
+Both staging authorizations are spent. No agent committed or pushed. The later
+message-box discovery assignment has its own [scope record](feedback-design.md)
+and does not reuse these staging permissions.

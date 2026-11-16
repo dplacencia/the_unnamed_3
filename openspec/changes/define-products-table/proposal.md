@@ -484,3 +484,22 @@ capture-only replacements”**; those three are promoted with the baseline still
 cases and three freshly verified replacements. No product UI/tolerance change,
 new staging, commits, deployment,
 production integration or deferred message-box work follows from the approval.
+
+### Feedback design continuation — initiated 2026-11-16
+
+After completing the two filters commits, the user said **“go ahead”** to root's
+recommendation to revisit the deferred message-box design. The
+[feedback discovery](feedback-design.md) inventories current surfaces and
+preserved requirements. Clarify the affected scope, then present concrete
+alternatives before adopting an undefined layout/interaction or changing preview
+code. No new dependency, production mechanism, staging, commit or reference
+promotion follows from this discovery instruction.
+
+The user selected **“Save results + recovery status (Recommended)”**, settling
+the surface scope. Field validation, confirmation dialogs and a general notice
+system remain separate. The user then selected **“Compact inline summary +
+expandable details (Recommended)”** for development in the simulated Storybook
+preview. PT-043 records that shared visual pattern while preserving separate
+state sources and existing save/retry/dismissal/new-result rules. Execute the
+[bounded feedback plan](feedback-preview-plan.md); exact visuals remain review
+proposals, with no new staging, reference promotion or commit authority.

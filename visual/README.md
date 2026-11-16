@@ -49,11 +49,46 @@ controls** restores the translated default. Typed values and open dialogs are
 preserved when the language changes.
 
 The current inventory covers 216 retained component source modules through 84
-stories and 21 view entries. Its 230 named scenarios produce 920 captures across
+stories and 21 view entries. Its 234 named scenarios produce 936 captures across
 desktop 1440×900, tablet 768×1024, mobile 390×844 and desktop dark mode. The actual
 assembled views cover Spanish, English, Catalan, Galician and Basque. Compound
 primitives and icons are inspected in compositions; this is representative source
 coverage, not every possible prop combination or complete accessibility testing.
+
+## Products change feedback
+
+Open the [recovery example](http://localhost:6006/?path=/story/inventory-products-recovery--exhausted)
+and [mixed save results](http://localhost:6006/?path=/story/inventory-products--editing-mixed).
+The selected feedback revision uses a consistent compact inline summary and
+expandable product details in both surfaces. They retain separate state sources,
+initial/new-result visibility, per-product/per-field facts and eligible command
+actions. Collapsing details leaves uncertainty and applicable capability notes
+visible; opening details does not restart a command.
+
+The Details label and chevron expose the actual expanded state; the accessible
+name includes the visible translated label. Existing row markers and draft/
+history-only notices stay outside this redesign. Field validation, confirmation
+dialogs, a general notification system and production mechanisms remain separate.
+
+The user accepted the exact **164-image** revision with **“that looks ok”** on
+2026-11-16. All 148 existing/16 new entries are promoted, preserving the other
+764 references, for **928 accepted references**. The
+[feedback approval record](../openspec/changes/define-products-table/feedback-preview-plan.md#visual-approval-and-reference-promotion--2026-11-16)
+preserves the exact gallery/source/approval and verification proof. The separate
+navigation exclusions remain unchanged. The current full eligible selection is
+907 cases:
+
+```sh
+pnpm visual:compare --grep-invert '(^mobile .*navigation-)|navigation-workspace-location-options|navigation-workspace-location-option-hovered'
+```
+
+The final [164-image gallery](http://localhost:9324/runs/2026-11-16T20-34-28.774Z/review.html)
+is approved at source `8ac7d6d2…`. Code tests and all 149 browser checks pass.
+All 164 changed-case post-approval comparisons pass; the other 743 cases retain
+their matching-source passing proof and unchanged references. This verifies all
+907 eligible IDs across those partitions. The plan preserves the earlier
+seven-pixel icon variance and failed initial run; no renderer fix or tolerance
+change is claimed. Future revisions still require specific approval.
 
 ## Products filters and applied view
 
@@ -92,8 +127,8 @@ preserved, for **912 accepted references**. Capture future revisions to this sco
 pnpm visual:capture --grep '(^| )products-'
 ```
 
-Compare all 891 eligible accepted cases, including Products, with the separate
-navigation exclusions retained:
+At the completed filters checkpoint, this selection compared all 891 eligible
+accepted cases with the separate navigation exclusions retained:
 
 ```sh
 pnpm visual:compare --grep-invert '(^mobile .*navigation-)|navigation-workspace-location-options|navigation-workspace-location-option-hovered'
@@ -158,8 +193,8 @@ and 600 unrelated references preserved, for **832 accepted references**.
 Read the [approval/promotion record](../openspec/changes/define-products-table/recovery-preview-plan.md#visual-approval-and-reference-promotion--2026-11-15)
 for source, scope and verbatim evidence.
 
-That 832-entry baseline was the preceding checkpoint; the current accepted
-baseline is 912 under the filters approval above. Before the filters revision, the
+That 832-entry baseline was the preceding checkpoint; the filters approval raised
+it to 912 and the current feedback approval to 928. Before the filters revision, the
 811-case recovery checkpoint comparison used this selection:
 
 ```sh
@@ -176,9 +211,10 @@ The prior initial-preview source `2058ed78…`/172-image proof is historical.
 Simulation limits and compiler/font-alias evidence remain in the linked plan.
 Future changes still need new captures and explicit image approval; this approval
 does not accept the separate 20 navigation revisions or authorize staging,
-commits or deployment. Current comparisons include the approved Products
-revisions using the 891-case selection above. The message box redesign remains
-deferred.
+commits or deployment. At that checkpoint, comparisons included the approved
+Products revisions using the then-891-case selection. The current 907-case
+selection is in the feedback section above. The formerly
+deferred message-box revision is now covered by the feedback section above.
 
 ## Products browsing and editing design
 
@@ -218,10 +254,11 @@ Their promotion preserved 472 earlier entries for a **628-entry baseline at that
 time**. The [original approval record](../openspec/changes/define-products-table/editing-plan.md#visual-approval--2026-11-14)
 retains its source and scope. The later 232-image approval replaced 28 of those
 Products images and added 204 recovery references for a then-832-entry baseline.
-The current filters approval brings the baseline to 912. The separately pending
+The filters approval brought the baseline to 912; current feedback approval
+raises it to 928. The separately pending
 20 navigation images remain unapproved.
 
-To capture future changes to all 440 current Products cases (excluding the older
+To capture future changes to all 456 current Products cases (excluding the older
 navigation Products-frame story), run:
 
 ```sh
@@ -236,13 +273,14 @@ explicit run/case approval as other designs. Do not promote future changes or th
 prior pending navigation revisions automatically. The current editing run is recorded in the
 [editing plan](../openspec/changes/define-products-table/editing-plan.md#review-refinement--dismissible-results-2026-11-14).
 
-Compare the 891 current eligible accepted cases with the retained navigation exclusions:
+The completed filters checkpoint used this command for 891 cases. It now selects
+907 current eligible accepted cases with the retained navigation exclusions:
 
 ```sh
 pnpm visual:compare --grep-invert '(^mobile .*navigation-)|navigation-workspace-location-options|navigation-workspace-location-option-hovered'
 ```
 
-This includes all 440 Products cases and 451 other accepted cases. It excludes
+This includes all 456 Products cases and 451 other accepted cases. It excludes
 eight navigation cases without references and the
 21 mobile navigation cases, of which 12 are pending replacements and nine are
 unchanged. It does not approve or replace their separate review. The preceding
@@ -257,7 +295,7 @@ source-bound checkpoints are not the new 811-case result.
 ## Navigation prototype
 
 The counts and baseline references below record historical navigation checkpoints.
-The current accepted baseline is 912; the separate 12 replacement/eight new
+The current accepted baseline is 928; the separate 12 replacement/eight new
 navigation images still require specific approval and were outside both the
 232-image Products/recovery and 440-image filters galleries.
 

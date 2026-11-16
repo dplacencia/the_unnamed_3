@@ -45,7 +45,10 @@ export async function productsAction(
               : "products-editing-panel-results";
       await productsAction(page, source, locale);
       await page
-        .getByRole("button", { name: text.peDismissResults, exact: true })
+        .getByRole("button", {
+          name: `${text.gridDetails}: ${text.peDismissResults}`,
+          exact: true,
+        })
         .click();
       await expect(page.locator("[data-edit-results-collapsed]")).toBeVisible();
       break;
@@ -500,11 +503,17 @@ async function recoveryAction(page: Page, action: string, locale: Locale) {
       break;
     case "products-recovery-dismissed":
       await page
-        .getByRole("button", { name: text.peDismissResults, exact: true })
+        .getByRole("button", {
+          name: `${text.gridDetails}: ${text.peDismissResults}`,
+          exact: true,
+        })
         .click();
       await expect(
         page
-          .getByRole("button", { name: text.peShowResults, exact: true })
+          .getByRole("button", {
+            name: `${text.gridDetails}: ${text.peShowResults}`,
+            exact: true,
+          })
           .first(),
       ).toBeVisible();
       break;

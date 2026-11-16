@@ -1373,3 +1373,36 @@ Wording and visual treatment remain review proposals.
 - **WHEN** classifier details, notice wording, placement, metrics or data-loading behavior are implemented or reviewed
 - **THEN** concrete classification follows the owning stock meaning and exact visual treatment remains a preview review proposal
 - **AND** this decision does not adopt a new API, refresh cadence, production storage, pagination, search matching or waiting-for-all-stock policy.
+
+### Requirement: PT-043 — Compact expandable change feedback
+
+Products' save-result and recovery-status surfaces SHALL use a consistent
+compact inline summary with expandable product details. The shared presentation
+SHALL preserve their separate state sources, current product/table scope and
+per-product/per-field meanings. Existing PT-027 dismissal/new-result behavior and
+PT-028–041 recovery/draft/ownership rules SHALL remain in force. Field validation,
+confirmation dialogs and a general notice system are outside this revision.
+
+#### Scenario: Details are expanded or collapsed
+
+- **WHEN** a merchant operates either feedback surface's disclosure
+- **THEN** its expanded state and action are clearly conveyed to keyboard, pointer and touch users
+- **AND** collapsing changes presentation only, retaining inspectable results, visible uncertainty and all affected-product protections.
+
+#### Scenario: New results or a recovery action arrive
+
+- **WHEN** a new save result is produced or an existing eligible recovery action is invoked
+- **THEN** the existing visibility, original-command and state rules remain unchanged
+- **AND** the layout does not introduce global retries, inferred summary counts, automatic dismissal or a merged result model.
+
+#### Scenario: Business results and retention limitations coexist
+
+- **WHEN** a result or unresolved command has an applicable local-retention or coordination limitation
+- **THEN** the limitation remains distinguishable from the business outcome and visible under its existing conditions
+- **AND** a confirmed business result does not become a failure merely because local retention failed.
+
+#### Scenario: Exact visual metrics are reviewed
+
+- **WHEN** the selected pattern is developed in the simulated preview
+- **THEN** TailAdmin component treatment and existing branding remain the basis
+- **AND** exact spacing, responsive arrangement and new candidate images require visual review rather than being accepted by this direction alone.

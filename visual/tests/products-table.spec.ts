@@ -984,16 +984,26 @@ test("save result dismissal and reopening translate in all five languages", asyn
       text.peSaved,
     );
     await page
-      .getByRole("button", { name: text.peDismissResults, exact: true })
+      .getByRole("button", {
+        name: `${text.gridDetails}: ${text.peDismissResults}`,
+        exact: true,
+      })
       .click();
     await expect(page.locator("[data-edit-results-collapsed]")).toContainText(
       text.peSaved,
     );
     await page
-      .getByRole("button", { name: text.peShowResults, exact: true })
+      .getByRole("button", {
+        name: `${text.gridDetails}: ${text.peShowResults}`,
+        exact: true,
+      })
       .click();
-    await expect(page.locator("[data-edit-results]")).toContainText(
+    await expect(page.locator("[data-edit-results]")).toHaveAttribute(
+      "aria-label",
       text.peLastResults,
+    );
+    await expect(page.locator("[data-edit-results]")).toContainText(
+      text.peSaved,
     );
   }
 });

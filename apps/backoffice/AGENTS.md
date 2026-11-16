@@ -21,6 +21,46 @@ The
 [visual review workflow](../../openspec/changes/define-visual-review-workflow/proposal.md)
 is implemented; preserve its review rules and the technical sources as constraints.
 Latest assignment — 2026-11-16: the user said **“go ahead”** to preparing two
+feedback checkpoint commit batches. Read the [feedback commit-preparation record](../../openspec/changes/define-products-table/feedback-preview-plan.md#commit-preparation--2026-11-16).
+Stage the exact 21 implementation/specification/test/documentation files first,
+leaving all 165 approved-reference files outside the index. Give the user the
+commit command. After the user commits that exact batch, verify it and stage the
+reference batch. This new authority applies only to these two sequential batches;
+earlier image approval alone did not authorize staging. Never create a commit.
+
+Previous design assignment — 2026-11-16: the user said **“go ahead”** to revisiting the
+deferred message-box design. Read the [feedback design discovery](../../openspec/changes/define-products-table/feedback-design.md)
+and task 9.12. Inventory the existing save-result/recovery surfaces and preserve
+their selected state, dismissal, uncertainty, retry and accessibility rules.
+The user selected **“Save results + recovery status (Recommended)”**. Field
+validation, confirmation dialogs and a general notice system remain separate.
+The user then selected **“Compact inline summary + expandable details
+(Recommended)”** for development in the simulated Storybook preview. Execute the
+[bounded feedback plan](../../openspec/changes/define-products-table/feedback-preview-plan.md),
+preserving distinct state sources and current save/retry/dismissal/new-result
+rules. Do not repeat those choices. Exact visual metrics remain review proposals;
+new candidate images require specific approval. No new staging or commit follows.
+The [execution record](../../openspec/changes/define-products-table/feedback-preview-plan.md#execution-and-review--2026-11-16)
+now records final source `8ac7d6d2…`, 113 code tests, 149 browser checks, 164
+candidate images and partitioned verification of 743 unchanged cases. The known
+intermittent seven-pixel icon comparison and its passing repeats remain explicit;
+it is not claimed fixed. The user accepted all 164 feedback images with
+**“that looks ok”** for that exact gallery/source. All are promoted: 148 existing
+entries, 16 new and 764 unrelated entries preserved, for **928 accepted
+references**. Read the [approval record](../../openspec/changes/define-products-table/feedback-preview-plan.md#visual-approval-and-reference-promotion--2026-11-16).
+All 164 changed-case post-approval comparisons pass in `2026-11-16T20-57-02.794Z`;
+their union with the 743 preserved-case evidence covers exactly 907 eligible IDs
+at the same source. The earlier icon variance remains recorded. No new staging
+or commit follows.
+
+The prior two-batch checkpoint is complete: user commits `382cfcd` and `3853ee6`
+match the exact 24/433-file manifests. Root verified it clean before this new
+documentation pass. Tasks 10.11–10.12 are complete and staging authority is spent.
+That checkpoint had 912 references; preserve the current 928-reference baseline
+and the separate pending navigation review.
+Never create commits.
+
+Previous assignment — 2026-11-16: the user said **“go ahead”** to preparing two
 sequential commit batches. Read the [filters commit-preparation record](../../openspec/changes/define-products-table/filters-preview-plan.md#commit-preparation--2026-11-16).
 Stage only the 24 implementation/specification/test/documentation files first and
 provide the user commit command. After the user commits that exact batch, verify

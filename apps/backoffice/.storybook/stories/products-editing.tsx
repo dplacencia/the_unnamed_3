@@ -4,7 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { XIcon } from "@/icons";
 import {
   Dialog,
   DialogContent,
@@ -14,6 +13,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import type { PreviewProduct } from "./products-table-model";
+import { ProductsFeedback } from "./products-feedback";
 import {
   applyEditingResults,
   changedProducts,
@@ -375,7 +375,7 @@ export function EditingResultsView({
   productId?: string;
 }) {
   const t = useTranslations("catalogue");
-  const container = useRef<HTMLDivElement>(null);
+  const container = useRef<HTMLElement>(null);
   const [dismissed, setDismissed] = useState<{
     snapshot: ProductChange[];
     scope: string | undefined;
@@ -411,105 +411,110 @@ export function EditingResultsView({
         container.current?.querySelector<HTMLButtonElement>(selector)?.focus();
     });
   }
-  if (collapsed)
-    return (
-      <div
-        ref={container}
-        className="products-edit-results-collapsed"
-        data-edit-results-collapsed
-        role="status"
-        aria-label={t("peLastResults")}
-      >
-        <span>{t("peResultsSummary", { status: t(summaryKey) })}</span>
-        <Button
-          variant="link"
-          size="sm"
-          data-edit-show-results
-          disabled={editor.sending}
-          onClick={() => {
-            setDismissed(null);
-            focusReplacement("[data-edit-dismiss-results]");
-          }}
-        >
-          {t("peShowResults")}
-        </Button>
-      </div>
-    );
   return (
-    <div
+    <ProductsFeedback
       ref={container}
-      className="products-edit-results"
-      data-edit-results
-      role="status"
+      className={
+        collapsed ? "products-edit-results-collapsed" : "products-edit-results"
+      }
+      data-edit-results={collapsed ? undefined : true}
+      data-edit-results-collapsed={collapsed ? true : undefined}
+      label={t("peLastResults")}
+      summary={
+        collapsed
+          ? t("peResultsSummary", { status: t(summaryKey) })
+          : t(summaryKey)
+      }
+      expanded={!collapsed}
+      onExpandedChange={(expanded) => {
+        setDismissed(
+          expanded ? null : { snapshot: editor.submitted, scope: productId },
+        );
+        focusReplacement(
+          expanded ? "[data-edit-dismiss-results]" : "[data-edit-show-results]",
+        );
+      }}
+      detailsLabel={t("gridDetails")}
+      expandLabel={t("peShowResults")}
+      collapseLabel={t("peDismissResults")}
+      disabled={editor.sending}
+      tone={
+        summaryKey === "peSaved"
+          ? "success"
+          : summaryKey === "peFailed"
+            ? "error"
+            : summaryKey === "peResultsPartial"
+              ? "warning"
+              : "info"
+      }
+      toggleAttributes={{
+        "data-edit-dismiss-results": collapsed ? undefined : true,
+        "data-edit-show-results": collapsed ? true : undefined,
+      }}
     >
-      <div className="products-edit-results-header">
-        <p className="font-semibold">{t("peLastResults")}</p>
-        <Button
-          variant="ghost"
-          size="icon-xs"
-          className="products-result-dismiss"
-          data-edit-dismiss-results
-          aria-label={t("peDismissResults")}
-          title={t("peDismissResults")}
-          disabled={editor.sending}
-          onClick={() => {
-            setDismissed({ snapshot: editor.submitted, scope: productId });
-            focusReplacement("[data-edit-show-results]");
-          }}
-        >
-          <XIcon className="size-4" aria-hidden="true" />
-        </Button>
-      </div>
       <ul>
         {submitted.map((change) => (
-          <li key={change.id} data-edit-result={change.id}>
-            <Button
-              variant="link"
-              size="sm"
-              className="products-result-name"
-              data-edit-details={change.id}
-              disabled={editor.sending}
-              aria-label={`${t("ptOpenDetails")}: ${editor.records.find((record) => record.id === change.id)?.name} (${editor.records.find((record) => record.id === change.id)?.sku ?? change.id})`}
-              onClick={() => {
-                editor.keepEditing();
-                editor.inspect(change.id);
-              }}
-            >
-              {editor.records.find((record) => record.id === change.id)?.name}
-            </Button>
-            <span className="products-result-code">
-              {t("gridSku")}:{" "}
-              {editor.records.find((record) => record.id === change.id)?.sku ??
-                t("ptUnassigned")}
-            </span>
-            {(["name", "sku"] as const).map((field) => {
-              const outcome = editor.results[change.id]?.[field];
-              return outcome ? (
-                <span
-                  key={field}
-                  className="products-edit-outcome"
-                  data-outcome={outcome}
-                >
-                  {t(field === "name" ? "peName" : "gridSku")}:{" "}
-                  <span className="products-result-value" title={change[field]}>
-                    {change[field]}
+          <li
+            key={change.id}
+            className="products-edit-result-item"
+            data-edit-result={change.id}
+          >
+            <div className="products-result-identity">
+              <Button
+                variant="link"
+                size="sm"
+                className="products-result-name"
+                data-edit-details={change.id}
+                disabled={editor.sending}
+                aria-label={`${t("ptOpenDetails")}: ${editor.records.find((record) => record.id === change.id)?.name} (${editor.records.find((record) => record.id === change.id)?.sku ?? change.id})`}
+                onClick={() => {
+                  editor.keepEditing();
+                  editor.inspect(change.id);
+                }}
+              >
+                {editor.records.find((record) => record.id === change.id)?.name}
+              </Button>
+              <span className="products-result-code">
+                {t("gridSku")}:{" "}
+                {editor.records.find((record) => record.id === change.id)
+                  ?.sku ?? t("ptUnassigned")}
+              </span>
+            </div>
+            <div className="products-result-fields">
+              {(["name", "sku"] as const).map((field) => {
+                const outcome = editor.results[change.id]?.[field];
+                return outcome ? (
+                  <span
+                    key={field}
+                    className="products-edit-outcome"
+                    data-outcome={outcome}
+                  >
+                    <span className="products-result-field-label">
+                      {t(field === "name" ? "peName" : "gridSku")}:
+                    </span>
+                    <span
+                      className="products-result-value"
+                      title={change[field]}
+                    >
+                      {change[field]}
+                    </span>
+                    <strong>
+                      {t(
+                        outcome === "confirmed"
+                          ? "peSaved"
+                          : outcome === "failed"
+                            ? "peFailed"
+                            : "peUnconfirmed",
+                      )}
+                    </strong>
                   </span>
-                  <strong>
-                    {t(
-                      outcome === "confirmed"
-                        ? "peSaved"
-                        : outcome === "failed"
-                          ? "peFailed"
-                          : "peUnconfirmed",
-                    )}
-                  </strong>
-                </span>
-              ) : null;
-            })}
+                ) : null;
+              })}
+            </div>
           </li>
         ))}
       </ul>
-    </div>
+    </ProductsFeedback>
   );
 }
 

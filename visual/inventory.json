@@ -1766,6 +1766,10 @@
         {
           "id": "editing",
           "action": "products-editing"
+        },
+        {
+          "id": "results",
+          "action": "products-editing-saved"
         }
       ],
       "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."
@@ -1784,6 +1788,10 @@
         {
           "id": "editing",
           "action": "products-editing"
+        },
+        {
+          "id": "results",
+          "action": "products-editing-saved"
         }
       ],
       "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."
@@ -1802,6 +1810,10 @@
         {
           "id": "editing",
           "action": "products-editing"
+        },
+        {
+          "id": "results",
+          "action": "products-editing-saved"
         }
       ],
       "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."
@@ -1820,6 +1832,10 @@
         {
           "id": "editing",
           "action": "products-editing"
+        },
+        {
+          "id": "results",
+          "action": "products-editing-saved"
         }
       ],
       "limitation": "Development-only browsing/editing design with synthetic records and simulated save outcomes; no real writes, recovery or production persistence. Exact visual treatment awaits review."

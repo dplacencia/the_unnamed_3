@@ -212,9 +212,10 @@ Checked steps record work performed, not acceptance of proposed table choices.
 - [x] 9.11 Record the user's Spanish correction: “No hemos podido confirmar que
       los cambios se han guardado.” and the matching “mientras confirmamos que los
       cambios se han guardado” help sentence; avoid the nominal “el/este guardado”.
-- [ ] 9.12 Revisit the message box design in a later visual revision, as explicitly
-      requested by the user; retain the current layout for now and clarify the
-      affected feedback surface(s) before proposing a new treatment.
+- [x] 9.12 Revisit the deferred message-box design, clarify its surfaces and
+      develop the selected replacement under PT-043 and tasks 11.1–11.6.
+      Discovery and the selected preview are complete; exact candidate approval
+      remains separate under 11.6.
 
 - [x] 9.13 Apply and verify the authorized Spanish examples and remaining nominal
       save-feedback phrases/compact labels in context; preserve state meanings
@@ -301,7 +302,46 @@ Checked steps record work performed, not acceptance of proposed table choices.
       [preparation record](filters-preview-plan.md#commit-preparation--2026-11-16).
 - [x] 10.10 Verify and stage only the 24 implementation/specification/test/docs
       files; leave approved references unstaged and provide the user commit command.
-- [ ] 10.11 After the user's first commit, verify it against the prepared manifest,
+- [x] 10.11 After the user's first commit, verify it against the prepared manifest,
       then stage only the 433 approved-reference files and provide its commit command.
-- [ ] 10.12 Verify both user commits and the remaining checkpoint status. Never
+- [x] 10.12 Verify both user commits and the remaining checkpoint status. Never
       create a commit; keep the separate pending navigation review outside this work.
+      Commits `382cfcd`/`3853ee6` match both exact batches and the checkpoint was
+      verified clean; see the [completed record](filters-preview-plan.md#completed-checkpoint).
+
+## Products feedback design discovery
+
+- [x] 11.1 Record the user's continuation to revisit deferred task 9.12 and audit
+      current message surfaces/preserved rules in [feedback-design.md](feedback-design.md).
+- [x] 11.2 The user selected “Save results + recovery status (Recommended)”.
+      Field validation, confirmation dialogs and a general notice system remain separate.
+- [x] 11.3 The user selected “Compact inline summary + expandable details
+      (Recommended)” for the simulated Storybook preview; prepare and execute
+      the [bounded implementation plan](feedback-preview-plan.md).
+- [x] 11.4 Obtain meaningful RED disclosure evidence, implement the shared
+      controlled presentation and integrate both scopes without policy changes.
+- [x] 11.5 Verify behavior/quality, audit actual candidate scope, capture and
+      inspect new visuals, compare unchanged references and record exact proof.
+      Final proof records 113 code tests, 149 browser checks, 164 candidates and
+      partitioned coverage of all 743 unchanged cases, including the recorded
+      intermittent icon comparison and its passing isolated repeats.
+- [x] 11.6 Deliver exact feedback candidates for specific approval; preserve the
+      912 accepted references, separate navigation scope and no staging/commit rule.
+      The user accepted the exact 164-image gallery with “that looks ok”; see the
+      [approval record](feedback-preview-plan.md#visual-approval-and-reference-promotion--2026-11-16).
+- [x] 11.7 Promote only those 164 cases (148 existing/16 new), preserve the other
+      764 references and verify changed-case comparisons against the approved set.
+      Retain source-matched 743-case evidence and its recorded icon variance.
+      All 164 post-approval comparisons pass; the exact union verifies 907 eligible
+      cases at the same source. The accepted baseline is 928; nothing is staged.
+
+## Feedback checkpoint commit preparation
+
+- [x] 11.8 Record the user's “go ahead” to two exact 21/165-file staging batches
+      in the [preparation record](feedback-preview-plan.md#commit-preparation--2026-11-16).
+- [x] 11.9 Verify and stage only the 21 implementation/specification/test/docs
+      files and give the user the commit command; keep all references unstaged.
+- [ ] 11.10 After the user's first commit, verify it against the prepared manifest,
+      then stage only the 165 approved-reference files and give its commit command.
+- [ ] 11.11 Verify both user commits and the remaining checkpoint status. Never
+      create a commit; preserve the separate pending navigation review.
