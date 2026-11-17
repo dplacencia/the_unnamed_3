@@ -16,12 +16,13 @@ the linked records distinguish approved source decisions from newly recorded
 wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
-Current assignment — 2026-11-17: the user authorized the simulated first stock
-receipt preview after the completed work is committed. Follow the
-[checkpoint sequence](openspec/changes/define-product-creation/preview-plan.md#checkpoint-before-the-receipt-preview--2026-11-17).
-Stage one batch at a time and give the command to the user. Verify each user
-commit against its prepared manifest. Begin receipt preview implementation after
-the three checkpoints are verified. Never create a commit.
+Current assignment — 2026-11-17: the first stock receipt preview is approved.
+The [approval record](openspec/changes/define-first-stock-receipt/preview-plan.md#visual-approval-and-reference-promotion--2026-11-17)
+identifies the 84 new references and the 1,144 earlier references. Follow the
+[checkpoint sequence](openspec/changes/define-first-stock-receipt/preview-plan.md#commit-preparation--2026-11-17)
+authorized by the user's request to continue. Stage each batch separately,
+provide its command to the user, and verify the resulting commit. Never create
+a commit.
 
 Previous assignment — 2026-11-17: the user said **“go ahead”** to the simulated
 Storybook [product creation preview](openspec/changes/define-product-creation/preview-plan.md)

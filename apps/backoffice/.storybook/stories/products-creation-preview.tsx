@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
@@ -33,6 +33,7 @@ import {
   restoreCreationRecord,
   startCreationRun,
   type CreationRecord,
+  type CreationUnitId,
 } from "./products-creation-model";
 
 export type CreationFixture =
@@ -77,8 +78,21 @@ function advanceFixture(record: CreationRecord, fixture: CreationFixture) {
 
 export function ProductsCreationPreview({
   fixture,
+  receiptShortcut,
+  movementsContent,
 }: {
   fixture: CreationFixture;
+  receiptShortcut?: {
+    label: string;
+    open: (product: {
+      id: string;
+      name: string;
+      unit: CreationUnitId;
+      increment: string;
+    }) => void;
+    disabled: boolean;
+  };
+  movementsContent?: ReactNode;
 }) {
   const copy = creationMessages[useLocale() as Locale];
   const initial = useMemo(() => makeBrowsingProducts(1000), []);
@@ -94,6 +108,7 @@ export function ProductsCreationPreview({
   const openButton = useRef<HTMLButtonElement>(null);
   const resumeButton = useRef<HTMLButtonElement>(null);
   const outcomeHeading = useRef<HTMLHeadingElement>(null);
+  const openingReceipt = useRef(false);
   const sequence = useRef(0);
   const resumingRetained = !!record && record.command === retained?.command;
   const canResume = record?.outcome === "unconfirmed";
@@ -193,7 +208,8 @@ export function ProductsCreationPreview({
           archivedFixture
           browsingFixture="catalogue"
           browsingCount={1000}
-          viewKey={`irin-products-design:creation:${fixture}`}
+          viewKey={`irin-products-design:${receiptShortcut ? "receipt-product" : "creation"}:${fixture}`}
+          movementsContent={movementsContent}
           summary={
             canResume &&
             !open && (
@@ -244,9 +260,13 @@ export function ProductsCreationPreview({
         <SheetContent
           className="products-detail-panel"
           showCloseButton={false}
-          finalFocus={() =>
-            canResume ? resumeButton.current : openButton.current
-          }
+          finalFocus={() => {
+            if (openingReceipt.current) {
+              openingReceipt.current = false;
+              return false;
+            }
+            return canResume ? resumeButton.current : openButton.current;
+          }}
           data-creation-panel={phase}
         >
           <SheetHeader className="pe-10">
@@ -298,6 +318,30 @@ export function ProductsCreationPreview({
                   {copy.unitLabels[record.command.content.unit]}
                 </dd>
               </dl>
+              {receiptShortcut && (
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="self-start max-sm:min-h-11"
+                  data-receipt-shortcut
+                  disabled={receiptShortcut.disabled}
+                  onClick={() => {
+                    const { name, unit, increment } = record.command.content;
+                    const measurement = creationUnit(unit);
+                    if (!measurement || !record.productId) return;
+                    openingReceipt.current = true;
+                    finishClose();
+                    receiptShortcut.open({
+                      id: record.productId,
+                      name,
+                      unit,
+                      increment: increment ?? measurement.defaultStep,
+                    });
+                  }}
+                >
+                  {receiptShortcut.label}
+                </Button>
+              )}
             </>
           )}
           {phase === "rejected" && <p role="alert">{copy.rejected}</p>}

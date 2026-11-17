@@ -1,0 +1,536 @@
+import { useEffect, useRef, useState } from "react";
+import { useLocale } from "next-intl";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
+import { PlusIcon, XIcon } from "@/icons";
+import { defaultLocale, isLocale } from "@/i18n/configuration";
+import { NavigationPrototype } from "./navigation-prototype";
+import { ProductsCreationPreview } from "./products-creation-preview";
+import { creationUnit, type CreationUnitId } from "./products-creation-model";
+import { formatCreationStep } from "./products-creation-messages";
+import {
+  advanceReceiptFixture,
+  finishReceiptRead,
+  receiptIdentity,
+  receiptProducts,
+  retainedReceipt,
+  type ReceiptFixture,
+  type ReceiptSession,
+} from "./stock-receipt-fixtures";
+import { StockReceiptForm } from "./stock-receipt-form";
+import { receiptMessages } from "./stock-receipt-messages";
+import {
+  makeReceiptRecord,
+  newReceiptDraft,
+  receiptDraftDirty,
+  receiptRetentionMode,
+  selectReceiptProduct,
+  selectReceiptUnit,
+  startReceiptRun,
+  type ReceiptProduct,
+} from "./stock-receipt-model";
+
+type Change =
+  | { field: "product"; value: ReceiptProduct | null }
+  | { field: "unit"; value: CreationUnitId | null };
+
+export function StockReceiptPreview({ fixture }: { fixture: ReceiptFixture }) {
+  const currentLocale = useLocale();
+  const locale = isLocale(currentLocale) ? currentLocale : defaultLocale;
+  const copy = receiptMessages[locale];
+  const locations = [
+    { id: "sales-floor", name: copy.locationLabels.salesFloor },
+    { id: "stockroom", name: copy.locationLabels.stockroom },
+  ];
+  const [retained] = useState(() =>
+    fixture === "restored" ? retainedReceipt() : null,
+  );
+  const [session, setSession] = useState<ReceiptSession>({
+    record: retained,
+    balances: {},
+    read: { phase: "idle" },
+    readCount: 0,
+  });
+  const [open, setOpen] = useState(false);
+  const [shortcutProduct, setShortcutProduct] = useState<ReceiptProduct>();
+  const [draft, setDraft] = useState(() => newReceiptDraft());
+  const [change, setChange] = useState<Change | null>(null);
+  const [discard, setDiscard] = useState(false);
+  const workspace = useRef<HTMLDivElement>(null);
+  const resultHeading = useRef<HTMLHeadingElement>(null);
+  const balanceHeading = useRef<HTMLHeadingElement>(null);
+  const sequence = useRef(0);
+  const { record, read, readCount } = session;
+  const active = record?.phase === "request" || record?.phase === "waiting";
+  const canResume = record?.outcome === "unconfirmed";
+  const phase = !record ? "form" : active ? "submitting" : record.outcome;
+  const isRetained = !!record && record.command === retained?.command;
+  const products = shortcutProduct
+    ? [shortcutProduct, ...receiptProducts]
+    : receiptProducts;
+  const locationName = locations.find(
+    ({ id }) => id === record?.command.content.locationId,
+  )?.name;
+  const amount = (quantity: string, unit: CreationUnitId) =>
+    `${formatCreationStep(quantity.replace(",", "."), locale)} ${unit === "piece" ? copy.pieceSymbol : (creationUnit(unit)?.symbol ?? unit)}`;
+
+  useEffect(() => {
+    if (!record || !active) return;
+    const timer = setTimeout(
+      () =>
+        setSession((current) =>
+          current.record === record
+            ? advanceReceiptFixture(current, fixture)
+            : current,
+        ),
+      record.phase === "waiting" ? 110 : 390,
+    );
+    return () => clearTimeout(timer);
+  }, [active, fixture, record]);
+
+  useEffect(() => {
+    if (read.phase !== "loading") return;
+    const timer = setTimeout(
+      () =>
+        setSession((current) =>
+          current.read === read ? finishReceiptRead(current, fixture) : current,
+        ),
+      500,
+    );
+    return () => clearTimeout(timer);
+  }, [fixture, read]);
+
+  useEffect(() => {
+    if (open && phase !== "form") resultHeading.current?.focus();
+  }, [open, phase]);
+
+  function openDraft(product?: ReceiptProduct) {
+    setShortcutProduct(product);
+    setDraft(newReceiptDraft(product));
+    setOpen(true);
+  }
+
+  function finishClose() {
+    setOpen(false);
+    setDiscard(false);
+    setChange(null);
+    setDraft(newReceiptDraft());
+    setShortcutProduct(undefined);
+    if (!canResume)
+      setSession((current) => ({
+        ...current,
+        record: null,
+        read: { phase: "idle" },
+        readCount: 0,
+      }));
+  }
+
+  function requestClose() {
+    if (active || change || discard) return;
+    if (phase === "form" && receiptDraftDirty(draft, shortcutProduct))
+      setDiscard(true);
+    else finishClose();
+  }
+
+  function applyChange(next: Change) {
+    setDraft((current) =>
+      next.field === "product"
+        ? selectReceiptProduct(current, next.value)
+        : selectReceiptUnit(current, next.value),
+    );
+  }
+
+  function requestChange(next: Change) {
+    if (
+      next.field === "product"
+        ? next.value?.id === draft.product?.id
+        : next.value === draft.unit
+    )
+      return;
+    if (draft.quantity !== "") setChange(next);
+    else applyChange(next);
+  }
+
+  function submit() {
+    if (record || change || discard) return;
+    if (!locations.some(({ id }) => id === draft.locationId)) return;
+    const command = makeReceiptRecord(
+      draft,
+      { ...receiptIdentity, operationId: String(++sequence.current) },
+      receiptRetentionMode(fixture !== "memory-only", false),
+    );
+    if (command)
+      setSession((current) => ({
+        ...current,
+        record: startReceiptRun(command, 0),
+        read: { phase: "idle" },
+        readCount: 0,
+      }));
+  }
+
+  function resume() {
+    setOpen(true);
+    setSession((current) =>
+      current.record
+        ? {
+            ...current,
+            record: startReceiptRun(
+              current.record,
+              current.record.requests.at(-1)?.deadline ?? 0,
+            ),
+          }
+        : current,
+    );
+  }
+
+  const memoryNotice = record?.mode === "memory" && canResume && (
+    <p className="text-gray-600 dark:text-gray-400" data-receipt-memory>
+      {copy.memory}
+    </p>
+  );
+  const movementsContent = (
+    <div className="space-y-3 text-gray-800 dark:text-gray-100">
+      <Button
+        type="button"
+        size="sm"
+        className="max-sm:min-h-11"
+        data-receipt-open
+        disabled={canResume}
+        onClick={() => openDraft()}
+      >
+        <PlusIcon className="size-4" aria-hidden="true" />
+        {copy.open}
+      </Button>
+      {canResume && !open && (
+        <div
+          className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-gray-200 px-3 py-2 dark:border-gray-800"
+          data-receipt-summary
+        >
+          <div role="status" className="min-w-0 space-y-1">
+            <p className="font-semibold">{copy.unconfirmed}</p>
+            <p className="[overflow-wrap:anywhere] whitespace-pre-wrap">
+              {record.command.product.name} · {locationName}
+            </p>
+            {memoryNotice}
+          </div>
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            className="max-sm:min-h-11"
+            data-receipt-resume
+            onClick={resume}
+          >
+            {copy.resume}
+          </Button>
+        </div>
+      )}
+    </div>
+  );
+
+  return (
+    <div
+      ref={workspace}
+      data-receipt-workspace
+      data-receipt-run={
+        (record?.run ?? 0) - (isRetained ? (retained?.run ?? 0) : 0)
+      }
+      data-receipt-request-count={
+        (record?.requests.length ?? 0) -
+        (isRetained ? (retained?.requests.length ?? 0) : 0)
+      }
+      data-receipt-read-count={readCount}
+    >
+      <Sheet
+        open={open}
+        onOpenChange={(next) => {
+          if (!next) requestClose();
+        }}
+      >
+        {fixture === "from-product" ? (
+          <ProductsCreationPreview
+            fixture="catalogue"
+            receiptShortcut={{
+              label: copy.shortcut,
+              open: openDraft,
+              disabled: canResume,
+            }}
+            movementsContent={movementsContent}
+          />
+        ) : (
+          <NavigationPrototype
+            initialPage="movements"
+            permissionMode="ready"
+            locationCount="several"
+            movementsContent={movementsContent}
+          />
+        )}
+        <SheetContent
+          className="products-detail-panel"
+          showCloseButton={false}
+          finalFocus={() =>
+            workspace.current?.querySelector<HTMLElement>(
+              canResume
+                ? "[data-receipt-resume]"
+                : "[data-receipt-open], [data-creation-open]",
+            ) ?? false
+          }
+          data-receipt-panel={phase}
+        >
+          <SheetHeader className="pe-10">
+            <SheetTitle
+              ref={resultHeading}
+              tabIndex={-1}
+              className="text-xl outline-none"
+            >
+              {copy.title}
+            </SheetTitle>
+            <SheetDescription className="sr-only">
+              {copy.panelDescription}
+            </SheetDescription>
+          </SheetHeader>
+          {!active && (
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon"
+              className="absolute end-3 top-3 max-sm:min-h-11 max-sm:min-w-11"
+              aria-label={copy.close}
+              data-receipt-close
+              onClick={requestClose}
+            >
+              <XIcon className="size-4" aria-hidden="true" />
+            </Button>
+          )}
+          {phase === "form" && (
+            <StockReceiptForm
+              copy={copy}
+              products={products}
+              locations={locations}
+              draft={draft}
+              onChange={setDraft}
+              onProductChange={(value) =>
+                requestChange({ field: "product", value })
+              }
+              onUnitChange={(value) => requestChange({ field: "unit", value })}
+              onSubmit={submit}
+              onCancel={requestClose}
+            />
+          )}
+          {record && (
+            <>
+              <dl className="grid grid-cols-2 gap-4 rounded-lg border border-gray-200 p-3 dark:border-gray-800">
+                <div className="min-w-0">
+                  <dt className="text-gray-600 dark:text-gray-400">
+                    {copy.product}
+                  </dt>
+                  <dd className="font-medium whitespace-pre-wrap">
+                    {record.command.product.name}
+                  </dd>
+                </div>
+                <div className="min-w-0">
+                  <dt className="text-gray-600 dark:text-gray-400">
+                    {copy.destination}
+                  </dt>
+                  <dd className="font-medium">{locationName}</dd>
+                </div>
+              </dl>
+              {phase === "submitting" && <p role="status">{copy.submitting}</p>}
+              {phase === "applied" && record.result?.type === "applied" && (
+                <div role="status" className="space-y-1">
+                  <p className="text-success-700 dark:text-success-400 font-semibold">
+                    {copy.applied}
+                  </p>
+                  <p>
+                    {copy.appliedQuantity}{" "}
+                    <strong data-receipt-effect>
+                      {amount(record.result.quantity, record.result.unit)}
+                    </strong>
+                  </p>
+                </div>
+              )}
+              {phase === "pending" && (
+                <div role="status" className="space-y-1">
+                  <p className="font-semibold">{copy.pending}</p>
+                  {record.result?.type === "pending" &&
+                    record.result.reason === "product-archived" && (
+                      <p>{copy.pendingReason}</p>
+                    )}
+                </div>
+              )}
+              {phase === "rejected" && (
+                <div role="alert" className="space-y-1">
+                  <p className="font-semibold">{copy.rejected}</p>
+                  {record.result?.type === "rejected" &&
+                    record.result.reason === "location-unavailable" && (
+                      <p>{copy.rejectedReason}</p>
+                    )}
+                  {record.result?.type === "rejected" &&
+                    record.result.reason === "balance-range" && (
+                      <p>{copy.balanceRangeReason}</p>
+                    )}
+                </div>
+              )}
+              {phase === "unconfirmed" && (
+                <>
+                  <p role="status" className="font-semibold">
+                    {copy.unconfirmed}
+                  </p>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="self-start"
+                    data-receipt-retry
+                    onClick={resume}
+                  >
+                    {copy.retry}
+                  </Button>
+                </>
+              )}
+              {memoryNotice}
+            </>
+          )}
+          {phase === "applied" && read.phase !== "idle" && (
+            <section
+              className="space-y-2 border-t border-gray-200 pt-4 dark:border-gray-800"
+              data-receipt-balance={read.phase}
+            >
+              <h3
+                ref={balanceHeading}
+                tabIndex={-1}
+                className="font-semibold outline-none"
+              >
+                {copy.balance}
+              </h3>
+              {read.phase === "loading" && (
+                <p role="status">{copy.balanceLoading}</p>
+              )}
+              {read.phase === "ready" && (
+                <p
+                  role="status"
+                  className="text-base font-semibold"
+                  data-receipt-recorded-quantity
+                >
+                  {amount(read.quantity, read.unit)}
+                </p>
+              )}
+              {read.phase === "absent" && (
+                <p role="status">{copy.balanceAbsent}</p>
+              )}
+              {read.phase === "denied" && (
+                <p role="status">{copy.balanceDenied}</p>
+              )}
+              {read.phase === "error" && (
+                <>
+                  <p role="status">{copy.balanceError}</p>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    data-receipt-read-retry
+                    onClick={() => {
+                      balanceHeading.current?.focus();
+                      setSession((current) =>
+                        current.read.phase === "error"
+                          ? {
+                              ...current,
+                              read: { phase: "loading" },
+                              readCount: current.readCount + 1,
+                            }
+                          : current,
+                      );
+                    }}
+                  >
+                    {copy.readRetry}
+                  </Button>
+                </>
+              )}
+            </section>
+          )}
+          <Dialog
+            open={change !== null}
+            onOpenChange={(next) => {
+              if (!next) setChange(null);
+            }}
+          >
+            <DialogContent
+              closeLabel={copy.close}
+              className="max-w-[calc(100vw-32px)] sm:max-w-[420px]"
+            >
+              <DialogHeader>
+                <DialogTitle>
+                  {change?.field === "product"
+                    ? copy.changeProductTitle
+                    : copy.changeUnitTitle}
+                </DialogTitle>
+                <DialogDescription>{copy.changeClearsAmount}</DialogDescription>
+              </DialogHeader>
+              <DialogFooter>
+                <Button
+                  type="button"
+                  variant="outline"
+                  data-receipt-cancel-change
+                  onClick={() => setChange(null)}
+                >
+                  {copy.cancelChange}
+                </Button>
+                <Button
+                  type="button"
+                  data-receipt-confirm-change
+                  onClick={() => {
+                    if (change) applyChange(change);
+                    setChange(null);
+                  }}
+                >
+                  {copy.confirmChange}
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+          <Dialog open={discard} onOpenChange={setDiscard}>
+            <DialogContent
+              closeLabel={copy.close}
+              className="max-w-[calc(100vw-32px)] sm:max-w-[420px]"
+            >
+              <DialogHeader>
+                <DialogTitle>{copy.discardTitle}</DialogTitle>
+                <DialogDescription>{copy.discardText}</DialogDescription>
+              </DialogHeader>
+              <DialogFooter>
+                <Button
+                  type="button"
+                  variant="outline"
+                  data-receipt-keep-editing
+                  onClick={() => setDiscard(false)}
+                >
+                  {copy.keepEditing}
+                </Button>
+                <Button
+                  type="button"
+                  variant="destructive"
+                  data-receipt-discard
+                  onClick={finishClose}
+                >
+                  {copy.discard}
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+        </SheetContent>
+      </Sheet>
+    </div>
+  );
+}

@@ -2929,6 +2929,224 @@
         }
       ],
       "limitation": "Synthetic product creation only. Request outcomes, retry time and retained records are fixtures. No live Inventory integration or production browser storage. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-receipt-movements",
+      "title": "Stock receipt from Movimientos",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-receipt--movements",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-receipt-ready"
+        },
+        {
+          "id": "blank",
+          "action": "stock-receipt-blank"
+        },
+        {
+          "id": "product-options",
+          "action": "stock-receipt-chooser"
+        },
+        {
+          "id": "invalid-quantity",
+          "action": "stock-receipt-validation"
+        },
+        {
+          "id": "advanced-reference",
+          "action": "stock-receipt-advanced"
+        },
+        {
+          "id": "switch-product",
+          "action": "stock-receipt-switch-product"
+        },
+        {
+          "id": "switch-unit",
+          "action": "stock-receipt-switch-unit"
+        },
+        {
+          "id": "discard",
+          "action": "stock-receipt-discard"
+        },
+        {
+          "id": "applied",
+          "action": "stock-receipt-applied"
+        }
+      ],
+      "limitation": "Synthetic one-line stock receipt. Outcomes, timing, stock lookup and storage are fixture-controlled. No Inventory requests or real stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-receipt-from-product",
+      "title": "Stock receipt from confirmed product details",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-receipt--from-product",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-receipt-from-product"
+        }
+      ],
+      "limitation": "Synthetic one-line stock receipt. Outcomes, timing, stock lookup and storage are fixture-controlled. No Inventory requests or real stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-receipt-read-error",
+      "title": "Stock receipt applied with a separate balance lookup error",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-receipt--read-error",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-receipt-read-error"
+        }
+      ],
+      "limitation": "Synthetic one-line stock receipt. Outcomes, timing, stock lookup and storage are fixture-controlled. No Inventory requests or real stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-receipt-read-denied",
+      "title": "Stock receipt applied without balance read access",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-receipt--read-denied",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-receipt-read-denied"
+        }
+      ],
+      "limitation": "Synthetic one-line stock receipt. Outcomes, timing, stock lookup and storage are fixture-controlled. No Inventory requests or real stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-receipt-pending",
+      "title": "Stock receipt confirmed Pending",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-receipt--pending",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-receipt-pending"
+        }
+      ],
+      "limitation": "Synthetic one-line stock receipt. Outcomes, timing, stock lookup and storage are fixture-controlled. No Inventory requests or real stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-receipt-rejected",
+      "title": "Stock receipt authoritative rejection",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-receipt--rejected",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-receipt-rejected"
+        }
+      ],
+      "limitation": "Synthetic one-line stock receipt. Outcomes, timing, stock lookup and storage are fixture-controlled. No Inventory requests or real stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-receipt-recovery",
+      "title": "Stock receipt unconfirmed after bounded retries",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-receipt--recovery",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-receipt-unconfirmed"
+        }
+      ],
+      "limitation": "Synthetic one-line stock receipt. Outcomes, timing, stock lookup and storage are fixture-controlled. No Inventory requests or real stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-receipt-restored",
+      "title": "Stock receipt restored request before explicit resumption",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-receipt--restored",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-receipt-restored"
+        }
+      ],
+      "limitation": "Synthetic one-line stock receipt. Outcomes, timing, stock lookup and storage are fixture-controlled. No Inventory requests or real stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-receipt-memory-only",
+      "title": "Stock receipt memory-only recovery",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-receipt--memory-only",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-receipt-memory"
+        }
+      ],
+      "limitation": "Synthetic one-line stock receipt. Outcomes, timing, stock lookup and storage are fixture-controlled. No Inventory requests or real stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-receipt-en-form",
+      "title": "Stock receipt English form",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-receipt--movements",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-receipt-blank"
+        }
+      ],
+      "limitation": "Synthetic one-line stock receipt. Outcomes, timing, stock lookup and storage are fixture-controlled. No Inventory requests or real stock changes. Candidates require specific visual approval.",
+      "locale": "en"
+    },
+    {
+      "id": "stock-receipt-ca-form",
+      "title": "Stock receipt Catalan form",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-receipt--movements",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-receipt-blank"
+        }
+      ],
+      "limitation": "Synthetic one-line stock receipt. Outcomes, timing, stock lookup and storage are fixture-controlled. No Inventory requests or real stock changes. Candidates require specific visual approval.",
+      "locale": "ca"
+    },
+    {
+      "id": "stock-receipt-gl-form",
+      "title": "Stock receipt Galician form",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-receipt--movements",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-receipt-blank"
+        }
+      ],
+      "limitation": "Synthetic one-line stock receipt. Outcomes, timing, stock lookup and storage are fixture-controlled. No Inventory requests or real stock changes. Candidates require specific visual approval.",
+      "locale": "gl"
+    },
+    {
+      "id": "stock-receipt-eu-form",
+      "title": "Stock receipt Basque form",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-receipt--movements",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-receipt-blank"
+        }
+      ],
+      "limitation": "Synthetic one-line stock receipt. Outcomes, timing, stock lookup and storage are fixture-controlled. No Inventory requests or real stock changes. Candidates require specific visual approval.",
+      "locale": "eu"
     }
   ]
 }

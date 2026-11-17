@@ -14,6 +14,7 @@ export default defineConfig({
     "products-feedback.spec.ts",
     "products-browsing.spec.ts",
     "products-creation.spec.ts",
+    "stock-receipt.spec.ts",
   ],
   use: { ...base.use, baseURL: "http://localhost:6006" },
   projects: [

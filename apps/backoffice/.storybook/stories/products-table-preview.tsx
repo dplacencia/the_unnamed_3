@@ -1198,6 +1198,7 @@ export function ProductsTableWorkspace(
     editor: ProductEditing;
     summary?: ReactNode;
     catalogueAction?: ReactNode;
+    movementsContent?: ReactNode;
     productStatus?: (product: PreviewProduct) => ProductRowStatus | undefined;
     viewKey?: string;
   },
@@ -1302,6 +1303,7 @@ export function ProductsTableWorkspace(
         permissionMode="ready"
         locationCount={props.locationCount}
         productsToolbar={toolbar}
+        movementsContent={props.movementsContent}
         beforeNavigate={(proceed) =>
           editor.exit(() => {
             editor.inspect(null);

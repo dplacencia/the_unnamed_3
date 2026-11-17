@@ -93,6 +93,7 @@ export interface NavigationPrototypeProps {
   permissionMode: PermissionMode;
   locationCount: "one" | "several";
   productsContent?: ReactNode;
+  movementsContent?: ReactNode;
   productsToolbar?: ReactNode;
   beforeNavigate?: (proceed: () => void) => void;
 }
@@ -113,6 +114,7 @@ function Workspace({
   permissionMode,
   locationCount,
   productsContent,
+  movementsContent,
   productsToolbar,
   beforeNavigate,
 }: NavigationPrototypeProps) {
@@ -525,9 +527,11 @@ function Workspace({
             >
               {state.page === "products" && productsContent
                 ? productsContent
-                : locationPage && !selected
-                  ? t("navChooseLocationHint")
-                  : t("navContentHint")}
+                : state.page === "movements" && movementsContent
+                  ? movementsContent
+                  : locationPage && !selected
+                    ? t("navChooseLocationHint")
+                    : t("navContentHint")}
             </div>
           )}
         </div>
