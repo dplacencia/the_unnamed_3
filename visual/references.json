@@ -19448,6 +19448,1434 @@
       "run": "2026-11-17T20-35-50.069Z",
       "sourceHash": "807073c81bb1fd7f54dc14c985dbbfe33d4cbc6fdbc888ae3f82fb3aaf5cfc2b",
       "profileHash": "1aae650cef84b0eda316c3d9e2863e85155c1c924568bf850f78a9f116b21104"
+    },
+    "stock-receipt-ca-form-default--desktop": {
+      "sha256": "08cde8f2cedd393bdc599dd95a62cc93e594ecfa7829f55e5b5bf1129d8863db",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "13290ecfc953f69f6acaec5b767bcc15737416a560bb287b89fb90dcf5be1103"
+    },
+    "stock-receipt-ca-form-default--desktop-dark": {
+      "sha256": "bc3977399cbbc1131c70c9077c09811e9d27552d3a6cc4395b28a9ce261f26e6",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "862b9f912a26a626baeaf85d2176868556727e5f9e5cd5d94d881307a18c2e5d"
+    },
+    "stock-receipt-ca-form-default--mobile": {
+      "sha256": "c635e9c0a69ee9ea75339967d0cf8abd55beb2a6960c86955438dda64082709c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "8cdca5e2054dfb58848d764e10d16db63749c3b88ed8a50630266e04b44687f5"
+    },
+    "stock-receipt-ca-form-default--tablet": {
+      "sha256": "f6663f2ee194747c9025b03777482e408594b806f6440fcc8f01f9eaf5549ac9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "9b20116ba71c2ee07c800662887eda75efa94d5343ca8da2ff284d9eb125c4fb"
+    },
+    "stock-receipt-en-form-default--desktop": {
+      "sha256": "3b5864046ac46cb130f8323369d8a6748884831b655c23b6f14272d34045f41b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "e48a9c773b392a03fef226e4411171f87c45abb8002166231430c81a48e4e80d"
+    },
+    "stock-receipt-en-form-default--desktop-dark": {
+      "sha256": "932b9874aee66fdf7f0067da22916b18a7dccaf4ad82c51a573b7f331e9dda8a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "dae5f864d2cb802f76bdb8ae6251547e058e2cde98673b839629d5289a331347"
+    },
+    "stock-receipt-en-form-default--mobile": {
+      "sha256": "8f23093c353c8659d443de990f45cd447e1e854ebe5689d54f28f5b9b229c0a6",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "65f2fb6c10a470ab3a92918045f9b4318bd3b05187c14e351d4745ada382e6a7"
+    },
+    "stock-receipt-en-form-default--tablet": {
+      "sha256": "301739b7b9f2c5238b23526dcbecd80997b0e19033aa96dcbd3448ca66670cb4",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "4b5efd3ff2b27c8843208feab02fb7a596df21f8447e21bc7b9432f7469a17b1"
+    },
+    "stock-receipt-eu-form-default--desktop": {
+      "sha256": "5759e2369e465b7437e9fa0ecfb0db8818cd8e4acc3e9f93916f75b99b2ddeca",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "75237bfc4f7a7e95d406741da2821b52b5b697d29565c60fc49c0301408de01b"
+    },
+    "stock-receipt-eu-form-default--desktop-dark": {
+      "sha256": "b2a21d293d60e697632852250377320091a20cc4591d3279a722f22213479ad5",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "445ee2da386e5c2c2d70d92fd0f786b128653413618d1b1851382662200ede0a"
+    },
+    "stock-receipt-eu-form-default--mobile": {
+      "sha256": "39b710664e007cb7e6b19150fb3a60f32ae4d737453b16df9ea731dbd612719f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "7dfc6fcbf84bd4c0744f811b53644f7ad8bdd3ad59f38f12ec452e0459047be7"
+    },
+    "stock-receipt-eu-form-default--tablet": {
+      "sha256": "74d13971100f2e354b831270da098962d3020330f4996d23eae14ed27096af95",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "ac59f08320cbb992bcff0b2003f67e0c1dc784c56b8604ac2589df395e17c427"
+    },
+    "stock-receipt-from-product-default--desktop": {
+      "sha256": "36546286425ef18599f598ea5b0ee4ebee4753418c5dc73ee32ddf19da2471e5",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "bbad415006b58620f965417a63f1b3159527c6a8747dd0b8351f648058ca9c66"
+    },
+    "stock-receipt-from-product-default--desktop-dark": {
+      "sha256": "a05be8df6d0e8df03ae5df038418db8479adccb633f0749d4fb783337522e0cc",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "dca0d539cacb3bb33ba995639c15686399472760b26c7f949e0095f3cffbff73"
+    },
+    "stock-receipt-from-product-default--mobile": {
+      "sha256": "89caf32e73bbacbb82685fbb93a90b847bde745381ac6559809b072278e9fdee",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "fd9ca119e5b4c431f904ebe69fc10075e848c0a7e92daf1e83a29578b4f99634"
+    },
+    "stock-receipt-from-product-default--tablet": {
+      "sha256": "3bbc848ac0e4cde7bc0cdaa5018aeb5da7befab86fa2a7619c1db5a2222ca731",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "9127b8c9a3e4708984fb3a41723b099404da8ed69ff37b677f97590967f85fd5"
+    },
+    "stock-receipt-gl-form-default--desktop": {
+      "sha256": "22f58c67807f7e829173dcc43bb765002fbc06ff4ca40b695d133b74278fb86a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "5329578f3cfd48ffd373079b1489906f8480127108b15a2208dd0e77c04b5b17"
+    },
+    "stock-receipt-gl-form-default--desktop-dark": {
+      "sha256": "3737ef6339a6687f3296bd4b26874d1139e5d569dfa9702c0afeeeb8e0d3d817",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "97043466018812de3da13d3cc8ceae1c0256692d18607cf61027bb893e84a959"
+    },
+    "stock-receipt-gl-form-default--mobile": {
+      "sha256": "6c2091e504a397f9d820949e10a47cba7455047d7fbc9d62228cb10352a9bde7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "f10f2c5e72ab2049fee9c7154cd32c6c5308cc440f35bbb16a56e0f0a8d87d8f"
+    },
+    "stock-receipt-gl-form-default--tablet": {
+      "sha256": "6ecd89c3c97ba9b0e35b13284adecc9890bcadc22c0a4123bf1e46ab8915ef14",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "09ae6a5da78fbf6b629b24b796011b3a30964bf6183123b29ebfe3b99314353f"
+    },
+    "stock-receipt-memory-only-default--desktop": {
+      "sha256": "4dc15bdead8f26b73b1a733820dee2319c64450073f3c75a7e08a6bc01b8e8a7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "5a1c31177f61a7db5208f2a9e416c081b187e9ac34796d922af2d25e94031fd9"
+    },
+    "stock-receipt-memory-only-default--desktop-dark": {
+      "sha256": "415f6dd74b89a6e334ce72ff5ac0373c5e33f9284678914e7289ca217c838111",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "9bb79b3c398bd8a889eb34e300046f4387555fff0aa823f1ccdb128fbd412491"
+    },
+    "stock-receipt-memory-only-default--mobile": {
+      "sha256": "7c5a32a6397d37cb96150565253a3c3c15dc9cc6cf222850e5f7c0720e05f15b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "98de1e4578fb8595951590a8882b3329ac2ee63aa47e4ef393e01963dae2f575"
+    },
+    "stock-receipt-memory-only-default--tablet": {
+      "sha256": "7427a038962932692a66dbdbcdbcb69e4f06974503271c08ee262d5df1768f3d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "1936c753bd2583debc6f7a7d260ad0775f72d421e09cc22ac40e52c5c2c5d498"
+    },
+    "stock-receipt-movements-advanced-reference--desktop": {
+      "sha256": "cd847397f470b2bdeb605aacafafb24957433a5ff75ad473b6db1b476e996c31",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "0634b730f3ad218aee9d1477bfcff7dc2c6a92c4b0ca8d0d1d026264ec0258b8"
+    },
+    "stock-receipt-movements-advanced-reference--desktop-dark": {
+      "sha256": "94fd97b14082d3085292ca2748162a430c2aa6c941b607be0270e7f08fc563eb",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "54dc374d58854562a31cda244ba3ff0b241cb2d9ab2e144bebee8daa83e84c2b"
+    },
+    "stock-receipt-movements-advanced-reference--mobile": {
+      "sha256": "4384887ad9ee512ce4e9343a2b4e35f5c900467bd1de92d2e56ea9bcb0a88310",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "f69ef827d628b7853e91d4e6e9f6ca60e8434a336daf1ebc52fbb90038ff70a5"
+    },
+    "stock-receipt-movements-advanced-reference--tablet": {
+      "sha256": "59d1b7f5f533973b56f43928b6f89c31a8a2bf3c00b0983d205af389d417a034",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "95b1ce356651285876eb63fd731a0d521663ab22b725c832b084e73a085ead53"
+    },
+    "stock-receipt-movements-applied--desktop": {
+      "sha256": "7f5cd89209e16b8ccbc407858900b5c3d04f27c69f76ba8567a9f32bcc407cf9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "1c25ed015f3edf0e3d3babfaf4c8b7eb7e46c27b8ee8cf1de9383be9d6712fc4"
+    },
+    "stock-receipt-movements-applied--desktop-dark": {
+      "sha256": "75c97e46a5943bff30a490de350ab58851eaafd0323a3063471d03cb9ee2e82e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "2f41520c74aa643f22dae4a541f9152a8b664e78426833f277ab41f8b2f6213e"
+    },
+    "stock-receipt-movements-applied--mobile": {
+      "sha256": "38ea9e941a0469cac95e7fac4c01e23914df186e778b497475c3dcedc3b33fbd",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "a801653cee4b6a1122035962587380b868670668c0c2df8c17dca2e569592a23"
+    },
+    "stock-receipt-movements-applied--tablet": {
+      "sha256": "e63b4a1362d58a9cb8d093733a3ae3df723f08788294577714f1ac77ad789b42",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "471a1f46c9e246a98fc15e5ddc7d4c50c2b32ea3c2d206bce0c452c761491704"
+    },
+    "stock-receipt-movements-blank--desktop": {
+      "sha256": "56f74a038701c8b74078d60c5d43660e8fc4d1f41d4cb60f5009277292fedbc1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "3bb7888293392f1fe72b89ef2bc3c6f6fe604507a3f6176a8a4b56a128c32af3"
+    },
+    "stock-receipt-movements-blank--desktop-dark": {
+      "sha256": "47826983e789acfab38b36ef915336dbdd44f0f11abb545c889ed815dc0b5234",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "106b343c8e5209c35e7655fcffd3a34ae18a7eda8c476fa3479bebae19defae3"
+    },
+    "stock-receipt-movements-blank--mobile": {
+      "sha256": "e9ea416a02567b4ae00f863b3561ba3aba0ae39f440aa99f1a176e6d12697ec2",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "907c361c982e31c30da14033ce1ab7720d698e7670748dcaa8402db82e6d5566"
+    },
+    "stock-receipt-movements-blank--tablet": {
+      "sha256": "27cc412719103b3968784dd5abbb5f79e54951b4e48a2c8835bd8a258ecbd228",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "573b885ac2db9424839e0ae4c6e8480a99f05489cc58de481b01f5435155f300"
+    },
+    "stock-receipt-movements-default--desktop": {
+      "sha256": "d3ad24d89003a15b1ccfb985d0582c00e2f1e94ff26d96ef3273db9895e4b4e6",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "ebfad1b7ef94f80b46ad8d098d0a09e875f01b145a79ecb783816322a87cbbf1"
+    },
+    "stock-receipt-movements-default--desktop-dark": {
+      "sha256": "d0d85debeb81d0636ac09465d82844bfead181c8b6ae72e7517bb96614f033a9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "fff0985fe0af68a8b0d70caf4b3b9766db6c8101830501dd31ed89ded87cb095"
+    },
+    "stock-receipt-movements-default--mobile": {
+      "sha256": "e7712f2447bc796c523cb86b787fb107d94451e7ac24115fb8e609f776119a12",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "026b3d72fdaed425e7883d4a3eac927daaaec28faf8b456b09fdb17bc5592177"
+    },
+    "stock-receipt-movements-default--tablet": {
+      "sha256": "3e48ba517ff37887f17cc331bd390407767727ebd1fb7ac6c514c83091aadc1a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "ef122692e59850bef909a9cebce500cf6c9ff91ff4d46a01dae953cf589fb444"
+    },
+    "stock-receipt-movements-discard--desktop": {
+      "sha256": "b040eb008b37ef9776db9d227486941766ab596ab6e33176b219b92977cb935c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "10f336ccb64cec3624aba21093d1978fd21e3d15a34dc7bc48b62e849dfeab41"
+    },
+    "stock-receipt-movements-discard--desktop-dark": {
+      "sha256": "0f562bc40341321345ca5f8c1d472c9c499fd9c6f0b0bea9904db0184fe2b49f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "cc0fe6d30fced22881c543c7cc03eb3ed6bcb784783a65524a04e1626477988b"
+    },
+    "stock-receipt-movements-discard--mobile": {
+      "sha256": "5bf15f2f3692cc379f3004dfe92bfb16eda02c47417b0c11cebc2d661e92480e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "2e1a2828add52f26b98d9c9cf8f5d67bd469744aa355fa9c5a837e9d125462c4"
+    },
+    "stock-receipt-movements-discard--tablet": {
+      "sha256": "5be21f08b778b4392ecf10af79af472b3df128d334d47858b235481e97cc25df",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "7f4b00591ebda7f8457bbea0c901413bf69d1aa5d23e92fa24fc0963e65219cd"
+    },
+    "stock-receipt-movements-invalid-quantity--desktop": {
+      "sha256": "5d557cbaef5ecbfd8a2510c61b99591f02398a2482a486285c4c9ccd4729845c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "f66a3c795f5f7abb3139f3049f77666401cc04451c142b5be93d32e87bcc1557"
+    },
+    "stock-receipt-movements-invalid-quantity--desktop-dark": {
+      "sha256": "778dec36cd09651660f5ca961ec8a683a2f4065bf684ec74b34bf163dc5e24ee",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "a3f5736b18abba827605e782b9c4cbfb48b38abffc6466640aad5f35c642ddd8"
+    },
+    "stock-receipt-movements-invalid-quantity--mobile": {
+      "sha256": "dd56acf072d3c515de12d8c96f2effbaa75e46260d962ac6407463a8ef9dd650",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "e613e70b31d3798051df6fc9209d719afa5016c387543abb8f6254b8b7889204"
+    },
+    "stock-receipt-movements-invalid-quantity--tablet": {
+      "sha256": "d73e782a9802a27f975c982507791fc7d832b44e73e927d0b802971789a19de0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "3ef756df145de015c2ffb3224af79866c57a1c3b1306ca45951be68ee50b4eed"
+    },
+    "stock-receipt-movements-product-options--desktop": {
+      "sha256": "1beff010fd040385921225d44f0397f12c7fb601a11174639fd4a590f9fd9050",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "ab7d91aaf09ce61b8be534e459d8ae8614e4d0d450a07ed9b274b24c48829e05"
+    },
+    "stock-receipt-movements-product-options--desktop-dark": {
+      "sha256": "08aa463f617c8158aeff7209410ca6680b1d6d063f140695db4eb69dd653f111",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "5e9b6e49b419c3e7bdfa638b660865817e377cf398ddb3538a9d15d1a30c6156"
+    },
+    "stock-receipt-movements-product-options--mobile": {
+      "sha256": "d08dfe1b8c94ad075c8b926c500c74e15b41945a04ac8b2671f8308973528b0a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "be3bcc8aefbc888f26323e51b7a770603297e410efa03c3b000b347c96bb6b2f"
+    },
+    "stock-receipt-movements-product-options--tablet": {
+      "sha256": "e3d8722e63fd43ee545e149fc2929bec307dd5d6e92219fb792649f3ffc0ee0e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "7144066f591b85de89f4afd11498e058e5fa6943d078f13ecd812274168ca6f2"
+    },
+    "stock-receipt-movements-switch-product--desktop": {
+      "sha256": "18bc44ba5412c7492c0c6eda633e9e89531d11505d28b9017aed4d9809c4dddb",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "efc37bc405bff8859e3f6fe5514133b795776caad5c4eba2a1ee2f6cc034ec8a"
+    },
+    "stock-receipt-movements-switch-product--desktop-dark": {
+      "sha256": "2e16bc4907ca87d55a0851bd99165d4e9dcbb053ffd66e1f08a6ef7e6170e440",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "13c1ac15a74affae2c25c4df551f3f07644f407570c42c118506908032e907ff"
+    },
+    "stock-receipt-movements-switch-product--mobile": {
+      "sha256": "aa46cb966003deb7dc2cc44ac0b4b88c59c5976ea3bb5777e7e6ce06ef11f9f0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "20a0a2b287354ba50f36b9baa683190eaf1e8ca3551a6b72976cfa342158f3ce"
+    },
+    "stock-receipt-movements-switch-product--tablet": {
+      "sha256": "1ab554d36dc700ed3c6c87bdc9adf2e57298a7cc8a49baa527a61d684f59c1bb",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "90b2e381a63b560199bff7beff48db5c1de185ec92d02db48dbd702e0a85a10c"
+    },
+    "stock-receipt-movements-switch-unit--desktop": {
+      "sha256": "090962da0f3ffd16ad3bfee5ca3791031a010888cba2937d2ad3bf4fc14f824a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "faa462e0681fa2f0300d7f7cc63d26e944868b29cfea95b029de92eb805a4f7c"
+    },
+    "stock-receipt-movements-switch-unit--desktop-dark": {
+      "sha256": "b9f759112be1ac3034ead4d8a3c000d106308b27ebabaae927a680c72c23cd1d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "3fd0a7c3123d772748af9045fc987095b363b4597d03827764282f2cbc1c20b7"
+    },
+    "stock-receipt-movements-switch-unit--mobile": {
+      "sha256": "15104100b566fb1da3f51bcdebe11134b9d18699ed78c0d30807767a921e5923",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "76d9116f92a9464d5f44e7aa1844515dc097675c3a8f5fbe1e3f2565ffe380c4"
+    },
+    "stock-receipt-movements-switch-unit--tablet": {
+      "sha256": "4c1f076416b8ce07dc46cdbc055dd0dccbfe5a6c1d6cf1ab115e8c78731232a7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "2b6e975f279c696993468da5756e5b6ce3d71392f319d450fafc07d728dd211c"
+    },
+    "stock-receipt-pending-default--desktop": {
+      "sha256": "9e308ab1b5d242e828fc9925bcba3e8bcf5fe0cd4bd38315aaff27cf781b89c1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "67646bfbaea3d8d184d46e578298304811eaae954469af29ab652a376b3bc5e5"
+    },
+    "stock-receipt-pending-default--desktop-dark": {
+      "sha256": "d342114ba05c0d077f6dc5769e9cc625dd39129c436667e8e62ca732e131a0a1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "7e7d647a02bacdf6e89a24a2306597c13a6a013403cab1d4822d079a5c5f6320"
+    },
+    "stock-receipt-pending-default--mobile": {
+      "sha256": "fd2a60db1baa479c39442dfe5c3a6efb63e5c759f8bf29ebafd0f3f52385c52d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "5666f16cc353d7a7f4030392a56594452cd0679d23e6d974138e3d44a4630378"
+    },
+    "stock-receipt-pending-default--tablet": {
+      "sha256": "620890ac973998b72da61bd51499da14bafb93817d5807d62eeea678af04f172",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "f6fd8bf006afccc475a7d8c664510ed211c422123cd80252b037eacebf06f8a0"
+    },
+    "stock-receipt-read-denied-default--desktop": {
+      "sha256": "82b408816f9e2952aae1ac6a6137e53dc2b05fac5c498b32cce02054b18c22cf",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "763ba687b4aadd581bab7c5cdc971ce00f93030f90a8231b4ddff50f46ee4d9a"
+    },
+    "stock-receipt-read-denied-default--desktop-dark": {
+      "sha256": "333b1b1f2d3eafdc9184c06b68ef76456442fa5b3b7068fe4bdc35bf79ddb31d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "eac6aab8426c7119e6796b3100cabd2fc4285a59fb3776061842e4fde6c92df5"
+    },
+    "stock-receipt-read-denied-default--mobile": {
+      "sha256": "c784e1097c754197e3707b3693835f8ff7f2ffbe5a3da623657b122a436c8a4c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "3b9ed44c88a6ac9201c02f5ceaa737d23aa62d50808f290d2ea347e98b5625ed"
+    },
+    "stock-receipt-read-denied-default--tablet": {
+      "sha256": "c1cf64360864630c3794ceded8235fec466fea2d9a69b8f830d5a5ae155907d8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "62617e86b7df400df14968cc4b82f940910e3c59ad6044643eb7d7664d62bb2a"
+    },
+    "stock-receipt-read-error-default--desktop": {
+      "sha256": "3886c61945025bee6d97a67b85a3fcde10c896f67fff6ff60f4113e558fa0e25",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "4e20196ac0adcc89f3480480a8c04ff1d23a5794bb3e152352943230ae9229de"
+    },
+    "stock-receipt-read-error-default--desktop-dark": {
+      "sha256": "5c5af5eb57e4f160d59c4491e3e8d8e60fa2ce3cd1c5076376840e92e8107aea",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "a817f67caeca0f307f68256a2e8b9a3a377ce1424b862a3c69e4eecfd4baeab2"
+    },
+    "stock-receipt-read-error-default--mobile": {
+      "sha256": "9149c6cadc9cb26256d5c085c50bdd5015cd0e7f138143e8042e0f378f39b7f8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "31f067da3b1c018cdf8991838f527413d945a5d8f2cdf2755320f53d47334026"
+    },
+    "stock-receipt-read-error-default--tablet": {
+      "sha256": "d3e6b3ed51526f03323afb1d3feedb64690073905242d3389c30d9f62ae35175",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "c93917217e615400cb0b42816946a5a2080f25c60a245aa59f701a11a01194a3"
+    },
+    "stock-receipt-recovery-default--desktop": {
+      "sha256": "49691ae24c5bce99c0160c21c8e81e9d3106eb1b4da5adb46027db97a15b0311",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "a89657c5bf30e069e69a1131f7b0d1437c3a6097f35939f25b6aae787d8625a1"
+    },
+    "stock-receipt-recovery-default--desktop-dark": {
+      "sha256": "93b8f8b99f5507a688b58cc6882012ef1e9540417378c7a3f761b07838196c89",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "b74d3e4b0cc4336c0cfd2288a5bd8b93b83be0307c6e95bae61cb020f851e513"
+    },
+    "stock-receipt-recovery-default--mobile": {
+      "sha256": "425e3914df90a6d3d7839bb916af7e9b3499ba5da46336801b9ead6adbd9207d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "939684f14214c974ce4c6e745c56ab72748634c18f6433641d03e90d27bb0981"
+    },
+    "stock-receipt-recovery-default--tablet": {
+      "sha256": "cd27fe9078d58d06994134be118ca35689ed8032b106d371f930b8a6ad9b7472",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "d5b101fbf7bb584184c656ee2b3e68749a3ab822bc293af242df75997faad9b2"
+    },
+    "stock-receipt-rejected-default--desktop": {
+      "sha256": "a858c96bb1df89a962d4f30d56b5a1576a0419c978206eab8adbc450f0e32a55",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "bf5b2c66d2dcc4b4408fbe8ea41c685ab0f0abddbf005361b7c51ce90f905301"
+    },
+    "stock-receipt-rejected-default--desktop-dark": {
+      "sha256": "db0b7061ce068e3fb0529f1f6381aab33290650d2a9f6a30af812e4a547c1daa",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "9cf263ae69e82611a06891d69b3bcd63b6c6672c496677173b160c887f742559"
+    },
+    "stock-receipt-rejected-default--mobile": {
+      "sha256": "49e5dd2841d66350c83987ca3d73a3417b371fad53f231f84c72bda350f8bd4c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "ea6c5e235ba80753df19851863e093d33cbf7eace0a50a4c56853e1dffce6b9e"
+    },
+    "stock-receipt-rejected-default--tablet": {
+      "sha256": "5489d4e045e1f46afe81506692d87c7d40ec2d53879b5f08a4a3db99d983c691",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "e6489b89f891188eff0f4877e79adb17363ea28efc486a50486801d20537ae84"
+    },
+    "stock-receipt-restored-default--desktop": {
+      "sha256": "b4ce12b55dd72c1efc411b685c31ac208900e8db37e40c0cd0eadd436984a129",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "763696168e154af5bcf21d0c61c010e27853dc575e56c0b0053e1cb27f5a5472"
+    },
+    "stock-receipt-restored-default--desktop-dark": {
+      "sha256": "116af406799f5485ca40626e79db01920e2ffa0905332d0d2d0e2aaf46f3dbc8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "ee84a1d5da255ff6cdddda6e9213270f7f39f03f05f4b7790422c4c4a98e5933"
+    },
+    "stock-receipt-restored-default--mobile": {
+      "sha256": "c54569dc2dd30f1620d412d6f355fb2cdbe5c9c2604c0ac37190672879c123fe",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "4cc1309143198a8d41e6d39edba031ed07453bbb7f06079f29527b036cff16df"
+    },
+    "stock-receipt-restored-default--tablet": {
+      "sha256": "2e1127ce81800cee2e4d803c0d01f3fd0ea9e19e457d8f6feaac104257110d74",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "it look ok, I approve it. Continue with next steps",
+      "run": "2026-11-17T21-51-26.537Z",
+      "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
+      "profileHash": "d7e6b628a53d264668643a4e7df941771f2d1f3a36605d50d179bc354f776ea2"
     }
   }
 }
