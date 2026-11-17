@@ -6632,7 +6632,7 @@
       "profileHash": "e2e6917c9dabaedd48b7fb001d6be1e78a7e76ce38892d229a48d0d7bbf4ada3"
     },
     "navigation-ca-menu--mobile": {
-      "sha256": "bd436a5a8033b2cbaa5589903c38fc928d606733cc8d25115006c9330f0f144a",
+      "sha256": "833f43b06369ef1168a4fdfe4c16963aa05848cd8d05b73c091fed336fc1cccf",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -6643,9 +6643,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "I approve all revisions.",
-      "run": "2026-11-12T21-36-33.733Z",
-      "sourceHash": "9661e641d4cd83010f26d4aaff364800f242ee3733d5e7e8a8aaa51091b027f2",
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
       "profileHash": "8d226d6a42d779bd121ba056bf05b0f8cecc46ebafcd96374f02e55952bbb641"
     },
     "navigation-ca-menu--tablet": {
@@ -6700,7 +6700,7 @@
       "profileHash": "c01f43829353f993aa92888b5a0b70ff42a5326a420257474e8169d0839afa15"
     },
     "navigation-en-menu--mobile": {
-      "sha256": "562ed4bc57c9bde7832e8825781efc0c8932819af402f688eabb417946768602",
+      "sha256": "0487e39681a1e199528153d4ed356c9b4adb253eac9cc024de64a807f1ca9394",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -6711,9 +6711,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "I approve all revisions.",
-      "run": "2026-11-12T21-36-33.733Z",
-      "sourceHash": "9661e641d4cd83010f26d4aaff364800f242ee3733d5e7e8a8aaa51091b027f2",
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
       "profileHash": "f4f01ebff43f039e544b26e3f53f18ba30fa7495b3dfb13e85a18952d53efc54"
     },
     "navigation-en-menu--tablet": {
@@ -6768,7 +6768,7 @@
       "profileHash": "0f653e377c2f0d09999c04d8a08bd4a355b0508a963a737063933a5b2cc00c41"
     },
     "navigation-eu-menu--mobile": {
-      "sha256": "a3e470d953c55d7ffce1ee3090192d321b2fbd11f95eaf19b61c3f23e68ac170",
+      "sha256": "922d80eae54996c6475aa49ab43ceb995aa3bc3edf27452183866d3e98037fe5",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -6779,9 +6779,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "I approve all revisions.",
-      "run": "2026-11-12T21-36-33.733Z",
-      "sourceHash": "9661e641d4cd83010f26d4aaff364800f242ee3733d5e7e8a8aaa51091b027f2",
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
       "profileHash": "e75d63b3b382407a2759daedc8bc2d51767a8d916189db715ce37e671b423460"
     },
     "navigation-eu-menu--tablet": {
@@ -6836,7 +6836,7 @@
       "profileHash": "5af9f9e3360c111077f06733ff28170471f1790e6dbaa7d739c14ecd8e4d898c"
     },
     "navigation-gl-menu--mobile": {
-      "sha256": "78f7e4cb9de021a6264c3c8ec2dfa8d4d5f625529611c2f040dded737670fd65",
+      "sha256": "a0d97c8ed3db80ebcbbeb5fb86ff41165b97dd8e449a56b0a3e41ab49384e2be",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -6847,9 +6847,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "I approve all revisions.",
-      "run": "2026-11-12T21-36-33.733Z",
-      "sourceHash": "9661e641d4cd83010f26d4aaff364800f242ee3733d5e7e8a8aaa51091b027f2",
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
       "profileHash": "d4306a5fd55dd1bcb245144b1aa79263f595716f0c321cedb5d7e66fc2255530"
     },
     "navigation-gl-menu--tablet": {
@@ -7108,7 +7108,7 @@
       "profileHash": "fe5c5a98e8b6a86b9b5fbd9da317b41720cb407de90d8a3aa1c7ba22a288fed5"
     },
     "navigation-permission-error-retried--mobile": {
-      "sha256": "625d454a54eec6e412e530a029ed9e8c9f14f669cd3beaac088a46b924288dcc",
+      "sha256": "709640af67b588a85ce14c560a95ec99b92b6373a5e3a0af80e2b98712d798b7",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -7119,9 +7119,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "I approve all revisions.",
-      "run": "2026-11-12T21-36-33.733Z",
-      "sourceHash": "9661e641d4cd83010f26d4aaff364800f242ee3733d5e7e8a8aaa51091b027f2",
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
       "profileHash": "a0a36586e439c81446b2ca4a8d557ecdb63298408418667f1ade81a4d53b7a3f"
     },
     "navigation-permission-error-retried--tablet": {
@@ -7584,7 +7584,7 @@
       "profileHash": "b140c76d5a7f1aa3501194b095cb41fe6b7793239146ca983843aafb918f04f4"
     },
     "navigation-sole-location-default--mobile": {
-      "sha256": "af55f5251581f52e71f4aaedd570eec8b4ec0240eaa1f687b021ae5031ec7815",
+      "sha256": "83f0496248d16de3a73bc9578eff18bec0581bc7c960b934de557cd3e3e46ee0",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -7595,9 +7595,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "I approve all revisions.",
-      "run": "2026-11-12T21-36-33.733Z",
-      "sourceHash": "9661e641d4cd83010f26d4aaff364800f242ee3733d5e7e8a8aaa51091b027f2",
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
       "profileHash": "ed55c6d8e186ae7d96ee32e716dcf63bbaa136e99854531f564a53cf52d5171c"
     },
     "navigation-sole-location-default--tablet": {
@@ -7652,7 +7652,7 @@
       "profileHash": "40a8f63f908d7b20dd3bc22d8885128e26c4d393773887dc019a1808738a20a3"
     },
     "navigation-workspace-compact-footer-folded--mobile": {
-      "sha256": "4cd6e070535d64cad831d1345901ebe433fa2154295a0c0867c08f0961c2d5ba",
+      "sha256": "ec974f8bf660e570eca68ed401ac75cd717960b9d6b8319036bb4f0b2da5a836",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -7663,9 +7663,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "I approve all revisions.",
-      "run": "2026-11-12T21-36-33.733Z",
-      "sourceHash": "9661e641d4cd83010f26d4aaff364800f242ee3733d5e7e8a8aaa51091b027f2",
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
       "profileHash": "97d7bb4bcee7ecb87e915730e9f2429017f165d8d700e5d26a584f4cd53b4e50"
     },
     "navigation-workspace-compact-footer-folded--tablet": {
@@ -7720,7 +7720,7 @@
       "profileHash": "b140c76d5a7f1aa3501194b095cb41fe6b7793239146ca983843aafb918f04f4"
     },
     "navigation-workspace-default--mobile": {
-      "sha256": "7c961bbb6e7d0ceb1ff07eaa2d87b273b613831383cfc23f87fc83f243c6d687",
+      "sha256": "709640af67b588a85ce14c560a95ec99b92b6373a5e3a0af80e2b98712d798b7",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -7731,9 +7731,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "I approve all revisions.",
-      "run": "2026-11-12T21-36-33.733Z",
-      "sourceHash": "9661e641d4cd83010f26d4aaff364800f242ee3733d5e7e8a8aaa51091b027f2",
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
       "profileHash": "ed55c6d8e186ae7d96ee32e716dcf63bbaa136e99854531f564a53cf52d5171c"
     },
     "navigation-workspace-default--tablet": {
@@ -7788,7 +7788,7 @@
       "profileHash": "751616d43f3117af2a65a242a76e8452fd634b51aa41e5938f1d2174f383efef"
     },
     "navigation-workspace-footer-folded--mobile": {
-      "sha256": "4cd6e070535d64cad831d1345901ebe433fa2154295a0c0867c08f0961c2d5ba",
+      "sha256": "ec974f8bf660e570eca68ed401ac75cd717960b9d6b8319036bb4f0b2da5a836",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -7799,9 +7799,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "I approve all revisions.",
-      "run": "2026-11-12T21-36-33.733Z",
-      "sourceHash": "9661e641d4cd83010f26d4aaff364800f242ee3733d5e7e8a8aaa51091b027f2",
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
       "profileHash": "0e79f845baa63a5e4e9807cfd45be9cc56cb2c6a51ab50afed512710fb7a0a54"
     },
     "navigation-workspace-footer-folded--tablet": {
@@ -7856,7 +7856,7 @@
       "profileHash": "bd9b2c2ec566f404dbe03c24f81d4aae1f8334d423b26dd9acab968581a15593"
     },
     "navigation-workspace-location-selected--mobile": {
-      "sha256": "35ab27a999aaef0f32dd58444242639fdb963d233eb5c368a8d06aa94ab75154",
+      "sha256": "b2966c3bf1c936b65455dc6130bf135cd7b14fd708126b8849aa6af71f453401",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -7867,9 +7867,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "I approve all revisions.",
-      "run": "2026-11-12T21-36-33.733Z",
-      "sourceHash": "9661e641d4cd83010f26d4aaff364800f242ee3733d5e7e8a8aaa51091b027f2",
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
       "profileHash": "d8cff160ac3442749f43a10d97c89be04f48124fe1927e7445a0183e9ec75162"
     },
     "navigation-workspace-location-selected--tablet": {
@@ -7924,7 +7924,7 @@
       "profileHash": "b1f2af036c266741ba1f8c786affde53ba5768f23fa7713a7c7a38efb96d077e"
     },
     "navigation-workspace-page-memory--mobile": {
-      "sha256": "ec15a201ae18dee8ef32e5395e08675eb5c2b7a106e54fd51461376ef4f578c5",
+      "sha256": "8a52545c05c77eb07351d3fdfa62c7952926ba8348a2e76f5ef35a6cbbc9621b",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -7935,9 +7935,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "I approve all revisions.",
-      "run": "2026-11-12T21-36-33.733Z",
-      "sourceHash": "9661e641d4cd83010f26d4aaff364800f242ee3733d5e7e8a8aaa51091b027f2",
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
       "profileHash": "b3b5fd3212c894c7ff72d109d50b896980193289f9d4770d3494cf49e8ca9ea0"
     },
     "navigation-workspace-page-memory--tablet": {
@@ -7992,7 +7992,7 @@
       "profileHash": "a584d9b1f64799cb30cd2a642208da61ebba0f61097f3a14006400ea707ee49c"
     },
     "navigation-workspace-sidebar-toggled--mobile": {
-      "sha256": "f1414472da3722c8fcb56f73887b1d53cd48cc49ae72a74650f48e4e37273bac",
+      "sha256": "627045de8758e67714762086f10ee5fa2448886307c9270b72630d48e0dab84d",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -8003,9 +8003,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "I approve all revisions.",
-      "run": "2026-11-12T21-36-33.733Z",
-      "sourceHash": "9661e641d4cd83010f26d4aaff364800f242ee3733d5e7e8a8aaa51091b027f2",
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
       "profileHash": "0a7e5b7a43b957e1b63c396a3205c1687a34e6fb9819e547193653c670878bdc"
     },
     "navigation-workspace-sidebar-toggled--tablet": {
@@ -15776,6 +15776,142 @@
       "run": "2026-11-16T20-34-28.774Z",
       "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
       "profileHash": "550879f3c918ac54b0a2f5193e0bf28f9635f40b1105470a30512a4e895d5a4e"
+    },
+    "navigation-workspace-location-option-hovered--desktop": {
+      "sha256": "76aff3006fb0d48ee628905c20b37e9b95cd0326135462f9bc02ab0f2c34ce0f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
+      "profileHash": "4beefa74c1d142ed5f1330ad1d464b33e6ccebd08a1985c3ba05634cffe8585d"
+    },
+    "navigation-workspace-location-option-hovered--desktop-dark": {
+      "sha256": "6ab4fb028987ff2ef3653ae2b864604bf1c3e77b38f3a6e29626ea4636c59867",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
+      "profileHash": "5f7d19959e2094159a38f51c130da3a18c982c7c529c28cfc89118c640b00e7a"
+    },
+    "navigation-workspace-location-option-hovered--mobile": {
+      "sha256": "b311741c9eb07c44be92e599bdec0f07a283808409419a1e280e426fb7b20ab9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
+      "profileHash": "f04cfd54842c68e37f60cc09a5ba69871543217c6b09b6edd12917471b0375d0"
+    },
+    "navigation-workspace-location-option-hovered--tablet": {
+      "sha256": "2a5f6451be5ef9d972908428ad0e50e50bd40133c5f21191cd2dbd56e0d70bb8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
+      "profileHash": "bd2fd2a801b45d820b721d76decaf186e9f71458041f226b9a5a8ed236989dd9"
+    },
+    "navigation-workspace-location-options--desktop": {
+      "sha256": "29db5153929d051c2a753aeb7d2f064fcb839c673ea033532899b345f240c9f3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
+      "profileHash": "25a256b017704d1adbfe27e4fde315dd4b5e56ff8034762735764a1f0b93ce44"
+    },
+    "navigation-workspace-location-options--desktop-dark": {
+      "sha256": "f46bc3a9d4a5b9a738879967f475f92010a65a9d0a11f495ebff87127a7786cd",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
+      "profileHash": "f298cc00e6881dab8b89939c90bbce9e10ef9a1adc7c2eeed2f8bee6e35413db"
+    },
+    "navigation-workspace-location-options--mobile": {
+      "sha256": "438b765503778586201432671220958ab1061ff32e5a3f57899169ab9b59f7eb",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
+      "profileHash": "1fff7907090c1e9fb5e47f7ef820fca94e3c1e53d48bd181335ef363bea100f3"
+    },
+    "navigation-workspace-location-options--tablet": {
+      "sha256": "b4b3e2e21bf6870bf894c135cb2c01f74c067f3150d4fae70f22adb5ad62d794",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-17: User said \"I approve them\" in direct response to the exact 20-image navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e. All 12 phone replacements and eight new dropdown states accepted.",
+      "run": "2026-11-16T21-25-06.512Z",
+      "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
+      "profileHash": "5ee60e51381ae3093b4e4d496d9c638d88b95e19914c5a65e9fe99b6e70ba3c7"
     }
   }
 }
