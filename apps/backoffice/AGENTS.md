@@ -20,13 +20,36 @@ the exact approval and identities. Require new image approval for replacements.
 The
 [visual review workflow](../../openspec/changes/define-visual-review-workflow/proposal.md)
 is implemented; preserve its review rules and the technical sources as constraints.
-Latest assignment — 2026-11-16: the user said **“go ahead”** to preparing two
-feedback checkpoint commit batches. Read the [feedback commit-preparation record](../../openspec/changes/define-products-table/feedback-preview-plan.md#commit-preparation--2026-11-16).
-Stage the exact 21 implementation/specification/test/documentation files first,
-leaving all 165 approved-reference files outside the index. Give the user the
-commit command. After the user commits that exact batch, verify it and stage the
-reference batch. This new authority applies only to these two sequential batches;
-earlier image approval alone did not authorize staging. Never create a commit.
+Latest assignment — 2026-11-17: the user said **“go ahead”** to two sequential
+commit batches. Follow the [commit-preparation record](../../openspec/changes/define-backoffice-navigation/visual-review-plan.md#commit-preparation--2026-11-17).
+Stage exactly nine documentation/configuration files first and give the user the
+commit command. Leave all 21 approved-reference files outside the index. After
+the user commits that exact first batch, verify it and stage the reference batch.
+This new authority applies only to these batches; image approval alone did not
+authorize staging. No further design follows. Never create a commit.
+
+Latest approval — 2026-11-17: the user said **“I approve them”** for the exact
+20-image navigation gallery `2026-11-16T21-25-06.512Z`, source `8ac7d6d2…`.
+Read the [approval and verification record](../../openspec/changes/define-backoffice-navigation/visual-review-plan.md#visual-approval-and-reference-promotion--2026-11-17).
+All 12 phone replacements and eight new dropdown images are promoted, preserving
+916 unrelated images/registry entries, for **936 accepted references**.
+All 20 changed-case comparisons pass; matching-source preserved evidence covers
+the other 916 cases. The exact union verifies all 936 current IDs. No renderer
+fix is claimed for the previously recorded intermittent icon variance.
+No new staging, commit, UI design or further Products work follows. Never commit.
+
+Previous preparation — 2026-11-16: the user said **“go ahead”** to closing the
+outstanding navigation visual review. Follow the [bounded review plan](../../openspec/changes/define-backoffice-navigation/visual-review-plan.md):
+prepare the exact 12 phone replacements and eight new dropdown states at the
+current source, compare the nine unchanged phone cases, and present the fresh
+20-image gallery for specific approval. Preserve all 928 accepted references and
+selected NAV-019–021 behavior. No new UI design, reference promotion, staging,
+commit or further Products work follows from this review-preparation authority.
+
+The [feedback checkpoint is complete](../../openspec/changes/define-products-table/feedback-preview-plan.md#completed-checkpoint--2026-11-16):
+user commits `0b0d9d6` and `21ea7c7` match the exact 21/165-file manifests.
+Both were verified with a clean tree/index before this new documentation pass.
+Tasks 11.10–11.11 are complete and their staging authority is spent. Never commit.
 
 Previous design assignment — 2026-11-16: the user said **“go ahead”** to revisiting the
 deferred message-box design. Read the [feedback design discovery](../../openspec/changes/define-products-table/feedback-design.md)

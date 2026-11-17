@@ -67,13 +67,32 @@ context: |
   UI language from browser headers. The landing uses Spanish at / and localized
   /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
   one year (365 days), with no account-level or cross-device preference implied.
-  Latest assignment 2026-11-16: user said "go ahead" to preparing two feedback
-  checkpoint commit batches. Read feedback-preview-plan.md's commit-preparation
-  record. Stage only the exact 21 implementation/specification/test/documentation
-  files first; leave the 165 approved-reference files outside the index. Give the
-  user the commit command. After the user commits that exact batch, verify it and
-  stage the reference batch. This new authority applies only to these two
-  sequential batches; image approval alone did not authorize staging. Never commit.
+  Latest assignment 2026-11-17: user said "go ahead" to two sequential commit
+  batches. Follow the navigation visual-review-plan.md commit-preparation record.
+  Stage exactly nine documentation/configuration files first; give the user its
+  commit command. Keep all 21 approved-reference files outside the index. After
+  the user commits the exact first batch, verify it and stage the reference batch.
+  This new authority applies only to these batches; approval alone did not
+  authorize staging. No further design follows. Never create a commit.
+  Latest approval 2026-11-17: user said "I approve them" for the exact 20-image
+  navigation gallery 2026-11-16T21-25-06.512Z at source 8ac7d6d2. Read the
+  navigation visual-review-plan.md approval record. All 12 phone replacements
+  and eight new dropdown images are promoted, preserving 916 unrelated images
+  and ledger records, for 936 accepted references. All 20 changed comparisons
+  pass; preserved matching-source evidence covers the other 916. The exact union
+  verifies all 936 current IDs. Previously recorded icon variance is not claimed
+  fixed. No new staging, commit, UI design or further Products work follows.
+  Previous preparation 2026-11-16: user said "go ahead" to closing the outstanding
+  navigation visual review. Follow define-backoffice-navigation/visual-review-plan.md:
+  prepare exactly 12 phone replacements and eight new dropdown states at the
+  current source, compare the nine unchanged phone cases and present the fresh
+  20-image gallery for specific approval. Preserve all 928 accepted references
+  and selected NAV-019–021 behavior. No new UI design, reference promotion,
+  staging, commit or further Products work follows from preparation authority.
+  The feedback checkpoint is complete: user commits 0b0d9d6 and 21ea7c7 match
+  the exact 21/165-file manifests. Tree/index were verified clean before this
+  new documentation pass. Tasks 11.10–11.11 are complete; staging authority is
+  spent. Read feedback-preview-plan.md's completed-checkpoint record. Never commit.
   Previous design assignment 2026-11-16: user said "go ahead" to revisiting the deferred
   message-box design. Read define-products-table/feedback-design.md and task 9.12.
   Inventory existing save-result/recovery surfaces and preserve their selected

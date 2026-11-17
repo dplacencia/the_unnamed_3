@@ -74,9 +74,8 @@ The user accepted the exact **164-image** revision with **“that looks ok”** 
 2026-11-16. All 148 existing/16 new entries are promoted, preserving the other
 764 references, for **928 accepted references**. The
 [feedback approval record](../openspec/changes/define-products-table/feedback-preview-plan.md#visual-approval-and-reference-promotion--2026-11-16)
-preserves the exact gallery/source/approval and verification proof. The separate
-navigation exclusions remain unchanged. The current full eligible selection is
-907 cases:
+preserves the exact gallery/source/approval and verification proof. That checkpoint
+used this 907-case selection while navigation remained separately pending:
 
 ```sh
 pnpm visual:compare --grep-invert '(^mobile .*navigation-)|navigation-workspace-location-options|navigation-workspace-location-option-hovered'
@@ -89,6 +88,8 @@ their matching-source passing proof and unchanged references. This verifies all
 907 eligible IDs across those partitions. The plan preserves the earlier
 seven-pixel icon variance and failed initial run; no renderer fix or tolerance
 change is claimed. Future revisions still require specific approval.
+The later navigation approval below closes those exclusions and raises the current
+accepted baseline to 936, covering every inventory case.
 
 ## Products filters and applied view
 
@@ -254,9 +255,9 @@ Their promotion preserved 472 earlier entries for a **628-entry baseline at that
 time**. The [original approval record](../openspec/changes/define-products-table/editing-plan.md#visual-approval--2026-11-14)
 retains its source and scope. The later 232-image approval replaced 28 of those
 Products images and added 204 recovery references for a then-832-entry baseline.
-The filters approval brought the baseline to 912; current feedback approval
-raises it to 928. The separately pending
-20 navigation images remain unapproved.
+The filters approval brought the baseline to 912 and feedback approval to 928.
+The navigation approval below adds eight cases and replaces 12, bringing the
+current accepted baseline to 936. All current inventory cases are approved.
 
 To capture future changes to all 456 current Products cases (excluding the older
 navigation Products-frame story), run:
@@ -269,21 +270,22 @@ pnpm visual:capture --grep '(^| )products-'
 `pnpm visual:test-languages` also runs the Products interaction, language,
 accessibility and responsive checks. `visual/products-table.config.ts` provides
 the focused suite with its own port/report. Future candidates require the same
-explicit run/case approval as other designs. Do not promote future changes or the
-prior pending navigation revisions automatically. The current editing run is recorded in the
+explicit run/case approval as other designs. Do not promote future changes
+automatically. The current editing run is recorded in the
 [editing plan](../openspec/changes/define-products-table/editing-plan.md#review-refinement--dismissible-results-2026-11-14).
 
-The completed filters checkpoint used this command for 891 cases. It now selects
-907 current eligible accepted cases with the retained navigation exclusions:
+The completed filters checkpoint used this command for 891 cases. The feedback
+checkpoint used it for 907 cases with the then-pending navigation exclusions:
 
 ```sh
 pnpm visual:compare --grep-invert '(^mobile .*navigation-)|navigation-workspace-location-options|navigation-workspace-location-option-hovered'
 ```
 
-This includes all 456 Products cases and 451 other accepted cases. It excludes
-eight navigation cases without references and the
-21 mobile navigation cases, of which 12 are pending replacements and nine are
-unchanged. It does not approve or replace their separate review. The preceding
+This includes all 456 Products cases and 451 other accepted cases. It excluded
+eight then-unapproved navigation cases and all 21 mobile navigation cases,
+including 12 pending replacements and nine unchanged cases. The navigation
+approval below closes that review; current full comparisons need no exclusion.
+The preceding
 811-case post-approval comparison passed under task 9.18 in run
 `2026-11-15T00-12-39.768Z`.
 
@@ -295,9 +297,30 @@ source-bound checkpoints are not the new 811-case result.
 ## Navigation prototype
 
 The counts and baseline references below record historical navigation checkpoints.
-The current accepted baseline is 928; the separate 12 replacement/eight new
-navigation images still require specific approval and were outside both the
-232-image Products/recovery and 440-image filters galleries.
+The current accepted baseline is **936**, covering the full current inventory.
+The previously separate 12 replacement/eight new navigation images were approved
+on 2026-11-17 and promoted; they were outside the older Products galleries.
+
+The user authorized refreshing that exact review on 2026-11-16. Review the
+[fresh 20-image gallery](http://localhost:9324/runs/2026-11-16T21-25-06.512Z/review.html):
+12 phone replacements plus eight open/hovered dropdown states across four profiles.
+All 20 captures pass at current source `8ac7d6d2…`; all nine unchanged phone
+comparisons pass in `2026-11-16T21-25-34.167Z`. Their union with 907 existing
+matching-source passing IDs verifies exactly 916 unaffected cases. All 20
+candidate images were visually inspected, with no material layout finding.
+The [review plan](../openspec/changes/define-backoffice-navigation/visual-review-plan.md)
+records exact IDs, hashes, partitioned evidence and existing rendering limits.
+The user then said **“I approve them”** for that exact 20-image gallery. All
+12 replacements/eight additions are promoted, preserving the other 916 images
+and registry records byte-for-byte. All 20 post-approval comparisons pass in
+`2026-11-17T07-47-03.167Z`; their union with matching-source preserved evidence
+verifies all 936 current case IDs. Read the [approval record](../openspec/changes/define-backoffice-navigation/visual-review-plan.md#visual-approval-and-reference-promotion--2026-11-17)
+for exact approval/source/hash evidence and the retained icon-rendering limitation.
+No staging or commit follows from image approval. Current full comparisons use:
+
+```sh
+pnpm visual:compare
+```
 
 Open http://localhost:6006/?path=/story/navigation-merchant-workspace--workspace.
 The seven examples under Navigation/Merchant workspace cover the selected
@@ -393,11 +416,13 @@ this review. To compare existing unaffected cases while those images are pending
 pnpm visual:compare --grep-invert '(^mobile .*navigation-)|(navigation-workspace-location-options)|(navigation-workspace-location-option-hovered)'
 ```
 
-Current capture `2026-11-12T22-46-21.298Z` passes all 92 navigation cases:
+Historical capture `2026-11-12T22-46-21.298Z` passed all 92 navigation cases:
 72 byte-identical images, 12 phone replacements and eight new dropdown images.
 Review the 20 new/replacement images at
-http://localhost:9324/location-refinement-review.html. This supersedes the earlier
-mobile-only review; the accepted 472 references remain unchanged until approval.
+http://localhost:9324/location-refinement-review.html. It superseded the earlier
+mobile-only review at that checkpoint, when 472 references remained unchanged.
+The fresh 20-image gallery above superseded that approval target and was
+specifically accepted on 2026-11-17, bringing the current baseline to 936.
 
 `pnpm visual:test-languages` also runs the navigation interaction suite, covering
 five-language labels, independent choices, access-state distinctions, tab

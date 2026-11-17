@@ -105,7 +105,7 @@ navigation model or permission to implement it.
       correction and verify quality/build/browser checks and revised captures.
 - [x] 8.3 Present the new candidates for specific replacement-image approval;
       preserve all 472 accepted references, with no automatic staging or commits.
-- [ ] 8.4 Obtain specific approval for the 12 revised phone images before
+- [x] 8.4 Obtain specific approval for the 12 revised phone images before
       promoting replacements from the exact current run. Do not accept automatically.
 
 ## Slim selector and full-row dropdown corrections
@@ -116,5 +116,41 @@ navigation model or permission to implement it.
       preview-only fixes and verify pointer/keyboard behavior plus fresh captures.
 - [x] 9.3 Present the current replacements/new states for specific approval;
       preserve all accepted references and keep the index empty.
-- [ ] 9.4 Obtain specific approval for the 12 phone replacements and eight new
+- [x] 9.4 Obtain specific approval for the 12 phone replacements and eight new
       dropdown states from the current combined run before promoting references.
+
+## Close the outstanding visual review — 2026-11-16
+
+- [x] 10.1 Record the user's “go ahead”, verified feedback checkpoint and exact
+      20-case scope in the [bounded review plan](visual-review-plan.md). Preserve
+      NAV-019–021 behavior, 928 accepted references and the empty index.
+- [x] 10.2 Capture the current-source 20 images, compare the nine unchanged
+      phone cases, verify the reusable matching-source 907-case evidence and
+      inspect the resulting header/dropdown images. Record exact identities.
+- [x] 10.3 Present the fresh exact gallery for specific approval. Do not promote,
+      stage, commit or begin further Products work merely because captures pass.
+      Capture `2026-11-16T21-25-06.512Z` and nine-case comparison
+      `2026-11-16T21-25-34.167Z` pass; the exact 916-case unaffected union is
+      verified at source `8ac7d6d2…`. All 20 images were visually inspected.
+      Specific approval was subsequently recorded below, completing tasks 8.4/9.4.
+
+- [x] 10.4 Record the user's 2026-11-17 “I approve them” for all 20 images in
+      `2026-11-16T21-25-06.512Z`; promote exactly 12 replacements/eight new
+      cases and independently verify all 916 unrelated records/images unchanged.
+- [x] 10.5 Compare all 20 newly accepted cases and verify their union with the
+      916 matching-source preserved cases covers all 936 current IDs. Record
+      exact approval, run/source/hashes and retained rendering limitations in the
+      [approval record](visual-review-plan.md#visual-approval-and-reference-promotion--2026-11-17).
+      All 20 comparisons pass in `2026-11-17T07-47-03.167Z`. Nothing is staged.
+
+## Navigation checkpoint commit preparation
+
+- [x] 11.1 Record the user's “go ahead” to exact nine/21-file sequential staging
+      batches in the [preparation record](visual-review-plan.md#commit-preparation--2026-11-17).
+- [x] 11.2 Verify and stage only the nine documentation/configuration files and
+      give the user the commit command; keep all 21 reference files unstaged.
+- [ ] 11.3 After the user commits the first batch, verify its exact prepared
+      paths/blobs, then stage only the 21 approved-reference files and give the
+      second commit command.
+- [ ] 11.4 Verify both user commits and the remaining checkpoint status. Never
+      create a commit; no further design or deployment follows automatically.

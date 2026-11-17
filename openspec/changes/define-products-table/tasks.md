@@ -341,7 +341,9 @@ Checked steps record work performed, not acceptance of proposed table choices.
       in the [preparation record](feedback-preview-plan.md#commit-preparation--2026-11-16).
 - [x] 11.9 Verify and stage only the 21 implementation/specification/test/docs
       files and give the user the commit command; keep all references unstaged.
-- [ ] 11.10 After the user's first commit, verify it against the prepared manifest,
+- [x] 11.10 After the user's first commit, verify it against the prepared manifest,
       then stage only the 165 approved-reference files and give its commit command.
-- [ ] 11.11 Verify both user commits and the remaining checkpoint status. Never
+- [x] 11.11 Verify both user commits and the remaining checkpoint status. Never
       create a commit; preserve the separate pending navigation review.
+      Commits `0b0d9d6` and `21ea7c7` match the exact 21/165-file manifests;
+      tree/index were clean before the navigation review documentation pass.

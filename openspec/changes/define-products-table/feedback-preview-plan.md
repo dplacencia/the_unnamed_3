@@ -363,3 +363,19 @@ The ignored exact file/hash manifests are
 production source, dependency, navigation source, cache/generated artifact, push,
 deployment or additional design is included. Batch 2 waits for the user's first
 commit. No agent commit is authorized.
+
+## Completed checkpoint — 2026-11-16
+
+The user created both commits: `0b0d9d63507ec1d3ab78db48f654189f689443ba`
+(`feat: refine product save and recovery feedback`) and
+`21ea7c7d3ee3fb2ac3b6452b24cd8f312ae83ae4`
+(`test: accept product feedback visual references`). Root and an independent
+read-only audit verified their exact 21/165-file path and blob manifests,
+parent relationship and clean final tree/index. Tasks 11.10–11.11 are complete.
+
+Source/build remain `8ac7d6d2…`, all 928 accepted images match their ledger,
+and the reference aggregate remains `9802bb76…`. Ignored proof is in
+`.cache/products-feedback-checkpoint-complete.json`. Both staging authorities
+are spent; no agent committed. The subsequent user-authorized
+[navigation review preparation](../define-backoffice-navigation/visual-review-plan.md)
+preserves this baseline and requests separate approval of its own images.

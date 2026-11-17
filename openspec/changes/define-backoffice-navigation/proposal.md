@@ -163,3 +163,24 @@ This refinement passes 54 code tests, 53 browser checks and 92 fresh navigation
 captures. Run `2026-11-12T22-46-21.298Z` contains 12 phone replacements and eight
 new dropdown states requiring approval, with 72 byte-identical navigation images.
 The design links the current review; all accepted references remain unchanged.
+
+## Outstanding review continuation — 2026-11-16
+
+After the feedback checkpoint was committed by the user and verified clean,
+the user said **“go ahead”** to closing the separate navigation review. The
+[bounded review plan](visual-review-plan.md) selects exactly 12 phone replacements
+and eight new dropdown states from the existing NAV-019–021 implementation.
+Refresh those images at the current verified source and separately compare the
+nine unchanged phone cases. Preserve all 928 current accepted references.
+The older 92-image run above remains scope provenance; the fresh exact gallery
+requires specific approval before promotion. No UI change, staging or commit
+is authorized by this preparation step.
+
+The user then said **“I approve them”** on 2026-11-17 for the exact fresh
+20-image run `2026-11-16T21-25-06.512Z`. All 12 replacements/eight new states are
+promoted, preserving the other 916 images and registry records. The baseline is
+now 936. All 20 post-approval comparisons pass in `2026-11-17T07-47-03.167Z`;
+their union with the preserved matching-source evidence verifies all 936 current
+IDs at source `8ac7d6d2…`. The [approval record](visual-review-plan.md#visual-approval-and-reference-promotion--2026-11-17)
+retains exact evidence and rendering limits. The navigation review is complete;
+staging, commits and further design remain separate.
