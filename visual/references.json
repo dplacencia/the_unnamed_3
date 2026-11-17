@@ -15912,6 +15912,2522 @@
       "run": "2026-11-16T21-25-06.512Z",
       "sourceHash": "8ac7d6d269bffa275599b021feed1ec1057e36fe22e054058cc112194803265e",
       "profileHash": "5ee60e51381ae3093b4e4d496d9c638d88b95e19914c5a65e9fe99b6e70ba3c7"
+    },
+    "products-browsing-ca-catalogue-default--desktop": {
+      "sha256": "f4f415452a8fb8716cafb45a09cab7dfe50f166d20abce3568200f34c3c83926",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "a1bb142c67693066f816c8c7f96f48d5954265e7f92c983926778272611bc4b2"
+    },
+    "products-browsing-ca-catalogue-default--desktop-dark": {
+      "sha256": "9cf9d83ec645a961f764553738c84a2b88be567f7b61910dde57e614bb03ebd5",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "701cbf3cacbaf681318bf351d9c1b917a63b6232250fdb0e46ae000f469c29ee"
+    },
+    "products-browsing-ca-catalogue-default--mobile": {
+      "sha256": "4c0004de59371f83e3d62b0183039d0698d88c804c930f3ac49323ccd4812a50",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "f5111914aa4690a46c99ece9216cb6407879d95258fdf4534ddf57898b050493"
+    },
+    "products-browsing-ca-catalogue-default--tablet": {
+      "sha256": "fbeeb3d4d7209777bccbe2f082c48db99117cdf238a0bb71bd26e4e28cf2c92c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "0433c14f8ab6fa28cfcecf503831e8512634e51afbe5167ba64fc96df1b8f4e4"
+    },
+    "products-browsing-ca-offpage-review-default--desktop": {
+      "sha256": "e62bda55b6614273a50d07c5bf5a1c90a4eac26d8fb69c8a4417794f6613dd4a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "ce5738533dfbc166e6fdbf8e51e9b238aa8c7473708a495564811016c195f837"
+    },
+    "products-browsing-ca-offpage-review-default--desktop-dark": {
+      "sha256": "32e1c3e4eb9f22ba6c5e349288999e7e6bf1f5349296a1289090af0f982bdd43",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "3db1e2c608ec632e2e88b077b13a24d298f2c3c744b647c8a3920311c4b7f1b8"
+    },
+    "products-browsing-ca-offpage-review-default--mobile": {
+      "sha256": "3a517450b36252f7baec43ca619e4234f271abda14e9a131c49edc0adcf1b9ed",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "43e70341214ee196ece6536b8145de76b134bd3e7d29d9fef72c7d3626e98c7f"
+    },
+    "products-browsing-ca-offpage-review-default--tablet": {
+      "sha256": "7f8d55a6013ab01a46a860f5fee5ae2fe4cc53c3964afccd3ad3bdacfa400f0e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "6062d86929c779d5fef37f81a2035b987f9c6af0bfbba09dbb0f92cfd78461ca"
+    },
+    "products-browsing-ca-stock-context-positive--desktop": {
+      "sha256": "10738f2bb209ae527bd0b02852214950f7036c254cfe8b9009c37c7e26a21a17",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "3c98c15bf7b4b1a2f243d24fef8a2e2197659fa9d932cb15edbfcd3ef63078e8"
+    },
+    "products-browsing-ca-stock-context-positive--desktop-dark": {
+      "sha256": "3838d78abdaadbae492861e4878e5588f19aa2af5e8948e06af5f038673bab7c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "0d601840c1194b447e43aa51f9718c55beb2796582c9580d0cedb0c219e76245"
+    },
+    "products-browsing-ca-stock-context-positive--mobile": {
+      "sha256": "1827c45ec7ac677f6d9465a0ee004fdd2544cddcdf205d61586684039317b5e8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "5cae0ff592f38ba6ff274dac0a64b0d9ed579a1ec8166cceb4a2027feb28c2de"
+    },
+    "products-browsing-ca-stock-context-positive--tablet": {
+      "sha256": "78121a1469431651330fc59994f779ab3b4be041d99083b86eb3ea749a843d44",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "d0597ce3cda315c044f8b7e657ea4893a2f8b6b19ef59ebe18aea63abb82de77"
+    },
+    "products-browsing-catalogue-default--desktop": {
+      "sha256": "aacad1bfa1fe1859ef54884bc7691a0a6b8ba31f4ab8e672835fcb1a848c68b9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b131ce71967a9076600172389492e98bee7d33fd9f4f360300023899c341c12d"
+    },
+    "products-browsing-catalogue-default--desktop-dark": {
+      "sha256": "3119f5f2cdc58dcab1d2272e509aff8f5991f134887bfeb9c2e15982e3196b2c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "6d4dbfb527072a4276b9e500a93222c264cfe52bd2ef0e9e8b1827ba0edbba8e"
+    },
+    "products-browsing-catalogue-default--mobile": {
+      "sha256": "89934e2c241d35f02e009328a087ed57625baa7c720a3c18085091a5e70ed18b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b5e2c1b0c837ec36a8c40af99b7242d597ae82930bb2221ddf1282e706613da9"
+    },
+    "products-browsing-catalogue-default--tablet": {
+      "sha256": "b9baadb2c7e49a6753693b6af233b0de853e7db139d786e3558c7284ccd446a0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b58da76958b8001960533f8cf4c5639b85af0beff3f6ce002dc21404ac36ab62"
+    },
+    "products-browsing-catalogue-hidden-sort--desktop": {
+      "sha256": "9aa20726ff7e8fa3830ff6e265cdfb0c201b8670a96e24d8ad4c816d076cee9c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "eb121a24fb34fbdde951e376710f5b34c2a9960f4fc602df0da01b39a5a5d4ea"
+    },
+    "products-browsing-catalogue-hidden-sort--desktop-dark": {
+      "sha256": "f525617670708f5a22ac3bacc8c6c9989fe928e0f9cd70161979b0220bbb0b5d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "4a67754627af7e3e315b2e1d039a7cf5a68d161d30d955d90617cf79b41fbfef"
+    },
+    "products-browsing-catalogue-hidden-sort--mobile": {
+      "sha256": "7669db234f51cc12a6cf367b39c0ccc9341fc93af0503005aa538b9113fce655",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "dd4e85c5504832491d9895213931ef935f50b138570981b62d83ceec8f0b4f11"
+    },
+    "products-browsing-catalogue-hidden-sort--tablet": {
+      "sha256": "d19e4e81186d9e1b3969a8af0c4f10de1bafe736cb83395cd66a76e3431bf2c0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "fe950a5120f378127af0beec0835a94b61e756a4dca996e9efab11d4c18fee52"
+    },
+    "products-browsing-catalogue-invalid-offpage--desktop": {
+      "sha256": "7567277e1f65419edecb9747ac81de310748a20cbb3346fd5125509115acaa3d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "269c64972abee7879f084d8b13eb278457e67625bde874e327f817f5d840744a"
+    },
+    "products-browsing-catalogue-invalid-offpage--desktop-dark": {
+      "sha256": "199ffd9fc40e297e784101cf0d1b764e2c246cf75894b50f80c617703086ab48",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "758751ebeca22ecd7c978156585619e6505e8009a22247cc89e0914c31c71a36"
+    },
+    "products-browsing-catalogue-invalid-offpage--mobile": {
+      "sha256": "23f9d119b71e0802421a3450e253691a7159f0407c05b6e4d9e16b6cc5cce297",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "fb0842d762ae8dfb6f55bb409b744a2cf834f2f2d30ee84c002cbd31e0af1935"
+    },
+    "products-browsing-catalogue-invalid-offpage--tablet": {
+      "sha256": "edf34cc81f26a480a60626bb6485bee2c2167a89a07a67e6caea9cb8f628801f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b6772c13b8c139c78b5effc0a279c875b47550c7e3bc955807ef409e4af01c48"
+    },
+    "products-browsing-catalogue-next--desktop": {
+      "sha256": "d6bfee3967a6102fb8fcac09812334c20432251e4cc97c93834c377b1f5ec2e4",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "1bd95e354c03be46b9a9d93c6fdfa6ca5367ebefe303e6bac160299c0f8f86c3"
+    },
+    "products-browsing-catalogue-next--desktop-dark": {
+      "sha256": "25f6df9de7a20229503c8be37fc83a841e6aef1367b24aa8445afc88ed78de53",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "9e662e3faa4de4404542d875a5be5055fb1a30b633ce0372fc30d64124d26eba"
+    },
+    "products-browsing-catalogue-next--mobile": {
+      "sha256": "5d59f54492eba5143b6383dd1e1fc4018d27b086d81aac24e46e48320e47ec29",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "83e5da4219954b37697d655e70685139f770a097e929623ec07c4dec2d65eacd"
+    },
+    "products-browsing-catalogue-next--tablet": {
+      "sha256": "491668478217069691d7e66f3b57cdba1ca0bee3fb1b10095748d5fc15ac942c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "389142878b7d2663a4032b9d7765483d920ba9be196d77bd4cf8b7e8e029bc01"
+    },
+    "products-browsing-catalogue-offpage--desktop": {
+      "sha256": "d6adec840bf1f94910f0c010d0630896bc2809f355c6a213d1d96d7e1f14a825",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "332c79cd2b0358ffaba75c4a6bc2d794a58bb474224fb9ae02f38ef972fb4463"
+    },
+    "products-browsing-catalogue-offpage--desktop-dark": {
+      "sha256": "bceaf169ec99c99395f86112ecb9dbc2e2d57b14787783d9a52ce8d820ae55dc",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "26345259b6bd71358c43c21efe203093596d5be82888eeaed8123601ed6f580d"
+    },
+    "products-browsing-catalogue-offpage--mobile": {
+      "sha256": "b78aac3e63e1e50ab2f129d4cf31ebe39beae8b80a52669e6c967f91c1cc3c00",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b320e8440463ad13b0d2b664c9c53d2f4c45205ea3984c9def7299ae6e4493fe"
+    },
+    "products-browsing-catalogue-offpage--tablet": {
+      "sha256": "6c508a562923254dcc769ae2ca00254feaa20f018f5c395bc7806b650c5e7619",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "1b0a8d70c7ff2400117ca913c1fc62b36afd18b354c141df704ea2ae5f3d31d4"
+    },
+    "products-browsing-catalogue-offpage-review--desktop": {
+      "sha256": "274da2792ca729372293b07c2984a565b02f0dcf454f331f79e29c8b41091b10",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "04d25a195ba91cbccadb7ad12889aaa93b87f944388fc125631f8ff9dee32103"
+    },
+    "products-browsing-catalogue-offpage-review--desktop-dark": {
+      "sha256": "c4467c72c36d1c6a0a420b4657155abfaef8d49c5ceac9d961870e82c723429e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "5f44e1cd39aba4abd5a1fac4c66a2e488a9b8e5f648bc6810a25b2229d7df37f"
+    },
+    "products-browsing-catalogue-offpage-review--mobile": {
+      "sha256": "ba4874f716e64192f5385f5d2656226edcab42b4feee2208ffb4a19a8d5164c0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "986ee26a031bad8af09cb7b1830fe760d095dda32eabe8645b6be74ac48cb2b6"
+    },
+    "products-browsing-catalogue-offpage-review--tablet": {
+      "sha256": "587622271f77d522109e17a92be6e71e9769d4153278247b5249b8191f74c457",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "c291a1ce69e1a71465bdd92ed073c5dd94b0830fca10e459d5cb2de02180ff16"
+    },
+    "products-browsing-catalogue-size25--desktop": {
+      "sha256": "dfbd40ae36470bf94806c69885af03768e914cf0ca41b1446cd60c29a9f2ae7b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "74fb90c292286aa382ab161530a8c6b6b950447615549212055bf12dec3179c3"
+    },
+    "products-browsing-catalogue-size25--desktop-dark": {
+      "sha256": "81c36b710422fd0320b64f1123b0a820963f7856521645b9f20b0c7afad9f613",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "8a26908de8d3fd8c4e3a15b061dc04b1412e24960b5602a7ae385ff517135e7c"
+    },
+    "products-browsing-catalogue-size25--mobile": {
+      "sha256": "8763a4a14d5f425b959e52ec6a90a2540cee3d84ba726c85656833486e948a38",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "ebe2e77db750c9f5408ea55f46a5baa4e96947eeb136ad98d913d60068348b0c"
+    },
+    "products-browsing-catalogue-size25--tablet": {
+      "sha256": "a32c73f8b9137d5a0602f8109bdf69d22aa09c01d46de74edfb60462e9af6c3f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "ee54712a469d925cfbac15a08a8a819e5dd56ff091256b804d111889fca65e87"
+    },
+    "products-browsing-catalogue-view--desktop": {
+      "sha256": "a10c3cea20d3b99de6ec9defc34621b71306965c883cb743e519ac4db6c99fb6",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "08b2f972696cb11f8d9533826c183ce700d4c048004b5672c0865a211a4e9829"
+    },
+    "products-browsing-catalogue-view--desktop-dark": {
+      "sha256": "003f5d28c330f715b6198388cdbe95c4121cb12447f0f1f5dd0a8dc9ab5ca79d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "c0da7893f254205e939f534aaf56d601ec401c06b2e9302f0c3d88bc8ea4ecdb"
+    },
+    "products-browsing-catalogue-view--mobile": {
+      "sha256": "2f1f4a8d63735d3919feeb297e7fc7e78496466872cf40a328847cebb1bed218",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "4e957308af1bdcb31ef8f28e184370d8f8c9731017def2b978b22aab0b920de4"
+    },
+    "products-browsing-catalogue-view--tablet": {
+      "sha256": "9a629bd3696ef7da9c331388184300c6bd6e9e1f8a8170d290eaae840af1f519",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "1424b83c4276a588da467761085ce14bfe5d2cab4193eaa7df4a1a47471b3aa4"
+    },
+    "products-browsing-delayed-default--desktop": {
+      "sha256": "aacad1bfa1fe1859ef54884bc7691a0a6b8ba31f4ab8e672835fcb1a848c68b9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b131ce71967a9076600172389492e98bee7d33fd9f4f360300023899c341c12d"
+    },
+    "products-browsing-delayed-default--desktop-dark": {
+      "sha256": "3119f5f2cdc58dcab1d2272e509aff8f5991f134887bfeb9c2e15982e3196b2c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "6d4dbfb527072a4276b9e500a93222c264cfe52bd2ef0e9e8b1827ba0edbba8e"
+    },
+    "products-browsing-delayed-default--mobile": {
+      "sha256": "89934e2c241d35f02e009328a087ed57625baa7c720a3c18085091a5e70ed18b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b5e2c1b0c837ec36a8c40af99b7242d597ae82930bb2221ddf1282e706613da9"
+    },
+    "products-browsing-delayed-default--tablet": {
+      "sha256": "b9baadb2c7e49a6753693b6af233b0de853e7db139d786e3558c7284ccd446a0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b58da76958b8001960533f8cf4c5639b85af0beff3f6ce002dc21404ac36ab62"
+    },
+    "products-browsing-editing-mixed-default--desktop": {
+      "sha256": "542072f056b7d8b9c41a520094edf4fdd4d337687f01a1ec5f6927c3f05765f4",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "ce9b38007173278d8c5a1169af2bb9417dc27c3d934db44995e0ec04732bc00b"
+    },
+    "products-browsing-editing-mixed-default--desktop-dark": {
+      "sha256": "16dc4614f8def80a22098f04bf7763bc8dab4fcabb0a01e211c5915320efdeff",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "35e3a34338b75f415d2c8768433aafc1875a684c31571f4f1da0027ee1d32288"
+    },
+    "products-browsing-editing-mixed-default--mobile": {
+      "sha256": "f0087f4432e355721e16e118324221dfce9c14a291caebccf2562f3426057732",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "8644b911f1527e31c9a8267a9331b82b52b7a5abf92fa6fb80a66fc0169b021f"
+    },
+    "products-browsing-editing-mixed-default--tablet": {
+      "sha256": "48770718f837e282766644330db0550e76882a1e9d6df69aecc6dddc267ad74f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "93ea174c9718403991466b49157a83dfc0c3a7ba2a73cafcfdf23ed1deec5d64"
+    },
+    "products-browsing-en-catalogue-default--desktop": {
+      "sha256": "15ff466d02e82839684bd5206b9a758e9b642faa582cd86b2c0b5f57ba4dbbfc",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "57779121f9f5a9145a2a0887763bc1c728c0bfd92e821dfc45d1f7cf4952c477"
+    },
+    "products-browsing-en-catalogue-default--desktop-dark": {
+      "sha256": "32e3f46c72bc1a147ee732514fd14d05952dd023b8dba37bade418d61ca3f487",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "053b4c0cc8f5961c353a58ee67c0dd7fb1066ca6e181c8f6aab73fbe6a83a97a"
+    },
+    "products-browsing-en-catalogue-default--mobile": {
+      "sha256": "8b262774796a5b74df12baf6d5be59125727835c917cb1e4d570ce8fe1d571ef",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "8f1f4a8255623c8ff81904a80615dd741c41927cd0e0b21e79944d05dd50a271"
+    },
+    "products-browsing-en-catalogue-default--tablet": {
+      "sha256": "de065f2c15d148939822849620614741e4563cf3a3819a2e76de81bcd29bc729",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "291266ea1740b22487ab00a05561369c302bf006b0d9aa278eac0bfe7e329810"
+    },
+    "products-browsing-en-offpage-review-default--desktop": {
+      "sha256": "16157de3d6744e2b3dde89decd2b68a608340e19afc574097c840e8a35a6bb97",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "453b826e4472ece0ad2d696d31e6fbae6eb9a00724e88c4b03e72a28cd62277f"
+    },
+    "products-browsing-en-offpage-review-default--desktop-dark": {
+      "sha256": "3d8fa363dad0e1feb66e43308bc29fb997dadca6b1151e827ef718c5aae51d7f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "065ea4390b68bfe049b60d559da5b652056617d2117a083b0cc15bbe33813dbc"
+    },
+    "products-browsing-en-offpage-review-default--mobile": {
+      "sha256": "2bbc698e0f22e841d7c6650b14f6d0796c5354f70d112769832f9ba0a9cb69b8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "40f0979ae985bfc6231890ee4e532ee74178a0624fde239cf5c7aa1b1ac0ee06"
+    },
+    "products-browsing-en-offpage-review-default--tablet": {
+      "sha256": "93bcd615d9305513f88000c6478e70ca1d2e16d2621899064cf7ed481cca1675",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "e9625e2c7a374131478f0184844c3b2e0affa7648a28801ba83b626709aab279"
+    },
+    "products-browsing-en-stock-context-positive--desktop": {
+      "sha256": "9e37109fe03f4253c6bd0d5e4df77636fbd4cd66ac84ee1d63f8164a00cb33d3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "4dd4ae505b158eddb015e5678d804a2a061b63cf906c488dc40e14e9566d23b5"
+    },
+    "products-browsing-en-stock-context-positive--desktop-dark": {
+      "sha256": "a4f122ff7078461e4e7b3cfc29b0baaba1a77983296a5a501e7f0b766f5cfb5f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "6f1d95984e335b9c4a2ab154e7ceca13fc47cc0a8665ade2468b6715e6c60bf4"
+    },
+    "products-browsing-en-stock-context-positive--mobile": {
+      "sha256": "87772ae52d6e3a3504f72d05105419a036e1ebc230c7ddb59897a07de8239a40",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "cb9b63f9ad73901d3f0999bb42cd3f83652a00a76bdb7c5f8537779ee300f6f1"
+    },
+    "products-browsing-en-stock-context-positive--tablet": {
+      "sha256": "641d873979e549ef9146b945446918b784612411aa8ca1e5a43e151c35634bd1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "3cd4dbf83e7bd6b0164ea1de960d68709db56e46c79642fd123588fe19cb4b5a"
+    },
+    "products-browsing-eu-catalogue-default--desktop": {
+      "sha256": "902e2a6aaae782ccccf8bda7a472e3113e91852b5e69e80fb959117df7e1e245",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "64b1252a9eae222ca2d108bb3bdaf90c98edf4f15611bac993b5bd097ec9f5ab"
+    },
+    "products-browsing-eu-catalogue-default--desktop-dark": {
+      "sha256": "1f97927d6f3b7b0705390a0c740322e00c458c87cbf1b71eb603e5fb84dd14d8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "629bef4e1da238fcad4b262f320fb7ea9a9a41d843fbf0fa6f71deda0ea31453"
+    },
+    "products-browsing-eu-catalogue-default--mobile": {
+      "sha256": "38c450c412316d60f2e3e7b0abfdf14fa7887c4cc1893f880696cfa3325d7937",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "41b9bf4427fdabf68ccac9b7ceba4eef1c92af7e99634f120bab55ef58921b21"
+    },
+    "products-browsing-eu-catalogue-default--tablet": {
+      "sha256": "ac2bf0bb7c1de9e570a2ab9424161cdac4e2373e31f93572c8171eafc24975b0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "fa87149d0b43e337634e7f9217c839aa0eac42ddf929a6cd272fb73479149877"
+    },
+    "products-browsing-eu-offpage-review-default--desktop": {
+      "sha256": "194bafbc6163f10b0e701ddbcc7812a322aee087253d4d323c9169c74f1b39f3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "23684d034996e32e4b0fdd8d343c1028b05af495c08eb2dba35dc95253fa9584"
+    },
+    "products-browsing-eu-offpage-review-default--desktop-dark": {
+      "sha256": "e39ccf0a19fe89cc25cfed5d0296aaaa5f62424155de619284ce6e158918ee82",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "a3b0e8fec5acbda90d1bf8bd1e8d55c536df84913c7c1cbdc427e6a2b80da4b9"
+    },
+    "products-browsing-eu-offpage-review-default--mobile": {
+      "sha256": "456ad03c7b31900c28d6d1876382e900ce6d8707ebf4efbf63b6ee977377da56",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "24179c53b3f9189fe1955febfe9ee4a226c1edb64ac2ff2af12260d42b0a6646"
+    },
+    "products-browsing-eu-offpage-review-default--tablet": {
+      "sha256": "176085dd8fc58fefbf68730e06e5efa2fba067ea37789a8fc7268046c964a894",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "6b9ac0e31741e39ed215135f86d448725db955ed9a810407a54860e2ec6657ce"
+    },
+    "products-browsing-eu-stock-context-positive--desktop": {
+      "sha256": "0ba8e8639adba0304caea5f52acfcbc2ad773dd477e243821485b3aaaaa8a97e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "de8c5d7edd8900e8989ad4cd689b6b58910e1c2a3aa889b7a2de7b7fdabb9b06"
+    },
+    "products-browsing-eu-stock-context-positive--desktop-dark": {
+      "sha256": "64f983844917c672908e6c97be6f76362fd1869448f0526dc9813dfea1fbf974",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "c2e1c5644e10f24d674d4794fe9384755faf430a359c9ab3275c4be85cbc0eb3"
+    },
+    "products-browsing-eu-stock-context-positive--mobile": {
+      "sha256": "d5df59cdab554baa091ae93d32a81b85850e968275c578af3ff7a36d76b584a1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "be28000f476d69a354d2b1338eaed5ab5283598e24f0cd9611590c50dfcd94b2"
+    },
+    "products-browsing-eu-stock-context-positive--tablet": {
+      "sha256": "3899fdf1359fda402a0f5f2c1fe0000af292f7756cba6067cb8012d9017f2f18",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "d83827bc8a3abb467334cc1ef08e34a446d212f220804692b26de2eb7baf2b6a"
+    },
+    "products-browsing-gl-catalogue-default--desktop": {
+      "sha256": "0127824c1213240c5c78e703f21cd42a8452ac4f0b2e1197ef8db93769d80a0f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "c9491cb97dd93ac0176142e7085bdaff02ba3a1f0db2fd8e93873e8627109528"
+    },
+    "products-browsing-gl-catalogue-default--desktop-dark": {
+      "sha256": "8f38bbbd63356663c0a23340c99c1c825c3eefc72df32669249944f4e6ad7d59",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "d1092f060412458347d4e35ef33533f479c2ce3cee1d36d880f8d2fb348c2a4d"
+    },
+    "products-browsing-gl-catalogue-default--mobile": {
+      "sha256": "d7c38370282e23747c29e35dbcd6b2f93e5b9c764e08bc6bea6bdf2d9102dc6b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "9fba61666080e083dd166ebe7f6f9943503b52055301d5f3068cd1f2c6f1e257"
+    },
+    "products-browsing-gl-catalogue-default--tablet": {
+      "sha256": "d8757afc4e82329bfc55b5d4b4963f706773cf0e5b320ed7b1357d718d3fe508",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "5afe179d69cb315e362fa8ba1408e06ecc270fac1b1525097a515a13cbdd4ee6"
+    },
+    "products-browsing-gl-offpage-review-default--desktop": {
+      "sha256": "d8e114b54de45b9b86befae651b516f929de65d649636032e3a83a54c6f52407",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "822ca65286e810389a23487dc2fac4253de481803fa22d2e225de4e3b8d50348"
+    },
+    "products-browsing-gl-offpage-review-default--desktop-dark": {
+      "sha256": "fa347849d14296ec46f942a167b6deb32d5487e761965d13f1b9fb6500f5f81a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "3f9cfe103929fa90fa1e8a6a99c07eed9273e0d52ea6ade644291994a03138ec"
+    },
+    "products-browsing-gl-offpage-review-default--mobile": {
+      "sha256": "b772bfd6ac6b6cc36aeecbf45643d9d53da641bb2a164a2d21d9e8457a8a7d47",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "f246b9acf4909e938bdb15416806d61cf71c2099bfae5b553608220f6c896aef"
+    },
+    "products-browsing-gl-offpage-review-default--tablet": {
+      "sha256": "7a7fc384a547b7242738b18f30ec8ec33f8a834f33ab95181ba2a3f0d56ed6d7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "4354332d941fda0e14a2468a9ea991df59201d209c5a3fa7743b63b5655bef31"
+    },
+    "products-browsing-gl-stock-context-positive--desktop": {
+      "sha256": "5f6fc6f8712e1f2f6dd484ebf983c72267cd88c96234eaf4bf37dedfa59818d1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b144e2a8b583f4b247f97a751a02bdd477500f5d8f40a1b2adddf3d6c5392875"
+    },
+    "products-browsing-gl-stock-context-positive--desktop-dark": {
+      "sha256": "1aa9775bada9758f37365ae7fe0fb80781c353444b180343525bb2278aca016f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "9626d51eaeb0142c96fb92faea3c9739efc6ceda4838a8d5ab0124796b10c007"
+    },
+    "products-browsing-gl-stock-context-positive--mobile": {
+      "sha256": "b8a3963d347f04f5b54f5bb1cd247ce086500d05d38318fdae7fad9ad656c038",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "4ca4a1fabca32a5259acebf54cdf8c02b017b73340edbf842254e7c28de9e0b7"
+    },
+    "products-browsing-gl-stock-context-positive--tablet": {
+      "sha256": "20f8527ddf85fa9760141ce696bd313d52cdce5b104f7a7ca75b9d50dac7947f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "a84d5a06de0036066f683eb5d70823ca1992ebcba5e1c11f57cfbfbfbba2f343"
+    },
+    "products-browsing-large-catalogue-default--desktop": {
+      "sha256": "be8507772c0f60c6230044f0e6985442a4270649913e3e40ca715098e9df4482",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b131ce71967a9076600172389492e98bee7d33fd9f4f360300023899c341c12d"
+    },
+    "products-browsing-large-catalogue-default--desktop-dark": {
+      "sha256": "809acda97ab184e7e668eabfe066b7ea3eeeeb1aae5377dd7d22f54665b96b20",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "6d4dbfb527072a4276b9e500a93222c264cfe52bd2ef0e9e8b1827ba0edbba8e"
+    },
+    "products-browsing-large-catalogue-default--mobile": {
+      "sha256": "62ba104fbdbc838a217bf471b332c4db5cd842a78466696071582c7bf7a172f0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b5e2c1b0c837ec36a8c40af99b7242d597ae82930bb2221ddf1282e706613da9"
+    },
+    "products-browsing-large-catalogue-default--tablet": {
+      "sha256": "dbeecf124b833c9019c7a1bc38db180fd7a51aeea88dbf0e3af684f2741535af",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b58da76958b8001960533f8cf4c5639b85af0beff3f6ce002dc21404ac36ab62"
+    },
+    "products-browsing-loading-default--desktop": {
+      "sha256": "fb8d3f21bf7c7cd5a8d27da6dbab8bccae34d9bd4b573f986ef5d6043e334b2c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "cdea2d5f8893bcd01e2c466720bff9611742f3e608642e3868695be02bc34e5f"
+    },
+    "products-browsing-loading-default--desktop-dark": {
+      "sha256": "6339ac99bbce7acdd0908981cee2e221aaaf95aa59609fab788d0362c01cda7a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "8231c890450e84c7a5eb121edf23e78503d71e30c61061ae3fc60d78cc24b96d"
+    },
+    "products-browsing-loading-default--mobile": {
+      "sha256": "25ad13217e51779ec7b2138809b66f136df9ffd5b37cb0ea22ad049a36e8c23b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "bd70bc1039f4fcb1b63881f1087797434f8012fc3582b9fec7bf6a2f6dce34fe"
+    },
+    "products-browsing-loading-default--tablet": {
+      "sha256": "119427ae890496df8519962bb2db08fc276be8e7db2452b3eef4433c00e32fed",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "2b2645af66fa5f830b6c5f48ebf81723e19a5c6aa41fe3944b9708c514980402"
+    },
+    "products-browsing-next-read-error-default--desktop": {
+      "sha256": "8a65e8b48f236c946b0a16d1ec828d7fc280a0f92851f634d071047df8f3290c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "7ed522181bd79a205c953328a9593a6ad04ab6b08da1f5300c660e09cd92a837"
+    },
+    "products-browsing-next-read-error-default--desktop-dark": {
+      "sha256": "35d774793748d94b32b972eb63f8a6a792e503745989efb2d8653562f29213aa",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "357a52d13a52ae653a9ce95dbaa991c9ae060b07f830239d4b73972e38f50fbb"
+    },
+    "products-browsing-next-read-error-default--mobile": {
+      "sha256": "500dfca466e8425aa7ef5ebfc28921dcb9ec4abda27ed091ec6bc05d5c0f4e4e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b66c56d66890594db2ac3aee4e648c21ca257bd9c05e7dd0659be11e6159c0d5"
+    },
+    "products-browsing-next-read-error-default--tablet": {
+      "sha256": "871e94490e21a590b9660905b2109f4da1a3fa669af9eb78f7cfa02add910caf",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "30d81019ab221ba6409f03edc1b2a18c4d507dfd55c169ad60bc96238c34564a"
+    },
+    "products-browsing-previous-results-default--desktop": {
+      "sha256": "cbff628e8359622d1b270f110f6eefc961fe92ee2647284c078d2989c882019a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "21fbf0ed75f00f8b03860b8f780f3a2516ee1e1b7dad8f1424d006383a42f04c"
+    },
+    "products-browsing-previous-results-default--desktop-dark": {
+      "sha256": "8f95ead3b7e847a52286570081810a0381f999ad5013efda9bf0a0b599984b68",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "856fefae260ddc63dab02cc18ff2808b0e736f53910ecb61e2d179e44abd9151"
+    },
+    "products-browsing-previous-results-default--mobile": {
+      "sha256": "2a71e0bdffb1a98408a3e13809e8e5c4b8d2064ab6a73e3831395a825dd3d14c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b18411894a58d03de5da2df2fc2ca85f14e781df96e43e28f6c9d3cf981d2626"
+    },
+    "products-browsing-previous-results-default--tablet": {
+      "sha256": "04c35ac1d151ca0a0baf380d2249c3e5bb735e7f5816a28b1474ca63b9a7414d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "4acfb06e2defa8428a30e9d25fab5e9fe9da7f8acd7dd261ecf0651b27f5c43e"
+    },
+    "products-browsing-read-error-default--desktop": {
+      "sha256": "9283eaf25d84eab4620e3402cf12453245df4854b4de02a904174caab19728ee",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "6c19614cf1d9091495f37541f23561ebbf6d22d64c9dd4888580dbe91beb4a04"
+    },
+    "products-browsing-read-error-default--desktop-dark": {
+      "sha256": "9d96d285066f0d0460e809e7afcc46f994ab9a3371855b8feb5f81112dde9eec",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "16cddc5aaae48eeff78311fcccf219af2f750040b1730df979e05a52526a657a"
+    },
+    "products-browsing-read-error-default--mobile": {
+      "sha256": "d498fbda3d13b33aea06bab38122e544f17661bb4651b45fac5e72921ec4e575",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "bbb65f55b5db4980fce383952aecd0bb88d268b1306c9f8a0a7eed5c00b44b44"
+    },
+    "products-browsing-read-error-default--tablet": {
+      "sha256": "ac8c512d3ed3a80553ad772a87259f86babc7ddccc915ab33597b186d381c17d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "e1d90512cecebf6b670086f369f825499aba8ef4c4e70f6cadc160d7942fa540"
+    },
+    "products-browsing-read-error-retry--desktop": {
+      "sha256": "aacad1bfa1fe1859ef54884bc7691a0a6b8ba31f4ab8e672835fcb1a848c68b9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "187dde6cdc46946702b770f84f3d8ed32d7026b0b50b259c8f4d2c2366783f6a"
+    },
+    "products-browsing-read-error-retry--desktop-dark": {
+      "sha256": "3119f5f2cdc58dcab1d2272e509aff8f5991f134887bfeb9c2e15982e3196b2c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "4cd63dd0cb298563548c0d4a2101a9772a60ce1dfab43ea691c799e6013eb91c"
+    },
+    "products-browsing-read-error-retry--mobile": {
+      "sha256": "a4e57bba5d8b3f1c4ce49e2c90caffd48359416fe7d6878ee0fc94b9deb88830",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "f3056b9f6695e253c0c34360236bad2e58c476026cb320be86b6b4ed9abf8d41"
+    },
+    "products-browsing-read-error-retry--tablet": {
+      "sha256": "b9baadb2c7e49a6753693b6af233b0de853e7db139d786e3558c7284ccd446a0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "ebe3be375dfaaf2ebd04e352ac208ca2d0792ba9f1dcdebad8663db4161c7443"
+    },
+    "products-browsing-recovery-next-error-default--desktop": {
+      "sha256": "f1405491b519b337ca763285267eebf28a0a680b1a6134b568eeb630c1ab6a53",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "c81b87d4b59f4bae6422beaa973b2c706eadf32626963055ec7656eebbaa5b67"
+    },
+    "products-browsing-recovery-next-error-default--desktop-dark": {
+      "sha256": "a9b4643a2a9df54c2cef17f9c1d3bada2ad22c7b55f4b39e323bfb188d07fe25",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "bdd10e81bae0664ff13c12a0f0e02d252a6e1838c5c0de2a6c7cd6d4b8a6b217"
+    },
+    "products-browsing-recovery-next-error-default--mobile": {
+      "sha256": "fc80538b8c7743597f4bc654ce0714ffd3dad0e29ec2de78454bfdcb96fe80a6",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "eb2478ac5ecacafc936c5bf253e368afc4d3808e04d6ea22bb84fccbf1cadbb1"
+    },
+    "products-browsing-recovery-next-error-default--tablet": {
+      "sha256": "fc85a8acfa04b251e65e1397158ee47820afdb6d34a8908c11ffe932878c6bd6",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b9320b8c9adcd1aa0af23f3f7e0c4844a9a8784c056ee9eee9ee1008374802c1"
+    },
+    "products-browsing-short-page-default--desktop": {
+      "sha256": "82218b0314dc6ae5f69ea100d4e94c69ce499d5c9d458035ef488d2da14a71fe",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b131ce71967a9076600172389492e98bee7d33fd9f4f360300023899c341c12d"
+    },
+    "products-browsing-short-page-default--desktop-dark": {
+      "sha256": "9c7defe654c4304402568fcc4b583b9d72c4f6a456655cf7effa37297636178e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "6d4dbfb527072a4276b9e500a93222c264cfe52bd2ef0e9e8b1827ba0edbba8e"
+    },
+    "products-browsing-short-page-default--mobile": {
+      "sha256": "ec7e5bfc7d2950cc2e549e2600c156ff45d29ba5f162e9060cae7349f68c6a33",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b5e2c1b0c837ec36a8c40af99b7242d597ae82930bb2221ddf1282e706613da9"
+    },
+    "products-browsing-short-page-default--tablet": {
+      "sha256": "4db3b5fb6d5905ccb65990b82dacf83c96d01f87cb3d03228d4dcfda668ef8dc",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b58da76958b8001960533f8cf4c5639b85af0beff3f6ce002dc21404ac36ab62"
+    },
+    "products-browsing-short-page-next--desktop": {
+      "sha256": "710c347cd528e687a7f85738dc64b6f86ff3a23577be355644e54133aff033ce",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "1bd95e354c03be46b9a9d93c6fdfa6ca5367ebefe303e6bac160299c0f8f86c3"
+    },
+    "products-browsing-short-page-next--desktop-dark": {
+      "sha256": "bd5e7bcedc5b9336ea1c4399372521a87b6b1ed752936c89f42e6cfe2487e3c7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "9e662e3faa4de4404542d875a5be5055fb1a30b633ce0372fc30d64124d26eba"
+    },
+    "products-browsing-short-page-next--mobile": {
+      "sha256": "11a8685a8a51afdd7f6505ce588d992a77be1803c5d2d7380f09e1e79e8be765",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "83e5da4219954b37697d655e70685139f770a097e929623ec07c4dec2d65eacd"
+    },
+    "products-browsing-short-page-next--tablet": {
+      "sha256": "a951e935238c5ef5001bf5bdd1f6e47c3a885e0425e4bc68ef396dafabb53fe5",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "389142878b7d2663a4032b9d7765483d920ba9be196d77bd4cf8b7e8e029bc01"
+    },
+    "products-browsing-stock-context-default--desktop": {
+      "sha256": "abee17ae174245313bb6180f9259c00b887536fdb337f61d674eef5eb0320a83",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "9a7173e0b0df25f1c940b208c72308c4dbb236318685fdc153b6cbbf63642c46"
+    },
+    "products-browsing-stock-context-default--desktop-dark": {
+      "sha256": "ff183a93b7ade8ba65e03c9a6c1312dfba8144c3b9f5316fa652a4a45090958e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "89456fc5f277a803f65e6a3df17957bb8cc70d2b1d48c1983627d06842e53216"
+    },
+    "products-browsing-stock-context-default--mobile": {
+      "sha256": "583ec798237fb33dbffb0cd0d709f0d8deb82deb734402fa09a5b7ccf80e62b1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "d8589127f4e9ba7c8820f739f63ee7db2d1d612b66ee3171c03edb3d188ced9e"
+    },
+    "products-browsing-stock-context-default--tablet": {
+      "sha256": "7b41bad9c3607e68f1df8d80e42ee38db17057fa8f9c1cf8e06c67438f742eae",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "7a4d625a835f3417bbde3eb6ae8596681ed128860b8d70ca1efc6f6a0ada42b1"
+    },
+    "products-browsing-stock-context-positive--desktop": {
+      "sha256": "ce6a6ec18063db0d85073f771c50e1095a0d31d7df3ac8c04ecca1b521af649b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "3fbf6dcf84d93b24b17c31e19f07b9e5ad6e3a1b2b6106006b52b5f8009d19ac"
+    },
+    "products-browsing-stock-context-positive--desktop-dark": {
+      "sha256": "4a8f42e5048e5d6ce00361e67d22706788348a868c90cc6299435b091e2e9024",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "511b82172b6796cf993eefc9c553b2dfcb644ff4702f83d6726e606140ff5840"
+    },
+    "products-browsing-stock-context-positive--mobile": {
+      "sha256": "4ff3a9112dcd076f1ed963bd9087a329850308004b4f5d52974339957275f71f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "4fcbe19eebcc3fcddbd6ca223c952468209d0da24e725989e0e5528f49adb33a"
+    },
+    "products-browsing-stock-context-positive--tablet": {
+      "sha256": "46801e743caba97216aa64c8d94203e0f68a9d1f1cf43c16eec270cc56c49174",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "9ce7474d8cf74570c99c04486531bc31f0cb92f0eb1d44cea3ed0f7b0084385c"
+    },
+    "products-browsing-unusable-position-default--desktop": {
+      "sha256": "bb9b7c3b419dd5d26eb6bd9e943f9073c3f53bb708f5610a55576957075a6ce9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "09529810f5467f1016f57148112c220c0d423aa0f9603384c20464fbd5b54284"
+    },
+    "products-browsing-unusable-position-default--desktop-dark": {
+      "sha256": "30b5414a6567da59768dcdfa9a78b2682b75f99747b0780c90ac455bcff20461",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "2a8c6475773fb170321dae5adab87ee3436318fed370b5738e70c90552d84c79"
+    },
+    "products-browsing-unusable-position-default--mobile": {
+      "sha256": "0f3ec27fbedc5ecd316a41be585c9f26081fb3274ec30da5587dcc7ea34a3c44",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "4bc86c3c8c6cea938488f97e1b2c6ab7128c05afd6d903a1e2b1b1fe6c6bbba3"
+    },
+    "products-browsing-unusable-position-default--tablet": {
+      "sha256": "7eb054ca1b086d3c85c0495d8c62dbdf6905fd5a020dbde8f2485b051d7c1427",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "515ef08edbf4dd7694d2ac448f1d3b10c9cf84bb4bc7f195fe4017e4e42ced4d"
+    },
+    "products-browsing-unusable-position-restart--desktop": {
+      "sha256": "aacad1bfa1fe1859ef54884bc7691a0a6b8ba31f4ab8e672835fcb1a848c68b9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "9544ef007b79cb6c683bd04c89d2803e9fc80f65c45d4199078a544e60c04ec5"
+    },
+    "products-browsing-unusable-position-restart--desktop-dark": {
+      "sha256": "3119f5f2cdc58dcab1d2272e509aff8f5991f134887bfeb9c2e15982e3196b2c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "ddf2330d632a1cc62c9211187c0b17d068d1f66de8c11c3132d88b75c0104c57"
+    },
+    "products-browsing-unusable-position-restart--mobile": {
+      "sha256": "a4e57bba5d8b3f1c4ce49e2c90caffd48359416fe7d6878ee0fc94b9deb88830",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "40c2d7a75f7b9a4522e85c44227f2c6708f1c190ee5e561f077b4f30393028fe"
+    },
+    "products-browsing-unusable-position-restart--tablet": {
+      "sha256": "b9baadb2c7e49a6753693b6af233b0de853e7db139d786e3558c7284ccd446a0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "7e06298c551f282f7b12522bae148b01f2b2fb2f908ab032f578000067ddd00f"
+    },
+    "products-browsing-without-estimate-default--desktop": {
+      "sha256": "49f2dfa6dd7015c8448bac9835ad63f4aa874662791823096b9ba6f513a9c172",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b131ce71967a9076600172389492e98bee7d33fd9f4f360300023899c341c12d"
+    },
+    "products-browsing-without-estimate-default--desktop-dark": {
+      "sha256": "2104f0edcaed8b58466d3c9b2448c9f090f6cb1be8df75596a342018ef70a715",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "6d4dbfb527072a4276b9e500a93222c264cfe52bd2ef0e9e8b1827ba0edbba8e"
+    },
+    "products-browsing-without-estimate-default--mobile": {
+      "sha256": "26cf9fbac45cb55e2189d17d1da38698d70d1f6a1fbd8b14a7567ed5b2081c8b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b5e2c1b0c837ec36a8c40af99b7242d597ae82930bb2221ddf1282e706613da9"
+    },
+    "products-browsing-without-estimate-default--tablet": {
+      "sha256": "39f52476d0a82421703c231ec4c9252315142815bf5d9679416e1c4701e72973",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b58da76958b8001960533f8cf4c5639b85af0beff3f6ce002dc21404ac36ab62"
+    },
+    "products-browsing-zero-estimate-default--desktop": {
+      "sha256": "e9e92bd40ff735c8b747c6e94ac6599db32613e5f2c8bd0a27ad398314fb88b2",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b131ce71967a9076600172389492e98bee7d33fd9f4f360300023899c341c12d"
+    },
+    "products-browsing-zero-estimate-default--desktop-dark": {
+      "sha256": "4c58c971a18e6113585309719c5f7dc78a5eee56ac18c9223298ece450b8eef4",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "6d4dbfb527072a4276b9e500a93222c264cfe52bd2ef0e9e8b1827ba0edbba8e"
+    },
+    "products-browsing-zero-estimate-default--mobile": {
+      "sha256": "167448afe52d951c9c84762503c7f24f7ae715111e7473980a56490c2c654d6a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b5e2c1b0c837ec36a8c40af99b7242d597ae82930bb2221ddf1282e706613da9"
+    },
+    "products-browsing-zero-estimate-default--tablet": {
+      "sha256": "01225090bf0b94430689af59f8c81a5de9da6e6d111ccba484d460a4418ab28b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "User explicitly answered “Approve all 148 images” on 2026-11-17 to the question identifying run 2026-11-17T12-43-29.019Z, source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943. Visual approval only; no Git or backend authority.",
+      "run": "2026-11-17T12-43-29.019Z",
+      "sourceHash": "5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943",
+      "profileHash": "b58da76958b8001960533f8cf4c5639b85af0beff3f6ce002dc21404ac36ab62"
     }
   }
 }
