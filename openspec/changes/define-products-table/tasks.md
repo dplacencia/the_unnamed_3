@@ -471,8 +471,49 @@ Checked steps record work performed, not acceptance of proposed table choices.
       batches and their verification limits in the bounded preparation record.
 - [x] 16.2 Verify and stage only the 31 implementation/specification/test/docs
       files; leave references unstaged and provide the user's commit command.
-- [ ] 16.3 After the first user commit, verify exact parent/path/blob/mode contents
+- [x] 16.3 After the first user commit, verify exact parent/path/blob/mode contents
       against the prepared first-batch manifest, then stage only the 149 approved
       reference files and provide the second commit command.
-- [ ] 16.4 Verify both user commits and remaining tree/index state. Never create
+- [x] 16.4 Verify both user commits and remaining tree/index state. Never create
       commits or infer authority for further UI/backend work from this checkpoint.
+      User commits `8a605fa`/`bb191333` exactly match the prepared 31/149-file
+      manifests. Tree/index were clean; see the new follow-up's checkpoint record.
+
+## Toolbar and comparison follow-up
+
+- [x] 17.1 Record the user's new “go ahead”, completed checkpoint and bounded
+      investigation/source/verification scope in toolbar-rendering-followup.md.
+- [x] 17.2 Verify the alleged Basque overlap against exact pixels/geometry and the
+      Products-injected toolbar lifecycle; correct a false positive rather than
+      create an unnecessary layout change. Add meaningful missing regression coverage.
+      The allegation is disproved at the measured states. Five added locale tests
+      pass across 320/390/640px, both locations and filter closure with the same
+      font/scroll/two-frame/full-page screenshot options (not canonical stability polling). No
+      app/CSS repair or fabricated RED is claimed; see the follow-up evidence.
+- [x] 17.3 Reproduce and isolate the actual icon/button-border variations with
+      bounded probes, unchanged renderer/thresholds and retained failures.
+      The exact mobile border variant reproduces; animation settling does not
+      remove it. Minimal controls and frozen final-DOM copies do not reproduce
+      between-context variation. The original seven-pixel moon variant and the
+      underlying cause remain unresolved; see the bounded negative findings.
+- [x] 17.4 Implement only an evidence-supported correction, with a meaningful
+      regression and separate conformance/behavior verification; otherwise report
+      the unresolved cause without masking, threshold changes or invented success.
+      No repair is justified; no application/capture/renderer/reference change made.
+- [x] 17.5 Run appropriate quality/browser/visual checks, independently review and
+      deliver exact changed candidates if needed. Preserve all accepted references.
+      Quality checks and 134 code tests pass; Storybook/coverage, all seven strict
+      OpenSpec changes, 184 browser checks and independent reviews pass. All 1,084
+      reference paths/hashes match the committed checkpoint; font manifest unchanged.
+      No visual-source change or candidates; bounded probes retain the known failures.
+      No wholly green/deterministic comparison claim. Index empty; no commit created.
+
+## Toolbar follow-up checkpoint
+
+- [x] 18.1 Record the user's “go ahead” to preparing/staging the six-file single
+      test/documentation batch and providing the commit command. Follow the
+      exact allowlist in toolbar-rendering-followup.md; preserve references,
+      renderer settings and unresolved findings. Never create a commit.
+- [ ] 18.2 After the user commits, verify its exact prepared parent/path/blob/mode
+      contents and remaining tree/index state. No next feature or investigation
+      is initiated by this checkpoint.

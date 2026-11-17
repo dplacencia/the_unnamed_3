@@ -487,6 +487,101 @@ for (const width of [390, 1440]) {
   }
 }
 
+for (const locale of ["es", "en", "ca", "gl", "eu"] as const) {
+  test(`phone Products toolbar ${locale} keeps injected controls separate after filtering`, async ({
+    page,
+  }) => {
+    const copy = catalogueMessages[locale];
+    async function expectSeparateControls(width: number) {
+      const header = page.locator("header");
+      const menu = header.locator("button").first();
+      const title = header.locator("[data-navigation-title]");
+      const location = header.locator("[data-products-location]");
+      const theme = header.locator("button").last();
+      const boxes = await Promise.all(
+        [menu, title, location, theme].map((control) => control.boundingBox()),
+      );
+      expect((await header.boundingBox())!.height).toBeLessThanOrEqual(56);
+      const centers = boxes.map((box) => box!.y + box!.height / 2);
+      expect(Math.max(...centers) - Math.min(...centers)).toBeLessThanOrEqual(
+        1,
+      );
+      for (let index = 0; index < boxes.length; index++) {
+        const box = boxes[index]!;
+        expect(box.x).toBeGreaterThanOrEqual(0);
+        expect(box.x + box.width).toBeLessThanOrEqual(width);
+        if (index > 0) {
+          const previous = boxes[index - 1]!;
+          expect(previous.x + previous.width).toBeLessThanOrEqual(box.x + 1);
+        }
+      }
+      for (const control of [menu, theme]) {
+        await expect(control).toHaveCSS("width", "44px");
+        await expect(control).toHaveCSS("height", "44px");
+      }
+      await expect(location).toHaveCSS("height", "36px");
+      await expect(title).toHaveText(copy.navProducts);
+      if (width < 640) {
+        await expect(title).toHaveCSS("overflow", "hidden");
+        await expect(title).toHaveCSS("text-overflow", "ellipsis");
+      }
+      expect(
+        await page.evaluate(() => document.documentElement.scrollWidth),
+      ).toBe(width);
+    }
+
+    for (const width of [320, 390, 640]) {
+      await page.setViewportSize({ width, height: 844 });
+      await page.goto(
+        `http://localhost:6006/iframe.html?id=inventory-products-browsing--stock-context&viewMode=story&globals=locale:${locale};theme:light`,
+      );
+      const browsing = page.locator("[data-products-browsing]");
+      await expect(browsing).toHaveAttribute("data-browsing-state", "ready");
+      await page.locator("[data-products-location]").click();
+      await page
+        .getByRole("option", { name: copy.navSalesFloor, exact: true })
+        .click();
+      await expect(browsing).toHaveAttribute(
+        "data-browsing-settled-location",
+        "sales-floor",
+      );
+      await expectSeparateControls(width);
+      await page.locator("[data-products-filter-trigger]").click();
+      await page
+        .locator("[data-products-filters]")
+        .getByRole("checkbox", { name: copy.pfPositiveStockOnly, exact: true })
+        .check();
+      await page.locator("[data-products-filter-apply]").click();
+      await expect(browsing).toHaveAttribute("data-browsing-state", "ready");
+      await page.mouse.move(1, 1);
+      await page.keyboard.press("Escape");
+      await page.evaluate(async () => {
+        await document.fonts.ready;
+        window.scrollTo(0, 0);
+        await new Promise<void>((resolve) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+        );
+      });
+      await page.screenshot({
+        animations: "disabled",
+        caret: "hide",
+        scale: "css",
+        fullPage: true,
+      });
+      await expectSeparateControls(width);
+      await page.locator("[data-products-location]").click();
+      await page
+        .getByRole("option", { name: copy.navStockroom, exact: true })
+        .click();
+      await expect(browsing).toHaveAttribute(
+        "data-browsing-settled-location",
+        "stockroom",
+      );
+      await expectSeparateControls(width);
+    }
+  });
+}
+
 for (const width of [1440, 768, 390]) {
   test(`shared footer folds with keyboard at ${width}px and preserves access to its links`, async ({
     page,

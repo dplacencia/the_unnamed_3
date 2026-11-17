@@ -68,6 +68,26 @@ context: |
   /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
   one year (365 days), with no account-level or cross-device preference implied.
   Latest commit preparation 2026-11-17: user said "go ahead" to checkpointing the
+  toolbar tests and investigation findings. Follow toolbar-rendering-followup.md
+  commit preparation: stage its exact six test/documentation files as one batch
+  and provide the commit command. No references/cache artifacts or new UI/API work.
+  After the user commits, verify the prepared parent/path/blob/mode manifest.
+  Preserve unresolved comparisons; never create a commit.
+  Previous investigation 2026-11-17: user said "go ahead" to toolbar/raster investigation
+  without threshold changes. Follow toolbar-rendering-followup.md. The reported
+  Basque overlap is not present in the measured approved/live state; correct the
+  false-positive finding. Five injected-toolbar locale regressions are added.
+  Bounded probes reproduce the mobile border variant; waiting for transitions
+  does not remove it, and static copies do not reproduce between-context variance.
+  The cause and original moon variant remain unresolved. No app/capture/renderer
+  repair is justified or claimed. Bounded follow-up complete: 134 code tests,
+  184 browser checks, Storybook/coverage, seven strict changes and independent
+  reviews pass. No visual candidates or wholly green comparison claim.
+  Preserve 1,084 approved references and
+  renderer/fonts/profiles/thresholds; changed images need exact review. No Git,
+  API or next-flow work. Both prior user commits match 31/149 manifests and the
+  checkpoint was clean; prior staging authority is spent. Never create commits.
+  Previous commit preparation 2026-11-17: user said "go ahead" to checkpointing the
   approved browsing work in two sequential batches. Follow browsing-preview-plan.md
   commit preparation: stage 31 implementation/spec/test/docs files first and provide
   the command; leave 149 reference files unstaged. After the user commits the exact

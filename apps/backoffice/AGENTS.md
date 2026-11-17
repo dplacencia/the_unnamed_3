@@ -21,6 +21,37 @@ The
 [visual review workflow](../../openspec/changes/define-visual-review-workflow/proposal.md)
 is implemented; preserve its review rules and the technical sources as constraints.
 Latest commit preparation — 2026-11-17: the user said **“go ahead”** after the
+recommendation to checkpoint the toolbar tests and investigation findings.
+Follow the [six-file preparation record](../../openspec/changes/define-products-table/toolbar-rendering-followup.md#commit-preparation--2026-11-17).
+Stage only that single test/documentation batch and provide its commit command.
+No references or raw cache artifacts belong in the batch. Preserve the unresolved
+visual comparison limitation; no further feature or diagnostic work is initiated.
+After the user commits, verify the exact prepared parent/path/blob/mode manifest.
+Never create a commit.
+
+Previous investigation — 2026-11-17: the user said **“go ahead”** to investigating the
+reported Basque toolbar overlap and intermittent visual comparisons without
+threshold changes. Follow the [bounded follow-up](../../openspec/changes/define-products-table/toolbar-rendering-followup.md).
+The alleged overlap is not present in the measured approved/live state; the
+earlier screenshot impression was wrong. Five Products-injected-toolbar locale
+regressions are added; no CSS fix is justified. Bounded real-app probes reproduce
+the mobile border variant, but transition waiting does not remove it and static
+replays do not reproduce between-context variation. The underlying cause and
+original moon-icon variant remain unresolved; no capture/renderer repair is claimed.
+The bounded investigation is complete: 134 code tests, 184 browser checks,
+Storybook/coverage and seven strict OpenSpec changes pass. Independent reviews
+pass; all 1,084 reference paths/hashes and the font manifest are preserved.
+No new visual candidates or wholly green comparison claim. Changes were unstaged
+at that handoff; the later preparation authority above supersedes its no-Git limit.
+Preserve all 1,084 approved references, renderer/fonts/profiles and thresholds.
+Any changed images need new specific approval. No Git, API or next-flow work.
+
+The [browsing checkpoint](../../openspec/changes/define-products-table/toolbar-rendering-followup.md#authority-and-starting-checkpoint--2026-11-17)
+is complete: both user commits match the exact 31/149-file manifests and the
+tree/index were clean before this new work. Previous staging authority is spent.
+Never create commits.
+
+Previous commit preparation — 2026-11-17: the user said **“go ahead”** after the
 recommendation to checkpoint the approved browsing work in two sequential batches.
 Follow the [preparation record](../../openspec/changes/define-products-table/browsing-preview-plan.md#commit-preparation--2026-11-17).
 Stage only the 31 implementation/specification/test/documentation files first and
