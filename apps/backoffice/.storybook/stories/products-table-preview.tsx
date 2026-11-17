@@ -304,6 +304,7 @@ function ProductsTable({
   records,
   editor,
   summary,
+  catalogueAction,
   productStatus,
   browsing,
 }: {
@@ -312,6 +313,7 @@ function ProductsTable({
   records: PreviewProduct[];
   editor: ProductEditing;
   summary?: ReactNode;
+  catalogueAction?: ReactNode;
   productStatus?: (product: PreviewProduct) => ProductRowStatus | undefined;
   browsing?: ProductsBrowsing | null;
 }) {
@@ -827,6 +829,7 @@ function ProductsTable({
             {t("peEditTable")}
           </Button>
         )}
+        {catalogueAction}
       </div>
       {hasFilters && (
         <div className="products-applied-filters" data-products-applied-filters>
@@ -1194,6 +1197,7 @@ export function ProductsTableWorkspace(
   props: ProductsTablePreviewProps & {
     editor: ProductEditing;
     summary?: ReactNode;
+    catalogueAction?: ReactNode;
     productStatus?: (product: PreviewProduct) => ProductRowStatus | undefined;
     viewKey?: string;
   },
@@ -1311,6 +1315,7 @@ export function ProductsTableWorkspace(
             records={editor.records}
             editor={editor}
             summary={props.summary}
+            catalogueAction={props.catalogueAction}
             productStatus={props.productStatus}
             browsing={browsing}
           />

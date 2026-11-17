@@ -514,6 +514,8 @@ Checked steps record work performed, not acceptance of proposed table choices.
       test/documentation batch and providing the commit command. Follow the
       exact allowlist in toolbar-rendering-followup.md; preserve references,
       renderer settings and unresolved findings. Never create a commit.
-- [ ] 18.2 After the user commits, verify its exact prepared parent/path/blob/mode
+- [x] 18.2 After the user commits, verify its exact prepared parent/path/blob/mode
       contents and remaining tree/index state. No next feature or investigation
       is initiated by this checkpoint.
+      User commit `2652246` matches the prepared six-file batch. The tree and
+      index were clean. See `.cache/toolbar-followup-checkpoint-complete.json`.

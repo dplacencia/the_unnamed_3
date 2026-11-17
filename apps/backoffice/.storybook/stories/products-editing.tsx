@@ -70,6 +70,19 @@ export function useProductEditing(
   const eligible = (changes: ProductChange[]) =>
     extension ? changes.filter((change) => !isReadOnly(change.id)) : changes;
   const changes = eligible(changedProducts(records, rows));
+  const addPreviewProduct = useCallback(
+    (product: PreviewProduct) => {
+      if (confirmedRecords.current.some(({ id }) => id === product.id)) return;
+      const next = [...confirmedRecords.current, product];
+      confirmedRecords.current = next;
+      form.setValue(
+        `rows.${product.id}`,
+        editingDefaults([product])[product.id],
+      );
+      setRecords(next);
+    },
+    [form],
+  );
   function resetDrafts() {
     const next = editingDefaults(confirmedRecords.current);
     if (extension)
@@ -237,6 +250,7 @@ export function useProductEditing(
   }
   return {
     records,
+    addPreviewProduct,
     panelId,
     inspect,
     rows,

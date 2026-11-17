@@ -67,12 +67,17 @@ context: |
   UI language from browser headers. The landing uses Spanish at / and localized
   /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
   one year (365 days), with no account-level or cross-device preference implied.
-  Latest commit preparation 2026-11-17: user said "go ahead" to checkpointing the
-  toolbar tests and investigation findings. Follow toolbar-rendering-followup.md
-  commit preparation: stage its exact six test/documentation files as one batch
-  and provide the commit command. No references/cache artifacts or new UI/API work.
-  After the user commits, verify the prepared parent/path/blob/mode manifest.
-  Preserve unresolved comparisons; never create a commit.
+  Current assignment 2026-11-17: the user authorized the first stock receipt
+  preview after the completed work is committed. Follow the product creation
+  preview plan checkpoint sequence. Stage each of the three batches separately,
+  verify each user commit, then begin the preview. Never create a commit.
+  Previous assignment 2026-11-17: user said "go ahead" to the simulated Storybook
+  product creation preview. Follow define-product-creation/preview-plan.md and
+  PC-001–010. Use synthetic outcomes and retain exact visual review. The user
+  approved the exact 60-image creation gallery and its references are promoted.
+  The toolbar
+  checkpoint is complete at user commit 2652246, with its exact six files verified.
+  Its staging authority is spent. Preserve unresolved comparisons. Never commit.
   Previous investigation 2026-11-17: user said "go ahead" to toolbar/raster investigation
   without threshold changes. Follow toolbar-rendering-followup.md. The reported
   Basque overlap is not present in the measured approved/live state; correct the

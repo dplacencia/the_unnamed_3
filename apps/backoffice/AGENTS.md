@@ -20,14 +20,18 @@ the exact approval and identities. Require new image approval for replacements.
 The
 [visual review workflow](../../openspec/changes/define-visual-review-workflow/proposal.md)
 is implemented; preserve its review rules and the technical sources as constraints.
-Latest commit preparation — 2026-11-17: the user said **“go ahead”** after the
-recommendation to checkpoint the toolbar tests and investigation findings.
-Follow the [six-file preparation record](../../openspec/changes/define-products-table/toolbar-rendering-followup.md#commit-preparation--2026-11-17).
-Stage only that single test/documentation batch and provide its commit command.
-No references or raw cache artifacts belong in the batch. Preserve the unresolved
-visual comparison limitation; no further feature or diagnostic work is initiated.
-After the user commits, verify the exact prepared parent/path/blob/mode manifest.
+Current assignment — 2026-11-17: follow the
+[checkpoint sequence](../../openspec/changes/define-product-creation/preview-plan.md#checkpoint-before-the-receipt-preview--2026-11-17)
+before implementing the authorized stock receipt preview. The user runs the
+commit commands.
+
+Previous assignment — 2026-11-17: follow the simulated
+[product creation preview plan](../../openspec/changes/define-product-creation/preview-plan.md)
+for PC-001–010. The repository entry point records the checkpoint and scope.
 Never create a commit.
+
+The 60 creation references are approved and promoted. See the
+[exact approval record](../../openspec/changes/define-product-creation/preview-plan.md#visual-approval-and-reference-promotion--2026-11-17).
 
 Previous investigation — 2026-11-17: the user said **“go ahead”** to investigating the
 reported Basque toolbar overlap and intermittent visual comparisons without

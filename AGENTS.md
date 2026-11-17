@@ -16,14 +16,30 @@ the linked records distinguish approved source decisions from newly recorded
 wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
-Latest commit preparation — 2026-11-17: the user said **“go ahead”** after the
-recommendation to checkpoint the toolbar tests and investigation findings.
-Follow the [six-file preparation record](openspec/changes/define-products-table/toolbar-rendering-followup.md#commit-preparation--2026-11-17).
-Stage only that single test/documentation batch and provide its commit command.
-No references or raw cache artifacts belong in the batch. Preserve the unresolved
-visual comparison limitation; no further feature or diagnostic work is initiated.
-After the user commits, verify the exact prepared parent/path/blob/mode manifest.
+Current assignment — 2026-11-17: the user authorized the simulated first stock
+receipt preview after the completed work is committed. Follow the
+[checkpoint sequence](openspec/changes/define-product-creation/preview-plan.md#checkpoint-before-the-receipt-preview--2026-11-17).
+Stage one batch at a time and give the command to the user. Verify each user
+commit against its prepared manifest. Begin receipt preview implementation after
+the three checkpoints are verified. Never create a commit.
+
+Previous assignment — 2026-11-17: the user said **“go ahead”** to the simulated
+Storybook [product creation preview](openspec/changes/define-product-creation/preview-plan.md)
+after defining PC-001–010. The [creation design](openspec/changes/define-product-creation/design.md)
+records the accepted concept, Inventory constraints and selected behavior. Use
+the existing Products workspace and synthetic outcomes. Review new candidates
+against the current visual workflow. Read sibling repositories without changes.
 Never create a commit.
+
+The user approved the exact 60-image creation gallery. The
+[approval record](openspec/changes/define-product-creation/preview-plan.md#visual-approval-and-reference-promotion--2026-11-17)
+records promotion and preservation of 1,084 prior references. The later
+checkpoint assignment above covers staging these references.
+
+The toolbar checkpoint is complete at user commit `2652246`. The exact six-file
+batch and clean tree/index were verified before this pass. Its staging authority
+is spent. The [investigation record](openspec/changes/define-products-table/toolbar-rendering-followup.md#verification-and-handoff)
+preserves the unresolved visual differences.
 
 Previous investigation — 2026-11-17: the user said **“go ahead”** to investigating the
 reported Basque toolbar overlap and intermittent visual comparisons without

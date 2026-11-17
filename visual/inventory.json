@@ -2775,6 +2775,160 @@
         }
       ],
       "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-creation-catalogue",
+      "title": "Product creation from Productos",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-product-creation--catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-creation-ready"
+        },
+        {
+          "id": "simple",
+          "action": "products-creation-simple"
+        },
+        {
+          "id": "invalid",
+          "action": "products-creation-validation"
+        },
+        {
+          "id": "advanced",
+          "action": "products-creation-advanced"
+        },
+        {
+          "id": "step-review",
+          "action": "products-creation-review"
+        },
+        {
+          "id": "discard",
+          "action": "products-creation-discard"
+        },
+        {
+          "id": "confirmed",
+          "action": "products-creation-confirmed"
+        }
+      ],
+      "limitation": "Synthetic product creation only. Request outcomes, retry time and retained records are fixtures. No live Inventory integration or production browser storage. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-creation-recovery",
+      "title": "Product creation unconfirmed result",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-product-creation--recovery",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-creation-unconfirmed"
+        }
+      ],
+      "limitation": "Synthetic product creation only. Request outcomes, retry time and retained records are fixtures. No live Inventory integration or production browser storage. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-creation-restored",
+      "title": "Product creation restored request",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-product-creation--restored",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-creation-restored"
+        }
+      ],
+      "limitation": "Synthetic product creation only. Request outcomes, retry time and retained records are fixtures. No live Inventory integration or production browser storage. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-creation-memory-only",
+      "title": "Product creation memory-only recovery",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-product-creation--memory-only",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-creation-memory"
+        }
+      ],
+      "limitation": "Synthetic product creation only. Request outcomes, retry time and retained records are fixtures. No live Inventory integration or production browser storage. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-creation-rejected",
+      "title": "Product creation rejected result",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-product-creation--rejected",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-creation-rejected"
+        }
+      ],
+      "limitation": "Synthetic product creation only. Request outcomes, retry time and retained records are fixtures. No live Inventory integration or production browser storage. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-creation-en-form",
+      "title": "Product creation English form",
+      "kind": "story",
+      "sources": [],
+      "locale": "en",
+      "storyId": "inventory-product-creation--catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-creation-simple"
+        }
+      ],
+      "limitation": "Synthetic product creation only. Request outcomes, retry time and retained records are fixtures. No live Inventory integration or production browser storage. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-creation-ca-form",
+      "title": "Product creation Catalan form",
+      "kind": "story",
+      "sources": [],
+      "locale": "ca",
+      "storyId": "inventory-product-creation--catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-creation-simple"
+        }
+      ],
+      "limitation": "Synthetic product creation only. Request outcomes, retry time and retained records are fixtures. No live Inventory integration or production browser storage. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-creation-gl-form",
+      "title": "Product creation Galician form",
+      "kind": "story",
+      "sources": [],
+      "locale": "gl",
+      "storyId": "inventory-product-creation--catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-creation-simple"
+        }
+      ],
+      "limitation": "Synthetic product creation only. Request outcomes, retry time and retained records are fixtures. No live Inventory integration or production browser storage. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-creation-eu-form",
+      "title": "Product creation Basque form",
+      "kind": "story",
+      "sources": [],
+      "locale": "eu",
+      "storyId": "inventory-product-creation--catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-creation-simple"
+        }
+      ],
+      "limitation": "Synthetic product creation only. Request outcomes, retry time and retained records are fixtures. No live Inventory integration or production browser storage. Candidates require specific visual approval."
     }
   ]
 }

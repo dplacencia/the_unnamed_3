@@ -13,6 +13,7 @@ export default defineConfig({
     "products-filters.spec.ts",
     "products-feedback.spec.ts",
     "products-browsing.spec.ts",
+    "products-creation.spec.ts",
   ],
   use: { ...base.use, baseURL: "http://localhost:6006" },
   projects: [
