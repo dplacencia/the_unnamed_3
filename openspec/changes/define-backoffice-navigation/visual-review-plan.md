@@ -209,3 +209,19 @@ The ignored path/content manifests are
 `.cache/navigation-review-reference-batch.json`. Batch 2 waits for the user's
 first commit. Neither batch includes caches/generated files, further design,
 push or deployment. No agent commit is authorized.
+
+## Completed checkpoint — 2026-11-17
+
+The user created commits `a3363fc19c6c98e54d01a9eff63f01cb67dfed92`
+(`docs: close navigation visual review`) and
+`3ae4cbda0ce31410302bfb81abd5b9578a00eb8f`
+(`test: accept navigation visual references`). Root and an independent read-only
+audit verified their exact nine/21-file paths/blobs, parent relationship and
+clean final tree/index. Tasks 11.3–11.4 are complete and staging authority is spent.
+
+Source/build remain `8ac7d6d2…`; all 936 PNGs match the registry, including the
+20 approved navigation images, and the aggregate remains `63d3e9bb…`. The other
+916 entries/images remain unchanged. Proof is retained in
+`.cache/navigation-review-checkpoint-complete.json`. No agent committed.
+The later user-authorized [Products browsing discovery](../define-products-table/browsing-design.md)
+preserves that baseline; it does not inherit staging or future image approval.

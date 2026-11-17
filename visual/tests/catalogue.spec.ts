@@ -256,8 +256,12 @@ async function capture(
   await page.evaluate(async () => {
     await document.fonts.ready;
   });
-  if (await page.locator("[data-products-feedback]").count()) {
-    // Full-page feedback captures start at the document origin after disclosure
+  if (
+    await page
+      .locator("[data-products-feedback], [data-products-browsing]")
+      .count()
+  ) {
+    // Full-page feedback/paging captures start at the document origin after disclosure
     // focus changes; otherwise a sticky header can retain an incidental offset.
     await page.evaluate(async () => {
       window.scrollTo(0, 0);

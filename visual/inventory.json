@@ -2355,6 +2355,426 @@
         }
       ],
       "limitation": "Synthetic recovery/draft design only. Storage, ownership, current-data classification and prior-editor return are predefined simulations; no API, journal, real cross-tab lock or guarantee. Candidates need explicit visual approval."
+    },
+    {
+      "id": "products-browsing-catalogue",
+      "title": "Products browsing catalogue",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-ready"
+        },
+        {
+          "id": "next",
+          "action": "products-browsing-next"
+        },
+        {
+          "id": "view",
+          "action": "products-browsing-view"
+        },
+        {
+          "id": "hidden-sort",
+          "action": "products-browsing-hidden-sort"
+        },
+        {
+          "id": "size25",
+          "action": "products-browsing-size25"
+        },
+        {
+          "id": "offpage",
+          "action": "products-browsing-offpage"
+        },
+        {
+          "id": "offpage-review",
+          "action": "products-browsing-offpage-review"
+        },
+        {
+          "id": "invalid-offpage",
+          "action": "products-browsing-invalid-offpage"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-large-catalogue",
+      "title": "Products browsing large-catalogue",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--large-catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-ready"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-stock-context",
+      "title": "Products browsing stock-context",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--stock-context",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-stock"
+        },
+        {
+          "id": "positive",
+          "action": "products-browsing-stock-positive"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-delayed",
+      "title": "Products browsing delayed",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--delayed",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-ready"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-loading",
+      "title": "Products browsing loading",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--loading",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-initial-loading"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-previous-results",
+      "title": "Products browsing previous-results",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--previous-results",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-previous-results"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-read-error",
+      "title": "Products browsing read-error",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--read-error",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-initial-error"
+        },
+        {
+          "id": "retry",
+          "action": "products-browsing-retry"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-next-read-error",
+      "title": "Products browsing next-read-error",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--next-read-error",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-later-error"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-unusable-position",
+      "title": "Products browsing unusable-position",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--unusable-position",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-unusable"
+        },
+        {
+          "id": "restart",
+          "action": "products-browsing-restart"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-without-estimate",
+      "title": "Products browsing without-estimate",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--without-estimate",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-ready"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-zero-estimate",
+      "title": "Products browsing zero-estimate",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--zero-estimate",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-ready"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-short-page",
+      "title": "Products browsing short-page",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--short-page",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-ready"
+        },
+        {
+          "id": "next",
+          "action": "products-browsing-next"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-editing-mixed",
+      "title": "Products browsing editing-mixed",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--editing-mixed",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-mixed"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-recovery-next-error",
+      "title": "Products browsing recovery-next-error",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--recovery-next-error",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-recovery-next-error"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-en-catalogue",
+      "title": "Products browsing en catalogue",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-ready"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval.",
+      "locale": "en"
+    },
+    {
+      "id": "products-browsing-en-stock-context",
+      "title": "Products browsing en stock-context",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--stock-context",
+      "cases": [
+        {
+          "id": "positive",
+          "action": "products-browsing-stock-positive"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval.",
+      "locale": "en"
+    },
+    {
+      "id": "products-browsing-en-offpage-review",
+      "title": "Products browsing en offpage review",
+      "kind": "story",
+      "sources": [],
+      "locale": "en",
+      "storyId": "inventory-products-browsing--catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-offpage-review"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-ca-catalogue",
+      "title": "Products browsing ca catalogue",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-ready"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval.",
+      "locale": "ca"
+    },
+    {
+      "id": "products-browsing-ca-stock-context",
+      "title": "Products browsing ca stock-context",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--stock-context",
+      "cases": [
+        {
+          "id": "positive",
+          "action": "products-browsing-stock-positive"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval.",
+      "locale": "ca"
+    },
+    {
+      "id": "products-browsing-ca-offpage-review",
+      "title": "Products browsing ca offpage review",
+      "kind": "story",
+      "sources": [],
+      "locale": "ca",
+      "storyId": "inventory-products-browsing--catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-offpage-review"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-gl-catalogue",
+      "title": "Products browsing gl catalogue",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-ready"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval.",
+      "locale": "gl"
+    },
+    {
+      "id": "products-browsing-gl-stock-context",
+      "title": "Products browsing gl stock-context",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--stock-context",
+      "cases": [
+        {
+          "id": "positive",
+          "action": "products-browsing-stock-positive"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval.",
+      "locale": "gl"
+    },
+    {
+      "id": "products-browsing-gl-offpage-review",
+      "title": "Products browsing gl offpage review",
+      "kind": "story",
+      "sources": [],
+      "locale": "gl",
+      "storyId": "inventory-products-browsing--catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-offpage-review"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
+    },
+    {
+      "id": "products-browsing-eu-catalogue",
+      "title": "Products browsing eu catalogue",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-ready"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval.",
+      "locale": "eu"
+    },
+    {
+      "id": "products-browsing-eu-stock-context",
+      "title": "Products browsing eu stock-context",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-products-browsing--stock-context",
+      "cases": [
+        {
+          "id": "positive",
+          "action": "products-browsing-stock-positive"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval.",
+      "locale": "eu"
+    },
+    {
+      "id": "products-browsing-eu-offpage-review",
+      "title": "Products browsing eu offpage review",
+      "kind": "story",
+      "sources": [],
+      "locale": "eu",
+      "storyId": "inventory-products-browsing--catalogue",
+      "cases": [
+        {
+          "id": "default",
+          "action": "products-browsing-offpage-review"
+        }
+      ],
+      "limitation": "Synthetic browsing design only: fixture records, positions, supplied estimates and existing demo search/sort; unknown-stock counts are known only to the fixture provider. No real API, business writes, production storage/pagination or capacity guarantee. Candidates require specific visual approval."
     }
   ]
 }

@@ -66,6 +66,15 @@ import {
 } from "@/icons";
 import { NavigationPrototype } from "./navigation-prototype";
 import {
+  BrowsingFooter,
+  BrowsingStatus,
+  useProductsBrowsing,
+  type BrowsingFixture,
+  type ProductsBrowsing,
+} from "./products-browsing";
+import { isPageSize } from "./products-browsing-model";
+import { makeBrowsingProducts } from "./products-browsing-fixtures";
+import {
   defaultProductsView,
   applyProductsViewUpdate,
   matchesProductQuery,
@@ -204,6 +213,8 @@ export interface ProductsTablePreviewProps {
   locationCount: "one" | "several";
   archivedFixture: boolean;
   saveFixture?: SaveFixture;
+  browsingFixture?: BrowsingFixture;
+  browsingCount?: number;
 }
 
 function StockValue({
@@ -294,6 +305,7 @@ function ProductsTable({
   editor,
   summary,
   productStatus,
+  browsing,
 }: {
   view: ProductsView;
   update: (next: ProductsViewUpdate) => void;
@@ -301,6 +313,7 @@ function ProductsTable({
   editor: ProductEditing;
   summary?: ReactNode;
   productStatus?: (product: PreviewProduct) => ProductRowStatus | undefined;
+  browsing?: ProductsBrowsing | null;
 }) {
   const t = useTranslations("catalogue");
   const phone = useSyncExternalStore(
@@ -315,9 +328,32 @@ function ProductsTable({
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [filterDraft, setFilterDraft] = useState({ ...view.filters });
   const filterHintId = useId();
+  const paged = !!browsing;
+  const enter = browsing?.enter;
+  const leave = browsing?.leave;
+  useEffect(() => {
+    enter?.();
+    return () => leave?.();
+  }, [enter, leave]);
+  const settled = browsing?.state.settled;
+  const resultView = settled
+    ? {
+        ...settled.view,
+        density: view.density,
+        visible: view.visible,
+        order: view.order,
+        widths: view.widths,
+      }
+    : view;
   const selection = useMemo(
-    () => selectProducts(records, view),
-    [records, view],
+    () =>
+      browsing
+        ? {
+            products: settled?.records ?? [],
+            unknownCount: settled?.unknownCount ?? 0,
+          }
+        : selectProducts(records, view),
+    [browsing, settled, records, view],
   );
   const hasFilters =
     view.filters.includeArchived || view.filters.positiveStockOnly;
@@ -340,6 +376,32 @@ function ProductsTable({
     observer.observe(frame.current);
     return () => observer.disconnect();
   }, []);
+  useEffect(() => {
+    const element = frame.current;
+    const parent = element?.parentElement;
+    if (!paged || !element || !parent) return;
+    const measure = () => {
+      const footer = parent.querySelector(".products-browsing-footer");
+      const available = Math.max(
+        160,
+        Math.floor(
+          window.innerHeight -
+            element.getBoundingClientRect().top -
+            (footer?.getBoundingClientRect().height ?? 44) -
+            20,
+        ),
+      );
+      element.style.setProperty("--products-browsing-height", `${available}px`);
+    };
+    const observer = new ResizeObserver(measure);
+    observer.observe(parent);
+    window.addEventListener("resize", measure);
+    measure();
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, [paged]);
   const columns = useMemo<ColumnDef<typeof features, PreviewProduct>[]>(
     () => [
       {
@@ -382,6 +444,8 @@ function ProductsTable({
     autoResetAll: false,
     enableMultiSort: false,
     enableSortingRemoval: false,
+    manualSorting: !!browsing,
+    manualFiltering: !!browsing,
     state: {
       sorting: [view.sort],
       columnFilters: [{ id: "product", value: view.query }],
@@ -431,6 +495,13 @@ function ProductsTable({
   return (
     <div
       data-products-preview
+      data-products-browsing={browsing ? "" : undefined}
+      data-browsing-state={browsing?.state.phase}
+      data-browsing-read-generation={browsing?.state.generation}
+      data-browsing-settled-query={settled?.view.query}
+      data-browsing-settled-location={settled?.view.location ?? undefined}
+      data-browsing-settled-size={settled?.size}
+      data-browsing-position={settled?.position}
       className="products-preview"
       data-density={view.density}
       style={
@@ -619,6 +690,38 @@ function ProductsTable({
                 </SelectContent>
               </Select>
             </label>
+            {browsing && (
+              <label className="products-density-label">
+                {t("pbPageSize")}
+                <Select
+                  value={String(browsing.size)}
+                  disabled={browsing.state.phase === "loading"}
+                  onValueChange={(value) => {
+                    const size = Number(value);
+                    if (isPageSize(size)) browsing.changeSize(size);
+                  }}
+                  items={[25, 50, 100].map((size) => ({
+                    value: String(size),
+                    label: String(size),
+                  }))}
+                >
+                  <SelectTrigger
+                    size="sm"
+                    aria-label={t("pbPageSize")}
+                    data-browsing-page-size
+                  >
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {[25, 50, 100].map((size) => (
+                      <SelectItem key={size} value={String(size)}>
+                        {size}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </label>
+            )}
             <p className="products-menu-title">{t("ptColumns")}</p>
             {view.order
               .filter((field) => field !== "stock" || view.stock)
@@ -770,6 +873,7 @@ function ProductsTable({
           {t("pfIncomplete", { count: selection.unknownCount })}
         </p>
       )}
+      {browsing && <BrowsingStatus browsing={browsing} view={view} />}
       {view.query && (
         <div className="products-applied-query">
           <span>{t("ptSearchFor", { query: view.query })}</span>
@@ -788,6 +892,7 @@ function ProductsTable({
       {tableEditing && (
         <EditingValidationSummary
           editor={editor}
+          includeOffPageDrafts={!!browsing}
           fieldVisible={(id, field) =>
             rows.some((row) => row.id === id) &&
             (field === "name" || view.visible.sku)
@@ -798,7 +903,12 @@ function ProductsTable({
         <EditingResultsView editor={editor} />
       )}
       {summary}
-      <div className="products-table-frame" ref={frame} data-products-scroll>
+      <div
+        className="products-table-frame"
+        ref={frame}
+        data-products-scroll
+        aria-busy={browsing?.state.phase === "loading" || undefined}
+      >
         <Table className="products-data-table">
           <caption className="sr-only">{t("gridProducts")}</caption>
           <colgroup>
@@ -888,7 +998,17 @@ function ProductsTable({
                           )}
                         </div>
                       ) : cell.column.id === "stock" ? (
-                        <StockValue product={row.original} view={view} t={t} />
+                        browsing && !settled?.view.stock ? (
+                          <span className="products-muted">
+                            {t("gridUnknown")}
+                          </span>
+                        ) : (
+                          <StockValue
+                            product={row.original}
+                            view={resultView}
+                            t={t}
+                          />
+                        )
                       ) : cell.column.id === "sku" ? (
                         tableEditing ? (
                           <EditingSku editor={editor} product={row.original} />
@@ -945,7 +1065,7 @@ function ProductsTable({
             );
           })}
         </Table>
-        {!rows.length && (
+        {!rows.length && (!browsing || browsing.state.phase === "ready") && (
           <div className="products-empty">
             <p>
               {t(
@@ -962,20 +1082,28 @@ function ProductsTable({
           </div>
         )}
       </div>
-      <div className="products-results">
-        <span data-products-count>
-          {t(
-            selection.unknownCount > 0 ? "pfConfirmedCount" : "ptResultCount",
-            { count: rows.length },
-          )}
-        </span>
-        {view.sort.id === "sku" && !view.visible.sku && (
-          <span>
-            {t("ptHiddenSort", { column: t("gridSku") })}{" "}
-            {view.sort.desc ? "↓" : "↑"}
+      {browsing ? (
+        <BrowsingFooter
+          browsing={browsing}
+          displayedCount={rows.length}
+          view={resultView}
+        />
+      ) : (
+        <div className="products-results">
+          <span data-products-count>
+            {t(
+              selection.unknownCount > 0 ? "pfConfirmedCount" : "ptResultCount",
+              { count: rows.length },
+            )}
           </span>
-        )}
-      </div>
+          {view.sort.id === "sku" && !view.visible.sku && (
+            <span>
+              {t("ptHiddenSort", { column: t("gridSku") })}{" "}
+              {view.sort.desc ? "↓" : "↑"}
+            </span>
+          )}
+        </div>
+      )}
       <Sheet
         open={panelId !== null}
         onOpenChange={(open) => {
@@ -1035,15 +1163,23 @@ function ProductsTable({
                 <div className="products-panel-stock">
                   <h3>{t("gridStock")}</h3>
                   <p className="products-muted">
-                    {view.location
+                    {resultView.location
                       ? t(
-                          view.location === "sales-floor"
+                          resultView.location === "sales-floor"
                             ? "navSalesFloor"
                             : "navStockroom",
                         )
                       : t("navChooseLocationHint")}
                   </p>
-                  <StockValue product={panelProduct} view={view} t={t} />
+                  {browsing && !settled?.view.stock ? (
+                    <span className="products-muted">{t("gridUnknown")}</span>
+                  ) : (
+                    <StockValue
+                      product={panelProduct}
+                      view={resultView}
+                      t={t}
+                    />
+                  )}
                 </div>
               )}
             </>
@@ -1064,7 +1200,7 @@ export function ProductsTableWorkspace(
 ) {
   const { editor } = props;
   const t = useTranslations("catalogue");
-  const key = `${props.viewKey ?? "irin-products-design"}:${props.initialStock}:${props.initialDensity}:${props.hiddenColumns}:${props.locationCount}:${props.archivedFixture}:${props.saveFixture ?? "confirmed"}`;
+  const key = `${props.viewKey ?? "irin-products-design"}:${props.initialStock}:${props.initialDensity}:${props.hiddenColumns}:${props.locationCount}:${props.archivedFixture}:${props.saveFixture ?? "confirmed"}${props.browsingFixture ? `:browsing:${props.browsingFixture}:${props.browsingCount ?? 1000}` : ""}`;
   const [view, setView] = useState(() =>
     readProductsView(key, {
       stock: props.initialStock,
@@ -1076,6 +1212,13 @@ export function ProductsTableWorkspace(
           : null,
     }),
   );
+  const browsing = useProductsBrowsing({
+    enabled: props.browsingFixture !== undefined,
+    fixture: props.browsingFixture ?? "catalogue",
+    records: editor.records,
+    view,
+    preferenceKey: key,
+  });
   useEffect(() => {
     try {
       sessionStorage.setItem(key, JSON.stringify(view));
@@ -1084,15 +1227,26 @@ export function ProductsTableWorkspace(
     }
   }, [key, view]);
   const update = useCallback(
-    (next: ProductsViewUpdate) =>
-      setView((current) =>
-        applyProductsViewUpdate(
-          current,
-          next,
-          props.locationCount === "one" ? "sales-floor" : undefined,
-        ),
-      ),
-    [props.locationCount],
+    (next: ProductsViewUpdate) => {
+      if (!browsing) {
+        setView((current) =>
+          applyProductsViewUpdate(
+            current,
+            next,
+            props.locationCount === "one" ? "sales-floor" : undefined,
+          ),
+        );
+        return;
+      }
+      const normalized = applyProductsViewUpdate(
+        view,
+        next,
+        props.locationCount === "one" ? "sales-floor" : undefined,
+      );
+      setView(normalized);
+      browsing?.changeView(normalized);
+    },
+    [view, props.locationCount, browsing],
   );
   const locations =
     props.locationCount === "one"
@@ -1158,6 +1312,7 @@ export function ProductsTableWorkspace(
             editor={editor}
             summary={props.summary}
             productStatus={props.productStatus}
+            browsing={browsing}
           />
         }
       />
@@ -1168,8 +1323,11 @@ export function ProductsTableWorkspace(
 
 export function ProductsTablePreview(props: ProductsTablePreviewProps) {
   const initialRecords = useMemo(
-    () => previewProducts(props.archivedFixture),
-    [props.archivedFixture],
+    () =>
+      props.browsingFixture
+        ? makeBrowsingProducts(props.browsingCount ?? 1000)
+        : previewProducts(props.archivedFixture),
+    [props.archivedFixture, props.browsingFixture, props.browsingCount],
   );
   const editor = useProductEditing(
     initialRecords,

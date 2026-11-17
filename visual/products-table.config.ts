@@ -12,6 +12,7 @@ export default defineConfig({
     "products-recovery.spec.ts",
     "products-filters.spec.ts",
     "products-feedback.spec.ts",
+    "products-browsing.spec.ts",
   ],
   outputDir: path.join(output, "test-results"),
   reporter: [

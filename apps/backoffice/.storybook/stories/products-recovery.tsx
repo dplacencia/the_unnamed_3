@@ -15,6 +15,8 @@ import {
   type ProductRowStatus,
 } from "./products-table-preview";
 import { previewProducts, type PreviewProduct } from "./products-table-model";
+import { makeBrowsingProducts } from "./products-browsing-fixtures";
+import type { BrowsingFixture } from "./products-browsing";
 import { useProductEditing, type ProductEditing } from "./products-editing";
 import {
   editingDefaults,
@@ -154,19 +156,25 @@ function outcomes(
 
 export function ProductsRecoveryPreview({
   fixture,
+  browsingFixture,
+  browsingCount,
 }: {
   fixture: RecoveryFixture;
+  browsingFixture?: BrowsingFixture;
+  browsingCount?: number;
 }) {
   const t = useTranslations("catalogue");
   const initial = useMemo(() => {
-    const products = previewProducts();
+    const products = browsingFixture
+      ? makeBrowsingProducts(browsingCount ?? 1000)
+      : previewProducts();
     if (fixture === "long-name")
       products[0] = {
         ...products[0],
         name: "Café molido de especialidad de origen único con tueste natural",
       };
     return products;
-  }, [fixture]);
+  }, [fixture, browsingFixture, browsingCount]);
   const [recoveries, setRecoveries] = useState(() => recoveryFixture(fixture));
   const [draft, setDraft] = useState(() => draftFixture(fixture, initial[0]));
   const [dialog, setDialog] = useState<"owner" | "discard" | "review" | null>(
@@ -597,6 +605,8 @@ export function ProductsRecoveryPreview({
         summary={summary}
         productStatus={status}
         viewKey={`irin-recovery-preview:${fixture}`}
+        browsingFixture={browsingFixture}
+        browsingCount={browsingCount}
       />
       <Dialog
         open={dialog === "owner"}

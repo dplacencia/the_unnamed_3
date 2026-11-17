@@ -67,7 +67,101 @@ context: |
   UI language from browser headers. The landing uses Spanish at / and localized
   /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
   one year (365 days), with no account-level or cross-device preference implied.
-  Latest assignment 2026-11-17: user said "go ahead" to two sequential commit
+  Latest commit preparation 2026-11-17: user said "go ahead" to checkpointing the
+  approved browsing work in two sequential batches. Follow browsing-preview-plan.md
+  commit preparation: stage 31 implementation/spec/test/docs files first and provide
+  the command; leave 149 reference files unstaged. After the user commits the exact
+  first batch, verify its manifest and stage 149 references with their command.
+  Preserve known visual limitations. No UI/API continuation; never create commits.
+  Previous visual approval 2026-11-17: user answered "Approve all 148 images" for
+  exact run 2026-11-17T12-43-29.019Z, source 5f628f39…. Only those 148 new cases
+  are promoted, preserving 936 prior images/entries, for 1,084 accepted references.
+  Read the approval record in browsing-preview-plan.md. This supersedes pending/
+  no-promotion wording for that set only. Page numbers remain synthetic; Inventory
+  provides no authoritative page number or Products search-pagination contract.
+  Retain the icon intermittency and Basque toolbar follow-up. No UI/API continuation,
+  staging or commit follows. Never create commits.
+  Post-promotion comparison is 147/148: phone invalid-off-page has an intermittent
+  one-pixel button-border difference (two passes/one isolated failure). The legacy
+  icon variance also remains. Do not claim wholly green comparisons or alter the
+  accepted images, renderer or tolerance to hide variance.
+  Previous revision 2026-11-17: user selected "Between Anterior and Siguiente
+  (Recommended)" for the PT-054 current displayed page number. Execute the bounded
+  page-number revision in browsing-preview-plan.md: successful-result number only,
+  retained during reads/errors, estimated totals separate. Refresh the exact
+  candidate proposal; original 148 images are not approved. Preserve 936 accepted
+  references, fonts/renderer/tolerance and empty index. No promotion, staging or
+  commit follows. Never create commits.
+  Revision evidence source 5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943:
+  134 code tests, 179 full browser checks (30 focused), 148 capture checks pass.
+  Exact run 2026-11-17T12-43-29.019Z supersedes the unapproved 12-09-39 proposal.
+  Read the revision record for accepted-reference proof and the pre-existing
+  Basque mobile toolbar observation. Visual approval is recorded above.
+  Current accepted-reference comparison is not wholly green: 935/936 pass; one
+  existing Catalan tablet moon-icon case remains intermittent (one pass/two failures
+  in isolated checks). Its cause remains unresolved; do not claim a renderer fix.
+  Previous execution 2026-11-17: user selected "Build the prepared simulated preview
+  (Recommended)". Execute the bounded browsing-preview-plan.md for PT-044–053:
+  1,000 synthetic products, 10,000-record bounded-DOM check, existing demo matching/
+  sort, selective paging-control busy/latest-view protection, no real API or new
+  dependency. The exact plan file scope supersedes earlier no-source-edit status
+  for this preview only. Keep full editor state stable, settled scope honest and
+  all 936 references unchanged. Exact visuals require review; no promotion,
+  staging or commit follows. Never create commits.
+  Previous verification 2026-11-17: that preview is implemented at source
+  1e81de9490b0fb72e279400ec14daebddaed5f3923d052d9e39688b16c756500.
+  Its plan records 130 code tests, 178 browser checks, 148 candidate captures,
+  independent reviews and passing comparison evidence for all 936 accepted cases,
+  including one documented moon-icon variance followed by three passing repeats.
+  Exact run 2026-11-17T12-09-39.261Z awaits specific visual approval. Accepted
+  references remain unchanged and the index is empty. Continue from that review
+  boundary; do not repeat implementation or infer approval.
+  Previous discovery 2026-11-17: user said "go ahead, make sure you check how
+  inventory module handles pagination" after the proposed Products browsing/scale
+  pass. Follow define-products-table/browsing-design.md. Read Inventory only.
+  Existing supporting collection pagination does not define Products search paging;
+  the inspected current product handler reads an exact permanent ID. Keep that
+  distinction explicit. The user selected "Anterior / Siguiente (Recommended)";
+  PT-044 records explicit directional controls replacing visible rows. Do not
+  repeat this choice. The user also selected "50 by default; 25/50/100 options
+  (Recommended)"; PT-045 records first-preview page sizes without adopting backend
+  limits. The user selected "Remember per tab; restart when size changes
+  (Recommended)" under PT-046: remember size for the same tab/business, start new
+  tabs at 50 and restart at the first result group on size change, preserving
+  submitted search, sorting, applied filters and stock/location settings. The user
+  selected "Displayed count + supplied, labelled estimate (Recommended)" under
+  PT-047: exact displayed-product count plus an explicitly labelled supplied
+  estimate; without a supplied total, show only the displayed count. No count API
+  or estimate-request policy follows. The user selected "Keep drafts across pages;
+  save together (Recommended)" under PT-048: retain table drafts across groups,
+  one explicit save includes off-page edits, errors remain accessible and leaving
+  Products keeps the existing guard. Individual outcomes, all-draft validation and
+  original-command recovery remain. The user selected "Keep marked previous
+  results while loading (Recommended)" under PT-049: neutral first load, marked
+  previous results during later page loads, replacement on success and inline
+  technical-read error with Retry, retaining previous results when available.
+  No automatic read budget or write retry follows. The user selected "Use shared
+  reset policy (Recommended)" under PT-050: submitted-search/sort/applied-filter
+  changes restart at the first group, retaining size/drafts; layout-only/density
+  changes keep the current group. The user selected "Keep position when not
+  stock-filtered (Recommended)" under PT-051: location changes retain position
+  without the stock-only filter and restart with it active; hiding stock that
+  clears it also restarts. Preserve size/drafts/other settings and honest stock
+  scope. The user selected "Restore position with a fresh read (Recommended)"
+  under PT-052: restore last result-group position in the same tab/business on
+  return/refresh using fresh data; if reported unusable, explain and offer explicit
+  Volver al inicio. Preserve view/size and draft/recovery rules. No silent reset or
+  automatic write/recovery follows. Precise matching/sort and in-flight load/save
+  details remain open. The bounded browsing-preview-plan.md is selected for
+  implementation: demo-only matching/sort, larger synthetic fixtures and explicit
+  paging-control busy/latest-view behavior under PT-053. Execute only its bounded
+  file scope. Ask about unresolved frontend choices before adopting them. Preserve
+  all 936 accepted references until specific candidate approval. Production
+  matching/sort and coordination stay deferred. No new dependency, API/IAM/hosting, Inventory edit,
+  staging or commit follows. The navigation checkpoint is complete as user commits
+  a3363fc and 3ae4cbd, matching exact nine/21-file manifests. Tree/index were clean
+  before this new documentation pass. Earlier staging authority is spent.
+  Previous assignment 2026-11-17: user said "go ahead" to two sequential commit
   batches. Follow the navigation visual-review-plan.md commit-preparation record.
   Stage exactly nine documentation/configuration files first; give the user its
   commit command. Keep all 21 approved-reference files outside the index. After

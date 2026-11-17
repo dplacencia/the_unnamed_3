@@ -1406,3 +1406,344 @@ confirmation dialogs and a general notice system are outside this revision.
 - **WHEN** the selected pattern is developed in the simulated preview
 - **THEN** TailAdmin component treatment and existing branding remain the basis
 - **AND** exact spacing, responsive arrangement and new candidate images require visual review rather than being accepted by this direction alone.
+
+### Requirement: PT-044 — Explicit directional browsing replaces visible rows
+
+Products browsing SHALL use explicit Anterior/Siguiente controls to move between
+groups of results, replacing the visible product rows rather than appending
+another group to the working table. This selects the frontend browsing model
+for the simulated design, without selecting a Products API, continuation-token
+semantics, page size, counts, ordering, snapshot, loading or retention policy.
+Existing editing, draft, validation and recovery decisions SHALL retain their
+separate scope.
+
+#### Scenario: The merchant navigates to another group of results
+
+- **WHEN** the merchant uses Anterior or Siguiente and that requested group is successfully available
+- **THEN** the table presents that group in place of the previously visible rows
+- **AND** this model does not append groups through Cargar más or automatic infinite scrolling.
+
+#### Scenario: Concrete paging behavior is designed
+
+- **WHEN** page sizes, navigation availability, counts, loading, refresh or persistence are proposed
+- **THEN** those choices require their own approved basis and do not follow automatically from directional navigation
+- **AND** supporting catalogue/stock pagination does not become a Products search contract or a callable integration.
+
+#### Scenario: Navigation intersects with editing or recovery
+
+- **WHEN** cross-page editing, validation, draft handling or unresolved-command behavior is designed
+- **THEN** existing selected safeguards retain their meaning
+- **AND** this browsing-model choice alone does not authorize automatic saving, discarding drafts or restarting a recovery command.
+
+### Requirement: PT-045 — Initial preview page size and explicit options
+
+The first simulated Products browsing design SHALL default to 50 products per
+page when no applicable explicit page-size choice exists. It SHALL offer the
+merchant choices of 25, 50 and 100 products per page. These are frontend preview
+settings, not an adopted Products API bound, measured performance guarantee or
+inheritance of the supporting Inventory collection limits. Page-size retention,
+traversal reset, loading and cross-page editing behavior remain separate choices.
+
+#### Scenario: The preview has no applicable page-size choice
+
+- **WHEN** the Products preview initializes page size without an applicable explicit choice
+- **THEN** its page-size setting is 50 products per page
+- **AND** this default does not select whether or how a previous explicit choice is retained.
+
+#### Scenario: The merchant chooses a page size
+
+- **WHEN** the merchant uses the page-size control
+- **THEN** the available choices are 25, 50 and 100 products per page
+- **AND** these choices do not select a future backend maximum, response-completeness promise or production-capacity claim.
+
+#### Scenario: Retention and traversal behavior are designed
+
+- **WHEN** remembering page size, changing the current result group or preserving edits is proposed
+- **THEN** those behaviors require their own approved basis and preserve the existing editing/recovery decisions
+- **AND** no persistence, automatic reset, save or discard follows from this page-size choice alone.
+
+### Requirement: PT-046 — Per-tab page size and restart on size change
+
+Products SHALL remember the explicit page-size choice within the current tab
+for the same business. A new tab SHALL start with PT-045's default of 50.
+Changing page size SHALL start browsing at the first result group, preserving
+the submitted search, sorting, applied filters and stock/location settings.
+
+#### Scenario: The merchant returns in the same tab and business
+
+- **WHEN** the merchant returns to Products while the same tab remains open for the same business
+- **THEN** the explicit page-size choice is retained
+- **AND** this does not determine which result group, continuation token or scroll position is restored.
+
+#### Scenario: A new tab opens Products
+
+- **WHEN** Products is opened in a new tab
+- **THEN** its page-size setting starts at 50 rather than inheriting another tab's choice
+- **AND** this preference default does not discard retained drafts or submitted recovery records.
+
+#### Scenario: The merchant changes page size
+
+- **WHEN** the merchant chooses a different page size
+- **THEN** browsing starts at the first result group with that size setting
+- **AND** submitted search, sorting, applied filters and stock/location settings remain unchanged.
+
+#### Scenario: Cross-page editing and loading are designed
+
+- **WHEN** changing page size intersects with drafts, validation, unresolved commands or a pending retrieval
+- **THEN** existing selected safeguards retain their meaning
+- **AND** this preference decision does not select loading presentation, automatic save/discard or a recovery restart.
+- **AND** the preference scope and size-change reset select neither a storage engine nor backend paging semantics.
+
+### Requirement: PT-047 — Displayed count and supplied labelled estimate
+
+Products SHALL show the exact number of products currently displayed. When a
+data source supplies an estimated total for the relevant matching and authorized
+selection, the view SHALL label it as an estimate. Without a supplied total, it
+SHALL show only the displayed-product count. This selects count presentation,
+not a Products API or estimate-request policy.
+
+#### Scenario: No total is supplied
+
+- **WHEN** the displayed results have no supplied total
+- **THEN** the view shows their exact displayed-product count
+- **AND** it does not fabricate a global count or substitute zero for the missing total.
+
+#### Scenario: An estimated total is supplied
+
+- **WHEN** the data source supplies an estimated total for the relevant matching and authorized selection
+- **THEN** the view shows it explicitly as an estimate alongside the exact displayed-product count
+- **AND** the supplied value is preserved without silent rounding; a present zero remains distinguishable from an absent estimate.
+
+#### Scenario: Counts are used while browsing
+
+- **WHEN** displayed counts or estimates appear beside navigation
+- **THEN** this presentation alone establishes no stable page number, exact total-page count, continuation availability or end-of-results status
+- **AND** neither a product count nor an estimated record total becomes a stock quantity or verification of physical stock.
+
+#### Scenario: Stock filtering leaves unassessed candidates
+
+- **WHEN** PT-042's incomplete-results conditions apply
+- **THEN** the existing distinction between confirmed matches and unassessed candidates remains visible
+- **AND** this count-presentation decision does not promote a count observed on one loaded page into an unknown-stock count for the entire matching catalogue.
+
+### Requirement: PT-048 — Table drafts and one save action across pages
+
+While Editar tabla is active, Products SHALL retain drafts when moving between
+result groups. One explicit Guardar cambios action SHALL cover all edited
+products, including those on other pages. Merchants SHALL have a clear way to
+find off-page edits and validation errors. Leaving Products SHALL retain
+PT-025's guard; PT-023–024's individual outcomes and all-draft validation remain
+applicable.
+
+#### Scenario: The merchant changes pages with table drafts
+
+- **WHEN** the merchant moves to another result group while Editar tabla has drafts
+- **THEN** those drafts remain available across pages without requiring save/discard before each page change
+- **AND** page navigation itself does not save or discard them.
+
+#### Scenario: Guardar cambios includes off-page edits
+
+- **WHEN** the merchant explicitly saves changes in the table editor
+- **THEN** the action covers the edited products across pages under the existing validation and eligible-submission rules
+- **AND** outcomes remain individual confirmations rather than a promise of atomic batch success.
+
+#### Scenario: An off-page product has a field error
+
+- **WHEN** an edited product outside the displayed result group has a detectable field error
+- **THEN** the all-draft local validation gate still applies before sending the requested changes
+- **AND** the merchant can find that product and its field error rather than losing access to it through pagination.
+
+#### Scenario: The merchant leaves Products or has unresolved commands
+
+- **WHEN** the merchant leaves Products with unsaved changes or paging intersects with original unresolved commands
+- **THEN** the existing departure guard, original-command recovery and affected-product protections retain their meaning
+- **AND** this choice defines no new backend batch, automatic save, production persistence or recovery restart.
+
+### Requirement: PT-049 — Marked previous results during page loading and failure
+
+Products SHALL use a neutral first-load state. Later page requests SHALL retain
+previously loaded results with a clear previous-results/loading indication and
+replace them only on success. Technical read failure SHALL show an inline error
+with Retry and retain previous results when available. This selects presentation,
+not automatic read retries or a write/recovery policy.
+
+#### Scenario: The first page has no previous result
+
+- **WHEN** the initial page is loading without previously loaded results
+- **THEN** the view shows a neutral loading state
+- **AND** a technical read failure shows an error with Retry rather than fabricated rows or successful empty results.
+
+#### Scenario: Another page is loading
+
+- **WHEN** a later page request is pending
+- **THEN** previously loaded results remain visible and clearly identified as previous results while loading
+- **AND** they retain their known scope and do not become a confirmed response for the requested group or selection.
+
+#### Scenario: The requested page succeeds or fails technically
+
+- **WHEN** the requested result is successfully available
+- **THEN** it replaces the previous result group
+- **WHEN** the read fails technically
+- **THEN** an inline error and Retry are shown, retaining previous results when available and their honest previous-results status.
+
+#### Scenario: A read retry intersects with drafts or commands
+
+- **WHEN** the merchant retries a failed page read
+- **THEN** that action concerns retrieval rather than resubmitting business writes or restarting original-command recovery
+- **AND** existing editing/draft protections remain; automatic read budgets, busy controls, late responses and distinct access/continuation failures require their own approved basis.
+
+### Requirement: PT-050 — Result-set resets and layout-only retention
+
+Changes to submitted search, sorting or applied filters SHALL start Products
+browsing at the first result group, preserving page size and product drafts.
+Column-only visibility/order/width and density changes SHALL keep the current
+result group. Existing search/filter submission rules SHALL retain their scope.
+This selects frontend reset behavior, not matching, ordering or backend cursor
+mechanisms.
+
+#### Scenario: The submitted search, sort or applied filters change
+
+- **WHEN** the submitted search is changed or cleared, sorting changes or applied filters change
+- **THEN** browsing starts at the first result group for the changed result-set settings
+- **AND** the chosen page size and product drafts remain available under their existing rules.
+
+#### Scenario: The merchant changes only table presentation
+
+- **WHEN** column visibility, column order/width or density changes without changing an applied result-set constraint
+- **THEN** the current result group is retained
+- **AND** a layout-only action does not itself submit search, change applied filters or save/discard product drafts.
+
+#### Scenario: Search or filter choices are still drafts
+
+- **WHEN** search text is being edited without submission or filter changes have not been applied
+- **THEN** the existing search/filter submission and cancellation rules remain applicable
+- **AND** this reset policy does not apply an unsubmitted query or unconfirmed filter draft.
+
+#### Scenario: Other traversal and ordering choices are considered
+
+- **WHEN** location/stock context, return/refresh position, exact matching/sort rules or backend continuation is designed
+- **THEN** those choices need their own approved basis and do not follow solely from this reset policy
+- **AND** PT-048–049's draft and honest loading/failure protections retain their meaning.
+
+### Requirement: PT-051 — Stock-location navigation respects filtering
+
+With stock shown, changing location SHALL retain Products' browsing position
+when the stock-only filter is inactive and restart at the first result group
+when it is active. Hiding stock that clears this active filter SHALL also
+restart at the first group. Preserve page size, product drafts and other applied
+settings. This selects frontend navigation, not frozen membership or backend
+continuation semantics.
+
+#### Scenario: Location changes without the stock-only filter
+
+- **WHEN** the merchant changes the shown stock location without Solo con existencias registradas active
+- **THEN** the current browsing position is retained
+- **AND** this does not promise a frozen product membership or a reusable backend cursor across selections.
+
+#### Scenario: Location changes with the stock-only filter
+
+- **WHEN** the merchant changes location while Solo con existencias registradas is active
+- **THEN** browsing restarts at the first group for the changed stock-filter context
+- **AND** the existing stock meaning and PT-042 confirmed/unassessed distinction remain applicable.
+
+#### Scenario: Hiding stock clears the active stock-only filter
+
+- **WHEN** hiding stock clears the active stock-only filter under the existing visibility/filter rules
+- **THEN** browsing restarts at the first result group
+- **AND** page size, product drafts and the other applied settings remain unchanged.
+
+#### Scenario: Stock context is loading or unavailable
+
+- **WHEN** the selected stock location differs from the scope of previously loaded quantities
+- **THEN** previous-location quantities are not relabelled as newly retrieved stock for the chosen location
+- **AND** existing honest loading/failure, location-retention and draft/recovery rules retain their scope; exact presentation requires review.
+
+### Requirement: PT-052 — Fresh restoration and explicit unusable-position restart
+
+Within the same tab/business, Products SHALL remember the last result-group
+position and request fresh data for it on return or refresh. If that position
+is reported unusable, show an explanation and Volver al inicio; restart only on
+explicit request. Preserve the applied view, page size and existing draft/recovery
+restoration rules.
+
+#### Scenario: The merchant returns or refreshes in the same tab and business
+
+- **WHEN** Products is revisited or refreshed with a remembered result-group position
+- **THEN** the view requests fresh data for that position and preserves the applied view and page size
+- **AND** this does not make cached rows authoritative or promise unchanged membership, a frozen snapshot, a stable page number or exact scroll restoration.
+
+#### Scenario: The saved position is reported unusable
+
+- **WHEN** the data source reports that the remembered position cannot be used
+- **THEN** the view explains the condition and offers Volver al inicio
+- **AND** it does not silently reset, fabricate empty success or reinterpret a technical read failure or known access denial as an unusable position.
+
+#### Scenario: The merchant explicitly starts again
+
+- **WHEN** the merchant requests Volver al inicio after an unusable-position report
+- **THEN** browsing requests the first result group while preserving view settings, page size and drafts under their existing rules
+- **AND** this does not resume editing, resend business writes or restart original-command recovery automatically.
+
+#### Scenario: Existing intentional resets or restoration rules apply
+
+- **WHEN** PT-046/050/051 requires an intentional first-group restart or retained drafts/commands are offered for restoration
+- **THEN** those selected rules retain their scope and PT-052 does not override them
+- **AND** backend position formats, token lifetimes, APIs and storage mechanisms remain separate implementation decisions.
+
+### Requirement: PT-053 — Simulated page reads protect the latest view
+
+The bounded Products preview SHALL disable page navigation and page-size changes
+while a simulated page read is pending. Other controls retain their existing
+guards. A newer submitted view SHALL supersede the pending read intent; an older
+completion SHALL NOT replace the latest requested view. This is a simulation
+policy, not a guarantee of server-side cancellation or request concurrency.
+
+#### Scenario: A simulated page read is active
+
+- **WHEN** the preview is waiting for a requested page
+- **THEN** Anterior/Siguiente and page-size changes are disabled
+- **AND** unrelated controls remain usable under existing edit, validation and recovery guards.
+
+#### Scenario: Another view is requested before completion
+
+- **WHEN** a newer submitted view supersedes a pending read and an older response completes later
+- **THEN** only the result for the latest requested view may replace the displayed result
+- **AND** read intent/generation state remains separate from business operation identities, retry counts and recovery commands.
+
+### Requirement: PT-054 — Current displayed page is visible
+
+The simulated Products preview SHALL show the current displayed page number
+between Anterior and Siguiente after a successful read. It SHALL update only
+when the requested result succeeds, retaining the displayed result's number
+while loading or after failure. Keep estimated product totals separate; do not
+infer an exact page total from them. Existing reset and restoration rules remain.
+
+#### Scenario: A result group loads successfully
+
+- **WHEN** the first, next or previous group is successfully displayed
+- **THEN** its known current-page number appears between the directional controls
+- **AND** a click alone does not advance the displayed number.
+
+#### Scenario: A read is pending or fails
+
+- **WHEN** another result is loading or a read fails while prior rows remain displayed
+- **THEN** the indicator retains the prior displayed result's number
+- **AND** an older superseded response cannot change that number.
+
+#### Scenario: No successful result exists
+
+- **WHEN** initial loading, technical failure or an unusable position has not produced a displayed result
+- **THEN** the preview does not invent a current displayed page number
+- **AND** existing loading, retry and explicit restart behavior remains.
+
+#### Scenario: Short groups or estimated totals exist
+
+- **WHEN** the synthetic provider returns fewer records than the requested size or supplies an estimated total
+- **THEN** the indicator uses the provider's known group position rather than inferring an ordinal from record count or estimated totals
+- **AND** it does not claim an exact total number of pages or a production Inventory page-number contract.
+
+#### Scenario: Existing browsing resets or fresh restoration apply
+
+- **WHEN** an existing rule requests the first group or freshly reads a restored position
+- **THEN** the number reflects the successfully loaded group under that rule
+- **AND** the indicator introduces no additional reset, cached-data authority or write/recovery behavior.

@@ -9,6 +9,10 @@ export async function productsAction(
   locale: Locale,
 ): Promise<void> {
   const text = catalogueMessages[locale];
+  if (action.startsWith("products-browsing-")) {
+    await browsingAction(page, action, locale);
+    return;
+  }
   if (action.startsWith("products-recovery-")) {
     await recoveryAction(page, action, locale);
     return;
@@ -191,6 +195,189 @@ export async function productsAction(
     }
     default:
       throw new Error(`Unknown Products action: ${action}`);
+  }
+}
+
+async function browsingAction(page: Page, action: string, locale: Locale) {
+  const text = catalogueMessages[locale];
+  const root = page.locator("[data-products-browsing]");
+  const rows = page.locator("[data-products-preview] table [data-product-id]");
+  const state = (phase: "ready" | "loading" | "technical" | "unusable") =>
+    expect(root).toHaveAttribute("data-browsing-state", phase);
+  const generation = async () =>
+    Number(await root.getAttribute("data-browsing-read-generation"));
+  const read = async (
+    trigger: () => Promise<unknown>,
+    phase: "ready" | "loading" | "technical" = "ready",
+  ) => {
+    const previous = await generation();
+    await trigger();
+    await expect.poll(generation).toBeGreaterThan(previous);
+    await state(phase);
+  };
+  const next = (phase: "ready" | "loading" | "technical" = "ready") =>
+    read(() => page.locator("[data-browsing-next]").click(), phase);
+  const view = () =>
+    page.getByRole("button", { name: text.gridView, exact: true }).click();
+  const stock = async () => {
+    const toggle = page.getByRole("checkbox", {
+      name: text.gridShowStock,
+      exact: true,
+    });
+    if (!(await toggle.isChecked())) await read(() => toggle.check());
+    await page.locator("[data-products-location]").click();
+    await read(() =>
+      page
+        .getByRole("option", { name: text.navSalesFloor, exact: true })
+        .click(),
+    );
+    await expect(root).toHaveAttribute(
+      "data-browsing-settled-location",
+      "sales-floor",
+    );
+  };
+  const offPage = async (invalid = false) => {
+    const id = await rows.first().getAttribute("data-product-id");
+    if (!id) throw new Error("The browsing fixture has no product to edit");
+    await page
+      .getByRole("button", { name: text.peEditTable, exact: true })
+      .click();
+    await page
+      .locator(`[data-edit-name="${id}"]`)
+      .fill(invalid ? " " : "Producto revisado en otra página");
+    await next();
+    await expect(page.locator(`[data-product-id="${id}"]`)).toHaveCount(0);
+    await expect(page.locator("[data-browsing-off-page-edits]")).toBeVisible();
+    return id;
+  };
+
+  await expect(root).toBeVisible();
+  switch (action) {
+    case "products-browsing-initial-loading":
+      await state("loading");
+      await expect(rows).toHaveCount(0);
+      return;
+    case "products-browsing-initial-error":
+      await state("technical");
+      await expect(page.locator("[data-browsing-retry]")).toBeVisible();
+      return;
+    case "products-browsing-retry":
+      await state("technical");
+      await read(() => page.locator("[data-browsing-retry]").click());
+      return;
+    case "products-browsing-unusable":
+      await state("unusable");
+      await expect(page.locator("[data-browsing-restart]")).toBeVisible();
+      return;
+    case "products-browsing-restart":
+      await state("unusable");
+      await read(() => page.locator("[data-browsing-restart]").click());
+      return;
+  }
+
+  await state("ready");
+  switch (action) {
+    case "products-browsing-ready":
+      break;
+    case "products-browsing-next":
+      await next();
+      break;
+    case "products-browsing-view":
+      await view();
+      await expect(page.locator("[data-browsing-page-size]")).toBeVisible();
+      break;
+    case "products-browsing-hidden-sort":
+      await read(() =>
+        page.getByRole("button", { name: text.gridSku, exact: true }).click(),
+      );
+      await next();
+      await view();
+      await page
+        .getByRole("checkbox", { name: text.gridSku, exact: true })
+        .uncheck();
+      await page.keyboard.press("Escape");
+      await expect(page.locator("[data-browsing-hidden-sort]")).toBeVisible();
+      break;
+    case "products-browsing-size25":
+      await view();
+      await page.locator("[data-browsing-page-size]").click();
+      await read(() =>
+        page.getByRole("option", { name: "25", exact: true }).click(),
+      );
+      await page.keyboard.press("Escape");
+      await expect(rows).toHaveCount(25);
+      break;
+    case "products-browsing-stock":
+      await stock();
+      break;
+    case "products-browsing-stock-positive":
+      await stock();
+      await page.locator("[data-products-filter-trigger]").click();
+      await page
+        .locator("[data-products-filters]")
+        .getByRole("checkbox", { name: text.pfPositiveStockOnly, exact: true })
+        .check();
+      await read(() => page.locator("[data-products-filter-apply]").click());
+      await expect(
+        page.locator('[data-products-filter-remove="positiveStockOnly"]'),
+      ).toBeVisible();
+      await page.mouse.move(1, 1);
+      await page.keyboard.press("Escape");
+      break;
+    case "products-browsing-previous-results":
+      await next("loading");
+      await expect(
+        page.locator("[data-browsing-previous-results]"),
+      ).toBeVisible();
+      break;
+    case "products-browsing-later-error":
+      await next("technical");
+      await expect(
+        page.locator("[data-browsing-previous-results]"),
+      ).toBeVisible();
+      break;
+    case "products-browsing-offpage":
+      await offPage();
+      break;
+    case "products-browsing-offpage-review": {
+      const id = await offPage();
+      await page
+        .getByRole("button", { name: text.pbReviewEdits, exact: true })
+        .click();
+      await page.locator(`[data-edit-draft-review="${id}-name"]`).click();
+      await expect(page.locator(".products-hidden-field-review")).toBeVisible();
+      break;
+    }
+    case "products-browsing-invalid-offpage": {
+      const id = await offPage(true);
+      await page.locator("[data-edit-save]").click();
+      await page.locator(`[data-edit-review="${id}-name"]`).click();
+      await expect(page.locator(".products-hidden-field-review")).toBeVisible();
+      break;
+    }
+    case "products-browsing-mixed": {
+      await offPage();
+      const id = await rows.first().getAttribute("data-product-id");
+      if (!id)
+        throw new Error("The second browsing group has no product to edit");
+      await page
+        .locator(`[data-edit-name="${id}"]`)
+        .fill("Segundo producto revisado");
+      await page.locator("[data-edit-save]").click();
+      await expect(page.locator("[data-edit-results]")).toBeVisible();
+      break;
+    }
+    case "products-browsing-recovery-next-error": {
+      const recovery = page.locator("[data-recovery-preview]");
+      const count = await recovery.getAttribute("data-request-count");
+      await expect(recovery).toHaveAttribute("data-request-count", "3");
+      await next("technical");
+      await read(() => page.locator("[data-browsing-retry]").click());
+      await expect(recovery).toHaveAttribute("data-request-count", count!);
+      break;
+    }
+    default:
+      throw new Error(`Unknown Products browsing capture action: ${action}`);
   }
 }
 

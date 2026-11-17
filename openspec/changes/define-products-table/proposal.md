@@ -503,3 +503,91 @@ preview. PT-043 records that shared visual pattern while preserving separate
 state sources and existing save/retry/dismissal/new-result rules. Execute the
 [bounded feedback plan](feedback-preview-plan.md); exact visuals remain review
 proposals, with no new staging, reference promotion or commit authority.
+
+### Products browsing and catalogue scale — initiated 2026-11-17
+
+After both navigation checkpoint commits were verified, root recommended a
+browsing/scale pass, followed separately by product creation and spreadsheet
+migration. The user said **“go ahead, make sure you check how inventory module
+handles pagination”**. The [browsing discovery](browsing-design.md) records the
+read-only published-contract/current-code findings and the proposed next choice.
+
+Inventory's supporting collection pagination does not define Products search
+paging. The inspected product handler remains permanent-product-ID only. Existing
+opaque Previous/Next navigation and estimated totals are context for proposals,
+not a Products endpoint, inherited page-size policy or supported integration.
+The user selected **“Anterior / Siguiente (Recommended)”** for the synthetic
+preview. PT-044 records explicit directional controls replacing the visible rows;
+the append alternative is not selected. The user then selected **“50 by default;
+25/50/100 options (Recommended)”**; PT-045 records those first-preview page-size
+settings without adopting backend bounds. The user then selected **“Remember per
+tab; restart when size changes (Recommended)”**. PT-046 records same-tab/business
+page-size retention, a new-tab default of 50 and a first-group restart on size
+change while preserving submitted search, sorting, applied filters and stock/
+location settings. The user selected **“Displayed count + supplied, labelled
+estimate (Recommended)”** under PT-047: exact displayed-product count plus an
+explicitly labelled supplied estimate, with only the displayed count when no
+total is supplied. No Products count API or estimate-request policy follows.
+The user selected **“Keep drafts across pages; save together (Recommended)”** under
+PT-048: table-edit drafts span result groups, one explicit save covers off-page
+edits, errors remain accessible and leaving Products keeps the existing guard.
+Individual outcomes, all-draft validation and original-command recovery remain.
+The user selected **“Keep marked previous results while loading (Recommended)”**
+under PT-049: neutral first load, marked previous results during later page loads,
+replacement on success and inline technical-read error with Retry while retaining
+previous results when available. No automatic read budget or write retry follows.
+The user selected **“Use shared reset policy (Recommended)”** under PT-050:
+submitted-search, sort and applied-filter changes restart at the first result
+group, retaining page size and drafts; layout-only/density changes retain the
+current group. The user selected **“Keep position when not stock-filtered
+(Recommended)”** under PT-051: location changes keep position without the stock-only
+filter and restart when it is active; hiding stock that clears it also restarts.
+Preserve page size, drafts and other applied settings without promising frozen
+membership or backend continuation semantics. The user selected **“Restore position
+with a fresh read (Recommended)”** under PT-052: same-tab/business last-group
+restoration on return/refresh, fresh data and explicit Volver al inicio if the
+position is reported unusable, preserving applied view, size and draft/recovery
+rules. No silent unusable-position reset or automatic write/recovery follows.
+Precise production matching/sort behavior and remaining production read/write
+coordination stay deferred. Preserve all 936 accepted references.
+No Inventory edit, new dependency, API/IAM/hosting, staging or commit follows.
+
+The user selected **“Build the prepared simulated preview (Recommended)”** from
+the [bounded browsing preview plan](browsing-preview-plan.md). This authorizes its
+explicit file-bounded implementation with larger synthetic fixtures and existing
+demo matching/sort logic. PT-053 records the adopted selective paging-control busy
+behavior and latest-view response protection. Production semantics remain deferred;
+exact visual candidates still require specific approval. Never stage or commit.
+
+The bounded preview is now implemented and verified. The
+[execution record](browsing-preview-plan.md#execution-evidence--2026-11-17)
+binds 130 code tests, 178 browser checks, independent reviews and the exact
+148-image candidate run to source `1e81de94…`. All 936 accepted cases have
+source-matched passing comparison evidence, with one initial icon-only failure
+and three passing isolated repeats explicitly retained. All 936 references remain
+unchanged, the index is empty and the exact new set awaits specific visual approval.
+
+The user then identified that navigation lacked a visible current page and chose
+**“Between Anterior and Siguiente (Recommended)”**. PT-054 and the
+[bounded revision](browsing-preview-plan.md#current-page-indicator-revision--2026-11-17)
+add the successfully displayed page number between the controls, retaining it
+during reads/errors and keeping estimated totals separate. This direction does
+not approve the prior 148 images; the refreshed exact proposal supersedes them.
+
+The revision passes 134 code tests, 179 full browser checks (30 focused) and all
+148 candidate captures at `5f628f39…`. The fresh unchanged-reference run is
+935/936, with the remaining existing tablet moon-icon case still intermittent
+(one pass/two failures in isolated checks). Its cause remains unresolved. The
+revision record preserves that limitation and the separate pre-existing Basque
+phone toolbar observation; no reference promotion, staging or commit follows.
+
+The user subsequently answered **“Approve all 148 images”** for exact run
+`2026-11-17T12-43-29.019Z`. The
+[approval record](browsing-preview-plan.md#visual-approval-and-reference-promotion--2026-11-17)
+binds its source/hashes and verifies promotion of those 148 new references while
+preserving all 936 prior entries/images, for 1,084 accepted references. This
+accepts the simulated visuals, not backend paging support or a fix for the known
+icon/toolbar limitations. Staging, commits and further implementation remain separate.
+The promoted-scope comparison is 147/148, with one intermittent phone button-border
+pixel difference (two passes/one failure in isolated checks). The approval record
+preserves the failed runs and all prior reference hashes without a renderer-fix claim.

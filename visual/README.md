@@ -48,12 +48,67 @@ an explicit custom label that remains exact across language changes. **Reset
 controls** restores the translated default. Typed values and open dialogs are
 preserved when the language changes.
 
-The current inventory covers 216 retained component source modules through 84
-stories and 21 view entries. Its 234 named scenarios produce 936 captures across
+The current inventory covers 216 retained component source modules through 98
+stories and 21 view entries. Its 271 named scenarios produce 1,084 captures across
 desktop 1440×900, tablet 768×1024, mobile 390×844 and desktop dark mode. The actual
 assembled views cover Spanish, English, Catalan, Galician and Basque. Compound
 primitives and icons are inspected in compositions; this is representative source
 coverage, not every possible prop combination or complete accessibility testing.
+
+## Products browsing at larger fixture sizes
+
+Open the [browsing catalogue](http://localhost:6006/?path=/story/inventory-products-browsing--catalogue).
+The 14 added examples use the existing shared Products table with 1,000 synthetic
+products; Large Catalogue uses 10,000 solely to check bounded DOM rendering.
+Previous/Next replaces the displayed group. Vista offers 25/50/100 products per
+page; the default is 50. Selection and demo sorting apply before projection.
+The current page appears between the directional buttons after a successful
+read. During loading/errors it stays with the displayed rows, independently of
+the estimated total; short groups do not cause skipped or inferred page numbers.
+The existing editor retains all drafts, including products on other groups.
+Off-page changes and field errors have an explicit review path.
+
+Loading, prior-result scope, technical errors/Retry, missing/supplied/zero estimates,
+short groups with continuation and unusable-position restart have dedicated
+fixtures. A delayed fixture demonstrates that late responses cannot replace a
+newer submitted view. Read retries remain independent of original write recovery.
+The stored fixture position/page size uses the existing best-effort tab namespace;
+returning requests fresh data. This is not a production preferences or API adapter.
+
+The [bounded implementation plan](../openspec/changes/define-products-table/browsing-preview-plan.md)
+records authorization, checks and the exact review set. These 37 new scenario
+states contribute 148 reviewed images, including responsive/dark cases and
+assembled English/Catalan/Galician/Basque examples. The user approved these 148
+additions, preserving all 936 previous references, for 1,084 accepted references.
+
+The current [148-image review](http://localhost:9324/runs/2026-11-17T12-43-29.019Z/review.html)
+was approved with **“Approve all 148 images”** at source `5f628f39…` and is promoted.
+It supersedes the unapproved initial
+`12-09-39` proposal. Root checks pass 134 code tests; the full interaction/language
+suite passes 179 browser checks, including 30 focused browsing cases. The
+[page-number revision record](../openspec/changes/define-products-table/browsing-preview-plan.md#current-page-indicator-revision--2026-11-17)
+retains the exact source/check/comparison evidence and the separate pre-existing
+Basque mobile toolbar observation. References, fonts and tolerances are preserved.
+The original-scope comparison is 935/936: the remaining tablet
+moon-icon case stays intermittent, with one pass/two failures in isolated checks.
+The plan preserves the failures and makes no renderer-fix or wholly green claim.
+The [approval record](../openspec/changes/define-products-table/browsing-preview-plan.md#visual-approval-and-reference-promotion--2026-11-17)
+verifies exact promotion and preservation. The displayed page number remains a
+synthetic preview value; Inventory currently provides no authoritative page number.
+Post-promotion comparison passes 147/148; the phone invalid-off-page case has a
+one-pixel button-border variation and passes two of three isolated checks. Both
+comparison runs and the preserved-image proof remain in the approval record;
+this is not a wholly green comparison or a fix for rendering intermittency.
+
+```sh
+pnpm visual:capture --grep 'products-browsing-'
+pnpm visual:compare --grep-invert 'products-browsing-'
+```
+
+Current demo matching/sort, fixture handles and known fixture estimates do not
+define an Inventory Products pagination API or production search rules. The
+10,000-record check is not a capacity or timing benchmark. No production business
+writes, persistence, cross-tab ownership or backend changes are implemented here.
 
 ## Products change feedback
 

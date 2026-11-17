@@ -347,3 +347,132 @@ Checked steps record work performed, not acceptance of proposed table choices.
       create a commit; preserve the separate pending navigation review.
       Commits `0b0d9d6` and `21ea7c7` match the exact 21/165-file manifests;
       tree/index were clean before the navigation review documentation pass.
+
+## Products browsing and catalogue scale discovery
+
+- [x] 12.1 Record the user's continuation and explicit Inventory pagination check;
+      preserve the completed navigation checkpoint, source and 936 references.
+- [x] 12.2 Inspect current published Inventory paging/search boundaries and
+      relevant wire/profile/handler code read-only; record findings and limits in
+      [browsing discovery](browsing-design.md). Distinguish supporting collection
+      paging from undefined Products search pagination and actual availability.
+- [x] 12.3 Obtain the user's frontend browsing-model choice before adopting
+      Anterior/Siguiente, Cargar más or any alternative. Other paging choices remain
+      separate; do not infer a Products API or page-size policy.
+      The user selected “Anterior / Siguiente (Recommended)”; PT-044 records
+      explicit directional controls replacing the visible rows.
+- [x] 12.3a Record “50 by default; 25/50/100 options (Recommended)” under PT-045
+      for the first preview. Keep backend bounds, retention and traversal-reset
+      behavior separate; verify documentation and preserved source/references.
+- [x] 12.3b Record “Remember per tab; restart when size changes (Recommended)”
+      under PT-046: same-tab/business page-size choice, new-tab default 50 and
+      first-group restart on size change preserving the other applied settings.
+      Leave restored navigation position, storage and cross-page editing open.
+- [x] 12.3c Record “Displayed count + supplied, labelled estimate (Recommended)”
+      under PT-047. Preserve missing-versus-zero, estimate labels, count scope and
+      PT-042 incomplete results without adopting an API or estimate-request policy.
+- [x] 12.3d Record “Keep drafts across pages; save together (Recommended)” under
+      PT-048: retain table drafts, one explicit save covers edited products across
+      pages, off-page edits/errors stay accessible and departure/recovery rules
+      remain. Do not imply atomic results, a backend batch or production storage.
+- [x] 12.3e Record “Keep marked previous results while loading (Recommended)”
+      under PT-049: neutral first load, marked previous results, replacement on
+      success and technical-read error/Retry without fabricated empty success.
+      Keep automatic retry budgets and distinct access/continuation failures open.
+- [x] 12.3f Record “Use shared reset policy (Recommended)” under PT-050:
+      submitted-search/sort/applied-filter changes restart at the first group,
+      retaining size/drafts; layout-only/density changes keep the current group.
+      Preserve draft submission rules and leave location/return details separate.
+- [x] 12.3g Record “Keep position when not stock-filtered (Recommended)” under
+      PT-051: location change retains position without the stock-only filter;
+      with it active, or when hiding stock clears it, restart at the first group.
+      Preserve size/drafts/other settings and honest stock scope.
+- [x] 12.3h Record “Restore position with a fresh read (Recommended)” under
+      PT-052: restore the last result-group position in the same tab/business on
+      return/refresh using fresh data; if reported unusable, explain and offer
+      explicit Volver al inicio, preserving view/size/draft/recovery rules.
+- [ ] 12.4 Define remaining count scope/refresh, loading/retrieval-failure/restart behavior,
+      precise matching/sort and cross-page view/edit/recovery interaction without
+      inventing backend capabilities or changing settled choices.
+- [x] 12.5 Prepare the bounded synthetic Storybook/Playwright plan after the
+      relevant choices are selected. Preserve existing accepted images until a
+      new exact candidate set is specifically approved.
+      The [prepared plan](browsing-preview-plan.md) proposed a demo-first scope,
+      including explicit additional preview choices. The user subsequently selected
+      its execution under 12.6; precise production semantics in 12.4 stay deferred.
+- [x] 12.6 Obtain the user's choice between the prepared bounded preview and
+      precise matching/sort discovery first. Record exact execution scope before
+      beginning source edits, including any adopted preview-only proposals.
+      The user selected “Build the prepared simulated preview (Recommended)”.
+      Execute the plan; demo matching/sort and production coordination stay deferred.
+
+## Bounded browsing preview execution
+
+- [x] 13.1 Obtain meaningful browser/model RED evidence for missing paging and
+      selected reset/response behavior before implementing the corresponding code.
+- [x] 13.2 Implement fixture model/provider and shared-workspace integration for
+      PT-044–053 with stable editor state, honest settled scope and off-page review.
+- [x] 13.3 Add the five-language copy, browser scenarios, capture actions/inventory
+      and meaningful responsive/accessibility/bounded-row coverage.
+- [x] 13.4 Verify root quality, prepared builds/browser behavior, independent
+      spec/quality reviews, exact candidates and unchanged accepted comparisons.
+      Proof: 130 code tests, 178 full browser checks (29 focused), 148 captures,
+      independent source/quality/visual review and source-matched passing evidence
+      for all 936 accepted cases. Preserve the documented seven-pixel moon-icon
+      variance and three passing isolated comparisons; the first full run was 935/936.
+- [x] 13.5 Deliver live examples and exact source-bound image gallery for specific
+      user approval; preserve all 936 accepted references. Never stage or commit.
+      The [148-image set](browsing-preview-plan.md#exact-candidate-set--approval-pending)
+      is prepared for delivery; user approval and reference promotion remain pending.
+
+## Current-page indicator revision
+
+- [x] 14.1 Record the user's “Between Anterior and Siguiente (Recommended)”
+      selection and PT-054 in the bounded revision plan. This approves the current
+      page indicator's direction, not any previous or future image set.
+- [x] 14.2 Obtain meaningful missing-indicator/model RED evidence; implement a
+      settled-result page number with exact synthetic group boundaries and five
+      language labels. Preserve existing read/reset/retention/recovery behavior.
+- [x] 14.3 Verify quality, browser behavior and independent source/visual review;
+      refresh the exact candidate gallery and compare unchanged references.
+      134 code tests, 179 browser checks (30 focused) and 148 captures pass.
+      The unchanged comparison is 935/936; the existing Catalan tablet moon-icon
+      case remains intermittent (one pass/two failures in isolated checks).
+      Preserve this limitation; the comparison is not wholly green.
+- [x] 14.4 Deliver the updated live preview and exact gallery for specific approval,
+      superseding the earlier 148-image proposal. Preserve all 936 references and
+      the empty index. Never promote, stage or commit from this direction alone.
+- [ ] 14.5 Review the pre-existing Basque phone toolbar title/menu overlap if the
+      user selects that follow-up. The header is pixel-identical to the earlier
+      proposal; no navigation source changes are authorized by PT-054.
+- [ ] 14.6 Investigate intermittent icon/button-border comparisons if the user
+      selects that follow-up. Their causes are unresolved; do not loosen the
+      renderer/tolerance or promote replacement references to hide the variance.
+
+## Browsing visual approval
+
+- [x] 15.1 Record “Approve all 148 images” for exact run
+      `2026-11-17T12-43-29.019Z`, source `5f628f39…`. The initial proposal is
+      superseded. Approval covers these images, not backend paging support or Git.
+- [x] 15.2 Promote only those 148 reviewed cases and preserve all 936 unrelated
+      images/registry entries; verify the expected 1,084-reference baseline.
+      Tool promotion and an independent read-only audit confirm exactly 148 new
+      IDs/images, all 936 prior entries/hashes unchanged and an empty index.
+- [x] 15.3 Compare the promoted scope, independently audit preservation and record
+      actual results/remaining limitations. Do not stage, commit or start another flow.
+      Post-promotion comparison is 147/148; the phone invalid-off-page case differs
+      by one button-border pixel and passes two of three isolated checks. Preserve
+      both runs; neither a wholly green comparison nor a renderer fix is claimed.
+      All 1,084 references are exact and preserved under the approved scope.
+
+## Browsing checkpoint commit preparation
+
+- [x] 16.1 Record the user's “go ahead” to the sequential 31/149-file staging
+      batches and their verification limits in the bounded preparation record.
+- [x] 16.2 Verify and stage only the 31 implementation/specification/test/docs
+      files; leave references unstaged and provide the user's commit command.
+- [ ] 16.3 After the first user commit, verify exact parent/path/blob/mode contents
+      against the prepared first-batch manifest, then stage only the 149 approved
+      reference files and provide the second commit command.
+- [ ] 16.4 Verify both user commits and remaining tree/index state. Never create
+      commits or infer authority for further UI/backend work from this checkpoint.

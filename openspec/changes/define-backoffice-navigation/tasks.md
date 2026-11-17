@@ -149,8 +149,10 @@ navigation model or permission to implement it.
       batches in the [preparation record](visual-review-plan.md#commit-preparation--2026-11-17).
 - [x] 11.2 Verify and stage only the nine documentation/configuration files and
       give the user the commit command; keep all 21 reference files unstaged.
-- [ ] 11.3 After the user commits the first batch, verify its exact prepared
+- [x] 11.3 After the user commits the first batch, verify its exact prepared
       paths/blobs, then stage only the 21 approved-reference files and give the
       second commit command.
-- [ ] 11.4 Verify both user commits and the remaining checkpoint status. Never
+- [x] 11.4 Verify both user commits and the remaining checkpoint status. Never
       create a commit; no further design or deployment follows automatically.
+      Commits `a3363fc` and `3ae4cbd` match the exact nine/21-file manifests;
+      tree/index were clean before the subsequent browsing discovery pass.

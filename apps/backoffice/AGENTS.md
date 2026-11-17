@@ -20,7 +20,115 @@ the exact approval and identities. Require new image approval for replacements.
 The
 [visual review workflow](../../openspec/changes/define-visual-review-workflow/proposal.md)
 is implemented; preserve its review rules and the technical sources as constraints.
-Latest assignment — 2026-11-17: the user said **“go ahead”** to two sequential
+Latest commit preparation — 2026-11-17: the user said **“go ahead”** after the
+recommendation to checkpoint the approved browsing work in two sequential batches.
+Follow the [preparation record](../../openspec/changes/define-products-table/browsing-preview-plan.md#commit-preparation--2026-11-17).
+Stage only the 31 implementation/specification/test/documentation files first and
+provide the commit command. Leave all 149 reference files unstaged. After the user
+commits that exact first batch, verify its prepared manifest, then stage the 149
+reference files and provide their command. No UI/API continuation is initiated;
+the visual comparison limitations remain explicit. Never create commits.
+
+Previous visual approval — 2026-11-17: the user answered **“Approve all 148 images”**
+for exact run `2026-11-17T12-43-29.019Z`, source `5f628f39…`. Read the
+[approval record](../../openspec/changes/define-products-table/browsing-preview-plan.md#visual-approval-and-reference-promotion--2026-11-17).
+Only those 148 new cases are promoted, preserving all 936 prior images/entries,
+for 1,084 accepted references. Earlier pending/no-promotion wording is superseded
+for this set only. The page number remains synthetic; Inventory supplies no
+authoritative current-page number or Products search-pagination contract.
+Retain the known icon intermittency and Basque toolbar follow-up. No new UI/API
+work, staging or commit follows. Never create commits.
+Post-promotion comparison is 147/148: one phone invalid-off-page image has an
+intermittent one-pixel button-border difference (two passes/one isolated failure).
+The original-scope icon variance also remains. Read the record; do not claim
+wholly green comparisons or alter accepted references/tolerance to hide variance.
+
+Previous revision — 2026-11-17: the user selected **“Between Anterior and Siguiente
+(Recommended)”** for a visible current-page number under PT-054. Execute the
+[bounded page-number revision](../../openspec/changes/define-products-table/browsing-preview-plan.md#current-page-indicator-revision--2026-11-17).
+Advance only with a successful displayed result; retain its number during reads/
+errors and keep estimated totals separate. Refresh the exact visual proposal;
+the original 148 images are not approved. Preserve all 936 accepted references,
+renderer/fonts/tolerance and empty index. Never promote, stage or commit.
+
+Revision evidence: source `5f628f39d4e783d8ddc33bbb13810946ec7e81c3e194e6f4cab51ab401676943`,
+134 code tests, 179 full browser checks (30 focused), and 148 successful capture
+checks. The exact gallery `2026-11-17T12-43-29.019Z` supersedes the unapproved
+`12-09-39` proposal. Footer-scoped source/visual reviews pass. Read the revision
+record for the accepted-reference comparison proof and separately recorded
+pre-existing Basque phone toolbar observation. Visual approval is recorded above.
+The current reference comparison is not wholly green: 935/936 pass; one existing
+Catalan tablet moon-icon case remains intermittent (one pass/two isolated failures).
+Keep that limitation explicit; no renderer fix or new visual acceptance is claimed.
+
+Previous execution — 2026-11-17: the user selected **“Build the prepared simulated
+preview (Recommended)”**. Execute the [bounded browsing plan](../../openspec/changes/define-products-table/browsing-preview-plan.md)
+for PT-044–053: 1,000 synthetic products, 10,000-record bounded-DOM check, existing
+demo matching/sort, selective paging-control busy/latest-view protection and no
+real API or new dependency. The plan's file scope supersedes the earlier
+no-source-edit status for this preview only. Keep the full editor stable, settled
+scope honest and all 936 accepted references unchanged. Exact visuals require
+review. No promotion, staging or commit follows; never create commits.
+
+Previous verification — 2026-11-17: that preview is implemented at source
+`1e81de9490b0fb72e279400ec14daebddaed5f3923d052d9e39688b16c756500`.
+The linked plan records 130 code tests, 178 browser checks, 148 candidate captures,
+independent reviews and passing comparison evidence for all 936 accepted cases,
+including one documented moon-icon variance followed by three passing repeats.
+The exact run `2026-11-17T12-09-39.261Z` is pending specific visual approval;
+accepted references remain unchanged and the index is empty. Continue from that
+review boundary; do not repeat implementation or infer image approval.
+
+Previous discovery — 2026-11-17: the user said **“go ahead, make sure you check how
+inventory module handles pagination”** after root recommended completing Products
+browsing at realistic catalogue sizes. Follow the [browsing discovery](../../openspec/changes/define-products-table/browsing-design.md).
+Inventory is read-only. Its supporting catalogue/stock collection paging does
+not define Products search pagination; the inspected product handler reads an
+exact permanent ID. Record the current contract/implementation distinction and
+ask about unresolved frontend choices. The user selected **“Anterior / Siguiente
+(Recommended)”**: PT-044 records explicit directional controls replacing visible
+rows. The user also selected **“50 by default; 25/50/100 options (Recommended)”**;
+PT-045 records first-preview page sizes without adopting backend limits. Do not
+repeat these choices. The user selected **“Remember per tab; restart when size
+changes (Recommended)”** under PT-046: remember size for the same tab/business,
+start new tabs at 50 and restart at the first result group on size change,
+preserving submitted search, sorting, applied filters and stock/location settings.
+The user selected **“Displayed count + supplied, labelled estimate (Recommended)”**
+under PT-047: exact displayed-product count plus an explicitly labelled supplied
+estimate; with no supplied total, show only the displayed count. No count API or
+estimate-request policy follows. The user selected **“Keep drafts across pages;
+save together (Recommended)”** under PT-048: retain table drafts across groups,
+one explicit save includes off-page edits, errors remain accessible and leaving
+Products keeps the existing guard. Individual outcomes, all-draft validation and
+original-command recovery remain. The user selected **“Keep marked previous
+results while loading (Recommended)”** under PT-049: neutral first load, marked
+previous results during later page loads, replacement on success and inline
+technical-read error with Retry, retaining previous results when available.
+No automatic read budget or write retry follows. The user selected **“Use shared
+reset policy (Recommended)”** under PT-050: submitted-search/sort/applied-filter
+changes restart at the first group, retaining size/drafts; layout-only/density
+changes keep the current group. The user selected **“Keep position when not
+stock-filtered (Recommended)”** under PT-051: location changes retain position
+without the stock-only filter and restart with it active; hiding stock that
+clears it also restarts. Preserve size/drafts/other settings and honest stock
+scope. The user selected **“Restore position with a fresh read (Recommended)”**
+under PT-052: restore last result-group position in the same tab/business on
+return/refresh using fresh data; if reported unusable, explain and offer explicit
+Volver al inicio. Preserve view/size and draft/recovery rules. No silent reset or
+automatic write/recovery follows. Precise matching/sort and in-flight load/save
+details remain open. The [bounded browsing preview plan](../../openspec/changes/define-products-table/browsing-preview-plan.md)
+is selected for implementation: demo-only matching/sort, larger synthetic fixtures
+and explicit paging-control busy/latest-view behavior under PT-053. Execute only
+its bounded file scope and preserve all 936 accepted references until specific
+candidate approval. Production matching/sort and coordination stay deferred.
+No new dependency, API/IAM/hosting, Inventory edit, staging or commit follows.
+
+The [navigation checkpoint is complete](../../openspec/changes/define-backoffice-navigation/visual-review-plan.md#completed-checkpoint--2026-11-17):
+user commits `a3363fc` and `3ae4cbd` match the exact nine/21-file manifests.
+Tree/index were verified clean before this discovery documentation pass.
+The former staging authority is spent. Never create commits.
+
+Previous assignment — 2026-11-17: the user said **“go ahead”** to two sequential
 commit batches. Follow the [commit-preparation record](../../openspec/changes/define-backoffice-navigation/visual-review-plan.md#commit-preparation--2026-11-17).
 Stage exactly nine documentation/configuration files first and give the user the
 commit command. Leave all 21 approved-reference files outside the index. After

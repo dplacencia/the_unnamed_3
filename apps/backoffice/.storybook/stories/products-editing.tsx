@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useId, useRef, useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
@@ -521,15 +521,22 @@ export function EditingResultsView({
 export function EditingValidationSummary({
   editor,
   fieldVisible,
+  includeOffPageDrafts = false,
 }: {
   editor: ProductEditing;
   fieldVisible: (id: string, field: "name" | "sku") => boolean;
+  includeOffPageDrafts?: boolean;
 }) {
   const t = useTranslations("catalogue");
   const [review, setReview] = useState<{
     id: string;
     field: "name" | "sku";
   } | null>(null);
+  const [showDrafts, setShowDrafts] = useState(false);
+  const draftListId = useId();
+  const offPage = includeOffPageDrafts
+    ? editor.changes.filter((change) => !fieldVisible(change.id, "name"))
+    : [];
   const issues = editor.records.flatMap((product) =>
     (["name", "sku"] as const).flatMap((field) => {
       const reason =
@@ -542,39 +549,100 @@ export function EditingValidationSummary({
   const reviewedProduct = editor.records.find(
     (product) => product.id === review?.id,
   );
-  if (!issues.length && !review) return null;
+  if (!issues.length && !review && !offPage.length) return null;
   return (
     <div className="products-edit-validation" data-edit-validation-summary>
-      <p className="font-semibold" role={issues.length ? "alert" : undefined}>
-        {t(issues.length ? "peValidationTitle" : "peReviewField")}
-      </p>
-      <ul>
-        {issues.map(({ product, field, reason }) => (
-          <li key={`${product.id}-${field}`}>
-            <span>
-              {product.name} ({product.sku ?? t("ptUnassigned")}):{" "}
-              {t(errors[field][reason])}
-            </span>
-            <Button
-              size="sm"
-              variant="outline"
-              data-edit-review={`${product.id}-${field}`}
-              onClick={() => {
-                setReview(
-                  fieldVisible(product.id, field)
-                    ? null
-                    : { id: product.id, field },
+      {offPage.length > 0 && (
+        <div data-browsing-off-page-edits>
+          <p>{t("pbOffPageEdits", { count: offPage.length })}</p>
+          <Button
+            size="sm"
+            variant="outline"
+            disabled={editor.sending}
+            aria-expanded={showDrafts}
+            aria-controls={draftListId}
+            onClick={() => setShowDrafts((current) => !current)}
+          >
+            {t("pbReviewEdits")}
+          </Button>
+          {showDrafts && (
+            <ul id={draftListId}>
+              {offPage.map((change) => {
+                const product = editor.records.find(
+                  (record) => record.id === change.id,
+                )!;
+                return (
+                  <li key={change.id}>
+                    <span>
+                      {product.name} ({product.sku ?? t("ptUnassigned")}):{" "}
+                    </span>
+                    {(["name", "sku"] as const).map(
+                      (field) =>
+                        change[field] !== undefined && (
+                          <Button
+                            key={field}
+                            size="sm"
+                            variant="outline"
+                            disabled={editor.sending}
+                            data-edit-draft-review={`${change.id}-${field}`}
+                            onClick={() => {
+                              setReview({ id: change.id, field });
+                              requestAnimationFrame(() =>
+                                editor.form.setFocus(
+                                  `rows.${change.id}.${field}`,
+                                ),
+                              );
+                            }}
+                          >
+                            {t("peReview")}{" "}
+                            {t(field === "name" ? "peName" : "gridSku")}
+                          </Button>
+                        ),
+                    )}
+                  </li>
                 );
-                requestAnimationFrame(() =>
-                  editor.form.setFocus(`rows.${product.id}.${field}`),
-                );
-              }}
-            >
-              {t("peReview")}
-            </Button>
-          </li>
-        ))}
-      </ul>
+              })}
+            </ul>
+          )}
+        </div>
+      )}
+      {(issues.length > 0 || review) && (
+        <>
+          <p
+            className="font-semibold"
+            role={issues.length ? "alert" : undefined}
+          >
+            {t(issues.length ? "peValidationTitle" : "peReviewField")}
+          </p>
+          <ul>
+            {issues.map(({ product, field, reason }) => (
+              <li key={`${product.id}-${field}`}>
+                <span>
+                  {product.name} ({product.sku ?? t("ptUnassigned")}):{" "}
+                  {t(errors[field][reason])}
+                </span>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  data-edit-review={`${product.id}-${field}`}
+                  onClick={() => {
+                    setReview(
+                      fieldVisible(product.id, field)
+                        ? null
+                        : { id: product.id, field },
+                    );
+                    requestAnimationFrame(() =>
+                      editor.form.setFocus(`rows.${product.id}.${field}`),
+                    );
+                  }}
+                >
+                  {t("peReview")}
+                </Button>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
       {review && reviewedProduct && (
         <div className="products-hidden-field-review">
           <p>
