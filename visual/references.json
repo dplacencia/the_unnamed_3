@@ -20876,6 +20876,1094 @@
       "run": "2026-11-17T21-51-26.537Z",
       "sourceHash": "7196f636f86723f501d01aca8c1e35d8914d16efa008a26cfb206dd43b641743",
       "profileHash": "d7e6b628a53d264668643a4e7df941771f2d1f3a36605d50d179bc354f776ea2"
+    },
+    "stock-lookup-ca-default--desktop": {
+      "sha256": "a9d506508ae510d883df109745353ebcc960279d7ed2fbb87376cb04802c6e02",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "265c1e50713b211ac29d0f032dde659f6d783b993230d076f150a5e93e8d80c8"
+    },
+    "stock-lookup-ca-default--desktop-dark": {
+      "sha256": "9e33dd67bb63483377b0791ec5eb358136b9bbabf6836172fa754441ef5e0638",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "f65e045da6080fa8acaff49e64fa70b609dc30bde7c562806ba9159bdf8012ff"
+    },
+    "stock-lookup-ca-default--mobile": {
+      "sha256": "ef9cc512715ad31ccfbbca9eb5d65438e353c1886b978dac16b64fbf5dc2b6cb",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "45c16edcc02d5707e1be1f8afd4f415991f0c0dfc0aaac6b4e90ccdda7e5d602"
+    },
+    "stock-lookup-ca-default--tablet": {
+      "sha256": "85e6e83462990f25a71c3045f37c74fd27b00ee35f606f22e6744aeecaf406b7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "054e032bd4e3c840f284ed33326c16d585a619e9d0378610a5f29e33a80be53a"
+    },
+    "stock-lookup-denied-default--desktop": {
+      "sha256": "d59db4aa8b623589f8fef86d262db55ee4018830e368dd9e2f136e977bc17bba",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "f5a5c112c719e5041530a61a1a993f07f2fb1603c4636e076cbb00336b6d526d"
+    },
+    "stock-lookup-denied-default--desktop-dark": {
+      "sha256": "bde061f8c12ba2ff407c49bd3e2187e25d2fc0aea06a0a6dcda61cd497b69340",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "7a66db07200b16886e89a0fdfe1446769d6ca93aa91751c1e0cdf5c68c2e9dfd"
+    },
+    "stock-lookup-denied-default--mobile": {
+      "sha256": "fcdf4f2d344a08373315f0ecf45bab025891eb790f4a58eceaacf45a0f7c9186",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "bc4a5ec87f919783ab434c5c295bc5d7768dc4abd324e7b615eb547f946626c2"
+    },
+    "stock-lookup-denied-default--tablet": {
+      "sha256": "c348064b634494a42fd5edf9da2c7a8838c77c2b3a2d4cebdef030747700e122",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "98b80fe955818124eb7f838a4d13aa67ef46d46926b8ba8a72047146ee36b469"
+    },
+    "stock-lookup-en-default--desktop": {
+      "sha256": "f2c5f492a467cb8302207e0c77bdf15f0bf978c812cc5efe232712a97c26e585",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "5a3a4d7e8b425d49808e8ac22f15d25aed4e65a5bfb66833bd7048ad7c7d4876"
+    },
+    "stock-lookup-en-default--desktop-dark": {
+      "sha256": "2faf8cfc59ceb6207502e26a8842d9dfe1eb8f83ac774843fd02d5496837eee3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "de235ba0679bfa4f43216cacc5e15fcc90a335d8777498e1ef0f702c62843484"
+    },
+    "stock-lookup-en-default--mobile": {
+      "sha256": "a3d05106ea5790067cbf2e78434a1d47acf35ea53711f4327608551bba3cdbe8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "ba3db49bbdbf26eeedb4dd57a9a3af44127e46876d1111c39aa54b484193a0f1"
+    },
+    "stock-lookup-en-default--tablet": {
+      "sha256": "7494216e9425a48ff49edc8986af459683d21c0fafa7dd78602ac898c5fd9a9c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "9bbd7642d059ee2bb6e0a92ca38ec97bcbcc79856fca5deedf974333413c8113"
+    },
+    "stock-lookup-eu-default--desktop": {
+      "sha256": "c3e0c2bf4f9a2dbb06692d3cd6b6e8b2eeb72161b671d69744eb375a602bb4b8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "20771016d75ffbd8ab352540732ebff7d7f13d758fe017d281024fb798c7006b"
+    },
+    "stock-lookup-eu-default--desktop-dark": {
+      "sha256": "5f91b3fc84cd35f4a94110b51055128b46affb217605d9bd26e56ceaa7137bf6",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "9d949f5c2ea2a388fb478c3bf08c3ebcae4781ec6ca73caa4bbeb9ab9d7f9e1e"
+    },
+    "stock-lookup-eu-default--mobile": {
+      "sha256": "5340551cdb9511f32750bb5a5ead335d1362fbd280a1b7b07f206d53f8dd3c13",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "97dc93ab52a4ce06adb8de00158b966d61582545add8ca87a174c1001951df38"
+    },
+    "stock-lookup-eu-default--tablet": {
+      "sha256": "7fd7b7ecb79fa418be04f298c0f2bb898357f30462020e42e0f8e3d633e6b3e6",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "b399f24f9b26d64aa43303a35ef1d614343aa1b8eb362e40fdfcefa16b701e9f"
+    },
+    "stock-lookup-from-product-default--desktop": {
+      "sha256": "1231f6a749584f6f431cb789fe8e0828090922b9ea61f797e3c1c3831ebac920",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "0575e98e6d8dd4cce7f645241bb3c55d65d222ef579b512b59c2bc23e825cb3a"
+    },
+    "stock-lookup-from-product-default--desktop-dark": {
+      "sha256": "86245a98e5bc6d65ee9c9bc1c047ff0a3a7b1b8820cbcaf664be799415a07ecc",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "9c3ad2b9203af0f4543168b38b5ad0c43e1d9f7751e035d6df7461b848d607f4"
+    },
+    "stock-lookup-from-product-default--mobile": {
+      "sha256": "fd7042e2ac73a68393fe09a2a18bb8fb57326089129a9cef795b4ed0b1748fd7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "7ddc7aa419567b6b3b45f38d07a3d4201845ea7554377e18fe0769482f9b5039"
+    },
+    "stock-lookup-from-product-default--tablet": {
+      "sha256": "7bcdccbb4fc98187a9797d7cce2d692aa04f2d041acc60901d294f958d84b01c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "28e7e266a7459fad258297f38d9cfdc9ab39d3cc3f21b21a2e4ca45debffbb0d"
+    },
+    "stock-lookup-from-receipt-default--desktop": {
+      "sha256": "33ae25836adfba85da4569ac9d25b3cff40b34ac703e1769b45338c04f98c27e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "6f6d8f554b175760c40e2e5c36509fcf42e7b6fc08cd9a0ebfe8e38591592c66"
+    },
+    "stock-lookup-from-receipt-default--desktop-dark": {
+      "sha256": "81a01b03686383d79a3ad7ce5036f9e1efef3d51dc1d55c2fba2c78cbd6f40c9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "72aac35b7169e18095f06eaa78a7a3a69fa36f78ff9e4f9cad994373cfc554a1"
+    },
+    "stock-lookup-from-receipt-default--mobile": {
+      "sha256": "3b5d62d7a53b9f80cc4953b56f46e29b098667d8689043a2d32380900082442f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "d8fa68a8c8223a0f1350e1c8cc4441e320cc478ad440831cc324d154b22f330e"
+    },
+    "stock-lookup-from-receipt-default--tablet": {
+      "sha256": "89099497ce0751933ba38ce2b5d164bf6d84803b061a309f05f0311cc1fabf24",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "97fbb97f62d1668a8a782ebb6f9d49178407e254111fedee7f1e063af89cfb19"
+    },
+    "stock-lookup-gl-default--desktop": {
+      "sha256": "43fa6fd598ed45c0ea11d9de6bbb83e1a2416d9d9e734cbffdb9ebc111dad084",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "674d6b240238f50a7ca2f6ed5fdabeaafa5fab64ad061c7816b8b89802d06aef"
+    },
+    "stock-lookup-gl-default--desktop-dark": {
+      "sha256": "e20e5a655b3b7c74e2d608ce9b082d601cd4fff68f200a5a1c1b1b76ec4a0de8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "d66be3a999a918ee2cf93cae7ee66821905716cdf16d8be1324e3d98fb04e609"
+    },
+    "stock-lookup-gl-default--mobile": {
+      "sha256": "95d3f8c54667f6d664ef57e6d013ce3047a85df77e7ef6005d40a49f93fb86c2",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "a60dcc3d792141048e3c3495b0150a05677e3dfbe3f5c17205b81304ae907f35"
+    },
+    "stock-lookup-gl-default--tablet": {
+      "sha256": "8fdb3c9b833d4329a989ac005c8cc90433cd182e43180354488965608a20f1d9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "54ac1b05884caf555b08286e107ceab9d174e610ee1c3fd909e435eaeb76214e"
+    },
+    "stock-lookup-initial-failure-default--desktop": {
+      "sha256": "47b61561d4f6eda86a975ef4f3ccbfba4cbc0875652d492b85497bcefe4ca5d9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "4f1ca5984424fcedd9c3d53697587b15c22fb7675bedd702cd128e745be9fbb1"
+    },
+    "stock-lookup-initial-failure-default--desktop-dark": {
+      "sha256": "6320817ca569f4da1aae4bcaf9596bea0176649d104927dd0664625c5dabdf8d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "55a8155d392421a6d7932deb795efa07bbc8a661761c6cfda620d382e7c75af7"
+    },
+    "stock-lookup-initial-failure-default--mobile": {
+      "sha256": "66d0f2f01c416bdbbe7a5e47a23536c9e026a9618cbf7db733d259aca4a3993c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "1919e88d7b13d3fe88549cddbd27e214a8dcff49b226266b748038da976d2da0"
+    },
+    "stock-lookup-initial-failure-default--tablet": {
+      "sha256": "26bf1b47495470899b7c996b226fbb46df4ae9c3b8a05fa2109c5d4712e7e13a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "da1b0c3c25ce37f5b78ded4987a46675fc54f5e3e6f2b4bbd548f64edee5ea5b"
+    },
+    "stock-lookup-invalid-default--desktop": {
+      "sha256": "44c25627c37ce83b857152d08c1f95ff5bd74d2411e0c6475d8ff75fbf05240d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "d3fe34e57e8ed10a3c4df5e52094fc0b288395c3e0d2fe52b850e36e9784af08"
+    },
+    "stock-lookup-invalid-default--desktop-dark": {
+      "sha256": "4659493f1a53c9da601c332fcf7547670e855700469cb39f5e417fcda5b7e40f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "86c4d1fe8baf4f56959c776de397d0f2bab654d75054d8f9661e0828dca222e8"
+    },
+    "stock-lookup-invalid-default--mobile": {
+      "sha256": "50ade6f1373cd1d978259760b937b56fbf2ab94184df2236d5af916304ede20c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "57046d0edfb9b9cdf2649cb985d23a408fbf3319cfacfed210ad528793811e81"
+    },
+    "stock-lookup-invalid-default--tablet": {
+      "sha256": "7fca1e1627357514786d72fb57a04a83c267b0145cb4c9cd2fd4edf42a93ac73",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "41b27439d57dc4ccc5803bc16e5768d8b5066df127536bff612101a8ca7277f2"
+    },
+    "stock-lookup-loading-default--desktop": {
+      "sha256": "7c727ac770f927be1d4d608b8c48effc2b18a9da8b1465b0a590d4b7dc19a2ec",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "2c9bbf4a447d1a56158f780d315888eae43379b1fe8e4038651a418e5a8671b5"
+    },
+    "stock-lookup-loading-default--desktop-dark": {
+      "sha256": "6db0aba755d819d31cae92ffc9bc502e7f8694c04b3326705bcb8aa128854c98",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "46f005ff9446f9bfa2acae16feb1a842b6e4cfb2841c72550539955743e550a1"
+    },
+    "stock-lookup-loading-default--mobile": {
+      "sha256": "387bf6cfe149baf487f4278ba13759631d219d866019ed05146626acd0ccc8d1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "09082167963520ad246bba77d68a7620a72772117bc0f1663d6084d9bd2bbacc"
+    },
+    "stock-lookup-loading-default--tablet": {
+      "sha256": "21d1b5946a39769859cf43162495ae8eeacfb71c11a5e06ebff78cddc4b6edbc",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "533c5f29a4624629dcd046da139443d8746e4fded5f39a1fdf540e0afb1c3080"
+    },
+    "stock-lookup-lookup-default--desktop": {
+      "sha256": "c4e2c5ffca17e60303ca2f49d1301f17844ba900bfece225d07c415d515251ab",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "c54d737b650535df11b0e44014267ba6383d4ac4def8b9ee0fc3968f366386d6"
+    },
+    "stock-lookup-lookup-default--desktop-dark": {
+      "sha256": "f1c0231f765292a1766b0885f56514bcd9eda0d4e96129e91c56bf65db3c5bcc",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "a3fa73d4e9209c9b055e44ccb12a8d14e2189b46bcbd4964bdad01331bcdfc91"
+    },
+    "stock-lookup-lookup-default--mobile": {
+      "sha256": "a1dfa2ede451444231e9d72412b120c0e8b67b6174525532f1b27bf1ff7e45a8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "524678a3ff11b4c2331323811692bb19b96466ea2a9c7d9cc93599fc50fb2a48"
+    },
+    "stock-lookup-lookup-default--tablet": {
+      "sha256": "e5cd71192b9b7b707f36fa194fe9e506aea72f2e1433cf4e423d7982c795284e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "65642c83264bed468b494e185e60c99fd40105779e782d9d869e39022b99505d"
+    },
+    "stock-lookup-lookup-duplicate-picker--desktop": {
+      "sha256": "bf704dcf9ca9540d6f5ae17f1d44e30d6abe184a40b04b102c2b6a598e06286f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "e46a2881b1d55a26767055f7baa52a07b2e7e95069c90afd86a2177c9bcd748a"
+    },
+    "stock-lookup-lookup-duplicate-picker--desktop-dark": {
+      "sha256": "7dcc0a0b8ca0ff9635289fc475d1bc55e79dc2831f09871d98b0aee027f6051b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "f229be4f321e4528bbc35ced5e756b3f06816031a9fa449275d2fe292417b36c"
+    },
+    "stock-lookup-lookup-duplicate-picker--mobile": {
+      "sha256": "f3b1863a8ad84614835d4d84477ee3ecd50d76e94da4cadbaae376146164cbbf",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "eadbc522c2db3c1328d85109f5d1758788dab459e4ee11ee989ad3c07723af71"
+    },
+    "stock-lookup-lookup-duplicate-picker--tablet": {
+      "sha256": "251ef7b5796f06d6e47cf984bfc5693dda275b9995a1959c812042bf14f8b8a3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "00a0cacc54acc5ae982846787fb4e3b07e1fb1ace84489b8e5982a417048261e"
+    },
+    "stock-lookup-lookup-negative--desktop": {
+      "sha256": "a1727be66e97c5be7b185b93b8b100886ff8ca8c32520e347050554c6f9f2a46",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "bd01ee1ac3d39bbe8b4c6db8a19eec90f55402bb95a493e3e2fd29ea350898ea"
+    },
+    "stock-lookup-lookup-negative--desktop-dark": {
+      "sha256": "1ee9199f342da740e3267bb6f045c93eedad5ce04e3623739ea0c31977095339",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "17ab542e5d8d8d56cc0639011eda8ec9fa88870a9639a95782544f7dccf1b946"
+    },
+    "stock-lookup-lookup-negative--mobile": {
+      "sha256": "4c2267ade15269c6a37f0ebadfdce863fdb85c27886668d05735d4d1bcc38e53",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "709fc5b6b46c4251b291cbf2f6cd12349110c630c8b6a4d13f0e7de36fa5f665"
+    },
+    "stock-lookup-lookup-negative--tablet": {
+      "sha256": "6db70d36920876b0c5bc8529c4444daf0cbb46797598428ca1b9f7c46348c380",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "9a9e13cd512da239364229999e4c98aa162bd6a247fb0cd99850179af0837f70"
+    },
+    "stock-lookup-lookup-no-record--desktop": {
+      "sha256": "f2c4b992905130a890f7dfb937eeb6d8b80376635fa3a6ea834b08d24b5f3ef7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "9b6552e2e38e3c8d59e63fc14d3c38e6ba7a98a8d6a2c45095e98183ac8d4101"
+    },
+    "stock-lookup-lookup-no-record--desktop-dark": {
+      "sha256": "1cd138c82de22cd629fae3f96955c396d573f4cb26082431e655b216d37e3362",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "2269da59251070d371b707704e5e8abc68452b347fdb96de58f4b5fa072d118e"
+    },
+    "stock-lookup-lookup-no-record--mobile": {
+      "sha256": "02b910a7082f8784965d3823b315c5c0c10bb097618cb0bad0d096e459956165",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "da2c30c09004897956fa6d275d0158249a0fe28bb642c6aaad1581980dfa9e7d"
+    },
+    "stock-lookup-lookup-no-record--tablet": {
+      "sha256": "ac47cc5c4374a0cc53b6ab34254c6f2679f93d960baff0a78687b0398dbfc437",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "376c1ab35d2f8c3fda104dd84a849005bb76ec8624792a7be48130dbe8f6fd78"
+    },
+    "stock-lookup-lookup-zero--desktop": {
+      "sha256": "da66fd47f430e64874f40a9b1e4bf7558ba2d51cde57f9157d7500c54a1dfd02",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "0c907396fde6aed9246dcad2a72fd604084f2beaa4b359b98901b3db6e05e57d"
+    },
+    "stock-lookup-lookup-zero--desktop-dark": {
+      "sha256": "1be366712a3510acbc33fe4c6230730a40fc545f0df3fe62ae991b5d5d6fcd9d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "d129d934bca10fa340044cb440616730f27c964b87bd484a453ec25788ce6f59"
+    },
+    "stock-lookup-lookup-zero--mobile": {
+      "sha256": "036f05fdc2a8b928d0007ed66863d79e09865e50afb1e0b48f5d08f9d9a9f104",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "373c41fa975049d92df47afe71a941135c05486dbbbeda635a001c5c7ae74d84"
+    },
+    "stock-lookup-lookup-zero--tablet": {
+      "sha256": "26bf3122c3ec20fda7a4b60582776b8ceab2d1507f5db5abe3b37634adbc5a02",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "00ba59f2e7b8e1dbff1c33c78582f58c628770baf6ef24ba1d7113927d0db14a"
+    },
+    "stock-lookup-refresh-default--desktop": {
+      "sha256": "b922e14ac5d0e60f2e772d3249c8fbccd6f014766b8abe4f69f560fb5a99fcbf",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "abdc40dce18d3da7557741cc2f3e4efb05dafd6bf66683baa4bbe5a62dcfa78e"
+    },
+    "stock-lookup-refresh-default--desktop-dark": {
+      "sha256": "ddef9612b717e38a71f786a798c6ac0790afbc0aac4f8e04ff1ae2cf7a2653e1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "5c6f8fd2fa967a97287e9f1c5dbdd2b0fa82164a279c3c296a5cd59d583a7bc5"
+    },
+    "stock-lookup-refresh-default--mobile": {
+      "sha256": "32b21c58e73c2628b3716f2c2971bae14b88442d0f4b5ef5221fde2b112def71",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "4ce7c61ee899827a6db359897988032d21463fb33b8be2710441c3d804907935"
+    },
+    "stock-lookup-refresh-default--tablet": {
+      "sha256": "83d0ff1970a109d9f7a6fcc684ee31a30d22c1da5244117b61318b7ccbd3b143",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve all 64 images",
+      "run": "2026-11-18T16-55-11.509Z",
+      "sourceHash": "be00dd2ea4c055a1d3c87a1f4f8567139b2611765a25708f62d6596e9dd61525",
+      "profileHash": "3c2ee2eb0f3383942e370aae9406e8fcca0a1e76e20cee00c948a550ccd249d6"
     }
   }
 }
