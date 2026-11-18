@@ -16,13 +16,16 @@ the linked records distinguish approved source decisions from newly recorded
 wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
-Current assignment — 2026-11-17: the first stock receipt preview is approved.
-The [approval record](openspec/changes/define-first-stock-receipt/preview-plan.md#visual-approval-and-reference-promotion--2026-11-17)
-identifies the 84 new references and the 1,144 earlier references. Follow the
-[checkpoint sequence](openspec/changes/define-first-stock-receipt/preview-plan.md#commit-preparation--2026-11-17)
-authorized by the user's request to continue. Stage each batch separately,
-provide its command to the user, and verify the resulting commit. Never create
-a commit.
+Current assignment — 2026-11-18: the [Consultar existencias definition](openspec/changes/define-stock-lookup/proposal.md)
+records the exact read contract and SL-001–011 for one product and one
+authorized stock location. The user selected **“Build the simulated preview
+(Recommended)”** for the [Storybook plan](openspec/changes/define-stock-lookup/preview-plan.md).
+Read sibling sources without changes. Never create a commit.
+
+The first stock receipt checkpoint is complete. User commits `ac24bbb` and
+`04746ae` match the 20- and 85-file manifests. The tree and index were clean and
+the registry carried 1,228 accepted references before stock lookup discovery.
+See the [receipt approval record](openspec/changes/define-first-stock-receipt/preview-plan.md#visual-approval-and-reference-promotion--2026-11-17).
 
 Previous assignment — 2026-11-17: the user said **“go ahead”** to the simulated
 Storybook [product creation preview](openspec/changes/define-product-creation/preview-plan.md)

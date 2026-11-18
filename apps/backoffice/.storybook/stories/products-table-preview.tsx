@@ -64,7 +64,10 @@ import {
   LockIcon,
   XIcon,
 } from "@/icons";
-import { NavigationPrototype } from "./navigation-prototype";
+import {
+  NavigationPrototype,
+  type StockLookupNavigation,
+} from "./navigation-prototype";
 import {
   BrowsingFooter,
   BrowsingStatus,
@@ -206,6 +209,15 @@ function ProductExpansion({
   );
 }
 
+type ProductsStockLookup = Omit<StockLookupNavigation, "render"> & {
+  render: (
+    ...args: [
+      ...Parameters<StockLookupNavigation["render"]>,
+      readonly PreviewProduct[],
+    ]
+  ) => ReactNode;
+};
+
 export interface ProductsTablePreviewProps {
   initialStock: boolean;
   initialDensity: "compact" | "comfortable";
@@ -215,6 +227,8 @@ export interface ProductsTablePreviewProps {
   saveFixture?: SaveFixture;
   browsingFixture?: BrowsingFixture;
   browsingCount?: number;
+  stockLookup?: ProductsStockLookup;
+  stockShortcut?: { label: string; open: (product: PreviewProduct) => void };
 }
 
 function StockValue({
@@ -307,6 +321,7 @@ function ProductsTable({
   catalogueAction,
   productStatus,
   browsing,
+  stockShortcut,
 }: {
   view: ProductsView;
   update: (next: ProductsViewUpdate) => void;
@@ -316,6 +331,7 @@ function ProductsTable({
   catalogueAction?: ReactNode;
   productStatus?: (product: PreviewProduct) => ProductRowStatus | undefined;
   browsing?: ProductsBrowsing | null;
+  stockShortcut?: ProductsTablePreviewProps["stockShortcut"];
 }) {
   const t = useTranslations("catalogue");
   const phone = useSyncExternalStore(
@@ -1162,6 +1178,23 @@ function ProductsTable({
                 hidden={panelEditing ? ["unit"] : ["sku", "unit"]}
                 t={t}
               />
+              {stockShortcut && !panelEditing && (
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  className="self-start max-sm:min-h-11"
+                  data-stock-lookup-product-shortcut
+                  onClick={() =>
+                    editor.exit(() => {
+                      setPanelId(null);
+                      stockShortcut.open(panelProduct);
+                    })
+                  }
+                >
+                  {stockShortcut.label}
+                </Button>
+              )}
               {view.stock && (
                 <div className="products-panel-stock">
                   <h3>{t("gridStock")}</h3>
@@ -1203,7 +1236,7 @@ export function ProductsTableWorkspace(
     viewKey?: string;
   },
 ) {
-  const { editor } = props;
+  const { editor, stockLookup } = props;
   const t = useTranslations("catalogue");
   const key = `${props.viewKey ?? "irin-products-design"}:${props.initialStock}:${props.initialDensity}:${props.hiddenColumns}:${props.locationCount}:${props.archivedFixture}:${props.saveFixture ?? "confirmed"}${props.browsingFixture ? `:browsing:${props.browsingFixture}:${props.browsingCount ?? 1000}` : ""}`;
   const [view, setView] = useState(() =>
@@ -1304,6 +1337,13 @@ export function ProductsTableWorkspace(
         locationCount={props.locationCount}
         productsToolbar={toolbar}
         movementsContent={props.movementsContent}
+        stockLookup={
+          stockLookup && {
+            ...stockLookup,
+            render: (location, productId) =>
+              stockLookup.render(location, productId, editor.records),
+          }
+        }
         beforeNavigate={(proceed) =>
           editor.exit(() => {
             editor.inspect(null);
@@ -1320,6 +1360,7 @@ export function ProductsTableWorkspace(
             catalogueAction={props.catalogueAction}
             productStatus={props.productStatus}
             browsing={browsing}
+            stockShortcut={props.stockShortcut}
           />
         }
       />

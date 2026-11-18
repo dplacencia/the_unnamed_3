@@ -20,10 +20,9 @@ the exact approval and identities. Require new image approval for replacements.
 The
 [visual review workflow](../../openspec/changes/define-visual-review-workflow/proposal.md)
 is implemented; preserve its review rules and the technical sources as constraints.
-Current assignment — 2026-11-17: follow the approved stock receipt
-[commit checkpoint](../../openspec/changes/define-first-stock-receipt/preview-plan.md#commit-preparation--2026-11-17).
-Stage the implementation and approved reference files in separate batches.
-The user runs the commit commands.
+Current assignment — 2026-11-18: [Consultar existencias](../../openspec/changes/define-stock-lookup/proposal.md)
+is defined in OpenSpec. The user authorized the [simulated preview](../../openspec/changes/define-stock-lookup/preview-plan.md).
+The receipt commits are verified. Never create a commit.
 
 Previous assignment — 2026-11-17: follow the simulated
 [product creation preview plan](../../openspec/changes/define-product-creation/preview-plan.md)

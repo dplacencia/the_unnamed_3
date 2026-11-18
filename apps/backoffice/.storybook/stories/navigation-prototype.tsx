@@ -1,7 +1,9 @@
 "use client";
 
 import {
+  useEffect,
   useReducer,
+  useRef,
   useState,
   type CSSProperties,
   type ReactNode,
@@ -63,6 +65,7 @@ import {
   type LocationPage,
   type PermissionMode,
   type Choices,
+  type StockEntry,
 } from "./navigation-model";
 import "./navigation-prototype.css";
 
@@ -94,9 +97,19 @@ export interface NavigationPrototypeProps {
   locationCount: "one" | "several";
   productsContent?: ReactNode;
   movementsContent?: ReactNode;
+  stockLookup?: StockLookupNavigation;
   productsToolbar?: ReactNode;
   beforeNavigate?: (proceed: () => void) => void;
 }
+
+export type StockLookupNavigation = {
+  scope: string;
+  entry?: StockEntry;
+  render: (
+    location: { id: string; label: string } | null,
+    productId?: string,
+  ) => ReactNode;
+};
 
 export function NavigationPrototype(props: NavigationPrototypeProps) {
   return (
@@ -115,6 +128,7 @@ function Workspace({
   locationCount,
   productsContent,
   movementsContent,
+  stockLookup,
   productsToolbar,
   beforeNavigate,
 }: NavigationPrototypeProps) {
@@ -133,7 +147,7 @@ function Workspace({
   } = useSidebar();
   const showLabels = open || isHovered || isMobile;
   // This namespace belongs only to this simulated Storybook fixture.
-  const storageKey = `irin-navigation-preview:${permissionMode}:${locationCount}`;
+  const storageKey = `irin-navigation-preview:${permissionMode}:${locationCount}${stockLookup ? `:${stockLookup.scope}` : ""}`;
   const [memoryUnavailable, setMemoryUnavailable] = useState(false);
   const [state, dispatch] = useReducer(navigate, initialPage, (page) => {
     let choices: Choices = {};
@@ -153,6 +167,19 @@ function Workspace({
     }
     return { ...initialNavigation(page), choices };
   });
+  const incomingStockEntry = stockLookup?.entry;
+  const title = useRef<HTMLHeadingElement>(null);
+  const [lastStockEntry, setLastStockEntry] = useState(incomingStockEntry);
+  if (incomingStockEntry !== lastStockEntry) {
+    setLastStockEntry(incomingStockEntry);
+    if (incomingStockEntry)
+      dispatch({ type: "stock-entry", entry: incomingStockEntry });
+  }
+  useEffect(() => {
+    if (!incomingStockEntry) return;
+    const frame = requestAnimationFrame(() => title.current?.focus());
+    return () => cancelAnimationFrame(frame);
+  }, [incomingStockEntry]);
   const [mode, setMode] = useState(permissionMode);
   const access = accessFor(mode);
   const permitted = access.destinations ?? [];
@@ -165,7 +192,11 @@ function Workspace({
   const available =
     locationCount === "one" ? ["sales-floor"] : ["sales-floor", "stockroom"];
   const selected = locationPage
-    ? resolveLocation(state.choices[locationPage], available)
+    ? resolveLocation(
+        (locationPage === "stock" ? state.stockEntry?.locationId : undefined) ??
+          state.choices[locationPage],
+        available,
+      )
     : undefined;
   const locationName = (id: string) =>
     t(id === "sales-floor" ? "navSalesFloor" : "navStockroom");
@@ -419,6 +450,8 @@ function Workspace({
               )}
             </Button>
             <h1
+              ref={title}
+              tabIndex={stockLookup ? -1 : undefined}
               className={cn(
                 "text-title-sm font-semibold text-gray-800 dark:text-white/90",
                 (hasLocation ||
@@ -529,9 +562,16 @@ function Workspace({
                 ? productsContent
                 : state.page === "movements" && movementsContent
                   ? movementsContent
-                  : locationPage && !selected
-                    ? t("navChooseLocationHint")
-                    : t("navContentHint")}
+                  : state.page === "stock" && stockLookup
+                    ? stockLookup.render(
+                        selected
+                          ? { id: selected, label: locationName(selected) }
+                          : null,
+                        state.stockEntry?.productId,
+                      )
+                    : locationPage && !selected
+                      ? t("navChooseLocationHint")
+                      : t("navContentHint")}
             </div>
           )}
         </div>

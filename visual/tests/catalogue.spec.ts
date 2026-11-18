@@ -22,6 +22,7 @@ import { navigationAction } from "../navigation-actions.ts";
 import { productsAction } from "../products-actions.ts";
 import { productsCreationAction } from "../products-creation-actions.ts";
 import { stockReceiptAction } from "../stock-receipt-actions.ts";
+import { stockLookupAction } from "../stock-lookup-actions.ts";
 import type { Locale } from "../../apps/backoffice/src/i18n/configuration";
 
 const build = readBuild();
@@ -75,6 +76,8 @@ async function action(
   if (name?.startsWith("products-creation-"))
     return productsCreationAction(page, name);
   if (name?.startsWith("stock-receipt-")) return stockReceiptAction(page, name);
+  if (name?.startsWith("stock-lookup-"))
+    return stockLookupAction(page, name, (entry.locale ?? "es") as Locale);
   if (name?.startsWith("products-"))
     return productsAction(page, name, (entry.locale ?? "es") as Locale);
   switch (name) {

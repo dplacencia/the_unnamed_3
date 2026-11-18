@@ -20,6 +20,7 @@ export const inventoryPages: Destination[] = [
 export const locationPages = ["stock", "movements", "counts"] as const;
 export type LocationPage = (typeof locationPages)[number];
 export type Choices = Partial<Record<LocationPage, string>>;
+export type StockEntry = { productId: string; locationId?: string };
 export type PermissionMode =
   "ready" | "restricted" | "no-module" | "loading" | "error";
 export type Access =
@@ -29,9 +30,11 @@ export type NavigationState = {
   page: Destination;
   openGroup: string | null;
   choices: Choices;
+  stockEntry?: StockEntry;
 };
 type Event =
   | { type: "page"; page: Destination }
+  | { type: "stock-entry"; entry: StockEntry }
   | { type: "group"; group: string }
   | { type: "location"; page: LocationPage; location: string };
 export function initialNavigation(page: Destination): NavigationState {
@@ -50,9 +53,17 @@ export function navigate(
       return {
         ...state,
         page: event.page,
+        stockEntry: undefined,
         openGroup: inventoryPages.includes(event.page)
           ? "inventory"
           : state.openGroup,
+      };
+    case "stock-entry":
+      return {
+        ...state,
+        page: "stock",
+        openGroup: "inventory",
+        stockEntry: event.entry,
       };
     case "group":
       return {
@@ -63,6 +74,10 @@ export function navigate(
       return {
         ...state,
         choices: { ...state.choices, [event.page]: event.location },
+        stockEntry:
+          event.page === "stock" && state.stockEntry
+            ? { productId: state.stockEntry.productId }
+            : state.stockEntry,
       };
   }
 }

@@ -20,5 +20,5 @@
 ## Commit checkpoint
 
 - [x] 3.1 Record the authorized two-batch checkpoint and the 20-file implementation scope for the first commit.
-- [ ] 3.2 Verify the first user commit, stage the 85 reference files, then give the user the second commit command.
-- [ ] 3.3 Verify the second user commit and the resulting tree and index.
+- [x] 3.2 Verify the first user commit, stage the 85 reference files, then give the user the second commit command. Commit `ac24bbb` matched its 20-file manifest.
+- [x] 3.3 Verify the second user commit and the resulting tree and index. Commit `04746ae` matched its 85-file manifest. The tree and index were clean with 1,228 references. See `.cache/receipt-checkpoint-complete.json`.

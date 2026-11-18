@@ -67,11 +67,12 @@ context: |
   UI language from browser headers. The landing uses Spanish at / and localized
   /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
   one year (365 days), with no account-level or cross-device preference implied.
-  Current assignment 2026-11-17: the user approved the 84-image first stock
-  receipt gallery and asked to continue. Follow the exact approval and commit
-  checkpoint in define-first-stock-receipt/preview-plan.md. Stage the 20
-  implementation files first and the 85 reference files after the first user
-  commit is verified. Never commit.
+  Current assignment 2026-11-18: Consultar existencias for one product and one
+  authorized stock location is defined in define-stock-lookup. The simulated
+  Storybook preview is user-authorized. Preserve the exact
+  read result and distinguish unconfirmed or failed reads from no record and zero.
+  Read sibling repositories without changes. The two receipt user commits are
+  verified with 1,228 accepted references. Never commit.
   Previous assignment 2026-11-17: user said "go ahead" to the simulated Storybook
   product creation preview. Follow define-product-creation/preview-plan.md and
   PC-001–010. Use synthetic outcomes and retain exact visual review. The user

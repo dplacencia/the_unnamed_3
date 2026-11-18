@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -18,7 +18,11 @@ import {
 } from "@/components/ui/sheet";
 import { PlusIcon, XIcon } from "@/icons";
 import { defaultLocale, isLocale } from "@/i18n/configuration";
-import { NavigationPrototype } from "./navigation-prototype";
+import {
+  NavigationPrototype,
+  type StockLookupNavigation,
+} from "./navigation-prototype";
+import type { StockEntry } from "./navigation-model";
 import { ProductsCreationPreview } from "./products-creation-preview";
 import { creationUnit, type CreationUnitId } from "./products-creation-model";
 import { formatCreationStep } from "./products-creation-messages";
@@ -48,20 +52,45 @@ type Change =
   | { field: "product"; value: ReceiptProduct | null }
   | { field: "unit"; value: CreationUnitId | null };
 
-export function StockReceiptPreview({ fixture }: { fixture: ReceiptFixture }) {
+type ReceiptStockLookup = Omit<StockLookupNavigation, "render"> & {
+  label: string;
+  open: (entry: StockEntry) => void;
+  initialBalances: ReceiptSession["balances"];
+  render: (
+    ...args: [
+      ...Parameters<StockLookupNavigation["render"]>,
+      ReceiptSession["balances"],
+    ]
+  ) => ReturnType<StockLookupNavigation["render"]>;
+};
+
+export function StockReceiptPreview({
+  fixture,
+  stockLookup,
+}: {
+  fixture: ReceiptFixture;
+  stockLookup?: ReceiptStockLookup;
+}) {
   const currentLocale = useLocale();
   const locale = isLocale(currentLocale) ? currentLocale : defaultLocale;
   const copy = receiptMessages[locale];
+  const workspaceCopy = useTranslations("catalogue");
+  const locationLabels = stockLookup
+    ? {
+        salesFloor: workspaceCopy("navSalesFloor"),
+        stockroom: workspaceCopy("navStockroom"),
+      }
+    : copy.locationLabels;
   const locations = [
-    { id: "sales-floor", name: copy.locationLabels.salesFloor },
-    { id: "stockroom", name: copy.locationLabels.stockroom },
+    { id: "sales-floor", name: locationLabels.salesFloor },
+    { id: "stockroom", name: locationLabels.stockroom },
   ];
   const [retained] = useState(() =>
     fixture === "restored" ? retainedReceipt() : null,
   );
   const [session, setSession] = useState<ReceiptSession>({
     record: retained,
-    balances: {},
+    balances: stockLookup?.initialBalances ?? {},
     read: { phase: "idle" },
     readCount: 0,
   });
@@ -277,6 +306,13 @@ export function StockReceiptPreview({ fixture }: { fixture: ReceiptFixture }) {
             permissionMode="ready"
             locationCount="several"
             movementsContent={movementsContent}
+            stockLookup={
+              stockLookup && {
+                ...stockLookup,
+                render: (location, productId) =>
+                  stockLookup.render(location, productId, session.balances),
+              }
+            }
           />
         )}
         <SheetContent
@@ -363,6 +399,23 @@ export function StockReceiptPreview({ fixture }: { fixture: ReceiptFixture }) {
                   </p>
                 </div>
               )}
+              {stockLookup &&
+                phase === "applied" &&
+                read.phase !== "denied" && (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="self-start max-sm:min-h-11"
+                    data-stock-lookup-receipt-shortcut
+                    onClick={() => {
+                      const { productId, locationId } = record.command.content;
+                      finishClose();
+                      stockLookup.open({ productId, locationId });
+                    }}
+                  >
+                    {stockLookup.label}
+                  </Button>
+                )}
               {phase === "pending" && (
                 <div role="status" className="space-y-1">
                   <p className="font-semibold">{copy.pending}</p>

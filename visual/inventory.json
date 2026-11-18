@@ -3147,6 +3147,194 @@
       ],
       "limitation": "Synthetic one-line stock receipt. Outcomes, timing, stock lookup and storage are fixture-controlled. No Inventory requests or real stock changes. Candidates require specific visual approval.",
       "locale": "eu"
+    },
+    {
+      "id": "stock-lookup-lookup",
+      "title": "Consultar existencias from the sidebar",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-lookup--lookup",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-lookup-incomplete"
+        },
+        {
+          "id": "duplicate-picker",
+          "action": "stock-lookup-duplicate-picker"
+        },
+        {
+          "id": "zero",
+          "action": "stock-lookup-zero"
+        },
+        {
+          "id": "negative",
+          "action": "stock-lookup-negative"
+        },
+        {
+          "id": "no-record",
+          "action": "stock-lookup-absence"
+        }
+      ],
+      "limitation": "Synthetic exact-pair reads, access outcomes and timing. No Inventory requests or stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-lookup-from-product",
+      "title": "Recorded stock from product details",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-lookup--from-product",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-lookup-positive-from-product"
+        }
+      ],
+      "limitation": "Synthetic exact-pair reads, access outcomes and timing. No Inventory requests or stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-lookup-from-receipt",
+      "title": "Refresh recorded stock from an applied receipt",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-lookup--from-receipt",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-lookup-refreshing-from-receipt"
+        }
+      ],
+      "limitation": "Synthetic exact-pair reads, access outcomes and timing. No Inventory requests or stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-lookup-loading",
+      "title": "Initial stock lookup loading",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-lookup--loading",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-lookup-loading"
+        }
+      ],
+      "limitation": "Synthetic exact-pair reads, access outcomes and timing. No Inventory requests or stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-lookup-refresh",
+      "title": "Failed stock refresh with previous balance",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-lookup--refresh",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-lookup-failed-refresh"
+        }
+      ],
+      "limitation": "Synthetic exact-pair reads, access outcomes and timing. No Inventory requests or stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-lookup-initial-failure",
+      "title": "Initial stock lookup failure",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-lookup--initial-failure",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-lookup-initial-error"
+        }
+      ],
+      "limitation": "Synthetic exact-pair reads, access outcomes and timing. No Inventory requests or stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-lookup-denied",
+      "title": "Stock lookup denied",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-lookup--denied",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-lookup-denied"
+        }
+      ],
+      "limitation": "Synthetic exact-pair reads, access outcomes and timing. No Inventory requests or stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-lookup-invalid",
+      "title": "Invalid stock lookup pair",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-lookup--invalid",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-lookup-invalid"
+        }
+      ],
+      "limitation": "Synthetic exact-pair reads, access outcomes and timing. No Inventory requests or stock changes. Candidates require specific visual approval."
+    },
+    {
+      "id": "stock-lookup-en",
+      "title": "Recorded stock in English",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-lookup--lookup",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-lookup-positive"
+        }
+      ],
+      "limitation": "Synthetic exact-pair reads, access outcomes and timing. No Inventory requests or stock changes. Candidates require specific visual approval.",
+      "locale": "en"
+    },
+    {
+      "id": "stock-lookup-ca",
+      "title": "Recorded stock in Catalan",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-lookup--lookup",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-lookup-positive"
+        }
+      ],
+      "limitation": "Synthetic exact-pair reads, access outcomes and timing. No Inventory requests or stock changes. Candidates require specific visual approval.",
+      "locale": "ca"
+    },
+    {
+      "id": "stock-lookup-gl",
+      "title": "Recorded stock in Galician",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-lookup--lookup",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-lookup-positive"
+        }
+      ],
+      "limitation": "Synthetic exact-pair reads, access outcomes and timing. No Inventory requests or stock changes. Candidates require specific visual approval.",
+      "locale": "gl"
+    },
+    {
+      "id": "stock-lookup-eu",
+      "title": "Recorded stock in Basque",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-lookup--lookup",
+      "cases": [
+        {
+          "id": "default",
+          "action": "stock-lookup-positive"
+        }
+      ],
+      "limitation": "Synthetic exact-pair reads, access outcomes and timing. No Inventory requests or stock changes. Candidates require specific visual approval.",
+      "locale": "eu"
     }
   ]
 }
