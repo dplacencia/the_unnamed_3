@@ -24,6 +24,12 @@ import {
 } from "./navigation-prototype";
 import type { StockEntry } from "./navigation-model";
 import { ProductsCreationPreview } from "./products-creation-preview";
+import { PendingReceiptInspectionContent } from "./pending-receipt-inspection-content";
+import {
+  pendingInspectionMessages,
+  pendingInspectionReason,
+} from "./pending-receipt-inspection-messages";
+import type { InspectionRead } from "./pending-receipt-inspection-model";
 import { creationUnit, type CreationUnitId } from "./products-creation-model";
 import { formatCreationStep } from "./products-creation-messages";
 import {
@@ -64,16 +70,34 @@ type ReceiptStockLookup = Omit<StockLookupNavigation, "render"> & {
   ) => ReturnType<StockLookupNavigation["render"]>;
 };
 
+export type InspectionReceiptFacts = {
+  product: string;
+  location: string;
+  quantity: string;
+  unit: CreationUnitId;
+  reasons: readonly string[];
+};
+
+type ReceiptPendingInspection = {
+  reasons: readonly string[];
+  remember: (lineReference: string, facts: InspectionReceiptFacts) => void;
+  read: InspectionRead;
+};
+
 export function StockReceiptPreview({
   fixture,
   stockLookup,
+  pendingInspection,
 }: {
   fixture: ReceiptFixture;
   stockLookup?: ReceiptStockLookup;
+  pendingInspection?: ReceiptPendingInspection;
 }) {
   const currentLocale = useLocale();
   const locale = isLocale(currentLocale) ? currentLocale : defaultLocale;
   const copy = receiptMessages[locale];
+  const inspectionCopy = pendingInspection && pendingInspectionMessages(locale);
+  const receiptReasons = pendingInspection?.reasons;
   const workspaceCopy = useTranslations("catalogue");
   const locationLabels = stockLookup
     ? {
@@ -99,14 +123,23 @@ export function StockReceiptPreview({
   const [draft, setDraft] = useState(() => newReceiptDraft());
   const [change, setChange] = useState<Change | null>(null);
   const [discard, setDiscard] = useState(false);
+  const [inspecting, setInspecting] = useState(false);
   const workspace = useRef<HTMLDivElement>(null);
   const resultHeading = useRef<HTMLHeadingElement>(null);
   const balanceHeading = useRef<HTMLHeadingElement>(null);
+  const inspectionTrigger = useRef<HTMLButtonElement>(null);
   const sequence = useRef(0);
   const { record, read, readCount } = session;
   const active = record?.phase === "request" || record?.phase === "waiting";
   const canResume = record?.outcome === "unconfirmed";
   const phase = !record ? "form" : active ? "submitting" : record.outcome;
+  const pendingResult =
+    phase === "pending" && record?.result?.type === "pending"
+      ? record.result
+      : null;
+  const inspectionReference = inspecting
+    ? pendingResult?.lineReference
+    : undefined;
   const isRetained = !!record && record.command === retained?.command;
   const products = shortcutProduct
     ? [shortcutProduct, ...receiptProducts]
@@ -123,13 +156,13 @@ export function StockReceiptPreview({
       () =>
         setSession((current) =>
           current.record === record
-            ? advanceReceiptFixture(current, fixture)
+            ? advanceReceiptFixture(current, fixture, receiptReasons)
             : current,
         ),
       record.phase === "waiting" ? 110 : 390,
     );
     return () => clearTimeout(timer);
-  }, [active, fixture, record]);
+  }, [active, fixture, receiptReasons, record]);
 
   useEffect(() => {
     if (read.phase !== "loading") return;
@@ -155,6 +188,7 @@ export function StockReceiptPreview({
 
   function finishClose() {
     setOpen(false);
+    setInspecting(false);
     setDiscard(false);
     setChange(null);
     setDraft(newReceiptDraft());
@@ -367,7 +401,21 @@ export function StockReceiptPreview({
               onCancel={requestClose}
             />
           )}
-          {record && (
+          {pendingInspection && inspectionReference && (
+            <PendingReceiptInspectionContent
+              lineReference={inspectionReference}
+              read={pendingInspection.read}
+              onBack={() => {
+                // Move focus within the dialog before removing the focused Back button.
+                resultHeading.current?.focus({ preventScroll: true });
+                setInspecting(false);
+                requestAnimationFrame(() =>
+                  inspectionTrigger.current?.focus({ preventScroll: true }),
+                );
+              }}
+            />
+          )}
+          {record && !inspectionReference && (
             <>
               <dl className="grid grid-cols-2 gap-4 rounded-lg border border-gray-200 p-3 dark:border-gray-800">
                 <div className="min-w-0">
@@ -416,14 +464,58 @@ export function StockReceiptPreview({
                     {stockLookup.label}
                   </Button>
                 )}
-              {phase === "pending" && (
-                <div role="status" className="space-y-1">
-                  <p className="font-semibold">{copy.pending}</p>
-                  {record.result?.type === "pending" &&
-                    record.result.reason === "product-archived" && (
+              {pendingResult && (
+                <>
+                  <div role="status" className="space-y-1">
+                    {inspectionCopy && (
+                      <p
+                        className="text-gray-600 dark:text-gray-400"
+                        data-pending-inspection-original
+                      >
+                        {inspectionCopy.originalResult}
+                      </p>
+                    )}
+                    <p className="font-semibold">{copy.pending}</p>
+                    {pendingResult.reason === "product-archived" && (
                       <p>{copy.pendingReason}</p>
                     )}
-                </div>
+                    {!!pendingResult.reasons?.length && (
+                      <ul className="list-disc space-y-1 ps-5">
+                        {pendingResult.reasons.map((reason) => (
+                          <li key={reason}>
+                            {pendingInspectionReason(locale, reason)}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                  {pendingInspection && inspectionCopy && (
+                    <Button
+                      ref={inspectionTrigger}
+                      type="button"
+                      variant="outline"
+                      className="self-start max-sm:min-h-11"
+                      data-pending-inspection-open={pendingResult.lineReference}
+                      onClick={() => {
+                        const { quantity, unit, locationId } =
+                          record.command.content;
+                        pendingInspection.remember(
+                          pendingResult.lineReference,
+                          {
+                            product: record.command.product.name,
+                            location: locationId,
+                            quantity,
+                            unit,
+                            reasons: pendingResult.reasons ?? [],
+                          },
+                        );
+                        setInspecting(true);
+                      }}
+                    >
+                      {inspectionCopy.open}
+                    </Button>
+                  )}
+                </>
               )}
               {phase === "rejected" && (
                 <div role="alert" className="space-y-1">

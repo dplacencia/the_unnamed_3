@@ -16,11 +16,15 @@ the linked records distinguish approved source decisions from newly recorded
 wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
-Current assignment — 2026-11-18: the [Consultar existencias definition](openspec/changes/define-stock-lookup/proposal.md)
-records the exact read contract and SL-001–011 for one product and one
-authorized stock location. The user selected **“Build the simulated preview
-(Recommended)”** for the [Storybook plan](openspec/changes/define-stock-lookup/preview-plan.md).
-Read sibling sources without changes. Never create a commit.
+Current assignment — 2026-11-19: the user authorized the [simulated inspection
+of a pending receipt](openspec/changes/define-pending-receipt-inspection/preview-plan.md)
+for one specifically identified, confirmed line in Movimientos. PRI-001–008
+record the approved design. Use read-only sibling sources and exact visual
+review. Never create a commit.
+
+The Consultar existencias checkpoint is complete. User commits `d9952de` and
+`8cf7743` match the 25- and 65-file manifests. The tree and index were clean
+with 1,292 accepted references. [Stock lookup checkpoint](openspec/changes/define-stock-lookup/preview-plan.md#commit-preparation--2026-11-18)
 
 The first stock receipt checkpoint is complete. User commits `ac24bbb` and
 `04746ae` match the 20- and 85-file manifests. The tree and index were clean and

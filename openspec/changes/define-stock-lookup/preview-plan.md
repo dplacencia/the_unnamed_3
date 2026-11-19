@@ -111,3 +111,8 @@ The ignored `.cache/stock-lookup-checkpoint.json` records the approved source
 and the paths, blob IDs and modes for both batches. Verify each user commit
 against its expected parent and manifest before starting the next batch or the
 next Inventory design.
+
+The user commits `d9952de` and `8cf7743` matched both manifests, including their
+parent order, blobs and modes. The tree and index were clean with 1,292
+accepted references. The local proof is
+`.cache/stock-lookup-checkpoint-complete.json`.

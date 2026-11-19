@@ -3335,6 +3335,182 @@
       ],
       "limitation": "Synthetic exact-pair reads, access outcomes and timing. No Inventory requests or stock changes. Candidates require specific visual approval.",
       "locale": "eu"
+    },
+    {
+      "id": "pending-receipt-inspection-receipt",
+      "title": "Inspect a confirmed pending receipt",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-pending-receipt-inspection--receipt",
+      "cases": [
+        {
+          "id": "original",
+          "action": "pending-receipt-inspection-original"
+        },
+        {
+          "id": "current",
+          "action": "pending-receipt-inspection-pending"
+        }
+      ],
+      "limitation": "Synthetic confirmed receipt and exact-line reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-receipt-inspection-known-quantity",
+      "title": "Pending receipt with unresolved unit",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-pending-receipt-inspection--known-quantity",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-receipt-inspection-known-quantity"
+        }
+      ],
+      "limitation": "Synthetic confirmed receipt and exact-line reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-receipt-inspection-known-unit",
+      "title": "Pending receipt with unresolved product and quantity",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-pending-receipt-inspection--known-unit",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-receipt-inspection-known-unit"
+        }
+      ],
+      "limitation": "Synthetic confirmed receipt and exact-line reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-receipt-inspection-applied",
+      "title": "Pending receipt subsequently applied",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-pending-receipt-inspection--applied",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-receipt-inspection-applied"
+        }
+      ],
+      "limitation": "Synthetic confirmed receipt and exact-line reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-receipt-inspection-rejected",
+      "title": "Pending receipt subsequently rejected",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-pending-receipt-inspection--rejected",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-receipt-inspection-rejected"
+        }
+      ],
+      "limitation": "Synthetic confirmed receipt and exact-line reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-receipt-inspection-loading",
+      "title": "Loading the exact pending receipt line",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-pending-receipt-inspection--loading",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-receipt-inspection-loading"
+        }
+      ],
+      "limitation": "Synthetic confirmed receipt and exact-line reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-receipt-inspection-unavailable",
+      "title": "Pending receipt detail unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-pending-receipt-inspection--unavailable",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-receipt-inspection-unavailable"
+        }
+      ],
+      "limitation": "Synthetic confirmed receipt and exact-line reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-receipt-inspection-read-error",
+      "title": "Pending receipt read error",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-pending-receipt-inspection--read-error",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-receipt-inspection-read-error"
+        }
+      ],
+      "limitation": "Synthetic confirmed receipt and exact-line reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-receipt-inspection-en",
+      "title": "Pending receipt inspection in English",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-pending-receipt-inspection--receipt",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-receipt-inspection-pending"
+        }
+      ],
+      "limitation": "Synthetic confirmed receipt and exact-line reads. Candidates require specific visual approval.",
+      "locale": "en"
+    },
+    {
+      "id": "pending-receipt-inspection-ca",
+      "title": "Pending receipt inspection in Catalan",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-pending-receipt-inspection--receipt",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-receipt-inspection-pending"
+        }
+      ],
+      "limitation": "Synthetic confirmed receipt and exact-line reads. Candidates require specific visual approval.",
+      "locale": "ca"
+    },
+    {
+      "id": "pending-receipt-inspection-gl",
+      "title": "Pending receipt inspection in Galician",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-pending-receipt-inspection--receipt",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-receipt-inspection-pending"
+        }
+      ],
+      "limitation": "Synthetic confirmed receipt and exact-line reads. Candidates require specific visual approval.",
+      "locale": "gl"
+    },
+    {
+      "id": "pending-receipt-inspection-eu",
+      "title": "Pending receipt inspection in Basque",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-pending-receipt-inspection--receipt",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-receipt-inspection-pending"
+        }
+      ],
+      "limitation": "Synthetic confirmed receipt and exact-line reads. Candidates require specific visual approval.",
+      "locale": "eu"
     }
   ]
 }

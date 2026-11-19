@@ -260,7 +260,12 @@ export type ReceiptCommand = Readonly<{
 export type ReceiptResult =
   | { type: "unconfirmed" }
   | { type: "applied"; quantity: string; unit: CreationUnitId }
-  | { type: "pending"; reason?: string }
+  | {
+      type: "pending";
+      lineReference: string;
+      reason?: string;
+      reasons?: readonly string[];
+    }
   | { type: "rejected"; reason?: string };
 
 type ReceiptRequest = {

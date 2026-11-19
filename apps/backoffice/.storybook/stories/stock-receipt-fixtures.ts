@@ -80,6 +80,7 @@ function pair(record: ReceiptRecord) {
 export function advanceReceiptFixture(
   session: ReceiptSession,
   fixture: ReceiptFixture,
+  pendingReasons?: readonly string[],
 ): ReceiptSession {
   const { record } = session;
   if (!record || record.nextAt === null) return session;
@@ -95,7 +96,13 @@ export function advanceReceiptFixture(
       ...session,
       record: receiveReceiptResult(
         record,
-        { type: "pending", reason: "product-archived" },
+        {
+          type: "pending",
+          lineReference: `receipt-line-${record.command.identity.operationId}`,
+          ...(pendingReasons
+            ? { reasons: pendingReasons }
+            : { reason: "product-archived" }),
+        },
         now,
       ),
     };

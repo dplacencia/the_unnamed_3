@@ -217,13 +217,17 @@ describe("Receipt operation and stock ledger", () => {
     );
     const pending = receiveReceiptResult(
       record,
-      { type: "pending", reason: "quantity-check" },
+      { type: "pending", lineReference: "line-1", reason: "quantity-check" },
       200,
     );
     expect(pending).toMatchObject({
       outcome: "pending",
       phase: "stopped",
-      result: { type: "pending", reason: "quantity-check" },
+      result: {
+        type: "pending",
+        lineReference: "line-1",
+        reason: "quantity-check",
+      },
     });
     expect(startReceiptRun(pending, 1000)).toBe(pending);
     const applied = receiveReceiptResult(
