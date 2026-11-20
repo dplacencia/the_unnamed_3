@@ -6,6 +6,7 @@ export type InspectionDetail = {
   location: string;
   quantity: string | null;
   unit: CreationUnitId | null;
+  channel?: string | null;
   outcome:
     | { kind: "pending"; reasons: readonly string[] }
     | { kind: "applied"; effect: { quantity: string; unit: CreationUnitId } }

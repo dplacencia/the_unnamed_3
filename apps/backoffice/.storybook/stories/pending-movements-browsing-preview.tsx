@@ -18,6 +18,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { defaultLocale, isLocale, type Locale } from "@/i18n/configuration";
+import { pendingDepartureInspectionMessages } from "./pending-departure-inspection-messages";
 import { PendingMovementsBrowsingContent } from "./pending-movements-browsing-content";
 import { pendingBrowsingMessages } from "./pending-movements-browsing-messages";
 import {
@@ -35,6 +36,7 @@ import {
 } from "./pending-movements-browsing-model-fixtures";
 import { PendingReceiptInspectionContent } from "./pending-receipt-inspection-content";
 import type {
+  InspectionDetail,
   InspectionOutcome,
   InspectionRead,
 } from "./pending-receipt-inspection-model";
@@ -53,8 +55,22 @@ export const pendingBrowsingFixtures = [
   "refresh-changed",
   "refresh-unavailable",
   "refresh-empty",
+  "departure-applied",
+  "departure-rejected",
+  "departure-loading",
+  "departure-unavailable",
+  "departure-error",
+  "departure-late-read",
 ] as const;
 type Fixture = (typeof pendingBrowsingFixtures)[number];
+const departurePresets = {
+  "departure-pending": "pending",
+  "departure-applied": "applied",
+  "departure-rejected": "rejected",
+  "departure-loading": "loading",
+  "departure-unavailable": "unavailable",
+  "departure-read-error": "error",
+} as const;
 type Preset =
   | "movements-entry"
   | "choose-location"
@@ -69,7 +85,8 @@ type Preset =
   | "empty-first-page"
   | "access-denied"
   | "receipt-inspection"
-  | "empty-after-inspection";
+  | "empty-after-inspection"
+  | keyof typeof departurePresets;
 
 const sizeKey = "irin-pending-movements-preview:demo-merchant:page-size";
 
@@ -110,6 +127,57 @@ function wait(milliseconds: number) {
   return new Promise<void>((resolve) => setTimeout(resolve, milliseconds));
 }
 
+const confirmedDepartureEffects: Partial<
+  Record<
+    string,
+    Extract<InspectionDetail["outcome"], { kind: "applied" }>["effect"]
+  >
+> = {
+  "pending-line-002": { quantity: "-2.5", unit: "kg" },
+  "pending-line-054": { quantity: "-4.725", unit: "kg" },
+};
+
+function fixtureDetail(row: PendingLine, fixture: Fixture): InspectionDetail {
+  const facts = {
+    product: row.product,
+    location: row.location,
+    quantity: row.quantity,
+    unit: row.unit,
+  };
+  if (row.kind === "departure") {
+    const effect =
+      fixture === "departure-applied"
+        ? confirmedDepartureEffects[row.reference]
+        : undefined;
+    return {
+      ...facts,
+      channel: effect ? "Mostrador" : row.channel,
+      outcome: effect
+        ? { kind: "applied", effect }
+        : fixture === "departure-rejected"
+          ? { kind: "rejected", reason: "duplicate-batch-cancelled" }
+          : { kind: "pending", reasons: row.reasons },
+    };
+  }
+
+  const resolved = [
+    "refresh-changed",
+    "refresh-empty",
+    "refresh-error",
+  ].includes(fixture);
+  return {
+    ...facts,
+    outcome: resolved
+      ? row.quantity !== null && row.unit !== null
+        ? {
+            kind: "applied",
+            effect: { quantity: row.quantity, unit: row.unit },
+          }
+        : { kind: "rejected", reason: "duplicate-entry" }
+      : { kind: "pending", reasons: row.reasons },
+  };
+}
+
 export function PendingMovementsBrowsingPreview({
   fixture,
   preset,
@@ -130,11 +198,15 @@ export function PendingMovementsBrowsingPreview({
     settled: 0,
     scope: "",
     reference: "",
+    inspectionReadCount: 0,
+    inspectionSettledCount: 0,
   });
   const nextTokens = useRef(new Map<string, number>());
   const previousTokens = useRef(new Map<string, number>());
   const faultInjected = useRef(false);
-  const applied = useRef(new Set<string>());
+  const resolvedLines = useRef(new Set<string>());
+  const departureReads = useRef(0);
+  const inspectionAttempts = useRef(new Map<string, number>());
   const pendingRefresh = useRef<PendingReadInput>(null);
 
   function chooseSize(next: PendingPageSize) {
@@ -173,7 +245,7 @@ export function PendingMovementsBrowsingPreview({
         : 225,
     );
     let outcome = readPendingFixturePage(input, {
-      exclude: applied.current,
+      exclude: resolvedLines.current,
       showEstimate: fixture !== "no-estimate",
       authorizedLocations:
         fixture === "single-location" ? ["sales-floor"] : undefined,
@@ -223,35 +295,36 @@ export function PendingMovementsBrowsingPreview({
   };
 
   const inspect: InspectionRead = async (reference) => {
-    setTrace((current) => ({ ...current, reference }));
-    await wait(300);
     const row = pendingFixtureRows.find((line) => line.reference === reference);
-    if (!row || row.kind !== "receipt" || fixture === "refresh-unavailable")
+    const departure = row?.kind === "departure";
+    const firstDepartureRead = departure && ++departureReads.current === 1;
+    const attempt = (inspectionAttempts.current.get(reference) ?? 0) + 1;
+    inspectionAttempts.current.set(reference, attempt);
+    setTrace((current) => ({
+      ...current,
+      reference,
+      inspectionReadCount: current.inspectionReadCount + 1,
+    }));
+    if (departure && fixture === "departure-loading") {
+      return new Promise<InspectionOutcome>(() => {});
+    }
+    await wait(
+      fixture === "departure-late-read" && firstDepartureRead ? 1600 : 300,
+    );
+    setTrace((current) => ({
+      ...current,
+      inspectionSettledCount: current.inspectionSettledCount + 1,
+    }));
+    if (
+      !row ||
+      fixture === (departure ? "departure-unavailable" : "refresh-unavailable")
+    )
       return { kind: "unavailable" };
-    const resolved = [
-      "refresh-changed",
-      "refresh-empty",
-      "refresh-error",
-    ].includes(fixture);
-    if (resolved) applied.current.add(reference);
-    return {
-      kind: "found",
-      detail: {
-        product: row.product,
-        location: row.location,
-        quantity: row.quantity,
-        unit: row.unit,
-        outcome:
-          resolved && row.quantity !== null && row.unit !== null
-            ? {
-                kind: "applied",
-                effect: { quantity: row.quantity, unit: row.unit },
-              }
-            : resolved
-              ? { kind: "rejected", reason: "duplicate-entry" }
-              : { kind: "pending", reasons: row.reasons },
-      },
-    };
+    if (departure && fixture === "departure-error" && attempt === 1)
+      return { kind: "error" };
+    const detail = fixtureDetail(row, fixture);
+    if (detail.outcome.kind !== "pending") resolvedLines.current.add(reference);
+    return { kind: "found", detail };
   };
 
   return (
@@ -261,6 +334,10 @@ export function PendingMovementsBrowsingPreview({
       data-pending-browsing-settled-count={trace.settled}
       data-pending-browsing-last-scope={trace.scope}
       data-pending-browsing-last-reference={trace.reference}
+      data-pending-browsing-inspection-read-count={trace.inspectionReadCount}
+      data-pending-browsing-inspection-settled-count={
+        trace.inspectionSettledCount
+      }
     >
       <StockReceiptPreview
         fixture="movements"
@@ -368,6 +445,13 @@ function PendingList({
   const presetInspected = useRef(false);
   const { status, result, previousResults } = browsing;
   const position = result?.position;
+  const departurePreset =
+    departurePresets[preset as keyof typeof departurePresets];
+  const inspectionKind = departurePreset
+    ? "departure"
+    : preset === "receipt-inspection" || preset === "empty-after-inspection"
+      ? "receipt"
+      : null;
 
   function closeInspection() {
     const needsRefresh =
@@ -396,16 +480,17 @@ function PendingList({
       return;
     }
     if (
-      (preset === "receipt-inspection" ||
-        preset === "empty-after-inspection") &&
+      inspectionKind &&
       position === target &&
       status === "ready" &&
       !presetInspected.current
     ) {
-      const receipt = result?.page.rows.find((line) => line.kind === "receipt");
-      if (receipt) {
+      const line = result?.page.rows.find(
+        (line) => line.kind === inspectionKind,
+      );
+      if (line) {
         presetInspected.current = true;
-        setRow(receipt);
+        setRow(line);
       }
     }
     if (
@@ -423,6 +508,13 @@ function PendingList({
   }, [preset, status, position, row, outcome]);
 
   const ready = (() => {
+    if (departurePreset) {
+      const current =
+        outcome?.kind === "found"
+          ? outcome.detail.outcome.kind
+          : (outcome?.kind ?? "loading");
+      return row?.kind === "departure" && current === departurePreset;
+    }
     switch (preset) {
       case "choose-location":
         return status === "choose";
@@ -511,7 +603,11 @@ function PendingList({
           data-pending-browsing-inspector
         >
           <SheetHeader className="pe-10">
-            <SheetTitle>{copy.inspectionTitle}</SheetTitle>
+            <SheetTitle>
+              {row?.kind === "departure"
+                ? pendingDepartureInspectionMessages(locale).heading
+                : copy.inspectionTitle}
+            </SheetTitle>
             <SheetDescription className="sr-only">
               {copy.title}
             </SheetDescription>
@@ -519,6 +615,7 @@ function PendingList({
           {row && (
             <PendingReceiptInspectionContent
               lineReference={row.reference}
+              kind={row.kind}
               read={inspect}
               onOutcome={setOutcome}
               locationLabels={locations}

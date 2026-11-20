@@ -16,10 +16,13 @@ the linked records distinguish approved source decisions from newly recorded
 wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
-Current assignment — 2026-11-20: prepare the two user-run commits for the
-[Pendientes browsing checkpoint](openspec/changes/define-pending-movements-browsing/preview-plan.md#commit-preparation--2026-11-20).
-Stage the 25 implementation paths first. Verify the user's first commit
-before staging the 73 approved-reference paths. Never create a commit.
+Current assignment — 2026-11-20: implement the [read-only Salida inspector preview](openspec/changes/define-pending-departure-inspection/proposal.md).
+Use simulated exact reads and preserve the approved visual references pending
+review. Never create a commit.
+
+The Pendientes browsing checkpoint is complete. User commits `b70eb76`
+and `bc83059` match both manifests. The tree was clean with 1,416 approved
+references. [Pendientes approval](openspec/changes/define-pending-movements-browsing/preview-plan.md#visual-approval--2026-11-20)
 
 The pending receipt inspection checkpoint is complete. User commits
 `a43e956` and `50ed9fd` match the 25- and 53-file manifests. The tree and

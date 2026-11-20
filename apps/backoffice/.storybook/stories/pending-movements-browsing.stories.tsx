@@ -18,7 +18,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Open Pendientes in Movimientos, choose a location or all accessible locations, and inspect a pending receipt by its exact reference. The list, continuations, access and receipt details are simulated.",
+          "Open Pendientes in Movimientos, choose a location or all accessible locations, and inspect a pending receipt or departure by its exact reference. The list, continuations, access and movement details are simulated.",
       },
     },
   },
@@ -60,4 +60,22 @@ export const ReceiptInspection: Story = {
 };
 export const EmptyAfterInspection: Story = {
   args: { preset: "empty-after-inspection", fixture: "refresh-empty" },
+};
+export const DeparturePending: Story = {
+  args: { preset: "departure-pending" },
+};
+export const DepartureApplied: Story = {
+  args: { preset: "departure-applied", fixture: "departure-applied" },
+};
+export const DepartureRejected: Story = {
+  args: { preset: "departure-rejected", fixture: "departure-rejected" },
+};
+export const DepartureLoading: Story = {
+  args: { preset: "departure-loading", fixture: "departure-loading" },
+};
+export const DepartureUnavailable: Story = {
+  args: { preset: "departure-unavailable", fixture: "departure-unavailable" },
+};
+export const DepartureReadError: Story = {
+  args: { preset: "departure-read-error", fixture: "departure-error" },
 };

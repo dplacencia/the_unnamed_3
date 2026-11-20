@@ -1,5 +1,9 @@
 import { expect, test, type Page } from "@playwright/test";
 import { catalogueMessages } from "../../apps/backoffice/.storybook/catalogue-messages";
+import {
+  pendingDepartureInspectionMessages,
+  pendingDepartureInspectionReason,
+} from "../../apps/backoffice/.storybook/stories/pending-departure-inspection-messages";
 import { pendingBrowsingMessages } from "../../apps/backoffice/.storybook/stories/pending-movements-browsing-messages";
 import { pendingInspectionMessages } from "../../apps/backoffice/.storybook/stories/pending-receipt-inspection-messages";
 import type { Locale } from "../../apps/backoffice/src/i18n/configuration";
@@ -9,6 +13,8 @@ function browsing(page: Page, locale: Locale = "es") {
   const copy = pendingBrowsingMessages(locale);
   const workspace = page.locator("[data-pending-browsing-workspace]");
   const table = workspace.getByRole("table");
+  const rows = table.getByRole("row");
+  const inspectSelector = "[data-pending-browsing-inspect]";
   function button(name: string) {
     return workspace.getByRole("button", { name, exact: true });
   }
@@ -20,7 +26,7 @@ function browsing(page: Page, locale: Locale = "es") {
     title: workspace.getByRole("heading", { name: copy.title, exact: true }),
     current: (number: number) =>
       workspace.getByText(copy.page(number), { exact: true }),
-    rows: table.getByRole("row").filter({
+    rows: rows.filter({
       has: page.getByRole("cell", {
         name: new RegExp(`^(${copy.receipt}|${copy.departure})$`),
       }),
@@ -31,7 +37,13 @@ function browsing(page: Page, locale: Locale = "es") {
     next: button(copy.next),
     retry: button(copy.retry),
     restart: button(copy.restart),
-    details: workspace.locator("[data-pending-browsing-inspect]"),
+    receiptDetails: rows
+      .filter({
+        has: page.getByRole("cell", { name: copy.receipt, exact: true }),
+      })
+      .locator(inspectSelector),
+    detailsAt: (reference: string) =>
+      workspace.locator(`[data-pending-browsing-inspect="${reference}"]`),
   };
 }
 
@@ -87,8 +99,10 @@ async function expectRequests(
   );
 }
 
-async function inspectPending(list: ReturnType<typeof browsing>) {
-  const details = list.details.first();
+async function inspectPending(
+  list: ReturnType<typeof browsing>,
+  details = list.receiptDetails.first(),
+) {
   const reference = await details.getAttribute("data-pending-browsing-inspect");
   expect(reference).toBeTruthy();
   await details.focus();
@@ -98,6 +112,22 @@ async function inspectPending(list: ReturnType<typeof browsing>) {
     reference!,
   );
   return details;
+}
+
+function departureInspector(page: Page, locale: Locale = "es") {
+  const copy = pendingDepartureInspectionMessages(locale);
+  const dialog = page.getByRole("dialog", { name: copy.heading, exact: true });
+  const fact = (name: string) =>
+    dialog.locator(`[data-pending-inspection-${name}]`);
+  return {
+    copy,
+    dialog,
+    fact,
+    state: dialog.locator("[data-pending-inspection-state]"),
+    back: dialog.getByRole("button", { name: copy.back, exact: true }),
+    retry: dialog.getByRole("button", { name: copy.retry, exact: true }),
+    refresh: dialog.getByRole("button", { name: copy.refresh, exact: true }),
+  };
 }
 
 async function expectNoPageOverflow(page: Page) {
@@ -259,18 +289,22 @@ test("rows preserve exact decimal quantities and disclose independently unknown 
     list.rows.filter({ hasText: list.copy.unknownQuantity }).first(),
   ).not.toContainText(list.copy.unknownUnit);
 
-  const departure = list.rows.filter({ hasText: "Manzana reineta" }).first();
+  const departure = list.rows.filter({
+    has: page.locator('[data-pending-browsing-inspect="pending-line-002"]'),
+  });
   await expect(departure).toContainText(list.copy.departure);
   await expect(
     departure.getByRole("button", {
       name: list.copy.inspect("Manzana reineta"),
     }),
-  ).toHaveCount(0);
+  ).toBeVisible();
   await departure
     .getByRole("button", { name: list.copy.showReasons("Manzana reineta") })
     .press("Enter");
   await expect(
-    list.table.getByText(list.copy.insufficientStockReason),
+    list.table.getByText(
+      pendingDepartureInspectionReason("es", "channel-missing"),
+    ),
   ).toBeVisible();
 });
 
@@ -497,7 +531,7 @@ for (const fixture of [
     await openPending(page, list);
     await list.next.click();
     await expect(list.current(2)).toBeVisible();
-    const selectedReference = await list.details
+    const selectedReference = await list.receiptDetails
       .first()
       .getAttribute("data-pending-browsing-inspect");
     const priorRows = await list.rows.allTextContents();
@@ -560,7 +594,224 @@ test("the list and receipt inspector stay inside a 320px phone viewport", async 
   await expectNoPageOverflow(page);
 });
 
+test("Salida inspection opens the exact line even when product names match", async ({
+  page,
+}) => {
+  const list = await ready(page);
+  await openPending(page, list);
+  const inspector = departureInspector(page);
+  const first = list.detailsAt("pending-line-002");
+  const second = list.detailsAt("pending-line-004");
+  for (const action of [first, second]) {
+    await expect(action).toHaveText("Manzana reineta");
+  }
+  await inspectPending(list, first);
+  await expect(inspector.state).toHaveAttribute(
+    "data-pending-inspection-state",
+    "pending",
+  );
+  await expect(
+    inspector.dialog.getByText("Salida pendiente", { exact: true }),
+  ).toBeVisible();
+  await expect(inspector.fact("location")).toHaveText(
+    catalogueMessages.es.navSalesFloor,
+  );
+  await expect(inspector.fact("quantity")).toHaveText("2,5");
+  await expect(inspector.fact("unit")).toHaveText("kg");
+  await expect(inspector.fact("channel")).toHaveText("Sin determinar");
+  await expect(
+    inspector.dialog.getByText(
+      pendingDepartureInspectionReason("es", "channel-missing"),
+      { exact: true },
+    ),
+  ).toBeVisible();
+  await expect(inspector.fact("effect")).toBeHidden();
+  await inspector.back.press("Enter");
+  await expect(inspector.dialog).toBeHidden();
+  await expect(first).toBeFocused();
+  await expectRequests(list, 1);
+  await expect(list.current(1)).toBeVisible();
+
+  await inspectPending(list, second);
+  await expect(inspector.fact("product")).toHaveText("Manzana reineta");
+  await expect(inspector.fact("quantity")).toHaveText("Sin determinar");
+  await expect(inspector.fact("unit")).toHaveText(
+    pendingInspectionMessages("es").pieceSymbol,
+  );
+  await expect(inspector.fact("channel")).toHaveText("Mostrador");
+  await expect(inspector.fact("effect")).toBeHidden();
+  await expect(
+    inspector.dialog.getByText(
+      pendingDepartureInspectionReason("es", "channel-missing"),
+    ),
+  ).toBeHidden();
+  await inspector.back.press("Enter");
+  await expect(inspector.dialog).toBeHidden();
+  await expect(second).toBeFocused();
+  await expectRequests(list, 1);
+});
+
+for (const outcome of ["applied", "rejected", "unavailable"] as const) {
+  test(`Salida ${outcome} reads the same list page again on return`, async ({
+    page,
+  }) => {
+    const list = await ready(page, "movements-entry", {
+      fixture: `departure-${outcome}`,
+    });
+    await openPending(page, list);
+    await list.next.click();
+    await expect(list.current(2)).toBeVisible();
+    const action = list.detailsAt("pending-line-054");
+    const neighbor = list.detailsAt("pending-line-052");
+    await expect(neighbor).toBeVisible();
+    const priorRows = await list.rows.allTextContents();
+    const inspector = departureInspector(page);
+    await inspectPending(list, action);
+    await expect(inspector.state).toHaveAttribute(
+      "data-pending-inspection-state",
+      outcome,
+    );
+    await expect(
+      inspector.dialog.getByText(inspector.copy[outcome], { exact: true }),
+    ).toBeVisible();
+    await expect(action).toHaveCount(1);
+    await expectRequests(list, 2);
+    if (outcome === "applied") {
+      await expect(inspector.fact("quantity")).toHaveText("4,725");
+      await expect(inspector.fact("effect")).toContainText(
+        inspector.copy.appliedQuantity,
+      );
+      await expect(inspector.fact("effect")).toContainText(/[-−]4,725 kg/);
+    } else {
+      await expect(inspector.fact("effect")).toBeHidden();
+      if (outcome === "rejected") {
+        await expect(
+          inspector.dialog.getByText(
+            pendingDepartureInspectionReason("es", "duplicate-batch-cancelled"),
+            { exact: true },
+          ),
+        ).toBeVisible();
+      } else {
+        await expect(inspector.fact("facts")).toBeHidden();
+        await expect(inspector.refresh).toBeHidden();
+        await expect(inspector.retry).toBeHidden();
+      }
+    }
+    await inspector.back.press("Enter");
+    await expect(inspector.dialog).toBeHidden();
+    await expectRequests(list, 3);
+    await expect(list.workspace).toHaveAttribute(
+      "data-pending-browsing-settled-count",
+      "3",
+    );
+    await expect(list.current(2)).toBeVisible();
+    await expect(neighbor).toBeVisible();
+    await expect(list.scope).toContainText(list.copy.allLocations);
+    await expect(list.size).toHaveValue("50");
+    await expect(list.title).toBeFocused();
+    if (outcome === "unavailable") {
+      await expect(action).toBeVisible();
+      await expect(list.rows).toHaveText(priorRows);
+    } else {
+      await expect(action).toHaveCount(0);
+      await expect(list.rows.first()).toBeVisible();
+    }
+  });
+}
+
+test("Salida inspection retries and refreshes the same exact read", async ({
+  page,
+}) => {
+  const list = await ready(page, "movements-entry", {
+    fixture: "departure-error",
+  });
+  await openPending(page, list);
+  const inspector = departureInspector(page);
+  await inspectPending(list, list.detailsAt("pending-line-002"));
+  await expect(inspector.state).toHaveAttribute(
+    "data-pending-inspection-state",
+    "error",
+  );
+  await expect(
+    inspector.dialog.getByText(inspector.copy.error, { exact: true }),
+  ).toBeVisible();
+  await expect(inspector.fact("facts")).toBeHidden();
+  await expect(inspector.refresh).toBeHidden();
+  await inspector.retry.press("Enter");
+  await expect(inspector.state).toHaveAttribute(
+    "data-pending-inspection-state",
+    "pending",
+  );
+  await expect(inspector.fact("quantity")).toHaveText("2,5");
+  await inspector.refresh.press("Enter");
+  await expect(inspector.state).toHaveAttribute(
+    "data-pending-inspection-state",
+    "pending",
+  );
+  await expect(list.workspace).toHaveAttribute(
+    "data-pending-browsing-inspection-read-count",
+    "3",
+  );
+  await expect(list.workspace).toHaveAttribute(
+    "data-pending-browsing-last-reference",
+    "pending-line-002",
+  );
+  await expectRequests(list, 1);
+});
+
+test("a delayed Salida read cannot replace a different selected line", async ({
+  page,
+}) => {
+  const list = await ready(page, "movements-entry", {
+    fixture: "departure-late-read",
+  });
+  await openPending(page, list);
+  const inspector = departureInspector(page);
+  await inspectPending(list, list.detailsAt("pending-line-002"));
+  await expect(inspector.state).toHaveAttribute(
+    "data-pending-inspection-state",
+    "loading",
+  );
+  await expect(
+    inspector.dialog.getByText(inspector.copy.loading, { exact: true }),
+  ).toBeVisible();
+  await expect(inspector.fact("facts")).toBeHidden();
+  await inspector.back.press("Enter");
+  await expect(inspector.dialog).toBeHidden();
+  await inspectPending(list, list.detailsAt("pending-line-004"));
+  await expect(inspector.fact("channel")).toHaveText("Mostrador");
+  await expect(list.workspace).toHaveAttribute(
+    "data-pending-browsing-inspection-settled-count",
+    "2",
+  );
+  await expect(inspector.fact("channel")).toHaveText("Mostrador");
+  await expect(inspector.fact("quantity")).toHaveText(inspector.copy.unknown);
+  await expectRequests(list, 1);
+});
+
 for (const locale of ["es", "en", "ca", "gl", "eu"] as const) {
+  test(`Salida inspection localizes the ${locale} mobile panel`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await ready(page, "departure-pending", { locale });
+    const inspector = departureInspector(page, locale);
+    await expect(inspector.dialog).toBeVisible();
+    for (const label of [
+      inspector.copy.title,
+      inspector.copy.pending,
+      inspector.copy.location,
+      inspector.copy.channel,
+    ]) {
+      await expect(
+        inspector.dialog.getByText(label, { exact: true }),
+      ).toBeVisible();
+    }
+    await expect(inspector.fact("channel")).toHaveText(inspector.copy.unknown);
+    await expect(inspector.back).toBeEnabled();
+    await expectNoPageOverflow(page);
+  });
+
   test(`Pendientes shows localized ${locale} controls and fits a phone`, async ({
     page,
   }) => {

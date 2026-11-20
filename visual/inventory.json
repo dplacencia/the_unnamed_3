@@ -3767,6 +3767,150 @@
       ],
       "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval.",
       "locale": "eu"
+    },
+    {
+      "id": "pending-movements-browsing-departure-pending",
+      "title": "Current pending departure and unresolved channel",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--departure-pending",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-departure-pending"
+        }
+      ],
+      "limitation": "Synthetic exact departure reads and list refresh. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-departure-applied",
+      "title": "Departure subsequently applied with signed stock effect",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--departure-applied",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-departure-applied"
+        }
+      ],
+      "limitation": "Synthetic exact departure reads and list refresh. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-departure-rejected",
+      "title": "Departure subsequently rejected",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--departure-rejected",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-departure-rejected"
+        }
+      ],
+      "limitation": "Synthetic exact departure reads and list refresh. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-departure-loading",
+      "title": "Loading the exact pending departure line",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--departure-loading",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-departure-loading"
+        }
+      ],
+      "limitation": "Synthetic exact departure reads and list refresh. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-departure-unavailable",
+      "title": "Pending departure detail unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--departure-unavailable",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-departure-unavailable"
+        }
+      ],
+      "limitation": "Synthetic exact departure reads and list refresh. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-departure-read-error",
+      "title": "Pending departure read error",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--departure-read-error",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-departure-read-error"
+        }
+      ],
+      "limitation": "Synthetic exact departure reads and list refresh. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-departure-en",
+      "title": "Pending departure inspection in English",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--departure-pending",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-departure-pending"
+        }
+      ],
+      "limitation": "Synthetic exact departure reads and list refresh. Candidates require specific visual approval.",
+      "locale": "en"
+    },
+    {
+      "id": "pending-movements-browsing-departure-ca",
+      "title": "Pending departure inspection in Catalan",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--departure-pending",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-departure-pending"
+        }
+      ],
+      "limitation": "Synthetic exact departure reads and list refresh. Candidates require specific visual approval.",
+      "locale": "ca"
+    },
+    {
+      "id": "pending-movements-browsing-departure-gl",
+      "title": "Pending departure inspection in Galician",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--departure-pending",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-departure-pending"
+        }
+      ],
+      "limitation": "Synthetic exact departure reads and list refresh. Candidates require specific visual approval.",
+      "locale": "gl"
+    },
+    {
+      "id": "pending-movements-browsing-departure-eu",
+      "title": "Pending departure inspection in Basque",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--departure-pending",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-departure-pending"
+        }
+      ],
+      "limitation": "Synthetic exact departure reads and list refresh. Candidates require specific visual approval.",
+      "locale": "eu"
     }
   ]
 }

@@ -299,20 +299,16 @@ function PendingRows({
                       "w-[45%] min-w-24 font-medium [overflow-wrap:anywhere]",
                     )}
                   >
-                    {row.kind === "receipt" ? (
-                      <Button
-                        variant="link"
-                        className="max-w-full rounded-sm text-start font-semibold [overflow-wrap:anywhere] whitespace-normal text-brand-600 underline decoration-brand-200 underline-offset-2 focus-visible:ring-2 focus-visible:ring-brand-500 disabled:text-gray-500 max-sm:min-h-11 dark:text-brand-300 dark:decoration-brand-700 dark:disabled:text-gray-400"
-                        disabled={disableInspection}
-                        aria-label={copy.inspect(product)}
-                        data-pending-browsing-inspect={row.reference}
-                        onClick={(event) => onInspect(row, event.currentTarget)}
-                      >
-                        {product}
-                      </Button>
-                    ) : (
-                      product
-                    )}
+                    <Button
+                      variant="link"
+                      className="max-w-full rounded-sm text-start font-semibold [overflow-wrap:anywhere] whitespace-normal text-brand-600 underline decoration-brand-200 underline-offset-2 focus-visible:ring-2 focus-visible:ring-brand-500 disabled:text-gray-500 max-sm:min-h-11 dark:text-brand-300 dark:decoration-brand-700 dark:disabled:text-gray-400"
+                      disabled={disableInspection}
+                      aria-label={copy.inspect(product)}
+                      data-pending-browsing-inspect={row.reference}
+                      onClick={(event) => onInspect(row, event.currentTarget)}
+                    >
+                      {product}
+                    </Button>
                   </TableCell>
                   <TableCell className={cn(cell, "tabular-nums")}>
                     <span className="sm:whitespace-nowrap">

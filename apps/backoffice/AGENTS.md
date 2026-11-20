@@ -20,9 +20,9 @@ the exact approval and identities. Require new image approval for replacements.
 The
 [visual review workflow](../../openspec/changes/define-visual-review-workflow/proposal.md)
 is implemented; preserve its review rules and the technical sources as constraints.
-Current assignment — 2026-11-20: prepare the [Pendientes browsing checkpoint](../../openspec/changes/define-pending-movements-browsing/preview-plan.md#commit-preparation--2026-11-20).
-Stage implementation first and verify the user's commit before staging the
-approved reference batch. Never create a commit.
+Current assignment — 2026-11-20: implement the [read-only Salida inspector preview](../../openspec/changes/define-pending-departure-inspection/proposal.md).
+Reuse the Pendientes panel and exact-read behavior with synthetic data.
+Obtain exact candidate approval before promotion. Never create a commit.
 
 Previous assignment — 2026-11-17: follow the simulated
 [product creation preview plan](../../openspec/changes/define-product-creation/preview-plan.md)

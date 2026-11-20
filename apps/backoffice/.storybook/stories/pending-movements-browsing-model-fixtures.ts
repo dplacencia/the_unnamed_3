@@ -33,7 +33,8 @@ export const pendingFixtureRows: readonly PendingLine[] = [
     product: "Manzana reineta",
     quantity: "2.5",
     unit: "kg",
-    reasons: ["insufficient-stock"],
+    channel: null,
+    reasons: ["channel-missing"],
   },
   {
     reference: "pending-line-003",
@@ -48,20 +49,27 @@ export const pendingFixtureRows: readonly PendingLine[] = [
     reference: "pending-line-004",
     kind: "departure",
     location: "sales-floor",
-    product: "Cajas",
+    product: "Manzana reineta",
     quantity: null,
     unit: "piece",
-    reasons: ["quantity-rules"],
+    channel: "Mostrador",
+    reasons: ["quantity-missing", "channel-not-enabled"],
   },
   ...Array.from({ length: 220 }, (_, index): PendingLine => {
     const sequence = index + 5;
-    const kind = sequence % 4 < 2 ? "receipt" : "departure";
-    return {
+    const facts = {
       ...items[index % items.length],
       reference: `pending-line-${String(sequence).padStart(3, "0")}`,
-      kind,
-      location: sequence % 2 ? "stockroom" : "sales-floor",
-      reasons: [kind === "receipt" ? "product-archived" : "insufficient-stock"],
+      location: locations[sequence % 2 ? 0 : 1],
+    };
+    if (sequence % 4 < 2)
+      return { ...facts, kind: "receipt", reasons: ["product-archived"] };
+    const channel = sequence === 54 ? "Mostrador" : null;
+    return {
+      ...facts,
+      kind: "departure",
+      channel,
+      reasons: [channel === null ? "channel-missing" : "channel-not-enabled"],
     };
   }),
 ];

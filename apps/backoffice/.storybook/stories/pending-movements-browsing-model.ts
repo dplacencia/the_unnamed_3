@@ -7,13 +7,12 @@ export type PendingPageSize = 25 | 50 | 100;
 
 export type PendingLine = {
   reference: string;
-  kind: "receipt" | "departure";
   location: PendingLocation;
   product: string | null;
   quantity: string | null;
   unit: CreationUnitId | null;
   reasons: readonly string[];
-};
+} & ({ kind: "receipt" } | { kind: "departure"; channel: string | null });
 
 export type PendingPage = {
   rows: readonly PendingLine[];

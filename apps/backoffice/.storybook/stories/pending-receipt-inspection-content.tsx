@@ -5,6 +5,10 @@ import { useEffect, useEffectEvent, useId, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { defaultLocale, isLocale } from "@/i18n/configuration";
 import {
+  pendingDepartureInspectionMessages,
+  pendingDepartureInspectionReason,
+} from "./pending-departure-inspection-messages";
+import {
   pendingInspectionMessages,
   pendingInspectionReason,
 } from "./pending-receipt-inspection-messages";
@@ -20,6 +24,7 @@ import { receiptMessages } from "./stock-receipt-messages";
 type PendingReceiptInspectionContentProps = {
   lineReference: string;
   read: InspectionRead;
+  kind?: "receipt" | "departure";
   onBack: () => void;
   backLabel?: string;
   locationLabels?: Record<string, string>;
@@ -29,6 +34,7 @@ type PendingReceiptInspectionContentProps = {
 export function PendingReceiptInspectionContent({
   lineReference,
   read,
+  kind = "receipt",
   onBack,
   backLabel,
   locationLabels,
@@ -36,7 +42,12 @@ export function PendingReceiptInspectionContent({
 }: PendingReceiptInspectionContentProps) {
   const currentLocale = useLocale();
   const locale = isLocale(currentLocale) ? currentLocale : defaultLocale;
-  const copy = pendingInspectionMessages(locale);
+  const departure =
+    kind === "departure" ? pendingDepartureInspectionMessages(locale) : null;
+  const copy = departure ?? pendingInspectionMessages(locale);
+  const reasonCopy = departure
+    ? pendingDepartureInspectionReason
+    : pendingInspectionReason;
   const { state, refresh } = usePendingReceiptInspection(lineReference, read);
   const titleId = useId();
   const heading = useRef<HTMLHeadingElement>(null);
@@ -88,6 +99,15 @@ export function PendingReceiptInspectionContent({
       label: copy.unit,
       value: detail.unit === null ? null : unitSymbol(detail.unit),
     },
+    ...(departure
+      ? [
+          {
+            key: "channel",
+            label: departure.channel,
+            value: detail.channel ?? null,
+          },
+        ]
+      : []),
   ];
 
   return (
@@ -159,9 +179,7 @@ export function PendingReceiptInspectionContent({
             className="list-disc space-y-1 ps-5 text-gray-700 dark:text-gray-300"
           >
             {result.reasons.map((reason, index) => (
-              <li key={`${index}:${reason}`}>
-                {pendingInspectionReason(locale, reason)}
-              </li>
+              <li key={`${index}:${reason}`}>{reasonCopy(locale, reason)}</li>
             ))}
           </ul>
         </div>
@@ -182,7 +200,7 @@ export function PendingReceiptInspectionContent({
       )}
       {result?.kind === "rejected" && result.reason && (
         <p className="text-gray-700 dark:text-gray-300">
-          {pendingInspectionReason(locale, result.reason)}
+          {reasonCopy(locale, result.reason)}
         </p>
       )}
       <div className="flex flex-wrap items-center gap-2">

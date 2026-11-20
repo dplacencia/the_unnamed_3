@@ -1,10 +1,11 @@
 import type { Locale } from "@/i18n/configuration";
-import { pendingInspectionReason } from "./pending-receipt-inspection-messages";
+import { pendingDepartureInspectionMessages } from "./pending-departure-inspection-messages";
 import { receiptMessages } from "./stock-receipt-messages";
+
+export { pendingDepartureInspectionReason as pendingBrowsingReason } from "./pending-departure-inspection-messages";
 
 const es = {
   title: "Pendientes",
-  back: "Volver a Pendientes",
   inspectionTitle: "Detalles de la entrada",
   allLocations: "Todas las ubicaciones accesibles",
   chooseLocation:
@@ -39,15 +40,12 @@ const es = {
   denied:
     "No tienes acceso a los movimientos pendientes de la selección actual.",
   restart: "Volver al inicio",
-  quantityRulesReason: "La cantidad no se ajustaba a las reglas de medición.",
-  insufficientStockReason: "No había existencias suficientes.",
 };
 
 const localized: Record<Locale, typeof es> = {
   es,
   en: {
     title: "Pending",
-    back: "Back to pending movements",
     inspectionTitle: "Receipt details",
     allLocations: "All accessible locations",
     chooseLocation: "Choose a location to view pending movements.",
@@ -81,12 +79,9 @@ const localized: Record<Locale, typeof es> = {
     denied:
       "You don’t have access to pending movements for the current selection.",
     restart: "Back to the first page",
-    quantityRulesReason: "The quantity did not fit the measurement rules.",
-    insufficientStockReason: "There was insufficient stock.",
   },
   ca: {
     title: "Pendents",
-    back: "Torna a Pendents",
     inspectionTitle: "Detalls de l’entrada",
     allLocations: "Totes les ubicacions accessibles",
     chooseLocation: "Tria una ubicació per consultar els moviments pendents.",
@@ -121,12 +116,9 @@ const localized: Record<Locale, typeof es> = {
     empty: "No hi ha moviments pendents per a la selecció actual.",
     denied: "No tens accés als moviments pendents de la selecció actual.",
     restart: "Torna a l’inici",
-    quantityRulesReason: "La quantitat no s’ajustava a les regles de mesura.",
-    insufficientStockReason: "No hi havia prou estoc.",
   },
   gl: {
     title: "Pendentes",
-    back: "Volver a Pendentes",
     inspectionTitle: "Detalles da entrada",
     allLocations: "Todas as localizacións accesibles",
     chooseLocation:
@@ -160,12 +152,9 @@ const localized: Record<Locale, typeof es> = {
     empty: "Non hai movementos pendentes para a selección actual.",
     denied: "Non tes acceso aos movementos pendentes da selección actual.",
     restart: "Volver ao inicio",
-    quantityRulesReason: "A cantidade non se axustaba ás regras de medida.",
-    insufficientStockReason: "Non había existencias suficientes.",
   },
   eu: {
     title: "Zain daudenak",
-    back: "Itzuli zain dauden mugimenduetara",
     inspectionTitle: "Sarreraren xehetasunak",
     allLocations: "Sarbidea duzun kokaleku guztiak",
     chooseLocation: "Hautatu kokaleku bat zain dauden mugimenduak ikusteko.",
@@ -199,19 +188,19 @@ const localized: Record<Locale, typeof es> = {
     denied:
       "Ez duzu uneko hautapenean zain dauden mugimenduak ikusteko baimenik.",
     restart: "Itzuli hasierara",
-    quantityRulesReason: "Kopurua ez zetorren bat neurketa-arauekin.",
-    insufficientStockReason: "Ez zegoen nahikoa izakin.",
   },
 };
 
 export function pendingBrowsingMessages(locale: Locale) {
   const copy = localized[locale];
   const { close, product, retry } = receiptMessages[locale];
+  const { back } = pendingDepartureInspectionMessages(locale);
   const { format } = new Intl.NumberFormat(locale);
 
   return {
     ...copy,
     open: copy.title,
+    back,
     close,
     product,
     retry,
@@ -219,11 +208,4 @@ export function pendingBrowsingMessages(locale: Locale) {
     displayed: (count: number) => copy.displayed(format(count), count === 1),
     estimated: (count: number) => copy.estimated(format(count)),
   };
-}
-
-export function pendingBrowsingReason(locale: Locale, reason: string) {
-  if (reason === "quantity-rules") return localized[locale].quantityRulesReason;
-  if (reason === "insufficient-stock")
-    return localized[locale].insufficientStockReason;
-  return pendingInspectionReason(locale, reason);
 }
