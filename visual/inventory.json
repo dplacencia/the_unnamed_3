@@ -3337,6 +3337,168 @@
       "locale": "eu"
     },
     {
+      "id": "owner-first-use-current",
+      "title": "First-use guidance · Current first visit",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-first-use-guidance--current",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-first-use-current"
+        }
+      ],
+      "limitation": "Synthetic workspace and access facts for Storybook review. Candidates require exact approval."
+    },
+    {
+      "id": "owner-first-use-first-visit",
+      "title": "First-use guidance · First visit with guidance",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-first-use-guidance--first-visit",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-first-use-guidance"
+        }
+      ],
+      "limitation": "Synthetic workspace and access facts for Storybook review. Candidates require exact approval."
+    },
+    {
+      "id": "owner-first-use-first-visit-en",
+      "title": "First-use guidance · First visit with guidance",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-first-use-guidance--first-visit",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-first-use-guidance"
+        }
+      ],
+      "limitation": "Synthetic workspace and access facts for Storybook review. Candidates require exact approval.",
+      "locale": "en"
+    },
+    {
+      "id": "owner-first-use-first-visit-ca",
+      "title": "First-use guidance · First visit with guidance",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-first-use-guidance--first-visit",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-first-use-guidance"
+        }
+      ],
+      "limitation": "Synthetic workspace and access facts for Storybook review. Candidates require exact approval.",
+      "locale": "ca"
+    },
+    {
+      "id": "owner-first-use-first-visit-gl",
+      "title": "First-use guidance · First visit with guidance",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-first-use-guidance--first-visit",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-first-use-guidance"
+        }
+      ],
+      "limitation": "Synthetic workspace and access facts for Storybook review. Candidates require exact approval.",
+      "locale": "gl"
+    },
+    {
+      "id": "owner-first-use-first-visit-eu",
+      "title": "First-use guidance · First visit with guidance",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-first-use-guidance--first-visit",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-first-use-guidance"
+        }
+      ],
+      "limitation": "Synthetic workspace and access facts for Storybook review. Candidates require exact approval.",
+      "locale": "eu"
+    },
+    {
+      "id": "owner-first-use-one-area",
+      "title": "First-use guidance · One eligible Area",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-first-use-guidance--one-area",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-first-use-guidance"
+        }
+      ],
+      "limitation": "Synthetic workspace and access facts for Storybook review. Candidates require exact approval."
+    },
+    {
+      "id": "owner-first-use-choose-area",
+      "title": "First-use guidance · Several eligible Areas",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-first-use-guidance--choose-area",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-first-use-guidance"
+        },
+        {
+          "id": "area-list",
+          "action": "owner-first-use-area-list"
+        }
+      ],
+      "limitation": "Synthetic workspace and access facts for Storybook review. Candidates require exact approval."
+    },
+    {
+      "id": "owner-first-use-no-active-area",
+      "title": "First-use guidance · No active Area",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-first-use-guidance--no-active-area",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-first-use-guidance"
+        }
+      ],
+      "limitation": "Synthetic workspace and access facts for Storybook review. Candidates require exact approval."
+    },
+    {
+      "id": "owner-first-use-trial-paused",
+      "title": "First-use guidance · Inventory paused",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-first-use-guidance--trial-paused",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-first-use-guidance"
+        }
+      ],
+      "limitation": "Synthetic workspace and access facts for Storybook review. Candidates require exact approval."
+    },
+    {
+      "id": "owner-first-use-access-unavailable",
+      "title": "First-use guidance · Inventory access check unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-first-use-guidance--access-unavailable",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-first-use-guidance"
+        }
+      ],
+      "limitation": "Synthetic workspace and access facts for Storybook review. Candidates require exact approval."
+    },
+    {
       "id": "daily-stock-current",
       "title": "Daily stock comparison · Current flow",
       "kind": "story",

@@ -1,6 +1,7 @@
 import { useState, type ComponentProps } from "react";
 import { useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
+import { Card, CardDescription, CardHeader } from "@/components/ui/card";
 import { Table, TableCell, TableHeader, TableRow } from "@/components/ui/table";
 import { defaultLocale, isLocale } from "@/i18n/configuration";
 import { CoreMerchantWorkspace } from "./core-merchant-workspace";
@@ -8,6 +9,7 @@ import { coreHierarchyMessages } from "./core-hierarchy-messages";
 import type { Merchant } from "./core-merchant-workspace-model";
 import { MerchantInventoryAccess } from "./merchant-inventory-access";
 import { inventorySetupMessages } from "./inventory-setup-messages";
+import { stockSetupEligible } from "./inventory-setup-model";
 import { NavigationPrototype } from "./navigation-prototype";
 import type { Destination, StockEntry } from "./navigation-model";
 import { pendingBrowsingMessages } from "./pending-movements-browsing-messages";
@@ -20,6 +22,7 @@ import { receiptMessages } from "./stock-receipt-messages";
 import { stockDepartureMessages } from "./stock-departure-messages";
 import { StockLookupContent, type LookupProduct } from "./stock-lookup-content";
 import type { StockOutcome } from "./stock-lookup-model";
+import { ownerFirstUseMessages } from "./owner-first-use-messages";
 import { ownerJourneyMessages } from "./owner-journey-messages";
 import {
   addJourneyProduct,
@@ -38,6 +41,9 @@ export type OwnerJourneyFixture =
   | "new-business"
   | "business-selection"
   | "first-visit"
+  | "one-area"
+  | "choose-area"
+  | "no-active-area"
   | "ready-to-receive"
   | "recorded-stock"
   | "trial-paused"
@@ -46,6 +52,38 @@ export type OwnerJourneyFixture =
 const empty = emptyOwnerJourney();
 const prepared = seededOwnerJourney("prepared");
 const recorded = seededOwnerJourney("recorded");
+const principalSite = {
+  id: "site-principal",
+  name: "Centro principal",
+  zone: "Europe/Madrid",
+  archived: false,
+  areas: [{ id: "area-sales", name: "Sala de ventas", archived: false }],
+};
+const firstUseSeeds: Partial<Record<OwnerJourneyFixture, OwnerJourneyData>> = {
+  "one-area": { ...empty, sites: [principalSite] },
+  "choose-area": {
+    ...empty,
+    sites: [
+      principalSite,
+      {
+        id: "site-north",
+        name: "Centro norte",
+        zone: "Europe/Madrid",
+        archived: false,
+        areas: [{ id: "area-stockroom", name: "Almacén", archived: false }],
+      },
+    ],
+  },
+  "no-active-area": {
+    ...empty,
+    sites: [
+      {
+        ...principalSite,
+        areas: principalSite.areas.map((area) => ({ ...area, archived: true })),
+      },
+    ],
+  },
+};
 const card =
   "max-w-3xl space-y-3 rounded-lg border border-gray-200 p-3 dark:border-gray-800";
 const heading = "text-base font-semibold text-gray-900 dark:text-gray-100";
@@ -56,6 +94,15 @@ type StockVisitProps = Omit<
   ComponentProps<typeof StockLookupContent>,
   "product"
 > & { initialProduct: LookupProduct | null };
+
+type NextStep = {
+  choice: string;
+  page: Destination;
+  label: string;
+  hint: string;
+  areaLabel?: string;
+  panel?: JourneyPanel;
+};
 
 function OwnerStockVisit({
   initialProduct,
@@ -81,16 +128,19 @@ function OwnerWorkspace({
   replace,
   changeMerchant,
   fixture,
+  guidance,
 }: {
   merchant: Merchant;
   data: OwnerJourneyData;
   replace: (data: OwnerJourneyData) => void;
   changeMerchant: () => void;
   fixture: OwnerJourneyFixture;
+  guidance: boolean;
 }) {
   const language = useLocale();
   const locale = isLocale(language) ? language : defaultLocale;
   const copy = ownerJourneyMessages[locale];
+  const guide = ownerFirstUseMessages[locale];
   const core = coreHierarchyMessages[locale];
   const receipt = receiptMessages[locale];
   const departure = stockDepartureMessages(locale);
@@ -114,9 +164,19 @@ function OwnerWorkspace({
         ]
       : [],
   );
-  const channelEnabled = Object.values(data.stock).some(
-    ({ active, enabledChannelIds }) => active && enabledChannelIds.length,
-  );
+  const channelEnabled = guidance
+    ? areas.some(
+        ({ active, stock }) =>
+          active &&
+          stock.kind === "linked" &&
+          stock.location.active &&
+          stock.location.enabledChannelIds.some((id) =>
+            data.channels.some((channel) => channel.id === id),
+          ),
+      )
+    : Object.values(data.stock).some(
+        ({ active, enabledChannelIds }) => active && enabledChannelIds.length,
+      );
   const canMove = locations.length > 0 && data.products.length > 0;
   const phase =
     fixture === "trial-paused"
@@ -126,8 +186,10 @@ function OwnerWorkspace({
         : "active";
   const initialRecorded =
     fixture === "recorded-stock" && data.products.length > 0;
-  const firstConfiguredArea = areas.find(
-    (area) => area.active && area.stock.kind === "absent",
+  const setupAreas = areas.filter((area) =>
+    guidance
+      ? stockSetupEligible(area.stock.kind, area.active, area.canSetUpStock)
+      : area.active && area.stock.kind === "absent",
   );
   const noStock = !locations.length;
   const confirmed = (next: OwnerJourneyData, message: string) => {
@@ -152,50 +214,114 @@ function OwnerWorkspace({
       trialEndsAt={phase === "active" ? trialEndsAt : undefined}
     />
   );
-  const nextStep: { page: Destination; label: string; panel?: JourneyPanel } =
-    !data.sites.length
-      ? {
+  function selectNextStep(): NextStep {
+    if (!data.sites.length) {
+      return {
+        choice: "new-site",
+        page: "business-settings",
+        label: core.newSite,
+        hint: guide.newSiteHint,
+        panel: { kind: "hierarchy", editor: { kind: "create-site" } },
+      };
+    }
+    if (guidance && phase !== "active") {
+      return {
+        choice: "core",
+        page: "business-settings",
+        label: copy.chooseSection,
+        hint: guide.coreHint,
+      };
+    }
+    if (noStock) {
+      const [area] = setupAreas;
+      if (area && (!guidance || setupAreas.length === 1)) {
+        return {
+          choice: "stock-location",
+          page: "inventory-settings",
+          label: copy.stockSetup,
+          hint: guide.oneAreaHint,
+          areaLabel: `${area.name} · ${area.siteName}`,
+          panel: { kind: "stock", area },
+        };
+      }
+      if (guidance && setupAreas.length > 1) {
+        return {
+          choice: "choose-area",
+          page: "inventory-settings",
+          label: guide.chooseArea,
+          hint: guide.chooseAreaHint,
+        };
+      }
+      if (guidance && !areas.some(({ active }) => active)) {
+        return {
+          choice: "no-active-area",
           page: "business-settings",
-          label: core.newSite,
-          panel: { kind: "hierarchy", editor: { kind: "create-site" } },
-        }
-      : noStock && firstConfiguredArea
-        ? {
-            page: "inventory-settings",
-            label: copy.stockSetup,
-            panel: { kind: "stock", area: firstConfiguredArea },
-          }
-        : !data.products.length
-          ? {
-              page: "products",
-              label: copy.createProduct,
-              panel: { kind: "product" },
-            }
-          : !data.movements.some(({ kind }) => kind === "receipt")
-            ? {
-                page: "movements",
-                label: copy.receipt,
-                panel: { kind: "receipt" },
-              }
-            : !data.channels.length
-              ? {
-                  page: "inventory-settings",
-                  label: copy.createChannel,
-                  panel: { kind: "channel" },
-                }
-              : !channelEnabled
-                ? {
-                    page: "inventory-settings",
-                    label: copy.enableChannel,
-                    panel: { kind: "enable" },
-                  }
-                : !data.movements.some(({ kind }) => kind === "departure")
-                  ? {
-                      page: "movements",
-                      label: copy.departure,
-                      panel: { kind: "departure" },
-                    }
-                  : { page: "stock", label: copy.openStock };
+          label: copy.sites,
+          hint: guide.noActiveAreaHint,
+        };
+      }
+      if (guidance) {
+        return {
+          choice: "check-setup",
+          page: "inventory-settings",
+          label: guide.checkSetup,
+          hint: guide.checkSetupHint,
+        };
+      }
+    }
+    if (!data.products.length) {
+      return {
+        choice: "product",
+        page: "products",
+        label: copy.createProduct,
+        hint: guide.productHint,
+        panel: { kind: "product" },
+      };
+    }
+    if (!data.movements.some(({ kind }) => kind === "receipt")) {
+      return {
+        choice: "receipt",
+        page: "movements",
+        label: copy.receipt,
+        hint: guide.receiptHint,
+        panel: { kind: "receipt" },
+      };
+    }
+    if (!data.channels.length) {
+      return {
+        choice: "channel",
+        page: "inventory-settings",
+        label: copy.createChannel,
+        hint: guide.channelHint,
+        panel: { kind: "channel" },
+      };
+    }
+    if (!channelEnabled) {
+      return {
+        choice: "enable-channel",
+        page: "inventory-settings",
+        label: copy.enableChannel,
+        hint: guide.enableHint,
+        panel: { kind: "enable" },
+      };
+    }
+    if (!data.movements.some(({ kind }) => kind === "departure")) {
+      return {
+        choice: "departure",
+        page: "movements",
+        label: copy.departure,
+        hint: guide.departureHint,
+        panel: { kind: "departure" },
+      };
+    }
+    return {
+      choice: "stock",
+      page: "stock",
+      label: copy.openStock,
+      hint: copy.readyHint,
+    };
+  }
+  const nextStep = selectNextStep();
 
   function continueWith(navigate: (page: Destination) => void) {
     navigate(nextStep.page);
@@ -260,22 +386,58 @@ function OwnerWorkspace({
         )}
         homeContent={(navigate) => (
           <div className="max-w-3xl space-y-4">
-            {access}
-            {(phase === "active" || !data.sites.length) && (
-              <section className={card}>
-                <h2 className={heading}>
-                  {nextStep.panel ? copy.next : copy.ready}
-                </h2>
-                {!nextStep.panel && <p>{copy.readyHint}</p>}
-                <Button
-                  data-owner-journey-start
-                  className={action}
-                  onClick={() => continueWith(navigate)}
+            {(!guidance || phase !== "active") && access}
+            {guidance ? (
+              <section aria-labelledby="first-use-title">
+                <Card
+                  size="sm"
+                  className="gap-4 border-brand-200 bg-brand-50/40 dark:border-brand-500/30 dark:bg-brand-500/10"
+                  data-owner-first-use
+                  data-owner-first-use-choice={nextStep.choice}
                 >
-                  {nextStep.label}
-                </Button>
+                  <CardHeader>
+                    <h2
+                      id="first-use-title"
+                      className="text-lg font-semibold text-gray-900 dark:text-gray-100"
+                    >
+                      {nextStep.choice === "stock" ? copy.ready : guide.title}
+                    </h2>
+                    <CardDescription className="text-gray-700 dark:text-gray-300">
+                      {nextStep.hint}
+                    </CardDescription>
+                    {nextStep.areaLabel && (
+                      <p className="font-medium [overflow-wrap:anywhere] text-gray-900 dark:text-gray-100">
+                        {nextStep.areaLabel}
+                      </p>
+                    )}
+                  </CardHeader>
+                  <Button
+                    data-owner-journey-start
+                    className={`${action} self-start px-4 py-2`}
+                    onClick={() => continueWith(navigate)}
+                  >
+                    {nextStep.label}
+                  </Button>
+                </Card>
               </section>
+            ) : (
+              (phase === "active" || !data.sites.length) && (
+                <section className={card}>
+                  <h2 className={heading}>
+                    {nextStep.panel ? copy.next : copy.ready}
+                  </h2>
+                  {!nextStep.panel && <p>{copy.readyHint}</p>}
+                  <Button
+                    data-owner-journey-start
+                    className={action}
+                    onClick={() => continueWith(navigate)}
+                  >
+                    {nextStep.label}
+                  </Button>
+                </section>
+              )
             )}
+            {guidance && phase === "active" && access}
           </div>
         )}
         modulesContent={access}
@@ -306,23 +468,30 @@ function OwnerWorkspace({
                       {site.areas.map((area) => (
                         <li key={area.id} className="break-words">
                           {area.name}
+                          {guidance && area.archived && (
+                            <span className="ms-2 text-xs">
+                              {core.archived}
+                            </span>
+                          )}
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className={action}
-                    onClick={() =>
-                      open({
-                        kind: "hierarchy",
-                        editor: { kind: "create-area", site },
-                      })
-                    }
-                  >
-                    {core.newArea}
-                  </Button>
+                  {(!guidance || !site.archived) && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className={action}
+                      onClick={() =>
+                        open({
+                          kind: "hierarchy",
+                          editor: { kind: "create-area", site },
+                        })
+                      }
+                    >
+                      {core.newArea}
+                    </Button>
+                  )}
                 </li>
               ))}
             </ul>
@@ -333,6 +502,9 @@ function OwnerWorkspace({
             <section className={card}>
               <h2 className={heading}>{setup.areas}</h2>
               {!areas.length && <p>{copy.needArea}</p>}
+              {guidance && nextStep.choice === "check-setup" && (
+                <p>{guide.checkSetupHint}</p>
+              )}
               <ul className="divide-y divide-gray-200 dark:divide-gray-800">
                 {areas.map((area) => (
                   <li
@@ -360,7 +532,9 @@ function OwnerWorkspace({
                         </>
                       )}
                     </div>
-                    {area.stock.kind === "absent" && (
+                    {(guidance
+                      ? setupAreas.includes(area)
+                      : area.stock.kind === "absent") && (
                       <Button
                         className={action}
                         variant="outline"
@@ -607,8 +781,10 @@ function OwnerWorkspace({
 
 export function OwnerJourneyPreview({
   fixture,
+  guidance = false,
 }: {
   fixture: OwnerJourneyFixture;
+  guidance?: boolean;
 }) {
   const [byMerchant, setByMerchant] = useState<
     Readonly<Record<string, OwnerJourneyData>>
@@ -620,7 +796,7 @@ export function OwnerJourneyPreview({
       ? prepared
       : fixture === "recorded-stock"
         ? recorded
-        : empty;
+        : (firstUseSeeds[fixture] ?? empty);
   return (
     <CoreMerchantWorkspace
       fixture={
@@ -635,6 +811,7 @@ export function OwnerJourneyPreview({
           key={merchant.merchant_id}
           merchant={merchant}
           fixture={fixture}
+          guidance={guidance}
           changeMerchant={changeMerchant}
           data={
             byMerchant[merchant.merchant_id] ??

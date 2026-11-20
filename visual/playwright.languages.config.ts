@@ -23,6 +23,7 @@ export default defineConfig({
     "core-merchant-workspace.spec.ts",
     "core-account-security.spec.ts",
     "owner-journey.spec.ts",
+    "owner-first-use.spec.ts",
     "stock-departure.spec.ts",
     "pending-resolution.spec.ts",
     "stock-commitments.spec.ts",

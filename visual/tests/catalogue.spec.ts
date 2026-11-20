@@ -100,6 +100,21 @@ async function action(
     ).toBeVisible();
     return;
   }
+  if (name?.startsWith("owner-first-use-")) {
+    await expect(page.locator("[data-owner-journey-ready]")).toBeVisible();
+    const guidance = page.locator("[data-owner-first-use]");
+    if (name === "owner-first-use-current") {
+      await expect(guidance).toBeHidden();
+      return;
+    }
+    await expect(guidance).toBeVisible();
+    if (name === "owner-first-use-area-list") {
+      await guidance.locator("[data-owner-journey-start]").click();
+      await expect(page.locator("[data-owner-journey-setup]")).toBeVisible();
+      await expect(page.getByRole("dialog")).toBeHidden();
+    }
+    return;
+  }
   if (name === "owner-journey-ready") {
     await expect(
       page.locator("[data-owner-journey-ready], [data-core-merchant-view]"),
