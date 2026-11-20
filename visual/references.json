@@ -42024,6 +42024,822 @@
       "run": "2026-11-20T19-48-54.079Z",
       "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
       "profileHash": "3e478c6fc9c5ac8936de7c5d44a4369acb95bd42935d03eee16cd21b7e2dff07"
+    },
+    "owner-first-use-access-unavailable-default--desktop": {
+      "sha256": "2177b41430d7a1ecbea7e4bfcbf587d33581c0238d94bebe6be31b3c04d93865",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "426e05e25b8c0106504520e4467a509e310c12bc01b8d1e1282ab6242379f627"
+    },
+    "owner-first-use-access-unavailable-default--desktop-dark": {
+      "sha256": "1a151a75df8c5beb137977165c1dfb150f0dcf3ae6da806f5dfc14531c3ac39d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "bae0035f024f925d0a8219e610e61411bb42a139f0d46efb20ef733790a08ffd"
+    },
+    "owner-first-use-access-unavailable-default--mobile": {
+      "sha256": "65c6d2ee4d3c319fe1fe358e719f331b9d7b69dbc4e9c4ce94173792bbb70dec",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "01ed44ed6c30403adce5122e507f288c5285d633ad5c7e0afa9b9bbc8cc7b278"
+    },
+    "owner-first-use-access-unavailable-default--tablet": {
+      "sha256": "f806ebed47aed97dea09f027430151d18d1054c8e7300fbec30ebb46b50fd90d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "a40ff2782bd773188c492f2325d95e56656a454df53a8eb90594fcb121a0e405"
+    },
+    "owner-first-use-choose-area-area-list--desktop": {
+      "sha256": "c493628c84227e9afd972098607d0e1ce2acb6a83ad0d12778eb427d6ddacf6f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "58282059deffbf9b4c0ec519621813f0078541058bac727d6699ef2379315ccc"
+    },
+    "owner-first-use-choose-area-area-list--desktop-dark": {
+      "sha256": "4ec3357fd55d26e8791152db97d0150727b7c68038600f9432794368ea2ba364",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "8b3cc4b1042c222d3c7316596be99889df40b61235eeb80b82f8674dcfeac783"
+    },
+    "owner-first-use-choose-area-area-list--mobile": {
+      "sha256": "b32915e0c2290bd793ac96575f780997cacc991437a54f2d1dc5c30ec03b17ec",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "c248a0160f182ed5ceafbb4274697f5610e120d5509f5e799147e08b44cd5371"
+    },
+    "owner-first-use-choose-area-area-list--tablet": {
+      "sha256": "cbab1deef637c314f945b7517ed3c4243949f9039f2aef0ef80e89f71b39516e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "fc2f8fdeb54760fc20a5655fcbd96b3624f299c635ae106c1c46e07283ed3f86"
+    },
+    "owner-first-use-choose-area-default--desktop": {
+      "sha256": "9b68962fbd672a40b23afddaac898c852500886d8b05d2811626d0b01c5274eb",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "426e05e25b8c0106504520e4467a509e310c12bc01b8d1e1282ab6242379f627"
+    },
+    "owner-first-use-choose-area-default--desktop-dark": {
+      "sha256": "e0fd1bd5747cea6a879f34c769fab7b9902af4acbecc485cd5a06d37bbe1d209",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "bae0035f024f925d0a8219e610e61411bb42a139f0d46efb20ef733790a08ffd"
+    },
+    "owner-first-use-choose-area-default--mobile": {
+      "sha256": "0bb75b5b9782a4ae52aaf1ee673fd734f5ffb0f336c7db1c076108077b5af0c2",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "01ed44ed6c30403adce5122e507f288c5285d633ad5c7e0afa9b9bbc8cc7b278"
+    },
+    "owner-first-use-choose-area-default--tablet": {
+      "sha256": "d62507c4174b10b2d02de3cffc4498529da215edc0a791f872d492cbb58c6b75",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "a40ff2782bd773188c492f2325d95e56656a454df53a8eb90594fcb121a0e405"
+    },
+    "owner-first-use-current-default--desktop": {
+      "sha256": "a5dffff9d552b6b2ae3c54b2384ed871c926d78249a82491b45b4b377ab43268",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "10ee41d19f5bc99e62aaac658bf9b911430d96aeee21d0c9830955c1b4f336e3"
+    },
+    "owner-first-use-current-default--desktop-dark": {
+      "sha256": "e57d5c7b52214e4af16be268f3080a271bc64cf0a1400e744c3c49b2e897b11b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "636de38c4f59f5e4f2ecf5a945d10186ee7d9e623de56b2dfe1da9806399ce4c"
+    },
+    "owner-first-use-current-default--mobile": {
+      "sha256": "4fb3247b053487b7e591ef9162f868a8198b1b81ce6dd25c030b943c6e6a9929",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "560ce37bd9f60670641daccc1e41bd9a90404a247b38cd9cf9f48c7e79283461"
+    },
+    "owner-first-use-current-default--tablet": {
+      "sha256": "2e42d2f459b66e21fafd46030cc779255fe178bc3c077db42c6c79c869a4ccbb",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "a6ebe952b8a95ec862fb79864d71034830fd5655aac614f84ad42362a4ec08f1"
+    },
+    "owner-first-use-first-visit-ca-default--desktop": {
+      "sha256": "89729b8b95c6b7c363417d4c322b86063046948fbe79245c784f891e49406b40",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "51dd11900757360f40a6575d351d050ea899b72620b56e4551cd0f448f19f2fb"
+    },
+    "owner-first-use-first-visit-ca-default--desktop-dark": {
+      "sha256": "b120f733e4c38a112c4ea6767815a085860aa365b1d59e86bfad1482cbefc043",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "4547c64752bdf81f51fe6e6273ff94d4ec087e67df50285aa5b850dd00a161b9"
+    },
+    "owner-first-use-first-visit-ca-default--mobile": {
+      "sha256": "6e96a28eaabf51edeb0f5876f6d4a7d0f1c16d6a9492e57ba195b988146db856",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "3789f3e2bbe4b0254c0895e869274273d94945be869b29434d10fd0013c0d9cc"
+    },
+    "owner-first-use-first-visit-ca-default--tablet": {
+      "sha256": "049261853ebcc7906946ab285d324c77f5a59a34dc1166267c4dac9eb219f26d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "574c5a319cded336f06d6ff55286e5c54a4571a04a6afcd0d3d138766b31153b"
+    },
+    "owner-first-use-first-visit-default--desktop": {
+      "sha256": "e994d96eb789b13b192a642c56b62e3153a0dbd703dedd1afdb44329f13af225",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "426e05e25b8c0106504520e4467a509e310c12bc01b8d1e1282ab6242379f627"
+    },
+    "owner-first-use-first-visit-default--desktop-dark": {
+      "sha256": "4f2b0ae631d256933c1c237518a25c6a6515349d8b77f90656871c445500edd3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "bae0035f024f925d0a8219e610e61411bb42a139f0d46efb20ef733790a08ffd"
+    },
+    "owner-first-use-first-visit-default--mobile": {
+      "sha256": "d8405849f79ef4095ba4b330822dd517a65f9253db684235d7dfb9f641746979",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "01ed44ed6c30403adce5122e507f288c5285d633ad5c7e0afa9b9bbc8cc7b278"
+    },
+    "owner-first-use-first-visit-default--tablet": {
+      "sha256": "631be950f44fb03cec4cbadc87f07b8eeaf5f7942c10c82cf021f81172f67895",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "a40ff2782bd773188c492f2325d95e56656a454df53a8eb90594fcb121a0e405"
+    },
+    "owner-first-use-first-visit-en-default--desktop": {
+      "sha256": "7eddfc2281df52ad731d856d5cc88e63e68d83d515a350354c54a5608f7d01c0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "e98d4839f3e0df1f04ff5c8b653598da46553ea59b19949e34d4fc33fec47030"
+    },
+    "owner-first-use-first-visit-en-default--desktop-dark": {
+      "sha256": "0bd0936449b4a52f3b8c8e57b9a4535c10945ebbec1ec41471a49bde5c49cc58",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "0d8830f91ac9b8c43adfe78ab380a924c99bde8cb05985956dc76539ac27234a"
+    },
+    "owner-first-use-first-visit-en-default--mobile": {
+      "sha256": "e1de20d82736d443227e20869c33b7ec2ad201f4b9fc6617d19e50fcdc39c934",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "659a42c45fb84d5e6a45d0df4143569f8b1bfed85675b2b9a2de48beae4933f8"
+    },
+    "owner-first-use-first-visit-en-default--tablet": {
+      "sha256": "3c69adceab35be38ae06808c672a57867d37ca9c178cd70c8c86182c52dcdae4",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "735ac6ffc3717a9077e76902e251b255b47da495b850549c41809420120d288a"
+    },
+    "owner-first-use-first-visit-eu-default--desktop": {
+      "sha256": "bedb0e0a489fd6127e54bf371645f0fa92bd85ebfea10227b8797a82f9050e9b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "6435b57be066e0c372445cdb7bcc0c93ea2a5de0d94ce8342fd50a313cf1bf35"
+    },
+    "owner-first-use-first-visit-eu-default--desktop-dark": {
+      "sha256": "62010ede458ded7ce4108c7b7487f49facc36c047e80d937b615edbf2d4c198e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "8b7f5792d3db48efd16ff260f1504f0c73edf1b10acd2dcff141821b5039381f"
+    },
+    "owner-first-use-first-visit-eu-default--mobile": {
+      "sha256": "f08099778082d4b2b8c5b54cf5e37e048d1ebbb5a52e2d769bb1038c786135a1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "4c84b3cda7f58750c7b7a5ea7206c699cebda812f98bab2d6459d204afc4ba63"
+    },
+    "owner-first-use-first-visit-eu-default--tablet": {
+      "sha256": "fa71c8c374bf4f2285e79d667e262d6466d29e5767ff0f2a9c9d79cb0f45528b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "da1b25c0d72dbb811ee5fa2fa8108ad57938b6eafe6faa446ebc92009f0c8ee4"
+    },
+    "owner-first-use-first-visit-gl-default--desktop": {
+      "sha256": "2c1ff25beeaa06550a27693507ab92787daa88351415671392653103abaf4560",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "9c5b24a08bdae6fd2fed5b5f566d72b313fc19b4adb8cf9d1060e5c4dc10d624"
+    },
+    "owner-first-use-first-visit-gl-default--desktop-dark": {
+      "sha256": "40c3c945c768cf45b6e6db78981533749e315bfbe77011e25290cfe9d50b5d16",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "d0c1e52c1ba66441951c68d69ea34caf77f3f8069d9b64d0fc803fbed85b0c23"
+    },
+    "owner-first-use-first-visit-gl-default--mobile": {
+      "sha256": "e5ac0e11ebf93679269afe9ad08621ba691bf032331f05c0e8124ee119683f78",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "86232dd5484242d4785942d8a2345e4dc857ddcdac2f5a885e94608b260956a1"
+    },
+    "owner-first-use-first-visit-gl-default--tablet": {
+      "sha256": "c8800c1c41088459922fd4f977f29233b1748e09a7dbdd0ffe64749c5a293764",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "e48feaba63201407df4eab6edf4d93d078e27f2327cdceac50d303ac977c2293"
+    },
+    "owner-first-use-no-active-area-default--desktop": {
+      "sha256": "ae2df4dd8431b00605a088e188967ddbd11c8cbc20f6360f986d7f3ff2303c2b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "426e05e25b8c0106504520e4467a509e310c12bc01b8d1e1282ab6242379f627"
+    },
+    "owner-first-use-no-active-area-default--desktop-dark": {
+      "sha256": "28307c817a18e0a62d9721b8f3632330d232b6cd438516f1b1bee5480ab44807",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "bae0035f024f925d0a8219e610e61411bb42a139f0d46efb20ef733790a08ffd"
+    },
+    "owner-first-use-no-active-area-default--mobile": {
+      "sha256": "f72bdf59a9ea2c86e17c7cd2e53a5b7a0d4c37633451e0924219f96067b42425",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "01ed44ed6c30403adce5122e507f288c5285d633ad5c7e0afa9b9bbc8cc7b278"
+    },
+    "owner-first-use-no-active-area-default--tablet": {
+      "sha256": "559d7b12ea6ebd9d06d4eb042cf2731c0f6172e343a4d51825d0bf8377ec284b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "a40ff2782bd773188c492f2325d95e56656a454df53a8eb90594fcb121a0e405"
+    },
+    "owner-first-use-one-area-default--desktop": {
+      "sha256": "a89327592fd7ca2db9ddd37bd43b66193630218a7abd559130b695058e3c767e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "426e05e25b8c0106504520e4467a509e310c12bc01b8d1e1282ab6242379f627"
+    },
+    "owner-first-use-one-area-default--desktop-dark": {
+      "sha256": "19b5a7751e26f6521d4bfcb63e5b5eb96dea6256c001f95c85bd415007157778",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "bae0035f024f925d0a8219e610e61411bb42a139f0d46efb20ef733790a08ffd"
+    },
+    "owner-first-use-one-area-default--mobile": {
+      "sha256": "aaa4f69f0f031f08fb61056a6749be790baf873198bdafee01d16e5ad668946d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "01ed44ed6c30403adce5122e507f288c5285d633ad5c7e0afa9b9bbc8cc7b278"
+    },
+    "owner-first-use-one-area-default--tablet": {
+      "sha256": "3d60b0f10c6c7aaa567eea57380f82d95ae2f5cf7ee20a8eddb058b318ad8696",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "a40ff2782bd773188c492f2325d95e56656a454df53a8eb90594fcb121a0e405"
+    },
+    "owner-first-use-trial-paused-default--desktop": {
+      "sha256": "cf6654b6812743e9651a88d6f9b1d6dbc8f49065d5065fb7c3f63a8f8517bbfc",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "426e05e25b8c0106504520e4467a509e310c12bc01b8d1e1282ab6242379f627"
+    },
+    "owner-first-use-trial-paused-default--desktop-dark": {
+      "sha256": "14abe23a360f4a34f567e7a3383c905eede921761bdf1f528f94b3bf7d5fd25f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "bae0035f024f925d0a8219e610e61411bb42a139f0d46efb20ef733790a08ffd"
+    },
+    "owner-first-use-trial-paused-default--mobile": {
+      "sha256": "47974e704275b103d00941085d180129bc286acbbda69505fc2bdbdeaf7f0510",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "01ed44ed6c30403adce5122e507f288c5285d633ad5c7e0afa9b9bbc8cc7b278"
+    },
+    "owner-first-use-trial-paused-default--tablet": {
+      "sha256": "36fd502676d01db6d437810fe2b232e2ba8de3ab39a854b4972803cc4b60f4bc",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 48 images\" for the Inicio gallery 2026-11-20T20-01-29.550Z.",
+      "run": "2026-11-20T20-01-29.550Z",
+      "sourceHash": "502026010663a28307bfd6e8fb91d71b8666e24f2d10b97dbc4dabdebc4e626f",
+      "profileHash": "a40ff2782bd773188c492f2325d95e56656a454df53a8eb90594fcb121a0e405"
     }
   }
 }

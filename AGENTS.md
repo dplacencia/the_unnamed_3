@@ -16,14 +16,20 @@ the linked records distinguish approved source decisions from newly recorded
 wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
-Current UX review — 2026-11-20: the user selected the
+Current UX checkpoint — 2026-11-20: the user approved the
+[48-image Inicio gallery](openspec/changes/refine-owner-first-use/design.md#visual-approval).
+The registry contains 2,520 approved references. The next-action card uses
+confirmed setup facts and leaves the Area choice to the merchant when several
+qualify. Treat any further visual revisions as new candidates for approval.
+
+Daily stock UX review — 2026-11-20: the user selected the
 [Daily stock workflow comparison](openspec/changes/refine-daily-stock-workflow/design.md).
 Review Productos → Registrar entrada → Existencias in Storybook using the same
 synthetic data in both variants. The proposed variant carries the product from
 its details sheet, requires the receipt destination, and separates the applied
 quantity from the recorded balance. The user approved the exact
 [72-image gallery](openspec/changes/refine-daily-stock-workflow/design.md#visual-approval).
-The registry contains 2,472 approved references.
+That checkpoint brought the registry to 2,472 approved references.
 
 November 30 review assignment — 2026-11-20: prepare the
 [November 30 Core and Inventory review](openspec/changes/establish-frontend-technical-foundation/november-30-review.md)

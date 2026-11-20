@@ -47,3 +47,13 @@ renderer and preserve existing reference approvals.
   interaction tests, including all five languages at 320 px. All
   [16 existing Owner reference comparisons](http://localhost:9324/runs/2026-11-20T20-01-22.050Z/playwright-report/index.html)
   passed. The 48 new candidates await visual review.
+
+## Visual approval
+
+On November 20, 2026, the user selected **Approve all 48 images** for the
+[exact Inicio gallery](http://localhost:9324/runs/2026-11-20T20-01-29.550Z/review.html).
+All 48 were added to the approved registry. Verified hashes cover all 2,520
+references, including the 2,472 carried forward from the daily-stock checkpoint.
+
+Pinned Chromium passed a fresh comparison of all 48 approved references with the
+same source and renderer. [Playwright results](http://localhost:9324/runs/2026-11-20T20-08-02.169Z/playwright-report/index.html)
