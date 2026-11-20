@@ -83,6 +83,19 @@ export function useProductEditing(
     },
     [form],
   );
+  const recordPreviewArchive = useCallback(
+    (id: string) => {
+      const next = confirmedRecords.current.map((product) =>
+        product.id === id
+          ? { ...product, archived: true, sku: null, barcodes: [] }
+          : product,
+      );
+      confirmedRecords.current = next;
+      form.reset({ rows: editingDefaults(next) });
+      setRecords(next);
+    },
+    [form],
+  );
   function resetDrafts() {
     const next = editingDefaults(confirmedRecords.current);
     if (extension)
@@ -251,6 +264,7 @@ export function useProductEditing(
   return {
     records,
     addPreviewProduct,
+    recordPreviewArchive,
     panelId,
     inspect,
     rows,

@@ -322,6 +322,7 @@ function ProductsTable({
   productStatus,
   browsing,
   stockShortcut,
+  archivePreview,
 }: {
   view: ProductsView;
   update: (next: ProductsViewUpdate) => void;
@@ -332,6 +333,7 @@ function ProductsTable({
   productStatus?: (product: PreviewProduct) => ProductRowStatus | undefined;
   browsing?: ProductsBrowsing | null;
   stockShortcut?: ProductsTablePreviewProps["stockShortcut"];
+  archivePreview?: (product: PreviewProduct) => ReactNode;
 }) {
   const t = useTranslations("catalogue");
   const phone = useSyncExternalStore(
@@ -833,7 +835,7 @@ function ProductsTable({
             </Button>
           </PopoverContent>
         </Popover>
-        {tableEditing ? (
+        {archivePreview ? null : tableEditing ? (
           <EditingActions editor={editor} />
         ) : (
           <Button
@@ -1155,7 +1157,7 @@ function ProductsTable({
                   <EditingResultsView editor={editor} />
                   <EditingActions editor={editor} />
                 </div>
-              ) : (
+              ) : archivePreview ? null : (
                 <Button
                   variant="outline"
                   size="sm"
@@ -1178,6 +1180,7 @@ function ProductsTable({
                 hidden={panelEditing ? ["unit"] : ["sku", "unit"]}
                 t={t}
               />
+              {archivePreview?.(panelProduct)}
               {stockShortcut && !panelEditing && (
                 <Button
                   type="button"
@@ -1231,6 +1234,7 @@ export function ProductsTableWorkspace(
     editor: ProductEditing;
     summary?: ReactNode;
     catalogueAction?: ReactNode;
+    archivePreview?: (product: PreviewProduct) => ReactNode;
     movementsContent?: ReactNode;
     productStatus?: (product: PreviewProduct) => ProductRowStatus | undefined;
     viewKey?: string;
@@ -1361,6 +1365,7 @@ export function ProductsTableWorkspace(
             productStatus={props.productStatus}
             browsing={browsing}
             stockShortcut={props.stockShortcut}
+            archivePreview={props.archivePreview}
           />
         }
       />

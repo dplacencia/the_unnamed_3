@@ -84,7 +84,7 @@ async function action(
   if (name === "core-inventory-review-ready") {
     await expect(
       page.locator(
-        "[data-core-merchant-view], [data-core-hierarchy-ready], [data-core-team-view], [data-core-team-ready], [data-core-capability-enablement-ready]",
+        "[data-core-merchant-view], [data-core-hierarchy-ready], [data-stock-departure-ready], [data-pending-resolution-ready], [data-stock-commitments-ready], [data-inventory-setup-ready], [data-core-team-view], [data-core-team-ready], [data-product-lifecycle-ready], [data-core-capability-enablement-ready], [data-channel-availability-ready]",
       ),
     ).toBeVisible();
     return;

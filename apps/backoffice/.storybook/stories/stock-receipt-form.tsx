@@ -5,6 +5,7 @@ import {
   useState,
   type ComponentProps,
   type FormEvent,
+  type ReactNode,
 } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -40,6 +41,7 @@ type ReceiptFormProps = {
   draft: ReceiptDraft;
   products: readonly ReceiptProduct[];
   locations: readonly ReceiptLocation[];
+  afterLocation?: ReactNode;
   onChange: (draft: ReceiptDraft) => void;
   onProductChange: (product: ReceiptProduct) => void;
   onUnitChange: (unit: CreationUnitId) => void;
@@ -49,7 +51,10 @@ type ReceiptFormProps = {
 
 const errorStyle = "text-red-700 dark:text-red-300";
 
-function ReceiptSelect({ children, ...props }: ComponentProps<"select">) {
+export function ReceiptSelect({
+  children,
+  ...props
+}: ComponentProps<"select">) {
   return (
     <div className="relative min-w-0">
       <select
@@ -71,6 +76,7 @@ export function StockReceiptForm({
   draft,
   products,
   locations,
+  afterLocation,
   onChange,
   onProductChange,
   onUnitChange,
@@ -269,6 +275,7 @@ export function StockReceiptForm({
           </FieldError>
         )}
       </Field>
+      {afterLocation}
       <div className="grid min-w-0 grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-3">
         <Field controlId={`${id}-quantity`}>
           <FieldLabel>{copy.quantity}</FieldLabel>

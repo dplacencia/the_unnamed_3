@@ -4355,6 +4355,669 @@
       "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
     },
     {
+      "id": "inventory-first-stock-departure-movements",
+      "title": "Registrar salida · movements",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-departure--movements",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-first-stock-departure-origin-without-channels",
+      "title": "Registrar salida · origin-without-channels",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-departure--origin-without-channels",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-first-stock-departure-applied",
+      "title": "Registrar salida · applied",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-departure--applied",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-first-stock-departure-pending",
+      "title": "Registrar salida · pending",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-departure--pending",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-first-stock-departure-rejected",
+      "title": "Registrar salida · rejected",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-departure--rejected",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-first-stock-departure-unconfirmed",
+      "title": "Registrar salida · unconfirmed",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-departure--unconfirmed",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-first-stock-departure-movements-en",
+      "title": "Registrar salida · movements",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-departure--movements",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-first-stock-departure-movements-ca",
+      "title": "Registrar salida · movements",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-departure--movements",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-first-stock-departure-movements-gl",
+      "title": "Registrar salida · movements",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-departure--movements",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-first-stock-departure-movements-eu",
+      "title": "Registrar salida · movements",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-first-stock-departure--movements",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-review-release",
+      "title": "Pending movement resolution · review-release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--review-release",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-review-rejection",
+      "title": "Pending movement resolution · review-rejection",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--review-rejection",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-review-duplicate",
+      "title": "Pending movement resolution · review-duplicate",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--review-duplicate",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-unconfirmed",
+      "title": "Pending movement resolution · unconfirmed",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--unconfirmed",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-retained-applied",
+      "title": "Pending movement resolution · retained-applied",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--retained-applied",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-counterpart-unavailable",
+      "title": "Pending movement resolution · counterpart-unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--counterpart-unavailable",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-review-release-en",
+      "title": "Pending movement resolution · review-release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--review-release",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-review-release-ca",
+      "title": "Pending movement resolution · review-release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--review-release",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-review-release-gl",
+      "title": "Pending movement resolution · review-release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--review-release",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-review-release-eu",
+      "title": "Pending movement resolution · review-release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--review-release",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-reserve",
+      "title": "Stock commitments · reserve",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--reserve",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-reserve-en",
+      "title": "Stock commitments · reserve",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--reserve",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-reserve-ca",
+      "title": "Stock commitments · reserve",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--reserve",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-reserve-gl",
+      "title": "Stock commitments · reserve",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--reserve",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-reserve-eu",
+      "title": "Stock commitments · reserve",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--reserve",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-active",
+      "title": "Stock commitments · active",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--active",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-partial-reservation",
+      "title": "Stock commitments · partial-reservation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--partial-reservation",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-release",
+      "title": "Stock commitments · release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--release",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-released",
+      "title": "Stock commitments · released",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--released",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-fulfill",
+      "title": "Stock commitments · fulfill",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--fulfill",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-partial-fulfillment",
+      "title": "Stock commitments · partial-fulfillment",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--partial-fulfillment",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-fulfilled",
+      "title": "Stock commitments · fulfilled",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--fulfilled",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-unconfirmed",
+      "title": "Stock commitments · unconfirmed",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--unconfirmed",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-read-unavailable",
+      "title": "Stock commitments · read-unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--read-unavailable",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-read-error",
+      "title": "Stock commitments · read-error",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--read-error",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-overview",
+      "title": "Inventory setup · overview",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--overview",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-stock-location",
+      "title": "Inventory setup · stock-location",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--stock-location",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-create-channel",
+      "title": "Inventory setup · create-channel",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--create-channel",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-enable-channel",
+      "title": "Inventory setup · enable-channel",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--enable-channel",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-enable-channel-en",
+      "title": "Inventory setup · enable-channel",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--enable-channel",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-enable-channel-ca",
+      "title": "Inventory setup · enable-channel",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--enable-channel",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-enable-channel-gl",
+      "title": "Inventory setup · enable-channel",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--enable-channel",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-enable-channel-eu",
+      "title": "Inventory setup · enable-channel",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--enable-channel",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-unavailable",
+      "title": "Inventory setup · unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--unavailable",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-unconfirmed",
+      "title": "Inventory setup · unconfirmed",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--unconfirmed",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
       "id": "core-team-access-members",
       "title": "Core team access · members",
       "kind": "story",
@@ -4625,6 +5288,141 @@
       "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
     },
     {
+      "id": "inventory-product-lifecycle-review",
+      "title": "Product lifecycle · review",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-product-lifecycle--review",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-product-lifecycle-confirmation",
+      "title": "Product lifecycle · confirmation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-product-lifecycle--confirmation",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-product-lifecycle-confirmation-en",
+      "title": "Product lifecycle · confirmation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-product-lifecycle--confirmation",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-product-lifecycle-confirmation-ca",
+      "title": "Product lifecycle · confirmation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-product-lifecycle--confirmation",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-product-lifecycle-confirmation-gl",
+      "title": "Product lifecycle · confirmation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-product-lifecycle--confirmation",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-product-lifecycle-confirmation-eu",
+      "title": "Product lifecycle · confirmation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-product-lifecycle--confirmation",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-product-lifecycle-archived",
+      "title": "Product lifecycle · archived",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-product-lifecycle--archived",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-product-lifecycle-refused",
+      "title": "Product lifecycle · refused",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-product-lifecycle--refused",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-product-lifecycle-unconfirmed",
+      "title": "Product lifecycle · unconfirmed",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-product-lifecycle--unconfirmed",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
       "id": "core-capability-enablement-explore",
       "title": "Core capability enablement · explore",
       "kind": "story",
@@ -4773,6 +5571,141 @@
         }
       ],
       "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-channel-availability-lookup",
+      "title": "Channel availability · lookup",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-channel-availability--lookup",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Inventory results for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-channel-availability-available",
+      "title": "Channel availability · available",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-channel-availability--available",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Inventory results for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-channel-availability-available-en",
+      "title": "Channel availability · available",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-channel-availability--available",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Inventory results for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-channel-availability-available-ca",
+      "title": "Channel availability · available",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-channel-availability--available",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Inventory results for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-channel-availability-available-gl",
+      "title": "Channel availability · available",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-channel-availability--available",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Inventory results for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-channel-availability-available-eu",
+      "title": "Channel availability · available",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-channel-availability--available",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Inventory results for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-channel-availability-zero",
+      "title": "Channel availability · zero",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-channel-availability--zero",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Inventory results for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-channel-availability-unavailable",
+      "title": "Channel availability · unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-channel-availability--unavailable",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Inventory results for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-channel-availability-read-failure",
+      "title": "Channel availability · read-failure",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-channel-availability--read-failure",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Inventory results for review. Visual candidates require exact approval."
     },
     {
       "id": "core-employee-accounts-overview",
@@ -6041,6 +6974,261 @@
       "sources": [],
       "storyId": "core-sites-and-areas--reference-blocked",
       "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-review-receipt-release",
+      "title": "Pending movement resolution · review-receipt-release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--review-receipt-release",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-review-receipt-release-en",
+      "title": "Pending movement resolution · review-receipt-release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--review-receipt-release",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-review-receipt-release-ca",
+      "title": "Pending movement resolution · review-receipt-release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--review-receipt-release",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-review-receipt-release-gl",
+      "title": "Pending movement resolution · review-receipt-release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--review-receipt-release",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-review-receipt-release-eu",
+      "title": "Pending movement resolution · review-receipt-release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--review-receipt-release",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-pending-resolution-select-counterpart",
+      "title": "Pending movement resolution · select-counterpart",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-resolution--select-counterpart",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-select-scope",
+      "title": "Stock commitments · select-scope",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--select-scope",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-hold-settings",
+      "title": "Stock commitments · hold-settings",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--hold-settings",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-hold-settings-en",
+      "title": "Stock commitments · hold-settings",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--hold-settings",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-hold-settings-ca",
+      "title": "Stock commitments · hold-settings",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--hold-settings",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-hold-settings-gl",
+      "title": "Stock commitments · hold-settings",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--hold-settings",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "inventory-stock-commitments-hold-settings-eu",
+      "title": "Stock commitments · hold-settings",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-stock-commitments--hold-settings",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-scheduled-calendar",
+      "title": "Inventory setup · scheduled-calendar",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--scheduled-calendar",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-scheduled-calendar-en",
+      "title": "Inventory setup · scheduled-calendar",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--scheduled-calendar",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-scheduled-calendar-ca",
+      "title": "Inventory setup · scheduled-calendar",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--scheduled-calendar",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-scheduled-calendar-gl",
+      "title": "Inventory setup · scheduled-calendar",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--scheduled-calendar",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-inventory-setup-scheduled-calendar-eu",
+      "title": "Inventory setup · scheduled-calendar",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-inventory-setup--scheduled-calendar",
+      "locale": "eu",
       "cases": [
         {
           "id": "default",
