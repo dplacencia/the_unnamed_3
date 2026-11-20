@@ -3337,6 +3337,162 @@
       "locale": "eu"
     },
     {
+      "id": "daily-stock-current",
+      "title": "Daily stock comparison · Current flow",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-daily-stock-workflow--current",
+      "cases": [
+        {
+          "id": "product-details",
+          "action": "daily-stock-current-details"
+        },
+        {
+          "id": "receipt-form",
+          "action": "daily-stock-current-receipt"
+        },
+        {
+          "id": "applied-receipt",
+          "action": "daily-stock-current-applied"
+        },
+        {
+          "id": "recorded-stock",
+          "action": "daily-stock-current-lookup"
+        }
+      ],
+      "limitation": "Synthetic Products, receipt and recorded-stock reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "daily-stock-proposed",
+      "title": "Daily stock comparison · Proposed flow",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-daily-stock-workflow--proposed",
+      "cases": [
+        {
+          "id": "product-details",
+          "action": "daily-stock-proposed-details"
+        },
+        {
+          "id": "receipt-form",
+          "action": "daily-stock-proposed-receipt"
+        },
+        {
+          "id": "applied-receipt",
+          "action": "daily-stock-proposed-applied"
+        },
+        {
+          "id": "recorded-stock",
+          "action": "daily-stock-proposed-lookup"
+        }
+      ],
+      "limitation": "Synthetic Products, receipt and recorded-stock reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "daily-stock-balance-read-failed",
+      "title": "Daily stock comparison · Applied receipt with failed balance read",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-daily-stock-workflow--balance-read-failed",
+      "cases": [
+        {
+          "id": "failed-read",
+          "action": "daily-stock-read-error"
+        }
+      ],
+      "limitation": "Synthetic Products, receipt and recorded-stock reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "daily-stock-pending",
+      "title": "Daily stock comparison · Pending receipt",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-daily-stock-workflow--pending",
+      "cases": [
+        {
+          "id": "pending-result",
+          "action": "daily-stock-pending"
+        }
+      ],
+      "limitation": "Synthetic Products, receipt and recorded-stock reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "daily-stock-proposed-en",
+      "title": "Daily stock comparison · Proposed flow in English",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-daily-stock-workflow--proposed",
+      "cases": [
+        {
+          "id": "receipt-form",
+          "action": "daily-stock-proposed-receipt"
+        },
+        {
+          "id": "recorded-stock",
+          "action": "daily-stock-proposed-lookup"
+        }
+      ],
+      "limitation": "Synthetic Products, receipt and recorded-stock reads. Candidates require specific visual approval.",
+      "locale": "en"
+    },
+    {
+      "id": "daily-stock-proposed-ca",
+      "title": "Daily stock comparison · Proposed flow in Catalan",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-daily-stock-workflow--proposed",
+      "cases": [
+        {
+          "id": "receipt-form",
+          "action": "daily-stock-proposed-receipt"
+        },
+        {
+          "id": "recorded-stock",
+          "action": "daily-stock-proposed-lookup"
+        }
+      ],
+      "limitation": "Synthetic Products, receipt and recorded-stock reads. Candidates require specific visual approval.",
+      "locale": "ca"
+    },
+    {
+      "id": "daily-stock-proposed-gl",
+      "title": "Daily stock comparison · Proposed flow in Galician",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-daily-stock-workflow--proposed",
+      "cases": [
+        {
+          "id": "receipt-form",
+          "action": "daily-stock-proposed-receipt"
+        },
+        {
+          "id": "recorded-stock",
+          "action": "daily-stock-proposed-lookup"
+        }
+      ],
+      "limitation": "Synthetic Products, receipt and recorded-stock reads. Candidates require specific visual approval.",
+      "locale": "gl"
+    },
+    {
+      "id": "daily-stock-proposed-eu",
+      "title": "Daily stock comparison · Proposed flow in Basque",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-daily-stock-workflow--proposed",
+      "cases": [
+        {
+          "id": "receipt-form",
+          "action": "daily-stock-proposed-receipt"
+        },
+        {
+          "id": "recorded-stock",
+          "action": "daily-stock-proposed-lookup"
+        }
+      ],
+      "limitation": "Synthetic Products, receipt and recorded-stock reads. Candidates require specific visual approval.",
+      "locale": "eu"
+    },
+    {
       "id": "pending-receipt-inspection-receipt",
       "title": "Inspect a confirmed pending receipt",
       "kind": "story",

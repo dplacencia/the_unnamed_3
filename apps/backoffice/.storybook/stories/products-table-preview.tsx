@@ -312,6 +312,12 @@ function CatalogueFacts({
   );
 }
 
+type ProductReceiptShortcut = {
+  label: string;
+  disabled: boolean;
+  open: (product: PreviewProduct) => void;
+};
+
 function ProductsTable({
   view,
   update,
@@ -322,6 +328,7 @@ function ProductsTable({
   productStatus,
   browsing,
   stockShortcut,
+  receiptShortcut,
   archivePreview,
 }: {
   view: ProductsView;
@@ -333,6 +340,7 @@ function ProductsTable({
   productStatus?: (product: PreviewProduct) => ProductRowStatus | undefined;
   browsing?: ProductsBrowsing | null;
   stockShortcut?: ProductsTablePreviewProps["stockShortcut"];
+  receiptShortcut?: ProductReceiptShortcut;
   archivePreview?: (product: PreviewProduct) => ReactNode;
 }) {
   const t = useTranslations("catalogue");
@@ -499,6 +507,38 @@ function ProductsTable({
   const tableEditing = editor.mode?.type === "table";
   const panelEditing =
     editor.mode?.type === "panel" && editor.mode.id === panelId;
+  const groupedActionClass =
+    "h-auto min-h-11 min-w-0 whitespace-normal sm:min-h-9";
+  const editAction = panelProduct && !panelEditing && !archivePreview && (
+    <Button
+      variant={receiptShortcut ? "ghost" : "outline"}
+      size="sm"
+      className={receiptShortcut ? groupedActionClass : undefined}
+      disabled={editor.sending || editor.entryBlocked}
+      onClick={() => editor.begin({ type: "panel", id: panelProduct.id })}
+    >
+      {t("peEdit")}
+    </Button>
+  );
+  const stockAction = panelProduct && stockShortcut && !panelEditing && (
+    <Button
+      type="button"
+      variant="outline"
+      size="sm"
+      className={
+        receiptShortcut ? groupedActionClass : "self-start max-sm:min-h-11"
+      }
+      data-stock-lookup-product-shortcut
+      onClick={() =>
+        editor.exit(() => {
+          setPanelId(null);
+          stockShortcut.open(panelProduct);
+        })
+      }
+    >
+      {stockShortcut.label}
+    </Button>
+  );
   const moveOrder = view.order.filter(
     (field) => field !== "stock" || view.stock,
   );
@@ -1157,17 +1197,8 @@ function ProductsTable({
                   <EditingResultsView editor={editor} />
                   <EditingActions editor={editor} />
                 </div>
-              ) : archivePreview ? null : (
-                <Button
-                  variant="outline"
-                  size="sm"
-                  disabled={editor.sending || editor.entryBlocked}
-                  onClick={() =>
-                    editor.begin({ type: "panel", id: panelProduct.id })
-                  }
-                >
-                  {t("peEdit")}
-                </Button>
+              ) : (
+                !receiptShortcut && editAction
               )}
               {!panelEditing && (
                 <EditingResultsView
@@ -1181,23 +1212,7 @@ function ProductsTable({
                 t={t}
               />
               {archivePreview?.(panelProduct)}
-              {stockShortcut && !panelEditing && (
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  className="self-start max-sm:min-h-11"
-                  data-stock-lookup-product-shortcut
-                  onClick={() =>
-                    editor.exit(() => {
-                      setPanelId(null);
-                      stockShortcut.open(panelProduct);
-                    })
-                  }
-                >
-                  {stockShortcut.label}
-                </Button>
-              )}
+              {!receiptShortcut && stockAction}
               {view.stock && (
                 <div className="products-panel-stock">
                   <h3>{t("gridStock")}</h3>
@@ -1221,6 +1236,32 @@ function ProductsTable({
                   )}
                 </div>
               )}
+              {receiptShortcut && !panelEditing && (
+                <div
+                  className="grid grid-cols-2 gap-2 border-t border-gray-200 pt-4 sm:flex sm:flex-wrap dark:border-gray-800"
+                  data-products-detail-actions
+                >
+                  {!panelProduct.archived && (
+                    <Button
+                      type="button"
+                      size="sm"
+                      className={`col-span-2 ${groupedActionClass}`}
+                      disabled={receiptShortcut.disabled}
+                      data-products-receipt-shortcut
+                      onClick={() =>
+                        editor.exit(() => {
+                          setPanelId(null);
+                          receiptShortcut.open(panelProduct);
+                        })
+                      }
+                    >
+                      {receiptShortcut.label}
+                    </Button>
+                  )}
+                  {stockAction}
+                  {editAction}
+                </div>
+              )}
             </>
           )}
         </SheetContent>
@@ -1232,6 +1273,8 @@ function ProductsTable({
 export function ProductsTableWorkspace(
   props: ProductsTablePreviewProps & {
     editor: ProductEditing;
+    displayedRecords?: PreviewProduct[];
+    receiptShortcut?: ProductReceiptShortcut;
     summary?: ReactNode;
     catalogueAction?: ReactNode;
     archivePreview?: (product: PreviewProduct) => ReactNode;
@@ -1241,6 +1284,7 @@ export function ProductsTableWorkspace(
   },
 ) {
   const { editor, stockLookup } = props;
+  const records = props.displayedRecords ?? editor.records;
   const t = useTranslations("catalogue");
   const key = `${props.viewKey ?? "irin-products-design"}:${props.initialStock}:${props.initialDensity}:${props.hiddenColumns}:${props.locationCount}:${props.archivedFixture}:${props.saveFixture ?? "confirmed"}${props.browsingFixture ? `:browsing:${props.browsingFixture}:${props.browsingCount ?? 1000}` : ""}`;
   const [view, setView] = useState(() =>
@@ -1257,7 +1301,7 @@ export function ProductsTableWorkspace(
   const browsing = useProductsBrowsing({
     enabled: props.browsingFixture !== undefined,
     fixture: props.browsingFixture ?? "catalogue",
-    records: editor.records,
+    records,
     view,
     preferenceKey: key,
   });
@@ -1345,7 +1389,7 @@ export function ProductsTableWorkspace(
           stockLookup && {
             ...stockLookup,
             render: (location, productId) =>
-              stockLookup.render(location, productId, editor.records),
+              stockLookup.render(location, productId, records),
           }
         }
         beforeNavigate={(proceed) =>
@@ -1358,13 +1402,14 @@ export function ProductsTableWorkspace(
           <ProductsTable
             view={view}
             update={update}
-            records={editor.records}
+            records={records}
             editor={editor}
             summary={props.summary}
             catalogueAction={props.catalogueAction}
             productStatus={props.productStatus}
             browsing={browsing}
             stockShortcut={props.stockShortcut}
+            receiptShortcut={props.receiptShortcut}
             archivePreview={props.archivePreview}
           />
         }

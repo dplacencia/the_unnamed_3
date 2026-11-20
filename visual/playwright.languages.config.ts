@@ -16,6 +16,7 @@ export default defineConfig({
     "products-creation.spec.ts",
     "stock-receipt.spec.ts",
     "stock-lookup.spec.ts",
+    "daily-stock.spec.ts",
     "pending-receipt-inspection.spec.ts",
     "pending-movements-browsing.spec.ts",
     "core-hierarchy.spec.ts",

@@ -23,6 +23,7 @@ import { productsAction } from "../products-actions.ts";
 import { productsCreationAction } from "../products-creation-actions.ts";
 import { stockReceiptAction } from "../stock-receipt-actions.ts";
 import { stockLookupAction } from "../stock-lookup-actions.ts";
+import { dailyStockAction } from "../daily-stock-actions.ts";
 import { pendingReceiptInspectionAction } from "../pending-receipt-inspection-actions.ts";
 import type { Locale } from "../../apps/backoffice/src/i18n/configuration";
 
@@ -79,6 +80,8 @@ async function action(
   if (name?.startsWith("stock-receipt-")) return stockReceiptAction(page, name);
   if (name?.startsWith("stock-lookup-"))
     return stockLookupAction(page, name, (entry.locale ?? "es") as Locale);
+  if (name?.startsWith("daily-stock-"))
+    return dailyStockAction(page, name, (entry.locale ?? "es") as Locale);
   if (name?.startsWith("pending-receipt-inspection-"))
     return pendingReceiptInspectionAction(page, name);
   if (name === "core-inventory-review-ready") {

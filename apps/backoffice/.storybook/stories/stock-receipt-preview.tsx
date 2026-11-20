@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
+import { Alert, AlertTitle } from "@/components/ui/alert";
 import {
   Dialog,
   DialogContent,
@@ -16,7 +17,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { PlusIcon, XIcon } from "@/icons";
+import { CheckIcon, PlusIcon, XIcon } from "@/icons";
 import { defaultLocale, isLocale } from "@/i18n/configuration";
 import {
   NavigationPrototype,
@@ -25,6 +26,9 @@ import {
 } from "./navigation-prototype";
 import type { StockEntry } from "./navigation-model";
 import { ProductsCreationPreview } from "./products-creation-preview";
+import { DailyStockCatalogue } from "./daily-stock-catalogue";
+import type { LookupProduct } from "./stock-lookup-content";
+import { lookupMessages } from "./stock-lookup-messages";
 import { PendingReceiptInspectionContent } from "./pending-receipt-inspection-content";
 import {
   pendingInspectionMessages,
@@ -67,6 +71,7 @@ type ReceiptStockLookup = Omit<StockLookupNavigation, "render"> & {
     ...args: [
       ...Parameters<StockLookupNavigation["render"]>,
       ReceiptSession["balances"],
+      products?: readonly LookupProduct[],
     ]
   ) => ReturnType<StockLookupNavigation["render"]>;
 };
@@ -88,11 +93,13 @@ type ReceiptPendingInspection = {
 export function StockReceiptPreview({
   fixture,
   stockLookup,
+  dailyStock,
   pendingInspection,
   movementsBrowsing,
 }: {
   fixture: ReceiptFixture;
   stockLookup?: ReceiptStockLookup;
+  dailyStock?: "current" | "proposed";
   pendingInspection?: ReceiptPendingInspection;
   movementsBrowsing?: Omit<MovementsBrowsingNavigation, "render"> & {
     locationCount: "one" | "several";
@@ -131,6 +138,10 @@ export function StockReceiptPreview({
   });
   const [open, setOpen] = useState(false);
   const [shortcutProduct, setShortcutProduct] = useState<ReceiptProduct>();
+  const [catalogueProducts, setCatalogueProducts] = useState<
+    readonly ReceiptProduct[]
+  >([]);
+  const returnProduct = useRef<string | undefined>(undefined);
   const [draft, setDraft] = useState(() => newReceiptDraft());
   const [change, setChange] = useState<Change | null>(null);
   const [discard, setDiscard] = useState(false);
@@ -152,9 +163,13 @@ export function StockReceiptPreview({
     ? pendingResult?.lineReference
     : undefined;
   const isRetained = !!record && record.command === retained?.command;
-  const products = shortcutProduct
-    ? [shortcutProduct, ...receiptProducts]
-    : receiptProducts;
+  const proposed = dailyStock === "proposed";
+  const lookupCopy = proposed ? lookupMessages(locale) : undefined;
+  const products = dailyStock
+    ? catalogueProducts
+    : shortcutProduct
+      ? [shortcutProduct, ...receiptProducts]
+      : receiptProducts;
   const locationName = locations.find(
     ({ id }) => id === record?.command.content.locationId,
   )?.name;
@@ -276,14 +291,14 @@ export function StockReceiptPreview({
       {copy.memory}
     </p>
   );
-  const receiptAction = (
+  const receiptAction = (openReceipt: () => void) => (
     <Button
       type="button"
       size="sm"
       className="max-sm:min-h-11"
       data-receipt-open
       disabled={canResume}
-      onClick={() => openDraft()}
+      onClick={openReceipt}
     >
       <PlusIcon className="size-4" aria-hidden="true" />
       {copy.open}
@@ -315,10 +330,30 @@ export function StockReceiptPreview({
   );
   const movementsContent = (
     <div className="space-y-3 text-gray-800 dark:text-gray-100">
-      {receiptAction}
+      {receiptAction(() => openDraft())}
       {receiptSummary}
     </div>
   );
+
+  const viewStock = stockLookup &&
+    record &&
+    phase === "applied" &&
+    read.phase !== "denied" && (
+      <Button
+        type="button"
+        variant="outline"
+        className="self-start max-sm:min-h-11"
+        data-stock-lookup-receipt-shortcut
+        onClick={() => {
+          const { productId, locationId } = record.command.content;
+          returnProduct.current = undefined;
+          finishClose();
+          stockLookup.open({ productId, locationId });
+        }}
+      >
+        {stockLookup.label}
+      </Button>
+    );
 
   return (
     <div
@@ -339,7 +374,49 @@ export function StockReceiptPreview({
           if (!next) requestClose();
         }}
       >
-        {fixture === "from-product" ? (
+        {dailyStock ? (
+          <DailyStockCatalogue
+            proposeShortcut={proposed}
+            balances={session.balances}
+            receipt={{
+              label: copy.open,
+              disabled: canResume,
+              open: (product, choices) => {
+                returnProduct.current = product?.id;
+                setCatalogueProducts(choices);
+                openDraft(product);
+              },
+              movement: (openReceipt) => (
+                <div className="space-y-3 text-gray-800 dark:text-gray-100">
+                  {receiptAction(openReceipt)}
+                  {receiptSummary}
+                </div>
+              ),
+            }}
+            stockLookup={
+              stockLookup && {
+                ...stockLookup,
+                render: (location, productId, records) =>
+                  stockLookup.render(
+                    location,
+                    productId,
+                    session.balances,
+                    records.map(({ id, name, sku }) => ({
+                      id,
+                      name,
+                      reference: sku ?? undefined,
+                    })),
+                  ),
+              }
+            }
+            stockShortcut={
+              stockLookup && {
+                label: stockLookup.label,
+                open: ({ id }) => stockLookup.open({ productId: id }),
+              }
+            }
+          />
+        ) : fixture === "from-product" ? (
           <ProductsCreationPreview
             fixture="catalogue"
             receiptShortcut={{
@@ -361,7 +438,7 @@ export function StockReceiptPreview({
                 render: (location) =>
                   movementsBrowsing.render(
                     location,
-                    receiptAction,
+                    receiptAction(() => openDraft()),
                     receiptSummary,
                   ),
               }
@@ -378,13 +455,17 @@ export function StockReceiptPreview({
         <SheetContent
           className="products-detail-panel"
           showCloseButton={false}
-          finalFocus={() =>
-            workspace.current?.querySelector<HTMLElement>(
-              canResume
+          finalFocus={() => {
+            const productId = returnProduct.current;
+            const selector = productId
+              ? `[data-product-id="${CSS.escape(productId)}"] [data-product-name]`
+              : canResume
                 ? "[data-receipt-resume]"
-                : "[data-receipt-open], [data-creation-open]",
-            ) ?? false
-          }
+                : "[data-receipt-open], [data-creation-open]";
+            return (
+              workspace.current?.querySelector<HTMLElement>(selector) ?? false
+            );
+          }}
           data-receipt-panel={phase}
         >
           <SheetHeader className="pe-10">
@@ -414,6 +495,7 @@ export function StockReceiptPreview({
           )}
           {phase === "form" && (
             <StockReceiptForm
+              dailyStock={proposed}
               copy={copy}
               products={products}
               locations={locations}
@@ -448,9 +530,20 @@ export function StockReceiptPreview({
                   <dt className="text-gray-600 dark:text-gray-400">
                     {copy.product}
                   </dt>
-                  <dd className="font-medium whitespace-pre-wrap">
+                  <dd
+                    className={
+                      proposed
+                        ? "font-medium [overflow-wrap:anywhere] whitespace-pre-wrap"
+                        : "font-medium whitespace-pre-wrap"
+                    }
+                  >
                     {record.command.product.name}
                   </dd>
+                  {proposed && record.command.product.reference && (
+                    <dd className="text-sm [overflow-wrap:anywhere] text-gray-600 dark:text-gray-400">
+                      <bdi>{record.command.product.reference}</bdi>
+                    </dd>
+                  )}
                 </div>
                 <div className="min-w-0">
                   <dt className="text-gray-600 dark:text-gray-400">
@@ -460,36 +553,42 @@ export function StockReceiptPreview({
                 </div>
               </dl>
               {phase === "submitting" && <p role="status">{copy.submitting}</p>}
-              {phase === "applied" && record.result?.type === "applied" && (
-                <div role="status" className="space-y-1">
-                  <p className="text-success-700 dark:text-success-400 font-semibold">
-                    {copy.applied}
-                  </p>
-                  <p>
-                    {copy.appliedQuantity}{" "}
-                    <strong data-receipt-effect>
-                      {amount(record.result.quantity, record.result.unit)}
-                    </strong>
-                  </p>
-                </div>
-              )}
-              {stockLookup &&
-                phase === "applied" &&
-                read.phase !== "denied" && (
-                  <Button
-                    type="button"
-                    variant="outline"
-                    className="self-start max-sm:min-h-11"
-                    data-stock-lookup-receipt-shortcut
-                    onClick={() => {
-                      const { productId, locationId } = record.command.content;
-                      finishClose();
-                      stockLookup.open({ productId, locationId });
-                    }}
+              {phase === "applied" &&
+                record.result?.type === "applied" &&
+                (proposed ? (
+                  <Alert
+                    variant="success"
+                    role="status"
+                    className="gap-y-1 border-green-200 p-4"
                   >
-                    {stockLookup.label}
-                  </Button>
-                )}
+                    <CheckIcon className="size-4" aria-hidden="true" />
+                    <AlertTitle className="font-semibold">
+                      {copy.applied}
+                    </AlertTitle>
+                    <p className="col-start-2 flex flex-wrap items-baseline gap-x-3">
+                      {copy.appliedQuantity}{" "}
+                      <strong
+                        className="text-xl tabular-nums"
+                        data-receipt-effect
+                      >
+                        {amount(record.result.quantity, record.result.unit)}
+                      </strong>
+                    </p>
+                  </Alert>
+                ) : (
+                  <div role="status" className="space-y-1">
+                    <p className="text-success-700 dark:text-success-400 font-semibold">
+                      {copy.applied}
+                    </p>
+                    <p>
+                      {copy.appliedQuantity}{" "}
+                      <strong data-receipt-effect>
+                        {amount(record.result.quantity, record.result.unit)}
+                      </strong>
+                    </p>
+                  </div>
+                ))}
+              {!proposed && viewStock}
               {pendingResult && (
                 <>
                   <div role="status" className="space-y-1">
@@ -577,7 +676,11 @@ export function StockReceiptPreview({
           )}
           {phase === "applied" && read.phase !== "idle" && (
             <section
-              className="space-y-2 border-t border-gray-200 pt-4 dark:border-gray-800"
+              className={
+                proposed
+                  ? "space-y-2 rounded-lg border border-gray-200 p-4 dark:border-gray-800"
+                  : "space-y-2 border-t border-gray-200 pt-4 dark:border-gray-800"
+              }
               data-receipt-balance={read.phase}
             >
               <h3
@@ -585,29 +688,37 @@ export function StockReceiptPreview({
                 tabIndex={-1}
                 className="font-semibold outline-none"
               >
-                {copy.balance}
+                {lookupCopy?.recorded ?? copy.balance}
               </h3>
               {read.phase === "loading" && (
-                <p role="status">{copy.balanceLoading}</p>
+                <p role="status">
+                  {lookupCopy?.loading ?? copy.balanceLoading}
+                </p>
               )}
               {read.phase === "ready" && (
                 <p
                   role="status"
-                  className="text-base font-semibold"
+                  className={
+                    proposed
+                      ? "text-xl font-semibold tabular-nums"
+                      : "text-base font-semibold"
+                  }
                   data-receipt-recorded-quantity
                 >
                   {amount(read.quantity, read.unit)}
                 </p>
               )}
               {read.phase === "absent" && (
-                <p role="status">{copy.balanceAbsent}</p>
+                <p role="status">
+                  {lookupCopy?.noRecord ?? copy.balanceAbsent}
+                </p>
               )}
               {read.phase === "denied" && (
-                <p role="status">{copy.balanceDenied}</p>
+                <p role="status">{lookupCopy?.denied ?? copy.balanceDenied}</p>
               )}
               {read.phase === "error" && (
                 <>
-                  <p role="status">{copy.balanceError}</p>
+                  <p role="status">{lookupCopy?.error ?? copy.balanceError}</p>
                   <Button
                     type="button"
                     variant="outline"
@@ -629,6 +740,7 @@ export function StockReceiptPreview({
                   </Button>
                 </>
               )}
+              {proposed && viewStock && <div className="pt-1">{viewStock}</div>}
             </section>
           )}
           <Dialog

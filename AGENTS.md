@@ -16,7 +16,15 @@ the linked records distinguish approved source decisions from newly recorded
 wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
-Current assignment — 2026-11-20: prepare the
+Current UX review — 2026-11-20: the user selected the
+[Daily stock workflow comparison](openspec/changes/refine-daily-stock-workflow/design.md).
+Review Productos → Registrar entrada → Existencias in Storybook using the same
+synthetic data in both variants. The proposed variant carries the product from
+its details sheet, requires the receipt destination, and separates the applied
+quantity from the recorded balance. Follow exact-gallery approval for this
+comparison.
+
+November 30 review assignment — 2026-11-20: prepare the
 [November 30 Core and Inventory review](openspec/changes/establish-frontend-technical-foundation/november-30-review.md)
 with OpenSpec and Storybook. The user requires live commitments for release.
 Keep the verified live contract gaps visible and obtain exact candidate approval

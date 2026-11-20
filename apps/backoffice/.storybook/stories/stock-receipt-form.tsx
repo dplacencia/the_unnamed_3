@@ -41,6 +41,7 @@ type ReceiptFormProps = {
   draft: ReceiptDraft;
   products: readonly ReceiptProduct[];
   locations: readonly ReceiptLocation[];
+  dailyStock?: boolean;
   afterLocation?: ReactNode;
   onChange: (draft: ReceiptDraft) => void;
   onProductChange: (product: ReceiptProduct) => void;
@@ -76,6 +77,7 @@ export function StockReceiptForm({
   draft,
   products,
   locations,
+  dailyStock = false,
   afterLocation,
   onChange,
   onProductChange,
@@ -102,7 +104,35 @@ export function StockReceiptForm({
     productNames.add(name);
   }
   const distinguishSelection =
-    draft.product && sharedNames.has(draft.product.name);
+    draft.product && sharedNames.has(draft.product.name) ? draft.product : null;
+  function duplicateIdentifier(product: ReceiptProduct) {
+    if (!dailyStock)
+      return (
+        <>
+          {copy.productId} {product.id}
+        </>
+      );
+    if (
+      product.reference?.trim() &&
+      !products.some(
+        (other) =>
+          other.id !== product.id &&
+          other.name === product.name &&
+          other.reference === product.reference,
+      )
+    ) {
+      return (
+        <>
+          SKU <bdi>{product.reference}</bdi>
+        </>
+      );
+    }
+    return (
+      <>
+        {copy.productId} <bdi>{product.id}</bdi>
+      </>
+    );
+  }
   const units = receiptCompatibleUnits(draft.product);
   const baseUnit = creationUnit(draft.product?.unit ?? null);
   const baseSymbol =
@@ -189,6 +219,7 @@ export function StockReceiptForm({
             data-receipt-product
             id={`${id}-product`}
             ref={productControl}
+            title={dailyStock && !searchOpen ? draft.product?.name : undefined}
             aria-required="true"
             aria-invalid={!!productError || undefined}
             aria-describedby={
@@ -215,7 +246,7 @@ export function StockReceiptForm({
                     {product.name}
                     {sharedNames.has(product.name) && (
                       <span className="block text-xs font-normal text-gray-600 dark:text-gray-400">
-                        {copy.productId} {product.id}
+                        {duplicateIdentifier(product)}
                       </span>
                     )}
                   </span>
@@ -229,7 +260,7 @@ export function StockReceiptForm({
             id={`${id}-product-id`}
             className="[overflow-wrap:anywhere]"
           >
-            {copy.productId} {draft.product?.id}
+            {duplicateIdentifier(distinguishSelection)}
           </FieldDescription>
         )}
         {productError && (
@@ -276,13 +307,23 @@ export function StockReceiptForm({
         )}
       </Field>
       {afterLocation}
-      <div className="grid min-w-0 grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-3">
+      <div
+        data-receipt-measurement={dailyStock ? "" : undefined}
+        className={
+          dailyStock
+            ? "grid min-w-0 grid-cols-1 items-start gap-3 rounded-lg border border-brand-100 bg-brand-50/30 p-3 sm:grid-cols-2 dark:border-brand-500/30 dark:bg-brand-500/10"
+            : "grid min-w-0 grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-3"
+        }
+      >
         <Field controlId={`${id}-quantity`}>
           <FieldLabel>{copy.quantity}</FieldLabel>
           <Input
             data-receipt-quantity
             id={`${id}-quantity`}
             ref={amountControl}
+            className={
+              dailyStock ? "text-lg font-semibold tabular-nums" : undefined
+            }
             required
             inputMode="decimal"
             spellCheck={false}
@@ -330,7 +371,7 @@ export function StockReceiptForm({
           <FieldError
             data-receipt-error="quantity"
             id={`${id}-quantity-error`}
-            className={`col-span-2 -mt-1 ${errorStyle}`}
+            className={`${dailyStock ? "col-span-full" : "col-span-2"} -mt-1 ${errorStyle}`}
           >
             {quantityError}
           </FieldError>
@@ -339,7 +380,7 @@ export function StockReceiptForm({
           <FieldError
             data-receipt-error="unit"
             id={`${id}-unit-error`}
-            className={`col-span-2 -mt-1 ${errorStyle}`}
+            className={`${dailyStock ? "col-span-full" : "col-span-2"} -mt-1 ${errorStyle}`}
           >
             {unitError === "required"
               ? copy.errors.unitRequired

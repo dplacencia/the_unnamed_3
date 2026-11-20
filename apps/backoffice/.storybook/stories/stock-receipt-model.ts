@@ -11,6 +11,7 @@ export { creationRetentionMode as receiptRetentionMode } from "./products-creati
 export type ReceiptProduct = {
   id: string;
   name: string;
+  reference?: string;
   unit: CreationUnitId;
   increment: string;
 };

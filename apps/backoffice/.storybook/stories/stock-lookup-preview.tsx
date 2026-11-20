@@ -15,6 +15,8 @@ import { lookupMessages } from "./stock-lookup-messages";
 import type { StockOutcome, StockPair } from "./stock-lookup-model";
 import { receiptProducts } from "./stock-receipt-fixtures";
 import { StockReceiptPreview } from "./stock-receipt-preview";
+import { dailyStockBalances } from "./daily-stock-catalogue";
+import type { ReceiptFixture } from "./stock-receipt-fixtures";
 
 export const stockLookupFixtures = [
   "lookup",
@@ -62,8 +64,10 @@ function recordedStock(pair: StockPair, ledger: Balances): StockOutcome {
   const amount = ledger[key];
   if (amount !== undefined) {
     const unit =
-      receiptProducts.find(({ id }) => id === pair.productId)?.unit ?? "kg";
-    return balance(amount, unit);
+      receiptProducts.find(({ id }) => id === pair.productId)?.unit ??
+      tableProducts.find(({ id }) => id === pair.productId)?.unit ??
+      "kg";
+    return balance(amount, unit === "ud" ? "piece" : unit);
   }
   if (pair.productId === "flour") return { kind: "no-record" };
   const stock = tableProducts.find(({ id }) => id === pair.productId)?.stock[
@@ -151,7 +155,16 @@ function LookupVisit({
   );
 }
 
-export function StockLookupPreview({ fixture }: { fixture: Fixture }) {
+export function StockLookupPreview({
+  fixture,
+  dailyStock,
+}: {
+  fixture: Fixture;
+  dailyStock?: {
+    variant: "current" | "proposed";
+    receipt: Extract<ReceiptFixture, "movements" | "read-error" | "pending">;
+  };
+}) {
   const currentLocale = useLocale();
   const locale = isLocale(currentLocale) ? currentLocale : defaultLocale;
   const label = lookupMessages(locale).viewStock;
@@ -208,7 +221,18 @@ export function StockLookupPreview({ fixture }: { fixture: Fixture }) {
       data-stock-lookup-request-count={requested}
       data-stock-lookup-settled-count={settled}
     >
-      {fixture === "from-product" ? (
+      {dailyStock ? (
+        <StockReceiptPreview
+          fixture={dailyStock.receipt}
+          dailyStock={dailyStock.variant}
+          stockLookup={{
+            ...stockLookup,
+            label,
+            open: setEntry,
+            initialBalances: dailyStockBalances,
+          }}
+        />
+      ) : fixture === "from-product" ? (
         <ProductsTablePreview
           initialStock={false}
           initialDensity="compact"
