@@ -1,7 +1,13 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { useEffect, useEffectEvent, useId, useRef } from "react";
+import {
+  useEffect,
+  useEffectEvent,
+  useId,
+  useRef,
+  type ReactNode,
+} from "react";
 import { Button } from "@/components/ui/button";
 import { defaultLocale, isLocale } from "@/i18n/configuration";
 import {
@@ -29,6 +35,7 @@ type PendingReceiptInspectionContentProps = {
   backLabel?: string;
   locationLabels?: Record<string, string>;
   onOutcome?: (outcome: InspectionOutcome) => void;
+  pendingAction?: ReactNode;
 };
 
 export function PendingReceiptInspectionContent({
@@ -39,6 +46,7 @@ export function PendingReceiptInspectionContent({
   backLabel,
   locationLabels,
   onOutcome,
+  pendingAction,
 }: PendingReceiptInspectionContentProps) {
   const currentLocale = useLocale();
   const locale = isLocale(currentLocale) ? currentLocale : defaultLocale;
@@ -204,6 +212,7 @@ export function PendingReceiptInspectionContent({
         </p>
       )}
       <div className="flex flex-wrap items-center gap-2">
+        {result?.kind === "pending" && pendingAction}
         <Button
           type="button"
           variant="outline"

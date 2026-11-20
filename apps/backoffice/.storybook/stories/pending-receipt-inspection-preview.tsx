@@ -60,8 +60,10 @@ function currentInspection(
 
 export function PendingReceiptInspectionPreview({
   fixture,
+  focusedFeedback,
 }: {
   fixture: Fixture;
+  focusedFeedback?: boolean;
 }) {
   const line = useRef<{
     reference: string;
@@ -81,6 +83,7 @@ export function PendingReceiptInspectionPreview({
     >
       <StockReceiptPreview
         fixture="pending"
+        focusedFeedback={focusedFeedback}
         pendingInspection={{
           reasons: fixtureReasons[fixture] ?? defaultReasons,
           remember: (reference, facts) => {

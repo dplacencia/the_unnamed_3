@@ -4,6 +4,13 @@ import { useLocale, useTranslations } from "next-intl";
 import { useId, useRef, useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import {
+  Field,
+  FieldDescription,
+  FieldError,
+  FieldLabel,
+} from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
+import {
   Sheet,
   SheetContent,
   SheetDescription,
@@ -12,6 +19,7 @@ import {
 } from "@/components/ui/sheet";
 import { defaultLocale, isLocale, type Locale } from "@/i18n/configuration";
 import { NavigationPrototype } from "./navigation-prototype";
+import { pendingDuplicateReviewMessages } from "./pending-duplicate-review-messages";
 import { PendingMovementsBrowsingContent } from "./pending-movements-browsing-content";
 import {
   pendingBrowsingMessages,
@@ -27,7 +35,9 @@ import {
 import { PendingReceiptInspectionContent } from "./pending-receipt-inspection-content";
 import type { InspectionRead } from "./pending-receipt-inspection-model";
 import { pendingInspectionMessages } from "./pending-receipt-inspection-messages";
+import { pendingReceiptQuantityMessages } from "./pending-receipt-quantity-messages";
 import { pendingDepartureInspectionMessages } from "./pending-departure-inspection-messages";
+import { pendingReleaseGuidanceMessages } from "./pending-release-guidance-messages";
 import {
   counterpartSelectionFixture,
   duplicateSibling,
@@ -115,6 +125,14 @@ function actionName(locale: Locale, kind: ResolutionFixture["kind"]) {
   return copy.cancelTitle;
 }
 
+function unitLabel(unit: PendingLine["unit"], locale: Locale) {
+  const copy = pendingInspectionMessages(locale);
+  if (unit === null) return copy.unknown;
+  return unit === "piece"
+    ? copy.pieceSymbol
+    : (creationUnit(unit)?.symbol ?? unit);
+}
+
 function quantityWithUnit(
   line: Pick<PendingLine, "quantity" | "unit">,
   locale: Locale,
@@ -124,30 +142,119 @@ function quantityWithUnit(
     line.quantity === null
       ? copy.unknown
       : formatCreationStep(line.quantity, locale);
-  const unit =
-    line.unit === null
-      ? copy.unknown
-      : line.unit === "piece"
-        ? copy.pieceSymbol
-        : (creationUnit(line.unit)?.symbol ?? line.unit);
-  return `${quantity} ${unit}`;
+  return `${quantity} ${unitLabel(line.unit, locale)}`;
+}
+
+type ReleaseCorrection = readonly [label: string, value: string];
+
+function PendingReleaseFacts({
+  locale,
+  line,
+  locationLabel,
+  correction,
+}: {
+  locale: Locale;
+  line: PendingLine;
+  locationLabel: string;
+  correction?: ReleaseCorrection;
+}) {
+  const copy = pendingReleaseGuidanceMessages[locale];
+  const inspection =
+    line.kind === "departure"
+      ? pendingDepartureInspectionMessages(locale)
+      : pendingInspectionMessages(locale);
+  const facts = [
+    [inspection.product, line.product ?? inspection.unknown],
+    [inspection.location, locationLabel],
+    [copy.registeredQuantity, quantityWithUnit(line, locale)],
+    ...(correction ? [correction] : []),
+  ];
+
+  return (
+    <div
+      className="space-y-3 rounded-lg border border-gray-200 p-3 dark:border-gray-800"
+      data-pending-release-summary={correction ? "" : undefined}
+    >
+      <dl className="grid grid-cols-2 gap-3">
+        {facts.map(([label, value]) => (
+          <div key={label} className="min-w-0">
+            <dt className="text-sm text-gray-600 dark:text-gray-400">
+              {label}
+            </dt>
+            <dd className="font-medium [overflow-wrap:anywhere] whitespace-pre-wrap text-gray-800 dark:text-gray-100">
+              {value}
+            </dd>
+          </div>
+        ))}
+      </dl>
+      {!correction && line.reasons.length > 0 && (
+        <div className="space-y-1 border-t border-gray-200 pt-2 text-sm dark:border-gray-800">
+          <h3 className="font-semibold text-gray-800 dark:text-gray-100">
+            {copy.recordedReason}
+          </h3>
+          {line.reasons.map((code) => (
+            <p key={code}>{pendingBrowsingReason(locale, code)}</p>
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
 
 function AttemptResult({
   locale,
   attempt,
+  focusedRelease,
+  focusedDuplicate,
+  locationLabel,
   retry,
   close,
 }: {
   locale: Locale;
   attempt: Attempt;
+  focusedRelease: boolean;
+  focusedDuplicate: boolean;
+  locationLabel: string;
   retry(): void;
   close(): void;
 }) {
   const copy = pendingResolutionMessages[locale];
   const { result, uncertain } = attempt;
   const original = result.kind === "resolved" ? result.original : null;
-  const release = attempt.command.request.kind === "release";
+  const { request } = attempt.command;
+  const release = request.kind === "release";
+  const duplicateCopy = pendingDuplicateReviewMessages[locale];
+  const confirmedCancellation =
+    focusedDuplicate &&
+    original?.kind === "rejected" &&
+    original.reason === "duplicate-batch-cancelled" &&
+    request.kind === "cancel"
+      ? request
+      : null;
+  let correction: ReleaseCorrection | undefined;
+  if (focusedRelease && original?.kind === "applied" && release) {
+    const { corrections } = request;
+    const { fixture } = attempt;
+    if (fixture.kind === "release" && "channelId" in corrections) {
+      const channel = fixture.channels.find(
+        ({ id }) => id === corrections.channelId,
+      );
+      if (channel)
+        correction = [
+          pendingReleaseGuidanceMessages[locale].indicatedChannel,
+          channel.label,
+        ];
+    }
+    if (fixture.kind === "receipt-release" && "quantity" in corrections) {
+      correction = [
+        pendingReceiptQuantityMessages[locale].indicatedQuantity,
+        quantityWithUnit(
+          { quantity: corrections.quantity, unit: fixture.line.unit },
+          locale,
+        ),
+      ];
+    }
+  }
   let status: string = copy.unconfirmed;
   if (result.kind === "denied")
     status = uncertain ? copy.deniedRetry : copy.denied;
@@ -176,6 +283,14 @@ function AttemptResult({
       >
         {status}
       </p>
+      {correction && (
+        <PendingReleaseFacts
+          locale={locale}
+          line={attempt.fixture.line}
+          locationLabel={locationLabel}
+          correction={correction}
+        />
+      )}
       {original?.kind === "applied" && (
         <dl className="rounded-lg border border-gray-200 p-3 dark:border-gray-800">
           <dt>{copy.effect}</dt>
@@ -189,6 +304,29 @@ function AttemptResult({
       )}
       {original?.kind === "rejected" && (
         <div className="space-y-1">
+          {confirmedCancellation && (
+            <dl
+              data-pending-duplicate-summary
+              className="mb-3 grid grid-cols-2 gap-3 rounded-lg border border-gray-200 p-3 dark:border-gray-800"
+            >
+              <div className="min-w-0">
+                <dt className="text-sm text-gray-600 dark:text-gray-400">
+                  {duplicateCopy.cancelled}
+                </dt>
+                <dd className="font-medium [overflow-wrap:anywhere]">
+                  {confirmedCancellation.target.callerOperationId}
+                </dd>
+              </div>
+              <div className="min-w-0">
+                <dt className="text-sm text-gray-600 dark:text-gray-400">
+                  {duplicateCopy.kept}
+                </dt>
+                <dd className="font-medium [overflow-wrap:anywhere]">
+                  {confirmedCancellation.counterpart.callerOperationId}
+                </dd>
+              </div>
+            </dl>
+          )}
           {release && <p>{copy.overflowReason}</p>}
           <p>{copy.noEffect}</p>
         </div>
@@ -206,17 +344,34 @@ function AttemptResult({
 function ResolutionReview({
   locale,
   fixture,
+  focusedRelease,
+  focusedDuplicate,
   locationLabel,
   onSubmit,
   onBack,
 }: {
   locale: Locale;
   fixture: ResolutionFixture;
+  focusedRelease: boolean;
+  focusedDuplicate: boolean;
   locationLabel: string;
   onSubmit(command: ResolutionCommand): void;
   onBack(): void;
 }) {
   const copy = pendingResolutionMessages[locale];
+  const duplicateGuide =
+    focusedDuplicate && fixture.kind === "cancel"
+      ? pendingDuplicateReviewMessages[locale]
+      : undefined;
+  const guide =
+    focusedRelease &&
+    (fixture.kind === "release" || fixture.kind === "receipt-release")
+      ? pendingReleaseGuidanceMessages[locale]
+      : undefined;
+  const quantityGuide =
+    guide && fixture.kind === "receipt-release"
+      ? pendingReceiptQuantityMessages[locale]
+      : undefined;
   const inspection =
     fixture.line.kind === "departure"
       ? pendingDepartureInspectionMessages(locale)
@@ -228,10 +383,20 @@ function ResolutionReview({
   const [reason, setReason] = useState("");
   const [confirmed, setConfirmed] = useState(false);
   const draft = { channelId, quantity, counterpartId, reason, confirmed };
-  const canConfirm =
-    prepareResolutionCommand(fixture, { ...draft, operationId: "review" }) !==
-    null;
+  const validDraft =
+    prepareResolutionCommand(fixture, {
+      ...draft,
+      confirmed: !!quantityGuide || confirmed,
+      operationId: "review",
+    }) !== null;
+  const canConfirm = confirmed && validDraft;
+  const invalidQuantity = !!quantityGuide && quantity !== "" && !validDraft;
   const invalidReason = reason.length > 0 && !resolutionReasonValid(reason);
+
+  function enterQuantity(value: string) {
+    setQuantity(value);
+    setConfirmed(false);
+  }
 
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -242,22 +407,70 @@ function ResolutionReview({
     if (command) onSubmit(command);
   }
 
+  const counterpartControl =
+    fixture.kind === "cancel" &&
+    (fixture.eligibleCounterparts ? (
+      <select
+        className="min-h-11 w-full rounded-lg border-gray-300 bg-white text-gray-800 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100"
+        aria-label={copy.counterpart}
+        required
+        value={counterpartId}
+        onChange={(event) => {
+          setCounterpartId(event.target.value);
+          setConfirmed(false);
+        }}
+      >
+        <option value="" disabled>
+          {copy.chooseCounterpart}
+        </option>
+        {fixture.eligibleCounterparts.map((candidate) => (
+          <option
+            key={candidate.callerOperationId}
+            value={candidate.callerOperationId}
+          >
+            {candidate.callerOperationId}
+          </option>
+        ))}
+      </select>
+    ) : (
+      fixture.counterpart.callerOperationId
+    ));
+  const affectedLines = fixture.kind === "cancel" && (
+    <ul className="list-disc space-y-1 ps-5">
+      {[fixture.line, duplicateSibling].map((line) => (
+        <li key={line.reference}>
+          {line.product} · {quantityWithUnit(line, locale)}
+        </li>
+      ))}
+    </ul>
+  );
+
   return (
     <div className="space-y-4" data-pending-resolution-review={fixture.kind}>
-      <div className="space-y-2 rounded-lg border border-gray-200 p-3 dark:border-gray-800">
-        <h3 className="font-semibold text-gray-800 dark:text-gray-100">
-          {copy.current}
-        </h3>
-        <p className="font-semibold break-words">
-          {fixture.line.product ?? inspection.unknown}
-        </p>
-        <p>
-          {locationLabel} · {quantityWithUnit(fixture.line, locale)}
-        </p>
-        {fixture.line.reasons.map((code) => (
-          <p key={code}>{pendingBrowsingReason(locale, code)}</p>
-        ))}
-      </div>
+      {guide ? (
+        <PendingReleaseFacts
+          locale={locale}
+          line={fixture.line}
+          locationLabel={locationLabel}
+        />
+      ) : (
+        !duplicateGuide && (
+          <div className="space-y-2 rounded-lg border border-gray-200 p-3 dark:border-gray-800">
+            <h3 className="font-semibold text-gray-800 dark:text-gray-100">
+              {copy.current}
+            </h3>
+            <p className="font-semibold break-words">
+              {fixture.line.product ?? inspection.unknown}
+            </p>
+            <p>
+              {locationLabel} · {quantityWithUnit(fixture.line, locale)}
+            </p>
+            {fixture.line.reasons.map((code) => (
+              <p key={code}>{pendingBrowsingReason(locale, code)}</p>
+            ))}
+          </div>
+        )
+      )}
       {fixture.kind === "counterpart-unavailable" ? (
         <>
           <p role="status">{copy.unavailable}</p>
@@ -267,78 +480,129 @@ function ResolutionReview({
         </>
       ) : (
         <form className="space-y-4" onSubmit={submit}>
-          {fixture.kind === "cancel" && (
-            <div className="space-y-2">
-              <dl className="grid grid-cols-2 gap-2 rounded-lg border border-gray-200 p-3 dark:border-gray-800">
-                <div>
-                  <dt>{copy.target}</dt>
-                  <dd className="font-medium break-all">
+          {fixture.kind === "cancel" &&
+            (duplicateGuide ? (
+              <>
+                <section className="space-y-2 rounded-lg border border-gray-200 p-3 dark:border-gray-800">
+                  <h3 className="font-semibold text-gray-800 dark:text-gray-100">
+                    {copy.target}
+                  </h3>
+                  <p className="font-medium [overflow-wrap:anywhere]">
                     {fixture.target.callerOperationId}
-                  </dd>
-                </div>
-                <div>
-                  <dt>{copy.counterpart}</dt>
-                  {fixture.eligibleCounterparts ? (
-                    <dd>
-                      <select
-                        className="min-h-11 w-full rounded-lg border-gray-300 bg-white text-gray-800 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100"
-                        aria-label={copy.counterpart}
-                        required
-                        value={counterpartId}
-                        onChange={(event) => {
-                          setCounterpartId(event.target.value);
-                          setConfirmed(false);
-                        }}
-                      >
-                        <option value="" disabled>
-                          {copy.chooseCounterpart}
-                        </option>
-                        {fixture.eligibleCounterparts.map((candidate) => (
-                          <option
-                            key={candidate.callerOperationId}
-                            value={candidate.callerOperationId}
-                          >
-                            {candidate.callerOperationId}
-                          </option>
-                        ))}
-                      </select>
-                    </dd>
-                  ) : (
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {copy.batchScope}
+                  </p>
+                  <h4 className="border-t border-gray-200 pt-2 text-sm font-semibold dark:border-gray-800">
+                    {duplicateGuide.affectedLines}
+                  </h4>
+                  {affectedLines}
+                </section>
+                <section className="space-y-2 rounded-lg border border-gray-200 p-3 dark:border-gray-800">
+                  <h3 className="font-semibold text-gray-800 dark:text-gray-100">
+                    {copy.counterpart}
+                  </h3>
+                  {counterpartControl}
+                </section>
+              </>
+            ) : (
+              <div className="space-y-2">
+                <dl className="grid grid-cols-2 gap-2 rounded-lg border border-gray-200 p-3 dark:border-gray-800">
+                  <div>
+                    <dt>{copy.target}</dt>
                     <dd className="font-medium break-all">
-                      {fixture.counterpart.callerOperationId}
+                      {fixture.target.callerOperationId}
                     </dd>
-                  )}
-                </div>
-              </dl>
-              <p>{copy.batchScope}</p>
-              <ul className="list-disc space-y-1 ps-5">
-                {[fixture.line, duplicateSibling].map((line) => (
-                  <li key={line.reference}>
-                    {line.product} · {quantityWithUnit(line, locale)}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+                  </div>
+                  <div>
+                    <dt>{copy.counterpart}</dt>
+                    <dd
+                      className={
+                        fixture.eligibleCounterparts
+                          ? undefined
+                          : "font-medium break-all"
+                      }
+                    >
+                      {counterpartControl}
+                    </dd>
+                  </div>
+                </dl>
+                <p>{copy.batchScope}</p>
+                {affectedLines}
+              </div>
+            ))}
           {fixture.kind === "release" ? (
-            <label className="block space-y-1 font-medium">
-              <span>{copy.actualChannel}</span>
-              <select
-                value={channelId}
-                onChange={(event) => setChannelId(event.target.value)}
-                className="min-h-11 w-full rounded-lg border-gray-300 bg-white text-gray-800 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100"
-                required
-              >
-                <option value="" disabled>
-                  {copy.chooseChannel}
-                </option>
-                {fixture.channels.map((channel) => (
-                  <option key={channel.id} value={channel.id}>
-                    {channel.label}
+            <>
+              <label className="block space-y-1 font-medium">
+                <span>{guide?.channelLabel ?? copy.actualChannel}</span>
+                <select
+                  value={channelId}
+                  onChange={(event) => {
+                    setChannelId(event.target.value);
+                    if (guide) setConfirmed(false);
+                  }}
+                  className="min-h-11 w-full rounded-lg border-gray-300 bg-white text-gray-800 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100"
+                  aria-describedby={guide ? `${id}-channel-hint` : undefined}
+                  required
+                >
+                  <option value="" disabled>
+                    {copy.chooseChannel}
                   </option>
-                ))}
-              </select>
-            </label>
+                  {fixture.channels.map((channel) => (
+                    <option key={channel.id} value={channel.id}>
+                      {channel.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              {guide && (
+                <p
+                  id={`${id}-channel-hint`}
+                  className="-mt-3 text-sm text-gray-600 dark:text-gray-400"
+                >
+                  {guide.fixChannelHint}
+                </p>
+              )}
+            </>
+          ) : fixture.kind === "receipt-release" && quantityGuide ? (
+            <Field controlId={`${id}-quantity`}>
+              <FieldLabel>{copy.actualQuantity}</FieldLabel>
+              <div className="relative">
+                <Input
+                  className="pe-14 tabular-nums"
+                  inputMode="numeric"
+                  value={quantity}
+                  onChange={(event) => enterQuantity(event.target.value)}
+                  required
+                  aria-invalid={invalidQuantity || undefined}
+                  aria-describedby={`${id}-unit ${id}-quantity-rule${invalidQuantity ? ` ${id}-quantity-error` : ""}`}
+                />
+                <span
+                  id={`${id}-unit`}
+                  className="pointer-events-none absolute end-4 top-1/2 -translate-y-1/2 text-sm text-gray-600 dark:text-gray-300"
+                >
+                  {unitLabel(fixture.line.unit, locale)}
+                </span>
+              </div>
+              <FieldDescription id={`${id}-quantity-rule`}>
+                {quantityGuide.quantityRule
+                  .replace(
+                    "{original}",
+                    fixture.line.quantity === null
+                      ? inspection.unknown
+                      : formatCreationStep(fixture.line.quantity, locale),
+                  )
+                  .replace(
+                    "{increment}",
+                    formatCreationStep(fixture.product.increment, locale),
+                  )}
+              </FieldDescription>
+              {invalidQuantity && (
+                <FieldError id={`${id}-quantity-error`}>
+                  {quantityGuide.invalidQuantity}
+                </FieldError>
+              )}
+            </Field>
           ) : fixture.kind === "receipt-release" ? (
             <label className="block space-y-1 font-medium">
               <span>{copy.actualQuantity}</span>
@@ -346,10 +610,7 @@ function ResolutionReview({
                 className="min-h-11 w-full rounded-lg border-gray-300 bg-white text-gray-800 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100"
                 inputMode="numeric"
                 value={quantity}
-                onChange={(event) => {
-                  setQuantity(event.target.value);
-                  setConfirmed(false);
-                }}
+                onChange={(event) => enterQuantity(event.target.value)}
                 required
                 aria-describedby={id}
               />
@@ -359,7 +620,7 @@ function ResolutionReview({
             </label>
           ) : (
             <label className="block space-y-1 font-medium">
-              <span>{copy.reason}</span>
+              <span>{duplicateGuide?.reason ?? copy.reason}</span>
               <textarea
                 rows={3}
                 value={reason}
@@ -388,7 +649,7 @@ function ResolutionReview({
             />
             <span>
               {fixture.kind === "release"
-                ? copy.reviewRelease
+                ? (guide?.confirmChannel ?? copy.reviewRelease)
                 : fixture.kind === "receipt-release"
                   ? copy.reviewReceiptRelease
                   : fixture.kind === "reject"
@@ -398,7 +659,7 @@ function ResolutionReview({
           </label>
           <div className="flex flex-wrap gap-2">
             <Button type="submit" disabled={!canConfirm}>
-              {copy.confirm}
+              {duplicateGuide?.confirm ?? guide?.confirmRelease ?? copy.confirm}
             </Button>
             <Button type="button" onClick={onBack} variant="outline">
               {copy.return}
@@ -413,16 +674,24 @@ function ResolutionReview({
 export function PendingResolutionPreview({
   preset,
   denyRetry = false,
+  focusedRelease = false,
+  focusedDuplicate = false,
+  startInList = false,
 }: {
   preset: ResolutionPreset;
   denyRetry?: boolean;
+  focusedRelease?: boolean;
+  focusedDuplicate?: boolean;
+  startInList?: boolean;
 }) {
   const currentLocale = useLocale();
   const locale = isLocale(currentLocale) ? currentLocale : defaultLocale;
   const t = useTranslations("catalogue");
   const [initial] = useState(() => initialSession(preset));
-  const [line, setLine] = useState<PendingLine | null>(initial.fixture.line);
-  const [review, setReview] = useState(true);
+  const [line, setLine] = useState<PendingLine | null>(
+    startInList ? null : initial.fixture.line,
+  );
+  const [review, setReview] = useState(!startInList);
   const [observed, setObserved] = useState<ReadonlySet<string>>(
     initial.resolved,
   );
@@ -452,7 +721,7 @@ export function PendingResolutionPreview({
   }
 
   return (
-    <div>
+    <div data-pending-release-guidance={focusedRelease ? "" : undefined}>
       <NavigationPrototype
         initialPage="movements"
         permissionMode="ready"
@@ -464,6 +733,8 @@ export function PendingResolutionPreview({
             <ResolutionWorkspace
               preset={preset}
               locale={locale}
+              focusedRelease={focusedRelease}
+              focusedDuplicate={focusedDuplicate}
               location={location}
               locations={locations}
               line={line}
@@ -490,6 +761,8 @@ export function PendingResolutionPreview({
 function ResolutionWorkspace({
   preset,
   locale,
+  focusedRelease,
+  focusedDuplicate,
   location,
   locations,
   line,
@@ -502,6 +775,8 @@ function ResolutionWorkspace({
 }: {
   preset: ResolutionPreset;
   locale: Locale;
+  focusedRelease: boolean;
+  focusedDuplicate: boolean;
   location: { id: string; label: string } | null;
   locations: Record<PendingLocation, string>;
   line: PendingLine | null;
@@ -552,6 +827,26 @@ function ResolutionWorkspace({
       : Object.values(resolutionFixtures).find(
           (candidate) => candidate.line.reference === line?.reference,
         );
+  const guidedAction =
+    focusedDuplicate && fixture?.kind === "cancel"
+      ? pendingDuplicateReviewMessages[locale].reviewDuplicate
+      : focusedRelease && fixture?.kind === "release"
+        ? pendingReleaseGuidanceMessages[locale].reviewChannel
+        : focusedRelease && fixture?.kind === "receipt-release"
+          ? pendingReceiptQuantityMessages[locale].reviewQuantity
+          : undefined;
+  const reviewButton =
+    line && fixture && inspected === line.reference && !attempt?.uncertain ? (
+      <Button
+        className={guidedAction ? "max-sm:min-h-11" : undefined}
+        onClick={() => {
+          panelTitle.current?.focus();
+          onReview();
+        }}
+      >
+        {guidedAction ?? actionName(locale, fixture.kind)}
+      </Button>
+    ) : null;
   const visibleAttempt =
     review && attempt?.fixture.line.reference === line?.reference
       ? attempt
@@ -658,6 +953,9 @@ function ResolutionWorkspace({
             <AttemptResult
               attempt={visibleAttempt}
               locale={locale}
+              focusedRelease={focusedRelease}
+              focusedDuplicate={focusedDuplicate}
+              locationLabel={locations[visibleAttempt.fixture.line.location]}
               retry={() =>
                 submit(visibleAttempt.fixture, visibleAttempt.command, true)
               }
@@ -669,6 +967,8 @@ function ResolutionWorkspace({
               key={line.reference}
               locale={locale}
               fixture={fixture}
+              focusedRelease={focusedRelease}
+              focusedDuplicate={focusedDuplicate}
               locationLabel={locations[line.location]}
               onBack={close}
               onSubmit={(command) => submit(fixture, command, false)}
@@ -682,6 +982,7 @@ function ResolutionWorkspace({
                 kind={line.kind}
                 locationLabels={locations}
                 backLabel={copy.return}
+                pendingAction={guidedAction ? reviewButton : undefined}
                 onBack={close}
                 onOutcome={(outcome) => {
                   setInspected(
@@ -692,20 +993,7 @@ function ResolutionWorkspace({
                   );
                 }}
               />
-              {fixture &&
-                inspected === line.reference &&
-                !attempt?.uncertain && (
-                  <div>
-                    <Button
-                      onClick={() => {
-                        panelTitle.current?.focus();
-                        onReview();
-                      }}
-                    >
-                      {actionName(locale, fixture.kind)}
-                    </Button>
-                  </div>
-                )}
+              {!guidedAction && reviewButton && <div>{reviewButton}</div>}
             </>
           )}
         </SheetContent>

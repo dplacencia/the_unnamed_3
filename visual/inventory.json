@@ -3337,6 +3337,534 @@
       "locale": "eu"
     },
     {
+      "id": "pending-duplicate-review-flow",
+      "title": "Pending duplicate cancellation review",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-duplicate-review--flow",
+      "cases": [
+        {
+          "id": "list",
+          "action": "pending-duplicate-review-list"
+        },
+        {
+          "id": "inspection",
+          "action": "pending-duplicate-review-inspection"
+        },
+        {
+          "id": "review",
+          "action": "pending-duplicate-review-review"
+        },
+        {
+          "id": "confirmed",
+          "action": "pending-duplicate-review-confirmed"
+        },
+        {
+          "id": "returned",
+          "action": "pending-duplicate-review-returned"
+        }
+      ],
+      "limitation": "Synthetic batch identities, eligible counterparts, confirmed cancellation and return. Candidates require exact visual approval."
+    },
+    {
+      "id": "pending-duplicate-review-en",
+      "title": "Pending duplicate cancellation review (en)",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-duplicate-review--flow",
+      "cases": [
+        {
+          "id": "review",
+          "action": "pending-duplicate-review-review"
+        }
+      ],
+      "limitation": "Synthetic batch identities, eligible counterparts, confirmed cancellation and return. Candidates require exact visual approval.",
+      "locale": "en"
+    },
+    {
+      "id": "pending-duplicate-review-ca",
+      "title": "Pending duplicate cancellation review (ca)",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-duplicate-review--flow",
+      "cases": [
+        {
+          "id": "review",
+          "action": "pending-duplicate-review-review"
+        }
+      ],
+      "limitation": "Synthetic batch identities, eligible counterparts, confirmed cancellation and return. Candidates require exact visual approval.",
+      "locale": "ca"
+    },
+    {
+      "id": "pending-duplicate-review-gl",
+      "title": "Pending duplicate cancellation review (gl)",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-duplicate-review--flow",
+      "cases": [
+        {
+          "id": "review",
+          "action": "pending-duplicate-review-review"
+        }
+      ],
+      "limitation": "Synthetic batch identities, eligible counterparts, confirmed cancellation and return. Candidates require exact visual approval.",
+      "locale": "gl"
+    },
+    {
+      "id": "pending-duplicate-review-eu",
+      "title": "Pending duplicate cancellation review (eu)",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-duplicate-review--flow",
+      "cases": [
+        {
+          "id": "review",
+          "action": "pending-duplicate-review-review"
+        }
+      ],
+      "limitation": "Synthetic batch identities, eligible counterparts, confirmed cancellation and return. Candidates require exact visual approval.",
+      "locale": "eu"
+    },
+    {
+      "id": "pending-receipt-quantity-flow",
+      "title": "Partial Pending receipt correction",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-receipt-quantity--flow",
+      "cases": [
+        {
+          "id": "list",
+          "action": "pending-receipt-quantity-list"
+        },
+        {
+          "id": "inspection",
+          "action": "pending-receipt-quantity-inspection"
+        },
+        {
+          "id": "review",
+          "action": "pending-receipt-quantity-review"
+        },
+        {
+          "id": "invalid",
+          "action": "pending-receipt-quantity-invalid"
+        },
+        {
+          "id": "applied",
+          "action": "pending-receipt-quantity-applied"
+        },
+        {
+          "id": "returned",
+          "action": "pending-receipt-quantity-returned"
+        }
+      ],
+      "limitation": "Synthetic saved receipt quantity, fixed unit, exact correction and return. Candidates require exact visual approval."
+    },
+    {
+      "id": "pending-receipt-quantity-en",
+      "title": "Partial Pending receipt correction",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-receipt-quantity--flow",
+      "cases": [
+        {
+          "id": "review",
+          "action": "pending-receipt-quantity-review"
+        }
+      ],
+      "limitation": "Synthetic saved receipt quantity, fixed unit, exact correction and return. Candidates require exact visual approval.",
+      "locale": "en"
+    },
+    {
+      "id": "pending-receipt-quantity-ca",
+      "title": "Partial Pending receipt correction",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-receipt-quantity--flow",
+      "cases": [
+        {
+          "id": "review",
+          "action": "pending-receipt-quantity-review"
+        }
+      ],
+      "limitation": "Synthetic saved receipt quantity, fixed unit, exact correction and return. Candidates require exact visual approval.",
+      "locale": "ca"
+    },
+    {
+      "id": "pending-receipt-quantity-gl",
+      "title": "Partial Pending receipt correction",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-receipt-quantity--flow",
+      "cases": [
+        {
+          "id": "review",
+          "action": "pending-receipt-quantity-review"
+        }
+      ],
+      "limitation": "Synthetic saved receipt quantity, fixed unit, exact correction and return. Candidates require exact visual approval.",
+      "locale": "gl"
+    },
+    {
+      "id": "pending-receipt-quantity-eu",
+      "title": "Partial Pending receipt correction",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-receipt-quantity--flow",
+      "cases": [
+        {
+          "id": "review",
+          "action": "pending-receipt-quantity-review"
+        }
+      ],
+      "limitation": "Synthetic saved receipt quantity, fixed unit, exact correction and return. Candidates require exact visual approval.",
+      "locale": "eu"
+    },
+    {
+      "id": "pending-release-guidance-flow",
+      "title": "Pending departure release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-release-guidance--flow",
+      "cases": [
+        {
+          "id": "list",
+          "action": "pending-release-guidance-list"
+        },
+        {
+          "id": "inspection",
+          "action": "pending-release-guidance-inspection"
+        },
+        {
+          "id": "review",
+          "action": "pending-release-guidance-review"
+        },
+        {
+          "id": "applied",
+          "action": "pending-release-guidance-applied"
+        },
+        {
+          "id": "returned",
+          "action": "pending-release-guidance-returned"
+        }
+      ],
+      "limitation": "Synthetic exact Pending read, release result and list refresh. Candidates require exact visual approval."
+    },
+    {
+      "id": "pending-release-guidance-unconfirmed",
+      "title": "Pending departure release outcome unknown",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-release-guidance--unconfirmed",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-release-guidance-unconfirmed"
+        }
+      ],
+      "limitation": "Synthetic exact Pending read, release result and list refresh. Candidates require exact visual approval."
+    },
+    {
+      "id": "pending-release-guidance-en",
+      "title": "Pending departure release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-release-guidance--flow",
+      "cases": [
+        {
+          "id": "review",
+          "action": "pending-release-guidance-review"
+        }
+      ],
+      "limitation": "Synthetic exact Pending read, release result and list refresh. Candidates require exact visual approval.",
+      "locale": "en"
+    },
+    {
+      "id": "pending-release-guidance-ca",
+      "title": "Pending departure release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-release-guidance--flow",
+      "cases": [
+        {
+          "id": "review",
+          "action": "pending-release-guidance-review"
+        }
+      ],
+      "limitation": "Synthetic exact Pending read, release result and list refresh. Candidates require exact visual approval.",
+      "locale": "ca"
+    },
+    {
+      "id": "pending-release-guidance-gl",
+      "title": "Pending departure release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-release-guidance--flow",
+      "cases": [
+        {
+          "id": "review",
+          "action": "pending-release-guidance-review"
+        }
+      ],
+      "limitation": "Synthetic exact Pending read, release result and list refresh. Candidates require exact visual approval.",
+      "locale": "gl"
+    },
+    {
+      "id": "pending-release-guidance-eu",
+      "title": "Pending departure release",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-release-guidance--flow",
+      "cases": [
+        {
+          "id": "review",
+          "action": "pending-release-guidance-review"
+        }
+      ],
+      "limitation": "Synthetic exact Pending read, release result and list refresh. Candidates require exact visual approval.",
+      "locale": "eu"
+    },
+    {
+      "id": "departure-feedback-applied",
+      "title": "Confirmed departure and signed stock change",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-departure-feedback--applied",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic departure result for Storybook review. Candidates require exact approval."
+    },
+    {
+      "id": "departure-feedback-pending",
+      "title": "Departure recorded as Pending",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-departure-feedback--pending",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic departure result for Storybook review. Candidates require exact approval."
+    },
+    {
+      "id": "departure-feedback-pending-en",
+      "title": "Departure recorded as Pending",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-departure-feedback--pending",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic departure result for Storybook review. Candidates require exact approval.",
+      "locale": "en"
+    },
+    {
+      "id": "departure-feedback-pending-ca",
+      "title": "Departure recorded as Pending",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-departure-feedback--pending",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic departure result for Storybook review. Candidates require exact approval.",
+      "locale": "ca"
+    },
+    {
+      "id": "departure-feedback-pending-gl",
+      "title": "Departure recorded as Pending",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-departure-feedback--pending",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic departure result for Storybook review. Candidates require exact approval.",
+      "locale": "gl"
+    },
+    {
+      "id": "departure-feedback-pending-eu",
+      "title": "Departure recorded as Pending",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-departure-feedback--pending",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic departure result for Storybook review. Candidates require exact approval.",
+      "locale": "eu"
+    },
+    {
+      "id": "departure-feedback-rejected",
+      "title": "Confirmed departure rejection",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-departure-feedback--rejected",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic departure result for Storybook review. Candidates require exact approval."
+    },
+    {
+      "id": "departure-feedback-unconfirmed",
+      "title": "Departure outcome unknown",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-departure-feedback--unconfirmed",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic departure result for Storybook review. Candidates require exact approval."
+    },
+    {
+      "id": "receipt-feedback-current",
+      "title": "Current Pending result",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-receipt-feedback--current",
+      "cases": [
+        {
+          "id": "original",
+          "action": "receipt-feedback-original"
+        }
+      ],
+      "limitation": "Synthetic receipt, balance and exact line reads for Storybook review. Candidates require exact approval."
+    },
+    {
+      "id": "receipt-feedback-pending",
+      "title": "Proposed Pending result",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-receipt-feedback--pending",
+      "cases": [
+        {
+          "id": "original",
+          "action": "receipt-feedback-original"
+        },
+        {
+          "id": "current-pending",
+          "action": "receipt-feedback-current-pending"
+        },
+        {
+          "id": "current-applied",
+          "action": "receipt-feedback-current-applied"
+        }
+      ],
+      "limitation": "Synthetic receipt, balance and exact line reads for Storybook review. Candidates require exact approval."
+    },
+    {
+      "id": "receipt-feedback-pending-en",
+      "title": "Proposed Pending result",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-receipt-feedback--pending",
+      "cases": [
+        {
+          "id": "original",
+          "action": "receipt-feedback-original"
+        }
+      ],
+      "limitation": "Synthetic receipt, balance and exact line reads for Storybook review. Candidates require exact approval.",
+      "locale": "en"
+    },
+    {
+      "id": "receipt-feedback-pending-ca",
+      "title": "Proposed Pending result",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-receipt-feedback--pending",
+      "cases": [
+        {
+          "id": "original",
+          "action": "receipt-feedback-original"
+        }
+      ],
+      "limitation": "Synthetic receipt, balance and exact line reads for Storybook review. Candidates require exact approval.",
+      "locale": "ca"
+    },
+    {
+      "id": "receipt-feedback-pending-gl",
+      "title": "Proposed Pending result",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-receipt-feedback--pending",
+      "cases": [
+        {
+          "id": "original",
+          "action": "receipt-feedback-original"
+        }
+      ],
+      "limitation": "Synthetic receipt, balance and exact line reads for Storybook review. Candidates require exact approval.",
+      "locale": "gl"
+    },
+    {
+      "id": "receipt-feedback-pending-eu",
+      "title": "Proposed Pending result",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-receipt-feedback--pending",
+      "cases": [
+        {
+          "id": "original",
+          "action": "receipt-feedback-original"
+        }
+      ],
+      "limitation": "Synthetic receipt, balance and exact line reads for Storybook review. Candidates require exact approval.",
+      "locale": "eu"
+    },
+    {
+      "id": "receipt-feedback-unconfirmed",
+      "title": "Receipt outcome unknown",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-receipt-feedback--unconfirmed",
+      "cases": [
+        {
+          "id": "default",
+          "action": "receipt-feedback-unconfirmed"
+        }
+      ],
+      "limitation": "Synthetic receipt, balance and exact line reads for Storybook review. Candidates require exact approval."
+    },
+    {
+      "id": "receipt-feedback-balance-read-failed",
+      "title": "Applied receipt with a failed balance read",
+      "kind": "story",
+      "sources": [],
+      "storyId": "inventory-receipt-feedback--balance-read-failed",
+      "cases": [
+        {
+          "id": "default",
+          "action": "receipt-feedback-balance-failed"
+        }
+      ],
+      "limitation": "Synthetic receipt, balance and exact line reads for Storybook review. Candidates require exact approval."
+    },
+    {
       "id": "owner-first-use-current",
       "title": "First-use guidance · Current first visit",
       "kind": "story",

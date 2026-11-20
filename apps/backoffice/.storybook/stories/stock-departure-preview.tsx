@@ -1,5 +1,6 @@
 import { useLocale } from "next-intl";
 import { useEffect, useId, useRef, useState } from "react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -22,8 +23,16 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { PlusIcon, XIcon } from "@/icons";
+import {
+  CheckIcon,
+  ClockIcon,
+  InfoCircleIcon,
+  OctagonAlertIcon,
+  PlusIcon,
+  XIcon,
+} from "@/icons";
 import { defaultLocale, isLocale } from "@/i18n/configuration";
+import { departureFeedbackMessages } from "./departure-feedback-messages";
 import { NavigationPrototype } from "./navigation-prototype";
 import { pendingDepartureInspectionReason } from "./pending-departure-inspection-messages";
 import { formatCreationStep } from "./products-creation-messages";
@@ -106,12 +115,16 @@ function seededRecord(fixture: StockDepartureFixture): ReceiptRecord | null {
 
 export function StockDeparturePreview({
   fixture,
+  focusedFeedback = false,
 }: {
   fixture: StockDepartureFixture;
+  focusedFeedback?: boolean;
 }) {
   const currentLocale = useLocale();
   const locale = isLocale(currentLocale) ? currentLocale : defaultLocale;
   const copy = stockDepartureMessages(locale);
+  const focused = focusedFeedback ? departureFeedbackMessages[locale] : null;
+  const uncertainty = focused?.uncertaintyTitle ?? copy.unconfirmed;
   const id = useId();
   const [open, setOpen] = useState(true);
   const [draft, setDraft] = useState(() =>
@@ -157,6 +170,23 @@ export function StockDeparturePreview({
     availableChannels.find(({ id }) => id === departureChannelId(record));
   const amount = (quantity: string, unit: CreationUnitId) =>
     `${formatCreationStep(quantity, locale)} ${unit === "piece" ? copy.pieceSymbol : (creationUnit(unit)?.symbol ?? unit)}`;
+  const result = record?.result;
+  const effect =
+    result?.type === "applied" ? amount(result.quantity, result.unit) : null;
+  const pendingReasons = result?.type === "pending" &&
+    !!result.reasons?.length && (
+      <ul className="list-disc ps-5">
+        {result.reasons.map((reason) => (
+          <li key={reason}>
+            {pendingDepartureInspectionReason(locale, reason)}
+          </li>
+        ))}
+      </ul>
+    );
+  const rejectedReason =
+    result?.type === "rejected" && result.reason === "location-unavailable"
+      ? copy.rejectedReason
+      : null;
 
   useEffect(() => {
     if (open && phase !== "form")
@@ -281,7 +311,7 @@ export function StockDeparturePreview({
               {resumable && !open && (
                 <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-gray-200 px-3 py-2 dark:border-gray-800">
                   <p role="status" className="font-semibold">
-                    {copy.unconfirmed}
+                    {uncertainty}
                   </p>
                   <Button
                     ref={recovery}
@@ -304,6 +334,7 @@ export function StockDeparturePreview({
             (resumable ? recovery.current : entry.current) ?? false
           }
           data-stock-departure-panel={phase}
+          data-stock-departure-feedback={focused ? phase : undefined}
           data-stock-departure-ready={
             open && phase === expected ? fixture : undefined
           }
@@ -415,61 +446,126 @@ export function StockDeparturePreview({
               ].map(([label, value]) => (
                 <div key={label} className="min-w-0">
                   <dt className="text-gray-600 dark:text-gray-400">{label}</dt>
-                  <dd className="font-medium whitespace-pre-wrap">{value}</dd>
+                  <dd
+                    className={
+                      focused
+                        ? "font-medium [overflow-wrap:anywhere] whitespace-pre-wrap"
+                        : "font-medium whitespace-pre-wrap"
+                    }
+                  >
+                    {value}
+                  </dd>
                 </div>
               ))}
             </dl>
           )}
           {phase === "submitting" && <p role="status">{copy.submitting}</p>}
-          {record?.result?.type === "applied" && (
-            <div role="status" className="space-y-1">
-              <p className="text-success-700 dark:text-success-400 font-semibold">
-                {copy.applied}
-              </p>
-              <p>
-                {copy.appliedQuantity}{" "}
-                <strong data-stock-departure-effect>
-                  {amount(record.result.quantity, record.result.unit)}
-                </strong>
-              </p>
-            </div>
-          )}
-          {record?.result?.type === "pending" && (
-            <div role="status" className="space-y-1">
-              <p className="font-semibold">{copy.pending}</p>
-              {!!record.result.reasons?.length && (
-                <ul className="list-disc ps-5">
-                  {record.result.reasons.map((reason) => (
-                    <li key={reason}>
-                      {pendingDepartureInspectionReason(locale, reason)}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          )}
-          {record?.result?.type === "rejected" && (
-            <div role="alert" className="space-y-1">
-              <p className="font-semibold">{copy.rejected}</p>
-              {record.result.reason === "location-unavailable" && (
-                <p>{copy.rejectedReason}</p>
-              )}
-            </div>
-          )}
+          {effect !== null &&
+            (focused ? (
+              <Alert
+                variant="success"
+                role="status"
+                className="gap-y-1 border-green-200 p-4"
+              >
+                <CheckIcon className="size-4" aria-hidden="true" />
+                <AlertTitle className="font-semibold">
+                  {copy.applied}
+                </AlertTitle>
+                <p className="col-start-2 flex flex-wrap items-baseline gap-x-3">
+                  {focused.stockEffectLabel}{" "}
+                  <strong
+                    className="text-xl tabular-nums"
+                    data-stock-departure-effect
+                  >
+                    {effect}
+                  </strong>
+                </p>
+              </Alert>
+            ) : (
+              <div role="status" className="space-y-1">
+                <p className="text-success-700 dark:text-success-400 font-semibold">
+                  {copy.applied}
+                </p>
+                <p>
+                  {copy.appliedQuantity}{" "}
+                  <strong data-stock-departure-effect>{effect}</strong>
+                </p>
+              </div>
+            ))}
+          {result?.type === "pending" &&
+            (focused ? (
+              <Alert
+                variant="warning"
+                role="status"
+                className="border-amber-200 p-4"
+              >
+                <ClockIcon className="size-4" aria-hidden="true" />
+                <div className="min-w-0 space-y-1">
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {focused.originalOutcomeLabel}
+                  </p>
+                  <AlertTitle className="font-semibold">
+                    {copy.pending}
+                  </AlertTitle>
+                  <AlertDescription className="text-gray-700 dark:text-gray-300">
+                    {focused.pendingOriginalNoEffect}
+                  </AlertDescription>
+                  {pendingReasons}
+                </div>
+              </Alert>
+            ) : (
+              <div role="status" className="space-y-1">
+                <p className="font-semibold">{copy.pending}</p>
+                {pendingReasons}
+              </div>
+            ))}
+          {result?.type === "rejected" &&
+            (focused ? (
+              <Alert
+                variant="destructive"
+                className="gap-y-1 border-red-200 p-4"
+              >
+                <OctagonAlertIcon className="size-4" aria-hidden="true" />
+                <AlertTitle className="font-semibold">
+                  {copy.rejected}
+                </AlertTitle>
+                {rejectedReason && (
+                  <AlertDescription className="col-start-2 text-gray-700 dark:text-gray-300">
+                    {rejectedReason}
+                  </AlertDescription>
+                )}
+              </Alert>
+            ) : (
+              <div role="alert" className="space-y-1">
+                <p className="font-semibold">{copy.rejected}</p>
+                {rejectedReason && <p>{rejectedReason}</p>}
+              </div>
+            ))}
           {resumable && (
             <>
-              <p role="status" className="font-semibold">
-                {copy.unconfirmed}
-              </p>
+              {focused ? (
+                <Alert role="status" className="p-4">
+                  <InfoCircleIcon className="size-4" aria-hidden="true" />
+                  <AlertTitle className="font-semibold">
+                    {uncertainty}
+                  </AlertTitle>
+                </Alert>
+              ) : (
+                <p role="status" className="font-semibold">
+                  {uncertainty}
+                </p>
+              )}
               <p className="text-gray-600 dark:text-gray-400">{copy.memory}</p>
               <Button
                 type="button"
                 variant="outline"
-                className="self-start"
+                className={
+                  focused ? "self-start max-sm:min-h-11" : "self-start"
+                }
                 data-stock-departure-retry
                 onClick={resume}
               >
-                {copy.retry}
+                {focused?.sameDepartureRetry ?? copy.retry}
               </Button>
             </>
           )}

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
-import { Alert, AlertTitle } from "@/components/ui/alert";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import {
   Dialog,
   DialogContent,
@@ -17,7 +17,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { CheckIcon, PlusIcon, XIcon } from "@/icons";
+import { CheckIcon, ClockIcon, InfoCircleIcon, PlusIcon, XIcon } from "@/icons";
 import { defaultLocale, isLocale } from "@/i18n/configuration";
 import {
   NavigationPrototype,
@@ -37,6 +37,7 @@ import {
 import type { InspectionRead } from "./pending-receipt-inspection-model";
 import { creationUnit, type CreationUnitId } from "./products-creation-model";
 import { formatCreationStep } from "./products-creation-messages";
+import { receiptFeedbackMessages } from "./receipt-feedback-messages";
 import {
   advanceReceiptFixture,
   finishReceiptRead,
@@ -94,12 +95,14 @@ export function StockReceiptPreview({
   fixture,
   stockLookup,
   dailyStock,
+  focusedFeedback = false,
   pendingInspection,
   movementsBrowsing,
 }: {
   fixture: ReceiptFixture;
   stockLookup?: ReceiptStockLookup;
   dailyStock?: "current" | "proposed";
+  focusedFeedback?: boolean;
   pendingInspection?: ReceiptPendingInspection;
   movementsBrowsing?: Omit<MovementsBrowsingNavigation, "render"> & {
     locationCount: "one" | "several";
@@ -113,6 +116,10 @@ export function StockReceiptPreview({
   const currentLocale = useLocale();
   const locale = isLocale(currentLocale) ? currentLocale : defaultLocale;
   const copy = receiptMessages[locale];
+  const feedbackCopy = receiptFeedbackMessages[locale];
+  const uncertainty = focusedFeedback
+    ? feedbackCopy.uncertaintyTitle
+    : copy.unconfirmed;
   const inspectionCopy = pendingInspection && pendingInspectionMessages(locale);
   const receiptReasons = pendingInspection?.reasons;
   const workspaceCopy = useTranslations("catalogue");
@@ -164,7 +171,8 @@ export function StockReceiptPreview({
     : undefined;
   const isRetained = !!record && record.command === retained?.command;
   const proposed = dailyStock === "proposed";
-  const lookupCopy = proposed ? lookupMessages(locale) : undefined;
+  const emphasizeResult = proposed || focusedFeedback;
+  const lookupCopy = emphasizeResult ? lookupMessages(locale) : undefined;
   const products = dailyStock
     ? catalogueProducts
     : shortcutProduct
@@ -310,7 +318,7 @@ export function StockReceiptPreview({
       data-receipt-summary
     >
       <div role="status" className="min-w-0 space-y-1">
-        <p className="font-semibold">{copy.unconfirmed}</p>
+        <p className="font-semibold">{uncertainty}</p>
         <p className="[overflow-wrap:anywhere] whitespace-pre-wrap">
           {record.command.product.name} · {locationName}
         </p>
@@ -354,6 +362,33 @@ export function StockReceiptPreview({
         {stockLookup.label}
       </Button>
     );
+
+  const originalLabel = inspectionCopy && (
+    <p
+      className="text-gray-600 dark:text-gray-400"
+      data-pending-inspection-original
+    >
+      {inspectionCopy.originalResult}
+    </p>
+  );
+  const pendingReasons = pendingResult && (
+    <>
+      {pendingResult.reason === "product-archived" && (
+        <p>
+          {focusedFeedback
+            ? pendingInspectionReason(locale, pendingResult.reason)
+            : copy.pendingReason}
+        </p>
+      )}
+      {!!pendingResult.reasons?.length && (
+        <ul className="list-disc space-y-1 ps-5">
+          {pendingResult.reasons.map((reason) => (
+            <li key={reason}>{pendingInspectionReason(locale, reason)}</li>
+          ))}
+        </ul>
+      )}
+    </>
+  );
 
   return (
     <div
@@ -467,6 +502,7 @@ export function StockReceiptPreview({
             );
           }}
           data-receipt-panel={phase}
+          data-receipt-feedback={focusedFeedback ? phase : undefined}
         >
           <SheetHeader className="pe-10">
             <SheetTitle
@@ -555,7 +591,7 @@ export function StockReceiptPreview({
               {phase === "submitting" && <p role="status">{copy.submitting}</p>}
               {phase === "applied" &&
                 record.result?.type === "applied" &&
-                (proposed ? (
+                (emphasizeResult ? (
                   <Alert
                     variant="success"
                     role="status"
@@ -591,29 +627,31 @@ export function StockReceiptPreview({
               {!proposed && viewStock}
               {pendingResult && (
                 <>
-                  <div role="status" className="space-y-1">
-                    {inspectionCopy && (
-                      <p
-                        className="text-gray-600 dark:text-gray-400"
-                        data-pending-inspection-original
-                      >
-                        {inspectionCopy.originalResult}
-                      </p>
-                    )}
-                    <p className="font-semibold">{copy.pending}</p>
-                    {pendingResult.reason === "product-archived" && (
-                      <p>{copy.pendingReason}</p>
-                    )}
-                    {!!pendingResult.reasons?.length && (
-                      <ul className="list-disc space-y-1 ps-5">
-                        {pendingResult.reasons.map((reason) => (
-                          <li key={reason}>
-                            {pendingInspectionReason(locale, reason)}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
+                  {focusedFeedback ? (
+                    <Alert
+                      variant="warning"
+                      role="status"
+                      className="border-amber-200 p-4"
+                    >
+                      <ClockIcon className="size-4" aria-hidden="true" />
+                      <div className="min-w-0 space-y-1">
+                        {originalLabel}
+                        <AlertTitle className="font-semibold">
+                          {copy.pending}
+                        </AlertTitle>
+                        <AlertDescription className="text-gray-700 dark:text-gray-300">
+                          {feedbackCopy.pendingOriginalNoEffect}
+                        </AlertDescription>
+                        {pendingReasons}
+                      </div>
+                    </Alert>
+                  ) : (
+                    <div role="status" className="space-y-1">
+                      {originalLabel}
+                      <p className="font-semibold">{copy.pending}</p>
+                      {pendingReasons}
+                    </div>
+                  )}
                   {pendingInspection && inspectionCopy && (
                     <Button
                       ref={inspectionTrigger}
@@ -657,17 +695,32 @@ export function StockReceiptPreview({
               )}
               {phase === "unconfirmed" && (
                 <>
-                  <p role="status" className="font-semibold">
-                    {copy.unconfirmed}
-                  </p>
+                  {focusedFeedback ? (
+                    <Alert role="status" className="p-4">
+                      <InfoCircleIcon className="size-4" aria-hidden="true" />
+                      <AlertTitle className="font-semibold">
+                        {uncertainty}
+                      </AlertTitle>
+                    </Alert>
+                  ) : (
+                    <p role="status" className="font-semibold">
+                      {uncertainty}
+                    </p>
+                  )}
                   <Button
                     type="button"
                     variant="outline"
-                    className="self-start"
+                    className={
+                      focusedFeedback
+                        ? "self-start max-sm:min-h-11"
+                        : "self-start"
+                    }
                     data-receipt-retry
                     onClick={resume}
                   >
-                    {copy.retry}
+                    {focusedFeedback
+                      ? feedbackCopy.sameReceiptRetry
+                      : copy.retry}
                   </Button>
                 </>
               )}
@@ -677,7 +730,7 @@ export function StockReceiptPreview({
           {phase === "applied" && read.phase !== "idle" && (
             <section
               className={
-                proposed
+                emphasizeResult
                   ? "space-y-2 rounded-lg border border-gray-200 p-4 dark:border-gray-800"
                   : "space-y-2 border-t border-gray-200 pt-4 dark:border-gray-800"
               }
@@ -699,7 +752,7 @@ export function StockReceiptPreview({
                 <p
                   role="status"
                   className={
-                    proposed
+                    emphasizeResult
                       ? "text-xl font-semibold tabular-nums"
                       : "text-base font-semibold"
                   }
@@ -722,6 +775,7 @@ export function StockReceiptPreview({
                   <Button
                     type="button"
                     variant="outline"
+                    className={focusedFeedback ? "max-sm:min-h-11" : undefined}
                     data-receipt-read-retry
                     onClick={() => {
                       balanceHeading.current?.focus();
@@ -736,7 +790,7 @@ export function StockReceiptPreview({
                       );
                     }}
                   >
-                    {copy.readRetry}
+                    {focusedFeedback ? feedbackCopy.readRetry : copy.readRetry}
                   </Button>
                 </>
               )}
