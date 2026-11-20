@@ -67,10 +67,11 @@ context: |
   UI language from browser headers. The landing uses Spanish at / and localized
   /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
   one year (365 days), with no account-level or cross-device preference implied.
-  Current assignment 2026-11-20: implement the simulated read-only Salida
-  inspector per define-pending-departure-inspection. The Pendientes checkpoint
-  is complete with 1,416 approved references. Obtain exact candidate approval
-  before promotion. Never commit. Sibling repositories remain read-only.
+  Current assignment 2026-11-20: prepare the Core and Inventory OpenSpec and
+  Storybook views in establish-frontend-technical-foundation/november-30-review.md.
+  Live commitments are a November 30 release requirement. Preserve the workflow's
+  1,456 approved references and obtain exact candidate approval before promotion.
+  Never commit. Sibling repositories remain read-only.
   Previous assignment 2026-11-17: user said "go ahead" to the simulated Storybook
   product creation preview. Follow define-product-creation/preview-plan.md and
   PC-001–010. Use synthetic outcomes and retain exact visual review. The user

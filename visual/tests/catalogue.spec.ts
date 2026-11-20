@@ -97,6 +97,12 @@ async function action(
     ).toBeVisible();
     return;
   }
+  if (name === "owner-journey-ready") {
+    await expect(
+      page.locator("[data-owner-journey-ready], [data-core-merchant-view]"),
+    ).toBeVisible();
+    return;
+  }
   if (name === "core-account-review-ready") {
     await expect(
       page.locator(

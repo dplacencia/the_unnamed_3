@@ -6188,6 +6188,171 @@
       "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
     },
     {
+      "id": "core-owner-journey-business-selection",
+      "title": "Owner journey · business-selection",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-owner-journey--business-selection",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-journey-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-owner-journey-new-business",
+      "title": "Owner journey · new-business",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-owner-journey--new-business",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-journey-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-owner-journey-first-visit",
+      "title": "Owner journey · first-visit",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-owner-journey--first-visit",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-journey-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-owner-journey-first-visit-en",
+      "title": "Owner journey · first-visit",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-owner-journey--first-visit",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-journey-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-owner-journey-first-visit-ca",
+      "title": "Owner journey · first-visit",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-owner-journey--first-visit",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-journey-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-owner-journey-first-visit-gl",
+      "title": "Owner journey · first-visit",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-owner-journey--first-visit",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-journey-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-owner-journey-first-visit-eu",
+      "title": "Owner journey · first-visit",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-owner-journey--first-visit",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-journey-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-owner-journey-ready-to-receive",
+      "title": "Owner journey · ready-to-receive",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-owner-journey--ready-to-receive",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-journey-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-owner-journey-recorded-stock",
+      "title": "Owner journey · recorded-stock",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-owner-journey--recorded-stock",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-journey-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-owner-journey-trial-paused",
+      "title": "Owner journey · trial-paused",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-owner-journey--trial-paused",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-journey-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-owner-journey-access-unavailable",
+      "title": "Owner journey · access-unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-owner-journey--access-unavailable",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "owner-journey-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
       "id": "core-merchant-workspace-signup-handoff",
       "title": "Merchant workspace · signup-handoff",
       "kind": "story",

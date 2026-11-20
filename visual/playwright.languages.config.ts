@@ -21,6 +21,7 @@ export default defineConfig({
     "core-hierarchy.spec.ts",
     "core-merchant-workspace.spec.ts",
     "core-account-security.spec.ts",
+    "owner-journey.spec.ts",
     "stock-departure.spec.ts",
     "pending-resolution.spec.ts",
     "stock-commitments.spec.ts",

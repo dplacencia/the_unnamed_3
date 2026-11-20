@@ -16,9 +16,16 @@ the linked records distinguish approved source decisions from newly recorded
 wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
-Current assignment — 2026-11-20: implement the [read-only Salida inspector preview](openspec/changes/define-pending-departure-inspection/proposal.md).
-Use simulated exact reads and preserve the approved visual references pending
-review. Never create a commit.
+Current assignment — 2026-11-20: prepare the
+[November 30 Core and Inventory review](openspec/changes/establish-frontend-technical-foundation/november-30-review.md)
+with OpenSpec and Storybook. The user requires live commitments for release.
+Keep the verified live contract gaps visible and obtain exact candidate approval
+before promoting visual references. Never create a commit. Sibling repositories
+are read-only.
+
+The [Salida inspector](openspec/changes/define-pending-departure-inspection/proposal.md)
+has 90 approved additions and replacements. The accepted registry contains 1,456
+references. The new Core and Inventory changes are pending independent review.
 
 The Pendientes browsing checkpoint is complete. User commits `b70eb76`
 and `bc83059` match both manifests. The tree was clean with 1,416 approved

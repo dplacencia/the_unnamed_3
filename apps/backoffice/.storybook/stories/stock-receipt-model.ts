@@ -220,12 +220,21 @@ export function addReceiptBalance(
   current: string | undefined,
   delta: string,
 ): string | null {
+  if (delta.startsWith("-"))
+    throw new Error("Invalid fixture receipt quantity");
+  return applyRecordedStockDelta(current, delta);
+}
+
+export function applyRecordedStockDelta(
+  current: string | undefined,
+  delta: string,
+): string | null {
   const balance = readDecimal(current ?? "0", 6);
   const amount = readDecimal(delta, 6);
   if (
     "error" in balance ||
     "error" in amount ||
-    amount.value.coefficient <= zero
+    amount.value.coefficient === zero
   )
     throw new Error("Invalid fixture stock quantity");
   const scale = Math.max(balance.value.scale, amount.value.scale);

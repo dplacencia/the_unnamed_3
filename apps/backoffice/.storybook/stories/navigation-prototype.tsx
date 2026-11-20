@@ -95,6 +95,11 @@ export interface NavigationPrototypeProps {
   initialPage: Destination;
   permissionMode: PermissionMode;
   locationCount: "one" | "several";
+  locationOptions?: readonly { id: string; label: string }[];
+  hiddenDestinations?: readonly Destination[];
+  workspaceScope?: string;
+  workspaceContext?: (navigate: (page: Destination) => void) => ReactNode;
+  homeContent?: (navigate: (page: Destination) => void) => ReactNode;
   productsContent?: ReactNode;
   businessSettingsContent?: ReactNode;
   modulesContent?: ReactNode;
@@ -136,6 +141,11 @@ function Workspace({
   initialPage,
   permissionMode,
   locationCount,
+  locationOptions,
+  hiddenDestinations,
+  workspaceScope,
+  workspaceContext,
+  homeContent,
   productsContent,
   businessSettingsContent,
   modulesContent,
@@ -161,7 +171,7 @@ function Workspace({
   } = useSidebar();
   const showLabels = open || isHovered || isMobile;
   // This namespace belongs only to this simulated Storybook fixture.
-  const storageKey = `irin-navigation-preview:${permissionMode}:${locationCount}${stockLookup ? `:${stockLookup.scope}` : ""}${movementsBrowsing ? ":pending-movements:demo-merchant" : ""}`;
+  const storageKey = `irin-navigation-preview:${permissionMode}:${locationCount}${stockLookup ? `:${stockLookup.scope}` : ""}${movementsBrowsing ? ":pending-movements:demo-merchant" : ""}${workspaceScope ? `:${workspaceScope}` : ""}`;
   const [memoryUnavailable, setMemoryUnavailable] = useState(false);
   const [state, dispatch] = useReducer(navigate, initialPage, (page) => {
     let choices: Choices = {};
@@ -199,15 +209,25 @@ function Workspace({
   }, [incomingStockEntry]);
   const [mode, setMode] = useState(permissionMode);
   const access = accessFor(mode);
-  const permitted = access.destinations ?? [];
+  const permitted = (access.destinations ?? []).filter(
+    (page) => !hiddenDestinations?.includes(page),
+  );
   const hasInventory = permitted.some((page) => inventoryPages.includes(page));
   const canView = access.status === "ready" && permitted.includes(state.page);
+  const pageContent: Partial<Record<Destination, ReactNode>> = {
+    products: productsContent,
+    "business-settings": businessSettingsContent,
+    modules: modulesContent,
+    "inventory-settings": inventorySettingsContent,
+    movements: movementsBrowsing ? undefined : movementsContent,
+  };
   const locationPage = locationPages.includes(state.page as LocationPage)
     ? (state.page as LocationPage)
     : undefined;
-  const hasLocation = canView && !!locationPage;
   const locations =
-    locationCount === "one" ? ["sales-floor"] : ["sales-floor", "stockroom"];
+    locationOptions?.map(({ id }) => id) ??
+    (locationCount === "one" ? ["sales-floor"] : ["sales-floor", "stockroom"]);
+  const hasLocation = canView && !!locationPage && locations.length > 0;
   const movementsLocations = locationPage === "movements" && movementsBrowsing;
   const available = movementsLocations ? [...locations, "all"] : locations;
   const chosen = locationPage
@@ -218,9 +238,10 @@ function Workspace({
     ? resolveLocation(chosen, chosen === undefined ? locations : available)
     : undefined;
   const locationName = (id: string) =>
-    id === "all" && movementsBrowsing
+    locationOptions?.find((option) => option.id === id)?.label ??
+    (id === "all" && movementsBrowsing
       ? movementsBrowsing.allLocationsLabel
-      : t(id === "sales-floor" ? "navSalesFloor" : "navStockroom");
+      : t(id === "sales-floor" ? "navSalesFloor" : "navStockroom"));
   function go(page: Destination) {
     const proceed = () => {
       dispatch({ type: "page", page });
@@ -491,7 +512,7 @@ function Workspace({
                 "max-sm:gap-2",
             )}
           >
-            {canView && locationPage && (
+            {hasLocation && (
               <div
                 className="flex min-w-0 flex-none items-center gap-3"
                 data-navigation-scope={selected ?? "unselected"}
@@ -558,6 +579,7 @@ function Workspace({
           </div>
         </header>
         <div className="w-full min-w-0 space-y-3 p-3 md:p-4">
+          {workspaceContext?.(go)}
           {memoryUnavailable && (
             <p
               role="status"
@@ -579,36 +601,25 @@ function Workspace({
               className="text-sm text-gray-500 dark:text-gray-400"
               data-navigation-content
             >
-              {state.page === "business-settings" && businessSettingsContent
-                ? businessSettingsContent
-                : state.page === "modules" && modulesContent
-                  ? modulesContent
-                  : state.page === "inventory-settings" &&
-                      inventorySettingsContent
-                    ? inventorySettingsContent
-                    : state.page === "products" && productsContent
-                      ? productsContent
-                      : state.page === "movements" && movementsBrowsing
-                        ? movementsBrowsing.render(
-                            selected
-                              ? { id: selected, label: locationName(selected) }
-                              : null,
-                          )
-                        : state.page === "movements" && movementsContent
-                          ? movementsContent
-                          : state.page === "stock" && stockLookup
-                            ? stockLookup.render(
-                                selected
-                                  ? {
-                                      id: selected,
-                                      label: locationName(selected),
-                                    }
-                                  : null,
-                                state.stockEntry?.productId,
-                              )
-                            : locationPage && !selected
-                              ? t("navChooseLocationHint")
-                              : t("navContentHint")}
+              {state.page === "home" && homeContent
+                ? homeContent(go)
+                : pageContent[state.page] ||
+                  (state.page === "movements" && movementsBrowsing
+                    ? movementsBrowsing.render(
+                        selected
+                          ? { id: selected, label: locationName(selected) }
+                          : null,
+                      )
+                    : state.page === "stock" && stockLookup
+                      ? stockLookup.render(
+                          selected
+                            ? { id: selected, label: locationName(selected) }
+                            : null,
+                          state.stockEntry?.productId,
+                        )
+                      : locationPage && !selected
+                        ? t("navChooseLocationHint")
+                        : t("navContentHint"))}
             </div>
           )}
         </div>
