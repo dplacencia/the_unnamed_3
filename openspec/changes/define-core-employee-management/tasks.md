@@ -5,7 +5,7 @@
 - [x] 1.3 Add the localized Empleados workspace, credential actions and Team entry.
 - [x] 1.4 Verify the fixture interactions, access restrictions and responsive states.
 - [x] 1.5 Capture employee and affected Team views for exact visual review.
-- [ ] 1.6 Review and approve the exact visual candidates before promoting references.
+- [x] 1.6 Review and approve the exact visual candidates before promoting references.
 
 ## 2. Live boundary
 

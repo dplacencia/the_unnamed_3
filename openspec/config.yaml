@@ -69,8 +69,8 @@ context: |
   one year (365 days), with no account-level or cross-device preference implied.
   Current assignment 2026-11-20: prepare the Core and Inventory OpenSpec and
   Storybook views in establish-frontend-technical-foundation/november-30-review.md.
-  Live commitments are a November 30 release requirement. Preserve the workflow's
-  1,456 approved references and obtain exact candidate approval before promotion.
+  Live commitments are a November 30 release requirement. The workflow has
+  2,400 approved references. Obtain exact candidate approval before promotion.
   Never commit. Sibling repositories remain read-only.
   Previous assignment 2026-11-17: user said "go ahead" to the simulated Storybook
   product creation preview. Follow define-product-creation/preview-plan.md and

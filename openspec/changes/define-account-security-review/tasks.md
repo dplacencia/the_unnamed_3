@@ -4,7 +4,7 @@
 - [x] 1.2 Add independent trial access states and emit exact supplied active trial facts.
 - [x] 1.3 Add email-account recovery results and fresh-verification merchant MFA edits.
 - [x] 1.4 Verify the application entry, alternate recovery statuses, and merchant MFA outcomes in Storybook.
-- [ ] 1.5 Include the relevant examples in visual review and obtain exact candidate approval.
+- [x] 1.5 Include the relevant examples in visual review and obtain exact candidate approval.
 
 ## 2. Integration
 

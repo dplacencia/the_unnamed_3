@@ -4,7 +4,7 @@
 - [x] 1.2 Compose the business picker, normal navigation and first-use home.
 - [x] 1.3 Verify exact setup, stock effects and business isolation in the connected preview.
 - [x] 1.4 Capture the exact new visual candidates.
-- [ ] 1.5 Review and approve the gallery before promoting references.
+- [x] 1.5 Review and approve the gallery before promoting references.
 
 ## 2. Live delivery
 

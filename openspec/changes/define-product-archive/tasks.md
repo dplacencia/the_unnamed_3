@@ -2,7 +2,7 @@
 
 - [x] 1.1 Define the archive interaction, exact identity and effect on active assignments.
 - [x] 1.2 Add and exercise the responsive Storybook archive cases.
-- [ ] 1.3 Review the candidates and approve the exact images before promoting references.
+- [x] 1.3 Review the candidates and approve the exact images before promoting references.
 
 ## 2. Live prerequisite
 

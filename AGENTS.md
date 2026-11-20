@@ -23,9 +23,9 @@ Keep the verified live contract gaps visible and obtain exact candidate approval
 before promoting visual references. Never create a commit. Sibling repositories
 are read-only.
 
-The [Salida inspector](openspec/changes/define-pending-departure-inspection/proposal.md)
-has 90 approved additions and replacements. The accepted registry contains 1,456
-references. The new Core and Inventory changes are pending independent review.
+The user approved the [944-image November 30 gallery](openspec/changes/establish-frontend-technical-foundation/november-30-review.md#visual-approval).
+The accepted registry contains 2,400 references, including the 1,456 carried
+forward from the Salida inspector checkpoint.
 
 The Pendientes browsing checkpoint is complete. User commits `b70eb76`
 and `bc83059` match both manifests. The tree was clean with 1,416 approved

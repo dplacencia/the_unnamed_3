@@ -8,14 +8,21 @@ transfers and exclude a POS app and Integrations module from this journey.
 The Storybook views and OpenSpec changes below cover the review. The browser
 contracts and verified live flows remain release work.
 
-The [current 944-image gallery](http://localhost:9324/runs/2026-11-20T16-30-47.589Z/review.html)
-covers 148 Storybook views across the four approved profiles. All five
-languages are represented. The 328 new captures cover the additions from the
-coverage audit below. All 616 captures from the
+## Visual approval
+
+On November 20, 2026, the user replied “I approve them” to the
+[944-image gallery for run `2026-11-20T16-30-47.589Z`](http://localhost:9324/runs/2026-11-20T16-30-47.589Z/review.html).
+All 944 candidates were promoted. Their hashes and all 1,456 earlier reference
+hashes verify against the registry, which now contains 2,400 references.
+
+The gallery covers 148 Storybook views across the four approved profiles, with
+all five languages represented. The 328 new captures cover the additions from
+the coverage audit below. All 616 captures from the
 [previous Employee gallery](http://localhost:9324/runs/2026-11-20T13-51-23.289Z/review.html)
-match byte for byte in the current run. Visual approval is pending for the
-current gallery. All 1,456 earlier approved reference hashes verify against
-the registry.
+match byte for byte in the approved run.
+
+A fresh comparison passed all 944 approved cases on the same source and pinned
+Chromium renderer. [Playwright results](http://localhost:9324/runs/2026-11-20T18-55-37.506Z/playwright-report/index.html)
 
 `pnpm check` passed with 248 code tests, strict OpenSpec validation passed all
 26 changes, and pinned Chromium passed 162 interaction tests for the connected
