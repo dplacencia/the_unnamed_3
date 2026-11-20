@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { useEffect, useId, useRef } from "react";
+import { useEffect, useEffectEvent, useId, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { defaultLocale, isLocale } from "@/i18n/configuration";
 import {
@@ -10,6 +10,7 @@ import {
 } from "./pending-receipt-inspection-messages";
 import {
   usePendingReceiptInspection,
+  type InspectionOutcome,
   type InspectionRead,
 } from "./pending-receipt-inspection-model";
 import { formatCreationStep } from "./products-creation-messages";
@@ -20,12 +21,18 @@ type PendingReceiptInspectionContentProps = {
   lineReference: string;
   read: InspectionRead;
   onBack: () => void;
+  backLabel?: string;
+  locationLabels?: Record<string, string>;
+  onOutcome?: (outcome: InspectionOutcome) => void;
 };
 
 export function PendingReceiptInspectionContent({
   lineReference,
   read,
   onBack,
+  backLabel,
+  locationLabels,
+  onOutcome,
 }: PendingReceiptInspectionContentProps) {
   const currentLocale = useLocale();
   const locale = isLocale(currentLocale) ? currentLocale : defaultLocale;
@@ -33,10 +40,16 @@ export function PendingReceiptInspectionContent({
   const { state, refresh } = usePendingReceiptInspection(lineReference, read);
   const titleId = useId();
   const heading = useRef<HTMLHeadingElement>(null);
+  const reportOutcome = useEffectEvent((outcome: InspectionOutcome) => {
+    onOutcome?.(outcome);
+  });
 
   useEffect(() => {
     heading.current?.focus();
   }, []);
+  useEffect(() => {
+    if (state.kind !== "loading") reportOutcome(state);
+  }, [state]);
 
   const unitSymbol = (unit: CreationUnitId) =>
     unit === "piece" ? copy.pieceSymbol : (creationUnit(unit)?.symbol ?? unit);
@@ -49,14 +62,17 @@ export function PendingReceiptInspectionContent({
 
   const detail = state.kind === "found" ? state.detail : null;
   const result = detail?.outcome;
-  const locationLabels = receiptMessages[locale].locationLabels;
+  const defaultLabels = receiptMessages[locale].locationLabels;
   const location = detail?.location;
   const locationName =
-    location === "sales-floor"
-      ? locationLabels.salesFloor
-      : location === "stockroom"
-        ? locationLabels.stockroom
-        : location;
+    location == null
+      ? location
+      : (locationLabels?.[location] ??
+        (location === "sales-floor"
+          ? defaultLabels.salesFloor
+          : location === "stockroom"
+            ? defaultLabels.stockroom
+            : location));
   const feedback =
     state.kind === "found" ? copy[state.detail.outcome.kind] : copy[state.kind];
   const facts = detail && [
@@ -177,7 +193,7 @@ export function PendingReceiptInspectionContent({
           data-pending-inspection-back
           onClick={onBack}
         >
-          {copy.back}
+          {backLabel ?? copy.back}
         </Button>
         {state.kind === "error" && (
           <Button

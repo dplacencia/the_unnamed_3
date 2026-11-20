@@ -20,11 +20,9 @@ the exact approval and identities. Require new image approval for replacements.
 The
 [visual review workflow](../../openspec/changes/define-visual-review-workflow/proposal.md)
 is implemented; preserve its review rules and the technical sources as constraints.
-Current assignment — 2026-11-19: the user authorized the [simulated inspection
-of a pending receipt](../../openspec/changes/define-pending-receipt-inspection/preview-plan.md)
-for one known line in Movimientos. Follow PRI-001–008 and the exact visual
-review workflow. The [stock lookup checkpoint](../../openspec/changes/define-stock-lookup/preview-plan.md#commit-preparation--2026-11-18)
-is verified. Never create a commit.
+Current assignment — 2026-11-20: prepare the [Pendientes browsing checkpoint](../../openspec/changes/define-pending-movements-browsing/preview-plan.md#commit-preparation--2026-11-20).
+Stage implementation first and verify the user's commit before staging the
+approved reference batch. Never create a commit.
 
 Previous assignment — 2026-11-17: follow the simulated
 [product creation preview plan](../../openspec/changes/define-product-creation/preview-plan.md)

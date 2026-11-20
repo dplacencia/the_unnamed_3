@@ -20,6 +20,7 @@ import { PlusIcon, XIcon } from "@/icons";
 import { defaultLocale, isLocale } from "@/i18n/configuration";
 import {
   NavigationPrototype,
+  type MovementsBrowsingNavigation,
   type StockLookupNavigation,
 } from "./navigation-prototype";
 import type { StockEntry } from "./navigation-model";
@@ -88,10 +89,19 @@ export function StockReceiptPreview({
   fixture,
   stockLookup,
   pendingInspection,
+  movementsBrowsing,
 }: {
   fixture: ReceiptFixture;
   stockLookup?: ReceiptStockLookup;
   pendingInspection?: ReceiptPendingInspection;
+  movementsBrowsing?: Omit<MovementsBrowsingNavigation, "render"> & {
+    locationCount: "one" | "several";
+    render: (
+      location: Parameters<MovementsBrowsingNavigation["render"]>[0],
+      receiptAction: React.ReactNode,
+      receiptSummary: React.ReactNode,
+    ) => React.ReactNode;
+  };
 }) {
   const currentLocale = useLocale();
   const locale = isLocale(currentLocale) ? currentLocale : defaultLocale;
@@ -99,12 +109,13 @@ export function StockReceiptPreview({
   const inspectionCopy = pendingInspection && pendingInspectionMessages(locale);
   const receiptReasons = pendingInspection?.reasons;
   const workspaceCopy = useTranslations("catalogue");
-  const locationLabels = stockLookup
-    ? {
-        salesFloor: workspaceCopy("navSalesFloor"),
-        stockroom: workspaceCopy("navStockroom"),
-      }
-    : copy.locationLabels;
+  const locationLabels =
+    stockLookup || movementsBrowsing
+      ? {
+          salesFloor: workspaceCopy("navSalesFloor"),
+          stockroom: workspaceCopy("navStockroom"),
+        }
+      : copy.locationLabels;
   const locations = [
     { id: "sales-floor", name: locationLabels.salesFloor },
     { id: "stockroom", name: locationLabels.stockroom },
@@ -265,43 +276,47 @@ export function StockReceiptPreview({
       {copy.memory}
     </p>
   );
-  const movementsContent = (
-    <div className="space-y-3 text-gray-800 dark:text-gray-100">
+  const receiptAction = (
+    <Button
+      type="button"
+      size="sm"
+      className="max-sm:min-h-11"
+      data-receipt-open
+      disabled={canResume}
+      onClick={() => openDraft()}
+    >
+      <PlusIcon className="size-4" aria-hidden="true" />
+      {copy.open}
+    </Button>
+  );
+  const receiptSummary = canResume && !open && (
+    <div
+      className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-gray-200 px-3 py-2 dark:border-gray-800"
+      data-receipt-summary
+    >
+      <div role="status" className="min-w-0 space-y-1">
+        <p className="font-semibold">{copy.unconfirmed}</p>
+        <p className="[overflow-wrap:anywhere] whitespace-pre-wrap">
+          {record.command.product.name} · {locationName}
+        </p>
+        {memoryNotice}
+      </div>
       <Button
         type="button"
+        variant="outline"
         size="sm"
         className="max-sm:min-h-11"
-        data-receipt-open
-        disabled={canResume}
-        onClick={() => openDraft()}
+        data-receipt-resume
+        onClick={resume}
       >
-        <PlusIcon className="size-4" aria-hidden="true" />
-        {copy.open}
+        {copy.resume}
       </Button>
-      {canResume && !open && (
-        <div
-          className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-gray-200 px-3 py-2 dark:border-gray-800"
-          data-receipt-summary
-        >
-          <div role="status" className="min-w-0 space-y-1">
-            <p className="font-semibold">{copy.unconfirmed}</p>
-            <p className="[overflow-wrap:anywhere] whitespace-pre-wrap">
-              {record.command.product.name} · {locationName}
-            </p>
-            {memoryNotice}
-          </div>
-          <Button
-            type="button"
-            variant="outline"
-            size="sm"
-            className="max-sm:min-h-11"
-            data-receipt-resume
-            onClick={resume}
-          >
-            {copy.resume}
-          </Button>
-        </div>
-      )}
+    </div>
+  );
+  const movementsContent = (
+    <div className="space-y-3 text-gray-800 dark:text-gray-100">
+      {receiptAction}
+      {receiptSummary}
     </div>
   );
 
@@ -338,8 +353,19 @@ export function StockReceiptPreview({
           <NavigationPrototype
             initialPage="movements"
             permissionMode="ready"
-            locationCount="several"
+            locationCount={movementsBrowsing?.locationCount ?? "several"}
             movementsContent={movementsContent}
+            movementsBrowsing={
+              movementsBrowsing && {
+                ...movementsBrowsing,
+                render: (location) =>
+                  movementsBrowsing.render(
+                    location,
+                    receiptAction,
+                    receiptSummary,
+                  ),
+              }
+            }
             stockLookup={
               stockLookup && {
                 ...stockLookup,

@@ -105,6 +105,7 @@ export function resolveLocation(
 export function restoreChoices(
   raw: string | null,
   entryType = "reload",
+  allowAllMovementsLocations = false,
 ): Choices {
   if (entryType !== "reload") return {};
   try {
@@ -113,7 +114,11 @@ export function restoreChoices(
     return Object.fromEntries(
       locationPages.flatMap((page) => {
         const choice = (value as Record<string, unknown>)[page];
-        return choice === "stockroom" || choice === "sales-floor"
+        return choice === "stockroom" ||
+          choice === "sales-floor" ||
+          (allowAllMovementsLocations &&
+            page === "movements" &&
+            choice === "all")
           ? [[page, choice]]
           : [];
       }),

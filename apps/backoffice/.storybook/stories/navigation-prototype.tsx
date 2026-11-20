@@ -97,10 +97,17 @@ export interface NavigationPrototypeProps {
   locationCount: "one" | "several";
   productsContent?: ReactNode;
   movementsContent?: ReactNode;
+  movementsBrowsing?: MovementsBrowsingNavigation;
   stockLookup?: StockLookupNavigation;
   productsToolbar?: ReactNode;
   beforeNavigate?: (proceed: () => void) => void;
 }
+
+export type MovementsBrowsingNavigation = {
+  allLocationsLabel: string;
+  initialLocation?: "all" | "sales-floor" | "stockroom";
+  render: (location: { id: string; label: string } | null) => ReactNode;
+};
 
 export type StockLookupNavigation = {
   scope: string;
@@ -128,6 +135,7 @@ function Workspace({
   locationCount,
   productsContent,
   movementsContent,
+  movementsBrowsing,
   stockLookup,
   productsToolbar,
   beforeNavigate,
@@ -147,7 +155,7 @@ function Workspace({
   } = useSidebar();
   const showLabels = open || isHovered || isMobile;
   // This namespace belongs only to this simulated Storybook fixture.
-  const storageKey = `irin-navigation-preview:${permissionMode}:${locationCount}${stockLookup ? `:${stockLookup.scope}` : ""}`;
+  const storageKey = `irin-navigation-preview:${permissionMode}:${locationCount}${stockLookup ? `:${stockLookup.scope}` : ""}${movementsBrowsing ? ":pending-movements:demo-merchant" : ""}`;
   const [memoryUnavailable, setMemoryUnavailable] = useState(false);
   const [state, dispatch] = useReducer(navigate, initialPage, (page) => {
     let choices: Choices = {};
@@ -160,11 +168,14 @@ function Workspace({
       choices = restoreChoices(
         sessionStorage.getItem(storageKey),
         entry?.type ?? "navigate",
+        !!movementsBrowsing,
       );
       if (entry?.type !== "reload") sessionStorage.removeItem(storageKey);
     } catch {
       /* Current visit still works without storage. */
     }
+    if (movementsBrowsing?.initialLocation)
+      choices.movements = movementsBrowsing.initialLocation;
     return { ...initialNavigation(page), choices };
   });
   const incomingStockEntry = stockLookup?.entry;
@@ -189,17 +200,21 @@ function Workspace({
     ? (state.page as LocationPage)
     : undefined;
   const hasLocation = canView && !!locationPage;
-  const available =
+  const locations =
     locationCount === "one" ? ["sales-floor"] : ["sales-floor", "stockroom"];
+  const movementsLocations = locationPage === "movements" && movementsBrowsing;
+  const available = movementsLocations ? [...locations, "all"] : locations;
+  const chosen = locationPage
+    ? ((locationPage === "stock" ? state.stockEntry?.locationId : undefined) ??
+      state.choices[locationPage])
+    : undefined;
   const selected = locationPage
-    ? resolveLocation(
-        (locationPage === "stock" ? state.stockEntry?.locationId : undefined) ??
-          state.choices[locationPage],
-        available,
-      )
+    ? resolveLocation(chosen, chosen === undefined ? locations : available)
     : undefined;
   const locationName = (id: string) =>
-    t(id === "sales-floor" ? "navSalesFloor" : "navStockroom");
+    id === "all" && movementsBrowsing
+      ? movementsBrowsing.allLocationsLabel
+      : t(id === "sales-floor" ? "navSalesFloor" : "navStockroom");
   function go(page: Destination) {
     const proceed = () => {
       dispatch({ type: "page", page });
@@ -560,18 +575,24 @@ function Workspace({
             >
               {state.page === "products" && productsContent
                 ? productsContent
-                : state.page === "movements" && movementsContent
-                  ? movementsContent
-                  : state.page === "stock" && stockLookup
-                    ? stockLookup.render(
-                        selected
-                          ? { id: selected, label: locationName(selected) }
-                          : null,
-                        state.stockEntry?.productId,
-                      )
-                    : locationPage && !selected
-                      ? t("navChooseLocationHint")
-                      : t("navContentHint")}
+                : state.page === "movements" && movementsBrowsing
+                  ? movementsBrowsing.render(
+                      selected
+                        ? { id: selected, label: locationName(selected) }
+                        : null,
+                    )
+                  : state.page === "movements" && movementsContent
+                    ? movementsContent
+                    : state.page === "stock" && stockLookup
+                      ? stockLookup.render(
+                          selected
+                            ? { id: selected, label: locationName(selected) }
+                            : null,
+                          state.stockEntry?.productId,
+                        )
+                      : locationPage && !selected
+                        ? t("navChooseLocationHint")
+                        : t("navContentHint")}
             </div>
           )}
         </div>

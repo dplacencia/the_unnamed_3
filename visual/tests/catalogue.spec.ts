@@ -81,6 +81,14 @@ async function action(
     return stockLookupAction(page, name, (entry.locale ?? "es") as Locale);
   if (name?.startsWith("pending-receipt-inspection-"))
     return pendingReceiptInspectionAction(page, name);
+  const pendingBrowsingPrefix = "pending-movements-browsing-";
+  if (name?.startsWith(pendingBrowsingPrefix)) {
+    const preset = name.slice(pendingBrowsingPrefix.length);
+    await expect(
+      page.locator(`[data-pending-browsing-ready="${preset}"]`),
+    ).toBeVisible();
+    return;
+  }
   if (name?.startsWith("products-"))
     return productsAction(page, name, (entry.locale ?? "es") as Locale);
   switch (name) {

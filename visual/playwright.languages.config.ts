@@ -17,6 +17,7 @@ export default defineConfig({
     "stock-receipt.spec.ts",
     "stock-lookup.spec.ts",
     "pending-receipt-inspection.spec.ts",
+    "pending-movements-browsing.spec.ts",
   ],
   use: { ...base.use, baseURL: "http://localhost:6006" },
   projects: [

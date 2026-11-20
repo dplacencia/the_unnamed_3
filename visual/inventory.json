@@ -3511,6 +3511,262 @@
       ],
       "limitation": "Synthetic confirmed receipt and exact-line reads. Candidates require specific visual approval.",
       "locale": "eu"
+    },
+    {
+      "id": "pending-movements-browsing-movements-entry",
+      "title": "Movimientos entry before opening pending lines",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--movements-entry",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-movements-entry"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-choose-location",
+      "title": "Choose a location for pending movements",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--choose-location",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-choose-location"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-initial-loading",
+      "title": "Initial pending movements read",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--initial-loading",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-initial-loading"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-one-location",
+      "title": "Pending receipts and departures at one location",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--one-location",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-one-location"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-all-locations",
+      "title": "Pending movements at all accessible locations with expanded reasons",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--all-locations",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-all-locations"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-second-page",
+      "title": "Second page of pending movements with an estimated total",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--second-page",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-second-page"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-previous-results-loading",
+      "title": "Previous pending movements during page navigation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--previous-results-loading",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-previous-results-loading"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-technical-failure",
+      "title": "Pending movements paging failure with previous results",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--technical-failure",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-technical-failure"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-rejected-continuation",
+      "title": "Pending movements continuation rejected",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--rejected-continuation",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-rejected-continuation"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-empty-continuation",
+      "title": "Requested pending movements page has no rows",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--empty-continuation",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-empty-continuation"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-empty-first-page",
+      "title": "No pending movements in the read scope",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--empty-first-page",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-empty-first-page"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-access-denied",
+      "title": "Pendientes access denied",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--access-denied",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-access-denied"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-receipt-inspection",
+      "title": "Inspect a listed pending receipt",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--receipt-inspection",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-receipt-inspection"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-empty-after-inspection",
+      "title": "Current pending movements page is empty on return from inspection",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--empty-after-inspection",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-empty-after-inspection"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval."
+    },
+    {
+      "id": "pending-movements-browsing-en",
+      "title": "Pending movements in English",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--all-locations",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-all-locations"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval.",
+      "locale": "en"
+    },
+    {
+      "id": "pending-movements-browsing-ca",
+      "title": "Pending movements in Catalan",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--all-locations",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-all-locations"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval.",
+      "locale": "ca"
+    },
+    {
+      "id": "pending-movements-browsing-gl",
+      "title": "Pending movements in Galician",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--all-locations",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-all-locations"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval.",
+      "locale": "gl"
+    },
+    {
+      "id": "pending-movements-browsing-eu",
+      "title": "Pending movements in Basque",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-pending-movements-browsing--all-locations",
+      "cases": [
+        {
+          "id": "default",
+          "action": "pending-movements-browsing-all-locations"
+        }
+      ],
+      "limitation": "Synthetic list and exact receipt reads. Candidates require specific visual approval.",
+      "locale": "eu"
     }
   ]
 }

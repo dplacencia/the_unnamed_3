@@ -16,11 +16,14 @@ the linked records distinguish approved source decisions from newly recorded
 wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
-Current assignment — 2026-11-19: the user authorized the [simulated inspection
-of a pending receipt](openspec/changes/define-pending-receipt-inspection/preview-plan.md)
-for one specifically identified, confirmed line in Movimientos. PRI-001–008
-record the approved design. Use read-only sibling sources and exact visual
-review. Never create a commit.
+Current assignment — 2026-11-20: prepare the two user-run commits for the
+[Pendientes browsing checkpoint](openspec/changes/define-pending-movements-browsing/preview-plan.md#commit-preparation--2026-11-20).
+Stage the 25 implementation paths first. Verify the user's first commit
+before staging the 73 approved-reference paths. Never create a commit.
+
+The pending receipt inspection checkpoint is complete. User commits
+`a43e956` and `50ed9fd` match the 25- and 53-file manifests. The tree and
+index were clean with 1,344 accepted references. [Inspection checkpoint](openspec/changes/define-pending-receipt-inspection/preview-plan.md#commit-preparation--2026-11-19)
 
 The Consultar existencias checkpoint is complete. User commits `d9952de` and
 `8cf7743` match the 25- and 65-file manifests. The tree and index were clean

@@ -111,3 +111,8 @@ The ignored `.cache/pending-receipt-inspection-checkpoint.json` records the
 approved source and the paths, blob IDs and modes for both batches. Verify
 both user commits and the clean checkpoint before starting Pendientes
 discovery in Movimientos.
+
+The user commits `a43e956` and `50ed9fd` matched both manifests, including
+their parent order, blobs and modes. The tree and index were clean with
+1,344 accepted references. The local proof is
+`.cache/pending-receipt-inspection-checkpoint-complete.json`.

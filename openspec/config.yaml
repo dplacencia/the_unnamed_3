@@ -67,11 +67,10 @@ context: |
   UI language from browser headers. The landing uses Spanish at / and localized
   /en, /ca, /gl and /eu paths. The language cookie retains explicit choices for
   one year (365 days), with no account-level or cross-device preference implied.
-  Current assignment 2026-11-19: simulate read-only inspection of one confirmed
-  pending receipt line in Movimientos following PRI-001–008 and the approved
-  scope in define-pending-receipt-inspection/preview-plan.md. Read sibling
-  repositories without changes and follow exact visual review. The two stock
-  lookup commits are verified with 1,292 accepted references. Never commit.
+  Current assignment 2026-11-20: prepare the two user-run Pendientes commits per
+  define-pending-movements-browsing/preview-plan.md. Verify the implementation
+  commit before staging the approved references. Never commit. Sibling
+  repositories remain read-only.
   Previous assignment 2026-11-17: user said "go ahead" to the simulated Storybook
   product creation preview. Follow define-product-creation/preview-plan.md and
   PC-001–010. Use synthetic outcomes and retain exact visual review. The user
