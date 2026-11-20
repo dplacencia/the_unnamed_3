@@ -22867,7 +22867,7 @@
       "profileHash": "ea648aa374a568964f5f48b551743ad150079d392e12610fe0289cbce2726e03"
     },
     "pending-movements-browsing-access-denied-default--desktop-dark": {
-      "sha256": "318c666581f8fbc4f153227ee1980b47fa3d26c652f31d0b2c1687723f45f813",
+      "sha256": "2f655391a58e071a590da74e076ca278d469084d1d2bff1f63f8deda6d2e5c08",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -22878,9 +22878,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "33e25f9284ea1305fcdbc11252ec2ab237971dae10ccb10609083fc965ff3c43"
     },
     "pending-movements-browsing-access-denied-default--mobile": {
@@ -22901,7 +22901,7 @@
       "profileHash": "979b41f6b7abedcc9857ae3699018647ebdc04c3f7dbf30213890adbb8e24f1d"
     },
     "pending-movements-browsing-access-denied-default--tablet": {
-      "sha256": "689f0644478536b88ad5c824b2a1c4f4993719f489b173293d66ec8c74e06c6c",
+      "sha256": "ebd5274fd74f6003e9cfccaaf57c39e806014e17adc1b52059f6d03e3298c578",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -22912,13 +22912,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "6e70cd9e864ec2800ee36bdca4cb213f3b88a3495091a0c858e5df976742d508"
     },
     "pending-movements-browsing-all-locations-default--desktop": {
-      "sha256": "d81f07955530bbedf90361c5c24f1c270c03d76b526e837f01573406aca9eeb1",
+      "sha256": "3523792afafd07ece71f35f666d2578577bc20b6db67c5ef239dfa171917bf62",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -22929,13 +22929,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "a7532bf34c005dc1b0cdf816179aae2dc7d47a44e9cffe2279d7e53d332d673b"
     },
     "pending-movements-browsing-all-locations-default--desktop-dark": {
-      "sha256": "02505c1590d3e960881f01ac5d33c60bc5fd4b1e741b7f316ce55dcf9e4a2ade",
+      "sha256": "5e7f1de69923af97e780a568ed7fcbfc45e93ca549630dfc7076c54ee2d4831e",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -22946,13 +22946,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "3c26e9e311bff7b306d314e401aaab5211606f3290e7e8d880644653ab81b070"
     },
     "pending-movements-browsing-all-locations-default--mobile": {
-      "sha256": "a604bb568e7cf3e36caa0bd2c728aa3bdf30893c95b1848866a616cba803a4d2",
+      "sha256": "73ea5a1c11bf20596dfa01343409e33fa58abbeb08a7005c60986d2473cf90d4",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -22963,13 +22963,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "4377cf8301ad6943103ec35e7a3f21d00f9d11a07873dcb3bf35ecdeb26ad7e1"
     },
     "pending-movements-browsing-all-locations-default--tablet": {
-      "sha256": "92ebd311926f0822823a238eb5757dcccd487b0da1536daf8420982e876e8941",
+      "sha256": "495a3ca4f7281c08c31eedb54bf825d341c48709a8a27c803553df9b2fde2fcd",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -22980,13 +22980,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "b3310a7316386518273ee74b72e4dcc2c1a44afca41f94d4751d26366efa999f"
     },
     "pending-movements-browsing-ca-default--desktop": {
-      "sha256": "fd729c262ca55b37642ec632b958ec1e8410525166a22f1a9892f1fcf73d581f",
+      "sha256": "80211e4334721747bfe0f82209e01f8e7a51e9ba4b98205f62a056246a3725fa",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -22997,13 +22997,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "ad1ed6c3f6a3389aff837578397003481a1821c8cb414cbd2e159cb33ee7333c"
     },
     "pending-movements-browsing-ca-default--desktop-dark": {
-      "sha256": "6c9ce78136b6fea5388bd0df7f546306eddf47b83c1b16a1b9665594c8e8c048",
+      "sha256": "c969ea057350744176652a01570a1e43daa649b96be8803d041d7a714efeb3a0",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23014,13 +23014,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "c8641ea54d620f173df26e6396839439264a2b2e4b0c901dc6e26c2ab2ee7633"
     },
     "pending-movements-browsing-ca-default--mobile": {
-      "sha256": "88f7a2650db446d9c33909b6a66e5ef8452263252022c26e2b4db8d66d869a0e",
+      "sha256": "e462d9db6d505364df9df9d1f673b524f4ec2db8f8e554954768d5f47c6de22b",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23031,13 +23031,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "3eae12f2d5f68b9e65eaef13fa64284d12cd6d2a1fbeb9dfced19a058cd9c414"
     },
     "pending-movements-browsing-ca-default--tablet": {
-      "sha256": "1382afcc98edfaf7ff03cf4292018ae16a7cc5f69ca5ebe5449c0960e4659bda",
+      "sha256": "03931d7f8c53ddd893f55c17fe9df53396784bf6838932ee2cfc4d6dd8059696",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23048,9 +23048,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "5e23aaf49ca84d7be19db4b75117379a0a1b47088a94cc076d2e7ab5c07a4dcd"
     },
     "pending-movements-browsing-choose-location-default--desktop": {
@@ -23190,7 +23190,7 @@
       "profileHash": "164fa6f37b739fbeaaf3d00e42e51c61cb48e1b54b80f972e0a9ac3c4de9899a"
     },
     "pending-movements-browsing-empty-continuation-default--desktop": {
-      "sha256": "e5233fc6fa330cf1a9806554bd920d2a3a14c382526158168d339cca1f6e73de",
+      "sha256": "34154b5920989235b5766974ede19a04b484f2c1ccd97a33f3efbf9bc1e447d3",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23201,13 +23201,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "893453b3e28174b5c0d5feab48aa55736e7d8f6d41f59eb739ecfcb0ef07bd1f"
     },
     "pending-movements-browsing-empty-continuation-default--desktop-dark": {
-      "sha256": "25cf28084a1d4e24cc40609277c5280e081ad28e8084cb3c74955375cb5bc1a8",
+      "sha256": "82bced45a9bd761f9dac866875b48d01c0f074c20129f57fdcce17d86b01c0ab",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23218,13 +23218,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "32f22bf943ae8857c59d37cf2255f4cd2836c7402d6f2f2e853d22fc22d672ea"
     },
     "pending-movements-browsing-empty-continuation-default--mobile": {
-      "sha256": "00b7aac2c2d4b2da5c20b3c3e6f272460f445038d5ebb7f9401d9367454a931f",
+      "sha256": "5434f687da128000b733cf947ffea9486637e8b76f9ee755f4031b420fe11f1e",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23235,13 +23235,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "771332bcafedbb2321ba2a2d9a3cba06528b67ccecac5698caf587182e19dd45"
     },
     "pending-movements-browsing-empty-continuation-default--tablet": {
-      "sha256": "9ededba226f675d35b0e7d7c44af7fe1fa1ad76e1bbe8e73d6afa1d8f01e29fa",
+      "sha256": "cd527a047badcd4cf301a78d2e6cd081e749a6b77035e347fc7fb2625947806b",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23252,9 +23252,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "b5144bd11059f957cf46eed4ed5034bbbdd5bb1fd2ea49f35e8611f8baf6c716"
     },
     "pending-movements-browsing-empty-first-page-default--desktop": {
@@ -23309,7 +23309,7 @@
       "profileHash": "0b6ecdfd31925aa7576a19ef0bfc9fd1cdbeead51b3a27002b600d735c33210b"
     },
     "pending-movements-browsing-empty-first-page-default--tablet": {
-      "sha256": "331c723b467aa5c9b623c0d395cc0583922447c896a172b0a08cc68bfb1609d2",
+      "sha256": "5a14dc00bcbd9c4c1325d01f15884c081507cf92e94912a27393fb528a43aca2",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23320,13 +23320,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "fb014d3be97de75486a71d036908c874db150b622e00d1a71af486ff5c6827f6"
     },
     "pending-movements-browsing-en-default--desktop": {
-      "sha256": "ba8a6868d4e9afa3328cf20f3406f55e50a4484b040d1668b29cdaf66b469e08",
+      "sha256": "e2d2e63badcdf222b3fad9ac2b93f8beb1c3efc3ace8a3e9c6380da84b40d772",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23337,13 +23337,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "98d8ce3a4d00bc47f4af59e6c4d263990111a956daf1e466101bcc1e726061c0"
     },
     "pending-movements-browsing-en-default--desktop-dark": {
-      "sha256": "d9b6a656e4d1f626c72acbd7bb9f61e509bf419d518a7f95852cd5fc2f2ac44b",
+      "sha256": "88988d06174aea0bc1146d66c59290ee7f4e826e0f816cc40a6bcfa70cf86438",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23354,13 +23354,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "ae2e7fa7075f53362abc08b6c91fb4c22c63423b46dde5fc2ebc05d08352e35d"
     },
     "pending-movements-browsing-en-default--mobile": {
-      "sha256": "0fe6471281798f175c066ac8136637ac4d9ba6971fd4d0b3a5329f942901a1f6",
+      "sha256": "30c5518b0b17962204e5d61cd46bde45c8b14ce0c16e77812568e32aba919a89",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23371,13 +23371,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "1e080749736a273bea34e9ab4af0cc52c5b60e664226f79b7146fa03a97a1348"
     },
     "pending-movements-browsing-en-default--tablet": {
-      "sha256": "aecdad27a637f1eb603391f40506fba57a3f58f6c31d6fb2ae27fd09c984ae9d",
+      "sha256": "0083f725e13665d6aa69b7288b99f792b721358c8e5de4cb28a78daaab626359",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23388,13 +23388,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "66aaf86a8cf7e936e83dbd75bc77ba399f9032c6261c66e4f18328c9dafee15b"
     },
     "pending-movements-browsing-eu-default--desktop": {
-      "sha256": "12fc93e6c91dc115a9da42a583b5b7137efe6fff9c9257033625fe72c156e14e",
+      "sha256": "411873b0bf32fac9ab4058b440b85f5488a3ea36081da5302e0c5aa0ebe13234",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23405,13 +23405,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "a3473c40e065006aa327f67378432b4e4c9631eeb1749253fcf3fcf6bc94270d"
     },
     "pending-movements-browsing-eu-default--desktop-dark": {
-      "sha256": "3f5c2d972e646503eac3077858795d53c4cbbaa5b6247046f4626dbeb1f8a563",
+      "sha256": "137334be14655db6e1fd520f9c6d55f05d738566a811a4f912e010b6302b8308",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23422,13 +23422,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "75d8637b2de87a93b140e3e7a3d89c95770f9414d201e8c9a60c22c1855e21e8"
     },
     "pending-movements-browsing-eu-default--mobile": {
-      "sha256": "e2eda5cec94d61cb5ff2d0514048a7f3a502922da661ffffffd744e885b5e51a",
+      "sha256": "9dc2a81376f492a05dffaa61a0f336b85f7ebec71e383155141dc86a68c152b1",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23439,13 +23439,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "d84ec0574dbe3963b14d2f7cba205821d4de469162ba3efcb84128c18b1553c1"
     },
     "pending-movements-browsing-eu-default--tablet": {
-      "sha256": "3d4269d1f692689c840e4a51396c4124bc6c478f9b4ad70f481ddc85b05cb16f",
+      "sha256": "eda409cd4b756f0d3416418ed1abc156313322771b252f601f6b75e76b99aa69",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23456,13 +23456,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "cf2a319213c1f93c81b95c85ac94da40f40e5d41356feaaa24941041be169c08"
     },
     "pending-movements-browsing-gl-default--desktop": {
-      "sha256": "f5f1f5f461121e528db6017f9e10fc6bea5f6a183b7bd913a07def4770823c11",
+      "sha256": "2852fd8b32c138d2cdb85d2b08ebf89626b3836db132b5ac225857ce66943358",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23473,13 +23473,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "3e219963eda625e33d32830b710e9570fdac790cf3e4524a52232b13cb9da6ca"
     },
     "pending-movements-browsing-gl-default--desktop-dark": {
-      "sha256": "b10fea0ed41622a3982f228910a6c4efc49fada5dc8f5f05c8dcf1d11d1e4c2e",
+      "sha256": "affcd214d5ea5e2ca190896bdbd7baca88d207eee888439e20676138e6ba33a3",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23490,13 +23490,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "02e5711d5019b3a005345a79217d29c4e25247218ba142de2f38d6b2dfb9c288"
     },
     "pending-movements-browsing-gl-default--mobile": {
-      "sha256": "5666e29103bcad410268b72ad15fd1c189819e72bfb725e810cb3767a1c41339",
+      "sha256": "09f879d352274859a2a5f927e78608846688c6d467068186b3878cae1e897568",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23507,13 +23507,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "947580cb6831223ea5dc634fee187eb9b0bea2b7cbd8eae9a0b66e1bc634474f"
     },
     "pending-movements-browsing-gl-default--tablet": {
-      "sha256": "6323a398b0e0beada85317686bfe5766d55fb6c336611b03a5e54aa0d75d1225",
+      "sha256": "0198035eb8064a5245480613ca3d84445f39290a39e0f341e5f69278aa84bd42",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23524,9 +23524,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "2fa8bc1ce8eeaf971fe1d42fb9cace9190a6e075aa23568bdea77461bb136862"
     },
     "pending-movements-browsing-initial-loading-default--desktop": {
@@ -23666,7 +23666,7 @@
       "profileHash": "5d3a7a4fd2f697f38977c9488a00558a40bfd9f8c014513cf9ec06f3ca24fd61"
     },
     "pending-movements-browsing-one-location-default--desktop": {
-      "sha256": "5c2def693f94ec003a89970102e99dda7e2cbf6a187ed4cea11f53814bcd29e0",
+      "sha256": "d6fc23b5f2112fa9ddf2a6046fdf2361e709af199035358140a6188b8c3cec93",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23677,13 +23677,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "b227771dda161279d64bc58e17ec3c9ce0bc84ceef43ca59c210315345cfee4b"
     },
     "pending-movements-browsing-one-location-default--desktop-dark": {
-      "sha256": "5276bc111c0e7238d1bd68f107caedff5aa7e7be649f1d55ee399d864eab1443",
+      "sha256": "1c483c41faf0fd16cc87628b920fc8afe42904798fc8f825ba9ff18106dd227a",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23694,13 +23694,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "39bf00ae08c429ab3326d8fc13e26e68d16a2a4d4c2af595339dd10dbbba9d85"
     },
     "pending-movements-browsing-one-location-default--mobile": {
-      "sha256": "b2a87f5100cca69704a6b742ebe1273debcb7427cd6062be71e7b8172aa6cf49",
+      "sha256": "2da40008c4f6d6d55753caae636701ddf661dca3a57973c9cf29e9d2f74cdc62",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23711,13 +23711,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "2b0ea15b801d5a9b5f606f7973814ae26d4a3831f09fd364ef403bdae9222b7d"
     },
     "pending-movements-browsing-one-location-default--tablet": {
-      "sha256": "9e1ca758fc4da67461b613f7961b8985a15935b5e527ad8c7f5daca0d2351884",
+      "sha256": "c8edd3f22dd2bd6982e19d0312c27b6a5e1b2a0deafc377154685ad44f7add45",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23728,13 +23728,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "023993593837fa8e33bc441313016c4d559ab9c403bb27042d45bc4b7cf64db9"
     },
     "pending-movements-browsing-previous-results-loading-default--desktop": {
-      "sha256": "a58737c40a4b3a0693ac12429b930245757fa3f5643f62a5b3477c32eef1b73f",
+      "sha256": "59dd76e56fe54b6f3a96b18b7d7dbce7b46511d002b68e2158bf5d48a3202bc3",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23745,13 +23745,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "4994af223fff1a448d6e5b85bbdd51097ab043c951886ff8ef6420ebd40f4d12"
     },
     "pending-movements-browsing-previous-results-loading-default--desktop-dark": {
-      "sha256": "3118cdb7681277435e088ef2d43f47ea8478e6ffa5f40a80d6c9f1a6eecc87ee",
+      "sha256": "7fe59dde856c6a6d3c576ef78775378e4f42f89e0e9eb3c98c98ac59a51d967c",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23762,13 +23762,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "06f21cb34ebbc402569fce788c1ccf23080dc8df35f4469f5b8431d6e5f1c604"
     },
     "pending-movements-browsing-previous-results-loading-default--mobile": {
-      "sha256": "f05bbe50b4c53d0897dc42e31c0f3761b2554f68c5c2a4b7ac60b03cc588667e",
+      "sha256": "431985505c784ca90fdacb74f74737b1a7f576d0b550dd92d16178a30fbb5c23",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23779,13 +23779,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "9cad210607f7996e0b1c068b634e89366e6903e0e415e12cde1bbe2e02840eaa"
     },
     "pending-movements-browsing-previous-results-loading-default--tablet": {
-      "sha256": "d3466d3ca6396c81be3729021f8726d04e1862aa4663c6ddd578333b010ba29f",
+      "sha256": "25bd4c2d08553e26173b21ab31e3a944517f4202c07a05c62c0f865e42ba9c7c",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23796,13 +23796,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "d9f685290fe8d80f8306791e76b65c943e4b45e69becb9cd36eca8e66fd22660"
     },
     "pending-movements-browsing-receipt-inspection-default--desktop": {
-      "sha256": "c60271691ae5b6dff243f0ec569424e8843686b18cc6dd36af2d24328e99e269",
+      "sha256": "ea0d32187c582fffecb44324530d467b5340bbfbead297e3de2289863e6a1ecc",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23813,13 +23813,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "bec8a4d064e44eb43d4a3957e464814c11001fe5db82cc92e19f56f5da6644c5"
     },
     "pending-movements-browsing-receipt-inspection-default--desktop-dark": {
-      "sha256": "4767e2fd5134d4f31131375cacbc7596f63ac1b5b1f751e5e3d5d9bde4461268",
+      "sha256": "2d7ecba911543aa28d739aad38a56cdcfb2e37605ce7117f0fea214793812f93",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23830,9 +23830,9 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "e1a1df7a14c3bc4ee9f0cb7e4230536a60e3437b766753b5f56e348bb4193fce"
     },
     "pending-movements-browsing-receipt-inspection-default--mobile": {
@@ -23853,7 +23853,7 @@
       "profileHash": "eefcfa82bdebd8940752814801549528f13ba194956216866cf206906cb4ae0c"
     },
     "pending-movements-browsing-receipt-inspection-default--tablet": {
-      "sha256": "5ea259894c695017bca085e18eb250671bcc426cfd8e3998f783a5f086b9a7a7",
+      "sha256": "f00d35782b61e7692e92dd9c958931202677b078bfa4ac6c1afd85232c9e27c6",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23864,13 +23864,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "fb0dfd47f0dc0069ab2d94b4d376d89fcfb3af3506eb502516a04973558021e9"
     },
     "pending-movements-browsing-rejected-continuation-default--desktop": {
-      "sha256": "7322671203b8d202595df4a971baaeeee5df3f9ae761804755145faf590a8ff0",
+      "sha256": "2cdcfc1633698443a50faff116ae5d90e883613461759d57ace03d3c8818887a",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23881,13 +23881,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "21d63176ded1994f723769759e3341ed6e9af33ad172e3af09a57ebdc37d8cd1"
     },
     "pending-movements-browsing-rejected-continuation-default--desktop-dark": {
-      "sha256": "73ff4dbd9de06c98f0c3392d9baf1285d4ece4ae42769373b0df1b38e5a86e76",
+      "sha256": "3be7f8c363d327c36d27d0b9eb1ab49a0ea5e4bae2d2e4a8f93b9066ee1fa009",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23898,13 +23898,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "a5d26a998b9b050c2836e3e0c69621f64baf8f211fabfde291077b067dd699f3"
     },
     "pending-movements-browsing-rejected-continuation-default--mobile": {
-      "sha256": "8a1ba535c486a048c82debe211946516b683b1bb5e4b111f0ffb24bea6c694ba",
+      "sha256": "66e43c201c26572a30b92b30edf1a3b1057c781e264f3c3fb7140543977763c4",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23915,13 +23915,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "af5944678407a994032526b80182115ca8404570501ff52646f562c9643122fe"
     },
     "pending-movements-browsing-rejected-continuation-default--tablet": {
-      "sha256": "0a1c00224b450fef334a3d327e9dde38c75c7222c7a446efa15d14f7fa4ae562",
+      "sha256": "7bad44b62535b1bb6bc1e1b8edcabca6ce69208d9f6501c60d1247b290d1fb4a",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23932,13 +23932,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "4ce7135285cbbbddeced0dce01dc56c9b046a4815377822273c2e047aa9dfab4"
     },
     "pending-movements-browsing-second-page-default--desktop": {
-      "sha256": "de90f530289c3fce6b87e5f59ba553507864b890942623f3c6f90f6a1188df68",
+      "sha256": "e919eef2da2196869faaa3cb3f08891b945e656fc427d70d3d63ddfb3587a97a",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23949,13 +23949,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "c0453128386f220190233b58ee57f4ea34af6ff2f617fd33ed6a5680c4c2ce14"
     },
     "pending-movements-browsing-second-page-default--desktop-dark": {
-      "sha256": "1fcba53cb95172c6864cc9c466190fe99b6be81d65bf16f092a57638fc877efd",
+      "sha256": "8931b3ee9d714e5086a34a461e7378cd0ca4103c6b103879e85146bd4103011e",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23966,13 +23966,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "5b2e3709db58975e7b7fecb6d4cde54ca90059b3e79eca047ac7ddc6620ed629"
     },
     "pending-movements-browsing-second-page-default--mobile": {
-      "sha256": "3d63b7f039558662bdfe1c5ad96a4db2d3431fbdb7f19f888019ac7272135aef",
+      "sha256": "f245d2ec46c8abe79321039cc909044a24fc5097bc51778979200f1447f21c23",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -23983,13 +23983,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "30941891c30f58d1e6ba55c28b167408d00414eea8c9a7d500058aa25349ee51"
     },
     "pending-movements-browsing-second-page-default--tablet": {
-      "sha256": "7cf2137931dec21b104f6beaf4af5d43c74c5536e8747ca202c6fd1079eea210",
+      "sha256": "9d4fd826777c0d31510bdfac82c781d11ad5ab0fd5107395aedd5f07e973a330",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -24000,13 +24000,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "9228534c5a449d8233fbd160f784590cc1365856dccb0bfa24a480293bf0639a"
     },
     "pending-movements-browsing-technical-failure-default--desktop": {
-      "sha256": "9ee5dcd199520d333b7874e5647f989a88b22e07f9a1d86eb206725d64e18478",
+      "sha256": "13d7db7ee745967d123b196cb3c55de0896d4ac23c8725f0a05c05495ef3e664",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -24017,13 +24017,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "b5088f47a1decceafa50dfea256f1f654528966dd7a04f868208cf20ef50157b"
     },
     "pending-movements-browsing-technical-failure-default--desktop-dark": {
-      "sha256": "69f2bc3af6d22d5f56c7413c61b50dccea6534d7a26091b110962ddb6a19ef74",
+      "sha256": "5f0cc5c21d6b7d040af26b6ab5252e701f0628d31be3dd67baf570a0d1cae380",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -24034,13 +24034,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "34718b6d7e48b381b825c6454cad6339f000fee2edf1244bdef70e9b52fbcf3d"
     },
     "pending-movements-browsing-technical-failure-default--mobile": {
-      "sha256": "516b0fda32e3ebf9ce3e8185b2f2ab4a3ac6df24bfb9d5f849c31623660089fa",
+      "sha256": "e43051f8ca89f3cd7e9e7b724652ad455be6fe93b85314c71330d11b08b0d45e",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -24051,13 +24051,13 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "470037179e3b12dc8fb6f94b28d169859722a1fbcdd2d42e31bd2f6509af8616"
     },
     "pending-movements-browsing-technical-failure-default--tablet": {
-      "sha256": "99fa7e76404e6489bf0ccb7cb4dc85f7c8e2c5195ee614b85199c17bd9c05b72",
+      "sha256": "7f7f42f26afb502618986562f104a2bc300c4a95a5b480d49c2dfe3ac6a438f3",
       "environment": {
         "platform": "darwin",
         "arch": "arm64",
@@ -24068,10 +24068,690 @@
         "playwright": "1.65.0",
         "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
       },
-      "approval": "Approve all 72 images",
-      "run": "2026-11-20T10-08-52.620Z",
-      "sourceHash": "62183df730cd28e00c15315019492c3bc5f1eec2474894d49f64fb4bb2f09543",
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
       "profileHash": "7b6df045125bd46b141c59a8b929c4b382867bcb0f294541c92fd5f48023c6ad"
+    },
+    "pending-movements-browsing-departure-applied-default--desktop": {
+      "sha256": "4054c58d35b2342b79236d5e09b67c783ee9a7d4b2e93eedc0c5cde64646dea3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "3f9ad80e769c8e0e0d13b09b70a318071a303075f618d6a679393e64c49124e8"
+    },
+    "pending-movements-browsing-departure-applied-default--desktop-dark": {
+      "sha256": "8d1c6e0d0d3e1c7df0c09ccccb8de91ce15a26cf8b5bde7bdb063aa39e96ebd3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "3a09796e3f1bb60aeeb2b88758fadd944375aaea2e52f9626cc60b921f3101b2"
+    },
+    "pending-movements-browsing-departure-applied-default--mobile": {
+      "sha256": "5e59d81317722eee28f9eef1b09f3229b89b8d5f6b3b59f8f24f347443ace940",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "302fd26118e7cb31ddbf035b0eed60bbfe0e49e7bd836a7e54f8c12aeceb0cc9"
+    },
+    "pending-movements-browsing-departure-applied-default--tablet": {
+      "sha256": "9cb9355bfcaad1d43fc93262819f173ae0d201f9ad4874166e1907d3ef6b44b8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "57d2ee883aefd7e15a3af33ec3169746075050684ed1c6e0ec5f152249d418eb"
+    },
+    "pending-movements-browsing-departure-ca-default--desktop": {
+      "sha256": "b700c7c69bbaa9ed08e42be75afc43d6037cb7ab4a5e2137bbc83504ca29f8bd",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "6fd243ea637363b51b5149b26703cd4518c1f960cc2a30e6e1a0db5a3fe49772"
+    },
+    "pending-movements-browsing-departure-ca-default--desktop-dark": {
+      "sha256": "1915cbf03cc796f11d7d0729572ba855ff758b9bc078e5ddf5eab2d1c88bd193",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "6d9fa592c34182cc6ca223d81d37aa42cda55e815ac9ed2debc52e739d9353b0"
+    },
+    "pending-movements-browsing-departure-ca-default--mobile": {
+      "sha256": "405734d4d7fe38e729cf480989f75424371d85ddfc9de2f54675adb5eae9c8df",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "79a88b6b974bff8ac10768b8ee4b3000b22f5e1cbd7e96aa1d5bc73caa12dbd5"
+    },
+    "pending-movements-browsing-departure-ca-default--tablet": {
+      "sha256": "831956a27f725c76b10a72e5a76391e90bfb9ec7025621da2df6688d3de5c491",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "d1f93bc184b64420e2ff1e220359187cc55b9c5cad51eeadde2b168e94061b13"
+    },
+    "pending-movements-browsing-departure-en-default--desktop": {
+      "sha256": "d58b5f77bdd20d4f193331d60d9916778ad2189ce9c709f3c70d70801cdd6a1e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "22f305ec048f274f38a519718ce619762e80cc6e8516d46dcf23ae31be58379b"
+    },
+    "pending-movements-browsing-departure-en-default--desktop-dark": {
+      "sha256": "0d1c07be214988abe93d457d08a792111faae0332633c4524cbbfd8eabe335db",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "ead3ff47cb7b99ebf8ec4b7b2b3048ceed66553ddd4e78674e40da4fc0ddf1a6"
+    },
+    "pending-movements-browsing-departure-en-default--mobile": {
+      "sha256": "1b327cd7f2103282d988782dd86ee3c8ea833472d84ec9d88d8ced4a3d43ec92",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "887084d339a4df2d848cbed39f2aad2074779cf24a30cce996debd40a60450d6"
+    },
+    "pending-movements-browsing-departure-en-default--tablet": {
+      "sha256": "7c678aefe1bc70a68eef7744157c8e70f45a87ab731e1d725aa03b015b34e961",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "97b3382bd0a7eff991cb07858073423f674dbbe089579044b8e3e66c349e9c3f"
+    },
+    "pending-movements-browsing-departure-eu-default--desktop": {
+      "sha256": "d5e254aa2396bdbc0bd877d0d7f75657be8f2bf42b57419ff63b14e465a4c731",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "094dc877c04f73c77dea6766c954026d657dd0759c264305d42ebaccfcae8682"
+    },
+    "pending-movements-browsing-departure-eu-default--desktop-dark": {
+      "sha256": "f5ec81d30e97291c900e50019c0e6d59a695b5b2c481caf246921ce5225ff3ba",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "d2f709dd94f5be30d8ac20a70580a618e2c8d385bd490bb95425cb6388227cce"
+    },
+    "pending-movements-browsing-departure-eu-default--mobile": {
+      "sha256": "bc473df05bafcc92a6cbb612545e9eda77aec8ac547ef957c9a9f62650ee97a8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "6ef7f042c6238e9ac8d5585f18029df8fdfd44644d4ce5600c1691582ad9b897"
+    },
+    "pending-movements-browsing-departure-eu-default--tablet": {
+      "sha256": "acfc47c8d70f3d17252f1b4ebac45d72fb9135614aba55976a9e83d9ab0b1b87",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "0abd38774b092ac49d4db36425286c946ef243bfa34ce14252a27185cd66d850"
+    },
+    "pending-movements-browsing-departure-gl-default--desktop": {
+      "sha256": "a2ecbc762270a12215e0e8250eef98ed82feaf82164c317b928c3c2038650b5f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "2a7464bc3481a758f8c37af44af4ed6c77a5c8914fefe520c9a60c117bdb7c61"
+    },
+    "pending-movements-browsing-departure-gl-default--desktop-dark": {
+      "sha256": "8d123459e6ba92c2b58a0ae51ec770d3357b3684f6908618d1480e812c04d2f8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "7b589965d1b80ab3d3226be762eb715caba07bf7b700caf09ea62078145d8699"
+    },
+    "pending-movements-browsing-departure-gl-default--mobile": {
+      "sha256": "d82368445615381942920bb5ab1fefd23e0d6be5fd8f2ba48388255b90057f7e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "7a32c55ef19e9c6d893c5c13da210d1982bf4f5ff2dff8c882613b9ca04ad146"
+    },
+    "pending-movements-browsing-departure-gl-default--tablet": {
+      "sha256": "89d474a2caecdf2e3aa60760684a65861a2fc3a387397ee2f42fd26d09279898",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "0c32e62f05b3199a4217aee1b3bda5041a02431c8eb56a51ce9a2db463bee6f3"
+    },
+    "pending-movements-browsing-departure-loading-default--desktop": {
+      "sha256": "ac3ca15674a6b4b5047dee145e5fd813fdc6274ced8b4395f81fb39cb9d1fd9c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "e89c874c57185ec84c6152d1eb6bf183bfd6892acfd13df3a1969759d085c3cd"
+    },
+    "pending-movements-browsing-departure-loading-default--desktop-dark": {
+      "sha256": "5f3704ecb09e8b3ddfd254b139d5263b2c4b33cd5c95d96754575311e20b975a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "219a495384daf65804b3bb56c918554f1e690bfea4e3b4abb64ca57469a547ef"
+    },
+    "pending-movements-browsing-departure-loading-default--mobile": {
+      "sha256": "f1b9764317eb41fcb34d2563064f2db37879e5e7ef425fe4ff93fbd7e682351e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "204501e69948385a1f0da4b0cf077f3aa529c7296e38a8e5240fc4c9fc4d91cb"
+    },
+    "pending-movements-browsing-departure-loading-default--tablet": {
+      "sha256": "90ab180aa505d9ee19ec9b1ba46db501665332994f6d7a9749a8d484af0dbcdf",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "d8aecea0f27af054acdb0fc418da645de0ff6380d1b733771e93ac3318b8405a"
+    },
+    "pending-movements-browsing-departure-pending-default--desktop": {
+      "sha256": "d60bc9801112b0a4de1aa822310c274991deb785b7fd70583d208a2304fea5f7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "09aceb1eee4e1a87221b601eeaa5cf233ee5594462efbe1c473bf52e835f5f62"
+    },
+    "pending-movements-browsing-departure-pending-default--desktop-dark": {
+      "sha256": "c31f474ec8c141688f525cb5e99ffff17c135518abe5d7b929b6f5130551bfd1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "6670d3fe328e3a38f5f0a078d9b83ebbfb30566c2a6d0ac63df6258114e4d0c1"
+    },
+    "pending-movements-browsing-departure-pending-default--mobile": {
+      "sha256": "d17f0bc55bedb22522e91b62f5987f30ad5d55d794dabbd1540f0887b241ef24",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "a5f800d5574a9cabaf204310125e5f99ae31e3c6b8964692abc3d81c62e68cff"
+    },
+    "pending-movements-browsing-departure-pending-default--tablet": {
+      "sha256": "c78d7a4228f049abeb1c1793b8bebaf334f321730ae64d452cf6d349a6a3ac5f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "e0509fe53b00108a9ea6a1730fa557e139fc4270d84331b49514bb55a11c8fe8"
+    },
+    "pending-movements-browsing-departure-read-error-default--desktop": {
+      "sha256": "618211f78e2126b304b0585f0ba3b82cc168fb16b8858841709d1d87891165eb",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "327b5213952aca8c899ca19f51e012fa5c2d991581de6ba174e8bd578eb8492d"
+    },
+    "pending-movements-browsing-departure-read-error-default--desktop-dark": {
+      "sha256": "50553f88c48be040d94ba529262a3bcabfc0d182875bf8b6cc0a55bac9adf4c6",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "cdb6e996c22a53664a5e55150440cc6934487efea027334949e0ed568bb764ff"
+    },
+    "pending-movements-browsing-departure-read-error-default--mobile": {
+      "sha256": "7574b3a1e2ae7640264e705b30d3670faf0d5973e34e26585513492a79708a11",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "01f706327fca13ac813a0b6fb87c29a6ac97261e2cf25556d17809b5d12b89d7"
+    },
+    "pending-movements-browsing-departure-read-error-default--tablet": {
+      "sha256": "9ca0ed8b599a3dcab5d4ec31de2e3cc01f034dbe5b0cd686d3580e3c8cc10cf9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "6e205b4abd0d6b31805bb88da7ac38c8a775fe02f374cbb926644ee4789db6a1"
+    },
+    "pending-movements-browsing-departure-rejected-default--desktop": {
+      "sha256": "d882e2d9982c0d8eb4bfe380395aeee6cf2d6f02831e017529d391bc07284242",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "1c867ab74ae688f94bcd05b29babe1ae4643e1a9dfab5ac4839138f5c99359ec"
+    },
+    "pending-movements-browsing-departure-rejected-default--desktop-dark": {
+      "sha256": "c13a30be056edd7bb7b99c8f1b5d5496a2a34b5bee1fc5514e11cc8242bc68ad",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "f59b8db3bbecca29f8bdc767b3c7924e27b8cce536512d38c26ccfd12ab352ad"
+    },
+    "pending-movements-browsing-departure-rejected-default--mobile": {
+      "sha256": "385fe0bf3bbec344b352899b1478c7ad829512efbe5e5b8f1fb8529d26b1b51f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "efdf2af11c39c52e93c7a6df5f3918296f8e44bd6f375a60e6442ecd4bf2e624"
+    },
+    "pending-movements-browsing-departure-rejected-default--tablet": {
+      "sha256": "9b28c1d5bd7567a045bf838fad379259fabc33ec0aa59e4ca8d9dbe46ec358be",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "1e28b123b60d5cde5651803641a075bf140e498a56630b4e1e8824e67c5ccb8d"
+    },
+    "pending-movements-browsing-departure-unavailable-default--desktop": {
+      "sha256": "9ede3b9343ce9450c189e5064c01a8b1a3c1fd0f832d5cbf008ecdc1c6595c87",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "eeaab9fcbf47f3edee4bf6cd492ea0d555c0d4650ea7fa8e0e47da307ec69fea"
+    },
+    "pending-movements-browsing-departure-unavailable-default--desktop-dark": {
+      "sha256": "99bc04afb29de48b49bbbf73da81900c1084d80e4763d587d1f3c373adc36857",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "12b4c26dad88303cdea6089e8aad81c10b20c4c8bf03e62ee60f376d21896132"
+    },
+    "pending-movements-browsing-departure-unavailable-default--mobile": {
+      "sha256": "4b5dfd45313a795bbf9bfe996844b7ac1ee785d4b396191cb93c0d8e610249ad",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "800d3d1f3757c62ce94b6ad11b8490006b0ae11cd204b2d0c372de54f2cbb9d6"
+    },
+    "pending-movements-browsing-departure-unavailable-default--tablet": {
+      "sha256": "da5db9c89da4b9c8a0a28ad4810b3952f71722922130fdd24098dc943a28c69c",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "Approve the 90 additions and replacements",
+      "run": "2026-11-20T11-58-13.063Z",
+      "sourceHash": "b95c960c666ecba4f5de71a1e2d51e25653fe14248418d26dfa2de8338b9e131",
+      "profileHash": "916d7146c0e4cabfae5fe76e4489bdee963e895fd91c26bedbf7f0e0cd4bf45a"
     }
   }
 }
