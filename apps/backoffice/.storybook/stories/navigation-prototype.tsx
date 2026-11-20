@@ -96,6 +96,8 @@ export interface NavigationPrototypeProps {
   permissionMode: PermissionMode;
   locationCount: "one" | "several";
   productsContent?: ReactNode;
+  businessSettingsContent?: ReactNode;
+  modulesContent?: ReactNode;
   movementsContent?: ReactNode;
   movementsBrowsing?: MovementsBrowsingNavigation;
   stockLookup?: StockLookupNavigation;
@@ -134,6 +136,8 @@ function Workspace({
   permissionMode,
   locationCount,
   productsContent,
+  businessSettingsContent,
+  modulesContent,
   movementsContent,
   movementsBrowsing,
   stockLookup,
@@ -573,26 +577,33 @@ function Workspace({
               className="text-sm text-gray-500 dark:text-gray-400"
               data-navigation-content
             >
-              {state.page === "products" && productsContent
-                ? productsContent
-                : state.page === "movements" && movementsBrowsing
-                  ? movementsBrowsing.render(
-                      selected
-                        ? { id: selected, label: locationName(selected) }
-                        : null,
-                    )
-                  : state.page === "movements" && movementsContent
-                    ? movementsContent
-                    : state.page === "stock" && stockLookup
-                      ? stockLookup.render(
+              {state.page === "business-settings" && businessSettingsContent
+                ? businessSettingsContent
+                : state.page === "modules" && modulesContent
+                  ? modulesContent
+                  : state.page === "products" && productsContent
+                    ? productsContent
+                    : state.page === "movements" && movementsBrowsing
+                      ? movementsBrowsing.render(
                           selected
                             ? { id: selected, label: locationName(selected) }
                             : null,
-                          state.stockEntry?.productId,
                         )
-                      : locationPage && !selected
-                        ? t("navChooseLocationHint")
-                        : t("navContentHint")}
+                      : state.page === "movements" && movementsContent
+                        ? movementsContent
+                        : state.page === "stock" && stockLookup
+                          ? stockLookup.render(
+                              selected
+                                ? {
+                                    id: selected,
+                                    label: locationName(selected),
+                                  }
+                                : null,
+                              state.stockEntry?.productId,
+                            )
+                          : locationPage && !selected
+                            ? t("navChooseLocationHint")
+                            : t("navContentHint")}
             </div>
           )}
         </div>

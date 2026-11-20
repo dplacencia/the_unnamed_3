@@ -3911,6 +3911,2158 @@
       ],
       "limitation": "Synthetic exact departure reads and list refresh. Candidates require specific visual approval.",
       "locale": "eu"
+    },
+    {
+      "id": "core-merchant-workspace-sign-in",
+      "title": "Core merchant workspace · sign-in",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--sign-in",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-session-checking",
+      "title": "Core merchant workspace · session-checking",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--session-checking",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-session-unavailable",
+      "title": "Core merchant workspace · session-unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--session-unavailable",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-email-verification",
+      "title": "Core merchant workspace · email-verification",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--email-verification",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-business-list",
+      "title": "Core merchant workspace · business-list",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--business-list",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-business-list-empty",
+      "title": "Core merchant workspace · business-list-empty",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--business-list-empty",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-business-list-unavailable",
+      "title": "Core merchant workspace · business-list-unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--business-list-unavailable",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-new-business",
+      "title": "Core merchant workspace · new-business",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--new-business",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-new-business-with-creator-names",
+      "title": "Core merchant workspace · new-business-with-creator-names",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--new-business-with-creator-names",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-creation-pending",
+      "title": "Core merchant workspace · creation-pending",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--creation-pending",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-creation-blocked",
+      "title": "Core merchant workspace · creation-blocked",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--creation-blocked",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-creation-unconfirmed",
+      "title": "Core merchant workspace · creation-unconfirmed",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--creation-unconfirmed",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-creation-ready",
+      "title": "Core merchant workspace · creation-ready",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--creation-ready",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-workspace",
+      "title": "Core merchant workspace · workspace",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--workspace",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-business-list-en",
+      "title": "Core merchant workspace · business-list",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--business-list",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-business-list-ca",
+      "title": "Core merchant workspace · business-list",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--business-list",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-business-list-gl",
+      "title": "Core merchant workspace · business-list",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--business-list",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-business-list-eu",
+      "title": "Core merchant workspace · business-list",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--business-list",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-overview",
+      "title": "Core Sites and Areas · overview",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--overview",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-new-site",
+      "title": "Core Sites and Areas · new-site",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--new-site",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-scoped-areas",
+      "title": "Core Sites and Areas · scoped-areas",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--scoped-areas",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-archive-unavailable",
+      "title": "Core Sites and Areas · archive-unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--archive-unavailable",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-archive-in-use",
+      "title": "Core Sites and Areas · archive-in-use",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--archive-in-use",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-restore-site",
+      "title": "Core Sites and Areas · restore-site",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--restore-site",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-read-loading",
+      "title": "Core Sites and Areas · read-loading",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--read-loading",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-read-error",
+      "title": "Core Sites and Areas · read-error",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--read-error",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-empty",
+      "title": "Core Sites and Areas · empty",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--empty",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-overview-en",
+      "title": "Core Sites and Areas · overview",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--overview",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-overview-ca",
+      "title": "Core Sites and Areas · overview",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--overview",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-overview-gl",
+      "title": "Core Sites and Areas · overview",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--overview",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-overview-eu",
+      "title": "Core Sites and Areas · overview",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--overview",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-members",
+      "title": "Core team access · members",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--members",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-edit-member-name",
+      "title": "Core team access · edit-member-name",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--edit-member-name",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-delegated-members",
+      "title": "Core team access · delegated-members",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--delegated-members",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-invite-only",
+      "title": "Core team access · invite-only",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--invite-only",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-access-unavailable",
+      "title": "Core team access · access-unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--access-unavailable",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-roles",
+      "title": "Core team access · roles",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--roles",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-new-role",
+      "title": "Core team access · new-role",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--new-role",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-assign-role",
+      "title": "Core team access · assign-role",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--assign-role",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-last-owner",
+      "title": "Core team access · last-owner",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--last-owner",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-invitations",
+      "title": "Core team access · invitations",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--invitations",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-new-invitation",
+      "title": "Core team access · new-invitation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--new-invitation",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-new-invitation-en",
+      "title": "Core team access · new-invitation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--new-invitation",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-new-invitation-ca",
+      "title": "Core team access · new-invitation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--new-invitation",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-new-invitation-gl",
+      "title": "Core team access · new-invitation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--new-invitation",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-new-invitation-eu",
+      "title": "Core team access · new-invitation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--new-invitation",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-invitation-accepted",
+      "title": "Core team access · invitation-accepted",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--invitation-accepted",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-new-invitation-with-role",
+      "title": "Core team access · new-invitation-with-role",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--new-invitation-with-role",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-invitation-accepted-with-role",
+      "title": "Core team access · invitation-accepted-with-role",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--invitation-accepted-with-role",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-capability-enablement-explore",
+      "title": "Core capability enablement · explore",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-capability-enablement--explore",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-capability-enablement-explore-en",
+      "title": "Core capability enablement · explore",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-capability-enablement--explore",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-capability-enablement-explore-ca",
+      "title": "Core capability enablement · explore",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-capability-enablement--explore",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-capability-enablement-explore-gl",
+      "title": "Core capability enablement · explore",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-capability-enablement--explore",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-capability-enablement-explore-eu",
+      "title": "Core capability enablement · explore",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-capability-enablement--explore",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-capability-enablement-prerequisite-blocked",
+      "title": "Core capability enablement · prerequisite-blocked",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-capability-enablement--prerequisite-blocked",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-capability-enablement-disable-blocked",
+      "title": "Core capability enablement · disable-blocked",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-capability-enablement--disable-blocked",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-capability-enablement-provider-unavailable",
+      "title": "Core capability enablement · provider-unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-capability-enablement--provider-unavailable",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-capability-enablement-management-unavailable",
+      "title": "Core capability enablement · management-unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-capability-enablement--management-unavailable",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-capability-enablement-read-only",
+      "title": "Core capability enablement · read-only",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-capability-enablement--read-only",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic Core or Inventory outcomes for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-accounts-overview",
+      "title": "Employee accounts · overview",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-accounts--overview",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-accounts-new-employee",
+      "title": "Employee accounts · new-employee",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-accounts--new-employee",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-accounts-new-employee-en",
+      "title": "Employee accounts · new-employee",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-accounts--new-employee",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-accounts-new-employee-ca",
+      "title": "Employee accounts · new-employee",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-accounts--new-employee",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-accounts-new-employee-gl",
+      "title": "Employee accounts · new-employee",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-accounts--new-employee",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-accounts-new-employee-eu",
+      "title": "Employee accounts · new-employee",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-accounts--new-employee",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-accounts-temporary-password",
+      "title": "Employee accounts · temporary-password",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-accounts--temporary-password",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-accounts-move-location",
+      "title": "Employee accounts · move-location",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-accounts--move-location",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-accounts-disable",
+      "title": "Employee accounts · disable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-accounts--disable",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-accounts-provider-unavailable",
+      "title": "Employee accounts · provider-unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-accounts--provider-unavailable",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-accounts-disable-unconfirmed",
+      "title": "Employee accounts · disable-unconfirmed",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-accounts--disable-unconfirmed",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-accounts-reactivate",
+      "title": "Employee accounts · reactivate",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-accounts--reactivate",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-accounts-delegated",
+      "title": "Employee accounts · delegated",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-accounts--delegated",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-accounts-reactivate-denied",
+      "title": "Employee accounts · reactivate-denied",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-accounts--reactivate-denied",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-credentials-actions",
+      "title": "Employee credentials · actions",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-credentials--actions",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-credentials-password-choice",
+      "title": "Employee credentials · password-choice",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-credentials--password-choice",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-credentials-password-choice-en",
+      "title": "Employee credentials · password-choice",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-credentials--password-choice",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-credentials-password-choice-ca",
+      "title": "Employee credentials · password-choice",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-credentials--password-choice",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-credentials-password-choice-gl",
+      "title": "Employee credentials · password-choice",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-credentials--password-choice",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-credentials-password-choice-eu",
+      "title": "Employee credentials · password-choice",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-credentials--password-choice",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-credentials-password-handoff",
+      "title": "Employee credentials · password-handoff",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-credentials--password-handoff",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-credentials-mfa-initiated",
+      "title": "Employee credentials · mfa-initiated",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-credentials--mfa-initiated",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-credentials-security-locked",
+      "title": "Employee credentials · security-locked",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-credentials--security-locked",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-credentials-security-uncertain",
+      "title": "Employee credentials · security-uncertain",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-credentials--security-uncertain",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-employee-credentials-security-complete",
+      "title": "Employee credentials · security-complete",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-employee-credentials--security-complete",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-core-employee-login-code-unset",
+      "title": "Employee login code · unset",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-core-employee-login-code--unset",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-core-employee-login-code-current",
+      "title": "Employee login code · current",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-core-employee-login-code--current",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-core-employee-login-code-current-en",
+      "title": "Employee login code · current",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-core-employee-login-code--current",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-core-employee-login-code-current-ca",
+      "title": "Employee login code · current",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-core-employee-login-code--current",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-core-employee-login-code-current-gl",
+      "title": "Employee login code · current",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-core-employee-login-code--current",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-core-employee-login-code-current-eu",
+      "title": "Employee login code · current",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-core-employee-login-code--current",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "backoffice-core-employee-login-code-conflict",
+      "title": "Employee login code · conflict",
+      "kind": "story",
+      "sources": [],
+      "storyId": "backoffice-core-employee-login-code--conflict",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-employee-review-ready"
+        }
+      ],
+      "limitation": "Synthetic employee lifecycle and credentials for review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-signup-handoff",
+      "title": "Merchant workspace · signup-handoff",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--signup-handoff",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-merchant-workspace-creation-delayed",
+      "title": "Merchant workspace · creation-delayed",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-merchant-workspace--creation-delayed",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-inventory-trial-access-active",
+      "title": "Inventory trial access · active",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-inventory-trial-access--active",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-inventory-trial-access-paused",
+      "title": "Inventory trial access · paused",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-inventory-trial-access--paused",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-inventory-trial-access-paused-en",
+      "title": "Inventory trial access · paused",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-inventory-trial-access--paused",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-inventory-trial-access-paused-ca",
+      "title": "Inventory trial access · paused",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-inventory-trial-access--paused",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-inventory-trial-access-paused-gl",
+      "title": "Inventory trial access · paused",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-inventory-trial-access--paused",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-inventory-trial-access-paused-eu",
+      "title": "Inventory trial access · paused",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-inventory-trial-access--paused",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-inventory-trial-access-unavailable",
+      "title": "Inventory trial access · unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-inventory-trial-access--unavailable",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-account",
+      "title": "Account security · account",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--account",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-recovery-confirmation",
+      "title": "Account security · recovery-confirmation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--recovery-confirmation",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-recovery-confirmation-en",
+      "title": "Account security · recovery-confirmation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--recovery-confirmation",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-recovery-confirmation-ca",
+      "title": "Account security · recovery-confirmation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--recovery-confirmation",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-recovery-confirmation-gl",
+      "title": "Account security · recovery-confirmation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--recovery-confirmation",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-recovery-confirmation-eu",
+      "title": "Account security · recovery-confirmation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--recovery-confirmation",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-recovery-pending",
+      "title": "Account security · recovery-pending",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--recovery-pending",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-recovery-action-required",
+      "title": "Account security · recovery-action-required",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--recovery-action-required",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-recovery-support-required",
+      "title": "Account security · recovery-support-required",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--recovery-support-required",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-recovery-completed",
+      "title": "Account security · recovery-completed",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--recovery-completed",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-recovery-status-unavailable",
+      "title": "Account security · recovery-status-unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--recovery-status-unavailable",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-recovery-delivery-unknown",
+      "title": "Account security · recovery-delivery-unknown",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--recovery-delivery-unknown",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-recovery-creation-incomplete",
+      "title": "Account security · recovery-creation-incomplete",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--recovery-creation-incomplete",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-merchant-mfa-policy",
+      "title": "Account security · merchant-mfa-policy",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--merchant-mfa-policy",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-merchant-mfa-grace",
+      "title": "Account security · merchant-mfa-grace",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--merchant-mfa-grace",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-merchant-mfa-grace-en",
+      "title": "Account security · merchant-mfa-grace",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--merchant-mfa-grace",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-merchant-mfa-grace-ca",
+      "title": "Account security · merchant-mfa-grace",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--merchant-mfa-grace",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-merchant-mfa-grace-gl",
+      "title": "Account security · merchant-mfa-grace",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--merchant-mfa-grace",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-merchant-mfa-grace-eu",
+      "title": "Account security · merchant-mfa-grace",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--merchant-mfa-grace",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-merchant-mfa-required",
+      "title": "Account security · merchant-mfa-required",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--merchant-mfa-required",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-account-security-merchant-mfa-unconfirmed",
+      "title": "Account security · merchant-mfa-unconfirmed",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-account-security--merchant-mfa-unconfirmed",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-account-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-role-edit",
+      "title": "Team access · role-edit",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--role-edit",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-role-edit-en",
+      "title": "Team access · role-edit",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--role-edit",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-role-edit-ca",
+      "title": "Team access · role-edit",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--role-edit",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-role-edit-gl",
+      "title": "Team access · role-edit",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--role-edit",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-role-edit-eu",
+      "title": "Team access · role-edit",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--role-edit",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-role-delete",
+      "title": "Team access · role-delete",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--role-delete",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-member-removal",
+      "title": "Team access · member-removal",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--member-removal",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-membership-deactivate",
+      "title": "Team access · membership-deactivate",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--membership-deactivate",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-membership-reactivate",
+      "title": "Team access · membership-reactivate",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--membership-reactivate",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-accept-invitation",
+      "title": "Team access · accept-invitation",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--accept-invitation",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-invitation-expired",
+      "title": "Team access · invitation-expired",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--invitation-expired",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-invitation-unavailable",
+      "title": "Team access · invitation-unavailable",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--invitation-unavailable",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-invitation-uncertain",
+      "title": "Team access · invitation-uncertain",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--invitation-uncertain",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-resend-failed",
+      "title": "Team access · resend-failed",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--resend-failed",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-resend-refused",
+      "title": "Team access · resend-refused",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--resend-refused",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-team-paging",
+      "title": "Team access · team-paging",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--team-paging",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-team-access-employee-assign-access",
+      "title": "Team access · employee-assign-access",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-team-access--employee-assign-access",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-archive-filter",
+      "title": "Sites and Areas · archive-filter",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--archive-filter",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-archive-filter-en",
+      "title": "Sites and Areas · archive-filter",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--archive-filter",
+      "locale": "en",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-archive-filter-ca",
+      "title": "Sites and Areas · archive-filter",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--archive-filter",
+      "locale": "ca",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-archive-filter-gl",
+      "title": "Sites and Areas · archive-filter",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--archive-filter",
+      "locale": "gl",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-archive-filter-eu",
+      "title": "Sites and Areas · archive-filter",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--archive-filter",
+      "locale": "eu",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-reference-blocked",
+      "title": "Sites and Areas · reference-blocked",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--reference-blocked",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Synthetic outcomes for the November 30 review. Visual candidates require exact approval."
+    },
+    {
+      "id": "core-sites-and-areas-unconfirmed-create",
+      "title": "Sites and Areas · unconfirmed-create",
+      "kind": "story",
+      "sources": [],
+      "storyId": "core-sites-and-areas--unconfirmed-create",
+      "locale": "es",
+      "cases": [
+        {
+          "id": "default",
+          "action": "core-inventory-review-ready"
+        }
+      ],
+      "limitation": "Retained synthetic Core command for review. Visual candidates require exact approval."
     }
   ]
 }

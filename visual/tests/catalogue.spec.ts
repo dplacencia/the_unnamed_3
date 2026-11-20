@@ -81,6 +81,30 @@ async function action(
     return stockLookupAction(page, name, (entry.locale ?? "es") as Locale);
   if (name?.startsWith("pending-receipt-inspection-"))
     return pendingReceiptInspectionAction(page, name);
+  if (name === "core-inventory-review-ready") {
+    await expect(
+      page.locator(
+        "[data-core-merchant-view], [data-core-hierarchy-ready], [data-core-team-view], [data-core-team-ready], [data-core-capability-enablement-ready]",
+      ),
+    ).toBeVisible();
+    return;
+  }
+  if (name === "core-employee-review-ready") {
+    await expect(
+      page.locator(
+        "[data-core-employee-view], [data-employee-credentials-ready], [data-core-employee-login-code-ready]",
+      ),
+    ).toBeVisible();
+    return;
+  }
+  if (name === "core-account-review-ready") {
+    await expect(
+      page.locator(
+        "[data-core-account-security], [data-merchant-inventory-access]",
+      ),
+    ).toBeVisible();
+    return;
+  }
   const pendingBrowsingPrefix = "pending-movements-browsing-";
   if (name?.startsWith(pendingBrowsingPrefix)) {
     const preset = name.slice(pendingBrowsingPrefix.length);

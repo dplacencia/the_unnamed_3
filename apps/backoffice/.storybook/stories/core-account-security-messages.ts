@@ -1,0 +1,292 @@
+import type { Locale } from "@/i18n/configuration";
+
+const es = {
+  security: "Seguridad de la cuenta",
+  recovery: "Recuperación de seguridad",
+  recoveryHint: "Iníciala si sospechas que alguien ha accedido a tu cuenta.",
+  sessions: "Gestionar sesiones",
+  sessionsHandoff:
+    "El servicio de acceso permite cerrar las demás sesiones o todas.",
+  signedOut: "El inicio de sesión continúa en el servicio de acceso.",
+  passwordHandoff:
+    "La solicitud de contraseña continúa en el servicio de acceso.",
+  back: "Volver",
+  confirmRecovery: "Iniciar recuperación",
+  confirmation:
+    "Se bloqueará el acceso a tus negocios mientras recuperas la cuenta. Tendrás que configurar de nuevo la contraseña y los métodos de verificación que necesites.",
+  creationIncomplete: "Hay un comercio que todavía se está preparando.",
+  creationIncompleteHint:
+    "Podrás iniciar la recuperación cuando termine su preparación.",
+  pending: "Recuperación en curso",
+  pendingHint: "El acceso permanece bloqueado. Puedes consultar el estado.",
+  action_required: "Completa la configuración de la cuenta",
+  action_requiredHint:
+    "Busca el enlace de configuración en el correo registrado. Después, vuelve a iniciar sesión.",
+  support_required: "La recuperación necesita asistencia",
+  support_requiredHint: "Contacta con soporte. El acceso sigue bloqueado.",
+  completed: "Cuenta recuperada",
+  completedHint: "Ya puedes iniciar sesión con tus nuevas credenciales.",
+  unavailable: "No se puede consultar la recuperación",
+  unavailableHint:
+    "La recuperación puede seguir en curso. Si has recibido el enlace de configuración, completa los pasos y vuelve a iniciar sesión.",
+  deliveryUnknown: "No se ha podido confirmar la solicitud de recuperación",
+  deliveryUnknownHint:
+    "La recuperación puede haber empezado. Revisa tu correo antes de intentar iniciar otra solicitud.",
+  consult: "Consultar estado",
+  signIn: "Iniciar sesión",
+  forgotPassword: "Solicitar contraseña",
+  mfa: "Verificación en dos pasos del comercio",
+  mfaHint: "Esta política se aplica al acceso a este comercio.",
+  off: "No obligatoria",
+  grace: "Período de adaptación en curso",
+  required: "Obligatoria",
+  deadline: "Fin del período de adaptación",
+  days: "Días de adaptación",
+  daysHint: "Introduce un número de 1 a 60.",
+  enable: "Exigir verificación",
+  adjust: "Cambiar fecha",
+  newDeadline: "Nueva fecha de fin",
+  disable: "Dejar de exigir",
+  recheck: "Verifica tu identidad",
+  recheckHint:
+    "Confirma la verificación en dos pasos en el servicio de acceso para guardar este cambio.",
+  recheckAction: "Continuar a la verificación",
+  recheckRefused:
+    "La verificación no se ha confirmado. La política sigue igual.",
+  saved: "Política actualizada",
+  cancel: "Cancelar",
+  continue: "Continuar",
+};
+
+export const accountSecurityMessages: Record<Locale, typeof es> = {
+  es,
+  en: {
+    security: "Account security",
+    recovery: "Security recovery",
+    recoveryHint:
+      "Start this if you suspect someone has accessed your account.",
+    sessions: "Manage sessions",
+    sessionsHandoff:
+      "The sign-in service can sign out your other sessions or all sessions.",
+    signedOut: "Sign-in continues with the sign-in service.",
+    passwordHandoff: "The password request continues with the sign-in service.",
+    back: "Back",
+    confirmRecovery: "Start recovery",
+    confirmation:
+      "Access to your businesses will be locked during recovery. You’ll need to set your password and the verification methods you need again.",
+    creationIncomplete: "A business is still being set up.",
+    creationIncompleteHint: "You can start recovery after its setup finishes.",
+    pending: "Recovery in progress",
+    pendingHint: "Access remains locked. You can check the status.",
+    action_required: "Complete account setup",
+    action_requiredHint:
+      "Look for the setup link at your registered email address. Then sign in again.",
+    support_required: "Recovery needs support",
+    support_requiredHint: "Contact support. Access remains locked.",
+    completed: "Account recovered",
+    completedHint: "You can sign in with your new credentials.",
+    unavailable: "We can’t check recovery status",
+    unavailableHint:
+      "Recovery may still be in progress. If you received the setup link, complete the steps and sign in again.",
+    deliveryUnknown: "We couldn’t confirm the recovery request",
+    deliveryUnknownHint:
+      "Recovery may have started. Check your email before trying to start another request.",
+    consult: "Check status",
+    signIn: "Sign in",
+    forgotPassword: "Request a password",
+    mfa: "Business two-step verification",
+    mfaHint: "This policy applies when someone accesses this business.",
+    off: "Optional",
+    grace: "Grace period in progress",
+    required: "Required",
+    deadline: "Grace period ends",
+    days: "Grace period in days",
+    daysHint: "Enter a number from 1 to 60.",
+    enable: "Require verification",
+    adjust: "Change date",
+    newDeadline: "New end date",
+    disable: "Stop requiring verification",
+    recheck: "Verify your identity",
+    recheckHint:
+      "Confirm two-step verification with the sign-in service to save this change.",
+    recheckAction: "Continue to verification",
+    recheckRefused: "Verification was not confirmed. The policy is unchanged.",
+    saved: "Policy updated",
+    cancel: "Cancel",
+    continue: "Continue",
+  },
+  ca: {
+    security: "Seguretat del compte",
+    recovery: "Recuperació de seguretat",
+    recoveryHint: "Inicia-la si sospites que algú ha accedit al teu compte.",
+    sessions: "Gestiona les sessions",
+    sessionsHandoff:
+      "El servei d’accés permet tancar les altres sessions o totes.",
+    signedOut: "L’inici de sessió continua al servei d’accés.",
+    passwordHandoff:
+      "La sol·licitud de contrasenya continua al servei d’accés.",
+    back: "Torna",
+    confirmRecovery: "Inicia la recuperació",
+    confirmation:
+      "L’accés als teus comerços es bloquejarà durant la recuperació. Hauràs de tornar a configurar la contrasenya i els mètodes de verificació que necessitis.",
+    creationIncomplete: "Encara s’està preparant un comerç.",
+    creationIncompleteHint:
+      "Podràs iniciar la recuperació quan acabi la preparació.",
+    pending: "Recuperació en curs",
+    pendingHint: "L’accés continua bloquejat. En pots consultar l’estat.",
+    action_required: "Completa la configuració del compte",
+    action_requiredHint:
+      "Busca l’enllaç de configuració al correu registrat. Després, torna a iniciar la sessió.",
+    support_required: "La recuperació necessita assistència",
+    support_requiredHint:
+      "Contacta amb el servei d’assistència. L’accés continua bloquejat.",
+    completed: "Compte recuperat",
+    completedHint: "Ja pots iniciar la sessió amb les credencials noves.",
+    unavailable: "No es pot consultar la recuperació",
+    unavailableHint:
+      "La recuperació pot continuar en curs. Si has rebut l’enllaç de configuració, completa els passos i torna a iniciar la sessió.",
+    deliveryUnknown: "No s’ha pogut confirmar la sol·licitud de recuperació",
+    deliveryUnknownHint:
+      "Pot ser que la recuperació hagi començat. Revisa el correu abans d’intentar iniciar una altra sol·licitud.",
+    consult: "Consulta l’estat",
+    signIn: "Inicia la sessió",
+    forgotPassword: "Sol·licita una contrasenya",
+    mfa: "Verificació en dos passos del comerç",
+    mfaHint: "Aquesta política s’aplica a l’accés a aquest comerç.",
+    off: "Opcional",
+    grace: "Període d’adaptació en curs",
+    required: "Obligatòria",
+    deadline: "Fi del període d’adaptació",
+    days: "Dies d’adaptació",
+    daysHint: "Introdueix un número de l’1 al 60.",
+    enable: "Exigeix la verificació",
+    adjust: "Canvia la data",
+    newDeadline: "Nova data de fi",
+    disable: "Deixa d’exigir-la",
+    recheck: "Verifica la teva identitat",
+    recheckHint:
+      "Confirma la verificació en dos passos al servei d’accés per desar aquest canvi.",
+    recheckAction: "Continua a la verificació",
+    recheckRefused:
+      "No s’ha confirmat la verificació. La política no ha canviat.",
+    saved: "Política actualitzada",
+    cancel: "Cancel·la",
+    continue: "Continua",
+  },
+  gl: {
+    security: "Seguridade da conta",
+    recovery: "Recuperación de seguridade",
+    recoveryHint: "Iníciaa se sospeitas que alguén accedeu á túa conta.",
+    sessions: "Xestionar sesións",
+    sessionsHandoff:
+      "O servizo de acceso permite pechar as demais sesións ou todas.",
+    signedOut: "O inicio de sesión continúa no servizo de acceso.",
+    passwordHandoff:
+      "A solicitude de contrasinal continúa no servizo de acceso.",
+    back: "Volver",
+    confirmRecovery: "Iniciar recuperación",
+    confirmation:
+      "O acceso aos teus comercios quedará bloqueado durante a recuperación. Terás que configurar de novo o contrasinal e os métodos de verificación que precises.",
+    creationIncomplete: "Aínda se está a preparar un comercio.",
+    creationIncompleteHint:
+      "Poderás iniciar a recuperación cando remate a súa preparación.",
+    pending: "Recuperación en curso",
+    pendingHint: "O acceso segue bloqueado. Podes consultar o estado.",
+    action_required: "Completa a configuración da conta",
+    action_requiredHint:
+      "Busca a ligazón de configuración no correo rexistrado. Despois, volve iniciar sesión.",
+    support_required: "A recuperación precisa asistencia",
+    support_requiredHint:
+      "Contacta co servizo de asistencia. O acceso segue bloqueado.",
+    completed: "Conta recuperada",
+    completedHint: "Xa podes iniciar sesión coas novas credenciais.",
+    unavailable: "Non se pode consultar a recuperación",
+    unavailableHint:
+      "A recuperación pode seguir en curso. Se recibiches a ligazón de configuración, completa os pasos e volve iniciar sesión.",
+    deliveryUnknown: "Non se puido confirmar a solicitude de recuperación",
+    deliveryUnknownHint:
+      "A recuperación pode ter comezado. Revisa o correo antes de tentar iniciar outra solicitude.",
+    consult: "Consultar o estado",
+    signIn: "Iniciar sesión",
+    forgotPassword: "Solicitar un contrasinal",
+    mfa: "Verificación en dous pasos do comercio",
+    mfaHint: "Esta política aplícase ao acceso a este comercio.",
+    off: "Opcional",
+    grace: "Período de adaptación en curso",
+    required: "Obrigatoria",
+    deadline: "Fin do período de adaptación",
+    days: "Días de adaptación",
+    daysHint: "Introduce un número do 1 ao 60.",
+    enable: "Esixir a verificación",
+    adjust: "Cambiar a data",
+    newDeadline: "Nova data de fin",
+    disable: "Deixar de esixir",
+    recheck: "Verifica a túa identidade",
+    recheckHint:
+      "Confirma a verificación en dous pasos no servizo de acceso para gardar este cambio.",
+    recheckAction: "Continuar á verificación",
+    recheckRefused: "A verificación non se confirmou. A política segue igual.",
+    saved: "Política actualizada",
+    cancel: "Cancelar",
+    continue: "Continuar",
+  },
+  eu: {
+    security: "Kontuaren segurtasuna",
+    recovery: "Segurtasun-berreskuratzea",
+    recoveryHint: "Hasi norbait zure kontura sartu dela susmatzen baduzu.",
+    sessions: "Kudeatu saioak",
+    sessionsHandoff:
+      "Sarbide-zerbitzuan gainerako saioak edo saio guztiak itxi ditzakezu.",
+    signedOut: "Saioaren hasierak sarbide-zerbitzuan jarraitzen du.",
+    passwordHandoff: "Pasahitzaren eskaerak sarbide-zerbitzuan jarraitzen du.",
+    back: "Itzuli",
+    confirmRecovery: "Hasi berreskuratzea",
+    confirmation:
+      "Zure saltokietarako sarbidea blokeatuta egongo da berreskuratu bitartean. Pasahitza eta behar dituzun egiaztapen-metodoak berriro konfiguratu beharko dituzu.",
+    creationIncomplete: "Saltoki bat prestatzen ari da oraindik.",
+    creationIncompleteHint:
+      "Prestaketa amaitzean hasi ahal izango duzu berreskuratzea.",
+    pending: "Berreskuratzea martxan",
+    pendingHint:
+      "Sarbidea blokeatuta dago oraindik. Egoera kontsulta dezakezu.",
+    action_required: "Osatu kontuaren konfigurazioa",
+    action_requiredHint:
+      "Bilatu konfigurazio-esteka erregistratutako mezu elektronikoan. Ondoren, hasi saioa berriro.",
+    support_required: "Berreskuratzeko laguntza behar da",
+    support_requiredHint:
+      "Jarri harremanetan laguntza-zerbitzuarekin. Sarbideak blokeatuta jarraitzen du.",
+    completed: "Kontua berreskuratu da",
+    completedHint: "Saioa hasi dezakezu kredentzial berriekin.",
+    unavailable: "Ezin da berreskuratzea kontsultatu",
+    unavailableHint:
+      "Baliteke berreskuratzea martxan egotea. Konfigurazio-esteka jaso baduzu, bete urratsak eta hasi saioa berriro.",
+    deliveryUnknown: "Ezin izan da berreskuratze-eskaera baieztatu",
+    deliveryUnknownHint:
+      "Baliteke berreskuratzea hasi izana. Begiratu posta elektronikoa beste eskaera bat egiten saiatu aurretik.",
+    consult: "Kontsultatu egoera",
+    signIn: "Hasi saioa",
+    forgotPassword: "Eskatu pasahitza",
+    mfa: "Saltokiko bi urratseko egiaztapena",
+    mfaHint: "Politika hau saltoki honetarako sarbideari aplikatzen zaio.",
+    off: "Aukerakoa",
+    grace: "Egokitzapen-aldia martxan",
+    required: "Nahitaezkoa",
+    deadline: "Egokitzapen-aldiaren amaiera",
+    days: "Egokitzeko egunak",
+    daysHint: "Sartu 1etik 60ra bitarteko zenbaki bat.",
+    enable: "Egin egiaztapena nahitaezko",
+    adjust: "Aldatu data",
+    newDeadline: "Amaiera-data berria",
+    disable: "Utzi eskatzeari",
+    recheck: "Egiaztatu zure nortasuna",
+    recheckHint:
+      "Berretsi bi urratseko egiaztapena sarbide-zerbitzuan aldaketa hau gordetzeko.",
+    recheckAction: "Jarraitu egiaztapenera",
+    recheckRefused:
+      "Egiaztapena ez da baieztatu. Politikak bere horretan jarraitzen du.",
+    saved: "Politika eguneratuta",
+    cancel: "Utzi",
+    continue: "Jarraitu",
+  },
+};
+export type AccountSecurityCopy = typeof es;
