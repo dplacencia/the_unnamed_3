@@ -17,8 +17,37 @@ wording and unresolved choices. Future accepted changes retain their explicit
 scope; these entry-point links are not approval or execution authority.
 
 Current UX checkpoint — 2026-11-20: the user approved the
+[36-image duplicate cancellation gallery](openspec/changes/refine-pending-duplicate-review/design.md#visual-approval).
+The registry contains 2,708 approved references. The guided duplicate review
+keeps the complete target batch separate from the selected batch to keep.
+
+Partial receipt checkpoint — 2026-11-20: the user approved the
+[40-image partial receipt gallery](openspec/changes/refine-pending-receipt-quantity/design.md#visual-approval).
+That checkpoint brought the registry to 2,672 references. The guided receipt review
+keeps the recorded and indicated quantities separate from the confirmed effect.
+
+Pending departure release checkpoint — 2026-11-20: the user approved the
+[40-image Pendientes release gallery](openspec/changes/refine-pending-release-guidance/design.md#visual-approval).
+That checkpoint brought the registry to 2,632 references. The guided Salida release
+requires reconfirmation when the selected channel changes and preserves the
+recorded facts, indicated channel and exact stock effect.
+
+Salidas feedback checkpoint — 2026-11-20: the user approved the
+[32-image Salidas feedback gallery](openspec/changes/refine-departure-feedback/design.md#visual-approval).
+That checkpoint brought the registry to 2,592 references. Salida feedback distinguishes
+the entered quantity from the confirmed signed effect and retains the original
+request for unconfirmed recovery.
+
+Receipt feedback checkpoint — 2026-11-20: the user approved the
+[40-image receipt feedback gallery](openspec/changes/refine-receipt-feedback/design.md#visual-approval).
+That checkpoint brought the registry to 2,560 references. Receipt feedback preserves
+the result at registration and shows the current status only after an exact
+line read. A failed balance lookup retries the read. An unconfirmed receipt
+retries the original operation as specified.
+
+Inicio UX checkpoint — 2026-11-20: the user approved the
 [48-image Inicio gallery](openspec/changes/refine-owner-first-use/design.md#visual-approval).
-The registry contains 2,520 approved references. The next-action card uses
+That checkpoint brought the registry to 2,520 references. The next-action card uses
 confirmed setup facts and leaves the Area choice to the merchant when several
 qualify. Treat any further visual revisions as new candidates for approval.
 

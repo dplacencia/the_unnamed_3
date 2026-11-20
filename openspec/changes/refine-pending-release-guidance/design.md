@@ -39,3 +39,14 @@ and verify the channel confirmation and retained list context at 320 px.
   exact signed effect, retained list scope and size, and resumed recovery.
   [52 approved-reference comparisons](http://localhost:9324/runs/2026-11-20T20-44-44.756Z/playwright-report/index.html)
   passed, including all 32 Salidas images. The new candidates await review.
+
+## Visual approval
+
+On November 20, 2026, the user replied “that looks much better, I approve it.
+continue” to the [40-image Pendientes release review](http://localhost:9324/runs/2026-11-20T20-45-12.342Z/review.html).
+All 40 approved images were added using the preserved source and pinned
+renderer. Verified hashes cover 2,632 references, including the 2,592
+carried forward.
+All 40 approved images passed a
+[fresh comparison](http://localhost:9324/runs/2026-11-20T20-59-24.445Z/playwright-report/index.html)
+after the partial receipt preview was added.

@@ -31,9 +31,19 @@ Chromium. Review the approved four profiles with all five languages represented.
 - [40 screenshot candidates](http://localhost:9324/runs/2026-11-20T21-00-08.886Z/review.html)
   cover four profiles and five languages. Their source fingerprint is
   `e504febf2e9a28624a37a3de43360d77ed0c875c9aebc2f6a3550d7b9d0076bc`.
-  The candidates await review.
+  The candidates were approved as recorded below.
 - `pnpm check` passed with 248 code tests. Pinned Chromium passed 11 browser
   checks, including invalid quantities, reconfirmation after an edit and return
   to the same Pendientes list at 320 px.
   [60 approved-reference comparisons](http://localhost:9324/runs/2026-11-20T20-59-24.445Z/playwright-report/index.html)
   passed, including the approved departure walkthrough and previous receipt review.
+
+## Visual approval
+
+On November 20, 2026, the user replied “that looks much better, I approve it.
+continue” to the [40-image partial receipt gallery](http://localhost:9324/runs/2026-11-20T21-00-08.886Z/review.html).
+All 40 images were added using the preserved source and pinned renderer.
+Verified hashes cover 2,672 references, including the 2,632 carried forward.
+All 40 approved images passed a
+[fresh comparison](http://localhost:9324/runs/2026-11-20T21-09-57.676Z/playwright-report/index.html)
+after the duplicate cancellation preview was added.

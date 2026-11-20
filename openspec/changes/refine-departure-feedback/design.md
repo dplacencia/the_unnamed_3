@@ -36,3 +36,15 @@ phone layout in pinned Chromium.
   [56 approved-reference comparisons](http://localhost:9324/runs/2026-11-20T20-28-15.340Z/playwright-report/index.html)
   passed, including 40 receipt images and 16 departure baselines. The
   32 departure images await visual approval.
+
+## Visual approval
+
+On November 20, 2026, the user selected **Approve all 32 images** for the
+[exact Salidas feedback gallery](http://localhost:9324/runs/2026-11-20T20-28-43.029Z/review.html).
+The promotion used the preserved source from that run and the pinned Chromium
+renderer. All 32 images were added. All 2,592 registry hashes verify, including
+the 2,560 carried forward.
+
+All 32 approved Salidas images passed fresh comparison in the Storybook build
+that adds the Pending release guidance.
+[Playwright results](http://localhost:9324/runs/2026-11-20T20-44-44.756Z/playwright-report/index.html)

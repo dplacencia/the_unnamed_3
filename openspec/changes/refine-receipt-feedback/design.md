@@ -37,3 +37,14 @@ retry behavior. The fixture controls the statuses and amounts.
   the return to the original result, both retry paths and a 320 px viewport.
   [28 approved-reference comparisons](http://localhost:9324/runs/2026-11-20T20-16-13.247Z/playwright-report/index.html)
   passed. The new images await visual review.
+
+## Visual approval
+
+On November 20, 2026, the user selected **Approve all 40 images** for the
+[exact receipt-feedback gallery](http://localhost:9324/runs/2026-11-20T20-16-37.301Z/review.html).
+The promotion used the preserved source for that run and the approved renderer.
+All 40 images were added. Verified hashes cover all 2,560 references, including
+the 2,520 carried forward.
+
+All 40 approved receipt images passed comparison in the Storybook build that
+adds the departure preview. [Playwright results](http://localhost:9324/runs/2026-11-20T20-28-15.340Z/playwright-report/index.html)
