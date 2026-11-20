@@ -40800,6 +40800,1230 @@
       "run": "2026-11-20T16-30-47.589Z",
       "sourceHash": "0e9abd97ce324ad31ce2c92272f2391186f098c1f5003436e47a388e37a24cc8",
       "profileHash": "0f38ea36dcc1e01bd2600c417161ed9bc88716b51b67c10738ce978e66dee0be"
+    },
+    "daily-stock-balance-read-failed-failed-read--desktop": {
+      "sha256": "c42b7b78c7061cbcbca442472548ef180b8431ae65568a254643fa434a5320a4",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "63bd0df13453d63f8e8723340a85ab3f4bce2792281f5c644cc4e0a5f3d49d2f"
+    },
+    "daily-stock-balance-read-failed-failed-read--desktop-dark": {
+      "sha256": "1e7706542dcda89719f9db4f517dd437c4c8de5b5d19ec5cd243276965154361",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "6626903d883e0cc4ba75db0c9326cd98009e598a5e1a6910628a9dcb1ee2ad1d"
+    },
+    "daily-stock-balance-read-failed-failed-read--mobile": {
+      "sha256": "661ad13cd71b2ccefcbc742f753389e75169fb9b87266a6bfc1044ca66084b94",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "b4a5896fc9a9859eb8ce1cc275136e4dbe1d594a42ae0abb191448b1833a3783"
+    },
+    "daily-stock-balance-read-failed-failed-read--tablet": {
+      "sha256": "1a5e00d0cb10d50ce5b97a6c3fc404fe1102847ac51f42be854a598febb35240",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "d2a0ddd622c2101234778bb81facecebf6aaa2101b83419f6635173d2c4e29a5"
+    },
+    "daily-stock-current-applied-receipt--desktop": {
+      "sha256": "fc68f517a114561f9f55cfbfc9955517886dd9c506fecd2db1f71d355a2ac922",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "f0adebd9bbbb02399fbb47fb77ea8192b4dfb336dba3f431909ad96fb1066675"
+    },
+    "daily-stock-current-applied-receipt--desktop-dark": {
+      "sha256": "0a303dbc39b03eaf59723567b5b0c4141f9bfab1b63ed2bf44a98cccfc20d204",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "d60757a8be3add171cd1a15464413ace25658236ab3b66a1f1089b8c808c863e"
+    },
+    "daily-stock-current-applied-receipt--mobile": {
+      "sha256": "9b4e1693f72e01fb0a399392ce14aa5ff8baad0b6123d315e4febe0b7476b0d6",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "c67c264d94176a10d449f5691d3e12955530b6bd575c89a5edc9e65dd7a2b598"
+    },
+    "daily-stock-current-applied-receipt--tablet": {
+      "sha256": "0d8f42dc97067cd31786c841a081f338e7a1c4555a1181fab56d8d1d5f356753",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "860e37b72aef02bd9fe67575b5c79502fb52e96e8673ccce5e2512ca67304a6b"
+    },
+    "daily-stock-current-product-details--desktop": {
+      "sha256": "35226b092fe33e0092b963f9db520e37b4538cf80078435547a99653416e6a32",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "9e5efd3f8ef982441425de67c45b2ec24c31d28bd2489fa8d1188301fcbdbb27"
+    },
+    "daily-stock-current-product-details--desktop-dark": {
+      "sha256": "cd3bb4d472c10d8934dca5e4f05cb733cc8d45e7ff0f3d2e754ff7eeedf5b5e4",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "40ad9ab94fad695a0575069d67aa5da31973d3b37200dbe0841e9ea68b4af18f"
+    },
+    "daily-stock-current-product-details--mobile": {
+      "sha256": "b33404fcbfc15cad4753fd3da42c8ec500731c51d2ecf5bc87dbcb02be471a75",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "a429a25be3c6446633404179220d38195a8d03f9a640152a71075e7e42390dc7"
+    },
+    "daily-stock-current-product-details--tablet": {
+      "sha256": "df3c314976c89edeec3d33a5c3d51b76c0d8e2321ebce3cca8e81b6e3c5e172b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "976c32c64e3f46603db705191693a233a99894e257ba1c17069e32cbfbbe71d4"
+    },
+    "daily-stock-current-receipt-form--desktop": {
+      "sha256": "7b267054850b4b362be518cde5c502f5d57aed7389e68bf332c3df611ccb5565",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "1c26b5cbf5b025024d5b4bbf0a50fe97875c63af508961db9fd068858bf821b5"
+    },
+    "daily-stock-current-receipt-form--desktop-dark": {
+      "sha256": "6e43eb651280e98ae30aa59d6711baae75a1c2289cd88e1f6bacd4290faad535",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "1ea2d03abfa6de3e0aad400a40b985224ed6a1d69f577e7fca088813c232b8cd"
+    },
+    "daily-stock-current-receipt-form--mobile": {
+      "sha256": "642d75669aba5a394c1e3ea16641af1dcbf3c96538c3db4da0fd51f9295d819a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "db5eb1c2382cacea0da7bce39b60405c57ee0808fbde27f2135d009f252d477d"
+    },
+    "daily-stock-current-receipt-form--tablet": {
+      "sha256": "6be59ed9aa9c00d7ea31b7c60c9edf3333c419401750cbfb1c40f1c52d3a8c19",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "c6c2a58ec8bf054119667a9abe70f07eea2c8e9ab5249214cf331014aa003e20"
+    },
+    "daily-stock-current-recorded-stock--desktop": {
+      "sha256": "d17128a5a1983b49ffc81fed3276c83b76923073b7530f97e566456966849536",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "50c84659603829c3916478a230537a3bd0693e301974fadbc1f2fb245907c750"
+    },
+    "daily-stock-current-recorded-stock--desktop-dark": {
+      "sha256": "28cd7c8bcc8d64a9c699fa915216df88b68b2e13ed9cd541b51cc098c816fe11",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "7416df99849e66f025931f310733fed6d631d8b93ebc79f6e59000d9d67096e8"
+    },
+    "daily-stock-current-recorded-stock--mobile": {
+      "sha256": "4d1da0fdaee7f8aa0f4a4734e1001b1a63e71a9df62c69464f35f9abfddcadd5",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "d3ad700ceed5c25888b815061dc18042ee817e3ada3c4e32e0a59c76f35e5d8e"
+    },
+    "daily-stock-current-recorded-stock--tablet": {
+      "sha256": "3c8db375df801bd85f3f560698b991d45f9279d33fd6201ae10f66f84cf6d408",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "6619c06d5ee00b6964b1126310de1be1bad1e874f7066ac1d5803041de13b5ac"
+    },
+    "daily-stock-pending-pending-result--desktop": {
+      "sha256": "f37d7ad368a07a9c7ff11f84719f924ceaee2b925696d82f43ce81e4364af23b",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "cf95a1519c36716627658e1952ca6d9daf557eb0017bebffebf6aaf4c670cfff"
+    },
+    "daily-stock-pending-pending-result--desktop-dark": {
+      "sha256": "abda328ae075b23c8b0ab821aebf9d4200802c0293ed4829a47946470ad11422",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "a0538ccdb419324a84f2e6a26cf0c1149a4a75f38e7676661d777f681fc3a80c"
+    },
+    "daily-stock-pending-pending-result--mobile": {
+      "sha256": "feae335d6182b89458ee402756aedb819b80579f2c135c2befe14ac820072465",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "5d124843481fa2d909f9d622a4f7208ed47c426a9a01b70da9209681f2b31be3"
+    },
+    "daily-stock-pending-pending-result--tablet": {
+      "sha256": "6a73fe966c539224961fa48352b94c914bf2100e3376d2cfcd2b5c2815e3cb42",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "400726a9cf93a6366ecad80da758daafbf291b502ffc704a2a4bd15e49ab82fa"
+    },
+    "daily-stock-proposed-applied-receipt--desktop": {
+      "sha256": "ed375ff5af84134949824f1f93077a2600b946f2c22a82aae97861c05d1387b2",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "9bed0d0cbbeca59a6bcccef4a635a6ab80d3e432a9c9c57f1bc7e2b312f6022f"
+    },
+    "daily-stock-proposed-applied-receipt--desktop-dark": {
+      "sha256": "6c497449e7a5b7cd54e88ce59da29795ed33640233232c50ebf1b58469b729f0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "4a9d614c81123ff6a18e73021154551ee16294ce1cd579ea38b0e380e624cdc8"
+    },
+    "daily-stock-proposed-applied-receipt--mobile": {
+      "sha256": "952270a4ce36e6bf34db6644f6f9f2274783edf96ab3d43c71c55670f4112d0a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "2e2b8b0b467b959bdaf5c52855f76a9d73712c72c61c53c5bef8c56c6f24abc3"
+    },
+    "daily-stock-proposed-applied-receipt--tablet": {
+      "sha256": "a431aa355e1501740955c351c1b56baea6f1a9a852ce54be47f2fae0ab0652ac",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "a3c988a956cc64082088c1e0d8568b5e03141b5b103bdb30b1af542389c1ec51"
+    },
+    "daily-stock-proposed-ca-receipt-form--desktop": {
+      "sha256": "798315bd154b6c408140aa7d801827ea1ffa17491f7025853ecae1789f2401b4",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "0cbc5c7e8db546539817dabedcf8f87662af0b3b68fab61c8ca06b2fba1f3eec"
+    },
+    "daily-stock-proposed-ca-receipt-form--desktop-dark": {
+      "sha256": "4d6e5c18a101573d44e8fab5470aa23f52ad49519e714292a11a9646a8b78250",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "5de87a908faa7c6d2659741556ec72285505a09c56229410f80125b63fa22d33"
+    },
+    "daily-stock-proposed-ca-receipt-form--mobile": {
+      "sha256": "8dcbf65c811e1caf5ede80340bf6b1e4aa984e90c5e67fc3fd1afca9abeec66d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "58b8335fe7002e0c765574e863244463071ff896854dd9b2ffd8dec5cc89b17a"
+    },
+    "daily-stock-proposed-ca-receipt-form--tablet": {
+      "sha256": "64baec428099f9f878036edec199b08be76f16a212859edeb94d7eb859196ab9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "96a26e9a64840d1168fa9655f8296f9d6c7f26b6cda9bf1f089f8d31485b51ef"
+    },
+    "daily-stock-proposed-ca-recorded-stock--desktop": {
+      "sha256": "9d5b762567ebbf7e3a79558739aa256e8217195704b57a2fb0363b85b8ab0c22",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "e45e58e1e57a691d0a875061853c6b2bf13403e977b3136ad259bd89a1554d8d"
+    },
+    "daily-stock-proposed-ca-recorded-stock--desktop-dark": {
+      "sha256": "441c91c440980c4f078aaa59e163d8ffd36f40a322951130ebab7119181f18d1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "6d9b667c3322c8cd0753ed5888c62e310df3949eacc4321fe29e3e33ef63f3ca"
+    },
+    "daily-stock-proposed-ca-recorded-stock--mobile": {
+      "sha256": "be881c856f427efbd41984ec5cce0345d585412a29b4bc639fd3d32176e39f27",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "4f6f882b728dae9510082dd98090dea7126af3f28a92f3bebf3d0620ac74a242"
+    },
+    "daily-stock-proposed-ca-recorded-stock--tablet": {
+      "sha256": "4a0774e815051d3b6642593cb690e301aa85890ed2b3b8df540ee5b94b0deadc",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "0a08a2e9c27a645c6515a6d97453bb0d13dd5ba414502fb2d8efdc3c0df39aab"
+    },
+    "daily-stock-proposed-en-receipt-form--desktop": {
+      "sha256": "5cb3751c3fb274a3bbc44d4533b882dc49461ca9603224f544178efd474abce8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "ab5744938b3ed1475842f5f6a5c66a448a3561f7ca1998d838e3bf1c7f2b56c2"
+    },
+    "daily-stock-proposed-en-receipt-form--desktop-dark": {
+      "sha256": "ec8cbeebfbbcaef4dc89d1b2ecfa51fa14da98fe8f910501d03fdb54d9a5b9c0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "5c9e49ee98f6c0b040ade5ceabf31b430ca9921d865ad14522179499063a92ba"
+    },
+    "daily-stock-proposed-en-receipt-form--mobile": {
+      "sha256": "2029794ce8b5346ef15b11f0e2eb80bc974107d532e64b8a48f275fb18f68231",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "7d7b04daa0e3d00dd4079337f270d27cef70c58fb83cb075900805c34f958cca"
+    },
+    "daily-stock-proposed-en-receipt-form--tablet": {
+      "sha256": "352c195d21cab5a82955668911eeba3508316dead6fedf4e4cd0629aa695754e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "9bf00b0e22d1aece5ab50b2279ec7e63bd2fbfc5c0caeb3b1f78edd56173bac8"
+    },
+    "daily-stock-proposed-en-recorded-stock--desktop": {
+      "sha256": "14839692208ff01008bccfd6e2f02c225109057eaf27001c24a7124715929b60",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "2aa307aa1a81334cb0ff341a3bb2638d0223dd165c8e79a9ca8ff0b51e3e6bea"
+    },
+    "daily-stock-proposed-en-recorded-stock--desktop-dark": {
+      "sha256": "df02315b7606637135e09a7f1eef9b0e8cd32a1ef7700ef4d2ab13c5e35cd1e8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "5190d4b3f095ff1b6640b0d84a928ee2e7ff0f2e36fd8c1a0ea534edd670bcf7"
+    },
+    "daily-stock-proposed-en-recorded-stock--mobile": {
+      "sha256": "1c4ef57564ce216ee4a48dee52f4ddfdc4bc206d1bf6b1a2c957be6ffeca00e8",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "9917e14534db5c2ce45c10cd8582e0ad3703830ddab9cca75c7aef5343349a6f"
+    },
+    "daily-stock-proposed-en-recorded-stock--tablet": {
+      "sha256": "903e2dd1c509abe366ae8d18576c92a44b5191725ba970967ed8a10228d0269d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "71239a0a1c4dabfa5fd96f6f1bb9fc4e925b69c1537b13a53ddbf049d67e2b04"
+    },
+    "daily-stock-proposed-eu-receipt-form--desktop": {
+      "sha256": "a7ad42191a55c44f97a72380f612dcf5a48f9f9acef51a24a5cde9d020c4c35d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "975d43482c9829077e16e68058ce3026ad77383cfce61a2609dca206e6827238"
+    },
+    "daily-stock-proposed-eu-receipt-form--desktop-dark": {
+      "sha256": "e6785eb060423f63f1d42d42378fda15891504486093c4fc6452d50b8f67d627",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "ed70d7e557161b35f614b574201ec37b40cba215f7fee4593da56b5f8751aeb2"
+    },
+    "daily-stock-proposed-eu-receipt-form--mobile": {
+      "sha256": "564db8fdd7b17df0011bfa9a4bf295c1d09a37490925666d06c3c1a1afc3540d",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "ef800e44fe8c5af911eca69b4bce6105c0c61771992fc588dc5efb54ac6618a4"
+    },
+    "daily-stock-proposed-eu-receipt-form--tablet": {
+      "sha256": "96bc040d9b45823755faf0c3dd96656e56a05c0409df6f8bec8804cca193baf0",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "621e6a1ddc30b43ffa6c4af8a0dd587ffad9cba9bf9f4fea37053e411400fb2b"
+    },
+    "daily-stock-proposed-eu-recorded-stock--desktop": {
+      "sha256": "3bf562376e4f37973a91e44c2629939bce612a9ea859792ddba851a6ef2e8d97",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "cddedd3b0ca48dfd6b8850feb2c247a03a52e0e5cc7f16534acbcde6e41684fa"
+    },
+    "daily-stock-proposed-eu-recorded-stock--desktop-dark": {
+      "sha256": "a3d14ddf74019e52f3571f137916846402d7fb34b082aabbbe91b1f83159988a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "1d5e1f263feb83d3fd76ff4869bc9ae650312e3590492065121d704f0ca5e438"
+    },
+    "daily-stock-proposed-eu-recorded-stock--mobile": {
+      "sha256": "f982f3a763aacd2e5276f01b2703a77723c8ef5981bf66ed165f9158fc2f8119",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "0779cc4174a4f8d0a54f77d7c72e388f025505be073ff38652484a8d3ee15b75"
+    },
+    "daily-stock-proposed-eu-recorded-stock--tablet": {
+      "sha256": "d173a854c78f8fbc40beec2132eb46acfcaadd5e71eed81b1dec8968d75edbeb",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "9f416776e90c9ffa593b7a828603d2638ad1d91ab4da08b883a9f4ee6208ed4d"
+    },
+    "daily-stock-proposed-gl-receipt-form--desktop": {
+      "sha256": "fcbf67a81981758e37ca07864f9d82b2516c253f037256ebee426640c535ff5a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "6d9627794188fe05ea00e788157e9d1f9bdafd480fa69ae4634e580f34a85ff7"
+    },
+    "daily-stock-proposed-gl-receipt-form--desktop-dark": {
+      "sha256": "de60cfb4ed7d851c855c819cd30aa25fe82b9897ec95cd94cf03abf98d384c0a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "9f3649fbbbae0198d8f7c590a3fa0d6f5df2e5d3fce53cc7a72340254322384d"
+    },
+    "daily-stock-proposed-gl-receipt-form--mobile": {
+      "sha256": "58aa8eac219935ada0842409e24262c1f6a3e4dae1ae392067ca2afae9b903a3",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "d1e7762d0b989d8c4ded97130e71a286657354aa718071ca22fa5ca5bc866954"
+    },
+    "daily-stock-proposed-gl-receipt-form--tablet": {
+      "sha256": "ad6bcaf1c3433cba3a2a758c0212dd26aa99b359140551638334e0b85bd8b686",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "861a7e9483d9da2a7151192041cd7c5e0754c3c64123eb6dac8f3c9fd4a29e8a"
+    },
+    "daily-stock-proposed-gl-recorded-stock--desktop": {
+      "sha256": "787292d857bc33ba35cbe1c36b7f54545fd6a4373f9d8cda16997a35dea1e842",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "b5b82ca5e5087c7dd0db4a860f13c89f0b2dbff0086d1099ed32923b53db761b"
+    },
+    "daily-stock-proposed-gl-recorded-stock--desktop-dark": {
+      "sha256": "950a9f1b17906b138524869ef1e38f20821af3c1707887b5a15d58728a6bcc44",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "b359057684db77d0fd925933e332aaec5b344f773ab8069f91ed6a572f2a62f4"
+    },
+    "daily-stock-proposed-gl-recorded-stock--mobile": {
+      "sha256": "f9cdd5321219be8f57c491125827f78382269120180e45d30f394b1ee2d0015e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "41b5c10b767a97d69bec1624356eef26a86937894b1d983b8a4f91064d4d5858"
+    },
+    "daily-stock-proposed-gl-recorded-stock--tablet": {
+      "sha256": "e1ae9fd3bc8212a50432d651b7157078a1cc93615937f832242da112ddd5bbc9",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "0602c0998006d0015515525920b2cd2505cd0171640b6dbdcaf720c8f1491a31"
+    },
+    "daily-stock-proposed-product-details--desktop": {
+      "sha256": "d44ae43240dc13ec0681008d7b8479095d7fbfb165f4b8244eb1d1c92a02410a",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "e2e01cd7d6421fba6bf7ea06a1ff094f1aa5c21d24eac28cf0c2b4d9ee3ce6b1"
+    },
+    "daily-stock-proposed-product-details--desktop-dark": {
+      "sha256": "473d236d539bf3d753d2224ad8d6dad1a5ae560aafb21ac690ecd9c8cd98defc",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "4cf13602f89cc25b49c029fa9bb5c573a658fc7fbd9effe8dad23099ea47cdaf"
+    },
+    "daily-stock-proposed-product-details--mobile": {
+      "sha256": "8203dca224afce8fab05519550a43a3e00ea56de23c2e104bccb2a547440ddb1",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "e06c3f30beebad8a973254acf4299620fbe21269c6824e2a90d95b7911bc4c22"
+    },
+    "daily-stock-proposed-product-details--tablet": {
+      "sha256": "a45db663816b14d3b259fbf1a1bf1545d506918e99dcce4a03d2d8191229f8dc",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "50f86062e39217030f0e7252f016cd6fc5f3057bd5d091d7e24a0c8b1f708891"
+    },
+    "daily-stock-proposed-receipt-form--desktop": {
+      "sha256": "2e478001f8f778cd5757ae4000d05a824de32ebe694c2a1414a995403738cd40",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "634d5518ac3aa6cabcd89e430a12e3bba70fac691eabb43b6d71496788b88933"
+    },
+    "daily-stock-proposed-receipt-form--desktop-dark": {
+      "sha256": "0f1b430ee89ef8260fde03da6de49373469ca0dca6bfbd14c36e30a29b78ad8f",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "284e2e8bdff7809fc9b023a3b33136f76cfaaec90b1b3debf606d30e8ac03db2"
+    },
+    "daily-stock-proposed-receipt-form--mobile": {
+      "sha256": "970b808afca47ac9f28cca7f6e2c1c9817789896aad7e448e493d790d7ff1f70",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "d304a9ab2d829eb088d639f3b35d243577ede6ca8e477c6caae9e84fb27a75c3"
+    },
+    "daily-stock-proposed-receipt-form--tablet": {
+      "sha256": "0be602d12507d17acc8c4fe5c0f8ed27d8844b06d3eb11ea4b3b6553f17b01dd",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "c24b064e10fb759a65f5acc7e55cf13b342013c7154759e619b5128990bfb8cc"
+    },
+    "daily-stock-proposed-recorded-stock--desktop": {
+      "sha256": "83ead2177f1462af865a1d4111b5d651ccb7e3274de4923c2b7e9b03014d380e",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "a5df9215621dadaa2f43bf5b849dab9fca66e560b23d78a5821fd3f73a4bf92e"
+    },
+    "daily-stock-proposed-recorded-stock--desktop-dark": {
+      "sha256": "8d3358d3a8fff59b7653306bbea85299686881a085eadb05edd2fe40c937f8a7",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "c70b0f4fc26c5469e0230f25d7bd3b56b28a5e9dfcaeef6da84cd23df848d0f5"
+    },
+    "daily-stock-proposed-recorded-stock--mobile": {
+      "sha256": "11eb81b6158071d7447e3ed576a139058035d676dd3d5ac6e24e77e5a710bdb5",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "f6ebc894d88f274a410e9161c1bc7f02939365394f234212cdd7b35aa1ce7eb4"
+    },
+    "daily-stock-proposed-recorded-stock--tablet": {
+      "sha256": "8def1fe99cb3886869230ef76f56408c61822d54038068e2a539d880ba5d91f2",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "osRelease": "27.0.0",
+        "headless": true,
+        "launchArgs": "[\"--disable-gpu\"]",
+        "browser": "158.0.8127.18",
+        "playwright": "1.65.0",
+        "fonts": "1f28fef132882a1d566ec83299979551a289c24dd430029f260520d8a8ce81d3"
+      },
+      "approval": "2026-11-20 — User selected \"Approve all 72 images\" for daily-stock gallery 2026-11-20T19-48-54.079Z.",
+      "run": "2026-11-20T19-48-54.079Z",
+      "sourceHash": "5baa54d5668fb8b87a679976afefca4bf918ff934dbb77a18a9636adf08397f3",
+      "profileHash": "3e478c6fc9c5ac8936de7c5d44a4369acb95bd42935d03eee16cd21b7e2dff07"
     }
   }
 }

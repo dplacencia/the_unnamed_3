@@ -21,8 +21,9 @@ Current UX review — 2026-11-20: the user selected the
 Review Productos → Registrar entrada → Existencias in Storybook using the same
 synthetic data in both variants. The proposed variant carries the product from
 its details sheet, requires the receipt destination, and separates the applied
-quantity from the recorded balance. Follow exact-gallery approval for this
-comparison.
+quantity from the recorded balance. The user approved the exact
+[72-image gallery](openspec/changes/refine-daily-stock-workflow/design.md#visual-approval).
+The registry contains 2,472 approved references.
 
 November 30 review assignment — 2026-11-20: prepare the
 [November 30 Core and Inventory review](openspec/changes/establish-frontend-technical-foundation/november-30-review.md)
@@ -32,7 +33,7 @@ before promoting visual references. Never create a commit. Sibling repositories
 are read-only.
 
 The user approved the [944-image November 30 gallery](openspec/changes/establish-frontend-technical-foundation/november-30-review.md#visual-approval).
-The accepted registry contains 2,400 references, including the 1,456 carried
+That checkpoint had 2,400 approved references, including the 1,456 carried
 forward from the Salida inspector checkpoint.
 
 The Pendientes browsing checkpoint is complete. User commits `b70eb76`

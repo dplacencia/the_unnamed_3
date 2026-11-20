@@ -80,3 +80,13 @@ checks, including the action order and fit at 320 and 768 px, continuation or
 discard of an unsaved edit, and stock lookup for the exact product. All 12
 targeted approved-reference comparisons passed.
 [Playwright results](http://localhost:9324/runs/2026-11-20T19-48-34.202Z/playwright-report/index.html)
+
+## Visual approval
+
+On November 20, 2026, the user selected **Approve all 72 images** for the
+[revised gallery](http://localhost:9324/runs/2026-11-20T19-48-54.079Z/review.html).
+The 72 approved images were added to the registry. All 2,472 reference hashes
+verify, including the 2,400 references carried forward.
+
+Pinned Chromium compared all 72 promoted images successfully on the same source
+and renderer. [Playwright results](http://localhost:9324/runs/2026-11-20T19-55-05.775Z/playwright-report/index.html)
